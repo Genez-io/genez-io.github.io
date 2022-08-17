@@ -66,8 +66,28 @@ export function(request) = {
 } 
       </textarea>
     </div>
+    <div id="deploy-button">
+      <button id="deploy-button-action" class="btn btn-dark m-1" type="button" data-bs-toggle="modal">
+        <i class="fas fa-play"></i> Deploy
+      </button>
+    </div>
+
+    <div id="deploy-result-div">
+      Your code was deployed at https://someurl.com.
+    </div>
+
   </div>
 </section>
+
+<script>
+  const deploy = document.getElementById("deploy-button-action");
+  const deployMessage = document.getElementById("deploy-result-div");
+  deploy.onclick = () => {
+    console.log("Clicked!");
+    deploy.style.display = "none";
+    deployMessage.style.display = "block";
+  }
+</script>
 
 <script id="rendered-js" >
   var html_value;

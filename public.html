@@ -7,30 +7,13 @@
 </style>
 </head>
 <body translate="no" >
-<section>
-<div class="container">
-<div class="code-container">
-<textarea id="code"><!-- xml/html syntax -->
-</textarea>
-</div>
+<div id="qwe"> x</div>
 
-</div>
-</section>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/codemirror.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/xml/xml.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/css/css.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/javascript/javascript.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/htmlmixed/htmlmixed.js'></script>
-<script id="rendered-js" >
-var html_value;
-var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
-    styleActiveLine: true,
-    lineNumbers: true,
-    matchBrackets: true,
-    autoCloseBrackets: true,
-    autoCloseTags: true,
-    mode: "htmlmixed",
-});
+<script>
+    const x = document.getElementById("qwe");
+    x.addEventListener("click", () => {
+        console.log("qwe");
+    });
 </script>
 </body>
 
