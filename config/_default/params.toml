@@ -34,18 +34,6 @@ career_form_action = "#!" # career form works with https://formspree.io or any f
 enable = true
 preloader = "images/logo.png" # use jpg, png, svg or gif format.
 
-# Navigation buttons
-[navigation_button]
-enable = true
-label = "Log In"
-link = "#!"
-icon = "far fa-user"
-
-[navigation_button_two]
-enable = true
-label = "Sign Up Now"
-link = "#!"
-
 # Call to action
 [call_to_action]
 enable = true
