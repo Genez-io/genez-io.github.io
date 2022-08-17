@@ -1,5 +1,5 @@
 ######################## default configuration ####################
-baseURL = "http://demo.gethugothemes.com/"
+baseURL = "https://genez-io.github.io"
 title = "Genezio"
 theme = "delta-hugo"
 # post pagination
