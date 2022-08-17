@@ -5,15 +5,15 @@ banner:
   description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy <br> eirmod tempor invidunt ut labore et dolore magna aliquyam erat"
   button:
     enable: true
-    label: "Get started now"
+    label: "Check our demo"
     icon: "fas fa-arrow-right"
-    link: "contact/"
+    link: "#evrika"
   video_button:
-    enable: true
+    enable: false
     label: "Watch demo"
     video_url: "https://www.youtube.com/embed/dyZcRRWiuuw"
   
-  image: "images/banner-home.png"
+  # image: "images/banner-home.png"
 
 # brands
 brands:
