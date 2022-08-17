@@ -81,41 +81,41 @@ image_and_content_block:
   "
 
 # slider_and_content_block
-slider_and_content_block:
-  enable: true
-  subtitle: "We Are Delta"
-  title: "Let your lead reach <br> out to sales people"
-  slider:
-    - "images/block-image-02.png"
-    - "images/block-image-02.png"
-  content_position: "right" # Value will be - "left/right"
-  content: "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vestibulum ante 
+# slider_and_content_block:
+#   enable: true
+#   subtitle: "We Are Delta"
+#   title: "Let your lead reach <br> out to sales people"
+#   slider:
+#     - "images/block-image-02.png"
+#     - "images/block-image-02.png"
+#   content_position: "right" # Value will be - "left/right"
+#   content: "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vestibulum ante 
 
   
-  orci luctus et ultrices pos uere cubilia Curae; Donec verglit neque, auctor congue leo eget malesuada. Vivamus susr cipit sit amet dui. Nulla quis lorem ut libero malesuada feugiat. "
+#   orci luctus et ultrices pos uere cubilia Curae; Donec verglit neque, auctor congue leo eget malesuada. Vivamus susr cipit sit amet dui. Nulla quis lorem ut libero malesuada feugiat. "
 
 
 # testimonials
-testimonials:
-  enable: true
-  subtitle: "People Say's"
-  title: "about Three million users <br> Testimonial Together"
-  image: "images/testimonials-group.png"
-  reviews:
-    - name: "Erica Carlina"
-      designation: "CEO & Founder, Ammarait"
-      rating: "5.0" # ex: "3", "3.8"
-      content: "Consectetur adipisicing elit. Cum voluptates odio nostrum impedit deleniti cupiditate deserunt harum doloremque veritatis accusantium, unde sint, laudantium distinctio, velit atque asperiores aspernatur laboriosam officiis obcaecati molestias laudantium corporis doloremque qui, voluptate minus?"
+# testimonials:
+#   enable: true
+#   subtitle: "People Say's"
+#   title: "about Three million users <br> Testimonial Together"
+#   image: "images/testimonials-group.png"
+#   reviews:
+#     - name: "Erica Carlina"
+#       designation: "CEO & Founder, Ammarait"
+#       rating: "5.0" # ex: "3", "3.8"
+#       content: "Consectetur adipisicing elit. Cum voluptates odio nostrum impedit deleniti cupiditate deserunt harum doloremque veritatis accusantium, unde sint, laudantium distinctio, velit atque asperiores aspernatur laboriosam officiis obcaecati molestias laudantium corporis doloremque qui, voluptate minus?"
 
-    - name: "Justin Rubela"
-      designation: "Founder, Justin Inc."
-      rating: "4.5" # ex: "3", "3.8"
-      content: "Dolorsit amet consectetur, adipisicing elit. Expedita repellendus optio quaerat iste aliquam, rerum quas ab? Adipisci maxime tempore doloremque laborum suscipit debitis autem ducimus dicta delectus, atque abofficiis obcaecati molestias laudantium corporis doloremque qui, voluptate minus?"
+#     - name: "Justin Rubela"
+#       designation: "Founder, Justin Inc."
+#       rating: "4.5" # ex: "3", "3.8"
+#       content: "Dolorsit amet consectetur, adipisicing elit. Expedita repellendus optio quaerat iste aliquam, rerum quas ab? Adipisci maxime tempore doloremque laborum suscipit debitis autem ducimus dicta delectus, atque abofficiis obcaecati molestias laudantium corporis doloremque qui, voluptate minus?"
       
-    - name: "William Broke"
-      designation: "Developer, Ammarait"
-      rating: "4.2" # ex: "3", "3.8"
-      content: "Amet consectetur adipisicing elit. Voluptates, suscipit dolorum! Quis explicabo quibusdam error expedita dolore veritatis magni fugiat rem provident qui, in dolorem quo laboriosam modi tenetur aperiam. obcaecati molestias laudantium corporis doloremque qui, voluptate minus?"
+#     - name: "William Broke"
+#       designation: "Developer, Ammarait"
+#       rating: "4.2" # ex: "3", "3.8"
+#       content: "Amet consectetur adipisicing elit. Voluptates, suscipit dolorum! Quis explicabo quibusdam error expedita dolore veritatis magni fugiat rem provident qui, in dolorem quo laboriosam modi tenetur aperiam. obcaecati molestias laudantium corporis doloremque qui, voluptate minus?"
 
 
 # blog
