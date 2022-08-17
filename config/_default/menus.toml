@@ -1,79 +1,32 @@
-############# French navigation ##############
-
-# main menu
-[[main]]
-weight = 1
-name = "Accueil"
-hasChildren = true
-
-  [[main]]
-  parent = "Accueil"
-  name = "Accueil 1"
-  url = "/"
-  weight = 1
-
-  [[main]]
-  parent = "Accueil"
-  name = "Accueil 2"
-  url = "home-2/"
-  weight = 2
-
-[[main]]
-name = "À propos"
-url = "about/"
-weight = 2
-
-[[main]]
-name = "How It Works"
-url = "how-it-works/"
-weight = 4
+############# English navigation ##############
 
 [[main]]
 name = "Blog"
 url = "blog/"
-weight = 5
+weight = 3
 
 [[main]]
-weight = 7
-name = "Pages"
+weight = 5
+name = "Tools"
 hasChildren = true
 
   [[main]]
-  parent = "Pages"
-  name = "Prix"
+  parent = "Tools"
+  name = "Bware"
   url = "pricing/"
   weight = 7
 
   [[main]]
-  parent = "Pages"
-  name = "Équipe"
+  parent = "Tools"
+  name = "Pentest Tools"
   url = "team/"
   weight = 11
 
-  [[main]]
-  parent = "Pages"
-  name = "Carrière"
-  url = "career/"
-  weight = 13
+[[main]]
+name = "About"
+url = "about/"
+weight = 7
 
-  [[main]]
-  parent = "Pages"
-  name = "Carrière Détails"
-  url = "career/digital-marketing-paid-media-manager/"
-  weight = 15
-
-  [[main]]
-  parent = "Pages"
-  name = "Détails du blog"
-  url = "blog/post-5/"
-  weight = 17
-
-  [[main]]
-  parent = "Pages"
-  name = "Auteur Détails"
-  url = "author/awab-husameldin/"
-  weight = 18
-  
 [[main]]
 name = "Contact"
 url = "contact/"
