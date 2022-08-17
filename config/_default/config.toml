@@ -15,12 +15,10 @@ disqusShortname = "themefisher-template" # get your shortname form here : https:
 disableLanguages = [] # example: ["fr"] for disable french language
 canonifyURLs = true
 
+
 ############################# Hugo Image Processing Quility ##############################
 [imaging]
 quality = 100
-
-[params]
-logo = "images/logo.svg"
 
 ############################# Modules ##############################
 [module]
