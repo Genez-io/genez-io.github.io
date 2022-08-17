@@ -13,6 +13,7 @@ googleAnalytics = "" # example: UA-123-45, for more info, read the article https
 disqusShortname = "themefisher-template" # get your shortname form here : https://disqus.com
 # disable language
 disableLanguages = [] # example: ["fr"] for disable french language
+canonifyURLs = true
 
 ############################# Hugo Image Processing Quility ##############################
 [imaging]
