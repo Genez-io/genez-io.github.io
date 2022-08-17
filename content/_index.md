@@ -16,15 +16,15 @@ banner:
   # image: "images/banner-home.png"
 
 # brands
-brands:
-  enable: true
-  title: "150M+ users trusted Delta worldwide"
-  images: 
-  - "images/clients/01.png"
-  - "images/clients/02.png"
-  - "images/clients/03.png"
-  - "images/clients/04.png"
-  - "images/clients/05.png"
+# brands:
+#   enable: true
+#   title: "150M+ users trusted Delta worldwide"
+#   images: 
+#   - "images/clients/01.png"
+#   - "images/clients/02.png"
+#   - "images/clients/03.png"
+#   - "images/clients/04.png"
+#   - "images/clients/05.png"
 
 # features
 features:
