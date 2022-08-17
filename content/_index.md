@@ -7,7 +7,7 @@ banner:
     enable: true
     label: "Check our demo"
     icon: "fas fa-arrow-right"
-    link: "#evrika"
+    link: "#demo"
   video_button:
     enable: false
     label: "Watch demo"

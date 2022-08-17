@@ -57,6 +57,31 @@
 {{ partial "brands-slider.html" . }}
 {{end}}
 
+<section id="demo">
+  <div class="container">
+    <div class="code-container">
+      <textarea id="code">
+export function(request) = { 
+  return { "status": 200, "message": "Hello world!"}
+} 
+      </textarea>
+    </div>
+  </div>
+</section>
+
+<script id="rendered-js" >
+  var html_value;
+  var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+      styleActiveLine: true,
+      lineNumbers: true,
+      matchBrackets: true,
+      autoCloseBrackets: true,
+      autoCloseTags: true,
+      mode: "javascript",
+      theme: "dracula"
+  });
+  </script>
+
 {{if .Params.features.enable}}
 {{with site.GetPage (string .Params.features.section)}}
 {{with .Params.features}}
