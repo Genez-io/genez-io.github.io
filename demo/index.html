@@ -16,9 +16,9 @@
     return { "status": 200, "message": "Hello world!"}
   } 
         </textarea></div></div><div class="block col-12 text-center mb-5 center-block"><h1 class=title>Step 3: Deploy and test your code</h1><div class="d-flex justify-content-center" id=terminal></div><script src=https://cdnjs.cloudflare.com/ajax/libs/xterm/3.14.5/xterm.min.js></script>
-<script>var term=new Terminal({cursorBlink:"block"}),content="",line="";term.open(document.getElementById("terminal")),term.write(`To deploy your code just run 'genezio deploy'.
- 
- \$ `),term.on("paste",function(e){console.log("PASTE!"),content+=e,line+=e,term.write(e)}),term.on("key",function(e,t){t.keyCode===13?content&&(console.log("Execute ",line),line==="genezio deploy"&&(term.write(`
+<script>var term=new Terminal({cursorBlink:"block",convertEol:!0}),content="",line="";term.open(document.getElementById("terminal")),term.write(`To deploy your code just run 'genezio deploy'.
+ 
+\$ `),term.on("paste",function(e){console.log("PASTE!"),content+=e,line+=e,term.write(e)}),term.on("key",function(e,t){t.keyCode===13?content&&(console.log("Execute ",line),line==="genezio deploy"&&(term.write(`
 
 `),term.write(`The code was successfully deployed!
 You can test it now but running 'curl https://dqe1964.genez.io/weather'`),term.write(`
