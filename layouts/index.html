@@ -57,50 +57,6 @@
 {{ partial "brands-slider.html" . }}
 {{end}}
 
-<section id="demo">
-  <div class="container">
-    <div class="code-container">
-      <textarea id="code">
-export function(request) = { 
-  return { "status": 200, "message": "Hello world!"}
-} 
-      </textarea>
-    </div>
-    <div id="deploy-button">
-      <button id="deploy-button-action" class="btn btn-dark m-1" type="button" data-bs-toggle="modal">
-        <i class="fas fa-play"></i> Deploy
-      </button>
-    </div>
-
-    <div id="deploy-result-div">
-      Your code was deployed at https://someurl.com.
-    </div>
-
-  </div>
-</section>
-
-<script>
-  const deploy = document.getElementById("deploy-button-action");
-  const deployMessage = document.getElementById("deploy-result-div");
-  deploy.onclick = () => {
-    console.log("Clicked!");
-    deploy.style.display = "none";
-    deployMessage.style.display = "block";
-  }
-</script>
-
-<script id="rendered-js" >
-  var html_value;
-  var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
-      styleActiveLine: true,
-      lineNumbers: true,
-      matchBrackets: true,
-      autoCloseBrackets: true,
-      autoCloseTags: true,
-      mode: "javascript",
-      theme: "dracula"
-  });
-  </script>
 
 {{if .Params.features.enable}}
 {{with site.GetPage (string .Params.features.section)}}

@@ -7,24 +7,23 @@ banner:
     enable: true
     label: "Check our demo"
     icon: "fas fa-arrow-right"
-    link: "#demo"
+    link: "/demo"
   video_button:
     enable: false
     label: "Watch demo"
     video_url: "https://www.youtube.com/embed/dyZcRRWiuuw"
   
-  # image: "images/banner-home.png"
+  image: "images/banner-home.png"
 
-# brands
-# brands:
-#   enable: true
-#   title: "150M+ users trusted Delta worldwide"
-#   images: 
-#   - "images/clients/01.png"
-#   - "images/clients/02.png"
-#   - "images/clients/03.png"
-#   - "images/clients/04.png"
-#   - "images/clients/05.png"
+brands:
+  enable: true
+  title: "150M+ users trusted Delta worldwide"
+  images: 
+  - "images/clients/01.png"
+  - "images/clients/02.png"
+  - "images/clients/03.png"
+  - "images/clients/04.png"
+  - "images/clients/05.png"
 
 # features
 features:

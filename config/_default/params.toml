@@ -23,6 +23,9 @@ contact_form_action = "#!" # contact form works with https://formspree.io or any
 # custom script on header, example: custom_script= "<script>console.log(\"Hello World\")</script>" 
 custom_script= "" 
 
+custom_css = ["css/xterm.css"]
+custom_js = ["javascript/xterm.js"]
+
 # Main Sections
 mainSections= ["blog"]
 

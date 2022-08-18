@@ -29,3 +29,11 @@
 {{ $styles := $styles | append (resources.Get "scss/style.scss" | resources.ExecuteAsTemplate "style.scss" . | toCSS) }}
 {{ $styles := $styles | resources.Concat "/css/style.css" | minify | fingerprint "sha512"}}
 <style type="text/css">{{$styles.Content | safeCSS}}</style>
+
+{{ range .Site.Params.custom_css -}}
+    <link rel="stylesheet" href="{{ . | absURL }}">
+{{- end }}
+
+{{ range .Site.Params.custom_js -}}
+    <script type="text/javascript" src="{{ . | absURL }}"></script>
+{{- end }}

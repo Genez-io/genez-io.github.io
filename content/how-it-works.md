@@ -20,22 +20,22 @@ banner:
 # work_process
 work_process:
   enable: false
-  subtitle: "Work process of Delta"
-  title: "The process of how Delta works"
+  subtitle: "Work process of Genezio"
+  title: "The process of how Genezio works"
   process_item:
-  - title: "Ultimate Guide"
+  - title: "Design your API"
     image: "images/process/01.jpg"
     content: "Lorem ipsum dolor amet cosne adipis scing elit. Purus donec nunc eros ullamcorper fegiat."
 
-  - title: "How to webinar"
+  - title: "Write the code"
     image: "images/process/02.jpg"
     content: "Lorem ipsum dolor amet cosne adipis scing elit. Purus donec nunc eros ullamcorper fegiat."
     
-  - title: "workshop & FAQ"
+  - title: "Deploy"
     image: "images/process/03.jpg"
     content: "Lorem ipsum dolor amet cosne adipis scing elit. Purus donec nunc eros ullamcorper fegiat."
     
-  - title: "Collaboration"
+  - title: "Monitor"
     image: "images/process/04.jpg"
     content: "Lorem ipsum dolor amet cosne adipis scing elit. Purus donec nunc eros ullamcorper fegiat."
 

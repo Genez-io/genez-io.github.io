@@ -1,0 +1,107 @@
+{{ define "main" }}
+
+{{ partial "page-header-demo.html" . }}
+
+<section class="section pb-0">
+  <section id="demo">
+    <div class="block col-12 text-center">
+      <h1 class="title">Step 1: Design your API</h1>
+
+      <div class="d-flex justify-content-center mb-5" style="display: flex;">
+        <select>
+          <option selected value="1">GET</option>
+        </select>
+        <input placeholder="Path"></input>
+      </div>
+    </div>
+    
+    <div class="block col-12 text-center">
+      <h1 class="title">Step 2: Write your code</h1>
+    </div>
+
+    <div class="container" style="width: 60%">
+      <div class="code-container">
+        <textarea id="code">
+  export function(request) = { 
+    return { "status": 200, "message": "Hello world!"}
+  } 
+        </textarea>
+      </div>
+    </div>
+
+    <div class="block col-12 text-center mb-5 center-block">
+      <h1 class="title">Step 3: Deploy and test your code</h1>
+      <div class="d-flex justify-content-center" id="terminal"></div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/xterm/3.14.5/xterm.min.js"></script>
+      <script>
+        var term = new Terminal({cursorBlink: "block"});
+        var content = "";
+        var line = "";
+        term.open(document.getElementById('terminal'));
+        term.write('To deploy your code just run \'genezio deploy\'.\n\r \n\r $ ')
+
+        term.on("paste", function(data) {
+          console.log("PASTE!")
+          content += data;
+          line += data;
+          term.write(data);
+        });
+
+        term.on("key", function(key, ev) {
+          if (ev.keyCode === 13) {
+            if (content) {
+              console.log("Execute ", line);
+
+              if (line === "genezio deploy") {
+                term.write("\r\n\r\n");
+                term.write("The code was successfully deployed!\n\rYou can test it now but running 'curl https://dqe1964.genez.io/weather'");  
+                term.write("\r\n");
+              }
+              term.write("\r\n$ ");
+              line = "";
+            }
+          } else if (ev.keyCode === 8) {
+            if (content && line.length > 0) {
+              content = content.slice(0, content.length - 1);
+              line = line.slice(0, line.length - 1);
+              term.write("\b \b");
+            }
+          } else {
+            console.log("key!")
+            content += key;
+            line += key;
+            term.write(key);
+          } 
+        })
+      </script>
+    </div>
+
+
+  </section>
+  
+  <script>
+    const deploy = document.getElementById("deploy-button-action");
+    const deployMessage = document.getElementById("deploy-result-div");
+    deploy.onclick = () => {
+      console.log("Clicked!");
+      deploy.style.display = "none";
+      deployMessage.style.display = "block";
+    }
+  </script>
+  
+  <script id="rendered-js" >
+    var html_value;
+    var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+        styleActiveLine: true,
+        lineNumbers: true,
+        matchBrackets: true,
+        autoCloseBrackets: true,
+        autoCloseTags: true,
+        mode: "javascript",
+        theme: "dracula"
+    });
+    </script>
+  
+</section>
+
+{{ end }}
