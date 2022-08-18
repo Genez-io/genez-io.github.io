@@ -34,11 +34,11 @@
       <div class="d-flex justify-content-center" id="terminal"></div>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/xterm/3.14.5/xterm.min.js"></script>
       <script>
-        var term = new Terminal({cursorBlink: "block"});
+        var term = new Terminal({cursorBlink: "block", convertEol: true});
         var content = "";
         var line = "";
         term.open(document.getElementById('terminal'));
-        term.write('To deploy your code just run \'genezio deploy\'.\n\r \n\r $ ')
+        term.write('To deploy your code just run \'genezio deploy\'.\n \n$ ')
 
         term.on("paste", function(data) {
           console.log("PASTE!")
