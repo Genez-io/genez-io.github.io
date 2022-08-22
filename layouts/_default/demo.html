@@ -62,7 +62,7 @@
                   });
 
 
-                fetch("http://example-lb-174850440.us-east-1.elb.amazonaws.com/uploadCode", {
+                fetch("https://os2zxsiug9.execute-api.us-east-1.amazonaws.com/Dev/uploadCode", {
 	                method: 'PUT',
 	                headers:{
 	                  'Content-Type':'application/json'
@@ -75,7 +75,7 @@
                 .then((response) => {
                     console.log(response);
                     term.write("\r\n\r\n");
-                    term.write(`The code was successfully deployed!\n\rYou can test it now but running 'curl https://dqe1964.genez.io/weather/${response.id}'`);  
+                    term.write(`The code was successfully deployed!\n\rYou can test it now but running 'curl https://os2zxsiug9.execute-api.us-east-1.amazonaws.com/Dev/api/${response.id}'`);  
                     term.write("\r\n");
                   }).catch((error) => {
                     console.log(error);
