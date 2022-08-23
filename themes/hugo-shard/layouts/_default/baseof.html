@@ -16,66 +16,7 @@
 <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/css/css.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/javascript/javascript.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/javascript/javascript.js'></script>
-
-  <style>
-    select {
-        margin-bottom: 10px;
-        margin-top: 10px;
-        outline: 0;
-        background: #ffffff;
-        font-family: initial;
-        color: #000;
-        padding: 8px;
-        border: none;
-        border-right: 1px solid rgb(192, 192, 192);
-        text-align: center;
-      }
-    
-    #baseUrl {
-      border: none;
-      width: 100%;
-    }
-
-    #cursor {
-        /* position: absolute; */
-        background-color: rgb(255, 255, 255);
-
-        opacity: 0.5;
-    }
-
-    #editorCurrentLine:focus #cursor {
-        /* position: absolute; */
-        background-color: rgb(255, 255, 255);
-        opacity: 0.5;
-        animation: blink 1s step-end infinite;
-    }
-
-    #editorCurrentLine {
-        background-color: #282a36;
-        color: #fff;
-        outline: 0;
-        caret-color: transparent;
-        padding-left: 5px;
-        padding-right: 5px;
-        padding-bottom: 5px;
-        /* height: 100%; */
-        border-left: 1px solid rgb(220 220 220);
-        overflow-y: scroll;
-        height: 400px;
-    }
-
-    @keyframes blink {
-
-        from,
-        to {
-            opacity: 0;
-        }
-
-        50% {
-            opacity: 0.5;
-        }
-    }
-</style>
+<link rel='stylesheet' href='/css/demo.css'>
 
   {{ if .Site.IsServer }}
   {{ $style := resources.Get "scss/style.scss" | resources.ExecuteAsTemplate "style.scss" . | toCSS (dict "targetPath" "css/style.css" "enableSourceMap" true) }}
