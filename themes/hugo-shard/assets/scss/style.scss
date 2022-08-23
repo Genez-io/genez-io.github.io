@@ -2,13 +2,15 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700|Lato:400,700');
 
 // Hugo Variables
-$primary: {{ .Site.Params.primary_color | default "#3365ff" }};
-$secondary: {{ .Site.Params.secondary_color | default "#39d0b7" }};
-$secondary-light: #defffa;
-$grey: {{ .Site.Params.grey_color | default "#f4f5fb" }};
+$primary: {{ .Site.Params.primary_color | default "#FFFFFF" }};
+$primary-light: {{ .Site.Params.primary_light | default "#FFFFFF" }};
+$secondary: {{ .Site.Params.secondary_color | default "#39d000" }};
+$secondary-light: {{ .Site.Params.secondary_light | default "#39d000" }};
+$grey: {{ .Site.Params.grey_color | default "#f4f500" }};
 $grey2: darken($grey, 5%);
-$carbon: #364962;
-$steel: #90a1b8;
+$carbon: {{ .Site.Params.carbon | default "#39d000" }};;
+$steel: {{ .Site.Params.steel | default "#39d000" }};;
+
 
 $font-family-base: {{ .Site.Params.font_base | default "'Lato', Arial, sans-serif, -apple-system" }};
 $font-family-heading:  {{ .Site.Params.font_heading | default "'Roboto', Arial, sans-serif, -apple-system" }};
