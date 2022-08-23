@@ -1,0 +1,107 @@
+.content {
+  p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    font-family: $font-family-base;
+    color: darken($steel, 20%);
+    margin-bottom: 20px;
+  }
+  h1 {
+    font-size: 2.8rem;
+    font-family: $font-family-heading;
+    line-height: 1.6;
+    font-weight: 300;
+    color: $carbon;
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+  h2 {
+    font-size: 2rem;
+    font-family: $font-family-heading;
+    line-height: 1.2;
+    font-weight: 300;
+    color: $carbon;
+    padding-top: 20px;
+    margin-bottom: 30px;
+  }
+  h3 {
+    font-size: 1.6rem;
+    font-family: $font-family-heading;
+    color: $carbon;
+    line-height: 1.2;
+    font-weight: 400;
+    padding-top: 10px;
+    margin-bottom: 20px;
+  }
+  ul,
+  ol {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 15px;
+    list-style: disc;
+    li {
+      font-size: 1.1rem;
+      line-height: 1.4;
+      margin-bottom: 8px;
+      margin-left: 20px;
+      color: darken($steel, 20%);
+    }
+  }
+  a {
+    color: $carbon;
+    text-decoration: none;
+    border-bottom: 2px solid $primary;
+    padding: 0 4px;
+    &:hover {
+      border-bottom: 2px solid $primary;
+      color: $primary;
+    }
+  }
+  blockquote {
+    background: $secondary;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 60px;
+    quotes: '\201C''\201D''\2018''\2019';
+    @include media-breakpoint-up(md) {
+      margin-left: -120px;
+    }
+  }
+  blockquote:before {
+    color: darken($secondary, 20%);
+    content: open-quote;
+    font-size: 6em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+    font-family: $font-family-heading;
+  }
+  blockquote p {
+    display: inline;
+    color: lighten($carbon, 10%);
+  }
+  img {
+    margin: 40px 0 40px 0;
+    max-width: 100%;
+    height: auto;
+    @include media-breakpoint-up(md) {
+      margin: 60px 0 60px 0;
+    }
+  }
+  code,
+  pre {
+    font-family: $font-family-mono;
+  }
+  .highlight {
+    pre {
+      border-radius: 3px;
+      font-size: 14px;
+      line-height: 18px;
+      padding: 30px;
+      overflow: auto;
+      font-family: $font-family-mono;
+    }
+  }
+}

@@ -1,0 +1,7 @@
+@mixin img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+.img-fluid {
+  @include img-fluid();
+}

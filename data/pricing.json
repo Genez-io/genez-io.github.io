@@ -1,0 +1,66 @@
+[
+  {
+    "name": "Personal",
+    "description": "For individuals and open source projects.",
+    "price": "Free",
+    "buttonText": "Get Started",
+    "buttonLink": "/signup",
+    "highlighted": false,
+    "featuresHeading": "Everything you need to offer live chat support.",
+    "features": [
+      "Live chat",
+      "Email integration",
+      "Messenger integration",
+      "iOS & Android app",
+      "3rd Party integrations"
+    ]
+  },
+  {
+    "name": "Basic",
+    "description": "For small teams that require agent scheduling and assignment.",
+    "price": "9.99",
+    "currencySymbol": "$",
+    "currency": "USD",
+    "priceHint": "Billed Monthly",
+    "buttonText": "Try for free",
+    "buttonLink": "/signup",
+    "highlighted": true,
+    "featuresHeading": "Gain finer control over agent assignment.",
+    "features": [
+      "Agent scheduling",
+      "Agent profiles",
+      "Assign agents to customer support pipelines",
+      "Show agent status based on business hours"
+    ]
+  },
+  {
+    "name": "Premium",
+    "description": "For large teams and companies needing advanced analytics and AI learning.",
+    "price": "29.99",
+    "currencySymbol": "$",
+    "currency": "USD",
+    "priceHint": "Billed Monthly",
+    "highlighted": false,
+    "buttonText": "Try for free",
+    "buttonLink": "/signup",
+    "featuresHeading": "Understand and learn from your data.",
+    "features": ["AI learning", "Automated responses", "Chat analytics"]
+  },
+  {
+    "name": "Enterprise",
+    "description": "For organizations that require additional integration, security and support.",
+    "price": "",
+    "currencySymbol": "",
+    "currency": "",
+    "highlighted": false,
+    "buttonText": "Contact Sales",
+    "buttonLink": "/contact",
+    "featuresHeading": "Need a custom feature?",
+    "features": [
+      "SSO & Oauth integrations",
+      "Data export & deletion",
+      "Custom branding",
+      "Enterprise support"
+    ]
+  }
+]

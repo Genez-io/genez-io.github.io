@@ -1,0 +1,22 @@
+.credits {
+  background: $carbon;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  .zerostatic {
+    font-family: $font-family-heading;
+    color: #ffffff;
+    float: right;
+    font-weight: 400;
+    text-decoration: none;
+    font-size: 16px;
+    span {
+      font-weight: 300;
+    }
+    a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+  }
+}

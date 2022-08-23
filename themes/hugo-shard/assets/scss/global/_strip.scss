@@ -1,0 +1,73 @@
+.strip {
+  background: white;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.strip-diagonal {
+  transform: skewY(5deg);
+  padding-bottom: 50px;
+  margin-bottom: 65px;
+  > div {
+    transform: skewY(-5deg);
+  }
+}
+.strip-primary-gradient {
+  background-image: linear-gradient(to right, $primary, $secondary);
+}
+.strip-primary-gradient-top-bottom {
+  background-image: linear-gradient(to bottom, $primary, $secondary);
+}
+.strip-primary,
+.strip-bg-primary {
+  background-color: $primary;
+}
+.strip-secondary,
+.strip-bg-secondary {
+  background-color: $secondary;
+}
+.strip-secondary-light {
+  background-color: $secondary-light;
+}
+.strip-white,
+.strip-bg-white {
+  background-color: white;
+}
+.strip-grey,
+.strip-bg-grey {
+  background-color: $grey;
+}
+.strip-diagonal-right {
+  margin-top: -100px;
+  transform: skewY(-5deg);
+  padding-bottom: 100px;
+  > div {
+    transform: skewY(5deg);
+  }
+}
+.strip-diagonal-left {
+  margin-top: -100px;
+  transform: skewY(5deg);
+  padding-bottom: 100px;
+  > div {
+    transform: skewY(-5deg);
+  }
+}
+.strip-bg-contain {
+  background-size: contain;
+}
+.strip-bg-cover {
+  background-size: cover;
+}
+.bg-pattern-axiom {
+  background-image: url('/images/axiom-pattern.png');
+  background-blend-mode: multiply;
+}
+.bg-pattern-dots-small {
+  background-image: url('/images/dots-small.svg');
+}
+.bg-pattern-dots-large {
+  background-image: url('/images/dots-large.svg');
+}
+.bg-repeat {
+  background-repeat: repeat;
+}

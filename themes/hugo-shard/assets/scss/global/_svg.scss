@@ -1,0 +1,15 @@
+svg {
+  display: block;
+  polygon {
+    display: inline-block;
+  }
+}
+.svg-primary {
+  fill: $primary;
+}
+.fill-grey {
+  fill: $grey;
+}
+.fill-grey2 {
+  fill: $grey2;
+}

@@ -1,0 +1,26 @@
+{{ define "header_css" }}{{ end }}
+{{ define "body_classes" }}page-page3{{ end }}
+{{ define "header_classes" }}{{ if (gt (len .Site.Data.features) 0) }}{{ range .Params.headerClasses }}{{ . }}
+{{ end }}{{end}}{{end}}
+
+{{ define "main" }}
+{{ if not (eq .Params.hero false) }}
+{{ partial "hero-image.html" . }}
+{{ end }}
+<div class="strip strip-white pb-4 pt-4 pb-md-10 pt-md-7">
+  <div class="container">
+    <div class="row justify-content-start">
+      <div class="col-10">
+        <div class="content">{{ .Content }}</div>
+      </div>
+    </div>
+  </div>
+</div>
+{{ end }}
+
+{{ define "footer_js" }}
+{{ end }}
+
+{{ define "debug" }}
+{{ partial "debug" (dict "context" . "template" "layouts/page/page3.html") }}
+{{ end }}

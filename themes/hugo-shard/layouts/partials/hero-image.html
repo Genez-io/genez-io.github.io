@@ -1,0 +1,40 @@
+<div class="hero {{ if .Params.heroFullscreen }}hero-fullscreen{{ else }}hero-set-height{{ end }}"
+	style="{{ if .Params.heroHeight }}height: {{ .Params.heroHeight }}px{{end}}">
+	<div class="hero-image"
+		style="{{ if and (.Params.heroBackground ) (.Params.heroBackgroundOverlay ) }}
+		background-image: url('{{ .Params.heroBackground | relURL }}'), 
+		linear-gradient(
+			to right,
+			{{ .Site.Params.hero.hero_background_gradient_one }},
+			{{ .Site.Params.hero.hero_background_gradient_two }}
+		);
+		background-blend-mode: overlay; {{ else if .Params.heroBackground }} background-image: url('{{ .Params.heroBackground | relURL }}') {{ end }}">
+		{{ if .Params.heroDiagonal }}
+		<svg class="hero-diagonal" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 100 10" preserveAspectRatio="none">
+			<polygon fill="{{ if .Params.heroDiagonalFill }}{{.Params.heroDiagonalFill}}{{else}}#fff{{end}}"
+				points="0,10 100, 0 100, 10" />
+		</svg>
+		{{ end}}
+		<div class="container ">
+			<div class="hero-text">
+				<h1 style="color: {{ .Params.heroHeadingColor | default "#fff" }}">
+					{{ .Params.heroHeading }}{{ if not .Params.heroHeading }}{{ .Title }}{{ end }}</h1>
+				<p style="color: {{ .Params.heroSubHeadingColor | default "#fff" }}">{{ .Params.heroSubHeading }}</p>
+			</div>
+			{{ if .Params.heroFullscreen }}
+			<div class="hero-down">
+				<a id="hero-anchor-trigger" href="#hero-anchor">
+					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60" height="60">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 898.75 533.751"
+							transform="matrix(.69 0 0 .69 15.5 15.5)" fill="#fff">
+							<path
+								d="M224.687 309.061L0 84.372l42.186-42.186L84.372 0l182.815 182.811L450 365.622l182.5-182.496L815 .63l41.874 41.874L898.75 84.38 674.062 309.065 449.373 533.751 224.687 309.06z" />
+						</svg>
+					</svg>
+				</a>
+			</div>
+			{{ end }}
+		</div>
+	</div>
+</div>

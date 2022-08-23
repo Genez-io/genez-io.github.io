@@ -1,0 +1,11 @@
+name = "Hugo Shard"
+license = "Pro"
+description = "Shard is a premium Hugo theme for startups"
+homepage = "https://hugo-shard-pro.netlify.com"
+tags = ["startup","responsive","minimal","business","company","bootstrap"]
+features = ["product"]
+min_version = 0.51
+
+[author]
+  name = "Robert Austin"
+  homepage = "https://www.zerostatic.io"

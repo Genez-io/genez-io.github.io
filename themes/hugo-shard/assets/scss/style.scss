@@ -1,0 +1,149 @@
+// Font
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700|Lato:400,700');
+
+// Hugo Variables
+$primary: {{ .Site.Params.primary_color | default "#3365ff" }};
+$secondary: {{ .Site.Params.secondary_color | default "#39d0b7" }};
+$secondary-light: #defffa;
+$grey: {{ .Site.Params.grey_color | default "#f4f5fb" }};
+$grey2: darken($grey, 5%);
+$carbon: #364962;
+$steel: #90a1b8;
+
+$font-family-base: {{ .Site.Params.font_base | default "'Lato', Arial, sans-serif, -apple-system" }};
+$font-family-heading:  {{ .Site.Params.font_heading | default "'Roboto', Arial, sans-serif, -apple-system" }};
+$font-family-mono: "Lucida Console", Monaco, monospace;
+$font-size-base: 1rem;
+
+$hero-gradient-start: {{ .Site.Params.hero_background_gradient_one | default "#3365ff" }};
+$hero-gradient-end: {{ .Site.Params.hero.hero_background_gradient_two | default "#39d0b7" }};
+
+// Bootstrap
+@import 'bootstrap/functions';
+@import 'bootstrap-variables';
+@import 'bootstrap/variables';
+@import 'bootstrap/mixins';
+@import 'bootstrap/root';
+@import 'bootstrap/reboot';
+@import 'bootstrap/grid';
+@import 'bootstrap/type';
+@import 'bootstrap/tables';
+@import "bootstrap/images";
+@import "bootstrap/code";
+@import "bootstrap/forms";
+@import "bootstrap/buttons";
+@import "bootstrap/transitions";
+@import "bootstrap/dropdown";
+@import "bootstrap/button-group";
+@import "bootstrap/input-group";
+@import "bootstrap/custom-forms";
+@import "bootstrap/nav";
+@import "bootstrap/navbar";
+@import "bootstrap/card";
+@import "bootstrap/breadcrumb";
+@import "bootstrap/pagination";
+@import "bootstrap/badge";
+@import "bootstrap/jumbotron";
+@import "bootstrap/alert";
+@import "bootstrap/progress";
+@import "bootstrap/media";
+@import "bootstrap/list-group";
+@import "bootstrap/close";
+@import "bootstrap/modal";
+@import "bootstrap/tooltip";
+@import "bootstrap/popover";
+@import "bootstrap/carousel";
+@import "bootstrap/print";
+@import 'bootstrap/utilities';
+
+// Syntax Highlighting
+@import 'libraries/pygments/monokai';
+
+// Global 
+@import 'global/page';
+@import 'global/type';
+@import 'global/buttons';
+@import 'global/whitebox';
+@import 'global/content';
+@import 'global/strip';
+@import 'global/well';
+@import 'global/svg';
+@import 'global/zindex';
+@import 'global/img';
+@import 'global/intro';
+@import 'global/debug';
+
+// Components
+@import 'components/header';
+@import 'components/footer';
+@import 'components/credits';
+@import 'components/main-menu-mobile';
+@import 'components/social';
+@import 'components/feature';
+@import 'components/hero-image';
+@import 'components/section-menu';
+@import 'components/paginator';
+@import 'components/sidebar';
+@import 'components/box';
+@import 'components/pricing';
+@import 'components/accordian';
+@import 'components/product';
+@import 'components/patterns';
+
+// Pages
+@import 'pages/home';
+@import 'pages/posts/page-posts-list';
+@import 'pages/posts/page-posts-single';
+@import 'pages/posts/post';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box; 
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 1.1rem;
+  line-height: 1;
+  color: $carbon;
+  font-family: $font-family-base;
+  -webkit-font-smoothing: antialiased;
+  @include media-breakpoint-up(sm) {
+    font-size: 1rem;
+  }
+}
+
+// More padding for containers on mobile
+.container {
+  @include media-breakpoint-down(xs) {
+    padding-left: $grid-gutter-width;
+    padding-right: $grid-gutter-width;
+  }
+}
+
+// Display breakpoints for DEV
+{{ if .Site.IsServer }}
+body:after {
+  color: #000000;
+  font-size: 12px;
+  padding: 5px;
+  font-weight: bold;
+  right: 10px;
+  position: fixed;
+  text-align: center;
+  text-transform: uppercase;
+  bottom: 10px;
+  width: 200px;
+  z-index: 9999;
+  border: solid 1px #000000;
+  @each $name, $value in $grid-breakpoints {
+    @include media-breakpoint-up($name) {
+      content: "#{$name} - min-width: #{$value}";
+    }
+  }
+}
+{{ end }}
+

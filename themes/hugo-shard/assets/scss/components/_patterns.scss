@@ -1,0 +1,165 @@
+.nibbles1 {
+  position: absolute;
+  height: 654px;
+  width: 100%;
+  top: 0;
+  background-image: url('/images/patterns/nibbles.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 0;
+}
+.nibbles3 {
+  position: absolute;
+  height: 604px;
+  width: 100%;
+  top: 0;
+  background-image: url('/images/patterns/nibbles.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 0;
+  transform: rotate(120deg);
+}
+.nibbles2 {
+  position: absolute;
+  height: 800px;
+  width: 100%;
+  top: 0;
+  background-image: url('/images/patterns/nibbles2.svg');
+  background-repeat: no-repeat;
+  background-position: center 320px;
+  background-size: contain;
+  z-index: 2;
+  @include media-breakpoint-up(md) {
+    position: absolute;
+    height: 900px;
+    width: 100%;
+    top: 0;
+    background-position: center 200px;
+    background-size: initial;
+    z-index: 2;
+  }
+}
+.dots-small-right {
+  position: absolute;
+  z-index: 2;
+  top: 60px;
+  left: -60px;
+  height: 460px;
+  width: 460px;
+  background-image: url('/images/patterns/dots-small.svg');
+  @include media-breakpoint-up(md) {
+    top: -200px;
+    right: -100px;
+    height: 360px;
+    width: 360px;
+  }
+}
+.dots-small,
+.flair-dots-small {
+  position: absolute;
+  z-index: 2;
+  top: -100px;
+  right: 0px;
+  height: 360px;
+  width: 360px;
+  background-image: url('/images/patterns/dots-small.svg');
+  @include media-breakpoint-up(md) {
+    top: -200px;
+    right: -100px;
+    height: 360px;
+    width: 360px;
+  }
+}
+.dots-large,
+.flair-dots-large {
+  position: absolute;
+  z-index: 2;
+  top: -100px;
+  left: 0px;
+  height: 520px;
+  width: 520px;
+  background-image: url('/images/patterns/dots-large.svg');
+  @include media-breakpoint-up(md) {
+    top: -200px;
+    left: -100px;
+    height: 860px;
+    width: 860px;
+  }
+}
+.dots-large-2 {
+  position: absolute;
+  z-index: 2;
+  top: -100px;
+  left: 0px;
+  height: 520px;
+  width: 520px;
+  background-image: url('/images/patterns/dots-large.svg');
+  @include media-breakpoint-up(md) {
+    top: -400px;
+    left: -400px;
+    height: 960px;
+    width: 960px;
+  }
+}
+.dots-large-3 {
+  position: absolute;
+  z-index: 2;
+  top: -100px;
+  left: 0px;
+  height: 520px;
+  width: 520px;
+  background-image: url('/images/patterns/dots-large.svg');
+  @include media-breakpoint-up(md) {
+    top: 150px;
+    left: -200px;
+    height: 660px;
+    width: 1060px;
+  }
+}
+.dots-small-4 {
+  display: none;
+  position: absolute;
+  z-index: 2;
+  top: 100px;
+  height: 360px;
+  width: 360px;
+  background-image: url('/images/patterns/dots-small.svg');
+  @include media-breakpoint-up(md) {
+    top: 100px;
+    right: 0;
+    height: 400px;
+    width: 260px;
+    display: block;
+  }
+}
+.geometric {
+  position: absolute;
+  height: 654px;
+  width: 100%;
+  top: 0;
+  background-image: url('/images/shapes/01.jpg');
+  background-position: -100px -0px;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+.blob1 {
+  background-image: url('/images/blob-shape.svg');
+  height: 900px;
+  width: 900px;
+  background-size: contain;
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  right: -400px;
+}
+.blob2 {
+  background-image: url('/images/blob2.svg');
+  height: 1300px;
+  width: 1300px;
+  background-size: contain;
+  background-position: center;
+  position: absolute;
+  z-index: 0;
+  bottom: 0;
+  left: -400px;
+}

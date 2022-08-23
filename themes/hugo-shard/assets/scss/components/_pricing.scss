@@ -1,0 +1,112 @@
+.plans {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  @include media-breakpoint-up(md) {
+  }
+}
+.plan {
+  width: 100%;
+  font-family: $font-family-heading;
+  border: 1px solid $grey2;
+  margin-bottom: 40px;
+  @include media-breakpoint-up(md) {
+    flex-basis: 25%;
+    margin-bottom: 0;
+    border: none;
+    border-top: 1px solid $grey2;
+    border-right: 1px solid $grey2;
+    border-bottom: 1px solid $grey2;
+  }
+  &:last-of-type {
+    border-right: none;
+  }
+  &.plan-featured {
+    background: $secondary-light;
+  }
+  .plan-main {
+    padding: 30px 10px;
+    text-align: center;
+    border-bottom: 1px solid $grey2;
+  }
+  .plan-details {
+    padding: 30px 20px;
+    text-align: left;
+  }
+  .plan-name {
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: 400;
+    margin-bottom: 16px;
+  }
+  .plan-description {
+    font-size: 16px;
+    line-height: 26px;
+    color: darken($steel, 10%);
+    margin-bottom: 20px;
+    @include media-breakpoint-up(md) {
+      height: 110px;
+    }
+  }
+  .plan-price {
+    margin-bottom: 10px;
+    @include media-breakpoint-up(md) {
+      min-height: 90px;
+    }
+    .plan-price-currency-symbol {
+      font-size: 24px;
+      line-height: 28px;
+      vertical-align: top;
+      display: inline-block;
+    }
+    .plan-price-number {
+      font-size: 42px;
+      line-height: 50px;
+      letter-spacing: -1px;
+      display: inline-block;
+    }
+    .plan-price-currency {
+      font-size: 20px;
+      line-height: 26px;
+      display: inline-block;
+    }
+    .plan-price-hint {
+      display: block;
+      color: darken($steel, 10%);
+      font-size: 14px;
+    }
+  }
+  .plan-hint {
+  }
+  .plan-button {
+  }
+  .plan-terms {
+  }
+  .plan-features-heading {
+  }
+  .plan-features {
+    ul {
+      li {
+        // background-image: url('/images/check.svg');
+        // background-size: 14px;
+        // background-repeat: no-repeat;
+        // background-position: center left;
+        padding: 6px 0 6px 0;
+        color: $steel;
+        vertical-align: middle;
+        line-height: 22px;
+        svg {
+          width: 16px;
+          display: inline;
+          vertical-align: middle;
+        }
+        span {
+          padding-left: 10px;
+          display: inline;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+}

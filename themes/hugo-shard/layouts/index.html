@@ -1,0 +1,299 @@
+{{ define "title" }}{{ end}}
+{{ define "header_css" }}{{ end }}
+{{ define "body_classes" }}page-home{{ end }}
+{{ define "header_classes" }}{{ end }}
+
+{{ define "meta_tags" }}
+<meta name="description" content="{{ .Site.Params.homepage_meta_tags.meta_description }}" />
+<meta property="og:title" content="{{ .Site.Params.homepage_meta_tags.meta_og_title }}" />
+<meta property="og:type" content="{{ .Site.Params.homepage_meta_tags.meta_og_type }}" />
+<meta property="og:url" content="{{ .Site.Params.homepage_meta_tags.meta_og_url }}" />
+<meta property="og:image" content="{{ .Site.Params.homepage_meta_tags.meta_og_image }}" />
+<meta property="og:description" content="{{ .Site.Params.homepage_meta_tags.meta_og_description }}" />
+<meta name="twitter:card" content="{{ .Site.Params.homepage_meta_tags.meta_twitter_card }}" />
+<meta name="twitter:site" content="{{ .Site.Params.homepage_meta_tags.meta_twitter_site }}" />
+<meta name="twitter:creator" content="{{ .Site.Params.homepage_meta_tags.meta_twitter_creator }}" />
+{{ end }}
+
+{{ define "main" }}
+<!-- Lead -->
+<div class="strip strip-white pt-10 pb-10 pt-md-16 pb-md-12 pt-lg-18 pb-lg-18">
+  <div class="nibbles2"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="lead">
+          <h1>{{ .Params.leadTitle }}</h1>
+          <h2>{{ .Params.leadSubTitle }}</h2>
+          <div class="lead-buttons">
+            {{ if .Params.leadButtonOneLink }}
+            <a class="button-outlined" href={{ .Params.leadButtonOneLink | relURL }}>{{ .Params.leadButtonOneText }}</a>
+            {{ end }}
+            {{ if .Params.leadButtonTwoLink }}
+            <a class="button" href={{ .Params.leadButtonTwoLink | relURL }}>{{ .Params.leadButtonTwoText }}</a>
+            {{ end }}
+          </div>
+          {{ .Content }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Screenshot -->
+{{ if .Params.screenshot }}
+<div class="strip strip-secondary-light pt-10 pb-6 pt-md-10 pb-md-10">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12">
+        <div class="preview">
+          <div class="container-md">
+            <div class="row no-gutters">
+              <div class="col" style="border: 1px solid rgb(192, 192, 192); display: flex; flex-direction: row;" >
+                  <select name="languages" id="lang">
+                    <option value="javascript">Http Method</option>
+                    <option value="get">GET</option>
+                    <option value="post" disabled>POST</option>
+                    <option value="put" disabled>PUT</option>
+                    <option value="delete" disabled>DELETE</option>
+                    <option value="head" disabled>HEAD</option>
+                    <option value="options" disabled>OPTIONS</option>
+                    <option value="patch" disabled>PATCH</option>
+                  </select>
+                  <div style="display: flex; align-items: center; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;">
+                    https://api.genez.io/
+                  </div>
+                  <input id="baseUrl" style="height: 100%; display: flex; align-items: center; padding-top: 10px; padding-bottom: 10px; outline: 0;"></input>
+              </div>
+            </div>
+            <div class="row no-gutters">
+              <div class="col-6">
+                <div>
+                  <div class="code-container">
+                    <textarea id="code">
+// The function will be executed whenever
+// a new request is received.
+async function handle(request) {
+  return { "status": 200, "message": "Hello world!"};
+}</textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div id="editor">
+                  <div id="editorContent"></div>
+                  <div id="editorCurrentLine" contenteditable=true>$ <span id="cursor">&nbsp;</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{ end }}
+
+<!-- Features -->
+{{ if and (gt (len .Site.Data.features) 0) (.Site.Params.homepage.show_features) }}
+<div class="strip strip-white features pt-6 pb-4 pt-md-14 pb-md-20">
+  <div class="container">
+    <div class="row justify-content-center">
+      {{ if .Site.Params.homepage.features_title  }}
+      <div class="col-12">
+        <h1 class="text-center">{{ .Site.Params.homepage.features_title }}</h1>
+      </div>
+      {{ end }}
+      {{ range .Site.Data.features }}
+      <div class="col-12 col-md-4 mb-2">
+        <div class="feature">
+          {{ if .image }}<div class="feature-image"><img alt="{{ .title }} logo" src="{{ .image }}" /></div> {{ end }}
+          <h2>{{ .title }}</h2>
+          <p>{{ .description }}</p>
+        </div>
+      </div>
+      {{end}}
+    </div>
+  </div>
+</div>
+{{ end }}
+
+
+<div class="strip strip-secondary-light product pt-6 pb-6 pt-md-10 pb-md-20">
+  <div class="container ">
+    <div class="row justify-space-between">
+      <div class="col-12 col-md-5">
+        <div class="product-text">
+          <h2>Live Support Chat, Made Simple</h2>
+          <p>Churn rate low hanging fruit graphical user interface social media gamification. Non-disclosure agreement
+            validation rockstar android partnership.</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-7 position-relative">
+        <div class="dots-small-right">
+        </div>
+        <div class="product-right product-shadow">
+          <img width="1000" src="{{ "images/product/login.jpg" | relURL }}" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="strip strip-white product pt-6 pb-6 pt-md-26 pb-md-20 pt-lg-26">
+  <div class="container">
+    <div class="row justify-space-between">
+      <div class="col-12 col-md-4 order-2 order-sm-1 position-relative">
+        <div class="product-left ">
+          <img width="800" src="{{ "images/product/map.png" | relURL }}" />
+        </div>
+      </div>
+      <div class="col-12 col-md-7 offset-sm-1 order-1 order-sm-2">
+        <div class="product-text">
+          <h2>Take Control Of Your Remote Helpdesk</h2>
+          <p>Seed round business model canvas responsive web design traction social media disruptive beta creative
+            business plan advisor scrum project startup.
+            <p>Seed money infographic rockstar return on investment ownership
+              alpha stock buyer influencer.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="strip strip-white pt-2 pb-6 pt-md-4 pb-md-18 d-none d-md-block">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-auto">
+        <a class="box" href="/product">
+          <div class="box-body">
+            <h2>Learn More</h2>
+            <p>Take the product tour and find the workflow that is right for you.</p>
+          </div>
+          <div class="box-arrow">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" width="18">
+              <path class="fill-grey2"
+                d="M17.525 36.465l-7.071 7.07c-4.686 4.686-4.686 12.284 0 16.971L205.947 256 10.454 451.494c-4.686 4.686-4.686 12.284 0 16.971l7.071 7.07c4.686 4.686 12.284 4.686 16.97 0l211.051-211.05c4.686-4.686 4.686-12.284 0-16.971L34.495 36.465c-4.686-4.687-12.284-4.687-16.97 0z" />
+            </svg>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="strip product pt-4 pt-md-10 pb-md-20">
+  <div class="container strip-secondary-light p-4">
+    <div class="row justify-space-between">
+      <div class="col-12 col-md-5 pt-6">
+        <div class="product-text">
+          <h2>Custom Dashboards Powered by Machine Learning</h2>
+          <p>Technology facebook marketing buzz seed round alpha conversion growth hacking client beta bootstrapping.
+            Founders mass market marketing android. </p>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 offset-md-1 position-relative">
+        <div class="dots-large">
+        </div>
+        <div class="product-right product-shadow">
+          <img width="1000" src="{{ "images/product/dashboard.png" | relURL }}" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+{{ end }}
+
+{{ define "footer_js" }}
+{{ $home := resources.Get "js/pages/home.js" }}
+{{ $homeJS := slice $home | resources.Concat "js/homeBundle.js" }}
+
+{{ if .Site.IsServer }}
+<script type="text/javascript" src="{{ ($homeJS | fingerprint).RelPermalink }}"></script>
+{{ else }}
+<script type="text/javascript" src="{{ ($homeJS | minify | fingerprint).RelPermalink }}"></script>
+{{ end }}
+
+<script>
+  const editor = document.getElementById("editorCurrentLine");
+  const editorContent = document.getElementById("editorContent");
+  const cursorLine = "<span id=\"cursor\">&nbsp;</span>"
+
+  editor.addEventListener('paste', (event) => {
+      let paste = (event.clipboardData || window.clipboardData).getData('text');
+      const string = editor.innerHTML.replace(cursorLine, paste + cursorLine);
+      console.log(string, event.data);
+      editor.innerHTML = string;
+      event.preventDefault();
+  });
+
+  editor.addEventListener("keydown", function (e) {
+      if (e.key === "Enter") {
+          const command = editor.innerHTML.replace("$ ", "").replace(cursorLine, "");
+          console.log("Execute command", command);
+          const string = editor.innerHTML.replace(cursorLine, "</br>" + cursorLine);
+          editor.innerHTML = string;
+          editorContent.innerHTML += editor.innerHTML.replace(cursorLine, "");
+          editor.innerHTML = "$ " + cursorLine;
+
+          if (command === "genezio deploy") {
+
+          } else if (command === "curl") {
+
+          } else {
+              editorContent.innerHTML += "Command not found! Type 'help to see the available commands. </br>";
+          }
+
+          e.preventDefault();
+          return;
+      } else if (e.key === "Backspace") {
+          if (editor.innerHTML === "$ " + cursorLine) {
+              e.preventDefault();
+              return;
+          }
+          const index = editor.innerHTML.indexOf(cursorLine) - 1;
+          console.log("Replace", editor.innerHTML.replace(editor.innerHTML[index] + cursorLine, cursorLine));
+          editor.innerHTML = editor.innerHTML.replace(editor.innerHTML[index] + cursorLine, cursorLine);
+          e.preventDefault();
+          return;
+      } else if (e.metaKey === true || e.key.length > 1) {
+          return;
+      }
+      const string = editor.innerHTML.replace(cursorLine, event.key + cursorLine);
+      console.log(string, event.data);
+      editor.innerHTML = string;
+      e.preventDefault();
+  });
+</script>
+<script id="rendered-js" >
+  var html_value;
+  var codeEditor = CodeMirror.fromTextArea(document.getElementById("code"), {
+      styleActiveLine: true,
+      lineNumbers: true,
+      matchBrackets: true,
+      autoCloseBrackets: true,
+      autoCloseTags: true,
+      mode: "javascript",
+      theme: "dracula"
+  }).setSize("100%", 400);;
+  </script>
+
+  <script>
+    const baseURL = document.getElementById("baseUrl");
+    baseURL.addEventListener("keydown", function (e) {
+      if (e.key === "Backspace") {
+        if (baseURL.value === "https://api.genez.io/") {
+          e.preventDefault();
+        }
+      }
+    });
+  </script>
+
+{{ end }}
+
+{{ define "debug" }}
+{{ partial "debug" (dict "context" . "template" "layouts/index.html") }}
+{{ end }}

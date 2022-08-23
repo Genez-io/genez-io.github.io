@@ -1,0 +1,62 @@
+.box {
+  position: relative;
+  text-align: left;
+  background-color: #ffffff;
+  border: 1px solid darken($grey, 2%);
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  max-width: 600px;
+  &:after {
+    content: '';
+    border-radius: 6px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    transition: opacity 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    will-change: opacity;
+    pointer-events: none;
+  }
+  &:hover:after {
+    opacity: 1;
+  }
+  .box-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    h2 {
+      padding: 30px 20px 30px 30px;
+      margin: 0;
+      font-size: 30px;
+      color: $carbon;
+      flex: 1;
+    }
+    p {
+      margin: 0;
+      font-size: 20px;
+      line-height: 28px;
+      color: $steel;
+      font-weight: 300;
+      font-family: $font-family-heading;
+      flex: 2;
+      display: none;
+      @include media-breakpoint-up(sm) {
+        display: flex;
+      }
+    }
+  }
+  .box-arrow {
+    padding: 30px;
+    font-size: 30px;
+    color: $steel;
+    flex: 0;
+  }
+}
