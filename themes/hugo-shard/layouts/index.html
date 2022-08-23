@@ -80,10 +80,7 @@ async function handle(request) {
                 </div>
               </div>
               <div class="col-6">
-                <div id="editor">
-                  <div id="editorContent"></div>
-                  <div id="editorCurrentLine" contenteditable=true>$ <span id="cursor">&nbsp;</span></div>
-                </div>
+                <div id="editorCurrentLine" contenteditable=true>$ <span id="cursor">&nbsp;</span></div>
               </div>
             </div>
           </div>
@@ -230,41 +227,49 @@ async function handle(request) {
       event.preventDefault();
   });
 
+  var content = "";
+  var currentCommand = "";
+
   editor.addEventListener("keydown", function (e) {
       if (e.key === "Enter") {
-          const command = editor.innerHTML.replace("$ ", "").replace(cursorLine, "");
-          console.log("Execute command", command);
-          const string = editor.innerHTML.replace(cursorLine, "</br>" + cursorLine);
-          editor.innerHTML = string;
-          editorContent.innerHTML += editor.innerHTML.replace(cursorLine, "");
-          editor.innerHTML = "$ " + cursorLine;
+          console.log("Execute command", currentCommand);
+          content += "$ " + currentCommand + "</br>";
+          
 
-          if (command === "genezio deploy") {
+          if (currentCommand === "genezio deploy") {
 
-          } else if (command === "curl") {
+          } else if (currentCommand === "curl") {
 
           } else {
-              editorContent.innerHTML += "Command not found! Type 'help to see the available commands. </br>";
+              content += "Command not found! Type 'help to see the available commands. </br>";
+              editor.innerHTML = content;
           }
 
+          editor.innerHTML += "$ " + cursorLine;
+
           e.preventDefault();
+          currentCommand = "";
+          editor.scrollTop = editor.scrollHeight;
           return;
       } else if (e.key === "Backspace") {
-          if (editor.innerHTML === "$ " + cursorLine) {
+          if (currentCommand.length === 0) {
               e.preventDefault();
               return;
           }
           const index = editor.innerHTML.indexOf(cursorLine) - 1;
           console.log("Replace", editor.innerHTML.replace(editor.innerHTML[index] + cursorLine, cursorLine));
           editor.innerHTML = editor.innerHTML.replace(editor.innerHTML[index] + cursorLine, cursorLine);
+          currentCommand = currentCommand.slice(0, -1)
           e.preventDefault();
           return;
       } else if (e.metaKey === true || e.key.length > 1) {
           return;
       }
       const string = editor.innerHTML.replace(cursorLine, event.key + cursorLine);
-      console.log(string, event.data);
+      currentCommand += event.key;
+
       editor.innerHTML = string;
+
       e.preventDefault();
   });
 </script>
