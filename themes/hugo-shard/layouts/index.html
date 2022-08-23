@@ -215,6 +215,19 @@ async function handle(request) {
 {{ end }}
 
 <script>
+  var html_value;
+  var codeEditor = CodeMirror.fromTextArea(document.getElementById("code"), {
+      styleActiveLine: true,
+      lineNumbers: true,
+      matchBrackets: true,
+      autoCloseBrackets: true,
+      autoCloseTags: true,
+      mode: "javascript",
+      theme: "dracula"
+  })
+  codeEditor.setSize("100%", 400);
+  console.log("code editor", codeEditor);
+
   const editor = document.getElementById("editorCurrentLine");
   const editorContent = document.getElementById("editorContent");
   const cursorLine = "<span id=\"cursor\">&nbsp;</span>"
@@ -237,7 +250,8 @@ async function handle(request) {
           content += "$ " + currentCommand + "</br>";
 
           if (currentCommand === "genezio deploy") {
-            const sourceCode = document.getElementById("code");
+            const sourceCode = codeEditor.getValue();
+            console.log("source code", sourceCode);
 
             fetch('https://os2zxsiug9.execute-api.us-east-1.amazonaws.com/Dev/uploadCode', {
                 method: "PUT", // or "PUT" with the url changed to, e.g "https://reqres.in/api/users/2"
@@ -245,7 +259,7 @@ async function handle(request) {
                     'Content-type': 'application/json'
                 },
                 body: JSON.stringify(
-                    { code: btoa(sourceCode.value) }
+                    { code: btoa(sourceCode) }
                 )
             }).then((response) => {
               return response.json();
@@ -255,6 +269,7 @@ async function handle(request) {
               content += "</br>Your code was succesfully deployed! You can try your new API by making a GET request at URL https://os2zxsiug9.execute-api.us-east-1.amazonaws.com/Dev/api/" + response.id + ".</br></br> You can do this from this terminal by running the command `curl https://os2zxsiug9.execute-api.us-east-1.amazonaws.com/Dev/api/" + response.id + "`.</br></br>";
               editor.innerHTML = content;
               editor.innerHTML += "$ " + cursorLine;
+              editor.scrollTop = editor.scrollHeight;
             });
           } else if (currentCommand.startsWith("curl")) {
             const components = currentCommand.split(" ");
@@ -271,6 +286,7 @@ async function handle(request) {
                   content += JSON.stringify(response) + "</br>";
                   editor.innerHTML = content;
                   editor.innerHTML += "$ " + cursorLine;
+                  editor.scrollTop = editor.scrollHeight;
                 });
             }
           } else {
@@ -305,18 +321,6 @@ async function handle(request) {
       e.preventDefault();
   });
 </script>
-<script id="rendered-js" >
-  var html_value;
-  var codeEditor = CodeMirror.fromTextArea(document.getElementById("code"), {
-      styleActiveLine: true,
-      lineNumbers: true,
-      matchBrackets: true,
-      autoCloseBrackets: true,
-      autoCloseTags: true,
-      mode: "javascript",
-      theme: "dracula"
-  }).setSize("100%", 400);;
-  </script>
 
   <script>
     const baseURL = document.getElementById("baseUrl");
