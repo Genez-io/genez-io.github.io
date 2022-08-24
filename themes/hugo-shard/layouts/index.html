@@ -78,7 +78,9 @@
 // The function will be executed whenever
 // a new request is received.
 async function handle(request) {
-  return { "status": 200, "message": "Hello world!"};
+  const message = "Hello World";
+
+  return { "status": 200, message};
 }</textarea>
                   </div>
                 </div>
