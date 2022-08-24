@@ -48,22 +48,27 @@
       <div class="col-12">
         <div id="demo-preview" class="preview">
           <div class="container-md">
-            <div class="row no-gutters d-flex align-items-center flex-column">
-              <div class="col mb-1" style="border: 1px solid rgb(192, 192, 192); display: flex; flex-direction: row; background-color: white;" >
-                  <select name="languages" id="lang" style="font-family: Roboto monospace;">
-                    <option value="javascript">Http Method</option>
-                    <option value="get" selected>GET</option>
-                    <option value="post" disabled>POST</option>
-                    <option value="put" disabled>PUT</option>
-                    <option value="delete" disabled>DELETE</option>
-                    <option value="head" disabled>HEAD</option>
-                    <option value="options" disabled>OPTIONS</option>
-                    <option value="patch" disabled>PATCH</option>
-                  </select>
-                  <div style="display: flex; align-items: center; padding-left: 10px; padding-top: 10px; padding-bottom: 10px; font-family: Roboto monospace;">
+            <div class="row no-gutters flex align-items-center flex-column">
+              <div class="col mb-1"
+                style="border: 1px solid rgb(192, 192, 192); display: flex; flex-direction: row; background-color: white;">
+                <select name="languages" id="lang" style="font-family: Roboto monospace;">
+                  <option value="javascript">Http Method</option>
+                  <option value="get" selected>GET</option>
+                  <option value="post" disabled>POST</option>
+                  <option value="put" disabled>PUT</option>
+                  <option value="delete" disabled>DELETE</option>
+                  <option value="head" disabled>HEAD</option>
+                  <option value="options" disabled>OPTIONS</option>
+                  <option value="patch" disabled>PATCH</option>
+                </select>
+                <div style="display: flex;">
+                  <div
+                    style="display: flex; align-items: center; padding-left: 10px; padding-top: 10px; padding-bottom: 10px; font-family: Roboto monospace;">
                     https://api.genez.io/api{id}/
                   </div>
-                  <input id="baseUrl" style="height: 100%; display: flex; align-items: center; padding-top: 10px; padding-bottom: 10px; outline: 0;"></input>
+                  <input id="baseUrl"
+                    style="height: 100%; display: flex; align-items: center; padding-top: 10px; padding-bottom: 10px; outline: 0;"></input>
+                </div>
               </div>
             </div>
             <!-- <div class="row no-gutters">
@@ -86,7 +91,8 @@ async function handle(request) {
                 </div>
               </div>
               <div id="command-line-section">
-                <div id="editorCurrentLine" contenteditable=true>Welcome to Genez.io! Type 'genezio deploy' to deploy your function!</br></br>$ <span id="cursor">&nbsp;</span></div>
+                <div id="editorCurrentLine" contenteditable=true>Welcome to Genez.io! Type 'genezio deploy' to deploy
+                  your function!</br></br>$ <span id="cursor">&nbsp;</span></div>
               </div>
             </div>
           </div>
@@ -102,7 +108,7 @@ async function handle(request) {
 <div class="strip strip-white features pt-6 pb-4 pt-md-14 pb-md-20">
   <div class="container">
     <div class="row justify-content-center">
-      {{ if .Site.Params.homepage.features_title  }}
+      {{ if .Site.Params.homepage.features_title }}
       <div class="col-12">
         <h1 class="text-center">{{ .Site.Params.homepage.features_title }}</h1>
       </div>
@@ -136,7 +142,7 @@ async function handle(request) {
         <div class="dots-small-right">
         </div>
         <div class="product-right product-shadow">
-          <img width="1000" src="{{ "images/product/login.jpg" | relURL }}" />
+          <img width="1000" src="{{ " images/product/login.jpg" | relURL }}" />
         </div>
       </div>
     </div>
@@ -148,7 +154,7 @@ async function handle(request) {
     <div class="row justify-space-between">
       <div class="col-12 col-md-4 order-2 order-sm-1 position-relative">
         <div class="product-left ">
-          <img width="800" src="{{ "images/product/map.png" | relURL }}" />
+          <img width="800" src="{{ " images/product/map.png" | relURL }}" />
         </div>
       </div>
       <div class="col-12 col-md-7 offset-sm-1 order-1 order-sm-2">
@@ -156,8 +162,8 @@ async function handle(request) {
           <h2>Take Control Of Your Remote Helpdesk</h2>
           <p>Seed round business model canvas responsive web design traction social media disruptive beta creative
             business plan advisor scrum project startup.
-            <p>Seed money infographic rockstar return on investment ownership
-              alpha stock buyer influencer.</p>
+          <p>Seed money infographic rockstar return on investment ownership
+            alpha stock buyer influencer.</p>
         </div>
       </div>
     </div>
@@ -199,7 +205,7 @@ async function handle(request) {
         <div class="dots-large">
         </div>
         <div class="product-right product-shadow">
-          <img width="1000" src="{{ "images/product/dashboard.png" | relURL }}" />
+          <img width="1000" src="{{ " images/product/dashboard.png" | relURL }}" />
         </div>
       </div>
     </div>
