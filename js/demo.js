@@ -130,7 +130,7 @@ editor.addEventListener("keydown", function (e) {
             const baseUrl = document.getElementById("baseUrl").value;
             console.log("source code", sourceCode, baseUrl);
 
-            fetch('https://os2zxsiug9.execute-api.us-east-1.amazonaws.com/Dev/api/code/'+baseUrl, {
+            fetch('https://api.genez.io/api/code/'+baseUrl, {
                 method: "PUT", // or "PUT" with the url changed to, e.g "https://reqres.in/api/users/2"
                 headers: {
                     'Content-type': 'application/json'
@@ -143,7 +143,7 @@ editor.addEventListener("keydown", function (e) {
             }).then((response) => {
                 console.log(response);
                 console.log(response.uuid);
-                content += "</br>Your code was successfully deployed! You can try your new API by making a GET request at URL https://os2zxsiug9.execute-api.us-east-1.amazonaws.com/Dev/api/" + response.uuid + "/" + baseUrl + ".</br></br> You can do this from this terminal by running the command `curl https://os2zxsiug9.execute-api.us-east-1.amazonaws.com/Dev/api/" + response.uuid + "/" + baseUrl + "`.</br></br>";
+                content += "</br>Your code was successfully deployed! You can try your new API by making a GET request at URL https://api.genez.io/api/" + response.uuid + "/" + baseUrl + ".</br></br> You can do this from this terminal by running the command `curl https://api.genez.io/api/" + response.uuid + "/" + baseUrl + "`.</br></br>";
                 editor.innerHTML = content;
                 editor.innerHTML += "$ " + cursorLine;
                 editor.scrollTop = editor.scrollHeight;
