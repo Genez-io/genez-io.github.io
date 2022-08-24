@@ -20,7 +20,6 @@ pygmentsUseClasses = true
     font_base = "'Lato'"
     font_heading = "'Roboto'"
 
-    debugbar = true
     google_analytics_id = ""
 
     [params.homepage_meta_tags]

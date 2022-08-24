@@ -32,9 +32,10 @@ editor.addEventListener("keydown", function (e) {
 
         if (currentCommand === "genezio deploy") {
             const sourceCode = codeEditor.getValue();
-            console.log("source code", sourceCode);
+            const baseUrl = document.getElementById("baseUrl").value;
+            console.log("source code", sourceCode, baseUrl);
 
-            fetch('https://os2zxsiug9.execute-api.us-east-1.amazonaws.com/Dev/uploadCode', {
+            fetch('https://os2zxsiug9.execute-api.us-east-1.amazonaws.com/Dev/api/code/'+baseUrl, {
                 method: "PUT", // or "PUT" with the url changed to, e.g "https://reqres.in/api/users/2"
                 headers: {
                     'Content-type': 'application/json'
@@ -46,12 +47,12 @@ editor.addEventListener("keydown", function (e) {
                 return response.json();
             }).then((response) => {
                 console.log(response);
-                console.log(response.id);
-                content += "</br>Your code was succesfully deployed! You can try your new API by making a GET request at URL https://os2zxsiug9.execute-api.us-east-1.amazonaws.com/Dev/api/" + response.id + ".</br></br> You can do this from this terminal by running the command `curl https://os2zxsiug9.execute-api.us-east-1.amazonaws.com/Dev/api/" + response.id + "`.</br></br>";
+                console.log(response.uuid);
+                content += "</br>Your code was succesfully deployed! You can try your new API by making a GET request at URL https://os2zxsiug9.execute-api.us-east-1.amazonaws.com/Dev/api/" + response.uuid + "/" + baseUrl + ".</br></br> You can do this from this terminal by running the command `curl https://os2zxsiug9.execute-api.us-east-1.amazonaws.com/Dev/api/" + response.uuid + "/" + baseUrl + "`.</br></br>";
                 editor.innerHTML = content;
                 editor.innerHTML += "$ " + cursorLine;
                 editor.scrollTop = editor.scrollHeight;
-            });
+            }).catch((error) => console.log(error));
         } else if (currentCommand.startsWith("curl")) {
             const components = currentCommand.split(" ");
             console.log(components);
