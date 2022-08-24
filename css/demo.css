@@ -42,6 +42,19 @@ select {
     flex: 1;
 }
 
+@media (min-width: 901px) {
+.code-container {
+    height: 400px;
+}
+}
+
+@media (max-width: 900px) {
+.code-container {
+    height: 200px;
+}
+}
+
+
 #baseUrl {
   border: none;
   width: 100%;
@@ -62,6 +75,7 @@ select {
     animation: blink 1s step-end infinite;
 }
 
+@media (min-width: 901px) {
 #editorCurrentLine {
     background-color: #282a36;
     color: #fff;
@@ -75,6 +89,24 @@ select {
     border-left: 1px solid rgb(220 220 220);
     overflow-y: scroll;
     height: 400px;
+}
+}
+
+@media (max-width: 900px) {
+    #editorCurrentLine {
+        background-color: #282a36;
+        color: #fff;
+        outline: 0;
+        font-family: "Roboto monospace" ;
+        caret-color: transparent;
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-bottom: 5px;
+        /* height: 100%; */
+        border-left: 1px solid rgb(220 220 220);
+        overflow-y: scroll;
+        height: 200px;
+    }
 }
 
 @keyframes blink {

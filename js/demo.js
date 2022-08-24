@@ -7,7 +7,7 @@ const codeEditor = CodeMirror.fromTextArea(document.getElementById("code"), {
     mode: "javascript",
     theme: "dracula"
 })
-codeEditor.setSize("100%", 400);
+codeEditor.setSize("100%", "100%");
 
 function writeAsync(text, element, done) {
     if (text.length === 0 || clicked) { element.blur(); done(); return; }
