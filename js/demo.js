@@ -9,6 +9,101 @@ const codeEditor = CodeMirror.fromTextArea(document.getElementById("code"), {
 })
 codeEditor.setSize("100%", 400);
 
+function writeAsync(text, element, done) {
+    if (text.length === 0) { element.blur(); done(); return; }
+    element.focus();
+    element.value += text.slice(0, 1);
+    setTimeout(() => writeAsync(text.slice(1), element, done), 100);
+}
+
+function writeIncodeAsync(intermediateSteps, done) {
+    if (intermediateSteps.length === 0) { done(); return };
+
+    codeEditor.getDoc().setValue(intermediateSteps[0]);
+    setTimeout(() => writeIncodeAsync(intermediateSteps.slice(1), done), 100)
+}
+
+const baseUrl = document.getElementById("baseUrl")
+const intermediateSteps = [
+`// The function will be executed whenever
+// a new request is received.
+async function handle(request) {
+  const message = "Hello World,";
+
+  return { "status": 200, message};
+}`,
+`// The function will be executed whenever
+// a new request is received.
+async function handle(request) {
+  const message = "Hello World, ";
+
+  return { "status": 200, message};
+}`,
+`// The function will be executed whenever
+// a new request is received.
+async function handle(request) {
+  const message = "Hello World, g";
+
+  return { "status": 200, message};
+}`,
+`// The function will be executed whenever
+// a new request is received.
+async function handle(request) {
+  const message = "Hello World, ge";
+
+  return { "status": 200, message};
+}
+`,
+`// The function will be executed whenever
+// a new request is received.
+async function handle(request) {
+  const message = "Hello World, gen";
+
+  return { "status": 200, message};
+}
+`,
+`// The function will be executed whenever
+// a new request is received.
+async function handle(request) {
+  const message = "Hello World, gene";
+
+  return { "status": 200, message};
+}
+`,
+`// The function will be executed whenever
+// a new request is received.
+async function handle(request) {
+  const message = "Hello World, genez";
+  
+  return { "status": 200, message};
+}
+`,
+`// The function will be executed whenever
+// a new request is received.
+async function handle(request) {
+  const message = "Hello World, genezi";
+
+  return { "status": 200, message};
+}
+`,
+`// The function will be executed whenever
+// a new request is received.
+async function handle(request) {
+  const message = "Hello World, genezio";
+
+  return { "status": 200, message};
+}
+`,
+`// The function will be executed whenever
+// a new request is received.
+async function handle(request) {
+  const message = "Hello World, genezio!";
+
+  return { "status": 200, message};
+}
+`
+]
+
 const editor = document.getElementById("editorCurrentLine");
 const editorContent = document.getElementById("editorContent");
 const cursorLine = "<span id=\"cursor\">&nbsp;</span>"
@@ -111,3 +206,19 @@ baseURL.addEventListener("keydown", function (e) {
         }
     }
 });
+
+function simulateInputCommand(string) {
+    if (string.length === 0) { return; }
+    var evt = new KeyboardEvent('keydown', { key: string.slice(0, 1) });
+    editor.dispatchEvent(evt);
+
+    setTimeout(() => { simulateInputCommand(string.slice(1)) }, 100);
+}
+
+setTimeout(() => {
+    writeAsync("genezio", baseURL, () => {
+        writeIncodeAsync(intermediateSteps, () => {
+            simulateInputCommand("genezio deploy");
+        });
+    });
+}, 4000);
