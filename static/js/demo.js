@@ -117,7 +117,7 @@ editor.addEventListener('paste', (event) => {
     event.preventDefault();
 });
 
-var content = "Welcome to Genez.io! Type 'genezio deploy' to deploy your function!</br>";
+var content = "Welcome to Genez.io! Type 'genezio deploy' to deploy your function!</br></br>";
 var currentCommand = "";
 
 editor.addEventListener("keydown", function (e) {
@@ -160,7 +160,7 @@ editor.addEventListener("keydown", function (e) {
                 fetch(components[1])
                     .then((response) => response.json())
                     .then((response) => {
-                        content += JSON.stringify(response) + "</br>";
+                        content += JSON.stringify(response) + "</br></br>";
                         editor.innerHTML = content;
                         editor.innerHTML += "$ " + cursorLine;
                         editor.scrollTop = editor.scrollHeight;

@@ -50,7 +50,7 @@
           <div class="container-md">
             <div class="row no-gutters d-flex align-items-center flex-column">
               <div class="col mb-1" style="border: 1px solid rgb(192, 192, 192); display: flex; flex-direction: row; background-color: white;" >
-                  <select name="languages" id="lang">
+                  <select name="languages" id="lang" style="font-family: Roboto monospace;">
                     <option value="javascript">Http Method</option>
                     <option value="get" selected>GET</option>
                     <option value="post" disabled>POST</option>
@@ -60,7 +60,7 @@
                     <option value="options" disabled>OPTIONS</option>
                     <option value="patch" disabled>PATCH</option>
                   </select>
-                  <div style="display: flex; align-items: center; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;">
+                  <div style="display: flex; align-items: center; padding-left: 10px; padding-top: 10px; padding-bottom: 10px; font-family: Roboto monospace;">
                     https://api.genez.io/{id}/
                   </div>
                   <input id="baseUrl" style="height: 100%; display: flex; align-items: center; padding-top: 10px; padding-bottom: 10px; outline: 0;"></input>
@@ -86,7 +86,7 @@ async function handle(request) {
                 </div>
               </div>
               <div class="col-6">
-                <div id="editorCurrentLine" contenteditable=true>Welcome to Genez.io! Type 'genezio deploy' to deploy your function!</br>$ <span id="cursor">&nbsp;</span></div>
+                <div id="editorCurrentLine" contenteditable=true>Welcome to Genez.io! Type 'genezio deploy' to deploy your function!</br></br>$ <span id="cursor">&nbsp;</span></div>
               </div>
             </div>
           </div>
