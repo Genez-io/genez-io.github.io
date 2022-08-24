@@ -13,14 +13,14 @@ function writeAsync(text, element, done) {
     if (text.length === 0 || clicked) { element.blur(); done(); return; }
     element.focus();
     element.value += text.slice(0, 1);
-    setTimeout(() => writeAsync(text.slice(1), element, done), 100);
+    setTimeout(() => writeAsync(text.slice(1), element, done), 50);
 }
 
 function writeIncodeAsync(intermediateSteps, done) {
     if (intermediateSteps.length === 0 || clicked) { done(); return };
 
     codeEditor.getDoc().setValue(intermediateSteps[0]);
-    setTimeout(() => writeIncodeAsync(intermediateSteps.slice(1), done), 100)
+    setTimeout(() => writeIncodeAsync(intermediateSteps.slice(1), done), 50)
 }
 
 const baseUrl = document.getElementById("baseUrl")
@@ -212,7 +212,7 @@ function simulateInputCommand(string, done) {
     var evt = new KeyboardEvent('keydown', { key: string.slice(0, 1) });
     editor.dispatchEvent(evt);
 
-    setTimeout(() => { simulateInputCommand(string.slice(1), done) }, 100);
+    setTimeout(() => { simulateInputCommand(string.slice(1), done) }, 50);
 }
 
 var clicked = false;
@@ -229,4 +229,4 @@ setTimeout(() => {
             });
         });
     });
-}, 1000);
+}, 500);
