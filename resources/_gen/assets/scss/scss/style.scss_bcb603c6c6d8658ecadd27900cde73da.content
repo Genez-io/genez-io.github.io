@@ -12846,7 +12846,7 @@ h3 {
   border-radius: 3px;
   font-weight: 400;
   letter-spacing: 0.025em;
-  color: #f0f0f0;
+  color: #fffff8;
   text-decoration: none;
   transition: all 0.15s ease;
   border: 2px solid #9477c4;
@@ -12877,7 +12877,7 @@ h3 {
   transition: all 0.15s ease;
   outline: none;
   font-family: "Roboto";
-  background: #f0f0f0; }
+  background: #fffff8; }
   @media (min-width: 768px) {
     .button-outlined {
       padding: 16px 24px 15px 24px; } }
@@ -12891,7 +12891,7 @@ h3 {
   color: #2a478b .button-white; }
   .button-white :hover {
     color: #365bb2;
-    background: #f0f0f0;
+    background: #fffff8;
     transform: translateY(-1px);
     box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
     text-decoration: none; }
@@ -13034,7 +13034,7 @@ h3 {
 
 .strip-white,
 .strip-bg-white {
-  background-color: #f0f0f0; }
+  background-color: #fffff8; }
 
 .strip-grey,
 .strip-bg-grey {
@@ -13502,7 +13502,7 @@ table.debugprint {
   z-index: 100; }
 
 .header-scrolled {
-  background: #f0f0f0;
+  background: #fffff8;
   transition: all 500ms cubic-bezier(0.55, 0, 0.1, 1);
   box-shadow: 0 1px 6px 0 rgba(36, 50, 66, 0.15); }
   .header-scrolled .hamburger {

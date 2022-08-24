@@ -10,7 +10,7 @@ pygmentsUseClasses = true
 
 [params]
     primary_color = "#9477c4"
-    primary_light = "#f0f0f0"
+    primary_light = "#fffff8"
     secondary_color = "#2a478b"
     secondary_light = "#d5d5e9"
     grey_color = "#d65101"
