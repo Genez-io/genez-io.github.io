@@ -18,6 +18,30 @@ select {
     padding: 10px;
 }
 
+@media (max-width: 900px) {
+#coding-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+}
+
+@media (min-width: 901px) {
+    #coding-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+#code-editor-section {
+    flex: 1;
+}
+
+#command-line-section {
+    flex: 1;
+}
+
 #baseUrl {
   border: none;
   width: 100%;
