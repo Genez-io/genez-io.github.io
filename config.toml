@@ -1,6 +1,6 @@
 baseURL = "/"
 languageCode = "en-us"
-title = "Hugo Shard"
+title = "genez.io"
 theme = "hugo-shard"
 paginate = 12
 
