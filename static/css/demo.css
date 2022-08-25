@@ -21,7 +21,7 @@ select {
 #baseUrl {
   border: none;
   width: 100%;
-  font-family: Roboto monospace;
+  font-family: Roboto mono;
 }
 
 #cursor {
@@ -42,7 +42,7 @@ select {
     background-color: #282a36;
     color: #fff;
     outline: 0;
-    font-family: "Roboto monospace" ;
+    font-family: "Roboto mono" ;
     caret-color: transparent;
     padding-left: 5px;
     padding-right: 5px;

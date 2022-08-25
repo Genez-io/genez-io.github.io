@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700|Lato:400,700");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700|Lato:400,700|Roboto%20Mono:300,400,700");
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -12993,7 +12993,7 @@ h3 {
       margin: 60px 0 60px 0; } }
 .content code,
 .content pre {
-  font-family: "Lucida Console", Monaco, monospace; }
+  font-family: "Roboto Mono"; }
 
 .content .highlight pre {
   border-radius: 3px;
@@ -13001,7 +13001,7 @@ h3 {
   line-height: 18px;
   padding: 30px;
   overflow: auto;
-  font-family: "Lucida Console", Monaco, monospace; }
+  font-family: "Roboto Mono"; }
 
 .strip {
   background: white;
@@ -13038,7 +13038,7 @@ h3 {
 
 .strip-grey,
 .strip-bg-grey {
-  background-color: #d65101; }
+  background-color: #d5d5d5; }
 
 .strip-diagonal-right {
   margin-top: -100px;
@@ -13104,10 +13104,10 @@ svg {
   fill: #9477c4; }
 
 .fill-grey {
-  fill: #d65101; }
+  fill: #d5d5d5; }
 
 .fill-grey2 {
-  fill: #bd4701; }
+  fill: #c8c8c8; }
 
 .zindex-1 {
   z-index: 1 !important; }
@@ -13570,7 +13570,7 @@ table.debugprint {
     color: white; }
 
 .footer {
-  border-top: 1px solid #bd4701;
+  border-top: 1px solid #c8c8c8;
   background: white;
   padding-top: 20px;
   padding-bottom: 20px; }
@@ -13868,7 +13868,7 @@ ul.pagination li {
 .sidebar {
   display: flex;
   flex-direction: column;
-  background: #d65101;
+  background: #d5d5d5;
   padding: 30px;
   border: none;
   border-radius: 3px; }
@@ -13899,7 +13899,7 @@ ul.pagination li {
   position: relative;
   text-align: left;
   background-color: #ffffff;
-  border: 1px solid #cc4d01;
+  border: 1px solid #d0d0d0;
   border-radius: 6px;
   display: flex;
   justify-content: center;
@@ -13960,16 +13960,16 @@ ul.pagination li {
 .plan {
   width: 100%;
   font-family: "Roboto";
-  border: 1px solid #bd4701;
+  border: 1px solid #c8c8c8;
   margin-bottom: 40px; }
   @media (min-width: 768px) {
     .plan {
       flex-basis: 25%;
       margin-bottom: 0;
       border: none;
-      border-top: 1px solid #bd4701;
-      border-right: 1px solid #bd4701;
-      border-bottom: 1px solid #bd4701; } }
+      border-top: 1px solid #c8c8c8;
+      border-right: 1px solid #c8c8c8;
+      border-bottom: 1px solid #c8c8c8; } }
   .plan:last-of-type {
     border-right: none; }
   .plan.plan-featured {
@@ -13977,7 +13977,7 @@ ul.pagination li {
   .plan .plan-main {
     padding: 30px 10px;
     text-align: center;
-    border-bottom: 1px solid #bd4701; }
+    border-bottom: 1px solid #c8c8c8; }
   .plan .plan-details {
     padding: 30px 20px;
     text-align: left; }
@@ -14131,7 +14131,7 @@ ul.pagination li {
   border-radius: 4px; }
 
 .product .product-border {
-  border: 1px solid #d65101; }
+  border: 1px solid #d5d5d5; }
 
 .product .product-text {
   position: relative;

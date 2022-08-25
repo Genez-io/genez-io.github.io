@@ -1,7 +1,7 @@
 ---
 title: 'Home'
 date: 2019-02-22
-leadTitle: "Just code. We will handle everything else. Happy hacking!"
+leadTitle: "Have fun coding and let us take care of the rest. Happy hacking!"
 leadSubTitle: ''
 leadButtonOneText: 'Check our demo'
 leadButtonOneLink: '/product'

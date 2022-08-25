@@ -1,17 +1,17 @@
 [
   {
-    "title": "Support",
-    "description": "Ramen partner network long tail niche market startup prototype analytics founders. ",
+    "title": "Worry less",
+    "description": "We take the complexity out of deploying your functions in a serverless environment",
     "image": "/features/feature1.svg"
   },
   {
-    "title": "Accelerate",
-    "description": "Freemium value proposition vesting period ecosystem backing accelerator.",
-    "image": "/features/feature2.svg"
+      "title": "Accelerate",
+      "description": "Instantaneous startup time, automatic scale up and down",
+      "image": "/features/feature2.svg"
   },
   {
-    "title": "Monetize",
-    "description": "Monetization analytics business-to-consumer innovator facebook disruptive ownership niche market.",
-    "image": "/features/feature3.svg"
+      "title": "Control",
+      "description": "Dashboard and API to control the backend functions",
+      "image": "/features/feature3.svg"
   }
 ]

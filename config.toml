@@ -13,7 +13,7 @@ pygmentsUseClasses = true
     primary_light = "#fffff8"
     secondary_color = "#2a478b"
     secondary_light = "#d5d5e9"
-    grey_color = "#d65101"
+    grey_color = "#d5d5d5"
     carbon = "#2a478b"
     steel = "#2a478b"
 
@@ -54,7 +54,7 @@ pygmentsUseClasses = true
 
     [params.homepage]
         show_features = true 
-        features_title = "Support Your Customers, Anywhere, Anytime."
+        features_title = "Seamless deployment of your backend functions"
     
     [params.hero]
         hero_background_gradient_one = "#2b3af7"
