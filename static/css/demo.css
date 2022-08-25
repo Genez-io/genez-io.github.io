@@ -14,12 +14,14 @@ select {
 
 @media (min-width: 901px) {
 .CodeMirror {
+    font-family: Roboto mono;
     font-size: 16px;
 }
 }
 
 @media (max-width: 900px) {
     .CodeMirror {
+        font-family: Roboto mono;
         font-size: 12px;
     }
 }
@@ -131,7 +133,7 @@ select {
         background-color: #282a36;
         color: #fff;
         outline: 0;
-        font-family: "Roboto monospace" ;
+        font-family: "Roboto mono" ;
         font-size: 12px;
         caret-color: transparent;
         padding-left: 5px;
