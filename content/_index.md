@@ -6,6 +6,6 @@ leadSubTitle: ''
 leadButtonOneText: 'Check our demo'
 leadButtonOneLink: '/product'
 leadButtonTwoText: 'Join our waitlist'
-leadButtonTwoLink: '/posts'
+leadButtonTwoLink: 'https://share-eu1.hsforms.com/1LNCxgz5MRwOaUUj545Le8wflc1e'
 screenshot: 'images/preview.png'
 ---
