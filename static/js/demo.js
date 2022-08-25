@@ -1,6 +1,6 @@
 const codeEditor = CodeMirror.fromTextArea(document.getElementById("code"), {
     styleActiveLine: true,
-    lineNumbers: true,
+    lineNumbers: false,
     matchBrackets: true,
     autoCloseBrackets: true,
     autoCloseTags: true,
