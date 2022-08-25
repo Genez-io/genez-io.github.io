@@ -12,7 +12,7 @@ codeEditor.setSize("100%", "100%");
 function writeAsync(text, element, done) {
     if (text.length === 0 || clicked) { element.blur(); done(); return; }
     element.focus();
-    element.value += text.slice(0, 1);
+    element.textContent += text.slice(0, 1);
     setTimeout(() => writeAsync(text.slice(1), element, done), 50);
 }
 
