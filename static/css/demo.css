@@ -1,3 +1,4 @@
+@media (min-width: 901px) {
 select {
     margin-bottom: 10px;
     margin-top: 10px;
@@ -10,6 +11,21 @@ select {
     border-right: 1px solid rgb(192, 192, 192);
     text-align: center;
   }
+}
+
+@media (max-width: 900px) {
+    select {
+        margin-bottom: 10px;
+        margin-top: 10px;
+        outline: 0;
+        background: #ffffff;
+        font-family: initial;
+        color: #000;
+        padding: 8px;
+        border: none;
+        text-align: center;
+      }
+}
 
 #demo-preview {
     border: 1px solid rgb(192, 192, 192);
@@ -107,6 +123,24 @@ select {
         overflow-y: scroll;
         height: 200px;
     }
+}
+
+@media (max-width: 900px) {
+    #api-editor-section {
+        border: 1px solid rgb(192, 192, 192);
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+    }
+}
+
+@media (min-width: 901px) {
+#api-editor-section {
+    border: 1px solid rgb(192, 192, 192);
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+}
 }
 
 @keyframes blink {
