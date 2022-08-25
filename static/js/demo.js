@@ -1,18 +1,18 @@
 const codeEditor = CodeMirror.fromTextArea(document.getElementById("code"), {
     styleActiveLine: true,
-    lineNumbers: true,
+    lineNumbers: false,
     matchBrackets: true,
     autoCloseBrackets: true,
     autoCloseTags: true,
     mode: "javascript",
     theme: "dracula"
 })
-codeEditor.setSize("100%", 400);
+codeEditor.setSize("100%", "100%");
 
 function writeAsync(text, element, done) {
     if (text.length === 0 || clicked) { element.blur(); done(); return; }
     element.focus();
-    element.value += text.slice(0, 1);
+    element.textContent += text.slice(0, 1);
     setTimeout(() => writeAsync(text.slice(1), element, done), 50);
 }
 
@@ -127,10 +127,10 @@ editor.addEventListener("keydown", function (e) {
 
         if (currentCommand === "genezio deploy") {
             const sourceCode = codeEditor.getValue();
-            const baseUrl = document.getElementById("baseUrl").value;
+            const baseUrl = document.getElementById("baseUrl").textContent;
             console.log("source code", sourceCode, baseUrl);
 
-            fetch('https://os2zxsiug9.execute-api.us-east-1.amazonaws.com/Dev/api/code/'+baseUrl, {
+            fetch('https://api.genez.io/api/code/'+baseUrl, {
                 method: "PUT", // or "PUT" with the url changed to, e.g "https://reqres.in/api/users/2"
                 headers: {
                     'Content-type': 'application/json'
@@ -143,7 +143,7 @@ editor.addEventListener("keydown", function (e) {
             }).then((response) => {
                 console.log(response);
                 console.log(response.uuid);
-                content += "</br>Your code was successfully deployed! You can try your new API by making a GET request at URL https://os2zxsiug9.execute-api.us-east-1.amazonaws.com/Dev/api/" + response.uuid + "/" + baseUrl + ".</br></br> You can do this from this terminal by running the command `curl https://os2zxsiug9.execute-api.us-east-1.amazonaws.com/Dev/api/" + response.uuid + "/" + baseUrl + "`.</br></br>";
+                content += "</br>Your code was successfully deployed! You can try your new API by making a GET request at URL https://api.genez.io/api/" + response.uuid + "/" + baseUrl + ".</br></br> You can do this from this terminal by running the command `curl https://api.genez.io/api/" + response.uuid + "/" + baseUrl + "`.</br></br>";
                 editor.innerHTML = content;
                 editor.innerHTML += "$ " + cursorLine;
                 editor.scrollTop = editor.scrollHeight;
