@@ -85,7 +85,13 @@ select {
   border: none;
   width: 100%;
   font-family: Roboto mono;
-
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  outline: 0;
+  padding-left: 0px;
 }
 
 #cursor {
