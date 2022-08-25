@@ -127,7 +127,7 @@ editor.addEventListener("keydown", function (e) {
 
         if (currentCommand === "genezio deploy") {
             const sourceCode = codeEditor.getValue();
-            const baseUrl = document.getElementById("baseUrl").value;
+            const baseUrl = document.getElementById("baseUrl").textContent;
             console.log("source code", sourceCode, baseUrl);
 
             fetch('https://api.genez.io/api/code/'+baseUrl, {
