@@ -84,14 +84,8 @@ select {
 #baseUrl {
   border: none;
   width: 100%;
-  font-family: Roboto monospace;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  outline: 0;
-  padding-left: 0px;
+  font-family: Roboto mono;
+
 }
 
 #cursor {
@@ -113,7 +107,7 @@ select {
     background-color: #282a36;
     color: #fff;
     outline: 0;
-    font-family: "Roboto monospace";
+    font-family: "Roboto mono" ;
     font-size: 16px;
     caret-color: transparent;
     padding-left: 5px;
