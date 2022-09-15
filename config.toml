@@ -54,7 +54,7 @@ pygmentsUseClasses = true
 
     [params.homepage]
         show_features = true 
-        features_title = "Seamless deployment of your backend functions"
+        features_title = "Seamless development of your backend functions"
     
     [params.hero]
         hero_background_gradient_one = "#2b3af7"

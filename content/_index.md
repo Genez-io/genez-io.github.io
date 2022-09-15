@@ -1,7 +1,7 @@
 ---
 title: 'Home'
 date: 2019-02-22
-leadTitle: "Have fun coding and let us take care of the rest. Happy hacking!"
+leadTitle: "Simple backend functions for mobile developers. Happy hacking!"
 leadSubTitle: ''
 leadButtonOneText: 'Check our demo'
 leadButtonOneLink: '/product'

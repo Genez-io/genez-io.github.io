@@ -1,5 +1,5 @@
 // Font
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700|Lato:400,700|Roboto%20Mono:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700|Lato:400,700');
 
 // Hugo Variables
 $primary: {{ .Site.Params.primary_color | default "#FFFFFF" }};
@@ -14,7 +14,7 @@ $steel: {{ .Site.Params.steel | default "#39d000" }};;
 
 $font-family-base: {{ .Site.Params.font_base | default "'Lato', Arial, sans-serif, -apple-system" }};
 $font-family-heading:  {{ .Site.Params.font_heading | default "'Roboto', Arial, sans-serif, -apple-system" }};
-$font-family-mono: "Roboto Mono";
+$font-family-mono: "Lucida Console", Monaco, monospace;
 $font-size-base: 1rem;
 
 $hero-gradient-start: {{ .Site.Params.hero_background_gradient_one | default "#3365ff" }};
