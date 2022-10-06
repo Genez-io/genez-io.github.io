@@ -32,6 +32,10 @@
 .strip-bg-white {
     background-color: $primary-light;
 }
+.strip-main {
+    background-image: url('/images/main.jpg');
+    background-size: cover;
+}
 .strip-grey,
 .strip-bg-grey {
   background-color: $grey;

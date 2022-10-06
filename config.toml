@@ -14,11 +14,11 @@ pygmentsUseClasses = true
     secondary_color = "#2a478b"
     secondary_light = "#d5d5e9"
     grey_color = "#d5d5d5"
-    carbon = "#2a478b"
+    carbon = "#fffff8"  #"#2a478b"
     steel = "#2a478b"
 
-    font_base = "'Lato'"
-    font_heading = "'Roboto'"
+    font_base = "'Inter'"
+    font_heading = "'Poppins'"
 
     google_analytics_id = ""
 

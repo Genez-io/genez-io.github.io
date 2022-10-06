@@ -233,15 +233,16 @@
 }
 
 .header-fixed {
-  position: fixed;
+    background: linear-gradient($steel, #152355);
+    position: fixed;
   width: 100%;
   top: 0;
   z-index: 100;
 }
 
 .header-scrolled {
-  background: $primary-light;
-  transition: all 500ms cubic-bezier(0.55, 0, 0.1, 1);
+    background: linear-gradient($steel, #152355);
+    transition: all 500ms cubic-bezier(0.55, 0, 0.1, 1);
   box-shadow: 0 1px 6px 0 rgba(36, 50, 66, 0.15);
   .hamburger {
     color: $carbon;

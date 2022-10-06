@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700|Lato:400,700");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;700&family=Poppins:wght@700&display=swap");
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -46,7 +46,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
-  font-family: "Lato";
+  font-family: "Inter";
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -4065,7 +4065,7 @@ a.close.disabled {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: "Lato";
+  font-family: "Inter";
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -4150,7 +4150,7 @@ a.close.disabled {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: "Lato";
+  font-family: "Inter";
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -12796,13 +12796,13 @@ ol {
 
 p {
   color: #2a478b;
-  font-family: "Lato";
+  font-family: "Inter";
   margin-top: 0;
   margin-bottom: 20px; }
 
 h1 {
-  color: #2a478b;
-  font-family: "Roboto";
+  color: #fffff8;
+  font-family: "Poppins";
   margin-top: 0;
   margin-bottom: 20px;
   line-height: 42px;
@@ -12814,7 +12814,7 @@ h1 {
       font-size: 48px; } }
 h2 {
   color: #2a478b;
-  font-family: "Roboto";
+  font-family: "Poppins";
   line-height: 26px;
   font-size: 22px;
   font-weight: 300;
@@ -12825,9 +12825,9 @@ h2 {
       line-height: 38px;
       font-size: 32px; } }
 h3 {
-  color: #2a478b;
+  color: #fffff8;
   font-size: 1.2rem;
-  font-family: "Roboto";
+  font-family: "Poppins";
   line-height: 1.4;
   font-weight: 300;
   margin-top: 0;
@@ -12851,7 +12851,7 @@ h3 {
   transition: all 0.15s ease;
   border: 2px solid #9477c4;
   outline: none;
-  font-family: "Roboto"; }
+  font-family: "Poppins"; }
   @media (min-width: 768px) {
     .button {
       padding: 16px 24px 15px 24px; } }
@@ -12876,7 +12876,7 @@ h3 {
   -webkit-transition: all 0.15s ease;
   transition: all 0.15s ease;
   outline: none;
-  font-family: "Roboto";
+  font-family: "Poppins";
   background: #fffff8; }
   @media (min-width: 768px) {
     .button-outlined {
@@ -12906,32 +12906,32 @@ h3 {
 .content p {
   font-size: 1.1rem;
   line-height: 1.6;
-  font-family: "Lato";
+  font-family: "Inter";
   color: #121f3d;
   margin-bottom: 20px; }
 
 .content h1 {
   font-size: 2.8rem;
-  font-family: "Roboto";
+  font-family: "Poppins";
   line-height: 1.6;
   font-weight: 300;
-  color: #2a478b;
+  color: #fffff8;
   margin-top: 0;
   margin-bottom: 30px; }
 
 .content h2 {
   font-size: 2rem;
-  font-family: "Roboto";
+  font-family: "Poppins";
   line-height: 1.2;
   font-weight: 300;
-  color: #2a478b;
+  color: #fffff8;
   padding-top: 20px;
   margin-bottom: 30px; }
 
 .content h3 {
   font-size: 1.6rem;
-  font-family: "Roboto";
-  color: #2a478b;
+  font-family: "Poppins";
+  color: #fffff8;
   line-height: 1.2;
   font-weight: 400;
   padding-top: 10px;
@@ -12952,7 +12952,7 @@ h3 {
     color: #121f3d; }
 
 .content a {
-  color: #2a478b;
+  color: #fffff8;
   text-decoration: none;
   border-bottom: 2px solid #9477c4;
   padding: 0 4px; }
@@ -12978,11 +12978,11 @@ h3 {
   line-height: 0.1em;
   margin-right: 0.25em;
   vertical-align: -0.4em;
-  font-family: "Roboto"; }
+  font-family: "Poppins"; }
 
 .content blockquote p {
   display: inline;
-  color: #365bb2; }
+  color: white; }
 
 .content img {
   margin: 40px 0 40px 0;
@@ -13035,6 +13035,10 @@ h3 {
 .strip-white,
 .strip-bg-white {
   background-color: #fffff8; }
+
+.strip-main {
+  background-image: url("/images/main.jpg");
+  background-size: cover; }
 
 .strip-grey,
 .strip-bg-grey {
@@ -13152,7 +13156,7 @@ svg {
   .intro h1 {
     font-size: 2.4rem;
     line-height: 1.2;
-    font-family: "Roboto";
+    font-family: "Poppins";
     width: 70%;
     font-weight: 500; }
     @media (min-width: 576px) {
@@ -13314,7 +13318,7 @@ table.debugprint {
   overflow: auto; }
 
 .header {
-  font-family: "Roboto";
+  font-family: "Poppins";
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -13360,15 +13364,15 @@ table.debugprint {
           padding: 0;
           font-size: 1.2rem;
           font-weight: 400;
-          color: #2a478b;
+          color: #fffff8;
           padding: 10px 14px 10px 14px;
           text-decoration: none; }
           .header .menu-main ul li a:hover {
             opacity: 0.7;
-            color: #2a478b; }
+            color: #fffff8; }
       .header .menu-main ul li.active a {
         font-weight: 600;
-        color: #2a478b; }
+        color: #fffff8; }
   .header .logos a {
     display: block;
     opacity: 1;
@@ -13376,7 +13380,7 @@ table.debugprint {
     padding-bottom: 10px;
     padding-left: 10px;
     padding-right: 10px;
-    font-family: "Roboto";
+    font-family: "Poppins";
     text-decoration: none; }
     @media (min-width: 768px) {
       .header .logos a {
@@ -13496,17 +13500,18 @@ table.debugprint {
       color: white; }
 
 .header-fixed {
+  background: linear-gradient(#2a478b, #152355);
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 100; }
 
 .header-scrolled {
-  background: #fffff8;
+  background: linear-gradient(#2a478b, #152355);
   transition: all 500ms cubic-bezier(0.55, 0, 0.1, 1);
   box-shadow: 0 1px 6px 0 rgba(36, 50, 66, 0.15); }
   .header-scrolled .hamburger {
-    color: #2a478b; }
+    color: #fffff8; }
   .header-scrolled .logos .logo {
     display: none; }
     @media (min-width: 576px) {
@@ -13528,13 +13533,13 @@ table.debugprint {
       .header-scrolled .logos .logo-invert-mobile {
         display: none; } }
   .header-scrolled .menu-main > ul > li > a {
-    color: #2a478b; }
+    color: #fffff8; }
     .header-scrolled .menu-main > ul > li > a:hover {
-      color: #2a478b; }
+      color: #fffff8; }
   .header-scrolled .menu-main > ul > li.active > a {
-    color: #2a478b; }
+    color: #fffff8; }
     .header-scrolled .menu-main > ul > li.active > a:hover {
-      color: #2a478b; }
+      color: #fffff8; }
 
 .header-invert .hamburger {
   color: white; }
@@ -13582,7 +13587,7 @@ table.debugprint {
     .footer .footer-branding .footer-logo {
       display: inline-block; }
     .footer .footer-branding .footer-title {
-      font-family: "Roboto";
+      font-family: "Poppins";
       display: inline-block;
       color: #9477c4;
       font-weight: 400;
@@ -13603,7 +13608,7 @@ table.debugprint {
   .footer h3 {
     font-size: 16px;
     font-weight: 500;
-    color: #2a478b;
+    color: #fffff8;
     margin-bottom: 17px; }
   .footer ul {
     margin-bottom: 20px; }
@@ -13622,13 +13627,13 @@ table.debugprint {
           text-decoration: underline; }
 
 .credits {
-  background: #2a478b;
+  background: #fffff8;
   padding-top: 10px;
   padding-bottom: 10px;
   display: flex;
   justify-content: space-between; }
   .credits .zerostatic {
-    font-family: "Roboto";
+    font-family: "Poppins";
     color: #ffffff;
     float: right;
     font-weight: 400;
@@ -13676,7 +13681,7 @@ table.debugprint {
         animation-delay: 0.6s; }
   .main-menu-mobile ul {
     font-size: 2rem;
-    font-family: "Roboto";
+    font-family: "Poppins";
     text-align: center;
     list-style: none;
     padding: 0;
@@ -13931,7 +13936,7 @@ ul.pagination li {
       padding: 30px 20px 30px 30px;
       margin: 0;
       font-size: 30px;
-      color: #2a478b;
+      color: #fffff8;
       flex: 1; }
     .box .box-body p {
       margin: 0;
@@ -13939,7 +13944,7 @@ ul.pagination li {
       line-height: 28px;
       color: #2a478b;
       font-weight: 300;
-      font-family: "Roboto";
+      font-family: "Poppins";
       flex: 2;
       display: none; }
       @media (min-width: 576px) {
@@ -13959,7 +13964,7 @@ ul.pagination li {
 
 .plan {
   width: 100%;
-  font-family: "Roboto";
+  font-family: "Poppins";
   border: 1px solid #c8c8c8;
   margin-bottom: 40px; }
   @media (min-width: 768px) {
@@ -14043,7 +14048,7 @@ ul.pagination li {
       border-top: 1px solid rgba(0, 0, 0, 0.1); }
   .accordian h3 {
     cursor: pointer;
-    color: #2a478b;
+    color: #fffff8;
     padding: 20px;
     margin: 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.07);
@@ -14053,17 +14058,17 @@ ul.pagination li {
     transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
     border-radius: 3px; }
     .accordian h3:hover, .accordian h3.closed {
-      color: #2a478b;
+      color: #fffff8;
       background-color: #fff; }
     .accordian h3:hover .arrow {
-      border-top: 2px solid #2a478b;
-      border-right: 2px solid #2a478b; }
+      border-top: 2px solid #fffff8;
+      border-right: 2px solid #fffff8; }
   .accordian ul ul {
     display: none;
     height: 100%;
     margin-bottom: -7px; }
     .accordian ul ul li {
-      color: #2a478b;
+      color: #fffff8;
       box-shadow: none;
       padding: 20px; }
       .accordian ul ul li p {
@@ -14087,8 +14092,8 @@ ul.pagination li {
     .accordian .arrow.closed {
       margin-top: 4px;
       transform: rotate(-45deg);
-      border-top: 2px solid #2a478b;
-      border-right: 2px solid #2a478b; }
+      border-top: 2px solid #fffff8;
+      border-right: 2px solid #fffff8; }
 
 .product img {
   vertical-align: bottom; }
@@ -14140,7 +14145,7 @@ ul.pagination li {
     line-height: 48px;
     font-size: 40px;
     font-weight: 300;
-    color: #2a478b; }
+    color: #fffff8; }
   .product .product-text p {
     line-height: 30px;
     font-size: 18px;
@@ -14317,7 +14322,7 @@ ul.pagination li {
   position: relative;
   z-index: 20; }
   .page-home .lead h1 {
-    color: #2a478b;
+    color: #fffff8;
     line-height: 38px;
     font-size: 32px;
     font-weight: 300;
@@ -14367,13 +14372,13 @@ ul.pagination li {
     box-shadow: 0 3px 24px 1px rgba(25, 36, 138, 0.1); }
 
 .page-home .features h1 {
-  font-family: "Roboto";
+  font-family: "Poppins";
   margin: 0 auto;
   margin-bottom: 40px;
   font-weight: 200;
   line-height: 36px;
   font-size: 32px;
-  color: #2a478b;
+  color: #fffff8;
   width: 90%; }
   @media (min-width: 768px) {
     .page-home .features h1 {
@@ -14432,7 +14437,7 @@ ul.pagination li {
     display: block;
     font-size: 1rem;
     margin-bottom: 6px;
-    color: #2a478b;
+    color: #fffff8;
     text-decoration: none; }
   .page-posts-single .post-author .post-author-info span.post-author-date {
     display: block;
@@ -14483,13 +14488,13 @@ ul.pagination li {
       height: auto;
       border-radius: 3px; }
   .post .post-title {
-    font-family: "Roboto"; }
+    font-family: "Poppins"; }
     .post .post-title h2 {
       font-size: 24px;
       line-height: 30px;
       font-weight: 400; }
     .post .post-title a {
-      color: #2a478b;
+      color: #fffff8;
       text-decoration: none; }
   .post .post-description {
     font-size: 16px;
@@ -14499,7 +14504,7 @@ ul.pagination li {
     margin-top: auto; }
   .post a.post-read-more {
     font-weight: 400;
-    font-family: "Roboto"; }
+    font-family: "Poppins"; }
   .post .post-meta {
     display: flex; }
     .post .post-meta .on {
@@ -14529,8 +14534,8 @@ body {
   padding: 0;
   font-size: 1.1rem;
   line-height: 1;
-  color: #2a478b;
-  font-family: "Lato";
+  color: #fffff8;
+  font-family: "Inter";
   -webkit-font-smoothing: antialiased; }
   @media (min-width: 576px) {
     body {
