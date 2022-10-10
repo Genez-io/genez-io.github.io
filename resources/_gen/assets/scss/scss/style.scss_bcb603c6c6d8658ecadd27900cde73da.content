@@ -13500,7 +13500,6 @@ table.debugprint {
       color: white; }
 
 .header-fixed {
-  background: linear-gradient(#2a478b, #152355);
   position: fixed;
   width: 100%;
   top: 0;
