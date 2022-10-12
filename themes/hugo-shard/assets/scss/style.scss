@@ -8,7 +8,7 @@ $secondary: {{ .Site.Params.secondary_color | default "#39d000" }};
 $secondary-light: {{ .Site.Params.secondary_light | default "#39d000" }};
 $grey: {{ .Site.Params.grey_color | default "#f4f500" }};
 $grey2: darken($grey, 5%);
-$carbon: {{ .Site.Params.carbon | default "#39d000" }};;
+$carbon: {{ .Site.Params.carbon | default "#39d000" }};
 $steel: {{ .Site.Params.steel | default "#39d000" }};;
 
 
@@ -148,4 +148,3 @@ body:after {
   }
 }
 {{ end }}
-
