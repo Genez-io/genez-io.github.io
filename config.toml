@@ -37,7 +37,7 @@ pygmentsUseClasses = true
         header_fixed = true
 
     [params.footer]
-        show_zerostatic_link = true
+        show_zerostatic_link = false
         show_footer_logo = true
         description = "Hugo Shard is startup theme for the Hugo static site generator. It is a purpose built startup archetype with on trend design asthetics."
         show_menu_footer_primary = true

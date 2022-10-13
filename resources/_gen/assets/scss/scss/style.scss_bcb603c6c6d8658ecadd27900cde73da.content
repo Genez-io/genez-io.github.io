@@ -13039,7 +13039,7 @@ h3 {
 .strip-main {
   background-image: url("/images/main_darker.png");
   background-size: cover;
-  height: 100vh; }
+  height: 101vh; }
 
 .strip-grey,
 .strip-bg-grey {
@@ -13576,7 +13576,7 @@ table.debugprint {
 
 .footer {
   border-top: 1px solid #c8c8c8;
-  background: white;
+  background: #282A36;
   padding-top: 20px;
   padding-bottom: 20px; }
   .footer .footer-branding {
@@ -13589,7 +13589,7 @@ table.debugprint {
     .footer .footer-branding .footer-title {
       font-family: "Poppins";
       display: inline-block;
-      color: #9477c4;
+      color: #fffff8;
       font-weight: 400;
       font-size: 24px;
       margin: 0;
@@ -13600,7 +13600,7 @@ table.debugprint {
     .footer .footer-description p {
       line-height: 1.4;
       font-size: 16px;
-      color: #2a478b; }
+      color: #fffff8; }
   .footer .footer-menu {
     margin-top: 16px; }
   .footer .footer-social {
@@ -13608,7 +13608,7 @@ table.debugprint {
   .footer h3 {
     font-size: 16px;
     font-weight: 500;
-    color: #2a478b;
+    color: #fffff8;
     margin-bottom: 17px; }
   .footer ul {
     margin-bottom: 20px; }
@@ -13618,7 +13618,7 @@ table.debugprint {
     .footer ul li {
       padding: 3px 0; }
       .footer ul li a {
-        color: #2a478b;
+        color: #fffff8;
         display: block;
         text-decoration: none;
         line-height: 1.4;
@@ -13721,7 +13721,7 @@ ul.social {
   align-items: center;
   justify-content: flex-start; }
   ul.social svg {
-    fill: #2a478b;
+    fill: #fffff8;
     height: 24px;
     width: 24px; }
     ul.social svg:hover {
@@ -13770,7 +13770,7 @@ ul.social {
     margin-bottom: 10px; }
   .feature p {
     margin: 0;
-    color: #90a1b8;
+    color: #5A5C65;
     font-size: 1.2rem;
     line-height: 1.3;
     font-weight: 300; }
@@ -14368,8 +14368,12 @@ ul.pagination li {
             margin-right: 10px; } }
 .page-home .capybara {
   z-index: 30;
-  margin-left: 450px;
+  margin-left: 510px;
   position: absolute; }
+
+.page-home .capybara-size {
+  height: 320px;
+  width: 200px; }
 
 .page-home .preview {
   z-index: 3;

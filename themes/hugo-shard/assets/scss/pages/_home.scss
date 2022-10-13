@@ -50,8 +50,12 @@
   }
   .capybara {
     z-index: 30;
-    margin-left: 450px;
+    margin-left: 510px;
     position: absolute;
+  }
+  .capybara-size {
+    height: 320px;
+    width: 200px;
   }
   .preview {
     z-index: 3;

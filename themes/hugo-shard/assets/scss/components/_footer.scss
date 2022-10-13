@@ -1,6 +1,6 @@
 .footer {
   border-top: 1px solid $grey2;
-  background: white;
+  background: #282A36;
   padding-top: 20px;
   padding-bottom: 20px;
   .footer-branding {
@@ -14,7 +14,7 @@
     .footer-title {
       font-family: $font-family-heading;
       display: inline-block;
-      color: $primary;
+      color: $primary-light;
       font-weight: 400;
       font-size: 24px;
       margin: 0;
@@ -27,7 +27,7 @@
     p {
       line-height: 1.4;
       font-size: 16px;
-      color: $steel;
+      color: $primary-light;
     }
   }
   .footer-menu {
@@ -39,7 +39,7 @@
   h3 {
     font-size: 16px;
     font-weight: 500;
-    color: $carbon;
+    color: $primary-light;
     margin-bottom: 17px;
   }
   ul {
@@ -50,7 +50,7 @@
     li {
       padding: 3px 0;
       a {
-        color: $steel;
+        color: $primary-light;
         display: block;
         text-decoration: none;
         line-height: 1.4;

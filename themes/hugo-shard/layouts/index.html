@@ -39,7 +39,7 @@
         </div>
       </div>
       <div class="pt-20 capybara">
-        <img src="/images/capybara1.png" />
+        <img class="capybara-size" src="/images/3 sec transparenttt.gif" />
       </div>
       <div class="col-12 col-md-1 pt-3">
         <img src="/images/Coding Screen.svg" />
@@ -199,21 +199,24 @@ async function handle(request) {
   </div>
 </div>
 -->
-
-<div class="strip product pt-4 pt-md-10 pb-md-20">
-  <div class="container strip-grey p-4">
+<!-- <div class="strip strip-secondary-light pt-10 pb-6 pt-md-10 pb-md-10"></div> -->
+<div class="strip strip-grey product pb-10 pt-md-10 pb-md-10">
+  <div class="container p-4">
     <div class="row justify-space-between">
-      <div class="col-12 col-md-5 pt-6">
+      <div class="col-12 col-md-5">
         <div class="product-text">
-          <h2>Why use genez.io</h2>
+          <h2>Why use genez.io?</h2>
           <p>If you are a frontend developer, regardless if you develop a website, a mobile app on iOS or on Android, or any other app that needs processing in the cloud, you came to the right place.  There is no need to learn another programming language, we will take the functions written in the language you use and deploy them in the cloud automagically.  </p>
+        </div>
+        <div class="lead-buttons">
+          <a class="button" href={{ .Params.leadButtonTwoLink | relURL }}>{{ .Params.callToAction }}</a>
         </div>
       </div>
       <div class="col-12 col-md-6 offset-md-1 position-relative">
         <!-- <div class="dots-large">
         </div> -->
         <div class="product-right">
-          <img width="400" src="{{ "images/product/dashboard.png" | relURL }}" />
+          <img width="400" src="{{ "images/product/2-2.png" | relURL }}" />
         </div>
       </div>
     </div>
