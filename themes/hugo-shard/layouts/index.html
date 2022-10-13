@@ -23,10 +23,7 @@
   <div class="nibbles2"></div>
   <div class="container">
     <div class="row">
-      <div class="col-12 col-md-2">
-        <img src="/images/capybara1.png" />
-      </div>
-      <div class="col-12 col-md-9 position-relative pt-3">
+      <div class="col-12 col-md-6 position-relative pt-3">
         <div class="lead">
           <h1>{{ .Params.leadTitle }}</h1>
           <h2>{{ .Params.leadSubTitle }}</h2>
@@ -40,6 +37,12 @@
           </div>
           {{ .Content }}
         </div>
+      </div>
+      <div class="pt-20 capybara">
+        <img src="/images/capybara1.png" />
+      </div>
+      <div class="col-12 col-md-1 pt-3">
+        <img src="/images/Coding Screen.svg" />
       </div>
     </div>
   </div>
@@ -109,7 +112,7 @@ async function handle(request) {
 
 <!-- Features -->
 {{ if and (gt (len .Site.Data.features) 0) (.Site.Params.homepage.show_features) }}
-<div class="strip strip-white features pt-6 pb-4 pb-md-20">
+<div class="strip strip-white features pt-14 pb-4 pb-md-20">
   <div class="container">
     <div class="row justify-content-center">
       {{ if .Site.Params.homepage.features_title }}
@@ -198,7 +201,7 @@ async function handle(request) {
 -->
 
 <div class="strip product pt-4 pt-md-10 pb-md-20">
-  <div class="container strip-secondary-light p-4">
+  <div class="container strip-grey p-4">
     <div class="row justify-space-between">
       <div class="col-12 col-md-5 pt-6">
         <div class="product-text">
@@ -207,8 +210,8 @@ async function handle(request) {
         </div>
       </div>
       <div class="col-12 col-md-6 offset-md-1 position-relative">
-        <div class="dots-large">
-        </div>
+        <!-- <div class="dots-large">
+        </div> -->
         <div class="product-right">
           <img width="400" src="{{ "images/product/dashboard.png" | relURL }}" />
         </div>

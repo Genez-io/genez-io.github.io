@@ -33,13 +33,13 @@
     background-color: $primary-light;
 }
 .strip-main {
-    background-image: url('/images/main.jpg');
+    background-image: url('/images/main_darker.png');
     background-size: cover;
     height: 100vh;
 }
 .strip-grey,
 .strip-bg-grey {
-  background-color: $grey;
+  background-color: #f0f0f0;
 }
 .strip-diagonal-right {
   margin-top: -100px;

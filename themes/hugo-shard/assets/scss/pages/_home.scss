@@ -1,33 +1,33 @@
 .page-home {
   .lead {
-    text-align: center;
+    text-align: left;
     position: relative;
     z-index: 20;
     h1 {
       color: $primary-light;
       line-height: 38px;
       font-size: 32px;
-      font-weight: 300;
-      margin: 0 auto;
-      margin-bottom: 16px;
-      padding: 0 10px 0 10px;
+      font-weight: 700;
+      margin: 0;
+      margin-bottom: 30px;
+      padding: 0 10px 0 0;
       @include media-breakpoint-up(md) {
-        width: 80%;
-        line-height: 57px;
-        font-size: 48px;
+        width: 100%;
+        line-height: 73px;
+        font-size: 60px;
       }
     }
     h2 {
       line-height: 26px;
       font-size: 22px;
-      font-weight: 300;
-      color: $steel;
-      margin: 0 auto;
-      padding: 0 10px 0 10px;
+      font-weight: 500;
+      color: $primary-light;
+      margin: 0;
+      padding: 0 10px 0 0;
       @include media-breakpoint-up(md) {
-        width: 80%;
-        line-height: 38px;
-        font-size: 32px;
+        width: 100%;
+        line-height: 24px;
+        font-size: 20px;
       }
     }
     .lead-buttons {
@@ -47,6 +47,11 @@
         }
       }
     }
+  }
+  .capybara {
+    z-index: 30;
+    margin-left: 450px;
+    position: absolute;
   }
   .preview {
     z-index: 3;
@@ -68,7 +73,10 @@
       font-weight: 200;
       line-height: 36px;
       font-size: 32px;
-      color: $carbon;
+      //color: $carbon;
+    background: linear-gradient(90deg, $primary 0%, #282A36 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
       width: 90%;
       @include media-breakpoint-up(md) {
         line-height: 57px;

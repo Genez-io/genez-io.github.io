@@ -4,10 +4,12 @@
   align-items: center;
   flex-direction: column;
   text-align: center;
+  background-color: #f0f0f0;
+  border-radius: 20px;
   .feature-image {
     flex: 0 0 auto;
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 200px;
     display: flex;
     text-align: center;
     margin-bottom: 10px;
@@ -17,7 +19,14 @@
     }
   }
   h2 {
-    color: #364962;
+    // //color: #364962;
+    // color: linear-gradient($primary, #333);
+    // // -webkit-background-clip: text;
+    background: linear-gradient(90deg, $primary 0%, #282A36 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    //background-clip: text;
+    //text-fill-color: transparent;
     font-size: 1.5rem;
     font-weight: 400;
     line-height: 1.2;

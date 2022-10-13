@@ -52,13 +52,15 @@
       line-height: 48px;
       font-size: 40px;
       font-weight: 300;
-      color: $carbon;
+      background: linear-gradient(90deg, $primary 0%, #282A36 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
     p {
       line-height: 30px;
       font-size: 18px;
       font-weight: 300;
-      color: $steel;
+      color: black;
       @include media-breakpoint-up(lg) {
         position: relative;
         z-index: 10;

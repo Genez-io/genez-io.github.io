@@ -71,6 +71,11 @@ pygmentsUseClasses = true
     url = "/posts/"
     weight = 3
 
+[[menu.main]]
+    name = "Register"
+    url = "/register/"
+    weight = 5
+
 # Footer Menu Primary
 [[menu.footer_primary]]
 	name = "Home"
