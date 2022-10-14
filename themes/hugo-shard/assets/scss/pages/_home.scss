@@ -21,7 +21,7 @@
       font-family: $font-family-base;
       line-height: 26px;
       font-size: 22px;
-      font-weight: bold;
+      font-weight: 500;
       color: $primary-light;
       margin: 0;
       padding: 0 10px 0 0;
@@ -51,12 +51,12 @@
   }
   .capybara {
     z-index: 30;
-    margin-left: 510px;
+    margin-left: 480px;
     position: absolute;
   }
   .capybara-size {
-    height: 320px;
-    width: 200px;
+    height: 350px;
+    width: 240px;
   }
   .preview {
     z-index: 3;
@@ -75,7 +75,7 @@
       font-family: $font-family-heading;
       margin: 0 auto;
       margin-bottom: 40px;
-      font-weight: 200;
+      font-weight: 700;
       line-height: 36px;
       font-size: 32px;
       //color: $carbon;

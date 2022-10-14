@@ -18,7 +18,7 @@ pygmentsUseClasses = true
     steel = "#2a478b"
 
     font_base = "'Inter'"
-    font_heading = "'Poppins'"
+    font_heading = "'Inter'"
 
     google_analytics_id = ""
 

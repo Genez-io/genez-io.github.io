@@ -19,11 +19,12 @@
     }
   }
   h2 {
-    background: linear-gradient(90deg, $primary 0%, #282A36 100%);
+    // background: linear-gradient(90deg, $primary 0%, #282A36 100%);
+    background: black;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 1.5rem;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 1.2;
     margin-bottom: 10px;
   }

@@ -12802,7 +12802,7 @@ p {
 
 h1 {
   color: #2a478b;
-  font-family: "Poppins";
+  font-family: "Inter";
   margin-top: 0;
   margin-bottom: 20px;
   line-height: 42px;
@@ -12814,7 +12814,7 @@ h1 {
       font-size: 48px; } }
 h2 {
   color: #2a478b;
-  font-family: "Poppins";
+  font-family: "Inter";
   line-height: 26px;
   font-size: 22px;
   font-weight: 300;
@@ -12827,7 +12827,7 @@ h2 {
 h3 {
   color: #2a478b;
   font-size: 1.2rem;
-  font-family: "Poppins";
+  font-family: "Inter";
   line-height: 1.4;
   font-weight: 300;
   margin-top: 0;
@@ -12851,7 +12851,7 @@ h3 {
   transition: all 0.15s ease;
   border: 2px solid #9477c4;
   outline: none;
-  font-family: "Poppins"; }
+  font-family: "Inter"; }
   @media (min-width: 768px) {
     .button {
       padding: 16px 24px 15px 24px; } }
@@ -12876,7 +12876,7 @@ h3 {
   -webkit-transition: all 0.15s ease;
   transition: all 0.15s ease;
   outline: none;
-  font-family: "Poppins";
+  font-family: "Inter";
   background: #fffff8; }
   @media (min-width: 768px) {
     .button-outlined {
@@ -12912,7 +12912,7 @@ h3 {
 
 .content h1 {
   font-size: 2.8rem;
-  font-family: "Poppins";
+  font-family: "Inter";
   line-height: 1.6;
   font-weight: 300;
   color: #2a478b;
@@ -12921,7 +12921,7 @@ h3 {
 
 .content h2 {
   font-size: 2rem;
-  font-family: "Poppins";
+  font-family: "Inter";
   line-height: 1.2;
   font-weight: 300;
   color: #2a478b;
@@ -12930,7 +12930,7 @@ h3 {
 
 .content h3 {
   font-size: 1.6rem;
-  font-family: "Poppins";
+  font-family: "Inter";
   color: #2a478b;
   line-height: 1.2;
   font-weight: 400;
@@ -12978,7 +12978,7 @@ h3 {
   line-height: 0.1em;
   margin-right: 0.25em;
   vertical-align: -0.4em;
-  font-family: "Poppins"; }
+  font-family: "Inter"; }
 
 .content blockquote p {
   display: inline;
@@ -13158,7 +13158,7 @@ svg {
   .intro h1 {
     font-size: 2.4rem;
     line-height: 1.2;
-    font-family: "Poppins";
+    font-family: "Inter";
     width: 70%;
     font-weight: 500; }
     @media (min-width: 576px) {
@@ -13320,7 +13320,7 @@ table.debugprint {
   overflow: auto; }
 
 .header {
-  font-family: "Poppins";
+  font-family: "Inter";
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -13382,7 +13382,7 @@ table.debugprint {
     padding-bottom: 10px;
     padding-left: 10px;
     padding-right: 10px;
-    font-family: "Poppins";
+    font-family: "Inter";
     text-decoration: none; }
     @media (min-width: 768px) {
       .header .logos a {
@@ -13588,7 +13588,7 @@ table.debugprint {
     .footer .footer-branding .footer-logo {
       display: inline-block; }
     .footer .footer-branding .footer-title {
-      font-family: "Poppins";
+      font-family: "Inter";
       display: inline-block;
       color: #fffff8;
       font-weight: 400;
@@ -13634,7 +13634,7 @@ table.debugprint {
   display: flex;
   justify-content: space-between; }
   .credits .zerostatic {
-    font-family: "Poppins";
+    font-family: "Inter";
     color: #ffffff;
     float: right;
     font-weight: 400;
@@ -13682,7 +13682,7 @@ table.debugprint {
         animation-delay: 0.6s; }
   .main-menu-mobile ul {
     font-size: 2rem;
-    font-family: "Poppins";
+    font-family: "Inter";
     text-align: center;
     list-style: none;
     padding: 0;
@@ -13762,11 +13762,11 @@ ul.social {
       width: 100%;
       height: auto; }
   .feature h2 {
-    background: linear-gradient(90deg, #9477c4 0%, #282A36 100%);
+    background: black;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 1.5rem;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 1.2;
     margin-bottom: 10px; }
   .feature p {
@@ -13949,7 +13949,7 @@ ul.pagination li {
       line-height: 28px;
       color: #2a478b;
       font-weight: 300;
-      font-family: "Poppins";
+      font-family: "Inter";
       flex: 2;
       display: none; }
       @media (min-width: 576px) {
@@ -13969,7 +13969,7 @@ ul.pagination li {
 
 .plan {
   width: 100%;
-  font-family: "Poppins";
+  font-family: "Inter";
   border: 1px solid #c8c8c8;
   margin-bottom: 40px; }
   @media (min-width: 768px) {
@@ -14345,7 +14345,7 @@ ul.pagination li {
     font-family: "Inter";
     line-height: 26px;
     font-size: 22px;
-    font-weight: bold;
+    font-weight: 500;
     color: #fffff8;
     margin: 0;
     padding: 0 10px 0 0; }
@@ -14370,12 +14370,12 @@ ul.pagination li {
             margin-right: 10px; } }
 .page-home .capybara {
   z-index: 30;
-  margin-left: 510px;
+  margin-left: 480px;
   position: absolute; }
 
 .page-home .capybara-size {
-  height: 320px;
-  width: 200px; }
+  height: 350px;
+  width: 240px; }
 
 .page-home .preview {
   z-index: 3;
@@ -14389,10 +14389,10 @@ ul.pagination li {
     box-shadow: 0 3px 24px 1px rgba(25, 36, 138, 0.1); }
 
 .page-home .features h1 {
-  font-family: "Poppins";
+  font-family: "Inter";
   margin: 0 auto;
   margin-bottom: 40px;
-  font-weight: 200;
+  font-weight: 700;
   line-height: 36px;
   font-size: 32px;
   background: linear-gradient(90deg, #9477c4 0%, #282A36 100%);
@@ -14507,7 +14507,7 @@ ul.pagination li {
       height: auto;
       border-radius: 3px; }
   .post .post-title {
-    font-family: "Poppins"; }
+    font-family: "Inter"; }
     .post .post-title h2 {
       font-size: 24px;
       line-height: 30px;
@@ -14523,7 +14523,7 @@ ul.pagination li {
     margin-top: auto; }
   .post a.post-read-more {
     font-weight: 400;
-    font-family: "Poppins"; }
+    font-family: "Inter"; }
   .post .post-meta {
     display: flex; }
     .post .post-meta .on {
