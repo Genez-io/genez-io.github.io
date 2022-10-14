@@ -1,5 +1,5 @@
 .strip {
-  background: white;
+  background: black;
   background-repeat: no-repeat;
   position: relative;
 }
@@ -35,6 +35,7 @@
 .strip-main {
     background-image: url('/images/main_darker.jpg');
     background-size: cover;
+    background-color: black;
     height: 101vh;
 }
 .strip-grey,
