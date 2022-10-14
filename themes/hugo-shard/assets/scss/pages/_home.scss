@@ -18,9 +18,10 @@
       }
     }
     h2 {
+      font-family: $font-family-base;
       line-height: 26px;
       font-size: 22px;
-      font-weight: 500;
+      font-weight: bold;
       color: $primary-light;
       margin: 0;
       padding: 0 10px 0 0;

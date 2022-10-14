@@ -29,10 +29,10 @@
           <h2>{{ .Params.leadSubTitle }}</h2>
           <div class="lead-buttons">
             {{ if .Params.leadButtonOneLink }}
-            <a class="button-outlined" href={{ .Params.leadButtonOneLink | relURL }}>{{ .Params.leadButtonOneText }}</a>
+            <a class="button" href={{ .Params.leadButtonOneLink | relURL }}>{{ .Params.leadButtonOneText }}</a>
             {{ end }}
             {{ if .Params.leadButtonTwoLink }}
-            <a class="button" href={{ .Params.leadButtonTwoLink | relURL }}>{{ .Params.leadButtonTwoText }}</a>
+            <a class="button-outlined" href={{ .Params.leadButtonTwoLink | relURL }}>{{ .Params.leadButtonTwoText }}</a>
             {{ end }}
           </div>
           {{ .Content }}

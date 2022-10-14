@@ -14341,9 +14341,10 @@ ul.pagination li {
         line-height: 73px;
         font-size: 60px; } }
   .page-home .lead h2 {
+    font-family: "Inter";
     line-height: 26px;
     font-size: 22px;
-    font-weight: 500;
+    font-weight: bold;
     color: #fffff8;
     margin: 0;
     padding: 0 10px 0 0; }
