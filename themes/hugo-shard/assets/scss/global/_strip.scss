@@ -37,6 +37,9 @@
     background-size: cover;
     background-color: black;
     height: 101vh;
+    @include media-breakpoint-down(xs) {
+      height: 130vh;
+    }
 }
 .strip-grey,
 .strip-bg-grey {

@@ -38,11 +38,11 @@
           {{ .Content }}
         </div>
       </div>
-      <div class="pt-20 capybara">
+      <div class="capybara">
         <img class="capybara-size" src="/images/3 sec transparenttt.gif" />
       </div>
       <div class="col-12 col-md-1 pt-3">
-        <img src="/images/Coding Screen.svg" />
+        <img class="terminal" src="/images/Coding Screen.svg" />
       </div>
     </div>
   </div>
@@ -235,7 +235,7 @@ async function handle(request) {
         </div>
         <div class="plans">
           {{ range .Site.Data.pricing }}
-          <div class="plan{{ if .highlighted }} plan-featured{{ end }}">
+          <div class="plan{{ if .highlighted }} plan-featured{{ end }}{{ if .blured }} blured{{ end }}">
             <div class="plan-main">
               <div class="plan-price">
                 <span class="plan-price-number">{{ .price }}</span>

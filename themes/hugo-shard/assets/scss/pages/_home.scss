@@ -33,15 +33,26 @@
     }
     .lead-buttons {
       margin-top: 30px;
+      // @include media-breakpoint-down(xs) {
+      //   display: inline-block;
+      // }
       a {
         display: block;
         max-width: 80%;
-        margin: 0 auto;
+        margin: 0 auto 0 0;
         @include media-breakpoint-up(sm) {
           display: inline-block;
         }
+        @include media-breakpoint-down(xs) {
+          display: inline-block;
+          margin: 0;
+          width: 49%;
+          text-align: center;
+          padding: 12px 5px 12px 5px;
+          overflow: hidden;
+        }
         &:first-of-type {
-          margin-bottom: 10px;
+          //margin-bottom: 10px;
           @include media-breakpoint-up(sm) {
             margin-right: 10px;
           }
@@ -53,10 +64,27 @@
     z-index: 30;
     margin-left: 500px; //480px;
     position: absolute;
+    padding-top: 200px;
+    @include media-breakpoint-down(xs) {
+      z-index: 0;
+      margin-left: 0;
+      padding-top: 30px;
+      position: relative
+    }
   }
   .capybara-size {
     height: 350px;
     width: 240px;
+    @include media-breakpoint-down(xs) {
+      height: 175px;
+      width: 120px;
+    }
+  }
+  .terminal {
+    @include media-breakpoint-down(xs) {
+      width: 100%;
+      margin-top: -80px;
+    }
   }
   .preview {
     z-index: 3;

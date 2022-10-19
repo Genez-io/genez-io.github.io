@@ -13,7 +13,8 @@
       "Feature",
       "Feature",
       "Feature"
-    ]
+    ],
+    "blured": false
   },
   {
     "name": "Basic",
@@ -31,7 +32,8 @@
       "Feature",
       "Feature",
       "Feature"
-    ]
+    ],
+    "blured": true
   },
   {
     "name": "Premium",
@@ -44,6 +46,7 @@
     "buttonText": "Try for free",
     "buttonLink": "/signup",
     "featuresHeading": "Premium plan description",
-    "features": ["Feature", "Feature", "Feature"]
+    "features": ["Feature", "Feature", "Feature"],
+    "blured": true
   }
 ]

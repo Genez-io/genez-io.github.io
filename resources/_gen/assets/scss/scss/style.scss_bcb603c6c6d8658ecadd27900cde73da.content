@@ -12899,7 +12899,10 @@ h3 {
     transform: translateY(-1px);
     box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
     text-decoration: none; }
-
+  @media (max-width: 575.98px) {
+    .button-white {
+      width: 100%;
+      text-align: center; } }
 .whitebox {
   border: 1px solid #dcdcdc;
   border-radius: 3px;
@@ -13045,7 +13048,9 @@ h3 {
   background-size: cover;
   background-color: black;
   height: 101vh; }
-
+  @media (max-width: 575.98px) {
+    .strip-main {
+      height: 130vh; } }
 .strip-grey,
 .strip-bg-grey {
   background-color: #f0f0f0; }
@@ -13991,6 +13996,8 @@ ul.pagination li {
       margin-bottom: 0;
       border: none;
       border: 1px solid #c8c8c8; } }
+  .plan.blured {
+    background-color: #fff; }
   .plan.plan-featured {
     background: #282A36; }
     .plan.plan-featured .plan-name, .plan.plan-featured .plan-description, .plan.plan-featured .plan-price, .plan.plan-featured .plan-features-heading {
@@ -14231,6 +14238,9 @@ ul.pagination li {
       background-position: center 200px;
       background-size: initial;
       z-index: 2; } }
+  @media (max-width: 575.98px) {
+    .nibbles2 {
+      height: 400px; } }
 .dots-small-right {
   position: absolute;
   z-index: 2;
@@ -14386,23 +14396,43 @@ ul.pagination li {
     .page-home .lead .lead-buttons a {
       display: block;
       max-width: 80%;
-      margin: 0 auto; }
+      margin: 0 auto 0 0; }
       @media (min-width: 576px) {
         .page-home .lead .lead-buttons a {
           display: inline-block; } }
-      .page-home .lead .lead-buttons a:first-of-type {
-        margin-bottom: 10px; }
-        @media (min-width: 576px) {
-          .page-home .lead .lead-buttons a:first-of-type {
-            margin-right: 10px; } }
+      @media (max-width: 575.98px) {
+        .page-home .lead .lead-buttons a {
+          display: inline-block;
+          margin: 0;
+          width: 49%;
+          text-align: center;
+          padding: 12px 5px 12px 5px;
+          overflow: hidden; } }
+      @media (min-width: 576px) {
+        .page-home .lead .lead-buttons a:first-of-type {
+          margin-right: 10px; } }
 .page-home .capybara {
   z-index: 30;
   margin-left: 500px;
-  position: absolute; }
-
+  position: absolute;
+  padding-top: 200px; }
+  @media (max-width: 575.98px) {
+    .page-home .capybara {
+      z-index: 0;
+      margin-left: 0;
+      padding-top: 30px;
+      position: relative; } }
 .page-home .capybara-size {
   height: 350px;
   width: 240px; }
+  @media (max-width: 575.98px) {
+    .page-home .capybara-size {
+      height: 175px;
+      width: 120px; } }
+@media (max-width: 575.98px) {
+  .page-home .terminal {
+    width: 100%;
+    margin-top: -80px; } }
 
 .page-home .preview {
   z-index: 3;
