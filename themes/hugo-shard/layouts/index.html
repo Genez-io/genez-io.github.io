@@ -121,7 +121,7 @@ async function handle(request) {
       </div>
       {{ end }}
       {{ range .Site.Data.features }}
-      <div class="col-12 col-md-4 mb-2">
+      <div class="col-12 col-md-4 mb-2 pt-12">
         <div class="feature">
           {{ if .image }}<div class="feature-image"><img alt="{{ .title }} logo" src="{{ .image }}" /></div> {{ end }}
           <h2>{{ .title }}</h2>
@@ -200,23 +200,77 @@ async function handle(request) {
 </div>
 -->
 <!-- <div class="strip strip-secondary-light pt-10 pb-6 pt-md-10 pb-md-10"></div> -->
-<div class="strip strip-grey product pb-10 pt-md-10 pb-md-10">
+<div class="strip strip-primary-gradient product pb-10 pt-md-10 pb-md-10">
   <div class="container p-4">
     <div class="row justify-space-between">
-      <div class="col-12 col-md-5">
-        <div class="product-text">
+      <div class="col-12 col-md-6">
+        <div class="product-text pb-3">
           <h2>Why use genez.io?</h2>
-          <p>If you are a frontend developer, regardless if you develop a website, a mobile app on iOS or on Android, or any other app that needs processing in the cloud, you came to the right place.  There is no need to learn another programming language, we will take the functions written in the language you use and deploy them in the cloud automagically.  </p>
+          <!-- <p>If you are a frontend developer, regardless if you develop a website, a mobile app on iOS or on Android, or any other app that needs processing in the cloud, you came to the right place.  There is no need to learn another programming language, we will take the functions written in the language you use and deploy them in the cloud automagically.  </p> -->
+          <p>{{ .Params.productTextP1 }}</p>
+          <p>{{ .Params.productTextP2 }}</p>
+          <p>{{ .Params.productTextP3 }}</p>
         </div>
         <div class="lead-buttons">
-          <a class="button" href={{ .Params.leadButtonTwoLink | relURL }}>{{ .Params.callToAction }}</a>
+          <a class="button button-white" href={{ .Params.leadButtonTwoLink | relURL }}>{{ .Params.callToAction }}</a>
         </div>
       </div>
-      <div class="col-12 col-md-6 offset-md-1 position-relative">
+      <div class="col-12 col-md-4 offset-md-1 position-relative">
         <!-- <div class="dots-large">
         </div> -->
-        <div class="product-right">
+        <div class="product-right pt-12">
           <img width="400" src="{{ "images/product/2-2.png" | relURL }}" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="strip strip-white features pb-10 pt-md-10 pb-md-10">
+  <div class="container pb-10">
+    <div class="row">
+      <div class="col-12">
+        <div class="col-12 pb-5 pt-5">
+          <h1 class="text-center">{{ .Site.Params.homepage.pricing_title }}</h1>
+        </div>
+        <div class="plans">
+          {{ range .Site.Data.pricing }}
+          <div class="plan{{ if .highlighted }} plan-featured{{ end }}">
+            <div class="plan-main">
+              <div class="plan-price">
+                <span class="plan-price-number">{{ .price }}</span>
+                <span class="plan-price-currency-symbol">{{ .currencySymbol }}</span>
+                <!-- <span class="plan-price-currency">{{ .currency }}</span> -->
+                <!-- <div class="plan-price-hint">{{ .priceHint }}</div> -->
+                {{ if not .highlighted }}
+                  <span class="plan-price-currency">/month</span>
+                {{end}}
+              </div>
+              <h3 class="plan-name">{{ .name }}</h3>
+              <!-- <div class="plan-description">{{ .description }}</div> -->
+
+              <div class="plan-button">
+                <a href="{{ .buttonLink }}" class="button-outlined">{{ .buttonText }}</a>
+              </div>
+              <div class="plan-terms">{{ .terms }}</div>
+            </div>
+            {{ if (gt (len .features) 0) }}
+            <div class="plan-details">
+              <h3 class="plan-features-heading">{{ .featuresHeading }}</h3>
+              <div class="plan-features">
+                <ul>
+                  {{ range .features }}
+                  <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                      <path fill="{{ $.Site.Params.primary_color }}"
+                        d="M413.505 91.951L133.49 371.966l-98.995-98.995c-4.686-4.686-12.284-4.686-16.971 0L6.211 284.284c-4.686 4.686-4.686 12.284 0 16.971l118.794 118.794c4.686 4.686 12.284 4.686 16.971 0l299.813-299.813c4.686-4.686 4.686-12.284 0-16.971l-11.314-11.314c-4.686-4.686-12.284-4.686-16.97 0z" />
+                    </svg><span>{{ . }}</span></li>
+                  {{end}}
+                </ul>
+              </div>
+            </div>
+            {{ end }}
+          </div>
+          {{end}}
         </div>
       </div>
     </div>

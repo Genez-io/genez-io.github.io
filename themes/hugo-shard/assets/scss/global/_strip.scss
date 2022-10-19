@@ -12,7 +12,7 @@
   }
 }
 .strip-primary-gradient {
-  background-image: linear-gradient(to right, $primary, $secondary);
+  background-image: linear-gradient(to right, #2A2B38, $primary);
 }
 .strip-primary-gradient-top-bottom {
   background-image: linear-gradient(to bottom, $primary, $secondary);

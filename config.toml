@@ -55,6 +55,7 @@ pygmentsUseClasses = true
     [params.homepage]
         show_features = true 
         features_title = "Seamless development of your backend functions"
+        pricing_title = "Pricing Plans for Developers"
     
     [params.hero]
         hero_background_gradient_one = "#2b3af7"
@@ -70,11 +71,6 @@ pygmentsUseClasses = true
     name = "Blog"
     url = "/posts/"
     weight = 3
-
-[[menu.main]]
-    name = "Register"
-    url = "/register/"
-    weight = 5
 
 # Footer Menu Primary
 [[menu.footer_primary]]

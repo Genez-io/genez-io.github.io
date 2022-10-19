@@ -6,12 +6,12 @@
   },
   {
       "title": "Save time",
-      "description": "Write functions in your favorite language, Javascript, Swift, Kotlin and we will give you a toold to move them seamlessly to be ececuted in the cloud.",
+      "description": "Write functions in your favorite language, Javascript, Swift, Kotlin and use “genezio deploy” to move them seamlessly to our cloud.",
       "image": "/images/2.png"
   },
   {
       "title": "Save power",
-      "description": "Move energy hungry processing in the cloud while measuring the power used with every deploy.  Save power as fucntions only run when they are needed to run.",
+      "description": "The fastest and most resource efficient cloud backend.  We remove unnecessary fluff around your functions for instant response and zero overhead.",
       "image": "/images/3.png"
   }
 ]

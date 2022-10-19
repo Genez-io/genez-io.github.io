@@ -1,6 +1,9 @@
 .product {
   img {
     vertical-align: bottom;
+    @include media-breakpoint-up(xs) {
+      width: 100%;
+    }
   }
   .product-right {
     z-index: 4;
@@ -51,16 +54,17 @@
     h2 {
       line-height: 48px;
       font-size: 40px;
-      font-weight: 300;
-      background: linear-gradient(90deg, $primary 0%, #282A36 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      font-weight: 700;
+      // background: linear-gradient(90deg, $primary 0%, #282A36 100%);
+      // -webkit-background-clip: text;
+      // -webkit-text-fill-color: transparent;
+      color: white
     }
     p {
       line-height: 30px;
       font-size: 18px;
       font-weight: 300;
-      color: black;
+      color: white;
       @include media-breakpoint-up(lg) {
         position: relative;
         z-index: 10;

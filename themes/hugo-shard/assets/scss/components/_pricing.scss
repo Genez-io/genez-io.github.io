@@ -8,37 +8,51 @@
 }
 .plan {
   width: 100%;
+  border-radius: 10px;
   font-family: $font-family-heading;
   border: 1px solid $grey2;
   margin-bottom: 40px;
+  color: #282A36;
   @include media-breakpoint-up(md) {
     flex-basis: 25%;
     margin-bottom: 0;
     border: none;
-    border-top: 1px solid $grey2;
-    border-right: 1px solid $grey2;
-    border-bottom: 1px solid $grey2;
-  }
-  &:last-of-type {
-    border-right: none;
+    border: 1px solid $grey2;
   }
   &.plan-featured {
-    background: $secondary-light;
+    background: #282A36;
+    .plan-name, .plan-description, .plan-price, .plan-features-heading {
+      color: white;
+    }
+    .plan-features{
+      ul {
+        li {
+          color: white;
+        }
+      }
+    }
+    .plan-button {
+      .button-outlined {
+        color: white;
+        border-color: white;
+      }
+    }
   }
   .plan-main {
-    padding: 30px 10px;
-    text-align: center;
-    border-bottom: 1px solid $grey2;
+    padding: 30px 20px;
+    text-align: left;
+    //border-bottom: 1px solid $grey2;
   }
   .plan-details {
-    padding: 30px 20px;
+    padding: 20px 20px;
     text-align: left;
   }
   .plan-name {
     font-size: 30px;
     line-height: 40px;
-    font-weight: 400;
+    font-weight: 600;
     margin-bottom: 16px;
+    color: #282A36;
   }
   .plan-description {
     font-size: 16px;
@@ -50,9 +64,9 @@
     }
   }
   .plan-price {
-    margin-bottom: 10px;
+    margin-bottom: 0px;
     @include media-breakpoint-up(md) {
-      min-height: 90px;
+      min-height: 50px;
     }
     .plan-price-currency-symbol {
       font-size: 24px;
@@ -61,6 +75,7 @@
       display: inline-block;
     }
     .plan-price-number {
+      font-weight: 700;
       font-size: 42px;
       line-height: 50px;
       letter-spacing: -1px;
@@ -80,12 +95,21 @@
   .plan-hint {
   }
   .plan-button {
+    text-align: center;
+    .button-outlined {
+      color: $primary;
+      border-color: $primary;
+      width: 100%;
+    }
   }
   .plan-terms {
   }
   .plan-features-heading {
+    font-weight: 500;
+    color: #282A36;
   }
   .plan-features {
+    font-weight: 500;
     ul {
       li {
         // background-image: url('/images/check.svg');
@@ -93,7 +117,7 @@
         // background-repeat: no-repeat;
         // background-position: center left;
         padding: 6px 0 6px 0;
-        color: $steel;
+        color: #282A36;
         vertical-align: middle;
         line-height: 22px;
         svg {

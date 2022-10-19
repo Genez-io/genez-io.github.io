@@ -29,18 +29,18 @@
   white-space: nowrap;
   display: inline-block;
   padding: 12px 20px 13px 20px;
-  border: 2px solid $primary;
+  border: 2px solid $primary-light;
   background: none;
   border-radius: 3px;
   font-weight: 400;
   letter-spacing: 0.025em;
-  color: $primary;
+  color: $primary-light;
   text-decoration: none;
   -webkit-transition: all 0.15s ease;
   transition: all 0.15s ease;
   outline: none;
   font-family: $font-family-heading;
-  background: $primary-light;
+  background: transparent;
   @include media-breakpoint-up(md) {
     padding: 16px 24px 15px 24px;
   }
@@ -48,13 +48,17 @@
     transform: translateY(-1px);
     box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
     text-decoration: none;
+    color: $primary-light
   }
 }
 .button-white {
   background: #fff;
-  color: $secondary
+  color: $primary;
+  font-weight: 700;
+  font-size: 22px;
+  border: 0;
   &:hover {
-    color: lighten($secondary, 10%);
+    color: lighten($primary, 5%);
     background: $primary-light;
     transform: translateY(-1px);
     box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);

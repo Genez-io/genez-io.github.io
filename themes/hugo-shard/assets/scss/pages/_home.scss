@@ -26,7 +26,7 @@
       margin: 0;
       padding: 0 10px 0 0;
       @include media-breakpoint-up(md) {
-        width: 100%;
+        width: 80%;
         line-height: 24px;
         font-size: 20px;
       }
@@ -51,7 +51,7 @@
   }
   .capybara {
     z-index: 30;
-    margin-left: 480px;
+    margin-left: 500px; //480px;
     position: absolute;
   }
   .capybara-size {
@@ -79,9 +79,9 @@
       line-height: 36px;
       font-size: 32px;
       //color: $carbon;
-    background: linear-gradient(90deg, $primary 0%, #282A36 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+      background: linear-gradient(90deg, $primary 0%, #282A36 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
       width: 90%;
       @include media-breakpoint-up(md) {
         line-height: 57px;
