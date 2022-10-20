@@ -30,6 +30,9 @@
         line-height: 24px;
         font-size: 20px;
       }
+      @include media-breakpoint-down(xs) {
+        font-size: 20px;
+      }
     }
     .lead-buttons {
       margin-top: 30px;
@@ -50,6 +53,7 @@
           text-align: center;
           padding: 12px 5px 12px 5px;
           overflow: hidden;
+          font-size: 16px;
         }
         &:first-of-type {
           //margin-bottom: 10px;
@@ -62,9 +66,13 @@
   }
   .capybara {
     z-index: 30;
-    margin-left: 500px; //480px;
+    margin-left: 460px; //480px;
     position: absolute;
-    padding-top: 200px;
+    padding-top: 250px;
+    @include media-breakpoint-up(sm) {
+      -webkit-transform: scaleX(-1);
+      transform: scaleX(-1);
+    }
     @include media-breakpoint-down(xs) {
       z-index: 0;
       margin-left: 0;
@@ -73,8 +81,8 @@
     }
   }
   .capybara-size {
-    height: 350px;
-    width: 240px;
+    height: 234px;
+    width: 160px;
     @include media-breakpoint-down(xs) {
       height: 175px;
       width: 120px;
