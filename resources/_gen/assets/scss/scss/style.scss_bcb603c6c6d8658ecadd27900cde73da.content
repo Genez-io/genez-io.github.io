@@ -14437,11 +14437,13 @@ ul.pagination li {
     .page-home .capybara-size {
       height: 175px;
       width: 120px; } }
-@media (max-width: 575.98px) {
-  .page-home .terminal {
-    width: 100%;
-    margin-top: -80px; } }
-
+.page-home .terminal {
+  border-radius: 12px;
+  width: 570px; }
+  @media (max-width: 575.98px) {
+    .page-home .terminal {
+      width: 100%;
+      margin-top: -80px; } }
 .page-home .preview {
   z-index: 3;
   position: relative;
