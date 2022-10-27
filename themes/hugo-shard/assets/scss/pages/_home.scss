@@ -127,4 +127,11 @@
       }
     }
   }
+  .span-or {
+    color: black;
+    padding: 0 20px 0 10px;
+    @include media-breakpoint-down(xs) {
+      display: none;
+    }
+  }
 }

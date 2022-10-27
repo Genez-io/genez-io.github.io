@@ -56,6 +56,7 @@ pygmentsUseClasses = true
         show_features = true 
         features_title = "Seamless development of your backend functions"
         pricing_title = "Pricing Plans for Developers"
+        get_started = "Get started now with genez.io!"
     
     [params.hero]
         hero_background_gradient_one = "#2b3af7"
@@ -111,7 +112,7 @@ pygmentsUseClasses = true
 
 # Footer Menu Third
 [[menu.footer_tertiary]]
-    name = "Contact"
+    name = "Contact us at: support@genez.io"
     url = "/contact/"
     weight = 1
 
@@ -121,9 +122,14 @@ pygmentsUseClasses = true
     weight = 2
 
 [[menu.footer_tertiary]]
-    name = "Terms Of Service"
+    name = "Terms & Conditions"
     url = "/terms-of-service/"
     weight = 3
+
+[[menu.footer_tertiary]]
+    name = "Become part of our community! Join our Discord!"
+    url = "https://discord.gg/uc9H5YKjXv"
+    weight = 4
     
 [permalinks]
     post = "/:year/:month/:title/"

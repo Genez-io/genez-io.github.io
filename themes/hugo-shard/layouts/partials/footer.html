@@ -2,11 +2,11 @@
   <div class="container">
     <div class="row">
       {{ if .Site.Params.footer.show_footer_logo }}
-      <div class="col-12 col-md-4">
+      <div class="col-12 col-md-6">
         <div class="footer-branding">
-          <a class="footer-logo" href="{{ .Site.BaseURL }}">
+          <!-- <a class="footer-logo" href="{{ .Site.BaseURL }}">
             <img width="40px" height="40px" alt="{{ .Site.Title }} Logo" src="{{ .Site.BaseURL }}images/logo.svg" />
-          </a>
+          </a> -->
           <h2 class="footer-title">{{ .Site.Title }}</h2>
         </div>
         <div class="footer-description">
@@ -14,11 +14,11 @@
         </div>
       </div>
       {{ end }}
-      <div class="col-12 col-md-8">
+      <div class="col-12 col-md-6">
         <div class="footer-menu">
-          <div class="row">
+          <!-- <div class="row"> -->
 
-            {{ if .Site.Params.footer.show_menu_footer_primary }}
+            <!-- {{ if .Site.Params.footer.show_menu_footer_primary }}
             <div class="col-12 col-md-3">
               <h3>{{ .Site.Params.footer.footer_primary_heading }}</h3>
               {{ partial "menu-footer-primary.html" . }}
@@ -30,16 +30,16 @@
               <h3>{{ .Site.Params.footer.footer_secondary_heading }}</h3>
               {{ partial "menu-footer-secondary.html" . }}
             </div>
-            {{ end }}
+            {{ end }} -->
 
             {{ if .Site.Params.footer.show_menu_footer_tertiary }}
-            <div class="col-12 col-md-3">
-              <h3>{{ .Site.Params.footer.footer_tertiary_heading }}</h3>
+            <div class="col-12 col-md-10">
+              <h3 class="footer-title-support">{{ .Site.Params.footer.footer_tertiary_heading }}</h3>
               {{ partial "menu-footer-tertiary.html" . }}
             </div>
             {{ end }}
 
-          </div>
+          <!-- </div> -->
         </div>
       </div>
     </div>

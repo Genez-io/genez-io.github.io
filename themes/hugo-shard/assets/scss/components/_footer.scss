@@ -4,6 +4,7 @@
   padding-top: 20px;
   padding-bottom: 20px;
   .footer-branding {
+    margin-top: 16px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -12,17 +13,19 @@
       display: inline-block;
     }
     .footer-title {
+      padding-left: 10px;
       font-family: $font-family-heading;
       display: inline-block;
       color: $primary-light;
       font-weight: 400;
-      font-size: 24px;
+      font-size: 28px;
       margin: 0;
-      margin-left: 10px;
+      // margin-left: 10px;
     }
   }
   .footer-description {
     margin-top: 10px;
+    padding-left: 10px;
     width: 80%;
     p {
       line-height: 1.4;
@@ -35,6 +38,7 @@
   }
   .footer-social {
     float: right;
+    padding-left: 10px;
   }
   h3 {
     font-size: 16px;
@@ -63,4 +67,12 @@
       }
     }
   }
+  .footer-title-support {
+    font-family: $font-family-heading;
+    display: inline-block;
+    color: $primary-light;
+    font-weight: 400;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
 }

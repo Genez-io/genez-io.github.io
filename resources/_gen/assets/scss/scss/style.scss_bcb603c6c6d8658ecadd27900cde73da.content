@@ -12903,6 +12903,31 @@ h3 {
     .button-white {
       width: 100%;
       text-align: center; } }
+.button-black {
+  cursor: pointer;
+  white-space: nowrap;
+  display: inline-block;
+  padding: 12px 20px 13px 20px;
+  border: 2px solid #2B2C3A;
+  background: #2B2C3A;
+  border-radius: 3px;
+  font-weight: 400;
+  letter-spacing: 0.025em;
+  color: #fffff8;
+  text-decoration: none;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+  outline: none;
+  font-family: "Inter"; }
+  @media (min-width: 768px) {
+    .button-black {
+      padding: 16px 24px 15px 24px; } }
+  .button-black:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+    text-decoration: none;
+    color: #fffff8; }
+
 .button-disabled {
   white-space: nowrap;
   display: inline-block;
@@ -13619,6 +13644,7 @@ table.debugprint {
   padding-top: 20px;
   padding-bottom: 20px; }
   .footer .footer-branding {
+    margin-top: 16px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -13626,15 +13652,16 @@ table.debugprint {
     .footer .footer-branding .footer-logo {
       display: inline-block; }
     .footer .footer-branding .footer-title {
+      padding-left: 10px;
       font-family: "Inter";
       display: inline-block;
       color: #fffff8;
       font-weight: 400;
-      font-size: 24px;
-      margin: 0;
-      margin-left: 10px; }
+      font-size: 28px;
+      margin: 0; }
   .footer .footer-description {
     margin-top: 10px;
+    padding-left: 10px;
     width: 80%; }
     .footer .footer-description p {
       line-height: 1.4;
@@ -13643,7 +13670,8 @@ table.debugprint {
   .footer .footer-menu {
     margin-top: 16px; }
   .footer .footer-social {
-    float: right; }
+    float: right;
+    padding-left: 10px; }
   .footer h3 {
     font-size: 16px;
     font-weight: 500;
@@ -13664,6 +13692,13 @@ table.debugprint {
         font-size: 16px; }
         .footer ul li a:hover {
           text-decoration: underline; }
+  .footer .footer-title-support {
+    font-family: "Inter";
+    display: inline-block;
+    color: #fffff8;
+    font-weight: 400;
+    font-size: 24px;
+    margin-bottom: 10px; }
 
 .credits {
   background: #2a478b;
@@ -14498,6 +14533,12 @@ ul.pagination li {
     .page-home .features h1 {
       line-height: 57px;
       font-size: 38px; } }
+.page-home .span-or {
+  color: black;
+  padding: 0 20px 0 10px; }
+  @media (max-width: 575.98px) {
+    .page-home .span-or {
+      display: none; } }
 .page-posts-list .posts-sidebar {
   border: 1px solid #dcdcdc;
   border-radius: 3px;
