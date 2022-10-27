@@ -19,34 +19,30 @@
   {
     "name": "Basic",
     "description": "For small teams that require agent scheduling and assignment.",
-    "price": "9.99",
-    "currencySymbol": "$",
+    "price": "",
+    "currencySymbol": "",
     "currency": "USD",
     "priceHint": "Billed Monthly",
-    "buttonText": "Try for free",
+    "buttonText": "Coming Soon",
     "buttonLink": "/signup",
     "highlighted": false,
     "featuresHeading": "Basic plan description",
     "features": [
-      "Feature",
-      "Feature",
-      "Feature",
-      "Feature"
     ],
     "blured": true
   },
   {
     "name": "Premium",
     "description": "For large teams and companies needing advanced analytics and AI learning.",
-    "price": "29.99",
-    "currencySymbol": "$",
+    "price": "",
+    "currencySymbol": "",
     "currency": "USD",
     "priceHint": "Billed Monthly",
     "highlighted": false,
-    "buttonText": "Try for free",
+    "buttonText": "Coming Soon",
     "buttonLink": "/signup",
     "featuresHeading": "Premium plan description",
-    "features": ["Feature", "Feature", "Feature"],
+    "features": [],
     "blured": true
   }
 ]

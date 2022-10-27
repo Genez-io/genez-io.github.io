@@ -39,6 +39,7 @@
     background: #282A36;
     .plan-name, .plan-description, .plan-price, .plan-features-heading {
       color: white;
+      text-align: left;
     }
     .plan-features{
       ul {
@@ -68,7 +69,8 @@
     line-height: 40px;
     font-weight: 600;
     margin-bottom: 16px;
-    color: #282A36;
+    text-align: center;
+    color: $grey; // #282A36;
   }
   .plan-description {
     font-size: 16px;
@@ -115,6 +117,9 @@
     .button-outlined {
       color: $primary;
       border-color: $primary;
+      width: 100%;
+    }
+    .button-disabled {
       width: 100%;
     }
   }

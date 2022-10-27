@@ -6,8 +6,8 @@ leadSubTitle: "The fastest and greenest cloud execution environment at your fing
 callToAction: 'Learn more'
 leadButtonOneText: 'Check our demo'
 leadButtonOneLink: '/product'
-leadButtonTwoText: 'Join our waitlist'
-leadButtonTwoLink: 'https://share-eu1.hsforms.com/1LNCxgz5MRwOaUUj545Le8wflc1e'
+leadButtonTwoText: 'Join Discord'
+leadButtonTwoLink: 'https://discord.gg/uc9H5YKjXv'
 productTextP1: "Because you are passionate about developing new apps, new 
 features.  You want to bring them to your users as fast as possible.  
 You want to focus on your code, develop, debug, release and iterate fast."

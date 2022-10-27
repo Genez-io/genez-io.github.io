@@ -42,7 +42,7 @@
         <img class="capybara-size" src="/images/capyochideschis.png" />
       </div>
       <div class="col-12 col-md-1 pt-3">
-        <img class="terminal" src="/images/video_genezio4.mov"/>
+        <img class="terminal" src="/images/video_genezio4.gif"/>
         <!-- src="/images/Coding Screen.svg" /> -->
         <!-- <video class="terminal">
           <source src="../../../static/images/video_genezio.mov" type="video/mp4">
@@ -246,15 +246,15 @@ async function handle(request) {
                 <span class="plan-price-currency-symbol">{{ .currencySymbol }}</span>
                 <!-- <span class="plan-price-currency">{{ .currency }}</span> -->
                 <!-- <div class="plan-price-hint">{{ .priceHint }}</div> -->
-                {{ if not .highlighted }}
+                <!-- {{ if not .highlighted }}
                   <span class="plan-price-currency">/month</span>
-                {{end}}
+                {{end}} -->
               </div>
               <h3 class="plan-name">{{ .name }}</h3>
               <!-- <div class="plan-description">{{ .description }}</div> -->
 
               <div class="plan-button">
-                <a href="{{ .buttonLink }}" class="button-outlined">{{ .buttonText }}</a>
+                <a href="{{ .buttonLink }}" class="{{ if .highlighted }}button-outlined{{ else }}button-disabled{{ end }}">{{ .buttonText }}</a>
               </div>
               <div class="plan-terms">{{ .terms }}</div>
             </div>

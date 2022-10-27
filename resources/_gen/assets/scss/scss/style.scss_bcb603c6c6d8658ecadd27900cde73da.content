@@ -12903,6 +12903,30 @@ h3 {
     .button-white {
       width: 100%;
       text-align: center; } }
+.button-disabled {
+  white-space: nowrap;
+  display: inline-block;
+  padding: 12px 20px 13px 20px;
+  border: 2px solid #c8c8c8;
+  background: none;
+  border-radius: 3px;
+  font-weight: 400;
+  letter-spacing: 0.025em;
+  color: #c8c8c8;
+  text-decoration: none;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+  outline: none;
+  font-family: "Inter";
+  background: transparent; }
+  @media (min-width: 768px) {
+    .button-disabled {
+      padding: 16px 24px 15px 24px; } }
+  .button-disabled:hover {
+    text-decoration: none;
+    color: #c8c8c8;
+    cursor: not-allowed; }
+
 .whitebox {
   border: 1px solid #dcdcdc;
   border-radius: 3px;
@@ -14001,7 +14025,8 @@ ul.pagination li {
   .plan.plan-featured {
     background: #282A36; }
     .plan.plan-featured .plan-name, .plan.plan-featured .plan-description, .plan.plan-featured .plan-price, .plan.plan-featured .plan-features-heading {
-      color: white; }
+      color: white;
+      text-align: left; }
     .plan.plan-featured .plan-features ul li {
       color: white; }
     .plan.plan-featured .plan-button .button-outlined {
@@ -14018,7 +14043,8 @@ ul.pagination li {
     line-height: 40px;
     font-weight: 600;
     margin-bottom: 16px;
-    color: #282A36; }
+    text-align: center;
+    color: #d5d5d5; }
   .plan .plan-description {
     font-size: 16px;
     line-height: 26px;
@@ -14056,6 +14082,8 @@ ul.pagination li {
     .plan .plan-button .button-outlined {
       color: #9477c4;
       border-color: #9477c4;
+      width: 100%; }
+    .plan .plan-button .button-disabled {
       width: 100%; }
   .plan .plan-features-heading {
     font-weight: 500;
