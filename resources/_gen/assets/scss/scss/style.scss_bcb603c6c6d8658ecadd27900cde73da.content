@@ -13560,9 +13560,17 @@ table.debugprint {
       color: white; }
 
 .outline {
+  margin: 0 10px;
   border: 2px solid #fffff8;
   border-color: #fffff8;
   border-radius: 3px; }
+
+.filled {
+  margin: 0 10px;
+  border: 2px solid #9477c4;
+  border-color: #9477c4;
+  border-radius: 3px;
+  background-color: #9477c4; }
 
 .header-fixed {
   position: fixed;

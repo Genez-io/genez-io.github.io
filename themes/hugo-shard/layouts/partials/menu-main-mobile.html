@@ -2,7 +2,7 @@
   <ul>
     {{ $currentPage := . }}
     {{ $firstUrlElement := print "/" (index (split .Permalink "/") 1) "/" }}
-    {{ range .Site.Menus.main }}
+    <!-- {{ range .Site.Menus.main }}
     <li
       class="menu-item-{{ .Name | lower }}{{ if .Pre }} {{ .Pre }}{{ end }}{{if or ($currentPage.IsMenuCurrent "main" .) (eq ($firstUrlElement|lower) (.URL|lower)) }} active{{end}}"
       title="{{ .Name }}">
@@ -10,12 +10,19 @@
         <span>{{ .Name }}</span>
       </a>
     </li>
-    {{end}}
+    {{end}} -->
     <li
       class="menu-item-{{ "Register" | lower }}"
       title="Register">
-      <a class="outline" href="">
+      <a class="outline" href="https://app.genez.io">
         <span>Register</span>
+      </a>
+    </li>
+    <li
+      class="menu-item-{{ "Trt for free" | lower }}"
+      title="Register">
+      <a class="filled" href="https://app.genez.io">
+        <span>Try for free</span>
       </a>
     </li>
   </ul>
