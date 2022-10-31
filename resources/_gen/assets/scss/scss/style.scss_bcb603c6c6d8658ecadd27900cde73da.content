@@ -13559,24 +13559,22 @@ table.debugprint {
     .header-transparent .menu-main > ul > li.active > a:hover {
       color: white; }
 
-.outline {
-  margin: 0 10px;
-  border: 2px solid #fffff8;
-  border-color: #fffff8;
-  border-radius: 3px; }
-
-.filled {
-  margin: 0 10px;
-  border: 2px solid #9477c4;
-  border-color: #9477c4;
-  border-radius: 3px;
-  background-color: #9477c4; }
-
 .header-fixed {
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 100; }
+  .header-fixed .outline {
+    margin: 0 10px;
+    border: 2px solid #fffff8;
+    border-color: #fffff8;
+    border-radius: 3px; }
+  .header-fixed .filled {
+    margin: 0 10px;
+    border: 2px solid #9477c4;
+    border-color: #9477c4;
+    border-radius: 3px;
+    background-color: #9477c4; }
 
 .header-scrolled {
   background: #9477c4;
@@ -13612,6 +13610,17 @@ table.debugprint {
     color: #2a478b; }
     .header-scrolled .menu-main > ul > li.active > a:hover {
       color: #2a478b; }
+  .header-scrolled .outline {
+    margin: 0 10px;
+    border: 2px solid #9477c4;
+    border-color: #9477c4;
+    border-radius: 3px; }
+  .header-scrolled .filled {
+    margin: 0 10px;
+    border: 2px solid #fffff8;
+    border-color: #fffff8;
+    border-radius: 3px;
+    background-color: #9477c4; }
 
 .header-invert .hamburger {
   color: white; }
@@ -14127,7 +14136,8 @@ ul.pagination li {
       border-color: #9477c4;
       width: 100%; }
     .plan .plan-button .button-disabled {
-      width: 100%; }
+      width: 100%;
+      pointer-events: none; }
   .plan .plan-features-heading {
     font-weight: 500;
     color: #282A36; }

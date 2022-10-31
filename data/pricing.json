@@ -4,7 +4,7 @@
     "description": "For individuals and open source projects.",
     "price": "Free",
     "buttonText": "Get Started",
-    "buttonLink": "/signup",
+    "buttonLink": "https://app.genez.io",
     "highlighted": true,
     "featuresHeading": "Personal plan description",
     "features": [
