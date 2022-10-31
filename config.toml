@@ -39,7 +39,7 @@ pygmentsUseClasses = true
     [params.footer]
         show_zerostatic_link = false
         show_footer_logo = true
-        description = "Hugo Shard is startup theme for the Hugo static site generator. It is a purpose built startup archetype with on trend design asthetics."
+        description = "genez.io is a platform for developers that want to write a backend in a very simple way. Your code will be deployed in a scalable and production-ready infrastructure."
         show_menu_footer_primary = true
         footer_primary_heading = "Product"
         show_menu_footer_secondary = true

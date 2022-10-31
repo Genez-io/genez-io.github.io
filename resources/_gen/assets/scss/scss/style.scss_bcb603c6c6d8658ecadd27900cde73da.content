@@ -13667,7 +13667,8 @@ table.debugprint {
     align-items: center;
     align-content: center; }
     .footer .footer-branding .footer-logo {
-      display: inline-block; }
+      display: inline-block;
+      padding-left: 10px; }
     .footer .footer-branding .footer-title {
       padding-left: 10px;
       font-family: "Inter";
