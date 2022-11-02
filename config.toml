@@ -39,7 +39,7 @@ pygmentsUseClasses = true
     [params.footer]
         show_zerostatic_link = false
         show_footer_logo = true
-        description = "genez.io is a new paradigm in cloud native programming, making it accessible to everyone, allowing elegant and quick development of websites, mobile apps, IoT apps, and many others"
+        description = "genez.io is a new paradigm in cloud native programming, making it accessible to everyone, allowing elegant and quick development of websites, mobile apps, IoT apps, and many others."
         show_menu_footer_primary = true
         footer_primary_heading = "Product"
         show_menu_footer_secondary = true
