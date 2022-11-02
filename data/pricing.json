@@ -8,11 +8,10 @@
     "highlighted": true,
     "featuresHeading": "Personal plan description",
     "features": [
-      "Feature",
-      "Feature",
-      "Feature",
-      "Feature",
-      "Feature"
+      "deploy seamlessly your projects",
+      "call your methods remotely using the generated SDK",
+      "debug locally",
+      "debug remotely by verifying the logs"
     ],
     "blured": false
   },

@@ -14148,7 +14148,8 @@ ul.pagination li {
       padding: 6px 0 6px 0;
       color: #282A36;
       vertical-align: middle;
-      line-height: 22px; }
+      line-height: 22px;
+      font-size: 13px; }
       .plan .plan-features ul li svg {
         width: 16px;
         display: inline;
