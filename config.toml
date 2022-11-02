@@ -39,7 +39,7 @@ pygmentsUseClasses = true
     [params.footer]
         show_zerostatic_link = false
         show_footer_logo = true
-        description = "genez.io is a platform for developers that want to write a backend in a very simple way. Your code will be deployed in a scalable and production-ready infrastructure."
+        description = "genez.io is a new paradigm in cloud native programming, making it accessible to everyone, allowing elegant and quick development of websites, mobile apps, IoT apps, and many others"
         show_menu_footer_primary = true
         footer_primary_heading = "Product"
         show_menu_footer_secondary = true
@@ -54,9 +54,10 @@ pygmentsUseClasses = true
 
     [params.homepage]
         show_features = true 
-        features_title = "Seamless development of your backend functions"
+        features_title = "Seamless development of your applications"
         pricing_title = "Pricing Plans for Developers"
         get_started = "Get started now with genez.io!"
+        demo = "How to use genez.io"
     
     [params.hero]
         hero_background_gradient_one = "#2b3af7"
@@ -112,8 +113,8 @@ pygmentsUseClasses = true
 
 # Footer Menu Third
 [[menu.footer_tertiary]]
-    name = "Contact us at: support@genez.io"
-    url = "/contact/"
+    name = "Contact us at: contact@genez.io"
+    url = "mailto:contact@genez.io"
     weight = 1
 
 [[menu.footer_tertiary]]

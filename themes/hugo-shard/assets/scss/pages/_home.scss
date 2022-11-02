@@ -134,4 +134,11 @@
       display: none;
     }
   }
+  .video {
+    width: 80%;
+    height: 500px;
+    @include media-breakpoint-down(xs) {
+      height: 200px;
+    }
+  }
 }

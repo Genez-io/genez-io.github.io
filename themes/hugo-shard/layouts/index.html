@@ -214,10 +214,12 @@ async function handle(request) {
           <p>{{ .Params.productTextP1 }}</p>
           <p>{{ .Params.productTextP2 }}</p>
           <p>{{ .Params.productTextP3 }}</p>
+          <div class="pt-4"></div>
+          <span><strong>*For now, we only support JavaScript as a language</strong></span>
         </div>
-        <div class="lead-buttons">
+        <!-- <div class="lead-buttons">
           <a class="button button-white" href={{ .Params.leadButtonTwoLink | relURL }}>{{ .Params.callToAction }}</a>
-        </div>
+        </div> -->
       </div>
       <div class="col-12 col-md-4 offset-md-1 position-relative">
         <!-- <div class="dots-large">
@@ -225,6 +227,23 @@ async function handle(request) {
         <div class="product-right pt-12">
           <img width="400" src="{{ "images/product/2-2.png" | relURL }}" />
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="strip strip-white features pt-6 pb-10 pb-md-10">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="col-12 pt-5">
+          <h1 class="text-center">{{ .Site.Params.homepage.demo }}</h1>
+        </div>
+        <div class="lead text-center">
+          <!-- <video width="320" height="240" controls>
+            <source src="https://www.youtube.com/watch?v=dQw4w9WgXcQ" type="video/mp4">
+          </video> -->
+          <iframe class="video" src="https://www.youtube.com/embed/p5i1ZfzZBFk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>        </div>
       </div>
     </div>
   </div>
@@ -291,7 +310,7 @@ async function handle(request) {
         <div class="lead text-center">
           <div class="lead-buttons">
             {{ if .Params.leadButtonOneLink }}
-            <a class="button" href={{ .Params.leadButtonOneLink | relURL }}>{{ .Params.leadButtonOneText }}</a>
+            <a class="button" href="https://app.genez.io">Get started</a>
             {{ end }}
             <span class="span-or">OR</span>
             {{ if .Params.leadButtonTwoLink }}

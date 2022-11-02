@@ -14281,6 +14281,10 @@ ul.pagination li {
         margin-top: 24px;
         line-height: 34px;
         font-size: 20px; } }
+  .product .product-text span {
+    color: white;
+    font-size: 12px; }
+
 .nibbles1 {
   position: absolute;
   height: 654px;
@@ -14558,6 +14562,12 @@ ul.pagination li {
   @media (max-width: 575.98px) {
     .page-home .span-or {
       display: none; } }
+.page-home .video {
+  width: 80%;
+  height: 500px; }
+  @media (max-width: 575.98px) {
+    .page-home .video {
+      height: 200px; } }
 .page-posts-list .posts-sidebar {
   border: 1px solid #dcdcdc;
   border-radius: 3px;
