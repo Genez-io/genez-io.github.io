@@ -14713,6 +14713,9 @@ ul.pagination li {
 *::after {
   box-sizing: border-box; }
 
+html {
+  scroll-behavior: smooth; }
+
 body {
   box-sizing: border-box;
   margin: 0;

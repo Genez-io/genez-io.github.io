@@ -29,7 +29,7 @@
           <h2>{{ .Params.leadSubTitle }}</h2>
           <div class="lead-buttons">
             {{ if .Params.leadButtonOneLink }}
-            <a class="button" href={{ .Params.leadButtonOneLink | relURL }}>{{ .Params.leadButtonOneText }}</a>
+            <a class="button" href="#demo">{{ .Params.leadButtonOneText }}</a>
             {{ end }}
             {{ if .Params.leadButtonTwoLink }}
             <a class="button-outlined" href={{ .Params.leadButtonTwoLink | relURL }}>{{ .Params.leadButtonTwoText }}</a>
@@ -232,7 +232,7 @@ async function handle(request) {
   </div>
 </div>
 
-<div class="strip strip-white features pt-6 pb-10 pb-md-10">
+<div id="demo" class="strip strip-white features pt-6 pb-10 pb-md-10">
   <div class="container">
     <div class="row">
       <div class="col-12">

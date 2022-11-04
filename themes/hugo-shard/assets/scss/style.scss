@@ -101,7 +101,11 @@ $hero-gradient-end: {{ .Site.Params.hero.hero_background_gradient_two | default 
 *,
 *::before,
 *::after {
-  box-sizing: border-box; 
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {

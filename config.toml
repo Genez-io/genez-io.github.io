@@ -47,10 +47,10 @@ pygmentsUseClasses = true
         show_menu_footer_tertiary = true
         footer_tertiary_heading = "Support"
         show_social_media_links = true
-        facebook = false
-        twitter = "https://twitter.com/zerostaticio"
-        angellist = "https://angelist.com"
-        linkedin = "https://www.linkedin.com"
+        facebook = "https://www.facebook.com/profile.php?id=100086667803855"
+        twitter = "https://twitter.com/GenezioNetwork"
+        angellist = false
+        linkedin = "https://www.linkedin.com/company/genez-io/"
 
     [params.homepage]
         show_features = true 
