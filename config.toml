@@ -20,7 +20,7 @@ pygmentsUseClasses = true
     font_base = "'Inter'"
     font_heading = "'Inter'"
 
-    google_analytics_id = ""
+    google_analytics_id = "G-VR905VXGKC"
 
     [params.homepage_meta_tags]
         meta_description = "A brilliant, modern Hugo theme for startups."
