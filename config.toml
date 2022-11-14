@@ -23,12 +23,12 @@ pygmentsUseClasses = true
     google_analytics_id = "G-VR905VXGKC"
 
     [params.homepage_meta_tags]
-        meta_description = "A new paradigm in cloud native programming"
+        meta_description = "A new paradigm in native cloud programming"
         meta_og_title = "genez.io"
         meta_og_type = "website"
         meta_og_url = "https://genez.io"
         meta_og_image = ""
-        meta_og_description = "A new paradigm in cloud native programming"
+        meta_og_description = "A new paradigm in native cloud programming"
         meta_twitter_card = "summary"
         meta_twitter_site = "@GenezioNetwork"
         meta_twitter_creator = "@GenezioNetwork"
