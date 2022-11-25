@@ -4,12 +4,12 @@ date: {{ .Date }}
 draft: true
 thumbnail: https://source.unsplash.com/h2wRXAH4mmM/100x100
 image: https://source.unsplash.com/h2wRXAH4mmM/600x600
-tags:
+##tags:
   - Design
-categories:
+##categories:
   - Development
   - Javascript
-authors:
+##authors:
   - Sage Kirk
 ---
 

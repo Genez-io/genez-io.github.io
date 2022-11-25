@@ -7,6 +7,7 @@ paginate = 12
 pygmentsCodeFences = true
 pygmentsCodefencesGuessSyntax = true
 pygmentsUseClasses = true
+disableKinds = ['taxonomy', 'term']
 
 [params]
     primary_color = "#9477c4"
@@ -134,9 +135,3 @@ pygmentsUseClasses = true
     
 [permalinks]
     post = "/:year/:month/:title/"
-
-[taxonomies]
-    tag = "tags"
-    category = "categories"
-    author = "authors"
-  
