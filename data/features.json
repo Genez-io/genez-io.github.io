@@ -2,16 +2,16 @@
   {
     "title": "Worry less",
     "description": "We take the complexity out of deploying your backend functions in a serverless environment and we give you 24/7 smart scaling and monitoring. ",
-    "image": "/images/1.png"
+    "image": "/images/1.webp"
   },
   {
       "title": "Save time",
       "description": "Write functions in your favorite language, Javascript, Swift, Kotlin and use “genezio deploy” to move them seamlessly to our cloud.",
-      "image": "/images/2.png"
+      "image": "/images/2.webp"
   },
   {
       "title": "Save power",
       "description": "The fastest and most resource efficient cloud backend.  We remove unnecessary fluff around your functions for instant response and zero overhead.",
-      "image": "/images/3.png"
+      "image": "/images/3.webp"
   }
 ]

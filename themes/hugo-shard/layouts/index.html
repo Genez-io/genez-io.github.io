@@ -39,14 +39,14 @@
         </div>
       </div>
       <div class="capybara">
-        <img class="capybara-size" src="/images/capyochideschis.png" />
+        <img class="capybara-size" src="/images/capyochideschis.webp" />
       </div>
       <div class="col-12 col-md-1 pt-3">
-        <img class="terminal" src="/images/video_genezio4.gif"/>
+        <!-- <img class="terminal" src="/images/video_genezio4.gif"/> -->
         <!-- src="/images/Coding Screen.svg" /> -->
-        <!-- <video class="terminal">
-          <source src="../../../static/images/video_genezio.mov" type="video/mp4">
-        </video> -->
+        <video class="terminal" autoplay loop>
+          <source src="/images/capybara.webm" type="video/webm">
+        </video>
       </div>
     </div>
   </div>
@@ -225,7 +225,7 @@ async function handle(request) {
         <!-- <div class="dots-large">
         </div> -->
         <div class="product-right pt-12">
-          <img width="400" src="{{ "images/product/2-2.png" | relURL }}" />
+          <img width="400" src="{{ "images/product/2-2.webp" | relURL }}" />
         </div>
       </div>
     </div>
@@ -243,7 +243,7 @@ async function handle(request) {
           <!-- <video width="320" height="240" controls>
             <source src="https://www.youtube.com/watch?v=dQw4w9WgXcQ" type="video/mp4">
           </video> -->
-          <iframe class="video" src="https://www.youtube.com/embed/1Tfrm-nvhCQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>      </div>
+          <iframe loading="lazy" class="video" src="https://www.youtube.com/embed/1Tfrm-nvhCQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>      </div>
     </div>
   </div>
 </div>
