@@ -120,12 +120,12 @@ disableKinds = ['taxonomy', 'term']
 
 [[menu.footer_tertiary]]
     name = "Privacy Policy"
-    url = "/privacy/"
+    url = "/privacy-policy/"
     weight = 2
 
 [[menu.footer_tertiary]]
     name = "Terms & Conditions"
-    url = "/terms-of-service/"
+    url = "/eula/"
     weight = 3
 
 [[menu.footer_tertiary]]
