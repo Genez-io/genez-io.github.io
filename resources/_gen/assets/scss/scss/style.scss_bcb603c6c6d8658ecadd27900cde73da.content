@@ -13875,7 +13875,7 @@ ul.social {
 .hero {
   height: 400px;
   position: relative;
-  background-image: linear-gradient(to right, #3365ff, #2b8cf7); }
+  background-image: linear-gradient(to right, #9477c4, #9477c4); }
   .hero .hero-image {
     background-size: cover;
     background-repeat: no-repeat;
@@ -14564,11 +14564,15 @@ ul.pagination li {
     .page-home .span-or {
       display: none; } }
 .page-home .video {
-  width: 80%;
-  height: 500px; }
+  width: 65%;
+  height: 550px; }
   @media (max-width: 575.98px) {
     .page-home .video {
-      height: 200px; } }
+      height: 155px; } }
+.page-home .inner {
+  position: absolute;
+  width: 100%; }
+
 .page-posts-list .posts-sidebar {
   border: 1px solid #dcdcdc;
   border-radius: 3px;

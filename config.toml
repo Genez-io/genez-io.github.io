@@ -61,8 +61,8 @@ disableKinds = ['taxonomy', 'term']
         demo = "How to use genez.io"
     
     [params.hero]
-        hero_background_gradient_one = "#2b3af7"
-        hero_background_gradient_two = "#2b8cf7"
+        hero_background_gradient_one = "#9477c4"
+        hero_background_gradient_two = "#9477c4"
 
 # Main Menu
 [[menu.main]]

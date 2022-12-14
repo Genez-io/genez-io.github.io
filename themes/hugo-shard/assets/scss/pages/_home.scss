@@ -135,10 +135,15 @@
     }
   }
   .video {
-    width: 80%;
-    height: 500px;
+    width: 65%;
+    height: 550px;
     @include media-breakpoint-down(xs) {
-      height: 200px;
+      height: 155px;
     }
+  }
+
+  .inner {
+    position: absolute;
+    width: 100%;
   }
 }

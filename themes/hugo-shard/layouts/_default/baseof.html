@@ -6,6 +6,8 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>{{ block "title" . }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="{{ .Site.Params.primary_color }}" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="{{ .Site.Params.primary_color }}" media="(prefers-color-scheme: dark)">
   {{ block "meta_tags" . }}{{end}}
   <link rel="icon" href="{{ .Site.BaseURL }}favicon.png">
 <!-- 
