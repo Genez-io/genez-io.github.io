@@ -14569,6 +14569,9 @@ ul.pagination li {
   @media (max-width: 575.98px) {
     .page-home .video {
       height: 155px; } }
+.page-home .demo-image {
+  width: 65%; }
+
 .page-home .inner {
   position: absolute;
   width: 100%; }
