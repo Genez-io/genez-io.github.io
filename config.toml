@@ -24,12 +24,12 @@ disableKinds = ['taxonomy', 'term']
     google_analytics_id = "G-VR905VXGKC"
 
     [params.homepage_meta_tags]
-        meta_description = "A new paradigm in native cloud programming"
-        meta_og_title = "genez.io"
+        meta_description = "genez.io helps you write your API, deploy it and generate the SDK for easy integration in your website/mobile app."
+        meta_og_title = "The easy way to write, deploy and use a serverless API"
         meta_og_type = "website"
         meta_og_url = "https://genez.io"
         meta_og_image = ""
-        meta_og_description = "A new paradigm in native cloud programming"
+        meta_og_description = "genez.io helps you write your API, deploy it and generate the SDK for easy integration in your website/mobile app."
         meta_twitter_card = "summary"
         meta_twitter_site = "@GenezioNetwork"
         meta_twitter_creator = "@GenezioNetwork"

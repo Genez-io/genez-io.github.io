@@ -2,7 +2,7 @@
 title: 'Home'
 date: 2019-02-22
 leadTitle: "The coolest way to write, deploy and call backend code." #"Write and deploy backend code seamlessly!"
-leadSubTitle: "Hassle free cloud native development at your fingertips. Happy hacking!" #'Simple backend functions for web and mobile developers. Happy hacking!'
+leadSubTitle: "Never pay for idle servers or write unnecessary code again" #'Simple backend functions for web and mobile developers. Happy hacking!'
 callToAction: 'Learn more'
 leadButtonOneText: 'Check our demo'
 leadButtonOneLink: '/product'
