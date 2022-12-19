@@ -14464,7 +14464,7 @@ ul.pagination li {
       .page-home .lead h1 {
         width: 100%;
         line-height: 73px;
-        font-size: 60px; } }
+        font-size: 54px; } }
   .page-home .lead h2 {
     font-family: "Inter";
     line-height: 26px;

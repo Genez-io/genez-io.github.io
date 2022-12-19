@@ -1,17 +1,17 @@
 [
   {
-    "title": "Worry less",
-    "description": "We take the complexity out of deploying your backend functions in a serverless environment and we give you 24/7 smart scaling and monitoring. ",
+    "title": "Auto generate the SDK",
+    "description": "Spend more time improving your barista skills and less time fiddling with GETs and POSTs to call your API.  We will generate the SDK to be incorporated into your frontend code.",
     "image": "/images/1.webp"
   },
   {
-      "title": "Save time",
-      "description": "Write functions in your favorite language, Javascript, Swift, Kotlin and use “genezio deploy” to move them seamlessly to our cloud.",
+      "title": "Auto deploy and scale",
+      "description": "We take the complexity out of deploying your API in our serverless environment.  We auto-scale our infrastructure to match your call patterns 24/7.",
       "image": "/images/2.webp"
   },
   {
-      "title": "Save power",
-      "description": "The fastest and most resource efficient cloud backend.  We remove unnecessary fluff around your functions for instant response and zero overhead.",
+      "title": "Free when not used",
+      "description": "We use just the right amount of processor time to run your code for instant response and zero overhead thus zero charge when unused.",
       "image": "/images/3.webp"
   }
 ]
