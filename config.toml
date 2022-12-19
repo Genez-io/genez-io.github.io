@@ -55,7 +55,7 @@ disableKinds = ['taxonomy', 'term']
 
     [params.homepage]
         show_features = true 
-        features_title = "Seamless development of your applications"
+        features_title = "Seamless development of your serverless API"
         pricing_title = "Pricing Plans for Developers"
         get_started = "Get started now with genez.io!"
         demo = "How to use genez.io"
