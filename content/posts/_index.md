@@ -3,6 +3,6 @@ title: 'Blog'
 date: 2019-02-24
 ---
 
-# Blog
+# Read our blog to find out more about..
 
-## Thoughts and updates from our creative team.
+<!-- ## Thoughts and updates from our creative team. -->

@@ -1,11 +1,11 @@
 ---
-title: Building a Website With Hugo
+title: How to lose weight
 date: 2018-12-29
 tags:
   - Tutorials
 author:
   - Sage Kirk
-thumbnail: https://miro.medium.com/fit/c/400/268/1*0qntmI2bOt_FLYfv4MRA-g.png
+thumbnail: https://miro.medium.com/fit/c/400/268/1*uPt_ccZmvCMnQahIs43ahg.png
 preview: fdbahjkfbaof fdbj aofbdaosj bfdsoaj bfosda f
 ---
 
@@ -32,7 +32,7 @@ sectus his tamen. Hora graves iam prospiciunt, subito spargit germanam _utve_,
 inmeritas frontemque tempora. Frustra stratosque possim trepidare squamis, os,
 tum ipse prodesse acuta Phobetora e viscera, munera!
 
-![Street Art Image](https://miro.medium.com/fit/c/400/268/1*0qntmI2bOt_FLYfv4MRA-g.png)
+![Street Art Image](/posts/chris-malinao-burgett-1360757-unsplash.jpg)
 
 ## Siqua transieram in parte
 

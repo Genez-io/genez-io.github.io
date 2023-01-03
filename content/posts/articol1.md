@@ -1,15 +1,13 @@
 ---
 title: Designing Your Brand
 date: 2019-01-04
-thumbnail: https://source.unsplash.com/h2wRXAH4mmM/100x100
+thumbnail: https://goteleport.com/blog/_next/image/?url=%2Fblog%2F_next%2Fstatic%2Fmedia%2FSELinux%402x.3796a0e3.png&w=3840&q=75
 image: https://source.unsplash.com/h2wRXAH4mmM/600x600
 tags:
   - Design
-categories:
-  - Development
-  - Javascript
-authors:
+author:
   - Sage Kirk
+preview: Take a look at this beautiful article tralalalala gtralalalalg fdansjkfgbs sbaj kgbsadkj bsdkjab gkjsadb gkjsdb gkjsdab gkjsadbg jksdabgjk as
 ---
 
 ## Tot beati facitote et media viridem Epidauria

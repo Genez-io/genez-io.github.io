@@ -20,6 +20,14 @@
 .strip-primary,
 .strip-bg-primary {
   background-color: $primary;
+  h1 {
+    color: white;
+    margin: 0;
+    margin-bottom: 40px;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+  }
 }
 .strip-secondary,
 .strip-bg-secondary {

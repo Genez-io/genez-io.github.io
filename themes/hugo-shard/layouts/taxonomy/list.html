@@ -6,17 +6,24 @@
 <div class="intro">
   <div class="container">
     <div class="row">
-      <div class="col-12">
+      <div class="col-12 page-posts-list">
         <h1>{{ .Title }}</h1>
       </div>
     </div>
   </div>
 </div>
 <div class="container pb-6">
+<div class="row">
+  <div class="sidebar col-12 col-md-4">
+    {{ partial "blog/post-taxonomies" . }}
+  </div>
+</div>
+</div>
+<div class="container pb-6">
   <div class="row">
-    <div class="col-12 col-md-8">
-      {{ $paginator := .Paginate (where .Pages "Type" "posts") }}
-      {{ range $paginator.Pages }}
+    {{ $paginator := .Paginate (where .Pages "Type" "posts") }}
+    {{ range $paginator.Pages }}
+    <div class="col-12 col-md-6 col-lg-4">
       <div class="post post-summary mb-4">
         {{ if .Params.thumbnail }}
         <div class="post-left">
@@ -36,8 +43,8 @@
           <div class="post-title">
             <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
           </div>
-          <div class="post-meta">
-            {{ .Params.author }}
+          <div class="post-meta post-description">
+            {{ .Params.preview }}
             {{ $dateFormat := default "Jan 2, 2006" (index .Site.Params "date_format") }}
           </div>
           <div class="post-date">
@@ -47,14 +54,10 @@
           </div>
         </div>
       </div>
-      {{ end }}
     </div>
-    <div class="col-12 col-md-4">
-      <div class="sidebar">
-        {{ partial "blog/post-taxonomies" . }}
-      </div>
-    </div>
+    {{ end }}
   </div>
+</div>
   <div class="row">
     <div class="col-12">
       {{ partial "paginator" . }}

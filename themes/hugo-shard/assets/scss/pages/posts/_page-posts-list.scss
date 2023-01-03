@@ -1,4 +1,15 @@
 .page-posts-list {
+  h1 {
+      background: linear-gradient(90deg, $primary 0%, #282A36 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-family: $font-family-heading;
+      margin: 0;
+      margin-bottom: 40px;
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 48px;
+  }
   .posts-sidebar {
     @include whitebox();
     padding: 40px;
