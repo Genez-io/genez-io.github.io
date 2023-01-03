@@ -34,7 +34,15 @@
   background-color: $secondary;
 }
 .strip-secondary-light {
-  background-color: $secondary-light;
+  background-color: $white;
+  h1 {
+    color: black;
+    margin: 0;
+    margin-bottom: 40px;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+  }
 }
 .strip-white,
 .strip-bg-white {
