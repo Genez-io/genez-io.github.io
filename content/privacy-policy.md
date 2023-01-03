@@ -1,12 +1,11 @@
 ---
-title: 'Privacy Policy'
+title: Privacy Policy
 ---
-
 <!-----
 
 Yay, no errors, warnings, or alerts!
 
-Conversion time: 0.766 seconds.
+Conversion time: 0.616 seconds.
 
 
 Using this Markdown file:
@@ -19,7 +18,7 @@ Using this Markdown file:
 Conversion notes:
 
 * Docs to Markdown version 1.0β34
-* Tue Dec 13 2022 08:49:48 GMT-0800 (PST)
+* Tue Jan 03 2023 06:22:22 GMT-0800 (PST)
 * Source doc: Privacy policy_Genez.io_01.12.2022
 ----->
 
@@ -32,7 +31,7 @@ This Policy is a legally binding agreement between you (“User”, “you” or
 
 **Automatic Collection of Information**
 
-When you open the Website, our servers automatically record information that your browser sends. This data may include information such as your device’s IP address, browser type, and version, operating system type and version, language preferences or the webpage you were visiting before you came to the Website and Services, pages of the Website and Services that you visit, the time spent on those pages, information you search for on the Website, access times and dates, and other statistics.
+When you open the Website, our servers automatically record information that your browser sends. This data may include information such as your device’s IP address, browser type, and version, operating system type and version, language preferences or the webpage you were visiting before you came to the Website and Services, pages of the Website and Services that you visit, the time spent on those pages, information you search for on the Website, access times and dates, and other statistics. However, we do not access such data / information (related to the use of the Website and/or Services) unless we have the legal grounds derived from a customer service agreement.
 
 Information collected automatically is used only to identify potential cases of abuse and establish statistical information regarding the usage and traffic of the Website and Services. This statistical information is not otherwise aggregated in such a way that would identify any particular User of the system.
 
@@ -196,7 +195,7 @@ As the security of Personal Information depends in part on the security of the d
 
 **Data Breach**
 
-In the event we become aware that the security of the Website and Services has been compromised or Users’ Personal Information has been disclosed to unrelated third parties as a result of external activity, including, but not limited to, security attacks or fraud, we reserve the right to take reasonably appropriate measures, including, but not limited to, investigation and reporting, as well as notification to and cooperation with law enforcement authorities. In the event of a data breach, we will make reasonable efforts to notify affected individuals if we believe that there is a reasonable risk of harm to the User as a result of the breach or if notice is otherwise required by law. When we do, we will post a notice on the Website, and send you an email.
+In the event we become aware that the security of the Website and Services has been compromised or Users’ Personal Information has been disclosed to unrelated third parties as a result of external activity, including, but not limited to, security attacks or fraud, we reserve the right to take reasonably appropriate measures, including, but not limited to, investigation and reporting, as well as notification to and cooperation with law enforcement authorities. In the event of a data breach, we will make reasonable efforts to notify affected individuals if we believe that there is a reasonable risk of harm to the User as a result of the breach or if notice is otherwise required by law. When we do believe we are dealing with a data breach, we will post a notice on the Website, and send you an email.
 
 **Changes and Amendments**
 
