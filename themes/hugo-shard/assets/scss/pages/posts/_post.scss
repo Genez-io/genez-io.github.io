@@ -1,23 +1,29 @@
 .post {
-  display: flex;
+  //display: flex;
   background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 20px;
+  height: 520px;
+  width: 350px;
   .post-left {
-    margin-right: 20px;
+    margin: auto;
   }
   .post-right {
   }
   .post-date {
     .post-date-date {
       text-transform: uppercase;
-      font-size: 12px;
-      color: $steel;
-      font-weight: 500;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      color: black;
       text-decoration: none;
     }
     .post-date-author {
       text-transform: uppercase;
       font-size: 12px;
-      color: $steel;
+      color: black;
       font-weight: 500;
       text-decoration: none;
     }
@@ -28,12 +34,16 @@
   .post-tags {
     display: inline-block;
     margin-right: 10px;
-    margin-bottom: 8px;
+    margin: 20px auto;
+    border: 2px solid #9477C4;
+    border-radius: 20px;
+    padding: 5px 0;
     a {
+      padding: 20px;
       text-transform: uppercase;
       font-size: 12px;
       color: $primary;
-      font-weight: 700;
+      font-weight: 500;
       text-decoration: none;
     }
   }
@@ -47,8 +57,8 @@
     }
   }
   .post-image {
-    width: 100px;
-    height: 100px;
+    //width: 100px;
+    height: 200px;
     margin-bottom: 10px;
     overflow: hidden;
     img {
@@ -59,19 +69,30 @@
   }
   .post-title {
     font-family: $font-family-heading;
+    height: 75px;
     h2 {
-      font-size: 24px;
-      line-height: 30px;
-      font-weight: 400;
+      font-weight: 600;
+      font-size: 30px;
+      line-height: 36px;
     }
     a {
-      color: $carbon;
+      color: black;
       text-decoration: none;
     }
   }
   .post-description {
+    font-weight: 400;
     font-size: 16px;
-    line-height: 22px;
+    line-height: 19px;
+    color: black;
+    margin: 10px auto;
+    height: 60px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 30px;
   }
   .post-link {
     flex: 0;
@@ -82,7 +103,7 @@
     font-family: $font-family-heading;
   }
   .post-meta {
-    display: flex;
+    //display: flex;
     .on {
       margin: 0 4px 0 4px;
     }
