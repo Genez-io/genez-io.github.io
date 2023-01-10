@@ -43,7 +43,7 @@ For the purposes of this End-User License Agreement:
 
 **Agreement** means this End-User License Agreement that forms the entire agreement between You and the Company regarding the use of the Application.
 
-**Application** / **Tool **means the software program / tool / software development kit (SDK) provided by the Company downloaded by / used by You on a personal device and for personal use, named **genez.io**, a tool which aims at providing a frame whereby the development, implementation and scaling of apps which use cloud data servers and management, in such a manner to contribute for their faster, more efficient development / performance, using less resources.
+**Application** / **Tool** means the software program / tool / software development kit (SDK) provided by the Company downloaded by / used by You on a personal device and for personal use, named **genez.io**, a tool which aims at providing a frame whereby the development, implementation and scaling of apps which use cloud data servers and management, in such a manner to contribute for their faster, more efficient development / performance, using less resources.
 
 **Company** (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to Simple Capital SRL, Bucharest.
 
@@ -71,7 +71,7 @@ The Application is licensed, not sold, to You by the Company for use strictly in
 
 The Company grants You a revocable, non-exclusive, non-transferable, limited license to download, install and use the Application strictly in accordance with the terms of this Agreement.
 
-The license that is granted to You by the Company is free, solely for your personal, **non-commercial purposes**,\*\* \*\*strictly in accordance with the terms of this Agreement, subjected to the following limitations:
+The license that is granted to You by the Company is free, solely for your personal, **non-commercial purposes**, strictly in accordance with the terms of this Agreement, subjected to the following limitations:
 
 - Maximum execution time - 5 seconds;
 - limited at 1024 MB RAM;
