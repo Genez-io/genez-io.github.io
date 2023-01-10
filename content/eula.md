@@ -27,7 +27,7 @@ Conversion notes:
 
 End-User License Agreement ("Agreement")
 
-Last updated: December 1<sup>st</sup>, 2022
+Last updated: January 10<sup>th</sup>, 2022
 
 Please read this End-User License Agreement carefully before signing into, downloading or using genez.io.
 
