@@ -1,12 +1,14 @@
 ---
-title: 'End-User License Agreement'
+title: "End-User License Agreement"
 ---
+
+<!-- Output copied to clipboard! -->
 
 <!-----
 
 Yay, no errors, warnings, or alerts!
 
-Conversion time: 0.451 seconds.
+Conversion time: 0.519 seconds.
 
 
 Using this Markdown file:
@@ -19,97 +21,78 @@ Using this Markdown file:
 Conversion notes:
 
 * Docs to Markdown version 1.0β34
-* Tue Dec 13 2022 08:40:34 GMT-0800 (PST)
-* Source doc: Copy of Genez.io EULA
+* Tue Jan 10 2023 04:50:50 GMT-0800 (PST)
+* Source doc: Genez.io EULA
 ----->
-
 
 End-User License Agreement ("Agreement")
 
 Last updated: December 1<sup>st</sup>, 2022
 
-Please read this End-User License Agreement carefully before clicking the "I Agree" button, downloading or using genez.io.
-
+Please read this End-User License Agreement carefully before signing into, downloading or using genez.io.
 
 # Interpretation and Definitions
-
 
 ## Interpretation
 
 The words of which the initial letter is capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.
 
-
 ## Definitions
 
 For the purposes of this End-User License Agreement:
 
-
 **Agreement** means this End-User License Agreement that forms the entire agreement between You and the Company regarding the use of the Application.
 
-
-**Application** / **Tool **means the software program / tool provided by the Company downloaded by You to a Device, named **genez.io**, a tool which aims at providing a frame whereby the development, implementation and scaling of apps which use cloud data servers and management, in such a manner to contribute for their faster, more efficient development / performance, using less resources. 
-
+**Application** / **Tool** means the software program / tool / software development kit (SDK) provided by the Company downloaded by / used by You on a personal device and for personal use, named **genez.io**, a tool which aims at providing a frame whereby the development, implementation and scaling of apps which use cloud data servers and management, in such a manner to contribute for their faster, more efficient development / performance, using less resources.
 
 **Company** (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to Simple Capital SRL, Bucharest.
 
-
 **Content** refers to content such as text, images, or other information that can be posted, uploaded, linked to or otherwise made available by You, regardless of the form of that content.
-
 
 **Country** refers to: Romania
 
-
 **Device** means any device that can access the Application such as a computer, a cell phone or a digital tablet.
-
 
 **Third-Party Services** means any services or content (including data, information, applications and other products services) provided by a third party that may be displayed, included or made available by the Application.
 
-
 **You** means the individual accessing or using the Application or the company, or other legal entity on behalf of which such individual is accessing or using the Application, as applicable.
-
 
 # Acknowledgment
 
-By clicking the "I Agree" button, downloading or using the Application, You are agreeing to be bound by the terms and conditions of this Agreement. If You do not agree to the terms of this Agreement, do not click on the "I Agree" button, do not download and do not use the Application.
+By signing in, downloading or using the Application, You are agreeing to be bound by the terms and conditions of this Agreement. If You do not have an account, sign up for free. If You do not agree to the terms of this Agreement, do not sign in, do not download and do not use the Application.
 
 This Agreement is a legal document between You and the Company and it governs your use of the Application made available to You by the Company.
 
 The Application is licensed, not sold, to You by the Company for use strictly in accordance with the terms of this Agreement.
 
-
 # License
-
 
 ## Scope of License
 
 The Company grants You a revocable, non-exclusive, non-transferable, limited license to download, install and use the Application strictly in accordance with the terms of this Agreement.
 
-The license that is granted to You by the Company is:
+The license that is granted to You by the Company is free, solely for your personal, **non-commercial purposes**, strictly in accordance with the terms of this Agreement, subjected to the following limitations:
 
-
-
-1. **Basic:** solely for your personal, **non-commercial purposes**,** **strictly in accordance with the terms of this Agreement, for unlimited number of free projects 1 month retention period for each project access to all features (including Postman Export);
-2. **Subscription Based**: **commercial use for all projects,** unlimited number of projects, retention period on the subscription period, access to all features 
-
+- Maximum execution time - 5 seconds;
+- limited at 1024 MB RAM;
+- logs stoked for no longer than 24 hours and without exceeding 100 MB;
+- ephemeral storage 512 MB;
+- request limit size 50 MB.
 
 ## License Restrictions
 
 You agree not to, and You will not permit others to:
 
-
-
-* License, sell, rent, lease, assign, distribute, transmit, host, outsource, disclose or otherwise commercially exploit the Application or make the Application available to any third party, except under the terms, conditions and purposes described in the Scope Of License.
-* Copy or use the Application for any purpose other than as permitted under the above section 'License'.
-* Modify, make derivative works of, disassemble, decrypt, reverse compile or reverse engineer any part of the Application.
-* Remove, alter or obscure any proprietary notice (including any notice of copyright or trademark) of the Company or its affiliates, partners, suppliers or the licensors of the Application.
-
+- License, sell, rent, lease, assign, distribute, transmit, host, outsource, disclose or otherwise commercially exploit the Application or make the Application available to any third party, except under the terms, conditions and purposes described in the Scope Of License.
+- Copy or use the Application for any purpose other than as permitted under the above section 'License'.
+- Modify, make derivative works of, disassemble, decrypt, reverse compile or reverse engineer any part of the Application.
+- Remove, alter or obscure any proprietary notice (including any notice of copyright or trademark) of the Company or its affiliates, partners, suppliers or the licensors of the Application.
 
 # Intellectual Property
 
 The Application, including without limitation all copyrights, patents, trademarks, trade secrets and other intellectual property rights are, and shall remain, the sole and exclusive property of the Company.
 
 **The Company shall not indemnify or defend You with respect to any third party claim arising out of or relating to the Application**. To the extent the Company is required to provide indemnification by applicable law, the Company shall be solely responsible for the investigation, defense, settlement and discharge of any claim that the Application or your use of it infringes any third party intellectual property rights.
-
 
 # Third-Party Services
 
@@ -119,29 +102,25 @@ You acknowledge and agree that the Company shall not be responsible for any Thir
 
 You must comply with applicable Third parties' Terms of agreement when using the Application. Third-party Services and links thereto are provided solely as a convenience to You and You access and use them entirely at your own risk and subject to such third parties' Terms and conditions.
 
-
 # Privacy Policy
 
 The Company collects, stores, maintains, and shares information about You in accordance with [Our Privacy Policy](https://genez.io/privacy/).
 
 By accepting this Agreement, You acknowledge that You hereby agree and consent to the terms and conditions of Our Privacy Policy.
 
-
 # Term and Termination
 
 This Agreement shall remain in effect until terminated by You or the Company. The Company may, in its sole discretion, at any time and for any or no reason, suspend or terminate this Agreement with or without prior notice.
 
-This Agreement will terminate immediately, without prior notice from the Company, in the event that you fail to comply with any provision of this Agreement. You may also terminate this Agreement by deleting the Application and all copies thereof from your Device or from your computer.
+This Agreement will terminate immediately, without prior notice from the Company, in the event that you fail to comply with any provision of this Agreement. You may also terminate this Agreement by sending an email at [contact@genez.io](mailto:contact@genez.io) and have your account deleted, by deleting the Application and all copies thereof from your Device or from your computer.
 
 Upon termination of this Agreement, You shall cease all use of the Application and delete all copies of the Application from your Device.
 
 Termination of this Agreement will not limit any of the Company's rights or remedies at law or in equity in case of breach by You (during the term of this Agreement) of any of your obligations under the present Agreement.
 
-
 # Indemnification
 
 You agree to indemnify and hold the Company and its parents, subsidiaries, affiliates, officers, employees, agents, partners and licensors (if any) harmless from any claim or demand, including reasonable attorneys' fees, due to or arising out of your: (a) use of the Application; (b) violation of this Agreement or any law or regulation; or (c) violation of any right of a third party.
-
 
 # No Warranties
 
@@ -151,7 +130,6 @@ Without limiting the foregoing, neither the Company nor any of the company's pro
 
 Some jurisdictions do not allow the exclusion of certain types of warranties or limitations on applicable statutory rights of a consumer, so some or all of the above exclusions and limitations may not apply to You. But in such a case the exclusions and limitations set forth in this section shall be applied to the greatest extent enforceable under applicable law. To the extent any warranty exists under law that cannot be disclaimed, the Company shall be solely responsible for such warranty.
 
-
 # Limitation of Liability
 
 Notwithstanding any damages that You might incur, the entire liability of the Company and any of its suppliers under any provision of this Agreement and your exclusive remedy for all of the foregoing shall be limited to the amount actually paid by You for the Application.
@@ -160,29 +138,23 @@ To the maximum extent permitted by applicable law, in no event shall the Company
 
 Some states/jurisdictions do not allow the exclusion or limitation of incidental or consequential damages, so the above limitation or exclusion may not apply to You.
 
-
 # Severability and Waiver
-
 
 ## Severability
 
 If any provision of this Agreement is held to be unenforceable or invalid, such provision will be changed and interpreted to accomplish the objectives of such provision to the greatest extent possible under applicable law and the remaining provisions will continue in full force and effect.
 
-
 ## Waiver
 
 Except as provided herein, the failure to exercise a right or to require performance of an obligation under this Agreement shall not affect a party's ability to exercise such right or require such performance at any time thereafter nor shall the waiver of a breach constitute a waiver of any subsequent breach.
-
 
 # Product Claims
 
 The Company does not make any warranties concerning the Application.
 
-
 # United States Legal Compliance
 
 You represent and warrant that (i) You are not located in a country that is subject to the United States government embargo, or that has been designated by the United States government as a "terrorist supporting" country, and (ii) You are not listed on any United States government list of prohibited or restricted parties.
-
 
 # Changes to this Agreement
 
@@ -190,11 +162,9 @@ The Company reserves the right, at its sole discretion, to modify or replace thi
 
 By continuing to access or use the Application after any revisions become effective, You agree to be bound by the revised terms. If You do not agree to the new terms, You are no longer authorized to use the Application.
 
-
 # Governing Law
 
 The laws of the Country, excluding its conflicts of law rules, shall govern this Agreement and your use of the Application. Your use of the Application may also be subject to other local, state, national, or international laws.
-
 
 # Entire Agreement
 
@@ -202,11 +172,8 @@ The Agreement constitutes the entire agreement between You and the Company regar
 
 You may be subject to additional terms and conditions that apply when You use or purchase other Company's services, which the Company will provide to You at the time of such use or purchase.
 
-
 # Contact Us
 
 If you have any questions about this Agreement, You can contact Us:
 
-
-
-* By email: [[contact@genez.io](mailto:contact@genez.io)]
+- By email: [[contact@genez.io](mailto:contact@genez.io)]
