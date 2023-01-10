@@ -23,7 +23,6 @@
   <div class="nibbles2"></div>
   <div class="container">
     <div class="row">
-      <div class="col-12 col-md-6 position-relative pt-3">
         <div class="lead">
           <h1>{{ .Params.leadTitle }}</h1>
           <h2>{{ .Params.leadSubTitle }}</h2>
@@ -37,16 +36,13 @@
           </div>
           {{ .Content }}
         </div>
+    </div>
+    <div class = "row">
+      <div class="col-12 col-md-6 position-relative pt-3">
+        <img class="left-terminal" alt="leftTerminal" src ="/images/leftTerminal.webp">
       </div>
-      <div class="capybara">
-        <img class="capybara-size" alt="capybara" src="/images/capyochideschis.webp" />
-      </div>
-      <div class="col-12 col-md-1 pt-3">
-        <!-- <img class="terminal" src="/images/video_genezio4.gif"/> -->
-        <!-- src="/images/Coding Screen.svg" /> -->
-        <video class="terminal" autoplay loop muted>
-          <source src="/images/capybara.webm" type="video/webm">
-        </video>
+      <div class="col-12 col-md-6 position-relative pt-3">
+        <img class="right-terminal" alt="rightTerminal" src ="/images/rightTerminal.webp">
       </div>
     </div>
   </div>

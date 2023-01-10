@@ -12844,6 +12844,7 @@ h3 {
   padding: 12px 20px 13px 20px;
   background: #9477c4;
   border-radius: 3px;
+  font-size: 0.938rem;
   font-weight: 400;
   letter-spacing: 0.025em;
   color: #ffffff;
@@ -12854,7 +12855,7 @@ h3 {
   font-family: "Inter"; }
   @media (min-width: 768px) {
     .button {
-      padding: 16px 24px 15px 24px; } }
+      padding: 9px 40px 9px 40px; } }
   .button:hover {
     color: #ffffff;
     transform: translateY(-1px);
@@ -12865,10 +12866,11 @@ h3 {
   cursor: pointer;
   white-space: nowrap;
   display: inline-block;
-  padding: 12px 20px 13px 20px;
+  padding: 12px 20px 12px 20px;
   border: 2px solid #ffffff;
   background: none;
   border-radius: 3px;
+  font-size: 0.938rem;
   font-weight: 400;
   letter-spacing: 0.025em;
   color: #ffffff;
@@ -12880,7 +12882,7 @@ h3 {
   background: transparent; }
   @media (min-width: 768px) {
     .button-outlined {
-      padding: 16px 24px 15px 24px; } }
+      padding: 9px 40px 9px 40px; } }
   .button-outlined:hover {
     transform: translateY(-1px);
     box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
@@ -13093,10 +13095,9 @@ h3 {
   background-color: #ffffff; }
 
 .strip-main {
-  background-image: url("/images/main_darker.webp");
   background-size: cover;
-  background-color: black;
-  height: 101vh; }
+  background-color: #1d1d1f;
+  height: 132vh; }
   @media (max-width: 575.98px) {
     .strip-main {
       height: 130vh; } }
@@ -13422,8 +13423,8 @@ table.debugprint {
           height: inherit;
           display: inline-block;
           padding: 0;
-          font-size: 1.2rem;
-          font-weight: 400;
+          font-size: 0.938rem;
+          font-weight: 500;
           color: #ffffff;
           padding: 10px 14px 10px 14px;
           text-decoration: none; }
@@ -13566,7 +13567,6 @@ table.debugprint {
   z-index: 100; }
   .header-fixed .outline {
     margin: 0 10px;
-    border: 2px solid #ffffff;
     border-color: #ffffff;
     border-radius: 3px; }
   .header-fixed .filled {
@@ -13612,7 +13612,6 @@ table.debugprint {
       color: #2a478b; }
   .header-scrolled .outline {
     margin: 0 10px;
-    border: 2px solid #9477c4;
     border-color: #9477c4;
     border-radius: 3px; }
   .header-scrolled .filled {
@@ -14449,7 +14448,7 @@ ul.pagination li {
   left: -400px; }
 
 .page-home .lead {
-  text-align: left;
+  text-align: center;
   position: relative;
   z-index: 20; }
   .page-home .lead h1 {
@@ -14458,6 +14457,7 @@ ul.pagination li {
     font-size: 32px;
     font-weight: 700;
     margin: 0;
+    margin-top: 40px;
     margin-bottom: 30px;
     padding: 0 10px 0 0; }
     @media (min-width: 768px) {
@@ -14471,7 +14471,7 @@ ul.pagination li {
     font-size: 22px;
     font-weight: 500;
     color: #ffffff;
-    margin: 0;
+    margin: auto;
     padding: 0 10px 0 0; }
     @media (min-width: 768px) {
       .page-home .lead h2 {
@@ -14529,6 +14529,20 @@ ul.pagination li {
   width: 570px; }
   @media (max-width: 575.98px) {
     .page-home .terminal {
+      width: 100%;
+      margin-top: -80px; } }
+.page-home .left-terminal {
+  border-radius: 12px;
+  width: 570px; }
+  @media (max-width: 575.98px) {
+    .page-home .left-terminal {
+      width: 100%;
+      margin-top: -80px; } }
+.page-home .right-terminal {
+  border-radius: 12px;
+  width: 570px; }
+  @media (max-width: 575.98px) {
+    .page-home .right-terminal {
       width: 100%;
       margin-top: -80px; } }
 .page-home .preview {

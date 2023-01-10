@@ -6,6 +6,7 @@
   // box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
   background: $primary;
   border-radius: 3px;
+  font-size: 0.938rem;
   font-weight: 400;
   letter-spacing: 0.025em;
   color: $primary-light;
@@ -15,7 +16,7 @@
   outline: none;
   font-family: $font-family-heading;
   @include media-breakpoint-up(md) {
-    padding: 16px 24px 15px 24px;
+    padding: 9px 40px 9px 40px;
   }
   &:hover {
     color: #ffffff;
@@ -28,10 +29,11 @@
   cursor: pointer;
   white-space: nowrap;
   display: inline-block;
-  padding: 12px 20px 13px 20px;
+  padding: 12px 20px 12px 20px;
   border: 2px solid $primary-light;
   background: none;
   border-radius: 3px;
+  font-size: 0.938rem;
   font-weight: 400;
   letter-spacing: 0.025em;
   color: $primary-light;
@@ -42,7 +44,7 @@
   font-family: $font-family-heading;
   background: transparent;
   @include media-breakpoint-up(md) {
-    padding: 16px 24px 15px 24px;
+    padding: 9px 40px 9px 40px;
   }
   &:hover {
     transform: translateY(-1px);

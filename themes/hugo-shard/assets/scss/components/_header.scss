@@ -45,8 +45,8 @@
           height: inherit;
           display: inline-block;
           padding: 0;
-          font-size: 1.2rem;
-          font-weight: 400;
+          font-size: 0.938rem;
+          font-weight: 500;
           color: $primary-light;
           padding: 10px 14px 10px 14px;
           text-decoration: none;
@@ -242,7 +242,6 @@
 
   .outline {
     margin: 0 10px;
-    border: 2px solid $primary-light;
     border-color: $primary-light;
     border-radius: 3px;
   }
@@ -312,7 +311,6 @@
 
   .outline {
     margin: 0 10px;
-    border: 2px solid $primary;
     border-color: $primary;
     border-radius: 3px;
   }
