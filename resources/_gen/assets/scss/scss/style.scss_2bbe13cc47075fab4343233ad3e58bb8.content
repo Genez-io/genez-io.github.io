@@ -12844,7 +12844,6 @@ h3 {
   padding: 12px 20px 13px 20px;
   background: #6f42c1;
   border-radius: 3px;
-  font-size: 0.938rem;
   font-weight: 400;
   letter-spacing: 0.025em;
   color: #ffffff;
@@ -12855,7 +12854,7 @@ h3 {
   font-family: "Inter"; }
   @media (min-width: 768px) {
     .button {
-      padding: 9px 40px 9px 40px; } }
+      padding: 16px 24px 15px 24px; } }
   .button:hover {
     color: #ffffff;
     transform: translateY(-1px);
@@ -12870,7 +12869,6 @@ h3 {
   border: 2px solid #ffffff;
   background: none;
   border-radius: 3px;
-  font-size: 0.938rem;
   font-weight: 400;
   letter-spacing: 0.025em;
   color: #ffffff;
@@ -12882,7 +12880,7 @@ h3 {
   background: transparent; }
   @media (min-width: 768px) {
     .button-outlined {
-      padding: 9px 40px 9px 40px; } }
+      padding: 16px 24px 15px 24px; } }
   .button-outlined:hover {
     transform: translateY(-1px);
     box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
@@ -12978,6 +12976,33 @@ h3 {
     transform: translateY(-1px);
     box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
     text-decoration: none; }
+
+.button-discord-hero {
+  cursor: pointer;
+  white-space: nowrap;
+  display: inline-block;
+  padding: 12px 20px 13px 20px;
+  border: 2px solid #ffffff;
+  background: none;
+  border-radius: 3px;
+  font-size: 0.938rem;
+  font-weight: 400;
+  letter-spacing: 0.025em;
+  color: #ffffff;
+  text-decoration: none;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+  outline: none;
+  font-family: "Inter";
+  background: transparent; }
+  @media (min-width: 768px) {
+    .button-discord-hero {
+      padding: 9px 40px 9px 40px; } }
+  .button-discord-hero:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+    text-decoration: none;
+    color: #ffffff; }
 
 .whitebox {
   border: 1px solid #dcdcdc;
