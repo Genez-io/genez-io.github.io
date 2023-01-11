@@ -35,10 +35,13 @@
 .strip-main { 
     background-size: cover;
     background-color: rgb(29,29,31);
-    height: 132vh;
+    height: 135vh;
     @include media-breakpoint-down(xs) {
-      height: 130vh;
-    }
+      height: 200vh;
+    };
+    @include media-breakpoint-down(sm) {
+      height: 200vh;
+    };
 }
 .strip-grey,
 .strip-bg-grey {

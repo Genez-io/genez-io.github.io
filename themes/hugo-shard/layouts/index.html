@@ -28,7 +28,7 @@
           <h2>{{ .Params.leadSubTitle }}</h2>
           <div class="lead-buttons">
             {{ if .Params.leadButtonOneLink }}
-            <a class="button" href="#demo">{{ .Params.leadButtonOneText }}</a>
+            <a class="button-demo" href="#demo">{{ .Params.leadButtonOneText }}</a>
             {{ end }}
             {{ if .Params.leadButtonTwoLink }}
             <a class="button-outlined" href={{ .Params.leadButtonTwoLink | relURL }}>{{ .Params.leadButtonTwoText }}</a>
@@ -39,7 +39,7 @@
     </div>
     <div class = "row">
       <div class="col-12 col-md-6 position-relative pt-3">
-        <img class="left-terminal" alt="leftTerminal" src ="/images/leftTerminal.webp">
+          <img class="left-terminal" alt="leftTerminal" src ="/images/leftTerminal.webp">
       </div>
       <div class="col-12 col-md-6 position-relative pt-3">
         <img class="right-terminal" alt="rightTerminal" src ="/images/rightTerminal.webp">

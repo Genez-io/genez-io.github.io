@@ -12866,7 +12866,7 @@ h3 {
   cursor: pointer;
   white-space: nowrap;
   display: inline-block;
-  padding: 12px 20px 12px 20px;
+  padding: 12px 20px 13px 20px;
   border: 2px solid #ffffff;
   background: none;
   border-radius: 3px;
@@ -12953,6 +12953,31 @@ h3 {
     text-decoration: none;
     color: #c8c8c8;
     cursor: not-allowed; }
+
+.button-demo {
+  cursor: pointer;
+  white-space: nowrap;
+  display: inline-block;
+  padding: 12px 20px 13px 20px;
+  background: #6f42c1;
+  border-radius: 3px;
+  font-size: 0.938rem;
+  font-weight: 400;
+  letter-spacing: 0.025em;
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.15s ease;
+  border: 2px solid #6f42c1;
+  outline: none;
+  font-family: "Inter"; }
+  @media (min-width: 768px) {
+    .button-demo {
+      padding: 9px 25px 9px 25px; } }
+  .button-demo:hover {
+    color: #ffffff;
+    transform: translateY(-1px);
+    box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+    text-decoration: none; }
 
 .whitebox {
   border: 1px solid #dcdcdc;
@@ -13097,10 +13122,13 @@ h3 {
 .strip-main {
   background-size: cover;
   background-color: #1d1d1f;
-  height: 132vh; }
+  height: 135vh; }
   @media (max-width: 575.98px) {
     .strip-main {
-      height: 130vh; } }
+      height: 200vh; } }
+  @media (max-width: 767.98px) {
+    .strip-main {
+      height: 200vh; } }
 .strip-grey,
 .strip-bg-grey {
   background-color: #f0f0f0; }
@@ -14533,20 +14561,32 @@ ul.pagination li {
       margin-top: -80px; } }
 .page-home .left-terminal {
   border-radius: 12px;
-  width: 531px;
-  height: 367px; }
+  width: 100%;
+  height: 90%; }
   @media (max-width: 575.98px) {
     .page-home .left-terminal {
       width: 100%;
-      margin-top: -80px; } }
+      height: 100%;
+      margin-top: 10px; } }
+  @media (max-width: 767.98px) {
+    .page-home .left-terminal {
+      width: 100%;
+      height: 100%;
+      margin-top: 10px; } }
 .page-home .right-terminal {
   border-radius: 12px;
-  width: 531px;
-  height: 367px; }
+  width: 100%;
+  height: 90%; }
   @media (max-width: 575.98px) {
     .page-home .right-terminal {
       width: 100%;
-      margin-top: -80px; } }
+      height: 100%;
+      margin-top: 10px; } }
+  @media (max-width: 767.98px) {
+    .page-home .right-terminal {
+      width: 100%;
+      height: 100%;
+      margin-top: 10px; } }
 .page-home .preview {
   z-index: 3;
   position: relative;
