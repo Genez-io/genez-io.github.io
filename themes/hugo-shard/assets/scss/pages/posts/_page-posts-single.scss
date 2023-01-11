@@ -11,6 +11,9 @@
       text-decoration: none;
     }
   }
+  code {
+    color: white
+  }
   .posts-sidebar {
     @include whitebox();
     padding: 40px;

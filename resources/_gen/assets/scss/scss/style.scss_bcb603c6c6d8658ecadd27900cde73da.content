@@ -14629,6 +14629,9 @@ ul.pagination li {
     font-weight: 700;
     text-decoration: none; }
 
+.page-posts-single code {
+  color: white; }
+
 .page-posts-single .posts-sidebar {
   border: 1px solid #dcdcdc;
   border-radius: 3px;
