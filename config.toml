@@ -7,7 +7,6 @@ paginate = 12
 pygmentsCodeFences = true
 pygmentsCodefencesGuessSyntax = true
 pygmentsUseClasses = true
-disableKinds = ['taxonomy', 'term']
 
 [params]
     primary_color = "#9477c4"
