@@ -117,7 +117,7 @@
 //     event.preventDefault();
 // });
 
-// var content = "Welcome to Genez.io! Type 'genezio deploy' to deploy your function!</br></br>";
+// var content = "Welcome to Genezio! Type 'genezio deploy' to deploy your function!</br></br>";
 // var currentCommand = "";
 
 // editor.addEventListener("keydown", function (e) {

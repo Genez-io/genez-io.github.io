@@ -22,14 +22,14 @@ Conversion notes:
 
 * Docs to Markdown version 1.0β34
 * Tue Jan 10 2023 04:50:50 GMT-0800 (PST)
-* Source doc: Genez.io EULA
+* Source doc: Genezio EULA
 ----->
 
 End-User License Agreement ("Agreement")
 
 Last updated: January 10<sup>th</sup>, 2022
 
-Please read this End-User License Agreement carefully before signing into, downloading or using genez.io.
+Please read this End-User License Agreement carefully before signing into, downloading or using genezio.
 
 # Interpretation and Definitions
 
@@ -43,7 +43,7 @@ For the purposes of this End-User License Agreement:
 
 **Agreement** means this End-User License Agreement that forms the entire agreement between You and the Company regarding the use of the Application.
 
-**Application** / **Tool** means the software program / tool / software development kit (SDK) provided by the Company downloaded by / used by You on a personal device and for personal use, named **genez.io**, a tool which aims at providing a frame whereby the development, implementation and scaling of apps which use cloud data servers and management, in such a manner to contribute for their faster, more efficient development / performance, using less resources.
+**Application** / **Tool** means the software program / tool / software development kit (SDK) provided by the Company downloaded by / used by You on a personal device and for personal use, named **genezio**, a tool which aims at providing a frame whereby the development, implementation and scaling of apps which use cloud data servers and management, in such a manner to contribute for their faster, more efficient development / performance, using less resources.
 
 **Company** (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to Simple Capital SRL, Bucharest.
 
