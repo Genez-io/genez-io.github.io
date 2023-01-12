@@ -42,6 +42,9 @@
     @include media-breakpoint-down(sm) {
       height: 200vh;
     };
+    @media only screen and (min-height:1000px){
+      height: 110vh;
+    }
 }
 .strip-grey,
 .strip-bg-grey {
