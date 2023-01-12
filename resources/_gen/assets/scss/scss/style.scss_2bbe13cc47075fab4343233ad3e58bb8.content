@@ -16085,7 +16085,7 @@ ul.pagination li {
     font-weight: 700;
     margin: 0;
     margin-top: 40px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     padding: 0 10px 0 0; }
     @media (min-width: 768px) {
       .page-home .lead h1 {
@@ -16109,7 +16109,8 @@ ul.pagination li {
       .page-home .lead h2 {
         font-size: 20px; } }
   .page-home .lead .lead-buttons {
-    margin-top: 30px; }
+    margin-top: 30px;
+    margin-bottom: 35px; }
     .page-home .lead .lead-buttons a {
       display: block;
       max-width: 80%;
@@ -16160,6 +16161,7 @@ ul.pagination li {
       margin-top: -80px; } }
 .page-home .left-terminal {
   border-radius: 12px;
+  padding-right: 25px;
   width: 100%;
   height: 90%; }
   @media (max-width: 575.98px) {
@@ -16174,6 +16176,7 @@ ul.pagination li {
       margin-top: 10px; } }
 .page-home .right-terminal {
   border-radius: 12px;
+  padding-left: 10px;
   width: 100%;
   height: 90%; }
   @media (max-width: 575.98px) {
