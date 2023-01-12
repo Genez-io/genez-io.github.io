@@ -27,7 +27,7 @@
 
   
   
-  <link rel="stylesheet" href="/css/style.min.514bbf75ee4635e9a8094fe906c10ff9238fe0538a049e795dc472ed8c343c5f.css">
+  <link rel="stylesheet" href="/css/style.min.45b1d117cb047ff40cb58a31d14befee2aa1d839593ed72dd1aaf67d79ad8585.css">
   
 
   
@@ -226,7 +226,26 @@
       
       <div class = "row left-right-row justify-content-center">
         <div class ="col-12 col-md-5">
-          
+            <div class = "left-right-images">
+              <img class = "left-right-image-1" id = "left-right-image-1" alt = "image1" src = "/images/leftTerminal.webp">
+              <img class = "left-right-image-2" id = "left-right-image-2" alt = "image2" src = "/images/leftTerminal.webp"> 
+              <script>
+                document.getElementById("left-right-image-1").addEventListener("click", function(){
+                  if(this.style.zIndex != 2){
+                    image2 = document.getElementById("left-right-image-2")
+                    this.style.zIndex = 2
+                    image2.style.zIndex = 1
+                  }
+                });
+                document.getElementById("left-right-image-2").addEventListener("click", function(){
+                  if(this.style.zIndex != 2){
+                    image1 = document.getElementById("left-right-image-1")
+                    this.style.zIndex = 2;
+                    image1.style.zIndex = 1;
+                  }
+                });
+              </script>
+            </div>
         </div>
         <div class ="col-12 col-md-1">
           <div class="left-right-line"></div>
