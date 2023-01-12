@@ -51,6 +51,16 @@
 <!-- Features -->
 {{ if and (gt (len .Site.Data.features) 0) (.Site.Params.homepage.show_features) }}
 <div class="strip strip-white features pt-10 pb-4 pb-md-20">
+  <div class = "container">
+    {{ range .Site.Data.reviews }}
+    <div class = "row justify-content-center">
+      <div class ="review">
+        <p>{{ .text }}</p>
+        <p>{{ .author }}</p>
+      </div>
+    </div>
+    {{ end }}
+  </div>
   <div class="container">
     <div class="row justify-content-center">
       {{ if .Site.Params.homepage.features_title }}
