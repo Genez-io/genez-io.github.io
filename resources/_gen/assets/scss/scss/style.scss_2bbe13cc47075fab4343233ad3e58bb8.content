@@ -16184,7 +16184,8 @@ ul.pagination li {
     .page-home .left-terminal {
       width: 100%;
       height: 100%;
-      margin-top: 10px; } }
+      margin-top: 10px;
+      padding-right: 0px; } }
 .page-home .right-terminal {
   border-radius: 12px;
   padding-left: 10px;
@@ -16217,6 +16218,14 @@ ul.pagination li {
 .page-home .left-right-row {
   padding-top: 50px;
   padding-bottom: 50px; }
+
+@media (max-width: 767.98px) {
+  .page-home .left-right-row-1-images {
+    height: 260px; } }
+
+@media (max-width: 575.98px) {
+  .page-home .left-right-row-1-images {
+    height: 170px; } }
 
 .page-home .left-right-line {
   text-align: center;
@@ -16253,7 +16262,7 @@ ul.pagination li {
 .page-home .chart-2 {
   position: absolute;
   margin-top: 50px;
-  margin-left: 20px;
+  margin-left: 30px;
   animation-name: hideVis;
   animation-duration: 6s;
   animation-iteration-count: infinite;
@@ -16267,11 +16276,18 @@ ul.pagination li {
     opacity: 0; }
   100% {
     opacity: 1; } }
-
+  @media (max-width: 767.98px) {
+    .page-home .chart-2 {
+      width: 90%;
+      height: 90%; } }
+  @media (max-width: 575.98px) {
+    .page-home .chart-2 {
+      width: 90%;
+      height: 90%; } }
 .page-home .chart-1 {
   position: absolute;
   margin-top: 50px;
-  margin-left: 20px;
+  margin-left: 30px;
   opacity: 1;
   animation-name: hideVis;
   animation-duration: 6s;
@@ -16284,7 +16300,14 @@ ul.pagination li {
     opacity: 0; }
   100% {
     opacity: 1; } }
-
+  @media (max-width: 575.98px) {
+    .page-home .chart-1 {
+      width: 90%;
+      height: 90%; } }
+  @media (max-width: 767.98px) {
+    .page-home .chart-1 {
+      width: 90%;
+      height: 90%; } }
 @media (max-width: 767.98px) {
   .page-home .row-2-images {
     height: 300px;

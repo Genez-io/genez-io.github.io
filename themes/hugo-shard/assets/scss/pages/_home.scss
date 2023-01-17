@@ -112,6 +112,7 @@
       width: 100%;
       height: 100%;
       margin-top: 10px;
+      padding-right: 0px;
     }
   }
   .right-terminal{
@@ -148,6 +149,14 @@
   .left-right-row{
     padding-top: 50px;
     padding-bottom: 50px;
+  }
+  .left-right-row-1-images{
+    @include media-breakpoint-down(sm){
+      height: 260px;
+    }
+    @include media-breakpoint-down(xs){
+      height: 170px;
+    }
   }
   .left-right-line{
     text-align: center;
@@ -192,13 +201,20 @@
     }
     position: absolute;
     margin-top: 50px;
-    margin-left: 20px;
+    margin-left: 30px;
     animation-name: hideVis;
     animation-duration: 6s;  
     animation-iteration-count: infinite;
     animation-delay: 3s;
     opacity: 1;
-
+    @include media-breakpoint-down(sm){
+      width: 90%;
+      height: 90%;
+    }
+    @include media-breakpoint-down(xs){
+      width: 90%;
+      height: 90%;
+    }
   }
   .chart-1{
     @keyframes hideVis {
@@ -208,11 +224,19 @@
     }
     position: absolute;
     margin-top: 50px;
-    margin-left: 20px;
+    margin-left: 30px;
     opacity: 1;
     animation-name: hideVis;
     animation-duration: 6s;  
     animation-iteration-count: infinite;
+    @include media-breakpoint-down(xs){
+      width: 90%;
+      height: 90%;
+    }
+    @include media-breakpoint-down(sm){
+      width: 90%;
+      height: 90%;
+    }
   }
   .row-2-images{
     @include media-breakpoint-down(sm){
