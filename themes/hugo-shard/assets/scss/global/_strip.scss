@@ -32,13 +32,18 @@
 .strip-bg-white {
     background-color: $primary-light;
 }
-.strip-main {
-    background-image: url('/images/main_darker.webp');
+.strip-main { 
     background-size: cover;
-    background-color: black;
-    height: 101vh;
+    background-color: rgb(29,29,31);
+    height: 135vh;
     @include media-breakpoint-down(xs) {
-      height: 130vh;
+      height: 200vh;
+    };
+    @include media-breakpoint-down(sm) {
+      height: 200vh;
+    };
+    @media only screen and (min-height:1000px){
+      height: 110vh;
     }
 }
 .strip-grey,

@@ -10,7 +10,7 @@ pygmentsUseClasses = true
 disableKinds = ['taxonomy', 'term']
 
 [params]
-    primary_color = "#9477c4"
+    primary_color = "#6f42c1"
     primary_light = "#ffffff"
     secondary_color = "#2a478b"
     secondary_light = "#d5d5e9"

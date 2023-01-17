@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>The easy way to write, deploy and use a serverless API on genezio</title>
+    <title>The easy way to write, deploy and use a serverless API on genez.io</title>
     <link>/</link>
-    <description>Recent content in The easy way to write, deploy and use a serverless API on genezio</description>
+    <description>Recent content in The easy way to write, deploy and use a serverless API on genez.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 22 Feb 2019 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
@@ -32,8 +32,8 @@
       
       <guid>/eula/</guid>
       <description>End-User License Agreement (&amp;ldquo;Agreement&amp;rdquo;)
-Last updated: January 10th, 2022
-Please read this End-User License Agreement carefully before signing into, downloading or using genezio.
+Last updated: December 1st, 2022
+Please read this End-User License Agreement carefully before clicking the &amp;ldquo;I Agree&amp;rdquo; button, downloading or using genez.io.
 Interpretation and Definitions Interpretation The words of which the initial letter is capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.
 Definitions For the purposes of this End-User License Agreement:</description>
     </item>
