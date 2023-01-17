@@ -14479,8 +14479,8 @@ h3 {
   white-space: nowrap;
   display: inline-block;
   padding: 12px 20px 13px 20px;
-  border: 2px solid #2B2C3A;
-  background: #2B2C3A;
+  border: 2px solid #1A1A1A;
+  background: #1A1A1A;
   border-radius: 3px;
   font-weight: 400;
   letter-spacing: 0.025em;
@@ -15283,7 +15283,7 @@ table.debugprint {
 
 .footer {
   border-top: 1px solid #c8c8c8;
-  background: #282A36;
+  background: #1A1A1A;
   padding-top: 20px;
   padding-bottom: 20px; }
   .footer .footer-branding {
@@ -15701,22 +15701,33 @@ ul.pagination li {
       border: 1px solid #c8c8c8; } }
   .plan.blured {
     background-color: #fff; }
+    .plan.blured .plan-main {
+      margin-top: 80px; }
+    .plan.blured .plan-button {
+      margin: 0px 30px 30px 30px; }
   .plan.plan-featured {
-    background: #282A36; }
+    background: #1a1a1a; }
     .plan.plan-featured .plan-name, .plan.plan-featured .plan-description, .plan.plan-featured .plan-price, .plan.plan-featured .plan-features-heading {
       color: white;
       text-align: left; }
     .plan.plan-featured .plan-features ul li {
       color: white; }
-    .plan.plan-featured .plan-button .button-outlined {
-      color: white;
-      border-color: white; }
+    .plan.plan-featured .plan-button {
+      margin: 30px; }
+      .plan.plan-featured .plan-button .button-outlined {
+        color: white;
+        border-color: white; }
   .plan .plan-main {
-    padding: 30px 20px;
+    padding: 10px 20px;
     text-align: left; }
   .plan .plan-details {
-    padding: 20px 20px;
+    padding: 10px 20px;
     text-align: left; }
+    .plan .plan-details h3 {
+      margin-bottom: 10px;
+      font-size: 1.125rem;
+      font-weight: 500;
+      line-height: 21.78px; }
   .plan .plan-name {
     font-size: 30px;
     line-height: 40px;
@@ -16239,8 +16250,57 @@ ul.pagination li {
   font-size: 1rem;
   line-height: 19.36px; }
 
-.page-home .left-right-mid-images {
-  padding: 10px; }
+.page-home .chart-2 {
+  position: absolute;
+  margin-top: 50px;
+  margin-left: 20px;
+  animation-name: hideVis;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-delay: 3s;
+  opacity: 1; }
+
+@keyframes hideVis {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+.page-home .chart-1 {
+  position: absolute;
+  margin-top: 50px;
+  margin-left: 20px;
+  opacity: 1;
+  animation-name: hideVis;
+  animation-duration: 6s;
+  animation-iteration-count: infinite; }
+
+@keyframes hideVis {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@media (max-width: 767.98px) {
+  .page-home .row-2-images {
+    height: 300px;
+    width: 200px;
+    margin-bottom: 10px;
+    margin-top: 40px;
+    order: 4; } }
+
+@media (max-width: 575.98px) {
+  .page-home .row-2-images {
+    height: 250px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 10px;
+    margin-top: 40px;
+    order: 4; } }
 
 .page-home .left-right-image-1 {
   position: absolute;
@@ -16248,24 +16308,73 @@ ul.pagination li {
   left: 0;
   width: 80%;
   height: 90%;
-  transition: 1s ease-out 100ms; }
-
+  transition: 0.5s ease-out 100ms; }
+  @media (max-width: 1199.98px) {
+    .page-home .left-right-image-1 {
+      width: 70%;
+      height: 80%; } }
+  @media (max-width: 575.98px) {
+    .page-home .left-right-image-1 {
+      width: 70%;
+      height: 80%; } }
+  @media (max-width: 991.98px) {
+    .page-home .left-right-image-1 {
+      width: 70%;
+      height: 65%; } }
 .page-home .left-right-image-1:hover {
   width: 90%;
   height: 100%; }
-
+  @media (max-width: 1199.98px) {
+    .page-home .left-right-image-1:hover {
+      width: 80%;
+      height: 90%; } }
+  @media (max-width: 575.98px) {
+    .page-home .left-right-image-1:hover {
+      width: 80%;
+      height: 90%; } }
+  @media (max-width: 991.98px) {
+    .page-home .left-right-image-1:hover {
+      width: 80%;
+      height: 75%; } }
 .page-home .left-right-image-2 {
   position: absolute;
-  top: 85px;
+  top: 50px;
   left: 85px;
   width: 80%;
   height: 90%;
-  transition: 1s ease-out 100ms; }
-
+  transition: 0.5s ease-out 100ms; }
+  @media (max-width: 1199.98px) {
+    .page-home .left-right-image-2 {
+      width: 70%;
+      height: 80%; } }
+  @media (max-width: 575.98px) {
+    .page-home .left-right-image-2 {
+      width: 70%;
+      height: 80%; } }
+  @media (max-width: 991.98px) {
+    .page-home .left-right-image-2 {
+      width: 70%;
+      height: 65%; } }
 .page-home .left-right-image-2:hover {
   width: 90%;
   height: 100%; }
-
+  @media (max-width: 1199.98px) {
+    .page-home .left-right-image-2:hover {
+      width: 80%;
+      height: 90%; } }
+  @media (max-width: 575.98px) {
+    .page-home .left-right-image-2:hover {
+      width: 80%;
+      height: 90%; } }
+  @media (max-width: 991.98px) {
+    .page-home .left-right-image-2:hover {
+      width: 80%;
+      height: 75%; } }
+.page-home .right-image-row-3 {
+  text-align: center; }
+  @media (max-width: 767.98px) {
+    .page-home .right-image-row-3 {
+      margin-top: 60px; } }
 .page-home .preview {
   z-index: 3;
   position: relative;
@@ -16279,15 +16388,15 @@ ul.pagination li {
 
 .page-home .features h1 {
   font-family: "Inter";
-  margin: 0px;
+  text-align: center;
   margin-bottom: 40px;
   font-weight: 700;
   line-height: 36px;
   font-size: 32px;
-  background: linear-gradient(90deg, #6f42c1 0%, #282A36 100%);
+  background: #1a1a1a;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  width: 90%; }
+  width: 100%; }
   @media (min-width: 768px) {
     .page-home .features h1 {
       line-height: 57px;

@@ -184,29 +184,130 @@
       line-height: 19.36px;
     }
   }
+  .chart-2{
+    @keyframes hideVis {
+      0% {opacity: 1;}
+      50% {opacity: 0;}
+      100% {opacity: 1;}
+    }
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 20px;
+    animation-name: hideVis;
+    animation-duration: 6s;  
+    animation-iteration-count: infinite;
+    animation-delay: 3s;
+    opacity: 1;
+
+  }
+  .chart-1{
+    @keyframes hideVis {
+      0% {opacity: 1;}
+      50% {opacity: 0;}
+      100% {opacity: 1;}
+    }
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 20px;
+    opacity: 1;
+    animation-name: hideVis;
+    animation-duration: 6s;  
+    animation-iteration-count: infinite;
+  }
+  .row-2-images{
+    @include media-breakpoint-down(sm){
+      height: 300px;
+      width: 200px;
+      margin-bottom: 10px;
+      margin-top: 40px;
+      order: 4;
+    }
+    @include media-breakpoint-down(xs){
+      height: 250px;
+      margin-left:30px;
+      margin-right: 30px; 
+      margin-bottom: 10px;
+      margin-top: 40px; 
+      order: 4;
+    }
+  }
   .left-right-image-1{
     position: absolute;
     top: 0;
     left: 0;
     width: 80%;
     height: 90%;
-    transition: 1s ease-out 100ms;
+    @include media-breakpoint-down(lg){
+      width: 70%;
+      height: 80%; 
+    }
+    @include media-breakpoint-down(xs){
+      width: 70%;
+      height: 80%; 
+    }
+    @include media-breakpoint-down(md){
+      width: 70%;
+      height: 65%; 
+    }
+    transition: 0.5s ease-out 100ms;
   }
   .left-right-image-1:hover{
     width: 90%;
     height: 100%;
+    @include media-breakpoint-down(lg){
+      width: 80%;
+      height: 90%; 
+    }
+    @include media-breakpoint-down(xs){
+      width: 80%;
+      height: 90%; 
+    }
+    @include media-breakpoint-down(md){
+      width: 80%;
+      height: 75%; 
+    }
   }
   .left-right-image-2{
     position: absolute;
-    top: 85px;
+    top: 50px;
     left: 85px;
     width: 80%;
     height: 90%;
-    transition: 1s ease-out 100ms;
+    @include media-breakpoint-down(lg){
+      width: 70%;
+      height: 80%; 
+    }
+    @include media-breakpoint-down(xs){
+      width: 70%;
+      height: 80%; 
+    }
+    @include media-breakpoint-down(md){
+      width: 70%;
+      height: 65%; 
+    }
+    transition: 0.5s ease-out 100ms;
   }
   .left-right-image-2:hover{
     width: 90%;
     height: 100%;
+    @include media-breakpoint-down(lg){
+      width: 80%;
+      height: 90%; 
+    }
+    @include media-breakpoint-down(xs){
+      width: 80%;
+      height: 90%; 
+    }
+    @include media-breakpoint-down(md){
+      width: 80%;
+      height: 75%; 
+    }
+  }
+  .right-image-row-3{
+    text-align: center;
+    @include media-breakpoint-down(sm){
+      margin-top: 60px;
+    }
   }
   .preview {
     z-index: 3;
@@ -223,16 +324,17 @@
   .features {
     h1 {
       font-family: $font-family-heading;
-      margin: 0px;
+      text-align: center;
       margin-bottom: 40px;
       font-weight: 700;
       line-height: 36px;
       font-size: 32px;
-      //color: $carbon;
-      background: linear-gradient(90deg, $primary 0%, #282A36 100%);
+      //color: $carbon; 
+      // background: linear-gradient(90deg, $primary 0%, #282A36 100%);
+      background: #1a1a1a;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      width: 90%;
+      width: 100%;
       @include media-breakpoint-up(md) {
         line-height: 57px;
         font-size: 38px;

@@ -50,7 +50,7 @@
 
 <!-- Features -->
 {{ if and (gt (len .Site.Data.features) 0) (.Site.Params.homepage.show_features) }}
-<div class="strip strip-white features pt-10 pb-4 pb-md-20">
+<div class="strip strip-white features pt-10 pb-4 pb-md-1">
   <div class = "container">
     {{ range .Site.Data.reviews }}
     <div class = "row justify-content-center">
@@ -63,7 +63,7 @@
   </div>
   <div class ="container container-left-right">
     {{ range .Site.Data.left_right }}
-      {{ if  eq .textAlignment "left" }}
+      {{ if  eq .row "1" }}
       <div class = "row left-right-row justify-content-center">
         <div class ="col-12 col-md-5">
           <div class = "left-right-text" >
@@ -90,23 +90,26 @@
         <div class ="col-12 col-md-1">
           <div class="left-right-line"></div>
         </div> 
-        <div class ="col-12 col-md-5"></div>
-      </div>
-      {{ else }}
-      <div class = "row left-right-row justify-content-center">
         <div class ="col-12 col-md-5">
+          <img src = "/images/chart1-row1.webp" alt = "chart1" class = "chart-1">
+          <img src = "/images/chart2-row1.webp" alt = "chart2" class = "chart-2">
+        </div>
+      </div>
+      {{ else if eq .row "2"}}
+      <div class = "row left-right-row justify-content-center">
+        <div class ="col-12 col-md-5 row-2-images">
             <div class = "left-right-images">
               <img class = "left-right-image-1" id = "left-right-image-1" alt = "image1" src = "/images/leftTerminal.webp">
-              <img class = "left-right-image-2" id = "left-right-image-2" alt = "image2" src = "/images/leftTerminal.webp"> 
+              <img class = "left-right-image-2" id = "left-right-image-2" alt = "image2" src = "/images/rightTerminal.webp"> 
               <script>
-                document.getElementById("left-right-image-1").addEventListener("click", function(){
+                document.getElementById("left-right-image-1").addEventListener("mouseover", function(){
                   if(this.style.zIndex != 2){
                     image2 = document.getElementById("left-right-image-2")
                     this.style.zIndex = 2
                     image2.style.zIndex = 1
                   }
                 });
-                document.getElementById("left-right-image-2").addEventListener("click", function(){
+                document.getElementById("left-right-image-2").addEventListener("mouseover", function(){
                   if(this.style.zIndex != 2){
                     image1 = document.getElementById("left-right-image-1")
                     this.style.zIndex = 2;
@@ -142,60 +145,46 @@
           </div>
         </div>
       </div>
-      {{ end }}
-    {{ end }}
-  </div>
-  <div class="container">
-    <div class="row justify-content-center">
-      {{ if .Site.Params.homepage.features_title }}
-      <div class="col-12">
-        <h1 class="text-center">{{ .Site.Params.homepage.features_title }}</h1>
-      </div>
-      {{ end }}
-      {{ range .Site.Data.features }}
-      <div class="col-12 col-md-4 mb-2 pt-12">
-        <div class="feature">
-          {{ if .image }}<div class="feature-image"><img alt="{{ .title }} logo" src="{{ .image }}" /></div> {{ end }}
-          <h2>{{ .title }}</h2>
-          <p>{{ .description }}</p>
+      {{ else }}
+      <div class = "row left-right-row justify-content-center">
+        <div class ="col-12 col-md-5">
+          <div class = "left-right-text" >
+            <h2>
+              {{ .header }}
+            </h2>
+            <h4 >
+              {{ .title }}
+            </h4>
+            <h3>
+              {{ .paragraphHead1 }}
+            </h3>
+            <p>
+              {{ .paragraph1 }}
+            </p>
+            <h3>
+              {{ .paragraphHead2 }}
+            </h3>
+            <p>
+              {{ .paragraph2 }}
+            </p>            
+          </div>
+        </div>
+        <div class ="col-12 col-md-1">
+          <div class="left-right-line"></div>
+        </div> 
+        <div class ="col-12 col-md-5">
+          <div class="right-image-row-3">
+            <img src="/images/rightImageRow3.webp" alt="rightImage">
+          </div>
         </div>
       </div>
-      {{end}}
-    </div>
+      {{ end }}
+    {{ end }}
   </div>
 </div>
 {{ end }}
 
-<!-- <div class="strip strip-secondary-light pt-10 pb-6 pt-md-10 pb-md-10"></div> -->
-<div class="strip strip-primary-gradient product pb-10 pt-md-10 pb-md-10">
-  <div class="container p-4">
-    <div class="row justify-space-between">
-      <div class="col-12 col-md-6">
-        <div class="product-text pb-3">
-          <h2>Why use genez.io?</h2>
-          <!-- <p>If you are a frontend developer, regardless if you develop a website, a mobile app on iOS or on Android, or any other app that needs processing in the cloud, you came to the right place.  There is no need to learn another programming language, we will take the functions written in the language you use and deploy them in the cloud automagically.  </p> -->
-          <p>{{ .Params.productTextP1 }}</p>
-          <p>{{ .Params.productTextP2 }}</p>
-          <p>{{ .Params.productTextP3 }}</p>
-          <div class="pt-4"></div>
-          <span><strong>*For now, we only support JavaScript and TypeScript (beta) as languages</strong></span>
-        </div>
-        <!-- <div class="lead-buttons">
-          <a class="button button-white" href={{ .Params.leadButtonTwoLink | relURL }}>{{ .Params.callToAction }}</a>
-        </div> -->
-      </div>
-      <div class="col-12 col-md-4 offset-md-1 position-relative">
-        <!-- <div class="dots-large">
-        </div> -->
-        <div class="product-right pt-12">
-          <img width="400" alt="Why genez.io" src="{{ "images/product/2-2.webp" | relURL }}" />
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div id="demo" class="strip strip-white features pt-6 pb-10 pb-md-10">
+<div id="demo" class="strip strip-white features pt-1 pb-10 pb-md-10">
   <div class="container">
     <div class="row">
       <div class="col-12">
@@ -287,9 +276,6 @@
               <h3 class="plan-name">{{ .name }}</h3>
               <!-- <div class="plan-description">{{ .description }}</div> -->
 
-              <div class="plan-button">
-                <a href="{{ .buttonLink }}" class="{{ if .highlighted }}button-outlined{{ else }}button-disabled{{ end }}">{{ .buttonText }}</a>
-              </div>
               <div class="plan-terms">{{ .terms }}</div>
             </div>
             {{ if (gt (len .features) 0) }}
@@ -307,6 +293,9 @@
               </div>
             </div>
             {{ end }}
+            <div class="plan-button">
+              <a href="{{ .buttonLink }}" class="{{ if .highlighted }}button-outlined{{ else }}button-disabled{{ end }}">{{ .buttonText }}</a>
+            </div>
           </div>
           {{end}}
         </div>
@@ -319,7 +308,7 @@
   <div class="container pb-10">
     <div class="row">
       <div class="col-12">
-        <div class="col-12 pt-5">
+        <div class="col-12 pt-5 justify-content-center">
           <h1 class="text-center">{{ .Site.Params.homepage.get_started }}</h1>
         </div>
         <div class="lead text-center">

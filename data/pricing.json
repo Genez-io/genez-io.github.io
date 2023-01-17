@@ -1,12 +1,12 @@
 [
   {
-    "name": "Personal",
+    "name": "Standard Plan",
     "description": "For individuals and open source projects.",
     "price": "Free",
     "buttonText": "Get Started",
     "buttonLink": "https://app.genez.io",
     "highlighted": true,
-    "featuresHeading": "Personal plan description",
+    "featuresHeading": "What's included?",
     "features": [
       "deploy seamlessly your projects",
       "call your methods remotely using the generated SDK",

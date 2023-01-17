@@ -34,9 +34,15 @@
     // -ms-filter: blur(10px);
     // filter: blur(10px);
     background-color: #fff;
+    .plan-main{
+      margin-top: 80px;
+    }
+    .plan-button{
+      margin: 0px 30px 30px 30px;
+    }
   }
   &.plan-featured {
-    background: #282A36;
+    background: #1a1a1a;
     .plan-name, .plan-description, .plan-price, .plan-features-heading {
       color: white;
       text-align: left;
@@ -53,16 +59,23 @@
         color: white;
         border-color: white;
       }
+      margin: 30px;
     }
   }
   .plan-main {
-    padding: 30px 20px;
+    padding: 10px 20px;
     text-align: left;
     //border-bottom: 1px solid $grey2;
   }
   .plan-details {
-    padding: 20px 20px;
+    padding: 10px 20px;
     text-align: left;
+    h3{
+      margin-bottom: 10px;
+      font-size: 1.125rem;
+      font-weight: 500;
+      line-height: 21.78px;
+    }
   }
   .plan-name {
     font-size: 30px;

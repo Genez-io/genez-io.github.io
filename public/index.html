@@ -27,7 +27,7 @@
 
   
   
-  <link rel="stylesheet" href="/css/style.min.45b1d117cb047ff40cb58a31d14befee2aa1d839593ed72dd1aaf67d79ad8585.css">
+  <link rel="stylesheet" href="/css/style.min.e8e9a1e7fb462c3be9b4624e0f5d82321657c88caa2ff2be0a449c51c6d1c15c.css">
   
 
   
@@ -179,7 +179,7 @@
 
 
 
-<div class="strip strip-white features pt-10 pb-4 pb-md-20">
+<div class="strip strip-white features pt-10 pb-4 pb-md-1">
   <div class = "container">
     
     <div class = "row justify-content-center">
@@ -219,25 +219,28 @@
         <div class ="col-12 col-md-1">
           <div class="left-right-line"></div>
         </div> 
-        <div class ="col-12 col-md-5"></div>
+        <div class ="col-12 col-md-5">
+          <img src = "/images/chart1-row1.webp" alt = "chart1" class = "chart-1">
+          <img src = "/images/chart2-row1.webp" alt = "chart2" class = "chart-2">
+        </div>
       </div>
       
     
       
       <div class = "row left-right-row justify-content-center">
-        <div class ="col-12 col-md-5">
+        <div class ="col-12 col-md-5 row-2-images">
             <div class = "left-right-images">
               <img class = "left-right-image-1" id = "left-right-image-1" alt = "image1" src = "/images/leftTerminal.webp">
-              <img class = "left-right-image-2" id = "left-right-image-2" alt = "image2" src = "/images/leftTerminal.webp"> 
+              <img class = "left-right-image-2" id = "left-right-image-2" alt = "image2" src = "/images/rightTerminal.webp"> 
               <script>
-                document.getElementById("left-right-image-1").addEventListener("click", function(){
+                document.getElementById("left-right-image-1").addEventListener("mouseover", function(){
                   if(this.style.zIndex != 2){
                     image2 = document.getElementById("left-right-image-2")
                     this.style.zIndex = 2
                     image2.style.zIndex = 1
                   }
                 });
-                document.getElementById("left-right-image-2").addEventListener("click", function(){
+                document.getElementById("left-right-image-2").addEventListener("mouseover", function(){
                   if(this.style.zIndex != 2){
                     image1 = document.getElementById("left-right-image-1")
                     this.style.zIndex = 2;
@@ -302,75 +305,19 @@
         <div class ="col-12 col-md-1">
           <div class="left-right-line"></div>
         </div> 
-        <div class ="col-12 col-md-5"></div>
+        <div class ="col-12 col-md-5">
+          <div class="right-image-row-3">
+            <img src="/images/rightImageRow3.webp" alt="rightImage">
+          </div>
+        </div>
       </div>
       
     
   </div>
-  <div class="container">
-    <div class="row justify-content-center">
-      
-      <div class="col-12">
-        <h1 class="text-center">Seamless development of your serverless API</h1>
-      </div>
-      
-      
-      <div class="col-12 col-md-4 mb-2 pt-12">
-        <div class="feature">
-          <div class="feature-image"><img alt="Auto generate the SDK logo" src="/images/1.webp" /></div> 
-          <h2>Auto generate the SDK</h2>
-          <p>Spend more time improving your barista skills and less time fiddling with GETs and POSTs to call your API.  We will generate the SDK to be incorporated into your frontend code.</p>
-        </div>
-      </div>
-      
-      <div class="col-12 col-md-4 mb-2 pt-12">
-        <div class="feature">
-          <div class="feature-image"><img alt="Auto deploy and scale logo" src="/images/2.webp" /></div> 
-          <h2>Auto deploy and scale</h2>
-          <p>We take the complexity out of deploying your API in our serverless environment.  We auto-scale our infrastructure to match your call patterns 24/7.</p>
-        </div>
-      </div>
-      
-      <div class="col-12 col-md-4 mb-2 pt-12">
-        <div class="feature">
-          <div class="feature-image"><img alt="Free when not used logo" src="/images/3.webp" /></div> 
-          <h2>Free when not used</h2>
-          <p>We use just the right amount of processor time to run your code for instant response and zero overhead thus zero charge when unused.</p>
-        </div>
-      </div>
-      
-    </div>
-  </div>
 </div>
 
 
-
-<div class="strip strip-primary-gradient product pb-10 pt-md-10 pb-md-10">
-  <div class="container p-4">
-    <div class="row justify-space-between">
-      <div class="col-12 col-md-6">
-        <div class="product-text pb-3">
-          <h2>Why use genez.io?</h2>
-          
-          <p>Because you, just like us, are passionate about developing new apps, new features. You want to bring them to your users as fast as possible. You want to focus on your code, develop, debug, release and iterate fast.</p>
-          <p>Because you like writing elegant code. You don’t want to lose time configuring backend servers, writing cumbersome GET URLs, you want your code to just run. And you want to write the backend code in your favorite language - be it Swift, Kotlin, etc.</p>
-          <p>Because you care about the environment, just as we do.  We are passionate about power consumption, and we are optimizing the way the code is run towards our goal of zero overhead, fastest cold start delay, best CPU and memory resource allocation.</p>
-          <div class="pt-4"></div>
-          <span><strong>*For now, we only support JavaScript and TypeScript (beta) as languages</strong></span>
-        </div>
-        
-      </div>
-      <div class="col-12 col-md-4 offset-md-1 position-relative">
-        
-        <div class="product-right pt-12">
-          <img width="400" alt="Why genez.io" src="/images/product/2-2.webp" />
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div id="demo" class="strip strip-white features pt-6 pb-10 pb-md-10">
+<div id="demo" class="strip strip-white features pt-1 pb-10 pb-md-10">
   <div class="container">
     <div class="row">
       <div class="col-12">
@@ -455,17 +402,14 @@
                 
                 
               </div>
-              <h3 class="plan-name">Personal</h3>
+              <h3 class="plan-name">Standard Plan</h3>
               
 
-              <div class="plan-button">
-                <a href="https://app.genez.io" class="button-outlined">Get Started</a>
-              </div>
               <div class="plan-terms"></div>
             </div>
             
             <div class="plan-details">
-              <h3 class="plan-features-heading">Personal plan description</h3>
+              <h3 class="plan-features-heading">What&#39;s included?</h3>
               <div class="plan-features">
                 <ul>
                   
@@ -493,6 +437,9 @@
               </div>
             </div>
             
+            <div class="plan-button">
+              <a href="https://app.genez.io" class="button-outlined">Get Started</a>
+            </div>
           </div>
           
           <div class="plan blured">
@@ -507,12 +454,12 @@
               <h3 class="plan-name">Business</h3>
               
 
-              <div class="plan-button">
-                <a href="/signup" class="button-disabled">Coming Soon</a>
-              </div>
               <div class="plan-terms"></div>
             </div>
             
+            <div class="plan-button">
+              <a href="/signup" class="button-disabled">Coming Soon</a>
+            </div>
           </div>
           
           <div class="plan blured">
@@ -527,12 +474,12 @@
               <h3 class="plan-name">Premium</h3>
               
 
-              <div class="plan-button">
-                <a href="/signup" class="button-disabled">Coming Soon</a>
-              </div>
               <div class="plan-terms"></div>
             </div>
             
+            <div class="plan-button">
+              <a href="/signup" class="button-disabled">Coming Soon</a>
+            </div>
           </div>
           
         </div>
@@ -545,7 +492,7 @@
   <div class="container pb-10">
     <div class="row">
       <div class="col-12">
-        <div class="col-12 pt-5">
+        <div class="col-12 pt-5 justify-content-center">
           <h1 class="text-center">Get started now with genez.io!</h1>
         </div>
         <div class="lead text-center">
