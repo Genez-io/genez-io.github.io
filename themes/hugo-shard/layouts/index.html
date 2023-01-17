@@ -91,16 +91,16 @@
           <div class="left-right-line"></div>
         </div> 
         <div class ="col-12 col-md-5 left-right-row-1-images">
-          <img src = "/images/chart1-row1.webp" alt = "chart1" class = "chart-1">
-          <img src = "/images/chart2-row1.webp" alt = "chart2" class = "chart-2">
+          <img src = "/images/chart1-Row1.webp" alt = "chart1" class = "chart-1">
+          <img src = "/images/chart2-Row1.webp" alt = "chart2" class = "chart-2">
         </div>
       </div>
       {{ else if eq .row "2"}}
       <div class = "row left-right-row justify-content-center">
         <div class ="col-12 col-md-5 row-2-images">
             <div class = "left-right-images">
-              <img class = "left-right-image-1" id = "left-right-image-1" alt = "image1" src = "/images/leftTerminal.webp">
-              <img class = "left-right-image-2" id = "left-right-image-2" alt = "image2" src = "/images/rightTerminal.webp"> 
+              <img class = "left-right-image-1" id = "left-right-image-1" alt = "image1" src = "/images/backTerminalRow2.webp">
+              <img class = "left-right-image-2" id = "left-right-image-2" alt = "image2" src = "/images/frontTerminalRow2.webp"> 
               <script>
                 document.getElementById("left-right-image-1").addEventListener("mouseover", function(){
                   if(this.style.zIndex != 2){
@@ -123,7 +123,7 @@
           <div class="left-right-line"></div>
         </div> 
         <div class ="col-12 col-md-5">
-          <div class = "left-right-text" >
+          <div class = "left-right-text left-right-text-row-2" >
             <h2>
               {{ .header }}
             </h2>
@@ -146,7 +146,7 @@
         </div>
       </div>
       {{ else }}
-      <div class = "row left-right-row justify-content-center">
+      <div class = "row left-right-row justify-content-center left-right-row-3">
         <div class ="col-12 col-md-5">
           <div class = "left-right-text" >
             <h2>

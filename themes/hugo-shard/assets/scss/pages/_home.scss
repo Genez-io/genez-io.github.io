@@ -38,6 +38,7 @@
     .lead-buttons {
       margin-top: 30px;
       margin-bottom: 35px;
+      margin-right: 7px;
       // @include media-breakpoint-down(xs) {
       //   display: inline-block;
       // }
@@ -61,6 +62,7 @@
           //margin-bottom: 10px;
           @include media-breakpoint-up(sm) {
             margin-right: 10px;
+            
           }
         }
       }
@@ -160,10 +162,13 @@
   }
   .left-right-line{
     text-align: center;
-    height: 135%;
+    height: 146%;
     width: 0px;
     margin: 0 auto;
     border-left: 4px solid $primary
+  }
+  .left-right-text-row-2{
+    margin-top: 40px;
   }
   .left-right-text{
     h2 {
@@ -193,6 +198,9 @@
       line-height: 19.36px;
     }
   }
+  .left-right-row-3{
+    padding-top: 100px;
+  }
   .chart-2{
     @keyframes hideVis {
       0% {opacity: 1;}
@@ -200,12 +208,14 @@
       100% {opacity: 1;}
     }
     position: absolute;
-    margin-top: 50px;
+    margin-top: 20px;
     margin-left: 30px;
+    width: 90%;
+    height: 90%;
     animation-name: hideVis;
-    animation-duration: 6s;  
+    animation-duration: 10s;  
     animation-iteration-count: infinite;
-    animation-delay: 3s;
+    animation-delay: 5s;
     opacity: 1;
     @include media-breakpoint-down(sm){
       width: 90%;
@@ -214,6 +224,7 @@
     @include media-breakpoint-down(xs){
       width: 90%;
       height: 90%;
+      margin-top: 50px;
     }
   }
   .chart-1{
@@ -223,15 +234,18 @@
       100% {opacity: 1;}
     }
     position: absolute;
-    margin-top: 50px;
+    margin-top: 20px;
     margin-left: 30px;
+    width: 90%;
+    height: 90%;
     opacity: 1;
     animation-name: hideVis;
-    animation-duration: 6s;  
+    animation-duration: 10s;  
     animation-iteration-count: infinite;
     @include media-breakpoint-down(xs){
       width: 90%;
       height: 90%;
+      margin-top: 50px;
     }
     @include media-breakpoint-down(sm){
       width: 90%;
@@ -293,8 +307,8 @@
   }
   .left-right-image-2{
     position: absolute;
-    top: 50px;
-    left: 85px;
+    top: 58px;
+    left: 60px;
     width: 80%;
     height: 90%;
     @include media-breakpoint-down(lg){
