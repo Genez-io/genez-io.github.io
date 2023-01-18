@@ -14718,16 +14718,10 @@ h3 {
 .strip-main {
   background-size: cover;
   background-color: #1d1d1f;
-  height: 135vh; }
-  @media (max-width: 575.98px) {
-    .strip-main {
-      height: 200vh; } }
+  height: 130vh; }
   @media (max-width: 767.98px) {
     .strip-main {
       height: 200vh; } }
-  @media only screen and (min-height: 1000px) {
-    .strip-main {
-      height: 110vh; } }
 .strip-grey,
 .strip-bg-grey {
   background-color: #f0f0f0; }
@@ -16085,28 +16079,35 @@ ul.pagination li {
   bottom: 0;
   left: -400px; }
 
+.page-home .lead-container {
+  height: 110vh;
+  padding-top: 75px; }
+  .page-home .lead-container .row {
+    max-height: 50%; }
+
 .page-home .lead {
   text-align: center;
   position: relative;
-  z-index: 20; }
+  z-index: 20;
+  height: 100%; }
   .page-home .lead h1 {
     color: #ffffff;
     line-height: 38px;
-    font-size: 32px;
+    font-size: 2rem;
     font-weight: 700;
     margin: 0;
     margin-top: 40px;
     margin-bottom: 20px;
-    padding: 0 10px 0 0; }
+    padding: 0 120px 0 120px; }
     @media (min-width: 768px) {
       .page-home .lead h1 {
         width: 100%;
         line-height: 73px;
-        font-size: 54px; } }
+        font-size: 3.375rem; } }
   .page-home .lead h2 {
     font-family: "Inter";
     line-height: 26px;
-    font-size: 22px;
+    font-size: 1.375rem;
     font-weight: 500;
     color: #ffffff;
     margin: auto;
@@ -16115,14 +16116,13 @@ ul.pagination li {
       .page-home .lead h2 {
         width: 80%;
         line-height: 24px;
-        font-size: 20px; } }
+        font-size: 1.25rem; } }
     @media (max-width: 575.98px) {
       .page-home .lead h2 {
-        font-size: 20px; } }
+        font-size: 1.25rem; } }
   .page-home .lead .lead-buttons {
     margin-top: 30px;
-    margin-bottom: 35px;
-    margin-right: 7px; }
+    margin-bottom: 35px; }
     .page-home .lead .lead-buttons a {
       display: block;
       max-width: 80%;
@@ -16174,34 +16174,31 @@ ul.pagination li {
 .page-home .left-terminal {
   border-radius: 12px;
   padding-right: 25px;
-  width: 100%;
-  height: 90%; }
+  width: 100%; }
   @media (max-width: 575.98px) {
     .page-home .left-terminal {
       width: 100%;
-      height: 100%;
-      margin-top: 10px; } }
+      margin-top: 10px;
+      padding-right: 0px; } }
   @media (max-width: 767.98px) {
     .page-home .left-terminal {
       width: 100%;
-      height: 100%;
       margin-top: 10px;
       padding-right: 0px; } }
 .page-home .right-terminal {
   border-radius: 12px;
-  padding-left: 10px;
-  width: 100%;
-  height: 90%; }
+  padding-left: 25px;
+  width: 100%; }
   @media (max-width: 575.98px) {
     .page-home .right-terminal {
       width: 100%;
-      height: 100%;
-      margin-top: 10px; } }
+      margin-top: 10px;
+      padding-left: 0px; } }
   @media (max-width: 767.98px) {
     .page-home .right-terminal {
       width: 100%;
-      height: 100%;
-      margin-top: 10px; } }
+      margin-top: 10px;
+      padding-left: 0px; } }
 .page-home .review {
   width: 56%;
   margin-bottom: 30px; }
@@ -16230,7 +16227,7 @@ ul.pagination li {
 
 .page-home .left-right-line {
   text-align: center;
-  height: 146%;
+  height: 150%;
   width: 0px;
   margin: 0 auto;
   border-left: 4px solid #6f42c1; }
@@ -16268,10 +16265,8 @@ ul.pagination li {
 
 .page-home .chart-2 {
   position: absolute;
-  margin-top: 20px;
   margin-left: 30px;
   width: 90%;
-  height: 90%;
   animation-name: hideVis;
   animation-duration: 10s;
   animation-iteration-count: infinite;
@@ -16287,19 +16282,15 @@ ul.pagination li {
     opacity: 1; } }
   @media (max-width: 767.98px) {
     .page-home .chart-2 {
-      width: 90%;
-      height: 90%; } }
+      width: 90%; } }
   @media (max-width: 575.98px) {
     .page-home .chart-2 {
       width: 90%;
-      height: 90%;
       margin-top: 50px; } }
 .page-home .chart-1 {
   position: absolute;
-  margin-top: 20px;
   margin-left: 30px;
   width: 90%;
-  height: 90%;
   opacity: 1;
   animation-name: hideVis;
   animation-duration: 10s;
@@ -16315,12 +16306,10 @@ ul.pagination li {
   @media (max-width: 575.98px) {
     .page-home .chart-1 {
       width: 90%;
-      height: 90%;
       margin-top: 50px; } }
   @media (max-width: 767.98px) {
     .page-home .chart-1 {
-      width: 90%;
-      height: 90%; } }
+      width: 90%; } }
 @media (max-width: 767.98px) {
   .page-home .row-2-images {
     height: 300px;
@@ -16407,7 +16396,8 @@ ul.pagination li {
       width: 80%;
       height: 75%; } }
 .page-home .right-image-row-3 {
-  text-align: center; }
+  text-align: center;
+  margin-top: -25px; }
   @media (max-width: 767.98px) {
     .page-home .right-image-row-3 {
       margin-top: 60px; } }

@@ -1,27 +1,40 @@
 .page-home {
+  .lead-container{
+    height: 110vh;
+    padding-top: 75px;
+    .row{
+      max-height: 50%;
+    }
+  }
   .lead {
     text-align: center;
     position: relative;
     z-index: 20;
+    height: 100%;
     h1 {
       color: $primary-light;
       line-height: 38px;
-      font-size: 32px;
+      font-size: 2rem;
       font-weight: 700;
       margin: 0;
       margin-top: 40px;
       margin-bottom: 20px;
-      padding: 0 10px 0 0;
+      padding: 0 120px 0 120px;
       @include media-breakpoint-up(md) {
         width: 100%;
         line-height: 73px;
-        font-size: 54px;
+        font-size: 3.375rem;
       }
+      // @media only screen and (max-height:1000px){
+      //   line-height: 56px;
+      //   font-size: 40px;
+      //   padding: 0 240px 0 240px;
+      // }
     }
     h2 {
       font-family: $font-family-base;
       line-height: 26px;
-      font-size: 22px;
+      font-size: 1.375rem;
       font-weight: 500;
       color: $primary-light;
       margin: auto;
@@ -29,16 +42,20 @@
       @include media-breakpoint-up(md) {
         width: 80%;
         line-height: 24px;
-        font-size: 20px;
+        font-size: 1.25rem;
       }
       @include media-breakpoint-down(xs) {
-        font-size: 20px;
+        font-size: 1.25rem;
       }
+      // @media only screen and (max-height:1000px){
+      //   line-height: 20px;
+      //   font-size: 16px;
+      // }
     }
     .lead-buttons {
       margin-top: 30px;
       margin-bottom: 35px;
-      margin-right: 7px;
+      // margin-right: 7px;
       // @include media-breakpoint-down(xs) {
       //   display: inline-block;
       // }
@@ -104,33 +121,35 @@
     border-radius: 12px;
     padding-right: 25px;
     width: 100%;
-    height: 90%;
     @include media-breakpoint-down(xs) {
       width: 100%;
-      height: 100%;
-      margin-top: 10px;
-    }
-    @include media-breakpoint-down(sm) {
-      width: 100%;
-      height: 100%;
       margin-top: 10px;
       padding-right: 0px;
     }
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+      margin-top: 10px;
+      padding-right: 0px;
+    }
+    // @media only screen and (max-height:1000px){
+    //   width: 85%;
+    //   height: 75%;
+    // }
+    
   }
   .right-terminal{
     border-radius: 12px;
-    padding-left: 10px;
+    padding-left: 25px;
     width: 100%;
-    height: 90%;
     @include media-breakpoint-down(xs) {
       width: 100%;
-      height: 100%;
       margin-top: 10px;
+      padding-left: 0px;
     }
     @include media-breakpoint-down(sm) {
       width: 100%;
-      height: 100%;
       margin-top: 10px;
+      padding-left: 0px;
     }
   }
   .review {
@@ -162,7 +181,7 @@
   }
   .left-right-line{
     text-align: center;
-    height: 146%;
+    height: 150%;
     width: 0px;
     margin: 0 auto;
     border-left: 4px solid $primary
@@ -208,10 +227,8 @@
       100% {opacity: 1;}
     }
     position: absolute;
-    margin-top: 20px;
     margin-left: 30px;
     width: 90%;
-    height: 90%;
     animation-name: hideVis;
     animation-duration: 10s;  
     animation-iteration-count: infinite;
@@ -219,11 +236,9 @@
     opacity: 1;
     @include media-breakpoint-down(sm){
       width: 90%;
-      height: 90%;
     }
     @include media-breakpoint-down(xs){
       width: 90%;
-      height: 90%;
       margin-top: 50px;
     }
   }
@@ -234,22 +249,18 @@
       100% {opacity: 1;}
     }
     position: absolute;
-    margin-top: 20px;
     margin-left: 30px;
     width: 90%;
-    height: 90%;
     opacity: 1;
     animation-name: hideVis;
     animation-duration: 10s;  
     animation-iteration-count: infinite;
     @include media-breakpoint-down(xs){
       width: 90%;
-      height: 90%;
       margin-top: 50px;
     }
     @include media-breakpoint-down(sm){
       width: 90%;
-      height: 90%;
     }
   }
   .row-2-images{
@@ -343,6 +354,7 @@
   }
   .right-image-row-3{
     text-align: center;
+    margin-top: -25px;
     @include media-breakpoint-down(sm){
       margin-top: 60px;
     }
