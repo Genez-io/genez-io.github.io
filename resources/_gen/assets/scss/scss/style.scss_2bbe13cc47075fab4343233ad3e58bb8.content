@@ -14718,10 +14718,13 @@ h3 {
 .strip-main {
   background-size: cover;
   background-color: #1d1d1f;
-  height: 130vh; }
+  height: 120vh; }
   @media (max-width: 767.98px) {
     .strip-main {
       height: 200vh; } }
+  @media only screen and (min-height: 1000px) {
+    .strip-main {
+      height: 110vh; } }
 .strip-grey,
 .strip-bg-grey {
   background-color: #f0f0f0; }
@@ -16100,7 +16103,7 @@ ul.pagination li {
     margin: 0;
     margin-top: 40px;
     margin-bottom: 20px;
-    padding: 0 120px 0 120px; }
+    padding: 0 20px 0 20px; }
     @media (min-width: 768px) {
       .page-home .lead h1 {
         width: 100%;

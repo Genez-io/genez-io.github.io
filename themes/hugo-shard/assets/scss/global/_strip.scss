@@ -35,9 +35,12 @@
 .strip-main { 
     background-size: cover;
     background-color: rgb(29,29,31);
-    height: 130vh;
+    height: 120vh;
     @include media-breakpoint-down(sm){
       height: 200vh;
+    }
+    @media only screen and (min-height: 1000px){
+      height: 110vh;
     }
 }
 .strip-grey,

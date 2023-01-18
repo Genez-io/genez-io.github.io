@@ -1,6 +1,6 @@
 baseURL = "/"
 languageCode = "en-us"
-title = "genez.io"
+title = "genezio"
 theme = "hugo-shard"
 paginate = 12
 
@@ -40,7 +40,7 @@ disableKinds = ['taxonomy', 'term']
     [params.footer]
         show_zerostatic_link = false
         show_footer_logo = true
-        description = "genez.io is a new paradigm in cloud native programming, making it accessible to everyone, allowing elegant and quick development of websites, mobile apps, IoT apps, and many others."
+        description = "genezio is a new paradigm in cloud native programming, making it accessible to everyone, allowing elegant and quick development of websites, mobile apps, IoT apps, and many others."
         show_menu_footer_primary = true
         footer_primary_heading = "Product"
         show_menu_footer_secondary = true
@@ -57,8 +57,8 @@ disableKinds = ['taxonomy', 'term']
         show_features = true 
         features_title = "Seamless development of your serverless API"
         pricing_title = "Pricing Plans for Developers"
-        get_started = "Get started now with genez.io!"
-        demo = "How to use genez.io"
+        get_started = "Get started now with genezio!"
+        demo = "How to use genezio"
     
     [params.hero]
         hero_background_gradient_one = "#9477c4"
