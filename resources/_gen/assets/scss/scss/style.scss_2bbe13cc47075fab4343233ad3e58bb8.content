@@ -16084,7 +16084,9 @@ ul.pagination li {
   padding-top: 75px; }
   .page-home .lead-container .row {
     max-height: 50%; }
-
+  @media (max-width: 991.98px) {
+    .page-home .lead-container {
+      height: 160vh; } }
 .page-home .lead {
   text-align: center;
   position: relative;
@@ -16280,12 +16282,16 @@ ul.pagination li {
     opacity: 0; }
   100% {
     opacity: 1; } }
+  @media (max-width: 991.98px) {
+    .page-home .chart-2 {
+      width: 100%; } }
   @media (max-width: 767.98px) {
     .page-home .chart-2 {
       width: 90%; } }
   @media (max-width: 575.98px) {
     .page-home .chart-2 {
-      width: 90%;
+      margin-left: 50px;
+      width: 70%;
       margin-top: 50px; } }
 .page-home .chart-1 {
   position: absolute;
@@ -16303,13 +16309,17 @@ ul.pagination li {
     opacity: 0; }
   100% {
     opacity: 1; } }
-  @media (max-width: 575.98px) {
+  @media (max-width: 991.98px) {
     .page-home .chart-1 {
-      width: 90%;
-      margin-top: 50px; } }
+      width: 100%; } }
   @media (max-width: 767.98px) {
     .page-home .chart-1 {
       width: 90%; } }
+  @media (max-width: 575.98px) {
+    .page-home .chart-1 {
+      margin-left: 50px;
+      width: 70%;
+      margin-top: 50px; } }
 @media (max-width: 767.98px) {
   .page-home .row-2-images {
     height: 300px;
@@ -16332,69 +16342,75 @@ ul.pagination li {
   top: 0;
   left: 0;
   width: 80%;
-  height: 90%;
   transition: 0.5s ease-out 100ms; }
   @media (max-width: 1199.98px) {
     .page-home .left-right-image-1 {
-      width: 70%;
-      height: 80%; } }
-  @media (max-width: 575.98px) {
-    .page-home .left-right-image-1 {
-      width: 70%;
-      height: 80%; } }
+      width: 80%; } }
   @media (max-width: 991.98px) {
     .page-home .left-right-image-1 {
       width: 70%;
       height: 65%; } }
+  @media (max-width: 767.98px) {
+    .page-home .left-right-image-1 {
+      width: 80%;
+      height: auto; } }
+  @media (max-width: 575.98px) {
+    .page-home .left-right-image-1 {
+      width: 70%;
+      left: 10px; } }
 .page-home .left-right-image-1:hover {
-  width: 90%;
-  height: 100%; }
+  width: 90%; }
   @media (max-width: 1199.98px) {
     .page-home .left-right-image-1:hover {
-      width: 80%;
-      height: 90%; } }
-  @media (max-width: 575.98px) {
-    .page-home .left-right-image-1:hover {
-      width: 80%;
-      height: 90%; } }
+      width: 90%; } }
   @media (max-width: 991.98px) {
     .page-home .left-right-image-1:hover {
       width: 80%;
       height: 75%; } }
+  @media (max-width: 767.98px) {
+    .page-home .left-right-image-1:hover {
+      width: 90%;
+      height: auto; } }
+  @media (max-width: 575.98px) {
+    .page-home .left-right-image-1:hover {
+      width: 80%; } }
 .page-home .left-right-image-2 {
   position: absolute;
   top: 58px;
   left: 60px;
   width: 80%;
-  height: 90%;
   transition: 0.5s ease-out 100ms; }
   @media (max-width: 1199.98px) {
     .page-home .left-right-image-2 {
-      width: 70%;
-      height: 80%; } }
-  @media (max-width: 575.98px) {
-    .page-home .left-right-image-2 {
-      width: 70%;
-      height: 80%; } }
+      width: 80%; } }
   @media (max-width: 991.98px) {
     .page-home .left-right-image-2 {
       width: 70%;
       height: 65%; } }
+  @media (max-width: 767.98px) {
+    .page-home .left-right-image-2 {
+      width: 80%;
+      height: auto; } }
+  @media (max-width: 575.98px) {
+    .page-home .left-right-image-2 {
+      width: 70%;
+      left: 75px; } }
 .page-home .left-right-image-2:hover {
-  width: 90%;
-  height: 100%; }
+  width: 90%; }
   @media (max-width: 1199.98px) {
     .page-home .left-right-image-2:hover {
-      width: 80%;
-      height: 90%; } }
-  @media (max-width: 575.98px) {
-    .page-home .left-right-image-2:hover {
-      width: 80%;
-      height: 90%; } }
+      width: 90%; } }
   @media (max-width: 991.98px) {
     .page-home .left-right-image-2:hover {
       width: 80%;
       height: 75%; } }
+  @media (max-width: 767.98px) {
+    .page-home .left-right-image-2:hover {
+      width: 90%;
+      height: auto; } }
+  @media (max-width: 575.98px) {
+    .page-home .left-right-image-2:hover {
+      width: 80%; } }
 .page-home .right-image-row-3 {
   text-align: center;
   margin-top: -25px; }
