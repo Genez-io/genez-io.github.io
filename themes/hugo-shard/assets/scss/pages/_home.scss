@@ -28,6 +28,9 @@
         line-height: 73px;
         font-size: 3.375rem;
       }
+      // @media  only screen and (max-height: 900px) and (max-width: 500px) {
+      //   line-height: 38px;
+      // }
       @include media-breakpoint-down(sm) {
         width: 100%;
         line-height: 73px;
@@ -36,7 +39,7 @@
       }
       @include media-breakpoint-down(xs) {
         width: 100%;
-        line-height: 73px;
+        line-height: 40px;
         font-size: 2rem;
         padding: 0 20px 0 20px;
       }
