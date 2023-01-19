@@ -8,6 +8,12 @@
     @include media-breakpoint-down(md){
       height: 160vh;
     }
+    @media only screen and (min-height: 1000px) {
+      padding-top: 150px;
+    }
+    @media only screen and (min-height: 1200px) {
+      padding-top: 200px;
+    }
   }
   .lead {
     text-align: center;
@@ -186,6 +192,9 @@
         font-size: 1.125rem;
         line-height: 21.47px;
       }
+    }
+    @include media-breakpoint-down(sm){
+      width: 80%;
     }
   }
   .container-left-right{
