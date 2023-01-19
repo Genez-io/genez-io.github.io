@@ -48,13 +48,27 @@
 .strip-bg-white {
     background-color: $primary-light;
 }
-.strip-main {
-    background-image: url('/images/main_darker.webp');
+.strip-main { 
     background-size: cover;
-    background-color: black;
-    height: 101vh;
-    @include media-breakpoint-down(xs) {
+    background-color: rgb(29,29,31);
+    height: 120vh;
+    @include media-breakpoint-down(sm){
+      height: 200vh;
+    }
+    @media only screen and (min-height: 1000px){
+      height: 110vh;
+    }
+    @media only screen and (min-height: 600px) and (max-height: 700px) and (max-width:500px){
+      height: 170vh;
+    }
+    @media only screen and (min-height: 700px) and (max-height: 800px) and (max-width:500px){
+      height: 150vh;
+    }
+    @media only screen and (min-height: 800px) and (max-height: 900px) and (max-width:500px){
       height: 130vh;
+    }
+    @media only screen and (min-height: 901px) and (max-height: 1000px) and (max-width:500px){
+      height: 120vh;
     }
 }
 .strip-grey,

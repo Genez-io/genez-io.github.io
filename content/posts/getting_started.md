@@ -1,11 +1,11 @@
 ---
 title: Getting Started with genez.io
-date: 2022-01-07
+date: 2022-01-19
 tags:
   - Tutorials
 author:
   - Radu Dumitrescu
-thumbnail: https://miro.medium.com/fit/c/400/268/1*uPt_ccZmvCMnQahIs43ahg.png
+thumbnail: /images/GettingStarted.png
 preview: This guide will get you up and running with genez.io in less than five minutes
 ---
 

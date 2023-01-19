@@ -19,7 +19,7 @@ Conversion notes:
 
 * Docs to Markdown version 1.0β34
 * Tue Jan 03 2023 06:22:22 GMT-0800 (PST)
-* Source doc: Privacy policy_Genez.io_01.12.2022
+* Source doc: Privacy policy_Genezio_01.12.2022
 ----->
 
 
