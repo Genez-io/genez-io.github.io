@@ -14725,6 +14725,9 @@ h3 {
   @media only screen and (min-height: 1000px) {
     .strip-main {
       height: 110vh; } }
+  @media only screen and (min-height: 700px) and (max-height: 900px) and (max-width: 500px) {
+    .strip-main {
+      height: 160vh; } }
 .strip-grey,
 .strip-bg-grey {
   background-color: #f0f0f0; }
@@ -16103,12 +16106,24 @@ ul.pagination li {
     margin: 0;
     margin-top: 40px;
     margin-bottom: 20px;
-    padding: 0 20px 0 20px; }
+    padding: 0 120px 0 120px; }
     @media (min-width: 768px) {
       .page-home .lead h1 {
         width: 100%;
         line-height: 73px;
         font-size: 3.375rem; } }
+    @media (max-width: 767.98px) {
+      .page-home .lead h1 {
+        width: 100%;
+        line-height: 73px;
+        font-size: 3.375rem;
+        padding: 0 20px 0 20px; } }
+    @media (max-width: 575.98px) {
+      .page-home .lead h1 {
+        width: 100%;
+        line-height: 73px;
+        font-size: 2rem;
+        padding: 0 20px 0 20px; } }
   .page-home .lead h2 {
     font-family: "Inter";
     line-height: 26px;
@@ -16214,7 +16229,12 @@ ul.pagination li {
     font-size: 1.625rem;
     text-align: center;
     color: black; }
-
+    @media (max-width: 767.98px) {
+      .page-home .review p {
+        padding: 0px;
+        font-weight: 600;
+        font-size: 1.125rem;
+        line-height: 21.47px; } }
 .page-home .container-left-right {
   margin-bottom: 120px; }
 

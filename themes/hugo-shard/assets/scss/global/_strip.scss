@@ -42,6 +42,9 @@
     @media only screen and (min-height: 1000px){
       height: 110vh;
     }
+    @media only screen and (min-height: 700px) and (max-height: 900px) and (max-width:500px){
+      height: 160vh;
+    }
 }
 .strip-grey,
 .strip-bg-grey {
