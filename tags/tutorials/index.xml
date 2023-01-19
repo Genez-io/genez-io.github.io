@@ -1,31 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Tutorials on genezio</title>
-    <link>/tags/tutorials/</link>
-    <description>Recent content in Tutorials on genezio</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 29 Dec 2018 00:00:00 +0000</lastBuildDate><atom:link href="/tags/tutorials/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Building a Website With Hugo</title>
-      <link>/posts/building-a-website-with-hugo/</link>
-      <pubDate>Sat, 29 Dec 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/building-a-website-with-hugo/</guid>
-      <description>Dummodo generis Lacrimantia Pelea tempora concussae dona quoniam Lorem markdownum undis. Umeris suis: quinta conversa thalami: arce Quirini primusque ad quas furoris mentis turbatusque viae plenaque alios, iam. Non cessasse acie setae floresque, in qui fores aer mihi custodia novantur adsuetaque tota.
-Peraravit Themis deserat et stetit taedae quodcumque Grave invitae usque et terraque Spargitque hi dixi Danais oris Ulixes Mare torrentur Mare torrentur tenuerunt Iovemque crudelis erat non manuque nullaque Pyreneus, evocet pectus, nube.</description>
-    </item>
-    
-    <item>
-      <title>Optimizing Your Website</title>
-      <link>/posts/optimizing-your-website/</link>
-      <pubDate>Thu, 20 Dec 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/optimizing-your-website/</guid>
-      <description>Dummodo generis Lacrimantia Pelea tempora concussae dona quoniam Lorem markdownum undis. Umeris suis: quinta conversa thalami: arce Quirini primusque ad quas furoris mentis turbatusque viae plenaque alios, iam. Non cessasse acie setae floresque, in qui fores aer mihi custodia novantur adsuetaque tota.
-Peraravit Themis deserat et stetit taedae quodcumque Grave invitae usque et terraque Spargitque hi dixi Danais oris Ulixes Iam in Mare torrentur tenuerunt Iovemque crudelis erat non manuque nullaque Pyreneus, evocet pectus, nube.</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tutorials on genezio</title><link>/tags/tutorials/</link><description>Recent content in Tutorials on genezio</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 19 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/tutorials/index.xml" rel="self" type="application/rss+xml"/><item><title>Getting Started with genez.io</title><link>/posts/getting_started/</link><pubDate>Wed, 19 Jan 2022 00:00:00 +0000</pubDate><guid>/posts/getting_started/</guid><description>Introduction genez.io is a serverless solution for building seamlessly full stack web and mobile applications in a scalable and cost efficient way.
+Documentation Only a small part of genez.io’s functionality is discussed in this article.
+For a complete developer documentation, please go to the official genez.io Documentation.
+Support If you can’t find the answer to some of your questions in this article or in our documentation, we invite you to join our Discord Community.</description></item></channel></rss>
