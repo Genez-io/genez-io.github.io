@@ -14725,9 +14725,18 @@ h3 {
   @media only screen and (min-height: 1000px) {
     .strip-main {
       height: 110vh; } }
-  @media only screen and (min-height: 700px) and (max-height: 950px) and (max-width: 500px) {
+  @media only screen and (min-height: 600px) and (max-height: 700px) and (max-width: 500px) {
     .strip-main {
-      height: 160vh; } }
+      height: 170vh; } }
+  @media only screen and (min-height: 700px) and (max-height: 800px) and (max-width: 500px) {
+    .strip-main {
+      height: 150vh; } }
+  @media only screen and (min-height: 800px) and (max-height: 900px) and (max-width: 500px) {
+    .strip-main {
+      height: 130vh; } }
+  @media only screen and (min-height: 901px) and (max-height: 1000px) and (max-width: 500px) {
+    .strip-main {
+      height: 120vh; } }
 .strip-grey,
 .strip-bg-grey {
   background-color: #f0f0f0; }
@@ -16093,6 +16102,12 @@ ul.pagination li {
   @media (max-width: 991.98px) {
     .page-home .lead-container {
       height: 160vh; } }
+  @media only screen and (min-height: 1000px) {
+    .page-home .lead-container {
+      padding-top: 150px; } }
+  @media only screen and (min-height: 1200px) {
+    .page-home .lead-container {
+      padding-top: 200px; } }
 .page-home .lead {
   text-align: center;
   position: relative;
@@ -16235,6 +16250,9 @@ ul.pagination li {
         font-weight: 600;
         font-size: 1.125rem;
         line-height: 21.47px; } }
+  @media (max-width: 767.98px) {
+    .page-home .review {
+      width: 80%; } }
 .page-home .container-left-right {
   margin-bottom: 120px; }
 
