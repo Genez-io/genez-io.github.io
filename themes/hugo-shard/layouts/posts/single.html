@@ -5,8 +5,8 @@
 {{ define "main" }}
 <div class="strip strip-secondary-light pt-10">
   <div class="container pt-10">
-    <div class="row position-relative">
-      <div class="col-12">
+    <div class="row position-relative justify-content-center">
+      <div class="col-12 col-lg-8">
         {{ if .Params.tags }}
         <div class="post-tags">
           {{ range .Params.tags }}
@@ -31,7 +31,7 @@
         </div>
         {{ end }}
         {{ end }}
-        <div class="dots-small-4"></div>
+        <!-- <div class="dots-small-4"></div> -->
       </div>
     </div>
   </div>
@@ -39,7 +39,7 @@
 
 <div class="strip strip-white">
   <div class="container pt-4 pt-md-10 pb-4 pb-md-10">
-    <div class="row justify-content-start">
+    <div class="row justify-content-center">
       <div class="col-12 col-lg-8">
         <div class="content">{{.Content}}</div>
       </div>
