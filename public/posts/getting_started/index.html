@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>genezio | 404 Page not found</title>
+  <title>genezio | Getting Started with genezio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#6f42c1" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#6f42c1" media="(prefers-color-scheme: dark)">
@@ -21,7 +21,7 @@
   
 </head>
 
-<body class='page '>
+<body class='page page-posts-single'>
   <div id="main-menu-mobile" class="main-menu-mobile">
   <ul>
     
@@ -142,11 +142,76 @@
   </div>
   <div class="wrapper">
     
+<div class="strip strip-secondary-light pt-10">
+  <div class="container pt-10">
+    <div class="row position-relative justify-content-center">
+      <div class="col-12 col-lg-8">
+        
+        <div class="post-tags">
+          
+          <a class="post-tag" href="/tags/tutorials">Tutorials</a>
+          
+        </div>
+        
+        <h1>Getting Started with genezio</h1>
+        
+        
+      </div>
+    </div>
+  </div>
+</div>
 
-<div class="container pt-4 pt-10">
-  <div class="row justify-content-center">
-    <div class="col-12">
-      <h1>404 Page Not Found</h1>
+<div class="strip strip-white">
+  <div class="container pt-4 pt-md-10 pb-4 pb-md-10">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-8">
+        <div class="content"><!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h3 id="introduction">Introduction</h3>
+<p>genezio is a serverless solution for building seamlessly full stack web and mobile applications in a scalable and cost efficient way.</p>
+<h3 id="documentation">Documentation</h3>
+<p>Only a small part of genezio’s functionality is discussed in this article.</p>
+<p>For a complete developer documentation, please go to the official <a href="https://docs.genez.io">genezio Documentation</a>.</p>
+<h3 id="support">Support</h3>
+<p>If you can’t find the answer to some of your questions in this article or in our documentation, we invite you to join our <a href="https://discord.gg/uc9H5YKjXv">Discord Community</a>.</p>
+<h2 id="lets-get-started">Let’s Get Started</h2>
+<p>This guide will get you up and running with genezio in less than five minutes. We’ve already made an application which is ready for you to deploy in the genezio infrastructure.</p>
+<h3 id="install-genezio-cli">Install genezio CLI</h3>
+<p>First, you need to install genezio on your working machine by running the following command:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">npm install genezio
+</span></span></code></pre></div><h3 id="log-in-to-the-genezio-cloud">Log in to the genezio Cloud</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">genezio login
+</span></span></code></pre></div><p>A web browser will open and you will need to create an account using your Google or GitHub account.</p>
+<p><img src="/posts/genezio_login_google.png" alt="Street Art Image"></p>
+<p>Figure 1: Screenshot of the genezio Sign In page</p>
+<p>After you log in, you will be redirected to a page that will automatically authenticate your CLI application.</p>
+<p>A success message will appear on the screen, and you can now return to your terminal.</p>
+<h3 id="clone-the-getting-started-example">Clone the Getting Started Example</h3>
+<p>Now that you are logged in, let’s make this easy. Clone this GitHub repository to your computer. If you don’t remember how to do this, copy and paste these commands in your terminal:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git clone https://github.com/Genez-io/genezio-examples.git
+</span></span><span class="line"><span class="cl">cd ./genezio-examples/javascript/getting-started/backend
+</span></span></code></pre></div><p>By running this set of commands, the repository is cloned into a local directory named _genezio-examples, _and then the <em>getting-started</em> project folder for JavaScript is entered.</p>
+<h2 id="test-your-application-locally">Test your application locally</h2>
+<p>Run the following command to open a local test environment that simulates the same behaviour as the one in the production.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">genezio local
+</span></span></code></pre></div><h2 id="deploy-your-first-application">Deploy Your First Application</h2>
+<p>Let’s deploy the application!</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">genezio deploy
+</span></span></code></pre></div><p>This command deploys your classes and automatically creates a SDK in the client folder that you can use in the frontend application.</p>
+<p>The SDK is basically calling the deployed code using JSON-RPC standard.</p>
+<p>You should see the following output:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Deploy your project to genezio infrastructure. . .
+</span></span><span class="line"><span class="cl">Your code was deployed and the SDK was successfully generated!
+</span></span><span class="line"><span class="cl">Your project has been deployed and is available at https://app.genez.io/project/&lt;projectId&gt;
+</span></span></code></pre></div><p>You can see the logs of the project on your genezio dashboard. Also, from there you can pause or delete the project.</p>
+<h3 id="success">Success</h3>
+<p>Now that the backend of the application is deployed, you can run and test the frontend application.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">cd  ./../frontend
+</span></span><span class="line"><span class="cl">npm install
+</span></span><span class="line"><span class="cl">npm start
+</span></span></code></pre></div><p>Congratulations, you’ve now finished your first genezio application!</p>
+</div>
+      </div>
     </div>
   </div>
 </div>

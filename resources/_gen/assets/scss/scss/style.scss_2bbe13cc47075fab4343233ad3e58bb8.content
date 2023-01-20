@@ -14703,13 +14703,28 @@ h3 {
 .strip-primary,
 .strip-bg-primary {
   background-color: #6f42c1; }
+  .strip-primary h1,
+  .strip-bg-primary h1 {
+    color: white;
+    margin: 0;
+    margin-bottom: 40px;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px; }
 
 .strip-secondary,
 .strip-bg-secondary {
   background-color: #2a478b; }
 
 .strip-secondary-light {
-  background-color: #d5d5e9; }
+  background-color: #fff; }
+  .strip-secondary-light h1 {
+    color: black;
+    margin: 0;
+    margin-bottom: 40px;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px; }
 
 .strip-white,
 .strip-bg-white {
@@ -14849,7 +14864,7 @@ svg {
   justify-content: flex-start;
   align-items: center;
   padding-top: 140px;
-  padding-bottom: 100px; }
+  padding-bottom: 50px; }
   .intro h1 {
     font-size: 2.4rem;
     line-height: 1.2;
@@ -15510,7 +15525,7 @@ ul.social {
 .hero {
   height: 400px;
   position: relative;
-  background-image: linear-gradient(to right, #9477c4, #9477c4); }
+  background-image: linear-gradient(to right, #6f42c1, #6f42c1); }
   .hero .hero-image {
     background-size: cover;
     background-repeat: no-repeat;
@@ -15606,13 +15621,14 @@ ul.pagination li {
 .sidebar {
   display: flex;
   flex-direction: column;
-  background: #d5d5d5;
-  padding: 30px;
-  border: none;
-  border-radius: 3px; }
+  background: #ffffff;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin: 0 0 0 10px; }
   @media (min-width: 992px) {
     .sidebar {
-      padding: 40px; } }
+      padding: 20px; } }
   .sidebar a {
     color: #6f42c1;
     text-decoration: none; }
@@ -15620,7 +15636,8 @@ ul.pagination li {
       text-decoration: underline; }
   .sidebar h4 {
     text-transform: capitalize;
-    margin-bottom: 10px; }
+    margin-bottom: 10px;
+    color: black; }
   .sidebar ul {
     list-style: none;
     margin-bottom: 20px; }
@@ -16299,7 +16316,7 @@ ul.pagination li {
 
 .page-home .left-right-text p {
   color: #666666;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1rem;
   line-height: 19.36px; }
 
@@ -16503,6 +16520,17 @@ ul.pagination li {
   position: absolute;
   width: 100%; }
 
+.page-posts-list h1 {
+  background: linear-gradient(90deg, #6f42c1 0%, #282A36 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Inter";
+  margin: 0;
+  margin-bottom: 40px;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px; }
+
 .page-posts-list .posts-sidebar {
   border: 1px solid #dcdcdc;
   border-radius: 3px;
@@ -16524,9 +16552,12 @@ ul.pagination li {
   .page-posts-single .post-tags a {
     text-transform: uppercase;
     font-size: 12px;
-    color: #6f42c1;
+    color: black;
     font-weight: 700;
     text-decoration: none; }
+
+.page-posts-single code {
+  color: white; }
 
 .page-posts-single .posts-sidebar {
   border: 1px solid #dcdcdc;
@@ -16564,20 +16595,25 @@ ul.pagination li {
     font-size: 1rem; }
 
 .post {
-  display: flex;
-  background: #fff; }
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 20px;
+  height: 520px;
+  width: 350px; }
   .post .post-left {
-    margin-right: 20px; }
+    margin: auto; }
   .post .post-date .post-date-date {
     text-transform: uppercase;
-    font-size: 12px;
-    color: #2a478b;
-    font-weight: 500;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: black;
     text-decoration: none; }
   .post .post-date .post-date-author {
     text-transform: uppercase;
     font-size: 12px;
-    color: #2a478b;
+    color: black;
     font-weight: 500;
     text-decoration: none; }
   .post .post-content {
@@ -16585,12 +16621,16 @@ ul.pagination li {
   .post .post-tags {
     display: inline-block;
     margin-right: 10px;
-    margin-bottom: 8px; }
+    margin: 20px auto;
+    border: 2px solid #9477C4;
+    border-radius: 20px;
+    padding: 5px 0; }
     .post .post-tags a {
+      padding: 20px;
       text-transform: uppercase;
       font-size: 12px;
       color: #6f42c1;
-      font-weight: 700;
+      font-weight: 500;
       text-decoration: none; }
   .post .post-categories {
     display: inline-block; }
@@ -16598,8 +16638,7 @@ ul.pagination li {
       color: #333;
       font-weight: 700; }
   .post .post-image {
-    width: 100px;
-    height: 100px;
+    height: 200px;
     margin-bottom: 10px;
     overflow: hidden; }
     .post .post-image img {
@@ -16607,27 +16646,36 @@ ul.pagination li {
       height: auto;
       border-radius: 3px; }
   .post .post-title {
-    font-family: "Inter"; }
+    font-family: "Inter";
+    height: 75px; }
     .post .post-title h2 {
-      font-size: 24px;
-      line-height: 30px;
-      font-weight: 400; }
+      font-weight: 600;
+      font-size: 30px;
+      line-height: 36px; }
     .post .post-title a {
-      color: #2a478b;
+      color: black;
       text-decoration: none; }
   .post .post-description {
+    font-weight: 400;
     font-size: 16px;
-    line-height: 22px; }
+    line-height: 19px;
+    color: black;
+    margin: 10px auto;
+    height: 60px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 30px; }
   .post .post-link {
     flex: 0;
     margin-top: auto; }
   .post a.post-read-more {
     font-weight: 400;
     font-family: "Inter"; }
-  .post .post-meta {
-    display: flex; }
-    .post .post-meta .on {
-      margin: 0 4px 0 4px; }
+  .post .post-meta .on {
+    margin: 0 4px 0 4px; }
   .post .post-author {
     display: flex; }
     .post .post-author .post-author-avatar {
