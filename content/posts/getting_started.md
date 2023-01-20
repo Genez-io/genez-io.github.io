@@ -1,19 +1,19 @@
 ---
-title: Getting Started with genez.io
+title: Getting Started with genezio
 date: 2022-01-19
 tags:
   - Tutorials
 author:
   - Radu Dumitrescu
 thumbnail: /images/GettingStarted.png
-preview: This guide will get you up and running with genez.io in less than five minutes
+preview: This guide will get you up and running with genezio in less than five minutes
 ---
 
 <!-----
 
 Yay, no errors, warnings, or alerts!
 
-Conversion time: 0.364 seconds.
+Conversion time: 0.482 seconds.
 
 
 Using this Markdown file:
@@ -26,26 +26,22 @@ Using this Markdown file:
 Conversion notes:
 
 * Docs to Markdown version 1.0β34
-* Fri Jan 06 2023 04:10:50 GMT-0800 (PST)
-* Source doc: Copy of Getting Started with genez.io
+* Fri Jan 20 2023 01:16:36 GMT-0800 (PST)
+* Source doc: #1 Getting Started with genezio
 * Tables are currently converted to HTML tables.
 ----->
 
 
-
-<!-- # Getting Started with genez.io -->
-
-
 ### Introduction
 
-genez.io is a serverless solution for building seamlessly full stack web and mobile applications in a scalable and cost efficient way.
+genezio is a serverless solution for building seamlessly full stack web and mobile applications in a scalable and cost efficient way.
 
 
 ### Documentation
 
-Only a small part of genez.io’s functionality is discussed in this article.
+Only a small part of genezio’s functionality is discussed in this article.
 
-For a complete developer documentation, please go to the official [genez.io Documentation](https://docs.genez.io).
+For a complete developer documentation, please go to the official [genezio Documentation](https://docs.genez.io).
 
 
 ### Support
@@ -55,12 +51,12 @@ If you can’t find the answer to some of your questions in this article or in o
 
 ## Let’s Get Started
 
-This guide will get you up and running with genez.io in less than five minutes. We’ve already made an application which is ready for you to deploy in the genez.io infrastructure.
+This guide will get you up and running with genezio in less than five minutes. We’ve already made an application which is ready for you to deploy in the genezio infrastructure.
 
 
-### Install genez.io CLI
+### Install genezio CLI
 
-First, you need to install genez.io on your working machine by running the following command:
+First, you need to install genezio on your working machine by running the following command:
 
 
 ```
@@ -69,7 +65,7 @@ npm install genezio
 
 
 
-### Log in to the genez.io Cloud
+### Log in to the genezio Cloud
 
 
 ```
@@ -81,7 +77,7 @@ A web browser will open and you will need to create an account using your Google
 
 ![Street Art Image](/posts/genezio_login_google.png)
 
-<!-- Figure 1: Screenshot of the genez.io Sign In page -->
+Figure 1: Screenshot of the genezio Sign In page
 
 After you log in, you will be redirected to a page that will automatically authenticate your CLI application.
 
@@ -131,13 +127,13 @@ You should see the following output:
 
 
 ```
-Deploy your project to genez.io infrastructure. . .
+Deploy your project to genezio infrastructure. . .
 Your code was deployed and the SDK was successfully generated!
 Your project has been deployed and is available at https://app.genez.io/project/<projectId>
 ```
 
 
-You can see the logs of the project on your genez.io dashboard. Also, from there you can pause or delete the project.
+You can see the logs of the project on your genezio dashboard. Also, from there you can pause or delete the project.
 
 
 ### Success
@@ -152,4 +148,4 @@ npm start
 ```
 
 
-Congratulations, you’ve now finished your first genez.io application!
+Congratulations, you’ve now finished your first genezio application!
