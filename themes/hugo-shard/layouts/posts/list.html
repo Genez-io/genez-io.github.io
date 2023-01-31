@@ -31,7 +31,7 @@
         {{ if .Params.thumbnail }}
         <div class="post-left">
           <div class="post-image">
-            <img class="img-fluid" alt={{ .Title }} src="{{ .Params.thumbnail | relURL }}" />
+            <a href="{{ .RelPermalink }}"><img class="img-fluid" alt={{ .Title }} src="{{ .Params.thumbnail | relURL }}" /></a>
           </div>
         </div>
         {{ end }}
