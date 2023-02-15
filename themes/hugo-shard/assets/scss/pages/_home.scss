@@ -225,26 +225,26 @@
   .left-right-text{
     h2 {
       font-size: 2rem;
-      color: $primary;
+      color: $green;
       line-height: 33.89px;
       font-weight: 800;
       margin-bottom: 10px;
     }
     h4 {
-      color: black;
+      color: white;
       font-weight: 600;
       font-size: 1.75rem;
       line-height: 38.73px;
 
     }
     h3 {
-      color: black;
+      color: white;
       font-weight: 700;
       font-size: 1rem;
       line-height: 19.36px;
     }
     p {
-      color: #666666;
+      color: #CCCCCC;
       font-weight: 500;
       font-size: 1rem;
       line-height: 19.36px;
@@ -404,7 +404,8 @@
     text-align: center;
     margin-top: -25px;
     @include media-breakpoint-down(sm){
-      margin-top: 60px;
+      margin-top: 10px;
+      // width: 20px;
     }
   }
   .preview {
@@ -461,5 +462,12 @@
   .inner {
     position: absolute;
     width: 100%;
+  }
+  .break-line {
+    width: 100%;
+    height: 0px;
+    // background: #666666;
+    border: 0.5px solid #666666;
+    margin: 40px 0;
   }
 }

@@ -10,6 +10,7 @@ $grey: {{ .Site.Params.grey_color | default "#f4f500" }};
 $grey2: darken($grey, 5%);
 $carbon: {{ .Site.Params.carbon | default "#39d000" }};
 $steel: {{ .Site.Params.steel | default "#39d000" }};
+$green: {{ .Site.Params.green_color | default "#00ff00" }};
 
 
 $font-family-base: {{ .Site.Params.font_base | default "'Lato', Arial, sans-serif, -apple-system" }};

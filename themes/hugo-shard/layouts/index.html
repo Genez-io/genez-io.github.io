@@ -61,8 +61,7 @@
 </div>
 
 <!-- Features -->
-{{ if and (gt (len .Site.Data.features) 0) (.Site.Params.homepage.show_features) }}
-<div class="strip strip-white features pt-10 pb-4 pb-md-1">
+<div class="strip strip-white pt-10 pb-4">
   <div class = "container">
     {{ range .Site.Data.reviews }}
     <div class = "row justify-content-center">
@@ -73,12 +72,15 @@
     </div>
     {{ end }}
   </div>
+</div>
+{{ if and (gt (len .Site.Data.features) 0) (.Site.Params.homepage.show_features) }}
+<div class="strip strip-dark features pt-10 pb-4 pb-md-1">
   <div class ="container container-left-right">
     {{ range .Site.Data.left_right }}
       {{ if  eq .row "1" }}
       <div class = "row left-right-row justify-content-center">
         <div class ="col-12 col-md-5">
-          <div class = "left-right-text" >
+          <div class = "left-right-text pt-3" >
             <h2>
               {{ .header }}
             </h2>
@@ -100,13 +102,14 @@
           </div>
         </div>
         <div class ="col-12 col-md-1">
-          <div class="left-right-line"></div>
+          <!-- <div class="left-right-line"></div> -->
         </div> 
         <div class ="col-12 col-md-5 left-right-row-1-images">
-          <img src = "/images/chart1_row1_title.webp" alt = "chart1" class = "chart-1">
-          <img src = "/images/chart2_row1_title.webp" alt = "chart2" class = "chart-2">
+          <img src = "/images/chart1.webp" alt = "chart1" class = "chart-1">
+          <img src = "/images/chart2.webp" alt = "chart2" class = "chart-2">
         </div>
       </div>
+      <hr class="break-line">
       {{ else if eq .row "2"}}
       <div class = "row left-right-row justify-content-center">
         <div class ="col-12 col-md-5 row-2-images">
@@ -132,7 +135,7 @@
             </div>
         </div>
         <div class ="col-12 col-md-1">
-          <div class="left-right-line"></div>
+          <!-- <div class="left-right-line"></div> -->
         </div> 
         <div class ="col-12 col-md-5">
           <div class = "left-right-text left-right-text-row-2" >
@@ -157,6 +160,7 @@
           </div>
         </div>
       </div>
+      <hr class="break-line">
       {{ else }}
       <div class = "row left-right-row justify-content-center left-right-row-3">
         <div class ="col-12 col-md-5">
@@ -182,11 +186,11 @@
           </div>
         </div>
         <div class ="col-12 col-md-1">
-          <div class="left-right-line"></div>
+          <!-- <div class="left-right-line"></div> -->
         </div> 
         <div class ="col-12 col-md-5">
-          <div class="right-image-row-3">
-            <img src="/images/rightImageRow3.webp" alt="rightImage" >
+          <div class="right-image-row-3 pt-10">
+            <img width="100%" src="/images/right_row3.webp" alt="rightImage" >
           </div>
         </div>
       </div>
@@ -196,7 +200,7 @@
 </div>
 {{ end }}
 
-<div id="demo" class="strip strip-white features pt-1 pb-1 pb-md-10 pb-sm-1">
+<!-- <div id="demo" class="strip strip-white features pt-1 pb-1 pb-md-10 pb-sm-1">
   <div class="container">
     <div class="row">
       <div class="col-12">
@@ -204,10 +208,6 @@
           <h1 class="text-center">{{ .Site.Params.homepage.demo }}</h1>
         </div>
         <div class="lead text-center">
-          <!-- <video width="320" height="240" controls>
-            <source src="https://www.youtube.com/watch?v=dQw4w9WgXcQ" type="video/mp4">
-          </video> -->
-          <!-- <iframe loading="lazy" class="video" src="https://www.youtube.com/embed/1Tfrm-nvhCQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
           <div class="inner" id="placeholder">
             <img alt="demo" class="demo-image" src="/images/demo-photo-play.webp" />
           </div>
@@ -263,7 +263,7 @@
         </div>
     </div>
   </div>
-</div>
+</div> -->
 
 <div class="strip strip-white features pt-md-10">
   <div class="container pb-10">

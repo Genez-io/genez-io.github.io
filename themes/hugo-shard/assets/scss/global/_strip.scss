@@ -44,13 +44,16 @@
     line-height: 48px;
   }
 }
+.strip-dark {
+  background-color: #1A1A1A;
+}
 .strip-white,
 .strip-bg-white {
     background-color: $primary-light;
 }
 .strip-main { 
     background-size: cover;
-    background-color: rgb(29,29,31);
+    background-color: #1A1A1A;
     height: 120vh;
     @include media-breakpoint-down(sm){
       height: 200vh;

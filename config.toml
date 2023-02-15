@@ -13,6 +13,7 @@ pygmentsUseClasses = true
     primary_light = "#ffffff"
     secondary_color = "#2a478b"
     secondary_light = "#d5d5e9"
+    green_color = "#00faa4"
     grey_color = "#d5d5d5"
     carbon = "#2a478b"
     steel = "#2a478b"
