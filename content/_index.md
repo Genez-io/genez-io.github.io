@@ -4,10 +4,10 @@ date: 2019-02-22
 leadTitle: "The Coolest Way to Write, Deploy \n and Use a Serverless API." #"Write and deploy backend code seamlessly!"
 leadSubTitle: "Never pay for idle servers or write unnecessary code again. Happy hacking!" #'Simple backend functions for web and mobile developers. Happy hacking!'
 callToAction: 'Learn more'
-leadButtonOneText: 'Check our demo'
-leadButtonOneLink: '/product'
-leadButtonTwoText: 'Join Discord'
-leadButtonTwoLink: 'https://discord.gg/uc9H5YKjXv'
+leadButtonOneText: 'Start for free'
+leadButtonOneLink: 'https://app.genez.io/'
+leadButtonTwoText: 'Check our Docs'
+leadButtonTwoLink: 'https://docs.genez.io/'
 productTextP1: "Because you, just like us, are passionate about developing new apps, new features. You want to bring them to your users as fast as possible. You want to focus on your code, develop, debug, release and iterate fast."
 productTextP2: "Because you like writing elegant code. You don’t want to lose time 
 configuring backend servers, writing cumbersome GET URLs, 

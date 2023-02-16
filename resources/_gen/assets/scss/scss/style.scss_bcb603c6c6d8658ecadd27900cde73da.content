@@ -14415,7 +14415,7 @@ h3 {
   padding: 12px 20px 13px 20px;
   background: #6f42c1;
   border-radius: 3px;
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: 0.025em;
   color: #ffffff;
   text-decoration: none;
@@ -14481,7 +14481,7 @@ h3 {
   border: 2px solid #1A1A1A;
   background: #1A1A1A;
   border-radius: 3px;
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: 0.025em;
   color: #ffffff;
   text-decoration: none;
@@ -14530,7 +14530,7 @@ h3 {
   background: #6f42c1;
   border-radius: 3px;
   font-size: 0.938rem;
-  font-weight: 400;
+  font-weight: 700;
   letter-spacing: 0.025em;
   color: #ffffff;
   text-decoration: none;
@@ -14551,12 +14551,12 @@ h3 {
   cursor: pointer;
   white-space: nowrap;
   display: inline-block;
-  padding: 12px 20px 13px 20px;
+  padding: 12px 10px 13px 10px;
   border: 2px solid #ffffff;
   background: none;
   border-radius: 3px;
   font-size: 0.938rem;
-  font-weight: 400;
+  font-weight: 700;
   letter-spacing: 0.025em;
   color: #ffffff;
   text-decoration: none;
@@ -14567,7 +14567,7 @@ h3 {
   background: transparent; }
   @media (min-width: 768px) {
     .button-discord-hero {
-      padding: 9px 40px 9px 40px; } }
+      padding: 9px 12px 9px 12px; } }
   .button-discord-hero:hover {
     transform: translateY(-1px);
     box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
@@ -15077,7 +15077,7 @@ table.debugprint {
           display: inline-block;
           padding: 0;
           font-size: 0.938rem;
-          font-weight: 500;
+          font-weight: 700;
           color: #ffffff;
           padding: 10px 14px 10px 14px;
           text-decoration: none; }
@@ -15744,7 +15744,8 @@ ul.pagination li {
     .plan.plan-featured .plan-name {
       color: white;
       font-size: 30px;
-      text-align: center; }
+      text-align: center;
+      padding-bottom: 10px; }
     .plan.plan-featured .plan-description, .plan.plan-featured .plan-features-heading {
       color: white;
       text-align: left; }
@@ -15753,8 +15754,10 @@ ul.pagination li {
     .plan.plan-featured .plan-button {
       margin: 30px; }
       .plan.plan-featured .plan-button .button-outlined {
-        color: #00faa4;
-        border-color: #00faa4; }
+        color: #6f42c1;
+        background-color: #00faa4;
+        border-color: #00faa4;
+        font-weight: 600; }
   .plan .plan-main {
     padding: 10px 20px;
     text-align: left; }
@@ -16515,7 +16518,8 @@ ul.pagination li {
       font-size: 38px; } }
 .page-home .span-or {
   color: black;
-  padding: 0 20px 0 10px; }
+  padding: 0 20px 0 10px;
+  font-weight: 600; }
   @media (max-width: 575.98px) {
     .page-home .span-or {
       display: none; } }
@@ -16559,7 +16563,8 @@ ul.pagination li {
   .page-home .card h2 {
     color: white;
     font-size: 48px;
-    line-height: 59px; }
+    line-height: 59px;
+    font-weight: 600; }
     @media (max-width: 575.98px) {
       .page-home .card h2 {
         font-size: 32px;

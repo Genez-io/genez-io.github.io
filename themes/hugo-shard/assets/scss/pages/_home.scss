@@ -443,6 +443,7 @@
   .span-or {
     color: black;
     padding: 0 20px 0 10px;
+    font-weight: 600;
     @include media-breakpoint-down(xs) {
       display: none;
     }
@@ -493,6 +494,7 @@
       color: white;
       font-size: 48px;
       line-height: 59px;
+      font-weight: 600;
       @include media-breakpoint-down(xs) {
         font-size: 32px;
         line-height: 36px;

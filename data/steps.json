@@ -3,9 +3,9 @@
         "textAlignment":"right",
         "header":"Step 1",
         "title": "Define your first project",
-        "paragraph1": "Create a new project folder in your src tree and switch to it. At the command prompt, type genezio init to create a genezio project.",
-        "paragraph2": "At genezio, classes are the basic unit of deployment. Instead of deploying single functions, we offer the ability to group them into classes for more flexibility and better code readability..",
-        "paragraph3": "Generally, a class contains multiple methods. In our example, the HelloWorldClass class has two methods, helloWorld and hello.",
+        "paragraph1": "Create a new project folder and switch to it. At the command prompt, type `genezio init` to create a genezio project.",
+        "paragraph2": "At genezio, classes are the basic unit of deployment. Instead of deploying single functions, we offer the ability to group them into classes for more flexibility and better code readability.",
+        "paragraph3": "Generally, a class contains multiple methods. In our example, the HelloWorldClass class has two methods, `helloWorld` and `hello`.",
         "row":"1"
     },
     {
@@ -13,7 +13,7 @@
         "header":"Step 2",
         "title": "Deploy your newly created project",
         "paragraph1": "To deploy your project use genezio deploy at the command prompt in the project folder.",
-        "paragraph2": "Use genezio local to start a local dev environment. Switch from local to production and back using genezio local and genezio deploy.",
+        "paragraph2": "Use `genezio local` to start a local dev environment. Switch from local to production and back using `genezio local` and `genezio deploy`.",
         "paragraph3": "This step creates a bundle and deploys it in the genezio cloud that runs on AWS. We take care of scaling the infrastructure up and down based on your usage pattern.",
         "row":"2"
     },

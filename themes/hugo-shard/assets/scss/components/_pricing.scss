@@ -54,6 +54,7 @@
       color: white;
       font-size: 30px;
       text-align: center;
+      padding-bottom: 10px;
     }
     .plan-description, .plan-features-heading {
       color: white;
@@ -68,8 +69,10 @@
     }
     .plan-button {
       .button-outlined {
-        color: $green;
+        color: $primary;
+        background-color: $green;
         border-color: $green;
+        font-weight: 600;
       }
       margin: 30px;
     }

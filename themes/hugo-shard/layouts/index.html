@@ -40,7 +40,7 @@
           <h2>{{ .Params.leadSubTitle }}</h2>
           <div class="lead-buttons">
             {{ if .Params.leadButtonOneLink }}
-            <a class="button-demo" href="#demo">{{ .Params.leadButtonOneText }}</a>
+            <a class="button-demo" href={{ .Params.leadButtonOneLink | relURL }}>{{ .Params.leadButtonOneText }}</a>
             {{ end }}
             {{ if .Params.leadButtonTwoLink }}
             <a class="button-discord-hero" href={{ .Params.leadButtonTwoLink | relURL }}>{{ .Params.leadButtonTwoText }}</a>
@@ -206,8 +206,8 @@
     {{ range .Site.Data.steps }}
       {{ if  eq .row "1" }}
       <div class = "row left-right-row justify-content-center">
-        <div class ="col-12 col-md-5 row-2-images pt-10">
-          <img width="100%" src = "/images/step1.webp" alt = "step1">
+        <div class ="col-12 col-md-5 row-2-images d-flex align-items-center pt-4">
+          <img width="100%" height="50%" src = "/images/step1.webp" alt = "step1">
         </div>
         <div class ="col-12 col-md-1">
           <!-- <div class="left-right-line"></div> -->
@@ -262,7 +262,7 @@
       </div>
       {{ else }}
       <div class = "row left-right-row justify-content-center">
-        <div class ="col-12 col-md-5 row-2-images pt-10">
+        <div class ="col-12 col-md-5 row-2-images pt-7">
           <img width="100%" src = "/images/step3.webp" alt = "step3">
 
         </div>
@@ -441,7 +441,7 @@
             {{ end }}
             <span class="span-or">OR</span>
             {{ if .Params.leadButtonTwoLink }}
-            <a class="button-black" href={{ .Params.leadButtonTwoLink | relURL }}>{{ .Params.leadButtonTwoText }}</a>
+            <a class="button-black" href="https://discord.gg/uc9H5YKjXv">Join Discord</a>
             {{ end }}
           </div>
         </div>
