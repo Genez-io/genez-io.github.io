@@ -16,11 +16,13 @@
 // }
 .plan {
   width: 100%;
-  border-radius: 10px;
+  padding: 30px 0 10px 0;
+  border-radius: 30px;
   font-family: $font-family-heading;
   border: 1px solid $grey2;
   margin-bottom: 40px;
   color: #282A36;
+  box-shadow: 0px 10px 10px #cccccc;
   @include media-breakpoint-up(md) {
     flex-basis: 25%;
     margin-bottom: 0;
@@ -42,8 +44,18 @@
     }
   }
   &.plan-featured {
-    background: #1a1a1a;
-    .plan-name, .plan-description, .plan-price, .plan-features-heading {
+    background: $primary;
+    .plan-price {
+      color: $green;
+      font-size: 30px;
+      text-align: center;
+    }
+    .plan-name {
+      color: white;
+      font-size: 30px;
+      text-align: center;
+    }
+    .plan-description, .plan-features-heading {
       color: white;
       text-align: left;
     }
@@ -56,8 +68,8 @@
     }
     .plan-button {
       .button-outlined {
-        color: white;
-        border-color: white;
+        color: $green;
+        border-color: $green;
       }
       margin: 30px;
     }

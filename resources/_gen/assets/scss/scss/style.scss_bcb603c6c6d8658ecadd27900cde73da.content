@@ -14437,12 +14437,12 @@ h3 {
   white-space: nowrap;
   display: inline-block;
   padding: 12px 20px 13px 20px;
-  border: 2px solid #ffffff;
+  border: 2px solid #00faa4;
   background: none;
   border-radius: 3px;
   font-weight: 400;
   letter-spacing: 0.025em;
-  color: #ffffff;
+  color: #00faa4;
   text-decoration: none;
   -webkit-transition: all 0.15s ease;
   transition: all 0.15s ease;
@@ -14455,8 +14455,7 @@ h3 {
   .button-outlined:hover {
     transform: translateY(-1px);
     box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
-    text-decoration: none;
-    color: #ffffff; }
+    text-decoration: none; }
 
 .button-white {
   background: #fff;
@@ -15717,11 +15716,13 @@ ul.pagination li {
 
 .plan {
   width: 100%;
-  border-radius: 10px;
+  padding: 30px 0 10px 0;
+  border-radius: 30px;
   font-family: "Inter";
   border: 1px solid #c8c8c8;
   margin-bottom: 40px;
-  color: #282A36; }
+  color: #282A36;
+  box-shadow: 0px 10px 10px #cccccc; }
   @media (min-width: 768px) {
     .plan {
       flex-basis: 25%;
@@ -15735,8 +15736,16 @@ ul.pagination li {
     .plan.blured .plan-button {
       margin: 0px 30px 30px 30px; }
   .plan.plan-featured {
-    background: #1a1a1a; }
-    .plan.plan-featured .plan-name, .plan.plan-featured .plan-description, .plan.plan-featured .plan-price, .plan.plan-featured .plan-features-heading {
+    background: #6f42c1; }
+    .plan.plan-featured .plan-price {
+      color: #00faa4;
+      font-size: 30px;
+      text-align: center; }
+    .plan.plan-featured .plan-name {
+      color: white;
+      font-size: 30px;
+      text-align: center; }
+    .plan.plan-featured .plan-description, .plan.plan-featured .plan-features-heading {
       color: white;
       text-align: left; }
     .plan.plan-featured .plan-features ul li {
@@ -15744,8 +15753,8 @@ ul.pagination li {
     .plan.plan-featured .plan-button {
       margin: 30px; }
       .plan.plan-featured .plan-button .button-outlined {
-        color: white;
-        border-color: white; }
+        color: #00faa4;
+        border-color: #00faa4; }
   .plan .plan-main {
     padding: 10px 20px;
     text-align: left; }
@@ -16528,6 +16537,63 @@ ul.pagination li {
   height: 0px;
   border: 0.5px solid #666666;
   margin: 40px 0; }
+
+.page-home .card {
+  border-radius: 20px;
+  padding-left: 80px; }
+  @media (max-width: 575.98px) {
+    .page-home .card {
+      padding-left: 40px;
+      margin: 0 20px; } }
+  .page-home .card p {
+    color: white;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 600;
+    width: 85%; }
+    @media (max-width: 575.98px) {
+      .page-home .card p {
+        font-size: 16px;
+        line-height: 20px;
+        width: 60vw; } }
+  .page-home .card h2 {
+    color: white;
+    font-size: 48px;
+    line-height: 59px; }
+    @media (max-width: 575.98px) {
+      .page-home .card h2 {
+        font-size: 32px;
+        line-height: 36px;
+        width: 60vw; } }
+  .page-home .card a {
+    color: #00faa4; }
+  @media (max-width: 575.98px) {
+    .page-home .card .capy {
+      display: none; } }
+.page-home .left-right-text-steps h2 {
+  font-size: 2rem;
+  color: #6f42c1;
+  line-height: 33.89px;
+  font-weight: 800;
+  margin-bottom: 10px; }
+
+.page-home .left-right-text-steps h4 {
+  color: #1a1a1a;
+  font-weight: 600;
+  font-size: 1.75rem;
+  line-height: 38.73px; }
+
+.page-home .left-right-text-steps h3 {
+  color: #1A1A1A;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 19.36px; }
+
+.page-home .left-right-text-steps p {
+  color: #1A1A1A;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 19.36px; }
 
 .page-posts-list h1 {
   background: linear-gradient(90deg, #6f42c1 0%, #282A36 100%);

@@ -1,0 +1,29 @@
+[
+    {
+        "textAlignment":"right",
+        "header":"Step 1",
+        "title": "Define your first project",
+        "paragraph1": "Create a new project folder in your src tree and switch to it. At the command prompt, type genezio init to create a genezio project.",
+        "paragraph2": "At genezio, classes are the basic unit of deployment. Instead of deploying single functions, we offer the ability to group them into classes for more flexibility and better code readability..",
+        "paragraph3": "Generally, a class contains multiple methods. In our example, the HelloWorldClass class has two methods, helloWorld and hello.",
+        "row":"1"
+    },
+    {
+        "textAlignment":"left",
+        "header":"Step 2",
+        "title": "Deploy your newly created project",
+        "paragraph1": "To deploy your project use genezio deploy at the command prompt in the project folder.",
+        "paragraph2": "Use genezio local to start a local dev environment. Switch from local to production and back using genezio local and genezio deploy.",
+        "paragraph3": "This step creates a bundle and deploys it in the genezio cloud that runs on AWS. We take care of scaling the infrastructure up and down based on your usage pattern.",
+        "row":"2"
+    },
+    {
+        "textAlignment":"right",
+        "header":"Step 3",
+        "title": "Connect your client application and start building",
+        "paragraph1": "Both genezio deploy and genezio local create an SDK with classes that mirror the backend classes written by you. The SDK uses JSON RPC to communicate with the backend.",
+        "paragraph2": "The SDK can now be generated in Javascript, TypeScript and Swift. More language support is planned, like Kotlin, Flutter and Python for IoT.",
+        "paragraph3": "You will need to import the SDK class in your code and call its methods - that’s it - enjoy our example!",
+        "row":"3"
+    }
+]

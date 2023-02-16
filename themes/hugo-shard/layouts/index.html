@@ -60,7 +60,6 @@
   </div>
 </div>
 
-<!-- Features -->
 <div class="strip strip-white pt-10 pb-4">
   <div class = "container">
     {{ range .Site.Data.reviews }}
@@ -73,7 +72,8 @@
     {{ end }}
   </div>
 </div>
-{{ if and (gt (len .Site.Data.features) 0) (.Site.Params.homepage.show_features) }}
+
+<!-- Features -->
 <div class="strip strip-dark features pt-10 pb-4 pb-md-1">
   <div class ="container container-left-right">
     {{ range .Site.Data.left_right }}
@@ -198,7 +198,101 @@
     {{ end }}
   </div>
 </div>
-{{ end }}
+
+<!--  Steps -->
+<div class="strip strip-white features pt-10 pb-md-1">
+  <div class ="container container-left-right">
+    <h1>Easy to use in just 3 steps</h1>
+    {{ range .Site.Data.steps }}
+      {{ if  eq .row "1" }}
+      <div class = "row left-right-row justify-content-center">
+        <div class ="col-12 col-md-5 row-2-images pt-10">
+          <img width="100%" src = "/images/step1.webp" alt = "step1">
+        </div>
+        <div class ="col-12 col-md-1">
+          <!-- <div class="left-right-line"></div> -->
+        </div>
+        <div class ="col-12 col-md-5">
+          <div class = "left-right-text-steps left-right-text-row-2 pt-3" >
+            <h2>
+              {{ .header }}
+            </h2>
+            <h4 >
+              {{ .title }}
+            </h4>
+            <p>
+              {{ .paragraph1 }}
+            </h3>
+            <p>
+              {{ .paragraph2 }}
+            </p>
+            <p>
+              {{ .paragraph3 }}
+            </p>            
+          </div>
+        </div>
+      </div>
+      {{ else if eq .row "2"}}
+      <div class = "row left-right-row justify-content-center">
+        <div class ="col-12 col-md-5">
+          <div class = "left-right-text-steps" >
+            <h2>
+              {{ .header }}
+            </h2>
+            <h4 >
+              {{ .title }}
+            </h4>
+            <p>
+              {{ .paragraph1 }}
+            </h3>
+            <p>
+              {{ .paragraph2 }}
+            </p>
+            <p>
+              {{ .paragraph3 }}
+            </p>            
+          </div>
+        </div>
+        <div class ="col-12 col-md-1">
+          <!-- <div class="left-right-line"></div> -->
+        </div>
+        <div class ="col-12 col-md-5 row-2-images">
+          <img width="100%" src = "/images/step2.webp" alt = "step2">
+        </div>
+      </div>
+      {{ else }}
+      <div class = "row left-right-row justify-content-center">
+        <div class ="col-12 col-md-5 row-2-images pt-10">
+          <img width="100%" src = "/images/step3.webp" alt = "step3">
+
+        </div>
+        <div class ="col-12 col-md-1">
+          <!-- <div class="left-right-line"></div> -->
+        </div> 
+        <div class ="col-12 col-md-5">
+          <div class = "left-right-text-steps left-right-text-row-2 pt-3" >
+            <h2>
+              {{ .header }}
+            </h2>
+            <h4 >
+              {{ .title }}
+            </h4>
+            <p>
+              {{ .paragraph1 }}
+            </h3>
+            <p>
+              {{ .paragraph2 }}
+            </p>
+            <p>
+              {{ .paragraph3 }}
+            </p>            
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    {{ end }}
+  </div>
+</div>
 
 <!-- <div id="demo" class="strip strip-white features pt-1 pb-1 pb-md-10 pb-sm-1">
   <div class="container">
@@ -265,6 +359,23 @@
   </div>
 </div> -->
 
+<div class="strip strip-white pb-4">
+  <div class="container strip-dark pt-10 pb-10 card">
+    <div class="container col-12 row">
+      <div class="col-12 col-md-6">
+        <h2 class="pb-5">Start writing your own backend code now!</h2>
+        <p class="pb-5">
+          Whether you are developing a website or you want to write your first blockchain or AI app, we've got you covered!
+        </p>
+        <a class="button-outlined" href="https://github.com/Genez-io/genezio-examples">Check out our examples!</a>
+      </div>
+      <div class="col-md-6 capy">
+        <img class="mx-10" alt="capybara" src="/images/capy.webp"/>
+      </div>
+    </div>
+    </div>
+</div>
+
 <div class="strip strip-white features pt-md-10">
   <div class="container pb-10">
     <div class="row">
@@ -292,12 +403,12 @@
             </div>
             {{ if (gt (len .features) 0) }}
             <div class="plan-details">
-              <h3 class="plan-features-heading">{{ .featuresHeading }}</h3>
+              <!-- <h3 class="plan-features-heading">{{ .featuresHeading }}</h3> -->
               <div class="plan-features">
                 <ul>
                   {{ range .features }}
                   <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                      <path fill="{{ $.Site.Params.primary_color }}"
+                      <path fill="{{ $.Site.Params.green_color }}"
                         d="M413.505 91.951L133.49 371.966l-98.995-98.995c-4.686-4.686-12.284-4.686-16.971 0L6.211 284.284c-4.686 4.686-4.686 12.284 0 16.971l118.794 118.794c4.686 4.686 12.284 4.686 16.971 0l299.813-299.813c4.686-4.686 4.686-12.284 0-16.971l-11.314-11.314c-4.686-4.686-12.284-4.686-16.97 0z" />
                     </svg><span>{{ . }}</span></li>
                   {{end}}

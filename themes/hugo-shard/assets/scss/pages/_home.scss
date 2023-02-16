@@ -470,4 +470,70 @@
     border: 0.5px solid #666666;
     margin: 40px 0;
   }
+  .card {
+    border-radius: 20px;
+    padding-left: 80px;
+    @include media-breakpoint-down(xs) {
+      padding-left: 40px;
+      margin: 0 20px;
+    }
+    p {
+      color: white;
+      font-size: 20px;
+      line-height: 24px;
+      font-weight: 600;
+      width: 85%;
+      @include media-breakpoint-down(xs) {
+        font-size: 16px;
+        line-height: 20px;
+        width: 60vw;
+      }
+    }
+    h2 {
+      color: white;
+      font-size: 48px;
+      line-height: 59px;
+      @include media-breakpoint-down(xs) {
+        font-size: 32px;
+        line-height: 36px;
+        width: 60vw;
+      }
+    }
+    a {
+      color: $green;
+    }
+    .capy {
+      @include media-breakpoint-down(xs) {
+        display: none;
+      }
+    }
+  }
+  .left-right-text-steps{
+    h2 {
+      font-size: 2rem;
+      color: $primary;
+      line-height: 33.89px;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+    h4 {
+      color: #1a1a1a;
+      font-weight: 600;
+      font-size: 1.75rem;
+      line-height: 38.73px;
+
+    }
+    h3 {
+      color: #1A1A1A;
+      font-weight: 700;
+      font-size: 1rem;
+      line-height: 19.36px;
+    }
+    p {
+      color: #1A1A1A;
+      font-weight: 500;
+      font-size: 1rem;
+      line-height: 19.36px;
+    }
+  }
 }

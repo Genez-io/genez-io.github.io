@@ -3,7 +3,7 @@
     "name": "Standard Plan",
     "description": "For individuals and open source projects.",
     "price": "Free",
-    "buttonText": "Get Started",
+    "buttonText": "Choose Plan",
     "buttonLink": "https://app.genez.io",
     "highlighted": true,
     "featuresHeading": "What's included?",
