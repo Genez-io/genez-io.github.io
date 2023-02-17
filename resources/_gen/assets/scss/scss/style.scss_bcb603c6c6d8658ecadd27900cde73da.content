@@ -16636,8 +16636,12 @@ ul.pagination li {
     font-weight: 700;
     text-decoration: none; }
 
-.page-posts-single code {
+.page-posts-single .cl {
   color: white; }
+
+.page-posts-single code {
+  color: #c35353;
+  background-color: #27282200; }
 
 .page-posts-single .posts-sidebar {
   border: 1px solid #dcdcdc;

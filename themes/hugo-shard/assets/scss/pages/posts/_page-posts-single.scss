@@ -11,8 +11,12 @@
       text-decoration: none;
     }
   }
-  code {
+  .cl {
     color: white
+  }
+  code {
+    color: rgb(195, 83, 83);
+    background-color: #27282200;
   }
   .posts-sidebar {
     @include whitebox();
