@@ -34,7 +34,7 @@ Conversion notes:
 
 ### Introduction
 
-genezio is a serverless solution for building seamlessly full stack web and mobile applications in a scalable and cost efficient way.
+genezio is a serverless solution for seamlessly building full-stack web and mobile applications in a scalable and cost-efficient way.
 
 
 ### Documentation
