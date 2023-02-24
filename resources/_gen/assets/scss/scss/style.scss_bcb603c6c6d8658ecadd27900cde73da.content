@@ -16209,6 +16209,9 @@ ul.pagination li {
       @media (min-width: 576px) {
         .page-home .lead .lead-buttons a:first-of-type {
           margin-right: 10px; } }
+.page-home .keyword {
+  background: rgba(217, 217, 217, 0.5); }
+
 .page-home .capybara {
   z-index: 30;
   margin-left: 460px;

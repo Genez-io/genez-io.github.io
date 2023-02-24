@@ -221,13 +221,13 @@
               {{ .title }}
             </h4>
             <p>
-              {{ .paragraph1 }}
-            </h3>
+              {{ .paragraph1Start }}<span class="keyword">{{ .genezioInit }}</span>{{ .paragraph1End }}
+            </p>
             <p>
               {{ .paragraph2 }}
             </p>
             <p>
-              {{ .paragraph3 }}
+              {{ .paragraph3 }}<span class="keyword">{{ .helloWorld }}</span>{{ .paragraph3Middle }}<span class="keyword">{{ .hello }}</span>{{ .paragraph3End }}
             </p>            
           </div>
         </div>
@@ -243,10 +243,10 @@
               {{ .title }}
             </h4>
             <p>
-              {{ .paragraph1 }}
-            </h3>
+              {{ .paragraph1 }}<span class="keyword">{{ .genezioDeploy }}</span>{{ .paragraph1End }}
+            </p>
             <p>
-              {{ .paragraph2 }}
+              {{ .paragraph2 }}<span class="keyword">{{ .genezioLocal }}</span>{{ .paragraph2Middle }}<span class="keyword">{{ .genezioLocal }}</span>{{ .paragraph2Middle2 }}<span class="keyword">{{ .genezioDeploy }}</span>{{ .paragraph2End }}
             </p>
             <p>
               {{ .paragraph3 }}
@@ -278,8 +278,8 @@
               {{ .title }}
             </h4>
             <p>
-              {{ .paragraph1 }}
-            </h3>
+              {{ .paragraph1 }}<span class="keyword">{{ .genezioLocal }}</span>{{ .paragraph1Middle }}<span class="keyword">{{ .genezioDeploy }}</span>{{ .paragraph1End }}
+            </p>
             <p>
               {{ .paragraph2 }}
             </p>
