@@ -12,7 +12,7 @@
         "textAlignment":"left",
         "header":"Step 2",
         "title": "Deploy your newly created project",
-        "paragraph1": "To deploy your project use genezio deploy at the command prompt in the project folder.",
+        "paragraph1": "To deploy your project use `genezio deploy` at the command prompt in the project folder.",
         "paragraph2": "Use `genezio local` to start a local dev environment. Switch from local to production and back using `genezio local` and `genezio deploy`.",
         "paragraph3": "This step creates a bundle and deploys it in the genezio cloud that runs on AWS. We take care of scaling the infrastructure up and down based on your usage pattern.",
         "row":"2"
@@ -21,7 +21,7 @@
         "textAlignment":"right",
         "header":"Step 3",
         "title": "Connect your client application and start building",
-        "paragraph1": "Both genezio deploy and genezio local create an SDK with classes that mirror the backend classes written by you. The SDK uses JSON RPC to communicate with the backend.",
+        "paragraph1": "Both `genezio deploy` and `genezio local` create an SDK with classes that mirror the backend classes written by you. The SDK uses JSON RPC to communicate with the backend.",
         "paragraph2": "The SDK can now be generated in Javascript, TypeScript and Swift. More language support is planned, like Kotlin, Flutter and Python for IoT.",
         "paragraph3": "You will need to import the SDK class in your code and call its methods - that’s it - enjoy our example!",
         "row":"3"
