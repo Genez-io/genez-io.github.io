@@ -1,7 +1,7 @@
 ---
 title: 'Blog'
 date: 2019-02-24
-url: '/blog/'
+url: '/blog'
 ---
 
 # Read our blog to find out more about..
