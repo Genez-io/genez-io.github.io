@@ -555,7 +555,9 @@ Lastly, add a method to get the saved events from the database.
 ```
 Add `blockchain.js` to the genezio configuration file to prepare this class for deployment.
 
-```genezio addClass blockchain.js```
+```
+genezio addClass blockchain.js
+```
 
 Configure the `sync()` method in the `genezio.yaml` to be a cron that triggers every minute. Your `genezio.yaml` file should look like this:
 ```yaml
@@ -680,37 +682,37 @@ function App() {
 
   return (
 
-    &lt;div className="App">
+    <div className="App">
 
-      &lt;header className="App-header">
+      <header className="App-header">
 
-        &lt;h1>Genezio Smart Contract Indexer&lt;/h1>
+        <h1>Genezio Smart Contract Indexer&lt;/h1>
 
-        &lt;List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
+        <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
 
           {events.map((event) =>
 
-            &lt;ListItem>
+            <ListItem>
 
-              &lt;ListItemText primary={event.name} secondary={event.blockNumber + " " + JSON.stringify(event.parameters)} />
+              <ListItemText primary={event.name} secondary={event.blockNumber + " " + JSON.stringify(event.parameters)} />
 
-            &lt;/ListItem>
+            </ListItem>
 
           )
 
           }
 
-        &lt;/List>
+        </List>
 
-        &lt;div>
+        <div>
 
-        &lt;Pagination count={Math.floor(totalCount / CHUNKS)} onChange={handleChange}>&lt;/Pagination>
+        <Pagination count={Math.floor(totalCount / CHUNKS)} onChange={handleChange}>&lt;/Pagination>
 
-        &lt;/div>
+        </div>
 
-      &lt;/header>
+      </header>
 
-    &lt;/div>
+    </div>
 
   );
 
