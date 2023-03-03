@@ -277,7 +277,8 @@
 </span></span><span class=line><span class=cl>        <span class=p>}</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span></code></pre></div><p>Add <code>blockchain.js</code> to the genezio configuration file to prepare this class for deployment.</p><p><code>genezio addClass blockchain.js</code></p><p>Configure the <code>sync()</code> method in the <code>genezio.yaml</code> to be a cron that triggers every minute. Your <code>genezio.yaml</code> file should look like this:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-yaml data-lang=yaml><span class=line><span class=cl><span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>blockchain-project</span><span class=w>
+</span></span></code></pre></div><p>Add <code>blockchain.js</code> to the genezio configuration file to prepare this class for deployment.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>genezio addClass blockchain.js
+</span></span></code></pre></div><p>Configure the <code>sync()</code> method in the <code>genezio.yaml</code> to be a cron that triggers every minute. Your <code>genezio.yaml</code> file should look like this:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-yaml data-lang=yaml><span class=line><span class=cl><span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>blockchain-project</span><span class=w>
 </span></span></span><span class=line><span class=cl><span class=w>
 </span></span></span><span class=line><span class=cl><span class=w></span><span class=nt>region</span><span class=p>:</span><span class=w> </span><span class=l>us-east-1</span><span class=w>
 </span></span></span><span class=line><span class=cl><span class=w>
@@ -369,37 +370,37 @@
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>  <span class=k>return</span> <span class=p>(</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=o>&amp;</span><span class=nx>lt</span><span class=p>;</span><span class=nx>div</span> <span class=nx>className</span><span class=o>=</span><span class=s2>&#34;App&#34;</span><span class=o>&gt;</span>
+</span></span><span class=line><span class=cl>    <span class=o>&lt;</span><span class=nx>div</span> <span class=nx>className</span><span class=o>=</span><span class=s2>&#34;App&#34;</span><span class=o>&gt;</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>      <span class=o>&amp;</span><span class=nx>lt</span><span class=p>;</span><span class=nx>header</span> <span class=nx>className</span><span class=o>=</span><span class=s2>&#34;App-header&#34;</span><span class=o>&gt;</span>
+</span></span><span class=line><span class=cl>      <span class=o>&lt;</span><span class=nx>header</span> <span class=nx>className</span><span class=o>=</span><span class=s2>&#34;App-header&#34;</span><span class=o>&gt;</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>        <span class=o>&amp;</span><span class=nx>lt</span><span class=p>;</span><span class=nx>h1</span><span class=o>&gt;</span><span class=nx>Genezio</span> <span class=nx>Smart</span> <span class=nx>Contract</span> <span class=nx>Indexer</span><span class=o>&amp;</span><span class=nx>lt</span><span class=p>;</span><span class=err>/h1&gt;</span>
+</span></span><span class=line><span class=cl>        <span class=o>&lt;</span><span class=nx>h1</span><span class=o>&gt;</span><span class=nx>Genezio</span> <span class=nx>Smart</span> <span class=nx>Contract</span> <span class=nx>Indexer</span><span class=o>&amp;</span><span class=nx>lt</span><span class=p>;</span><span class=err>/h1&gt;</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>        <span class=o>&amp;</span><span class=nx>lt</span><span class=p>;</span><span class=nx>List</span> <span class=nx>sx</span><span class=o>=</span><span class=p>{{</span> <span class=nx>width</span><span class=o>:</span> <span class=s1>&#39;100%&#39;</span><span class=p>,</span> <span class=nx>maxWidth</span><span class=o>:</span> <span class=mi>360</span><span class=p>,</span> <span class=nx>bgcolor</span><span class=o>:</span> <span class=s1>&#39;background.paper&#39;</span> <span class=p>}}</span><span class=o>&gt;</span>
+</span></span><span class=line><span class=cl>        <span class=o>&lt;</span><span class=nx>List</span> <span class=nx>sx</span><span class=o>=</span><span class=p>{{</span> <span class=nx>width</span><span class=o>:</span> <span class=s1>&#39;100%&#39;</span><span class=p>,</span> <span class=nx>maxWidth</span><span class=o>:</span> <span class=mi>360</span><span class=p>,</span> <span class=nx>bgcolor</span><span class=o>:</span> <span class=s1>&#39;background.paper&#39;</span> <span class=p>}}</span><span class=o>&gt;</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>          <span class=p>{</span><span class=nx>events</span><span class=p>.</span><span class=nx>map</span><span class=p>((</span><span class=nx>event</span><span class=p>)</span> <span class=p>=&gt;</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>            <span class=o>&amp;</span><span class=nx>lt</span><span class=p>;</span><span class=nx>ListItem</span><span class=o>&gt;</span>
+</span></span><span class=line><span class=cl>            <span class=o>&lt;</span><span class=nx>ListItem</span><span class=o>&gt;</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>              <span class=o>&amp;</span><span class=nx>lt</span><span class=p>;</span><span class=nx>ListItemText</span> <span class=nx>primary</span><span class=o>=</span><span class=p>{</span><span class=nx>event</span><span class=p>.</span><span class=nx>name</span><span class=p>}</span> <span class=nx>secondary</span><span class=o>=</span><span class=p>{</span><span class=nx>event</span><span class=p>.</span><span class=nx>blockNumber</span> <span class=o>+</span> <span class=s2>&#34; &#34;</span> <span class=o>+</span> <span class=nx>JSON</span><span class=p>.</span><span class=nx>stringify</span><span class=p>(</span><span class=nx>event</span><span class=p>.</span><span class=nx>parameters</span><span class=p>)}</span> <span class=o>/&gt;</span>
+</span></span><span class=line><span class=cl>              <span class=o>&lt;</span><span class=nx>ListItemText</span> <span class=nx>primary</span><span class=o>=</span><span class=p>{</span><span class=nx>event</span><span class=p>.</span><span class=nx>name</span><span class=p>}</span> <span class=nx>secondary</span><span class=o>=</span><span class=p>{</span><span class=nx>event</span><span class=p>.</span><span class=nx>blockNumber</span> <span class=o>+</span> <span class=s2>&#34; &#34;</span> <span class=o>+</span> <span class=nx>JSON</span><span class=p>.</span><span class=nx>stringify</span><span class=p>(</span><span class=nx>event</span><span class=p>.</span><span class=nx>parameters</span><span class=p>)}</span> <span class=o>/&gt;</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>            <span class=o>&amp;</span><span class=nx>lt</span><span class=p>;</span><span class=err>/ListItem&gt;</span>
+</span></span><span class=line><span class=cl>            <span class=o>&lt;</span><span class=err>/ListItem&gt;</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>          <span class=p>)</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>          <span class=p>}</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>        <span class=o>&amp;</span><span class=nx>lt</span><span class=p>;</span><span class=err>/List&gt;</span>
+</span></span><span class=line><span class=cl>        <span class=o>&lt;</span><span class=err>/List&gt;</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>        <span class=o>&amp;</span><span class=nx>lt</span><span class=p>;</span><span class=nx>div</span><span class=o>&gt;</span>
+</span></span><span class=line><span class=cl>        <span class=o>&lt;</span><span class=nx>div</span><span class=o>&gt;</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>        <span class=o>&amp;</span><span class=nx>lt</span><span class=p>;</span><span class=nx>Pagination</span> <span class=nx>count</span><span class=o>=</span><span class=p>{</span><span class=nb>Math</span><span class=p>.</span><span class=nx>floor</span><span class=p>(</span><span class=nx>totalCount</span> <span class=o>/</span> <span class=nx>CHUNKS</span><span class=p>)}</span> <span class=nx>onChange</span><span class=o>=</span><span class=p>{</span><span class=nx>handleChange</span><span class=p>}</span><span class=o>&gt;&amp;</span><span class=nx>lt</span><span class=p>;</span><span class=err>/Pagination&gt;</span>
+</span></span><span class=line><span class=cl>        <span class=o>&lt;</span><span class=nx>Pagination</span> <span class=nx>count</span><span class=o>=</span><span class=p>{</span><span class=nb>Math</span><span class=p>.</span><span class=nx>floor</span><span class=p>(</span><span class=nx>totalCount</span> <span class=o>/</span> <span class=nx>CHUNKS</span><span class=p>)}</span> <span class=nx>onChange</span><span class=o>=</span><span class=p>{</span><span class=nx>handleChange</span><span class=p>}</span><span class=o>&gt;&amp;</span><span class=nx>lt</span><span class=p>;</span><span class=err>/Pagination&gt;</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>        <span class=o>&amp;</span><span class=nx>lt</span><span class=p>;</span><span class=err>/div&gt;</span>
+</span></span><span class=line><span class=cl>        <span class=o>&lt;</span><span class=err>/div&gt;</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>      <span class=o>&amp;</span><span class=nx>lt</span><span class=p>;</span><span class=err>/header&gt;</span>
+</span></span><span class=line><span class=cl>      <span class=o>&lt;</span><span class=err>/header&gt;</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=o>&amp;</span><span class=nx>lt</span><span class=p>;</span><span class=err>/div&gt;</span>
+</span></span><span class=line><span class=cl>    <span class=o>&lt;</span><span class=err>/div&gt;</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>  <span class=p>);</span>
 </span></span><span class=line><span class=cl>
