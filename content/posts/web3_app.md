@@ -129,7 +129,7 @@ Select _“Connect your application”_:
 
 ![Street Art Image](/posts/ss_23.webp)
 
-There you can find the Mongo DB URI. Replace &lt;admin>:&lt;password> with the admin:password pair you configured when you created the DB:
+There you can find the Mongo DB URI. Replace `<admin>`:`<password>` with the admin:password pair you configured when you created the DB:
 
 ![Street Art Image](/posts/ss_15.webp)
 
@@ -282,7 +282,7 @@ Where do you want to save your SDK? [default value: ./sdk/]: ../client/src/sdk
 
 Your genezio project was successfully initialized!
 
-The genezio.yaml configuration file was generated. You can now add the classes that you want to deploy using the 'genezio addClass &lt;className> &lt;classType>' command.
+The genezio.yaml configuration file was generated. You can now add the classes that you want to deploy using the 'genezio addClass <className> <classType>' command.
 ```
 Create a package.json using npm:
 ```
@@ -686,7 +686,7 @@ function App() {
 
       <header className="App-header">
 
-        <h1>Genezio Smart Contract Indexer&lt;/h1>
+        <h1>Genezio Smart Contract Indexer</h1>
 
         <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
 
@@ -706,7 +706,7 @@ function App() {
 
         <div>
 
-        <Pagination count={Math.floor(totalCount / CHUNKS)} onChange={handleChange}>&lt;/Pagination>
+        <Pagination count={Math.floor(totalCount / CHUNKS)} onChange={handleChange}></Pagination>
 
         </div>
 
@@ -779,7 +779,7 @@ Doing the final touch-ups...✅
 
 Your code was deployed and the SDK was successfully generated!
 
-Your backend project has been deployed and is available at https://app.genez.io/project/&lt;project-id-here>
+Your backend project has been deployed and is available at https://app.genez.io/project/<project-id-here>
 ```
 Congrats again 🥳 Now you can manage your project from the genezio Dashboard - you can test it, check the logs, or delete it if you don’t need it anymore.
 
