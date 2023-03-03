@@ -5,7 +5,7 @@ tags:
   - Tutorials
 author:
   - Andreia Ocanoaia
-thumbnail: /images/chatgptapp.svg
+thumbnail: /images/web3app.svg
 preview: In this tutorial, I am going to show you how to create your first Web3 application
 ---
 <!-----
