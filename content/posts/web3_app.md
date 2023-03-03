@@ -1,5 +1,5 @@
 ---
-title: Create your first Web3 app using genezio
+title: Create your first Web3 app
 date: 2022-03-03
 tags:
   - Tutorials
@@ -301,11 +301,11 @@ Create a `config.js` file and paste there the constants that you obtained in the
 
 // Replace these values with your own
 
-export const CONTRACT_ADDRESS = &lt;todo-paste-the-contract-address-here>
+export const CONTRACT_ADDRESS = <todo-paste-the-contract-address-here>
 
-export const BLAST_API_RPC_ENDPOINT = &lt;todo-paste-the-blast-api-rpc-endpoint-here>
+export const BLAST_API_RPC_ENDPOINT = <todo-paste-the-blast-api-rpc-endpoint-here>
 
-export const MONGO_DB_URI = &lt;todo-paste-the-mongo-db-uri-here>
+export const MONGO_DB_URI = <todo-paste-the-mongo-db-uri-here>
 ```
 Create an `abi.js` and paste there the Ethereum bytecode of the smart contract:
 ```javascript
