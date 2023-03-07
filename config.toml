@@ -49,8 +49,10 @@ pygmentsUseClasses = true
         footer_tertiary_heading = "Support"
         show_social_media_links = true
         facebook = "https://www.facebook.com/profile.php?id=100086667803855"
-        twitter = "https://twitter.com/GenezioNetwork"
+        twitter = "https://twitter.com/Geneziodev"
         angellist = false
+        instagram = "https://www.instagram.com/genezio.dev/"
+        discord = "https://discord.com/invite/uc9H5YKjXv"
         linkedin = "https://www.linkedin.com/company/genez-io/"
 
     [params.homepage]
@@ -129,8 +131,8 @@ pygmentsUseClasses = true
     weight = 3
 
 [[menu.footer_tertiary]]
-    name = "Become part of our community! Join our Discord!"
-    url = "https://discord.gg/uc9H5YKjXv"
+    name = "Brand Assets"
+    url = "https://drive.google.com/drive/folders/1DUTEllKJygFyO3lsHi4uu703iZfYQHB5?usp=sharing"
     weight = 4
     
 [permalinks]
