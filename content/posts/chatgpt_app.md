@@ -3,8 +3,8 @@ title: Create your first app using ChatGPT
 date: 2022-02-17
 tags:
   - Tutorials
-author:
-  - Radu Dumitrescu
+author: Radu Dumitrescu
+linkedIn: https://www.linkedin.com/in/radu-andrei-dumitrescu/
 thumbnail: /images/chatgptapp.svg
 preview: In this tutorial, I will show you how to create an app called the Rephrasing App.
 ---

@@ -50,11 +50,16 @@
             {{ .Params.preview }}
             {{ $dateFormat := default "Jan 2, 2006" (index .Site.Params "date_format") }}
           </div>
-          <div class="post-date">
+          <div class="post-author">
+            {{ if and (.Params.author) (not .Date.IsZero) }}
+            <span class="post-author-name"><a href="{{ .Params.linkedIn | relURL }}">{{ .Params.author }}</a> - {{ .Date.Format $dateFormat }}</span>
+            {{ end }}
+          </div>
+          <!-- <div class="post-date">
             {{ if not .Date.IsZero }}
             <span class="post-date-date">{{ .Date.Format $dateFormat }}</span>
             {{ end }}
-          </div>
+          </div> -->
         </div>
       </div>
     </div>

@@ -12,6 +12,7 @@
   .post-right {
   }
   .post-date {
+    color: black;
     .post-date-date {
       text-transform: uppercase;
       font-weight: 400;
@@ -109,7 +110,7 @@
     }
   }
   .post-author {
-    display: flex;
+    color: black;
     .post-author-avatar {
       margin-right: 5px;
       img {
@@ -121,7 +122,7 @@
     .post-author-info {
       a.post-author-name {
         font-size: 1rem;
-        color: #222;
+        color: black;
       }
       span.post-author-date {
         display: none;

@@ -15,30 +15,20 @@
         </div>
         {{ end }}
         <h1>{{ .Title }}</h1>
-        {{ range .Params.authors }}
-        {{ with $.Site.GetPage "taxonomyTerm" (printf "authors/%s" (urlize .)) }}
-        <div class="post-author">
-          <div class="post-author-avatar">
-            <img src="{{ .Site.BaseURL }}{{ .Params.image }}" alt="" />
-          </div>
-          <div class="post-author-info">
-            <a class="post-author-name" href="{{ .Permalink }}">{{ .Params.name }}</a>
-            {{ $dateFormat := default "Jan 2, 2006" (index .Site.Params "date_format") }}
+        <a class="post-author-name" href="{{ .Params.linkedIn }}">{{ .Params.author }}</a>
+        <div class="post-date pt-1">
+        {{ $dateFormat := default "Jan 2, 2006" (index .Site.Params "date_format") }}
             {{ if not .Date.IsZero }}
-            <span class="post-author-date">{{ .Date.Format $dateFormat }}</span>
-            {{ end }}
-          </div>
+            <span class="post-date-date">{{ .Date.Format $dateFormat }}</span>
+        {{ end }}
         </div>
-        {{ end }}
-        {{ end }}
-        <!-- <div class="dots-small-4"></div> -->
       </div>
     </div>
   </div>
 </div>
 
 <div class="strip strip-white">
-  <div class="container pt-4 pt-md-10 pb-4 pb-md-10">
+  <div class="container pt-10 pt-md-8 pb-4 pb-md-10">
     <div class="row justify-content-center">
       <div class="col-12 col-lg-8">
         <div class="content">{{.Content}}</div>

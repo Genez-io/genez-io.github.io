@@ -3,8 +3,8 @@ title: Create your first Web3 app
 date: 2022-03-03
 tags:
   - Tutorials
-author:
-  - Andreia Ocanoaia
+author: Andreia Ocanoaia
+linkedIn: https://www.linkedin.com/in/andreia-irina-ocanoaia/
 thumbnail: /images/web3app.svg
 preview: In this tutorial, I am going to show you how to create your first Web3 application
 ---
