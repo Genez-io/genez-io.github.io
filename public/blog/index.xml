@@ -8,6 +8,16 @@
     <language>en-us</language>
     <lastBuildDate>Sun, 24 Feb 2019 00:00:00 +0000</lastBuildDate><atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>When to use AWS Lambda and genezio?</title>
+      <link>/blog/when-to-use-aws-lambda-and-genezio/</link>
+      <pubDate>Wed, 22 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/when-to-use-aws-lambda-and-genezio/</guid>
+      <description>When to use AWS Lambda and genezio? In recent years, serverless computing has become increasingly popular among developers seeking to simplify the deployment and management of their applications.
+AWS Lambda is a well known serverless computing service provided by Amazon Web Services. It allows developers to write functions which are executed in lightweight virtual machines (micro vms) in response to specific events. These virtual machines process requests before returning to a dormant state, with users only paying for the time they are active.</description>
+    </item>
+    
+    <item>
       <title>Create your first Web3 app</title>
       <link>/blog/create-your-first-web3-app/</link>
       <pubDate>Thu, 03 Mar 2022 00:00:00 +0000</pubDate>

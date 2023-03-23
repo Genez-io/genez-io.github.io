@@ -8,6 +8,9 @@ pygmentsCodeFences = true
 pygmentsCodefencesGuessSyntax = true
 pygmentsUseClasses = true
 
+[build]
+  writeStats = true
+
 [params]
     primary_color = "#6f42c1"
     primary_light = "#ffffff"
