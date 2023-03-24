@@ -2,7 +2,7 @@
 title: When to use AWS Lambda and genezio?
 date: 2023-03-22
 tags:
-  - Comparision
+  - Comparison
 author: Bogdan Vlad
 linkedIn: https://www.linkedin.com/in/iulian-bogdan-vlad/
 thumbnail: /images/genezio_aws.png
