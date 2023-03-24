@@ -25,7 +25,8 @@
       a.appendChild(r);
   })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.10.2/lottie.min.js" integrity="sha512-fTTVSuY9tLP+l/6c6vWz7uAQqd1rq3Q/GyKBN2jOZvJSLC5RjggSdboIFL1ox09/Ezx/AKwcv/xnDeYN9+iDDA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.10.2/lottie.min.js" integrity="sha512-fTTVSuY9tLP+l/6c6vWz7uAQqd1rq3Q/GyKBN2jOZvJSLC5RjggSdboIFL1ox09/Ezx/AKwcv/xnDeYN9+iDDA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+<script src="/js/bodymovin.js"></script>
 {{ end }}
 
 {{ define "main" }}
@@ -147,7 +148,7 @@
                 addEventListener('DOMContentLoaded', handler, false);
                 addEventListener('load', handler, false);
                 addEventListener('scroll', handler, false);
-                //addEventListener('resize', handler, false);
+                addEventListener('resize', handler, false);
             } else if (window.attachEvent)  {
                 attachEvent('onDOMContentLoaded', handler); // Internet Explorer 9+ :(
                 attachEvent('onload', handler);
@@ -591,7 +592,6 @@
 {{ else }}
 <script type="text/javascript" src="{{ ($homeJS | minify | fingerprint).RelPermalink }}"></script>
 {{ end }}
-
 
 {{ end }}
 
