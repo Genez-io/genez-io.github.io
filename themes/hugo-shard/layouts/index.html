@@ -25,8 +25,7 @@
       a.appendChild(r);
   })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
 </script>
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.10.2/lottie.min.js" integrity="sha512-fTTVSuY9tLP+l/6c6vWz7uAQqd1rq3Q/GyKBN2jOZvJSLC5RjggSdboIFL1ox09/Ezx/AKwcv/xnDeYN9+iDDA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
-<script src="/js/bodymovin.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.10.2/lottie.min.js" integrity="sha512-fTTVSuY9tLP+l/6c6vWz7uAQqd1rq3Q/GyKBN2jOZvJSLC5RjggSdboIFL1ox09/Ezx/AKwcv/xnDeYN9+iDDA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 {{ end }}
 
 {{ define "main" }}
@@ -109,14 +108,7 @@
           <img src = "/images/chart2.webp" alt = "chart2" class = "chart-2"> -->
           <div id="savemoney">
           <script>
-            var animation = bodymovin.loadAnimation({
-              container: document.getElementById('savemoney'),
-              renderer: 'svg',
-              loop: false,
-              autoplay: false,
-              path: '/page/SaveMoney.json',
-              name: 'savemoney'
-            })
+            var saveMoney = undefined;
             function isElementInViewport (el) {
               var rect = el.getBoundingClientRect();
 
@@ -140,7 +132,15 @@
                 }
             }
             var handler = onVisibilityChange(document.getElementById('savemoney-container'), function() {
-              if (isElementInViewport(document.getElementById('savemoney-container'))) {
+              if (saveMoney == undefined && isElementInViewport(document.getElementById('savemoney-container'))) {
+                saveMoney = bodymovin.loadAnimation({
+                  container: document.getElementById('savemoney'),
+                  renderer: 'svg',
+                  loop: false,
+                  autoplay: false,
+                  path: '/page/SaveMoney.json',
+                  name: 'savemoney'
+                })
                 bodymovin.play('savemoney');
               }
             });
@@ -166,14 +166,7 @@
             <div id="writecleancode-container" class = "left-right-images">
               <div id="writecleancode">
               <script>
-                var animation = bodymovin.loadAnimation({
-                  container: document.getElementById('writecleancode'),
-                  renderer: 'svg',
-                  loop: false,
-                  autoplay: false,
-                  path: '/page/WriteCleanCode.json',
-                  name: 'writecleancode'
-                })
+                var cleanCode = undefined;
                 function isElementInViewport (el) {
                   var rect = el.getBoundingClientRect();
 
@@ -197,7 +190,15 @@
                     }
                 }
                 var handler = onVisibilityChange(document.getElementById('writecleancode-container'), function() {
-                  if (isElementInViewport(document.getElementById('writecleancode-container'))) {
+                  if (cleanCode == undefined && isElementInViewport(document.getElementById('writecleancode-container'))) {
+                    cleanCode = bodymovin.loadAnimation({
+                      container: document.getElementById('writecleancode'),
+                      renderer: 'svg',
+                      loop: false,
+                      autoplay: false,
+                      path: '/page/WriteCleanCode.json',
+                      name: 'writecleancode'
+                    })
                     bodymovin.play('writecleancode');
                   }
                 });
@@ -272,14 +273,7 @@
           <div id="savetime-container" class="right-image-row-3 pt-10">
             <div id="savetime">
             <script>
-              var animation = bodymovin.loadAnimation({
-                container: document.getElementById('savetime'),
-                renderer: 'svg',
-                loop: false,
-                autoplay: false,
-                path: '/page/SaveTime.json',
-                name: 'savetime'
-              })
+              var saveTime = undefined;
               function isElementInViewport (el) {
                 var rect = el.getBoundingClientRect();
 
@@ -303,7 +297,15 @@
                   }
               }
               var handler = onVisibilityChange(document.getElementById('savetime-container'), function() {
-                if (isElementInViewport(document.getElementById('savetime-container'))) {
+                if (saveTime == undefined && isElementInViewport(document.getElementById('savetime-container'))) {
+                  saveTime = bodymovin.loadAnimation({
+                    container: document.getElementById('savetime'),
+                    renderer: 'svg',
+                    loop: false,
+                    autoplay: false,
+                    path: '/page/SaveTime.json',
+                    name: 'savetime'
+                  })
                   bodymovin.play('savetime');
                 }
               });
