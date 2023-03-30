@@ -84,18 +84,18 @@
             <h2>
               {{ .header }}
             </h2>
-            <h4 >
+            <h3 >
               {{ .title }}
-            </h4>
-            <h3>
-              {{ .paragraphHead1 }}
             </h3>
+            <h4>
+              {{ .paragraphHead1 }}
+            </h4>
             <p>
               {{ .paragraph1 }}
             </p>
-            <h3>
+            <h4>
               {{ .paragraphHead2 }}
-            </h3>
+            </h4>
             <p>
               {{ .paragraph2 }}
             </p>            
@@ -224,18 +224,18 @@
             <h2>
               {{ .header }}
             </h2>
-            <h4 >
-              {{ .title }}
-            </h4>
             <h3>
-              {{ .paragraphHead1 }}
+              {{ .title }}
             </h3>
+            <h4>
+              {{ .paragraphHead1 }}
+            </h4>
             <p>
               {{ .paragraph1 }}
             </p>
             <h3>
               {{ .paragraphHead2 }}
-            </h3>
+            </h4>
             <p>
               {{ .paragraph2 }}
             </p>            
@@ -250,18 +250,18 @@
             <h2>
               {{ .header }}
             </h2>
-            <h4 >
-              {{ .title }}
-            </h4>
             <h3>
-              {{ .paragraphHead1 }}
+              {{ .title }}
             </h3>
+            <h4>
+              {{ .paragraphHead1 }}
+            </h4>
             <p>
               {{ .paragraph1 }}
             </p>
-            <h3>
+            <h4>
               {{ .paragraphHead2 }}
-            </h3>
+            </h4>
             <p>
               {{ .paragraph2 }}
             </p>            
@@ -348,9 +348,9 @@
             <h2>
               {{ .header }}
             </h2>
-            <h4 >
+            <h3>
               {{ .title }}
-            </h4>
+            </h3>
             <p>
               {{ .paragraph1Start }}<span class="keyword">{{ .genezioInit }}</span>{{ .paragraph1End }}
             </p>
@@ -370,9 +370,9 @@
             <h2>
               {{ .header }}
             </h2>
-            <h4 >
+            <h3>
               {{ .title }}
-            </h4>
+            </h3>
             <p>
               {{ .paragraph1 }}<span class="keyword">{{ .genezioDeploy }}</span>{{ .paragraph1End }}
             </p>
@@ -405,9 +405,9 @@
             <h2>
               {{ .header }}
             </h2>
-            <h4 >
+            <h3>
               {{ .title }}
-            </h4>
+            </h3>
             <p>
               {{ .paragraph1 }}<span class="keyword">{{ .genezioLocal }}</span>{{ .paragraph1Middle }}<span class="keyword">{{ .genezioDeploy }}</span>{{ .paragraph1End }}
             </p>
@@ -527,7 +527,7 @@
                   <span class="plan-price-currency">/month</span>
                 {{end}} -->
               </div>
-              <h3 class="plan-name">{{ .name }}</h3>
+              <h2 class="plan-name">{{ .name }}</h3>
               <!-- <div class="plan-description">{{ .description }}</div> -->
 
               <div class="plan-terms">{{ .terms }}</div>
