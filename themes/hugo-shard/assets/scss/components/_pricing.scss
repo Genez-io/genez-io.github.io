@@ -98,7 +98,7 @@
     font-weight: 600;
     margin-bottom: 16px;
     text-align: center;
-    color: $grey; // #282A36;
+    color: #282A36;
   }
   .plan-description {
     font-size: 16px;
@@ -150,6 +150,8 @@
     .button-disabled {
       width: 100%;
       pointer-events: none;
+      color: #282A36;
+      border-color: #282A36;
     }
   }
   .plan-terms {
