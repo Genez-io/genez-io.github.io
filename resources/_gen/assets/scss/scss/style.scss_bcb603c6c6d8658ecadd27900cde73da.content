@@ -15775,7 +15775,7 @@ ul.pagination li {
     font-weight: 600;
     margin-bottom: 16px;
     text-align: center;
-    color: #d5d5d5; }
+    color: #282A36; }
   .plan .plan-description {
     font-size: 16px;
     line-height: 26px;
@@ -15816,7 +15816,9 @@ ul.pagination li {
       width: 100%; }
     .plan .plan-button .button-disabled {
       width: 100%;
-      pointer-events: none; }
+      pointer-events: none;
+      color: #282A36;
+      border-color: #282A36; }
   .plan .plan-features-heading {
     font-weight: 500;
     color: #282A36; }
@@ -16322,15 +16324,15 @@ ul.pagination li {
 
 .page-home .left-right-text h4 {
   color: white;
-  font-weight: 600;
-  font-size: 1.75rem;
-  line-height: 38.73px; }
-
-.page-home .left-right-text h3 {
-  color: white;
   font-weight: 700;
   font-size: 1rem;
   line-height: 19.36px; }
+
+.page-home .left-right-text h3 {
+  color: white;
+  font-weight: 600;
+  font-size: 1.75rem;
+  line-height: 38.73px; }
 
 .page-home .left-right-text p {
   color: #CCCCCC;
@@ -16585,13 +16587,13 @@ ul.pagination li {
   font-weight: 800;
   margin-bottom: 10px; }
 
-.page-home .left-right-text-steps h4 {
+.page-home .left-right-text-steps h3 {
   color: #1a1a1a;
   font-weight: 600;
   font-size: 1.75rem;
   line-height: 38.73px; }
 
-.page-home .left-right-text-steps h3 {
+.page-home .left-right-text-steps h4 {
   color: #1A1A1A;
   font-weight: 700;
   font-size: 1rem;
