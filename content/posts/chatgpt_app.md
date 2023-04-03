@@ -7,6 +7,7 @@ author: Radu Dumitrescu
 linkedIn: https://www.linkedin.com/in/radu-andrei-dumitrescu/
 thumbnail: /images/chatgptapp.svg
 preview: In this tutorial, I will show you how to create an app called the Rephrasing App.
+description: In this tutorial, I will show you how to create an app called the Rephrasing App.
 ---
 <!-----
 

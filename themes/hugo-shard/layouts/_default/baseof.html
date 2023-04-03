@@ -8,6 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="{{ .Site.Params.primary_color }}" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="{{ .Site.Params.primary_color }}" media="(prefers-color-scheme: dark)">
+  <meta name="description" content="{{ .Description }}">
   {{ block "meta_tags" . }}{{end}}
   <link rel="icon" href="{{ .Site.BaseURL }}favicon.png">
   <link rel="apple-touch-icon" sizes="120x120" href="{{ .Site.BaseURL }}apple-touch-icon-120x120-precomposed.png" />

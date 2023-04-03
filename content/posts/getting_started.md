@@ -7,6 +7,7 @@ author: Radu Dumitrescu
 linkedIn: https://www.linkedin.com/in/radu-andrei-dumitrescu/
 thumbnail: /images/GettingStarted.png
 preview: This guide will get you up and running with genezio in less than five minutes
+description: This guide will get you up and running with genezio in less than five minutes
 ---
 
 <!-----

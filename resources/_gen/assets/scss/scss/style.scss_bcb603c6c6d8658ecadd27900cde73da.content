@@ -15636,7 +15636,7 @@ ul.pagination li {
     text-decoration: none; }
     .sidebar a:hover {
       text-decoration: underline; }
-  .sidebar h4 {
+  .sidebar h2 {
     text-transform: capitalize;
     margin-bottom: 10px;
     color: black; }

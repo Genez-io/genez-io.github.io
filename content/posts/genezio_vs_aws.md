@@ -5,8 +5,9 @@ tags:
   - Comparison
 author: Bogdan Vlad
 linkedIn: https://www.linkedin.com/in/iulian-bogdan-vlad/
-thumbnail: /images/genezio_aws.png
+thumbnail: /images/genezio_aws.webp
 preview: In recent years, serverless computing has become increasingly popular among developers
+description: In recent years, serverless computing has become increasingly popular among developers
 ---
 
 <!-----
