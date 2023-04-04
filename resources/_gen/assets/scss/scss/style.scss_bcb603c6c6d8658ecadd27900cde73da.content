@@ -16246,35 +16246,29 @@ ul.pagination li {
 .page-home .left-terminal {
   border-radius: 12px;
   padding-right: 25px;
-  width: 100%;
-  height: 95%; }
+  width: 100%; }
   @media (max-width: 575.98px) {
     .page-home .left-terminal {
       width: 100%;
-      height: 95%;
       margin-top: 10px;
       padding-right: 0px; } }
   @media (max-width: 767.98px) {
     .page-home .left-terminal {
       width: 100%;
-      height: 95%;
       margin-top: 10px;
       padding-right: 0px; } }
 .page-home .right-terminal {
   border-radius: 12px;
   padding-left: 25px;
-  width: 100%;
-  height: 95%; }
+  width: 100%; }
   @media (max-width: 575.98px) {
     .page-home .right-terminal {
       width: 100%;
-      height: 95%;
       margin-top: 10px;
       padding-left: 0px; } }
   @media (max-width: 767.98px) {
     .page-home .right-terminal {
       width: 100%;
-      height: 95%;
       margin-top: 10px;
       padding-left: 0px; } }
 .page-home .review {
