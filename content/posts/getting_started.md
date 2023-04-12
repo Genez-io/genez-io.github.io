@@ -9,7 +9,7 @@ thumbnail: /images/GettingStarted.png
 preview: This guide will get you up and running with genezio in less than five minutes
 # meta data start
 description: "Start building full-stack web and mobile apps with genezio in less than 5 minutes. Follow this tutorial to install the CLI, create your project and deploy it to the genezio Cloud."
-meta_og_url: "https://genez.io"
+meta_og_url: "https://genez.io/blog/getting-started-with-genezio"
 meta_og_image: "http://localhost:1313/images/GettingStarted.png"
 # meta data end
 ---

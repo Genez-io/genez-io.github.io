@@ -9,7 +9,7 @@ thumbnail: /images/chatgptapp.svg
 preview: In this tutorial, I will show you how to create an app called the Rephrasing App.
 # meta data start
 description: "Learn how to build your first ChatGPT app in this step-by-step tutorial. Rephrase text and improve your writing with React and genezio. Get started now!"
-meta_og_url: "https://genez.io"
+meta_og_url: "https://genez.io/blog/create-your-first-app-using-chatgpt"
 meta_og_image: "https://genez.io/images/chatgptapp.svg"
 # meta data end
 ---
