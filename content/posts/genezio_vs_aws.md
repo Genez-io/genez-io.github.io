@@ -7,7 +7,11 @@ author: Bogdan Vlad
 linkedIn: https://www.linkedin.com/in/iulian-bogdan-vlad/
 thumbnail: /images/genezio_aws.webp
 preview: In recent years, serverless computing has become increasingly popular among developers
-description: In recent years, serverless computing has become increasingly popular among developers
+# meta data start
+description: "Compare AWS Lambda and genezio for serverless computing in this article. Learn which platform is best for your app needs based on use cases and benefits."
+meta_og_url: "https://genez.io"
+meta_og_image: "http://localhost:1313/images/genezio_aws.webp"
+# meta data end
 ---
 
 <!-----
@@ -37,8 +41,6 @@ Conversion notes:
 
 ----->
 
-
-# When to use AWS Lambda and genezio?
 
 In recent years, serverless computing has become increasingly popular among developers seeking to simplify the deployment and management of their applications.
 

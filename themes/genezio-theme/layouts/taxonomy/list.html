@@ -1,0 +1,76 @@
+{{ define "header_css" }}{{ end }}
+{{ define "body_classes" }}page-taxonomy-list{{ end }}
+{{ define "header_classes" }}{{ end }}
+
+{{ define "main" }}
+<div class="intro">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 page-posts-list">
+        <h1>{{ .Title }}</h1>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container pb-6">
+  <div class="row">
+    <div class="sidebar col-12 col-md-6 col-lg-4">
+      {{ range $taxonomyname, $taxonomy := .Site.Taxonomies }}
+        {{ if gt (len $taxonomy) 0 }}
+        <h2>{{ $taxonomyname }}</h2>
+        <ul class="pt-1">
+          {{ range $name, $value := $taxonomy }}
+            <li class="pb-1"><a href="{{ printf "/%s/" $taxonomyname | relLangURL }}{{ $name | urlize }}">{{ $name }}</a></li>
+          {{ end }}
+        </ul>
+        {{ end }}
+      {{ end }}
+    </div>
+  </div>
+</div>
+<div class="container pb-6">
+  <div class="row">
+    {{ $paginator := .Paginate (where .Pages "Type" "posts") }}
+    {{ range $paginator.Pages }}
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="post post-summary mb-4">
+        {{ if .Params.thumbnail }}
+        <div class="post-left">
+          <div class="post-image">
+            <a href="{{ .RelPermalink }}"><img class="img-fluid" alt={{ .Title }} src="{{ .Params.thumbnail | relURL }}" /></a>
+          </div>
+        </div>
+        {{ end }}
+        <div class="post-right">
+          {{ if .Params.tags }}
+          <div class="post-tags">
+            {{ range .Params.tags }}
+            <a class="post-tag" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+            {{ end }}
+          </div>
+          {{ end }}
+          <div class="post-title">
+            <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+          </div>
+          <div class="post-meta post-description">
+            {{ .Params.preview }}
+            {{ $dateFormat := default "Jan 2, 2006" (index .Site.Params "date_format") }}
+          </div>
+          <div class="post-date">
+            {{ if not .Date.IsZero }}
+            <span class="post-date-date">{{ .Date.Format $dateFormat }}</span>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</div>
+  <div class="row">
+    <div class="col-12">
+      {{ partial "paginator" . }}
+    </div>
+  </div>
+</div>
+{{ end }}

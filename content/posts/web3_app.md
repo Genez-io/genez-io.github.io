@@ -7,7 +7,11 @@ author: Andreia Ocanoaia
 linkedIn: https://www.linkedin.com/in/andreia-irina-ocanoaia/
 thumbnail: /images/web3app.svg
 preview: In this tutorial, I am going to show you how to create your first Web3 application
-description: In this tutorial, I am going to show you how to create your first Web3 application
+# meta data start
+description: "Build your first Web3 app on Ethereum using Blast API and genezio with this beginner-friendly tutorial. Create a smart contract indexer with React, and Metamask, and deploy the app on genezio."
+meta_og_url: "https://genez.io"
+meta_og_image: "http://localhost:1313/images/web3app.svg"
+# meta data end
 ---
 <!-----
 
