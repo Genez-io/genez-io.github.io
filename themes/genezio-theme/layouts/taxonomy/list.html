@@ -1,19 +1,17 @@
 {{ define "header_css" }}{{ end }}
-{{ define "body_classes" }}page-posts-list{{ end }}
+{{ define "body_classes" }}page-taxonomy-list{{ end }}
 {{ define "header_classes" }}{{ end }}
 
 {{ define "main" }}
-<div class="strip strip-white pt-10">
-  <div class="container pb-5 pt-10">
-    <!-- <div class="dots-large-3 zindex-1"></div> -->
-    <div class="row justify-space-between position-relative zindex-2 ">
-      <div class="col-12 col-md-8 order-1 pb-6 pb-md-0 page-posts-list">
-        {{ .Content }}
+<div class="intro">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 page-posts-list">
+        <h1>{{ .Title }}</h1>
       </div>
     </div>
   </div>
 </div>
-
 <div class="container pb-6">
   <div class="row">
     <div class="sidebar col-12 col-md-6 col-lg-4">
@@ -30,8 +28,7 @@
     </div>
   </div>
 </div>
-
-<div class="container pb-6 position-relative zindex-2 ">
+<div class="container pb-6">
   <div class="row">
     {{ $paginator := .Paginate (where .Pages "Type" "posts") }}
     {{ range $paginator.Pages }}
@@ -59,26 +56,21 @@
             {{ .Params.preview }}
             {{ $dateFormat := default "Jan 2, 2006" (index .Site.Params "date_format") }}
           </div>
-          <div class="post-author">
-            {{ if and (.Params.author) (not .Date.IsZero) }}
-            <span class="post-author-name"><a href="{{ .Params.linkedIn | relURL }}">{{ .Params.author }}</a> - {{ .Date.Format $dateFormat }}</span>
-            {{ end }}
-          </div>
-          <!-- <div class="post-date">
+          <div class="post-date">
             {{ if not .Date.IsZero }}
             <span class="post-date-date">{{ .Date.Format $dateFormat }}</span>
             {{ end }}
-          </div> -->
+          </div>
         </div>
       </div>
     </div>
     {{ end }}
   </div>
 </div>
-<div class="row">
-  <div class="col-12">
-    {{ partial "paginator" . }}
+  <div class="row">
+    <div class="col-12">
+      {{ partial "paginator" . }}
+    </div>
   </div>
-</div>
 </div>
 {{ end }}

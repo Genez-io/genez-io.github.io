@@ -15,6 +15,9 @@ you want your code to just run. And you want to write the backend
 code in your favorite language - be it Swift, Kotlin, etc."
 productTextP3: "Because you care about the environment, just as we do.  We are passionate about 
 power consumption, and we are optimizing the way the code is run towards our goal of zero overhead, fastest cold start delay, best CPU and memory resource allocation."
-# screenshot: 'images/preview.png'
+# meta data start
 description: "genezio helps you write your API, deploy it and generate the SDK for easy integration in your website/mobile app."
+meta_og_url: "https://genez.io"
+meta_og_image: "https://genez.io/images/og.jpg"
+# meta data end
 ---

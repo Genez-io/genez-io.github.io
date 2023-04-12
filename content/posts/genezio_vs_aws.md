@@ -38,8 +38,6 @@ Conversion notes:
 ----->
 
 
-# When to use AWS Lambda and genezio?
-
 In recent years, serverless computing has become increasingly popular among developers seeking to simplify the deployment and management of their applications.
 
 AWS Lambda is a well known serverless computing service provided by Amazon Web Services. It allows developers to write functions which are executed in lightweight virtual machines (micro vms) in response to specific events. These virtual machines process requests before returning to a dormant state, with users only paying for the time they are active.

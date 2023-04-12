@@ -480,11 +480,11 @@
 </div> -->
 
 <div class="strip strip-white pb-4">
-  <div class="container strip-dark pt-10 pb-10 card">
-    <div class="container col-12 row">
+  <div class="container strip-dark pt-10 pb-10 card" style="width: auto;">
+    <div class="container col-12 row p-0">
       <div class="col-12 col-md-6">
         <h2 class="pb-5">Start writing your own backend code now!</h2>
-        <p class="pb-5">
+        <p class="pb-5 text-justify">
           Whether you are developing a website or you want to write your first blockchain or AI app, we've got you covered!
         </p>
         <a class="button-outlined" href="https://github.com/Genez-io/genezio-examples">Check out our examples!</a>
@@ -501,7 +501,7 @@
     <div class="row">
       <div class="col-12">
         <div class="col-12 pb-5 pt-5">
-          <h1 class="text-center">{{ .Params.pricing_title }}</h1>
+          <h1 class="text-center">{{ .Site.Params.homepage.pricing_title }}</h1>
         </div>
         <div class="plans">
           {{ range .Site.Data.pricing }}
@@ -552,7 +552,7 @@
     <div class="row">
       <div class="col-12">
         <div class="col-12 pt-5 justify-content-center">
-          <h1 class="text-center">{{ .Params.get_started }}</h1>
+          <h1 class="text-center">{{ .Site.Params.homepage.get_started }}</h1>
         </div>
         <div class="lead text-center">
           <div class="lead-buttons">
@@ -570,5 +570,18 @@
   </div>
 </div>
 
+
+
 {{ end }}
 
+{{ define "footer_js" }}
+{{ $home := resources.Get "js/pages/home.js" }}
+{{ $homeJS := slice $home | resources.Concat "js/homeBundle.js" }}
+
+{{ if .Site.IsServer }}
+<script type="text/javascript" src="{{ ($homeJS | fingerprint).RelPermalink }}"></script>
+{{ else }}
+<script type="text/javascript" src="{{ ($homeJS | minify | fingerprint).RelPermalink }}"></script>
+{{ end }}
+
+{{ end }}
