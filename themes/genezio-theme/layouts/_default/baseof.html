@@ -10,9 +10,17 @@
   <meta name="theme-color" content="{{ .Site.Params.primary_color }}" media="(prefers-color-scheme: dark)">
 
   <!-- Favicon -->
-  <link rel="shortcut icon" href="{{ .Site.BaseURL }}favicon.ico">
+  <link rel="shortcut icon" href="{{ .Site.BaseURL }}favicon.png">
   <link rel="apple-touch-icon" sizes="120x120" href="{{ .Site.BaseURL }}apple-touch-icon-120x120-precomposed.png" />
   <link rel="apple-touch-icon" sizes="152x152" href="{{ .Site.BaseURL }}apple-touch-icon-152x152-precomposed.png" />
+
+  <!-- Add canonical URL -->
+  {{ if .IsHome }}
+  <link rel="canonical" href="{{ .Site.BaseURL }}" />
+  {{ else }}
+  <link rel="canonical" href="{{ .Permalink }}" />
+  {{ end }}
+
 
 
   <!-- Meta tags for homepage start -->
@@ -64,7 +72,7 @@
         class="menu-item-{{ "Github" | lower }}"
         title="Github">
         <a href="https://github.com/Genez-io/genezio">
-          <img src="/images/github2.webp"/>
+          <img src="/images/github2.webp" alt="GitHub"/>
         </a>
       </li>
       <li

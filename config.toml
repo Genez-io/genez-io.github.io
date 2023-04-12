@@ -8,6 +8,7 @@ pygmentsCodeFences = true
 pygmentsCodefencesGuessSyntax = true
 pygmentsUseClasses = true
 enableRobotsTXT = true
+disableHugoGeneratorInject = true
 
 [build]
   writeStats = true
