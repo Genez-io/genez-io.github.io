@@ -1,7 +1,7 @@
 baseURL = "/"
 languageCode = "en-us"
 title = "genezio"
-theme = "hugo-shard"
+theme = "genezio-theme"
 paginate = 12
 
 pygmentsCodeFences = true
@@ -25,8 +25,6 @@ enableRobotsTXT = true
     font_base = "'Inter'"
     font_heading = "'Inter'"
 
-    google_analytics_id = "G-VR905VXGKC"
-
     [params.homepage_meta_tags]
         meta_description = "genezio helps you write your API, deploy it and generate the SDK for easy integration in your website/mobile app."
         meta_og_title = "The easy way to write, deploy and use a serverless API"
@@ -42,19 +40,9 @@ enableRobotsTXT = true
         header_fixed = true
 
     [params.footer]
-        show_zerostatic_link = false
-        show_footer_logo = true
         description = "genezio is a new paradigm in cloud native programming, making it accessible to everyone, allowing elegant and quick development of websites, mobile apps, IoT apps, and many others."
-        show_menu_footer_primary = true
-        footer_primary_heading = "Product"
-        show_menu_footer_secondary = true
-        footer_secondary_heading = "Company"
-        show_menu_footer_tertiary = true
-        footer_tertiary_heading = "Support"
-        show_social_media_links = true
         facebook = "https://www.facebook.com/profile.php?id=100086667803855"
         twitter = "https://twitter.com/Geneziodev"
-        angellist = false
         instagram = "https://www.instagram.com/genezio.dev/"
         discord = "https://discord.com/invite/uc9H5YKjXv"
         linkedin = "https://www.linkedin.com/company/genez-io/"
@@ -70,53 +58,6 @@ enableRobotsTXT = true
         hero_background_gradient_one = "#9477c4"
         hero_background_gradient_two = "#9477c4"
 
-# Main Menu
-[[menu.main]]
-	name = "Product"
-	url = "/product/"
-    weight = 1
-
-[[menu.main]]
-    name = "Blog"
-    url = "/posts/"
-    weight = 3
-
-# Footer Menu Primary
-[[menu.footer_primary]]
-	name = "Home"
-	url = "/"
-    weight = 1
-
-[[menu.footer_primary]]
-	name = "Product"
-	url = "/product/"
-    weight = 2
-
-# Footer Menu Secondary
-[[menu.footer_secondary]]
-    name = "Blog"
-    url = "/posts/"
-    weight = 1
-
-[[menu.footer_secondary]]
-    name = "About"
-    url = "/about/"
-    weight = 2
-
-[[menu.footer_secondary]]
-    name = "Page 2"
-    url = "/culture/"
-    weight = 3
-    
-[[menu.footer_secondary]]
-    name = "Page 3"
-    url = "/page3/"
-    weight = 4
-
-[[menu.footer_secondary]]
-    name = "Page 4"
-    url = "/page4/"
-    weight = 5
 
 # Footer Menu Third
 [[menu.footer_tertiary]]

@@ -585,8 +585,6 @@
 {{ end }}
 
 {{ define "footer_js" }}
-{{ $home := resources.Get "js/pages/home.js" }}
-{{ $homeJS := slice $home | resources.Concat "js/homeBundle.js" }}
 
 {{ if .Site.IsServer }}
 <script type="text/javascript" src="{{ ($homeJS | fingerprint).RelPermalink }}"></script>
@@ -594,8 +592,4 @@
 <script type="text/javascript" src="{{ ($homeJS | minify | fingerprint).RelPermalink }}"></script>
 {{ end }}
 
-{{ end }}
-
-{{ define "debug" }}
-{{ partial "debug" (dict "context" . "template" "layouts/index.html") }}
 {{ end }}
