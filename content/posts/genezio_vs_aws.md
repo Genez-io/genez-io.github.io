@@ -10,7 +10,7 @@ preview: In recent years, serverless computing has become increasingly popular a
 # meta data start
 description: "Compare AWS Lambda and genezio for serverless computing in this article. Learn which platform is best for your app needs based on use cases and benefits."
 meta_og_url: "https://genez.io/blog/when-to-use-aws-lambda-and-genezio"
-meta_og_image: "http://localhost:1313/images/genezio_aws.webp"
+meta_og_image: "https://genez.io/images/genezio_aws.webp"
 # meta data end
 ---
 

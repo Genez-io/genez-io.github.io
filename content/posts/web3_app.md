@@ -10,7 +10,7 @@ preview: In this tutorial, I am going to show you how to create your first Web3 
 # meta data start
 description: "Build your first Web3 app on Ethereum using Blast API and genezio with this beginner-friendly tutorial. Create a smart contract indexer with React, and Metamask, and deploy the app on genezio."
 meta_og_url: "https://genez.io/blog/create-your-first-web3-app"
-meta_og_image: "http://localhost:1313/images/web3app.svg"
+meta_og_image: "https://genez.io/images/web3app.svg"
 # meta data end
 ---
 <!-----
