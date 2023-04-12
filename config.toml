@@ -25,17 +25,6 @@ enableRobotsTXT = true
     font_base = "'Inter'"
     font_heading = "'Inter'"
 
-    [params.homepage_meta_tags]
-        meta_description = "genezio helps you write your API, deploy it and generate the SDK for easy integration in your website/mobile app."
-        meta_og_title = "The easy way to write, deploy and use a serverless API"
-        meta_og_type = "website"
-        meta_og_url = "https://genez.io"
-        meta_og_image = "https://genez.io/images/og.jpg"
-        meta_og_description = "genezio helps you write your API, deploy it and generate the SDK for easy integration in your website/mobile app."
-        meta_twitter_card = "summary"
-        meta_twitter_site = "@GenezioNetwork"
-        meta_twitter_creator = "@GenezioNetwork"
-
     [params.global]
         header_fixed = true
 
@@ -47,12 +36,6 @@ enableRobotsTXT = true
         discord = "https://discord.com/invite/uc9H5YKjXv"
         linkedin = "https://www.linkedin.com/company/genez-io/"
 
-    [params.homepage]
-        show_features = true 
-        features_title = "Seamless development of your serverless API"
-        pricing_title = "Pricing Plans for Developers"
-        get_started = "Get started now with genezio!"
-        demo = "How to use genezio"
     
     [params.hero]
         hero_background_gradient_one = "#9477c4"

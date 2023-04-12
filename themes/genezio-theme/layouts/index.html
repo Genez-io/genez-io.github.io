@@ -4,16 +4,6 @@
 {{ define "header_classes" }}{{ end }}
 
 {{ define "meta_tags" }}
-<meta property="og:title" content="{{ .Site.Params.homepage_meta_tags.meta_og_title }}" />
-<meta property="og:type" content="{{ .Site.Params.homepage_meta_tags.meta_og_type }}" />
-<meta property="og:url" content="{{ .Site.Params.homepage_meta_tags.meta_og_url }}" />
-<meta property="og:image" content="{{ .Site.Params.homepage_meta_tags.meta_og_image }}" />
-<meta property="og:description" content="{{ .Site.Params.homepage_meta_tags.meta_og_description }}" />
-<meta name="twitter:card" content="{{ .Site.Params.homepage_meta_tags.meta_twitter_card }}" />
-<meta name="twitter:site" content="{{ .Site.Params.homepage_meta_tags.meta_twitter_site }}" />
-<meta name="twitter:creator" content="{{ .Site.Params.homepage_meta_tags.meta_twitter_creator }}" />
-
-
 <script>
   (function(h,o,t,j,a,r){
       h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
@@ -511,7 +501,7 @@
     <div class="row">
       <div class="col-12">
         <div class="col-12 pb-5 pt-5">
-          <h1 class="text-center">{{ .Site.Params.homepage.pricing_title }}</h1>
+          <h1 class="text-center">{{ .Params.pricing_title }}</h1>
         </div>
         <div class="plans">
           {{ range .Site.Data.pricing }}
@@ -562,7 +552,7 @@
     <div class="row">
       <div class="col-12">
         <div class="col-12 pt-5 justify-content-center">
-          <h1 class="text-center">{{ .Site.Params.homepage.get_started }}</h1>
+          <h1 class="text-center">{{ .Params.get_started }}</h1>
         </div>
         <div class="lead text-center">
           <div class="lead-buttons">
@@ -580,16 +570,5 @@
   </div>
 </div>
 
-
-
 {{ end }}
 
-{{ define "footer_js" }}
-
-{{ if .Site.IsServer }}
-<script type="text/javascript" src="{{ ($homeJS | fingerprint).RelPermalink }}"></script>
-{{ else }}
-<script type="text/javascript" src="{{ ($homeJS | minify | fingerprint).RelPermalink }}"></script>
-{{ end }}
-
-{{ end }}

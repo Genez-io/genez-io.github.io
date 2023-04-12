@@ -1,8 +1,8 @@
 name = "Genezio"
 description = "The Coolest Way to Write, Deploy and Use a Serverless API."
 homepage = "https://genez.io"
-tags = ["startup","responsive","minimal","business","company","bootstrap"]
-features = ["cloud"]
+tags = []
+features = []
 min_version = 0.51
 
 [author]

@@ -1,0 +1,68 @@
+<div class="footer">
+  <div class="container">
+    <div class="row">
+      {{ if .Site.Params.footer.show_footer_logo }}
+      <div class="col-12 col-md-6">
+        <div class="footer-branding">
+          <a class="footer-logo" href="{{ .Site.BaseURL }}">
+            <img width="140px" height="40px" alt="{{ .Site.Title }} Logo" src="{{ .Site.BaseURL }}images/logo2.svg" />
+          </a>
+          <!-- <h2 class="footer-title">{{ .Site.Title }}</h2> -->
+        </div>
+        <div class="footer-description">
+          <p>{{ .Site.Params.footer.description }}</p>
+        </div>
+      </div>
+      {{ end }}
+      <div class="col-12 col-md-6">
+        <div class="footer-menu">
+          <!-- <div class="row"> -->
+
+            <!-- {{ if .Site.Params.footer.show_menu_footer_primary }}
+            <div class="col-12 col-md-3">
+              <h3>{{ .Site.Params.footer.footer_primary_heading }}</h3>
+              {{ partial "menu-footer-primary.html" . }}
+            </div>
+            {{ end }}
+
+            {{ if .Site.Params.footer.show_menu_footer_secondary }}
+            <div class="col-12 col-md-3">
+              <h3>{{ .Site.Params.footer.footer_secondary_heading }}</h3>
+              {{ partial "menu-footer-secondary.html" . }}
+            </div>
+            {{ end }} -->
+
+            {{ if .Site.Params.footer.show_menu_footer_tertiary }}
+            <div class="col-12 col-md-10">
+              <h2 class="footer-title-support">{{ .Site.Params.footer.footer_tertiary_heading }}</h3>
+              {{ partial "menu-footer-tertiary.html" . }}
+            </div>
+            {{ end }}
+
+          <!-- </div> -->
+        </div>
+      </div>
+    </div>
+    {{ if .Site.Params.footer.show_social_media_links }}
+    <div class="row">
+      <div class="footer-social">
+        {{ partial "social.html" . }}
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</div>
+
+{{ if .Site.Params.footer.show_zerostatic_link }}
+<div class="credits">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="zerostatic">
+          <a href="https://www.zerostatic.io">www.zerostatic.io</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{ end }}
