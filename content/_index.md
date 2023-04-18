@@ -2,7 +2,7 @@
 title: 'The easy way to write, deploy and use a serverless API'
 date: 2019-02-22
 leadTitle: "The easiest way to write and host a serverless application"
-leadSubTitle: "We believe our RPC based approach to calling backend functions from frontend code is the better approach to writing a new app.  Happy coding!"
+leadSubTitle: "MOVED INLINE"
 callToAction: 'Learn more'
 leadButtonOneText: 'Start for free'
 leadButtonOneLink: 'https://app.genez.io/'
