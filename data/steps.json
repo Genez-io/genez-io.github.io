@@ -2,7 +2,7 @@
     {
         "textAlignment":"right",
         "header":"Step 1",
-        "title": "Define your first project",
+        "title": "Bootstrap your first project",
         "paragraph1Start": "Create a new project folder and switch to it. At the command prompt, type ",
         "genezioInit": "genezio init",
         "paragraph1End": " to create a genezio project.",

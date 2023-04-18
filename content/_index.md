@@ -1,8 +1,8 @@
 ---
 title: 'The easy way to write, deploy and use a serverless API'
 date: 2019-02-22
-leadTitle: "The Coolest Way to Write, Deploy \n and Use a Serverless API." #"Write and deploy backend code seamlessly!"
-leadSubTitle: "Never pay for idle servers or write unnecessary code again. Happy hacking!" #'Simple backend functions for web and mobile developers. Happy hacking!'
+leadTitle: "The easiest way to write and host a serverless application"
+leadSubTitle: "MOVED INLINE"
 callToAction: 'Learn more'
 leadButtonOneText: 'Start for free'
 leadButtonOneLink: 'https://app.genez.io/'
