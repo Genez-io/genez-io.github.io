@@ -1,6 +1,6 @@
 ---
 title: Create your first Web3 app
-date: 2022-03-03
+date: 2023-03-03
 tags:
   - Tutorials
 author: Andreia Ocanoaia
