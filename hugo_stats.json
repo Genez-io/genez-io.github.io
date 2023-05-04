@@ -3,7 +3,7 @@
     "tags": [
       "a",
       "body",
-      "br",
+      "br/",
       "button",
       "code",
       "div",
@@ -176,6 +176,7 @@
       "sidebar",
       "social",
       "span-or",
+      "start-for-free",
       "strip",
       "strip-dark",
       "strip-main",
