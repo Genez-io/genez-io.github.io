@@ -177,9 +177,9 @@
           <h2>Never pay for idle servers or write unnecessary code again. Happy hacking!</h2>
           <div class="lead-buttons">
             
-            <a class="button-demo" href=https://app.genez.io/>Start for free</a>
+            <a class="button-demo" href="https://app.genez.io">Start for free</a>
             
-            <a class="button-discord-hero" href=https://docs.genez.io/ target="_blank">Check our Docs</a>
+            <a class="button-discord-hero" href="https://docs.genez.io/" target="_blank">Check our Docs</a>
           </div>
         </div>
     </div>
@@ -605,36 +605,37 @@
                 
                 
               </div>
-              <h2 class="plan-name">Standard Plan</h3>
+              <h2 class="plan-name">Standard Plan</h2>
               
 
               <div class="plan-terms"></div>
             </div>
             
             <div class="plan-details">
+
+              <script>
+                fetch('https://dev.api.genez.io/plans')
+                  .then(response => response.json())
+                  .then(data => {
+                    let html1 = '';
+                    JSON.parse(data.subscriptionPlans[0].benefits).benefits.forEach(item => {
+                      html1 += `<li>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                          <path fill="#00faa4" d="M413.505 91.951L133.49 371.966l-98.995-98.995c-4.686-4.686-12.284-4.686-16.971 0L6.211 284.284c-4.686 4.686-4.686 12.284 0 16.971l118.794 118.794c4.686 4.686 12.284 4.686 16.971 0l299.813-299.813c4.686-4.686 4.686-12.284 0-16.971l-11.314-11.314c-4.686-4.686-12.284-4.686-16.97 0z" />
+                        </svg>
+                        <span>${item}</span>
+                      </li>`;
+                    });
+
+                    document.getElementById('plan1-ul-custom').innerHTML = html1;
+
+                  })
+                  .catch(error => console.error(error));
+              </script>
               
               <div class="plan-features">
-                <ul>
+                <ul id="plan1-ul-custom">
                   
-                  <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                      <path fill="#00faa4"
-                        d="M413.505 91.951L133.49 371.966l-98.995-98.995c-4.686-4.686-12.284-4.686-16.971 0L6.211 284.284c-4.686 4.686-4.686 12.284 0 16.971l118.794 118.794c4.686 4.686 12.284 4.686 16.971 0l299.813-299.813c4.686-4.686 4.686-12.284 0-16.971l-11.314-11.314c-4.686-4.686-12.284-4.686-16.97 0z" />
-                    </svg><span>deploy seamlessly your projects</span></li>
-                  
-                  <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                      <path fill="#00faa4"
-                        d="M413.505 91.951L133.49 371.966l-98.995-98.995c-4.686-4.686-12.284-4.686-16.971 0L6.211 284.284c-4.686 4.686-4.686 12.284 0 16.971l118.794 118.794c4.686 4.686 12.284 4.686 16.971 0l299.813-299.813c4.686-4.686 4.686-12.284 0-16.971l-11.314-11.314c-4.686-4.686-12.284-4.686-16.97 0z" />
-                    </svg><span>call your methods remotely using the generated SDK</span></li>
-                  
-                  <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                      <path fill="#00faa4"
-                        d="M413.505 91.951L133.49 371.966l-98.995-98.995c-4.686-4.686-12.284-4.686-16.971 0L6.211 284.284c-4.686 4.686-4.686 12.284 0 16.971l118.794 118.794c4.686 4.686 12.284 4.686 16.971 0l299.813-299.813c4.686-4.686 4.686-12.284 0-16.971l-11.314-11.314c-4.686-4.686-12.284-4.686-16.97 0z" />
-                    </svg><span>debug locally</span></li>
-                  
-                  <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                      <path fill="#00faa4"
-                        d="M413.505 91.951L133.49 371.966l-98.995-98.995c-4.686-4.686-12.284-4.686-16.971 0L6.211 284.284c-4.686 4.686-4.686 12.284 0 16.971l118.794 118.794c4.686 4.686 12.284 4.686 16.971 0l299.813-299.813c4.686-4.686 4.686-12.284 0-16.971l-11.314-11.314c-4.686-4.686-12.284-4.686-16.97 0z" />
-                    </svg><span>debug remotely by verifying the logs</span></li>
                   
                 </ul>
               </div>
@@ -654,7 +655,7 @@
                 
                 
               </div>
-              <h2 class="plan-name">Business</h3>
+              <h2 class="plan-name">Business</h2>
               
 
               <div class="plan-terms"></div>
@@ -674,7 +675,7 @@
                 
                 
               </div>
-              <h2 class="plan-name">Premium</h3>
+              <h2 class="plan-name">Premium</h2>
               
 
               <div class="plan-terms"></div>
@@ -743,7 +744,7 @@
 
             
             <div class="col-12 col-md-10">
-              <h2 class="footer-title-support">Support</h3>
+              <h2 class="footer-title-support">Support</h2>
               <div class="menu-footer-tertiary">
   <ul>
     

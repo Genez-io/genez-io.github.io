@@ -69,6 +69,13 @@
     }
     .plan-button {
       .button-outlined {
+        color: $green;
+        background-color: transparent;
+        border-color: $green;
+        font-weight: 600;
+      }
+
+      .button-featured {
         color: $primary;
         background-color: $green;
         border-color: $green;

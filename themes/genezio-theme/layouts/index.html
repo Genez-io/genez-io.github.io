@@ -500,43 +500,130 @@
           <h1 class="text-center">{{ .Site.Params.homepage.pricing_title }}</h1>
         </div>
         <div class="plans">
-          {{ range .Site.Data.pricing }}
-          <div class="plan{{ if .highlighted }} plan-featured{{ end }}{{ if .blured }} blured{{ end }}">
-            <div class="plan-main">
-              <div class="plan-price">
-                <span class="plan-price-number">{{ .price }}</span>
-                <span class="plan-price-currency-symbol">{{ .currencySymbol }}</span>
-                <!-- <span class="plan-price-currency">{{ .currency }}</span> -->
-                <!-- <div class="plan-price-hint">{{ .priceHint }}</div> -->
-                <!-- {{ if not .highlighted }}
-                  <span class="plan-price-currency">/month</span>
-                {{end}} -->
-              </div>
-              <h2 class="plan-name">{{ .name }}</h3>
-              <!-- <div class="plan-description">{{ .description }}</div> -->
+          <script async defer>
+            fetch('https://api.genez.io/plans')
+              .then(response => response.json())
+              .then(data => {
+                let html1 = '';
+                let html2 = '';
+                let html3 = '';
 
-              <div class="plan-terms">{{ .terms }}</div>
-            </div>
-            {{ if (gt (len .features) 0) }}
-            <div class="plan-details">
-              <!-- <h3 class="plan-features-heading">{{ .featuresHeading }}</h3> -->
-              <div class="plan-features">
-                <ul>
-                  {{ range .features }}
-                  <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                      <path fill="{{ $.Site.Params.green_color }}"
-                        d="M413.505 91.951L133.49 371.966l-98.995-98.995c-4.686-4.686-12.284-4.686-16.971 0L6.211 284.284c-4.686 4.686-4.686 12.284 0 16.971l118.794 118.794c4.686 4.686 12.284 4.686 16.971 0l299.813-299.813c4.686-4.686 4.686-12.284 0-16.971l-11.314-11.314c-4.686-4.686-12.284-4.686-16.97 0z" />
-                    </svg><span>{{ . }}</span></li>
-                  {{end}}
-                </ul>
+                JSON.parse(data.subscriptionPlans[0].benefits).benefits.forEach(item => {
+                  html1 += `<li>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                      <path fill="#00faa4" d="M413.505 91.951L133.49 371.966l-98.995-98.995c-4.686-4.686-12.284-4.686-16.971 0L6.211 284.284c-4.686 4.686-4.686 12.284 0 16.971l118.794 118.794c4.686 4.686 12.284 4.686 16.971 0l299.813-299.813c4.686-4.686 4.686-12.284 0-16.971l-11.314-11.314c-4.686-4.686-12.284-4.686-16.97 0z" />
+                    </svg>
+                    <span>${item}</span>
+                  </li>`;
+                });
+
+                JSON.parse(data.subscriptionPlans[1].benefits).benefits.forEach(item => {
+                  html2 += `<li>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                      <path fill="#00faa4" d="M413.505 91.951L133.49 371.966l-98.995-98.995c-4.686-4.686-12.284-4.686-16.971 0L6.211 284.284c-4.686 4.686-4.686 12.284 0 16.971l118.794 118.794c4.686 4.686 12.284 4.686 16.971 0l299.813-299.813c4.686-4.686 4.686-12.284 0-16.971l-11.314-11.314c-4.686-4.686-12.284-4.686-16.97 0z" />
+                    </svg>
+                    <span>${item}</span>
+                  </li>`;
+                });
+
+
+                JSON.parse(data.subscriptionPlans[2].benefits).benefits.forEach(item => {
+                  html3 += `<li><svg xmlns='http://www.w3.org/2000/svg' viewBox="0 0 448 512"><path fill="#00faa4" d="M413.505 91.951L133.49 371.966l-98.995-98.995c-4.686-4.686-12.284-4.686-16.971 0L6.211 284.284c-4.686 4.686-4.686 12.284 0 16.971l118.794 118.794c4.686 4.686 12.284 4.686 16.971 0l299.813-299.813c4.686-4.686 4.686-12.284 0-16.971l-11.314-11.314c-4.686-4.686-12.284-4.686-16.97 0z" /></svg>` +`<span>${item}</span></li>`;
+                });
+
+
+                document.getElementById('plan1-ul-custom').innerHTML = html1;
+                document.getElementById('plan1-price-custom').innerHTML = "Free";
+                document.getElementById('plan1-name-custom').innerHTML = data.subscriptionPlans[0].name.toLowerCase();
+
+
+                document.getElementById('plan2-ul-custom').innerHTML = html2;
+                document.getElementById('plan2-price-custom').innerHTML = "$" + data.subscriptionPlans[1].price + " / month";
+                document.getElementById('plan2-name-custom').innerHTML = data.subscriptionPlans[1].name.toLowerCase();
+
+
+                document.getElementById('plan3-ul-custom').innerHTML = html3;
+                document.getElementById('plan3-price-custom').innerHTML = "$" + data.subscriptionPlans[2].price + " / month";
+                document.getElementById('plan3-name-custom').innerHTML = data.subscriptionPlans[2].name.toLowerCase()
+
+              })
+              .catch(error => console.error(error));
+          </script>
+
+          <div class="plan plan-featured" style="display: flex;
+          flex-direction: column;
+          justify-content: space-between;">
+            <div>
+              <div class="plan-main">
+                <div class="plan-price">
+                  <span class="plan-price-number" id="plan1-price-custom"></span>
+                </div>
+                <h2 class="plan-name" id="plan1-name-custom"></h3>
+              </div>
+              <div class="plan-details">
+                <div class="plan-features">
+                  
+                  <ul id="plan1-ul-custom">
+                   
+                  </ul>
+                </div>
               </div>
             </div>
-            {{ end }}
             <div class="plan-button">
-              <a href="{{ .buttonLink }}" class="{{ if .highlighted }}button-outlined{{ else }}button-disabled{{ end }}">{{ .buttonText }}</a>
+              <a href="https://app.genez.io/billing?plans_modal=true" class="button-outlined">Choose Plan</a>
             </div>
           </div>
-          {{end}}
+
+          <div class="plan plan-featured" style="display: flex;
+          flex-direction: column;
+          justify-content: space-between;">
+            <div>
+              <div class="plan-main">
+                <div class="plan-price">
+                  <span class="plan-price-number" id="plan2-price-custom"></span>
+                </div>
+                <h2 class="plan-name" id="plan2-name-custom"></h3>
+              </div>
+              <div class="plan-details">
+                <div class="plan-features">
+                  
+                  <ul id="plan2-ul-custom">
+                   
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="plan-button">
+              <a href="https://app.genez.io/billing?plans_modal=true" class="button-outlined button-featured">Choose Plan</a>
+            </div>
+          </div>
+
+          <div class="plan plan-featured" style="display: flex;
+          flex-direction: column;
+          justify-content: space-between;">
+            <div>
+              <div class="plan-main">
+                <div class="plan-price">
+                  <span class="plan-price-number" id="plan3-price-custom"></span>
+                </div>
+                <h2 class="plan-name" id="plan3-name-custom"></h3>
+              </div>
+              <div class="plan-details">
+                <div class="plan-features">
+                  
+                  <ul id="plan3-ul-custom">
+                   
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="plan-button">
+              <a href="https://app.genez.io/billing?plans_modal=true" class="button-outlined">Choose Plan</a>
+            </div>
+          </div>
+
+
+
         </div>
       </div>
     </div>

@@ -15754,6 +15754,11 @@ ul.pagination li {
     .plan.plan-featured .plan-button {
       margin: 30px; }
       .plan.plan-featured .plan-button .button-outlined {
+        color: #00faa4;
+        background-color: transparent;
+        border-color: #00faa4;
+        font-weight: 600; }
+      .plan.plan-featured .plan-button .button-featured {
         color: #6f42c1;
         background-color: #00faa4;
         border-color: #00faa4;
