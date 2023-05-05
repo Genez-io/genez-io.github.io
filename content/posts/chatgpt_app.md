@@ -1,6 +1,6 @@
 ---
 title: Create your first app using ChatGPT
-date: 2022-02-17
+date: 2023-02-17
 tags:
   - Tutorials
 author: Radu Dumitrescu
