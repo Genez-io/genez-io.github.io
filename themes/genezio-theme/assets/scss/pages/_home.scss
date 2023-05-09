@@ -1,11 +1,47 @@
 .page-home {
-  .lead-container{
+  .codeContainerSmallHeight {
+    height: 311px;
+  }
+  .codeContainer {
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 45px;
+    .code-wrapper {
+      position: relative;
+      line-height: 25px;
+      max-width: 500px;
+      width: 100%;
+      .linesCounter {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        width: 30px;
+        padding: 7px 0 33px 0;
+        border-left: 3px solid $hero-gradient-start;
+        background-color: #e5e5e5;
+        color: #303030;
+        height: 100%;
+        align-items: center;
+        font-size: 14px;
+      }
+      pre {
+        background-color: #f2f2f2;
+        color: #303030;
+        margin: 0px;
+        padding: 7px 45px;
+      }
+    }
+  }
+
+  .lead-container {
     height: 110vh;
     padding-top: 75px;
-    .row{
+    .row {
       max-height: 50%;
     }
-    @include media-breakpoint-down(md){
+    @include media-breakpoint-down(md) {
       height: 160vh;
     }
     @media only screen and (min-height: 1000px) {
@@ -103,7 +139,6 @@
           //margin-bottom: 10px;
           @include media-breakpoint-up(sm) {
             margin-right: 10px;
-            
           }
         }
       }
@@ -125,7 +160,7 @@
       z-index: 0;
       margin-left: 0;
       padding-top: 30px;
-      position: relative
+      position: relative;
     }
   }
   .capybara-size {
@@ -144,7 +179,7 @@
       margin-top: -80px;
     }
   }
-  .left-terminal{
+  .left-terminal {
     border-radius: 12px;
     padding-right: 25px;
     width: 100%;
@@ -162,9 +197,8 @@
     //   width: 85%;
     //   height: 75%;
     // }
-    
   }
-  .right-terminal{
+  .right-terminal {
     border-radius: 12px;
     padding-left: 25px;
     width: 100%;
@@ -189,43 +223,43 @@
       font-size: 1.625rem;
       text-align: center;
       color: black;
-      @include media-breakpoint-down(sm){
+      @include media-breakpoint-down(sm) {
         padding: 0px;
         font-weight: 600;
         font-size: 1.125rem;
         line-height: 21.47px;
       }
     }
-    @include media-breakpoint-down(sm){
+    @include media-breakpoint-down(sm) {
       width: 80%;
     }
   }
-  .container-left-right{
+  .container-left-right {
     margin-bottom: 120px;
   }
-  .left-right-row{
+  .left-right-row {
     padding-top: 50px;
     padding-bottom: 50px;
   }
-  .left-right-row-1-images{
-    @include media-breakpoint-down(sm){
+  .left-right-row-1-images {
+    @include media-breakpoint-down(sm) {
       height: 260px;
     }
-    @include media-breakpoint-down(xs){
+    @include media-breakpoint-down(xs) {
       height: 170px;
     }
   }
-  .left-right-line{
+  .left-right-line {
     text-align: center;
     height: 150%;
     width: 0px;
     margin: 0 auto;
-    border-left: 2px solid #8F6ECD
+    border-left: 2px solid #8f6ecd;
   }
-  .left-right-text-row-2{
+  .left-right-text-row-2 {
     margin-top: 40px;
   }
-  .left-right-text{
+  .left-right-text {
     h2 {
       font-size: 2rem;
       color: $green;
@@ -246,166 +280,177 @@
       line-height: 38.73px;
     }
     p {
-      color: #CCCCCC;
+      color: #cccccc;
       font-weight: 500;
       font-size: 1rem;
       line-height: 19.36px;
     }
   }
-  .left-right-row-3{
+  .left-right-row-3 {
     padding-top: 100px;
   }
-  .chart-2{
+  .chart-2 {
     @keyframes hideVis {
-      0% {opacity: 1;}
-      50% {opacity: 0;}
-      100% {opacity: 1;}
+      0% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
     }
     position: absolute;
     margin-left: 30px;
     width: 90%;
     animation-name: hideVis;
-    animation-duration: 10s;  
+    animation-duration: 10s;
     animation-iteration-count: infinite;
     animation-delay: 5s;
     opacity: 1;
-    @include media-breakpoint-down(md){
+    @include media-breakpoint-down(md) {
       width: 100%;
     }
-    @include media-breakpoint-down(sm){
+    @include media-breakpoint-down(sm) {
       width: 90%;
     }
-    @include media-breakpoint-down(xs){
+    @include media-breakpoint-down(xs) {
       margin-left: 50px;
       width: 70%;
       margin-top: 50px;
     }
   }
-  .chart-1{
+  .chart-1 {
     @keyframes hideVis {
-      0% {opacity: 1;}
-      50% {opacity: 0;}
-      100% {opacity: 1;}
+      0% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
     }
     position: absolute;
     margin-left: 30px;
     width: 90%;
     opacity: 1;
     animation-name: hideVis;
-    animation-duration: 10s;  
+    animation-duration: 10s;
     animation-iteration-count: infinite;
-    @include media-breakpoint-down(md){
+    @include media-breakpoint-down(md) {
       width: 100%;
     }
-    @include media-breakpoint-down(sm){
+    @include media-breakpoint-down(sm) {
       width: 90%;
     }
-    @include media-breakpoint-down(xs){
+    @include media-breakpoint-down(xs) {
       margin-left: 50px;
       width: 70%;
       margin-top: 50px;
     }
   }
-  .row-2-images{
-    @include media-breakpoint-down(sm){
+  .row-2-images {
+    @include media-breakpoint-down(sm) {
       height: 300px;
       width: 200px;
       margin-bottom: 10px;
       margin-top: 40px;
       order: 4;
     }
-    @include media-breakpoint-down(xs){
+    @include media-breakpoint-down(xs) {
       height: 250px;
-      margin-left:30px;
-      margin-right: 30px; 
+      margin-left: 30px;
+      margin-right: 30px;
       margin-bottom: 10px;
-      margin-top: 40px; 
+      margin-top: 40px;
       order: 4;
     }
   }
-  .left-right-image-1{
+  .left-right-image-1 {
     position: absolute;
     top: 0;
     left: 0;
     width: 80%;
-    @include media-breakpoint-down(lg){
+    @include media-breakpoint-down(lg) {
       width: 80%;
     }
-    @include media-breakpoint-down(md){
+    @include media-breakpoint-down(md) {
       width: 70%;
-      height: 65%; 
+      height: 65%;
     }
-    @include media-breakpoint-down(sm){
+    @include media-breakpoint-down(sm) {
       width: 80%;
-      height: auto; 
+      height: auto;
     }
-    @include media-breakpoint-down(xs){
+    @include media-breakpoint-down(xs) {
       width: 70%;
-      left:10px; 
+      left: 10px;
     }
     transition: 0.5s ease-out 100ms;
   }
-  .left-right-image-1:hover{
+  .left-right-image-1:hover {
     width: 90%;
-    @include media-breakpoint-down(lg){
-      width: 90%; 
-    }
-    @include media-breakpoint-down(md){
-      width: 80%;
-      height: 75%; 
-    }
-    @include media-breakpoint-down(sm){
+    @include media-breakpoint-down(lg) {
       width: 90%;
-      height: auto; 
     }
-    @include media-breakpoint-down(xs){
-      width: 80%; 
+    @include media-breakpoint-down(md) {
+      width: 80%;
+      height: 75%;
+    }
+    @include media-breakpoint-down(sm) {
+      width: 90%;
+      height: auto;
+    }
+    @include media-breakpoint-down(xs) {
+      width: 80%;
     }
   }
-  .left-right-image-2{
+  .left-right-image-2 {
     position: absolute;
     top: 58px;
     left: 60px;
     width: 80%;
-    @include media-breakpoint-down(lg){
-      width: 80%; 
-    }
-    @include media-breakpoint-down(md){
-      width: 70%;
-      height: 65%; 
-    }
-    @include media-breakpoint-down(sm){
+    @include media-breakpoint-down(lg) {
       width: 80%;
-      height: auto; 
     }
-    @include media-breakpoint-down(xs){
-      width: 70%; 
+    @include media-breakpoint-down(md) {
+      width: 70%;
+      height: 65%;
+    }
+    @include media-breakpoint-down(sm) {
+      width: 80%;
+      height: auto;
+    }
+    @include media-breakpoint-down(xs) {
+      width: 70%;
       left: 75px;
     }
     transition: 0.5s ease-out 100ms;
   }
-  .left-right-image-2:hover{
+  .left-right-image-2:hover {
     width: 90%;
-    @include media-breakpoint-down(lg){
+    @include media-breakpoint-down(lg) {
       width: 90%;
     }
-    @include media-breakpoint-down(md){
+    @include media-breakpoint-down(md) {
       width: 80%;
-      height: 75%; 
+      height: 75%;
     }
-    @include media-breakpoint-down(sm){
+    @include media-breakpoint-down(sm) {
       width: 90%;
-      height: auto; 
+      height: auto;
     }
-    @include media-breakpoint-down(xs){
-      width: 80%; 
+    @include media-breakpoint-down(xs) {
+      width: 80%;
     }
-
   }
-  .right-image-row-3{
+  .right-image-row-3 {
     text-align: center;
     margin-top: -25px;
-    @include media-breakpoint-down(sm){
+    @include media-breakpoint-down(sm) {
       margin-top: 10px;
       // width: 20px;
     }
@@ -430,7 +475,7 @@
       font-weight: 700;
       line-height: 36px;
       font-size: 32px;
-      //color: $carbon; 
+      //color: $carbon;
       // background: linear-gradient(90deg, $primary 0%, #282A36 100%);
       background: #1a1a1a;
       -webkit-background-clip: text;
@@ -512,7 +557,7 @@
       }
     }
   }
-  .left-right-text-steps{
+  .left-right-text-steps {
     h2 {
       font-size: 2rem;
       color: $primary;
@@ -525,16 +570,15 @@
       font-weight: 600;
       font-size: 1.75rem;
       line-height: 38.73px;
-
     }
     h4 {
-      color: #1A1A1A;
+      color: #1a1a1a;
       font-weight: 700;
       font-size: 1rem;
       line-height: 19.36px;
     }
     p {
-      color: #1A1A1A;
+      color: #1a1a1a;
       font-weight: 500;
       font-size: 1rem;
       line-height: 19.36px;

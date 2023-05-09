@@ -75,7 +75,7 @@
             <h2>
               {{ .header }}
             </h2>
-            <h3 >
+            <h3>
               {{ .title }}
             </h3>
             <h4>
@@ -325,15 +325,44 @@
 <div class="strip strip-white features pt-10 pb-md-1">
   <div class ="container container-left-right">
     <h1>Easy to use in just 3 steps</h1>
-      <div class = "row left-right-row justify-content-center" style="align-items: center;">
-        <div class ="col-12 col-md-5 row-2-images d-flex align-items-center pt-4">
-          <img loading="lazy" width="100%" src = "/images/step1.webp" alt = "step1">
+
+{{/*  Step 1  */}}
+    <div class = "row left-right-row justify-content-center" style="align-items: center;">
+      <div class ="col-12 col-md-5 row-2-images d-flex align-items-center pt-4">
+           <div class="codeContainer codeContainerSmallHeight">
+            <div class="code-wrapper">
+              <div class="linesCounter">
+              <span>1</span>
+              <span>2</span>
+              <span>3</span>
+              <span>4</span>
+              <span>5</span>
+              <span>6</span>
+              <span>7</span>
+              <span>8</span>
+              <span>9</span>
+            </div>
+
+              <pre>
+<code>Export class HelloWorldClass {
+  helloWorld() { 
+    return "Hello world!";
+  }
+
+  hello(name, location) {
+    return `Hello, ${name}! Greetings from ${location}!`; 
+  }
+}  
+</code></pre>
+      </div>
+    </div>
+      
         </div>
         <div class ="col-12 col-md-1">
           <!-- <div class="left-right-line"></div> -->
         </div>
         <div class ="col-12 col-md-5">
-          <div class = "left-right-text-steps left-right-text-row-2 pt-3" >
+          <div class="left-right-text-steps left-right-text-row-2 pt-3 text-justify">
             <h2>
               Step 1
             </h2>
@@ -352,43 +381,132 @@
           </div>
         </div>
       </div>
-      <div class = "row left-right-row justify-content-center" style="align-items: center;">
-        <div class ="col-12 col-md-5">
-          <div class = "left-right-text-steps" >
+
+      {{/*  Step 2  */}}
+      <div class="row left-right-row justify-content-center" style="align-items: center;">
+        <div class="col-12 col-md-5">
+          <div class="text-justify left-right-text-steps left-right-text-row-2 pt-3">
             <h2>
               Step 2
             </h2>
             <h3>
-              Iterate on the code
+              Iterate on the code 
             </h3>
             <p>
-              You will need to import the SDK class in your code and call its methods - that's it - enjoy our examples!
+              You will need to import the SDK class in your code and call its methods - that's it - enjoy our examples! 
             </p>
             <p>
-              We now support Javascript and TypeScript on both the frontend and backend, and Swift and DART on the frontend.
+              We now support Javascript and TypeScript on both the frontend and backend, and Swift and DART on the frontend. 
             </p>
-            <p>
-              At genezio, classes are the basic unit of deployment for the backend. Instead of deploying single functions, we group them into classes for more flexibility and better code readability.
-            </p>       
+            <p>At genezio, classes are the basic unit of deployment for the backend. Instead of deploying single functions, we group them into classes for more flexibility and better code readability.</p>
           </div>
         </div>
         <div class ="col-12 col-md-1">
           <!-- <div class="left-right-line"></div> -->
-        </div>
-        <div class ="col-12 col-md-5 row-2-images">
-          <img loading="lazy" width="100%" src = "/images/step2.webp" alt = "step2">
-        </div>
+        </div> 
+        <div class ="col-12 col-md-5 row-2-images d-flex align-items-center pt-7">
+          
+          <div class="codeContainer">
+            <div class="code-wrapper">
+
+              <div class="linesCounter">
+              <span>1</span>
+              <span>2</span>
+              <span>3</span>
+              <span>4</span>
+              <span>5</span>
+              <span>6</span>
+              <span>7</span>
+              <span>8</span>
+              <span>9</span>
+              <span>10</span>
+              <span>11</span>
+              <span>12</span>
+              <span>13</span>
+              <span>14</span>
+              <span>15</span>
+              <span>16</span>
+              <span>17</span>
+              <span>18</span>
+            </div>
+
+              <pre>
+<code>/**
+* This is an auto generated code. This code should not be modified since the
+* file can be overwritten if new genezio commands are executed.
+/*
+
+import { Remote } from "./remote.js"
+
+export class HelloWorldService {
+  static remote = new Remote(&lt;"PROJECT_URL"&gt;)
+
+  static async helloWorld() {
+    return HelloWorldService.remote.call("HelloWorldService.helloWorld")
+  }
+
+  static async hello(name, from) {
+    return HelloWorldService.remote.call("HelloWorldService.hello", name, from) 
+  }
+}
+</code></pre>
       </div>
-      <div class = "row left-right-row justify-content-center" style="align-items: center;">
-        <div class ="col-12 col-md-5 row-2-images pt-7">
-          <img loading="lazy" width="100%" src = "/images/step3.webp" alt = "step3">
+    </div>
+
+        </div>
+        {{/*  <div class ="col-12 col-md-1">
+          <!-- <div class="left-right-line"></div> -->
+        </div>   */}}
+      </div>
+
+      {{/*  Step 3  */}}
+      <div class="row left-right-row justify-content-center" style="align-items: center;">
+        <div class="col-12 col-md-5 row-2-images d-flex align-items-center pt-7">
+          
+          <div class="codeContainer">
+            <div class="code-wrapper">
+
+              <div class="linesCounter">
+              <span>1</span>
+              <span>2</span>
+              <span>3</span>
+              <span>4</span>
+              <span>5</span>
+              <span>6</span>
+              <span>7</span>
+              <span>8</span>
+              <span>9</span>
+              <span>10</span>
+              <span>11</span>
+              <span>12</span>
+              <span>13</span>
+              <span>14</span>
+            </div>
+
+              <pre>
+<code>import { HelloWorldClass } from "./sdk/hello.sdk.js";
+
+const [name, setName] = React.useState("Billy");
+const [location, setLocation] = React.useState("Paris"); 
+
+const View = () => {
+  return (
+    <>
+      `${HelloWorldClass.hello(name, location)}`
+    </>
+  );
+};
+
+export default View;</code></pre>
+      </div>
+    </div>
 
         </div>
         <div class ="col-12 col-md-1">
           <!-- <div class="left-right-line"></div> -->
         </div> 
         <div class ="col-12 col-md-5">
-          <div class = "left-right-text-steps left-right-text-row-2 pt-3" >
+          <div class="text-justify left-right-text-steps left-right-text-row-2 pt-3" >
             <h2>
               Step 3
             </h2>
