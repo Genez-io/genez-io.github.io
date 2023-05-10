@@ -75,7 +75,7 @@
             <h2>
               {{ .header }}
             </h2>
-            <h3 >
+            <h3>
               {{ .title }}
             </h3>
             <h4>
@@ -325,15 +325,44 @@
 <div class="strip strip-white features pt-10 pb-md-1">
   <div class ="container container-left-right">
     <h1>Easy to use in just 3 steps</h1>
-      <div class = "row left-right-row justify-content-center" style="align-items: center;">
-        <div class ="col-12 col-md-5 row-2-images d-flex align-items-center pt-4">
-          <img loading="lazy" width="100%" src = "/images/step1.webp" alt = "step1">
+
+{{/*  Step 1  */}}
+    <div class = "row left-right-row justify-content-center" style="align-items: center;">
+      <div class ="col-12 col-md-5 row-2-images d-flex align-items-center pt-4">
+           <div class="codeContainer codeContainerSmallHeight">
+            <div class="code-wrapper">
+              <div class="linesCounter">
+              <span>1</span>
+              <span>2</span>
+              <span>3</span>
+              <span>4</span>
+              <span>5</span>
+              <span>6</span>
+              <span>7</span>
+              <span>8</span>
+              <span>9</span>
+            </div>
+
+              <pre>
+<code>Export class HelloWorldClass {
+  helloWorld() { 
+    return "Hello world!";
+  }
+
+  hello(name, location) {
+    return `Hello, ${name}! Greetings from ${location}!`; 
+  }
+}  
+</code></pre>
+      </div>
+    </div>
+      
         </div>
         <div class ="col-12 col-md-1">
           <!-- <div class="left-right-line"></div> -->
         </div>
         <div class ="col-12 col-md-5">
-          <div class = "left-right-text-steps left-right-text-row-2 pt-3" >
+          <div class="left-right-text-steps left-right-text-row-2 pt-3 text-justify">
             <h2>
               Step 1
             </h2>
@@ -352,43 +381,132 @@
           </div>
         </div>
       </div>
-      <div class = "row left-right-row justify-content-center" style="align-items: center;">
-        <div class ="col-12 col-md-5">
-          <div class = "left-right-text-steps" >
+
+      {{/*  Step 2  */}}
+      <div class="row left-right-row justify-content-center" style="align-items: center;">
+        <div class="col-12 col-md-5">
+          <div class="text-justify left-right-text-steps left-right-text-row-2 pt-3">
             <h2>
               Step 2
             </h2>
             <h3>
-              Iterate on the code
+              Iterate on the code 
             </h3>
             <p>
-              You will need to import the SDK class in your code and call its methods - that's it - enjoy our examples!
+              You will need to import the SDK class in your code and call its methods - that's it - enjoy our examples! 
             </p>
             <p>
-              We now support Javascript and TypeScript on both the frontend and backend, and Swift and DART on the frontend.
+              We now support Javascript and TypeScript on both the frontend and backend, and Swift and DART on the frontend. 
             </p>
-            <p>
-              At genezio, classes are the basic unit of deployment for the backend. Instead of deploying single functions, we group them into classes for more flexibility and better code readability.
-            </p>       
+            <p>At genezio, classes are the basic unit of deployment for the backend. Instead of deploying single functions, we group them into classes for more flexibility and better code readability.</p>
           </div>
         </div>
         <div class ="col-12 col-md-1">
           <!-- <div class="left-right-line"></div> -->
-        </div>
-        <div class ="col-12 col-md-5 row-2-images">
-          <img loading="lazy" width="100%" src = "/images/step2.webp" alt = "step2">
-        </div>
+        </div> 
+        <div class ="col-12 col-md-5 row-2-images d-flex align-items-center pt-7">
+          
+          <div class="codeContainer">
+            <div class="code-wrapper">
+
+              <div class="linesCounter">
+              <span>1</span>
+              <span>2</span>
+              <span>3</span>
+              <span>4</span>
+              <span>5</span>
+              <span>6</span>
+              <span>7</span>
+              <span>8</span>
+              <span>9</span>
+              <span>10</span>
+              <span>11</span>
+              <span>12</span>
+              <span>13</span>
+              <span>14</span>
+              <span>15</span>
+              <span>16</span>
+              <span>17</span>
+              <span>18</span>
+            </div>
+
+              <pre>
+<code>/**
+* This is an auto generated code. This code should not be modified since the
+* file can be overwritten if new genezio commands are executed.
+/*
+
+import { Remote } from "./remote.js"
+
+export class HelloWorldService {
+  static remote = new Remote(&lt;"PROJECT_URL"&gt;)
+
+  static async helloWorld() {
+    return HelloWorldService.remote.call("HelloWorldService.helloWorld")
+  }
+
+  static async hello(name, from) {
+    return HelloWorldService.remote.call("HelloWorldService.hello", name, from) 
+  }
+}
+</code></pre>
       </div>
-      <div class = "row left-right-row justify-content-center" style="align-items: center;">
-        <div class ="col-12 col-md-5 row-2-images pt-7">
-          <img loading="lazy" width="100%" src = "/images/step3.webp" alt = "step3">
+    </div>
+
+        </div>
+        {{/*  <div class ="col-12 col-md-1">
+          <!-- <div class="left-right-line"></div> -->
+        </div>   */}}
+      </div>
+
+      {{/*  Step 3  */}}
+      <div class="row left-right-row justify-content-center" style="align-items: center;">
+        <div class="col-12 col-md-5 row-2-images d-flex align-items-center pt-7">
+          
+          <div class="codeContainer">
+            <div class="code-wrapper">
+
+              <div class="linesCounter">
+              <span>1</span>
+              <span>2</span>
+              <span>3</span>
+              <span>4</span>
+              <span>5</span>
+              <span>6</span>
+              <span>7</span>
+              <span>8</span>
+              <span>9</span>
+              <span>10</span>
+              <span>11</span>
+              <span>12</span>
+              <span>13</span>
+              <span>14</span>
+            </div>
+
+              <pre>
+<code>import { HelloWorldClass } from "./sdk/hello.sdk.js";
+
+const [name, setName] = React.useState("Billy");
+const [location, setLocation] = React.useState("Paris"); 
+
+const View = () => {
+  return (
+    <>
+      `${HelloWorldClass.hello(name, location)}`
+    </>
+  );
+};
+
+export default View;</code></pre>
+      </div>
+    </div>
 
         </div>
         <div class ="col-12 col-md-1">
           <!-- <div class="left-right-line"></div> -->
         </div> 
         <div class ="col-12 col-md-5">
-          <div class = "left-right-text-steps left-right-text-row-2 pt-3" >
+          <div class="text-justify left-right-text-steps left-right-text-row-2 pt-3" >
             <h2>
               Step 3
             </h2>
@@ -500,60 +618,80 @@
           <h1 class="text-center">{{ .Site.Params.homepage.pricing_title }}</h1>
         </div>
         <div class="plans">
-          <script async defer>
-            fetch('https://api.genez.io/plans')
-              .then(response => response.json())
-              .then(data => {
-                let html1 = '';
-                let html2 = '';
-                let html3 = '';
+          {{/*  Personal   */}}
+          <div class="plan">
+            <div class="planHeader">
+              <h2>Personal</h2>
+              <h3>Free</h3>
+            </div>
+            <ul class="headerAlign">
+              <li><div class="imgPlaceholder"></div>seamlessly deploy full stack apps</li>
+              <li><div class="imgPlaceholder"></div>dashboard with test interface</li>
+              <li><div class="imgPlaceholder"></div>automatic SSL and global CDN</li>
+            </ul>
 
-                JSON.parse(data.subscriptionPlans[0].benefits).benefits.forEach(item => {
-                  html1 += `<li>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                      <path fill="#00faa4" d="M413.505 91.951L133.49 371.966l-98.995-98.995c-4.686-4.686-12.284-4.686-16.971 0L6.211 284.284c-4.686 4.686-4.686 12.284 0 16.971l118.794 118.794c4.686 4.686 12.284 4.686 16.971 0l299.813-299.813c4.686-4.686 4.686-12.284 0-16.971l-11.314-11.314c-4.686-4.686-12.284-4.686-16.97 0z" />
-                    </svg>
-                    <span>${item}</span>
-                  </li>`;
-                });
+            <p class="whatsIncluded">Whats included<span>?</span></p>
 
-                JSON.parse(data.subscriptionPlans[1].benefits).benefits.forEach(item => {
-                  html2 += `<li>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                      <path fill="#00faa4" d="M413.505 91.951L133.49 371.966l-98.995-98.995c-4.686-4.686-12.284-4.686-16.971 0L6.211 284.284c-4.686 4.686-4.686 12.284 0 16.971l118.794 118.794c4.686 4.686 12.284 4.686 16.971 0l299.813-299.813c4.686-4.686 4.686-12.284 0-16.971l-11.314-11.314c-4.686-4.686-12.284-4.686-16.97 0z" />
-                    </svg>
-                    <span>${item}</span>
-                  </li>`;
-                });
+            <div class="perks perkBorderBottom">3 projects</div>
+            <div class="perks perkBorderBottom">100k function invocations</div>
+            <div class="perks perkBorderBottom">10s execution timeout</div>
+            <div class="perks">1 hour of logs</div>
 
+            <button href="https://app.genez.io">Choose Plan</button>
+          </div>
+          {{/*  Professional   */}}
+          <div class="plan">
+            <div class="planHeader">
+              <h2>Professional</h2>
+              <h3>$19<span>/month</span></h3>
+            </div>
+              <div class="planBadge"><p>Personal Plan +</p></div>
+              <ul>
+              <li><div class="imgPlaceholder"></div>custom web domain</li>
+              <li><div class="imgPlaceholder"></div>24/7 incident support</li>
+            </ul>
 
-                JSON.parse(data.subscriptionPlans[2].benefits).benefits.forEach(item => {
-                  html3 += `<li><svg xmlns='http://www.w3.org/2000/svg' viewBox="0 0 448 512"><path fill="#00faa4" d="M413.505 91.951L133.49 371.966l-98.995-98.995c-4.686-4.686-12.284-4.686-16.971 0L6.211 284.284c-4.686 4.686-4.686 12.284 0 16.971l118.794 118.794c4.686 4.686 12.284 4.686 16.971 0l299.813-299.813c4.686-4.686 4.686-12.284 0-16.971l-11.314-11.314c-4.686-4.686-12.284-4.686-16.97 0z" /></svg>` +`<span>${item}</span></li>`;
-                });
+            <p class="whatsIncluded">Whats included<span>?</span></p>
 
+            <div class="perks perkBorderBottom">10 projects</div>
+            <div class="perks perkBorderBottom">1M function invocations</div>
+            <div class="perks perkBorderBottom">30s execution timeout</div>
+            <div class="perks">1 day of logs</div>
+            
 
-                document.getElementById('plan1-ul-custom').innerHTML = html1;
-                document.getElementById('plan1-price-custom').innerHTML = "Free";
-                document.getElementById('plan1-name-custom').innerHTML = data.subscriptionPlans[0].name.toLowerCase();
+            <button href="https://app.genez.io">Choose Plan</button>
 
+          </div>
+          {{/*  Expert   */}}
+          <div class="plan">
+            <div class="planHeader">
+              <h2>Expert</h2>
+              <h3>$89<span>/month</span></h3>
+            </div>
 
-                document.getElementById('plan2-ul-custom').innerHTML = html2;
-                document.getElementById('plan2-price-custom').innerHTML = "$" + data.subscriptionPlans[1].price + " / month";
-                document.getElementById('plan2-name-custom').innerHTML = data.subscriptionPlans[1].name.toLowerCase();
+            <div class="planBadge"><p>Professional Plan +</p></div>
 
+            <ul>
+              <li> <div class="imgPlaceholder"></div>unlimited scheduled cron jobs </li>
+              <li> <div class="imgPlaceholder"></div>24/7 dedicated support</li>
+            </ul>
 
-                document.getElementById('plan3-ul-custom').innerHTML = html3;
-                document.getElementById('plan3-price-custom').innerHTML = "$" + data.subscriptionPlans[2].price + " / month";
-                document.getElementById('plan3-name-custom').innerHTML = data.subscriptionPlans[2].name.toLowerCase()
+            <p class="whatsIncluded">Whats included<span>?</span></p>
 
-              })
-              .catch(error => console.error(error));
-          </script>
+            <div class="perks perkBorderBottom">50 projects</div>
+            <div class="perks perkBorderBottom">10M function invocations</div>
+            <div class="perks perkBorderBottom">30s execution timeout</div>
+            <div class="perks">1 month of logs</div>
 
-          <div class="plan plan-featured" style="display: flex;
+            <button href="https://app.genez.io">Contact Us</button>
+
+          </div>
+          
+          {{/*  Personal Plan  */}}
+          {{/*  <div class="plan plan-featured" style="display: flex;
           flex-direction: column;
           justify-content: space-between;">
-            <div>
+          <div>
               <div class="plan-main">
                 <div class="plan-price">
                   <span class="plan-price-number" id="plan1-price-custom"></span>
@@ -562,9 +700,7 @@
               </div>
               <div class="plan-details">
                 <div class="plan-features">
-                  
                   <ul id="plan1-ul-custom">
-                   
                   </ul>
                 </div>
               </div>
@@ -572,9 +708,10 @@
             <div class="plan-button">
               <a href="https://app.genez.io/billing?plans_modal=true" class="button-outlined">Choose Plan</a>
             </div>
-          </div>
+          </div>  */}}
 
-          <div class="plan plan-featured" style="display: flex;
+          {{/*  Professional Plan  */}}
+          {{/*  <div class="plan plan-featured" style="display: flex;
           flex-direction: column;
           justify-content: space-between;">
             <div>
@@ -596,9 +733,10 @@
             <div class="plan-button">
               <a href="https://app.genez.io/billing?plans_modal=true" class="button-outlined button-featured">Choose Plan</a>
             </div>
-          </div>
+          </div>  */}}
 
-          <div class="plan plan-featured" style="display: flex;
+          {{/*  Expert Plan  */}}
+          {{/*  <div class="plan plan-featured" style="display: flex;
           flex-direction: column;
           justify-content: space-between;">
             <div>
@@ -620,7 +758,7 @@
             <div class="plan-button">
               <a href="https://app.genez.io/billing?plans_modal=true" class="button-outlined">Choose Plan</a>
             </div>
-          </div>
+          </div>  */}}
 
 
 

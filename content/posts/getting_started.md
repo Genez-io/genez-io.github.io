@@ -1,6 +1,6 @@
 ---
 title: Getting Started with genezio
-date: 2022-01-19
+date: 2023-01-19
 tags:
   - Tutorials
 author: Radu Dumitrescu
