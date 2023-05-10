@@ -1,189 +1,361 @@
 .plans {
+  margin: 0 -20 0 -20;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  @include media-breakpoint-up(md) {
-  }
-}
-// .comming-soon {
-//   z-index: 20;
-//   text-align: center;
-//   color: red;
-//   position: absolute;
-//   justify-content: center;
-//   text-align: center;
-// }
-.plan {
-  width: 100%;
-  padding: 30px 0 10px 0;
-  border-radius: 30px;
-  font-family: $font-family-heading;
-  border: 1px solid $grey2;
-  margin-bottom: 40px;
-  color: #282A36;
-  box-shadow: 0px 10px 10px #cccccc;
-  @include media-breakpoint-up(md) {
-    flex-basis: 25%;
-    margin-bottom: 0;
-    border: none;
-    border: 1px solid $grey2;
-  }
-  &.blured {
-    // -webkit-filter: blur(10px);
-    // -moz-filter: blur(10px);
-    // -o-filter: blur(10px);
-    // -ms-filter: blur(10px);
-    // filter: blur(10px);
-    background-color: #fff;
-    .plan-main{
-      margin-top: 80px;
+  justify-content: space-between;
+
+  .plan {
+    margin: 0 20 0 20;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $purple;
+    max-width: 320px;
+    min-height: 552px;
+    height: auto;
+    position: relative;
+    width: 100%;
+    border-radius: 30px;
+
+    .headerAlign {
+      margin-top: 5px;
     }
-    .plan-button{
-      margin: 0px 30px 30px 30px;
-    }
-  }
-  &.plan-featured {
-    background: $primary;
-    .plan-price {
-      color: $green;
-      font-size: 30px;
+
+    .planHeader {
+      margin-top: 33px;
       text-align: center;
-    }
-    .plan-name {
-      color: white;
-      font-size: 30px;
-      text-align: center;
-      padding-bottom: 10px;
-    }
-    .plan-description, .plan-features-heading {
-      color: white;
-      text-align: left;
-    }
-    .plan-features{
-      ul {
-        li {
-          color: white;
+
+      h2 {
+        color: $white;
+        font-size: 30px;
+        font-weight: 800;
+        margin: 0;
+      }
+      h3 {
+        color: $lime;
+        font-size: 35px;
+        font-weight: 800;
+        margin: 0 0 43px;
+        span {
+          color: rgba(208, 196, 228, 1);
+          font-size: 22px;
         }
       }
     }
-    .plan-button {
-      .button-outlined {
-        color: $primary;
-        background-color: $green;
-        border-color: $green;
-        font-weight: 600;
-      }
-      margin: 30px;
-    }
-  }
-  .plan-main {
-    padding: 10px 20px;
-    text-align: left;
-    //border-bottom: 1px solid $grey2;
-  }
-  .plan-details {
-    padding: 10px 20px;
-    text-align: left;
-    h3{
-      margin-bottom: 10px;
-      font-size: 1.125rem;
-      font-weight: 500;
-      line-height: 21.78px;
-    }
-  }
-  .plan-name {
-    font-size: 30px;
-    line-height: 40px;
-    font-weight: 600;
-    margin-bottom: 16px;
-    text-align: center;
-    color: #282A36;
-  }
-  .plan-description {
-    font-size: 16px;
-    line-height: 26px;
-    color: darken($steel, 10%);
-    margin-bottom: 20px;
-    @include media-breakpoint-up(md) {
-      height: 110px;
-    }
-  }
-  .plan-price {
-    margin-bottom: 0px;
-    @include media-breakpoint-up(md) {
-      min-height: 50px;
-    }
-    .plan-price-currency-symbol {
-      font-size: 24px;
-      line-height: 28px;
-      vertical-align: top;
-      display: inline-block;
-    }
-    .plan-price-number {
+
+    .planBadge {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 240px;
+      width: 100%;
+      border-radius: 10px;
       font-weight: 700;
-      font-size: 42px;
-      line-height: 50px;
-      letter-spacing: -1px;
-      display: inline-block;
+      background-color: rgba(217, 217, 217, 0.5);
+      height: 23px;
+      margin-bottom: 18px;
+      p {
+        color: $white;
+        margin: 0;
+      }
     }
-    .plan-price-currency {
-      font-size: 20px;
-      line-height: 26px;
-      display: inline-block;
-    }
-    .plan-price-hint {
-      display: block;
-      color: darken($steel, 10%);
-      font-size: 14px;
-    }
-  }
-  .plan-hint {
-  }
-  .plan-button {
-    text-align: center;
-    .button-outlined {
-      color: $primary;
-      border-color: $primary;
-      width: 100%;
-    }
-    .button-disabled {
-      width: 100%;
-      pointer-events: none;
-      color: #282A36;
-      border-color: #282A36;
-    }
-  }
-  .plan-terms {
-  }
-  .plan-features-heading {
-    font-weight: 500;
-    color: #282A36;
-  }
-  .plan-features {
-    font-weight: 500;
+
     ul {
       li {
-        // background-image: url('/images/check.svg');
-        // background-size: 14px;
-        // background-repeat: no-repeat;
-        // background-position: center left;
-        padding: 6px 0 6px 0;
-        color: #282A36;
-        vertical-align: middle;
-        line-height: 22px;
-        font-size: 13px;
-        svg {
-          width: 16px;
-          display: inline;
-          vertical-align: middle;
+        color: $white;
+        font-size: 15px;
+        line-height: 18px;
+        margin-bottom: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .imgPlaceholder {
+          background-image: url('/images/greencheck.svg');
+          background-size: 14px;
+          background-repeat: no-repeat;
+          background-position: center;
+          width: 15px;
+          height: 10px;
+          margin-right: 5px;
         }
-        span {
-          padding-left: 10px;
-          display: inline;
-          vertical-align: middle;
-        }
+      }
+    }
+
+    .whatsIncluded {
+      margin: 10px 0 20px 0;
+      color: $white;
+      line-height: 18px;
+      font-size: 15px;
+      span {
+        color: $lime;
+      }
+    }
+
+    a {
+      width: 100%;
+      max-width: 256px;
+    }
+
+    .greenButton {
+      background-color: $lime;
+      color: $purple;
+      border: none;
+      &:hover {
+        background-color: transparent;
+        border: 2px solid $white;
+        color: $white;
+      }
+    }
+
+    .whiteButton {
+      background-color: transparent;
+      border: 2px solid $white;
+      color: $white;
+      &:hover {
+        background-color: $lime;
+        color: $purple;
+        border: none;
+      }
+    }
+
+    button {
+      width: 100%;
+      max-width: 256px;
+      margin-top: 18px;
+      height: 42px;
+      font-weight: 600;
+      border-radius: 10px;
+      font-size: 16px;
+    }
+  }
+
+  .perks {
+    color: $white;
+    width: 100%;
+    padding-bottom: 9px;
+    margin-bottom: 9px;
+    font-weight: 400;
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .perkBorderBottom {
+    border-bottom: 1px solid #8f6ecd;
+  }
+
+  @include media-breakpoint-down(md) {
+    flex-direction: column;
+    align-items: center;
+    margin: 1px;
+    .plan {
+      margin: 20px;
+      max-width: 434px;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    .plan {
+      a {
+        margin: 18px 5px 0 5px;
       }
     }
   }
 }
+
+// .plans {
+//   display: flex;
+//   flex-direction: row;
+//   flex-wrap: wrap;
+//   justify-content: space-evenly;
+//   border: 1px solid red;
+//   // @include media-breakpoint-up(md) {
+//   // }
+// }
+// // .comming-soon {
+// //   z-index: 20;
+// //   text-align: center;
+// //   color: red;
+// //   position: absolute;
+// //   justify-content: center;
+// //   text-align: center;
+// // }
+// .plan {
+//   border: 1px solid green;
+//   width: 100%;
+//   // padding: 30px 0 10px 0;
+//   border-radius: 30px;
+//   font-family: $font-family-heading;
+//   border: 1px solid $grey2;
+//   margin-bottom: 40px;
+//   color: #282a36;
+//   box-shadow: 0px 10px 10px #cccccc;
+//   @include media-breakpoint-up(md) {
+//     flex-basis: 25%;
+//     margin-bottom: 0;
+//     border: none;
+//     border: 1px solid $grey2;
+//   }
+//   &.blured {
+//     // -webkit-filter: blur(10px);
+//     // -moz-filter: blur(10px);
+//     // -o-filter: blur(10px);
+//     // -ms-filter: blur(10px);
+//     // filter: blur(10px);
+//     background-color: #fff;
+//     .plan-main {
+//       margin-top: 80px;
+//     }
+//     .plan-button {
+//       margin: 0px 30px 30px 30px;
+//     }
+//   }
+//   &.plan-featured {
+//     background: $primary;
+//     .plan-price {
+//       color: $green;
+//       font-size: 30px;
+//       text-align: center;
+//     }
+//     .plan-name {
+//       color: white;
+//       font-size: 30px;
+//       text-align: center;
+//       padding-bottom: 10px;
+//     }
+//     .plan-description,
+//     .plan-features-heading {
+//       color: white;
+//       text-align: left;
+//     }
+//     .plan-features {
+//       ul {
+//         li {
+//           color: white;
+//         }
+//       }
+//     }
+//     .plan-button {
+//       .button-outlined {
+//         color: $green;
+//         background-color: transparent;
+//         border-color: $green;
+//         font-weight: 600;
+//       }
+
+//       .button-featured {
+//         color: $primary;
+//         background-color: $green;
+//         border-color: $green;
+//         font-weight: 600;
+//       }
+//       margin: 30px;
+//     }
+//   }
+//   .plan-main {
+//     padding: 10px 20px;
+//     text-align: left;
+//     //border-bottom: 1px solid $grey2;
+//   }
+//   .plan-details {
+//     padding: 10px 20px;
+//     text-align: left;
+//     h3 {
+//       margin-bottom: 10px;
+//       font-size: 1.125rem;
+//       font-weight: 500;
+//       line-height: 21.78px;
+//     }
+//   }
+//   .plan-name {
+//     font-size: 30px;
+//     line-height: 40px;
+//     font-weight: 600;
+//     margin-bottom: 16px;
+//     text-align: center;
+//     color: #282a36;
+//   }
+//   .plan-description {
+//     font-size: 16px;
+//     line-height: 26px;
+//     color: darken($steel, 10%);
+//     margin-bottom: 20px;
+//     @include media-breakpoint-up(md) {
+//       height: 110px;
+//     }
+//   }
+//   .plan-price {
+//     margin-bottom: 0px;
+//     @include media-breakpoint-up(md) {
+//       min-height: 50px;
+//     }
+//     .plan-price-currency-symbol {
+//       font-size: 24px;
+//       line-height: 28px;
+//       vertical-align: top;
+//       display: inline-block;
+//     }
+//     .plan-price-number {
+//       font-weight: 700;
+//       font-size: 42px;
+//       line-height: 50px;
+//       letter-spacing: -1px;
+//       display: inline-block;
+//     }
+//     .plan-price-currency {
+//       font-size: 20px;
+//       line-height: 26px;
+//       display: inline-block;
+//     }
+//     .plan-price-hint {
+//       display: block;
+//       color: darken($steel, 10%);
+//       font-size: 14px;
+//     }
+//   }
+//   .plan-hint {
+//   }
+//   .plan-button {
+//     text-align: center;
+//     .button-outlined {
+//       color: $primary;
+//       border-color: $primary;
+//       width: 100%;
+//     }
+//     .button-disabled {
+//       width: 100%;
+//       pointer-events: none;
+//       color: #282a36;
+//       border-color: #282a36;
+//     }
+//   }
+//   .plan-terms {
+//   }
+//   .plan-features-heading {
+//     font-weight: 500;
+//     color: #282a36;
+//   }
+//   .plan-features {
+//     font-weight: 500;
+//     ul {
+//       li {
+//         // background-image: url('/images/check.svg');
+//         // background-size: 14px;
+//         // background-repeat: no-repeat;
+//         // background-position: center left;
+//         padding: 6px 0 6px 0;
+//         color: #282a36;
+//         vertical-align: middle;
+//         line-height: 22px;
+//         font-size: 13px;
+//         svg {
+//           width: 16px;
+//           display: inline;
+//           vertical-align: middle;
+//         }
+//         span {
+//           padding-left: 10px;
+//           display: inline;
+//           vertical-align: middle;
+//         }
+//       }
+//     }
+//   }
+// }
