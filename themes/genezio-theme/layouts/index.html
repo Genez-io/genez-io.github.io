@@ -618,25 +618,56 @@ export default View;</code></pre>
           <h1 class="text-center">{{ .Site.Params.homepage.pricing_title }}</h1>
         </div>
         <div class="plans">
+          <script>
+            //TODO: change URL
+                fetch('https://dev.api.genez.io/plans')
+                  .then(response => response.json())
+                  .then(({subscriptionPlans}) => {
+                    subscriptionPlans.map((plan) => {
+                      const parsedPlanBenefits = JSON.parse(plan.benefits)
+                      const firstBenefits = parsedPlanBenefits.benefits.slice(0, 3); 
+                      const secondBenefits = parsedPlanBenefits.benefits.slice(3);
+
+                      // display first benefits data
+                      if(plan.price === 0) {
+                        let htmlInsert = ''
+                        firstBenefits.forEach(item => {
+                          htmlInsert += `
+                          <li><div class="imgPlaceholder"></div>${item}</li>
+                          `
+                        })
+                        document.getElementById('freeBenefits').innerHTML = htmlInsert
+                      }else {
+                        let htmlInser = ''
+                        firstBenefits.slice(1,firstBenefits.length).forEach(item => {
+                          htmlInser += `<li><div class="imgPlaceholder"></div>${item}</li>`
+                        })
+                        document.getElementById(`${plan.name}Price`).innerHTML = `$${plan.price}<span>/month</span>`
+                        document.getElementById(`${plan.name}BenefitsBadge`).innerHTML = `<p>${plan.name == 'Expert' ? 'Professional' : 'Personal'} Plan +</p>`
+                        document.getElementById(`${plan.name}Benefits`).innerHTML = htmlInser
+                      }
+
+                      // display perks data
+                      let htmlInser = ''
+                      secondBenefits.forEach((item, idx) => {
+                        htmlInser += ` <div class="perks ${idx !== secondBenefits.length - 1 && 'perkBorderBottom' }">${item}</div>`
+                      })
+                      document.getElementById(`${plan.name}Perks`).innerHTML = htmlInser
+                    })
+                  })
+                  .catch(error => console.error(error));
+              </script>
           {{/*  Personal   */}}
           <div class="plan">
             <div class="planHeader">
               <h2>Personal</h2>
               <h3>Free</h3>
             </div>
-            <ul class="headerAlign">
-              <li><div class="imgPlaceholder"></div>seamlessly deploy full stack apps</li>
-              <li><div class="imgPlaceholder"></div>dashboard with test interface</li>
-              <li><div class="imgPlaceholder"></div>automatic SSL and global CDN</li>
+            <ul id="freeBenefits" class="headerAlign">
             </ul>
-
             <p class="whatsIncluded">Whats included <span>?</span></p>
-
-            <div class="perks perkBorderBottom">3 projects</div>
-            <div class="perks perkBorderBottom">100k function invocations</div>
-            <div class="perks perkBorderBottom">10s execution timeout</div>
-            <div class="perks">1 hour of logs</div>
-
+            <div id="PersonalPerks" class="perksWrapper">
+            </div>
             <a href="https://app.genez.io/billing?plans_modal=true">
               <button class="whiteButton">Choose Plan</button>
             </a>
@@ -645,128 +676,35 @@ export default View;</code></pre>
           <div class="plan">
             <div class="planHeader">
               <h2>Professional</h2>
-              <h3>$19<span>/month</span></h3>
+              <h3 id="ProfessionalPrice"></h3>
             </div>
-              <div class="planBadge"><p>Personal Plan +</p></div>
-              <ul>
-              <li><div class="imgPlaceholder"></div>custom web domain</li>
-              <li><div class="imgPlaceholder"></div>24/7 incident support</li>
-            </ul>
-
+              <div id="ProfessionalBenefitsBadge" class="planBadge"></div>
+              <ul id="ProfessionalBenefits">
+              </ul>
             <p class="whatsIncluded">Whats included <span>?</span></p>
-
-            <div class="perks perkBorderBottom">10 projects</div>
-            <div class="perks perkBorderBottom">1M function invocations</div>
-            <div class="perks perkBorderBottom">30s execution timeout</div>
-            <div class="perks">1 day of logs</div>
-            
+            <div id="ProfessionalPerks" class="perksWrapper">
+            </div>
             <a href="https://app.genez.io/billing?plans_modal=true">
               <button class="greenButton">Choose Plan</button>
             </a>
-
           </div>
           {{/*  Expert   */}}
           <div class="plan">
             <div class="planHeader">
               <h2>Expert</h2>
-              <h3>$89<span>/month</span></h3>
+              <h3 id="ExpertPrice"></h3>
             </div>
-
-            <div class="planBadge"><p>Professional Plan +</p></div>
-
-            <ul>
-              <li> <div class="imgPlaceholder"></div>unlimited scheduled cron jobs </li>
-              <li> <div class="imgPlaceholder"></div>24/7 dedicated support</li>
+            <div id="ExpertBenefitsBadge" class="planBadge"></div>
+            <ul id="ExpertBenefits">
             </ul>
-
             <p class="whatsIncluded">Whats included <span>?</span></p>
-
-            <div class="perks perkBorderBottom">50 projects</div>
-            <div class="perks perkBorderBottom">10M function invocations</div>
-            <div class="perks perkBorderBottom">30s execution timeout</div>
-            <div class="perks">1 month of logs</div>
-
+            <div id="ExpertPerks" class="perksWrapper">
+            </div>
             <a href="https://app.genez.io/billing?plans_modal=true">
               <button class="whiteButton">Choose Plan</button>
             </a>
-
           </div>
           
-          {{/*  Personal Plan  */}}
-          {{/*  <div class="plan plan-featured" style="display: flex;
-          flex-direction: column;
-          justify-content: space-between;">
-          <div>
-              <div class="plan-main">
-                <div class="plan-price">
-                  <span class="plan-price-number" id="plan1-price-custom"></span>
-                </div>
-                <h2 class="plan-name" id="plan1-name-custom"></h3>
-              </div>
-              <div class="plan-details">
-                <div class="plan-features">
-                  <ul id="plan1-ul-custom">
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="plan-button">
-              <a href="https://app.genez.io/billing?plans_modal=true" class="button-outlined">Choose Plan</a>
-            </div>
-          </div>  */}}
-
-          {{/*  Professional Plan  */}}
-          {{/*  <div class="plan plan-featured" style="display: flex;
-          flex-direction: column;
-          justify-content: space-between;">
-            <div>
-              <div class="plan-main">
-                <div class="plan-price">
-                  <span class="plan-price-number" id="plan2-price-custom"></span>
-                </div>
-                <h2 class="plan-name" id="plan2-name-custom"></h3>
-              </div>
-              <div class="plan-details">
-                <div class="plan-features">
-                  
-                  <ul id="plan2-ul-custom">
-                   
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="plan-button">
-              <a href="https://app.genez.io/billing?plans_modal=true" class="button-outlined button-featured">Choose Plan</a>
-            </div>
-          </div>  */}}
-
-          {{/*  Expert Plan  */}}
-          {{/*  <div class="plan plan-featured" style="display: flex;
-          flex-direction: column;
-          justify-content: space-between;">
-            <div>
-              <div class="plan-main">
-                <div class="plan-price">
-                  <span class="plan-price-number" id="plan3-price-custom"></span>
-                </div>
-                <h2 class="plan-name" id="plan3-name-custom"></h3>
-              </div>
-              <div class="plan-details">
-                <div class="plan-features">
-                  
-                  <ul id="plan3-ul-custom">
-                   
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="plan-button">
-              <a href="https://app.genez.io/billing?plans_modal=true" class="button-outlined">Choose Plan</a>
-            </div>
-          </div>  */}}
-
-
-
         </div>
       </div>
     </div>
