@@ -619,8 +619,7 @@ export default View;</code></pre>
         </div>
         <div class="plans">
           <script>
-            //TODO: change URL
-                fetch('https://dev.api.genez.io/plans')
+                fetch('https://api.genez.io/plans')
                   .then(response => response.json())
                   .then(({subscriptionPlans}) => {
                     subscriptionPlans.map((plan) => {
