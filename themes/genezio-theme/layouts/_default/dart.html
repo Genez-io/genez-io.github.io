@@ -335,17 +335,15 @@
               <span>9</span>
             </div>
 
-              <pre>
-<code>Export class HelloWorldClass {
-  helloWorld() { 
-    return "Hello world!";
+<pre><code>class HelloWorldClass {
+  String helloWorld() {
+    return "Hello World";
   }
 
-  hello(name, location) {
-    return `Hello, ${name}! Greetings from ${location}!`; 
+  String hello(String name, String location) {
+    return "Hello, $name! Greetings from $location"; 
   }
-}  
-</code></pre>
+}</code></pre>
       </div>
     </div>
       
@@ -418,28 +416,33 @@
               <span>16</span>
               <span>17</span>
               <span>18</span>
+              <span>19</span>
+              <span>20</span>
+              <span>21</span>
             </div>
 
               <pre>
-<code>/**
-* This is an auto generated code. This code should not be modified since the
-* file can be overwritten if new genezio commands are executed.
-/*
+<code>/// This is an auto generated code. This code should not be modified since the file can be overwritten 
+/// if new genezio commands are executed.
 
-import { Remote } from "./remote.js"
+import 'remote.dart';
 
-export class HelloWorldService {
-  static remote = new Remote(&lt;"PROJECT_URL"&gt;)
+class HelloWorldClass {
+  static final remote = Remote(<"PROJECT_URL">);
 
-  static async helloWorld() {
-    return HelloWorldService.remote.call("HelloWorldService.helloWorld")
+  static Future&lt;String&gt; helloWorld(String token, String id) async {
+    final response = await remote.call("HelloWorldClass.helloWorld");
+
+    return response as String;
   }
 
-  static async hello(name, from) {
-    return HelloWorldService.remote.call("HelloWorldService.hello", name, from) 
+  static Future&lt;String&gt; hello(String name, String location) async {
+    final response = await remote.call("HelloWorldClass.hello", [name, location]);
+
+    return response as String;
   }
-}
-</code></pre>
+
+}</code></pre>
       </div>
     </div>
 
@@ -471,20 +474,21 @@ export class HelloWorldService {
             </div>
 
               <pre>
-<code>import { HelloWorldClass } from "./sdk/hello.sdk.js";
-
-const [name, setName] = React.useState("Billy");
-const [location, setLocation] = React.useState("Paris"); 
-
-const View = () => {
-  return (
-    <>
-      `${HelloWorldClass.hello(name, location)}`
-    </>
-  );
-};
-
-export default View;</code></pre>
+<code>class HomePageState extends State<HomePage> {
+  @override
+  Widget build(BuildContext context) => Scaffold(
+        appBar: AppBar(
+          actions: [
+            IconButton(
+              onPressed: () {
+                // Call Backend Function
+                print(HelloWorldClass.hello("George", "Paris"));
+              },
+            ),
+          ],
+        ),
+      );
+}</code></pre>
       </div>
     </div>
 
