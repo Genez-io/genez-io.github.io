@@ -471,10 +471,12 @@ class HelloWorldClass {
               <span>12</span>
               <span>13</span>
               <span>14</span>
+              <span>15</span>
             </div>
 
               <pre>
-<code>class HomePageState extends State<HomePage> {
+<code>
+  class HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
@@ -482,7 +484,7 @@ class HelloWorldClass {
             IconButton(
               onPressed: () {
                 // Call Backend Function
-                print(HelloWorldClass.hello("George", "Paris"));
+                print(HelloWorldClass.hello("George", "Paris")); 
               },
             ),
           ],
