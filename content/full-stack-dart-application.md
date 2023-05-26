@@ -1,10 +1,10 @@
 ---
 title: 'The easy way to write, deploy and use a serverless API'
-layout: 'dart'
-summary: 'dart'
+layout: 'full-stack-dart-application'
+summary: 'full-stack-dart-application'
 date: 2023-05-14T05:10:04+03:00
 draft: false
-leadTitle: "As Dart developers, we highly believe this is the most efficient approach of naturally invoking backend functions from your frontend code."
+leadTitle: "As Dart developers, we believe this is the most efficient approach of naturally invoking backend functions from your frontend code."
 leadSubTitle: "MOVED INLINE"
 callToAction: 'Learn more'
 leadButtonOneText: 'Start for free'
