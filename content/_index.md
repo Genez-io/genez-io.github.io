@@ -1,5 +1,5 @@
 ---
-title: 'The easy way to write, deploy and use a serverless API'
+title: 'The easiest way to write, deploy and use a serverless API'
 date: 2019-02-22
 leadTitle: "The easiest way to write and host a serverless application"
 leadSubTitle: "MOVED INLINE"
