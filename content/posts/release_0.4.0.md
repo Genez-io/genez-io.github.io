@@ -1,5 +1,5 @@
 ---
-title: genezio New Release
+title: Genezio New Release
 date: 2023-05-30
 tags:
   - News
@@ -45,7 +45,7 @@ I’m excited to work with such a productive team! Since our last release, we’
 
 * We are thrilled to announce that we are officially **open source**! Enjoy genezio at its fullest by choosing whether to **deploy on your own AWS** or on genezio. This allows you to have the freedom and flexibility while also making use of our amazing features.
 * Introducing **Backend Dart Support**! Flutter enthusiasts, you can now use genezio if you are writing your backend in Dart. Enjoy all of our cool features now in your favorite programming language.
-* Stop worrying about complicated setup or technical configurations! You can now set your own **custom domain **for your web application. Establish your online presence with a domain that reflects your brand and personal identity.
+* Stop worrying about complicated setup or technical configurations! You can now set your own **custom domain** for your web application. Establish your online presence with a domain that reflects your brand and personal identity.
 * We’ve worked hard towards offering you a **smoother experience** when it comes to using TypeScript, Dart, or Python. Improvements and bug fixes were made in this release.
 * Debugging is now easier! You can now see your **live logs** directly on our Test Interface.
 * **New examples** on how to use genezio are now available on [GitHub](https://github.com/genez-io/genezio-examples).  
