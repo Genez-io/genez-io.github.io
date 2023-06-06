@@ -15713,6 +15713,7 @@ ul.pagination li {
   display: flex;
   justify-content: space-between; }
   .plans .plan {
+    padding-bottom: 33px;
     margin: 0 20 0 20;
     display: flex;
     flex-direction: column;
@@ -15814,6 +15815,8 @@ ul.pagination li {
     font-weight: 400;
     font-size: 15px;
     text-align: center; }
+  .plans .perksWrapper {
+    width: 100%; }
   .plans .perkBorderBottom {
     border-bottom: 1px solid #8f6ecd; }
   @media (max-width: 991.98px) {
