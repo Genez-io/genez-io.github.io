@@ -50,7 +50,7 @@ disableHugoGeneratorInject = true
     weight = 1
 
 [[menu.footer_pages]]
-    name = "Full stack Dart app"
+    name = "Full Stack Dart App"
     url = "/full-stack-dart-application/"
     weight = 2
 
