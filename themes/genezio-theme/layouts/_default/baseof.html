@@ -254,10 +254,10 @@
                     {{ $currentPage := . }}
                     {{ range .Site.Menus.footer_pages }}
                     <li>
-                      <a href="{{.URL}}">
-                        {{ .Pre }}
-                        <span>{{ .Name }}</span>
-                      </a>
+                       <a {{ if eq .Name "Genezio Documentation" }}target="_blank"{{ end }} href="{{ .URL }}">
+        {{ .Pre }}
+        <span>{{ .Name }}</span>
+      </a>
                     </li>
                     {{end}}
                   </ul>
