@@ -227,10 +227,10 @@
           </div>
         </div>
         <div class="col-12 col-md-6">
-          <div class="footer-menu">
-              <div class="col-12 col-md-10">
+          <div class="footer-menu d-md-flex">
+            {{/*  Support Links  */}}
+              <div class="col-12 col-md-7">
                 <h2 class="footer-title-support">Support</h3>
-  
                 <div class="menu-footer-tertiary">
                   <ul>
                     {{ $currentPage := . }}
@@ -244,8 +244,26 @@
                     {{end}}
                   </ul>
                 </div>
-  
               </div>
+              
+              {{/*  Pages  */}}
+              <div class="col-12 col-md-6">
+                <h2 class="footer-title-support">Product</h3>
+                <div class="menu-footer-tertiary">
+                  <ul>
+                    {{ $currentPage := . }}
+                    {{ range .Site.Menus.footer_pages }}
+                    <li>
+                       <a {{ if eq .Name "Genezio Documentation" }}target="_blank"{{ end }} href="{{ .URL }}">
+        {{ .Pre }}
+        <span>{{ .Name }}</span>
+      </a>
+                    </li>
+                    {{end}}
+                  </ul>
+                </div>
+              </div>
+              
           </div>
         </div>
       </div>

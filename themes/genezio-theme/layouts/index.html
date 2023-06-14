@@ -344,13 +344,13 @@
             </div>
 
               <pre>
-<code>Export class HelloWorldClass {
+<code>Export class HelloClass {
   helloWorld() { 
     return "Hello world!";
   }
 
   hello(name, location) {
-    return `Hello, ${name}! Greetings from ${location}!`; 
+    return `Hello, ${name}, from ${location}!`; 
   }
 }  
 </code></pre>
@@ -481,18 +481,20 @@ export class HelloWorldService {
               <span>12</span>
               <span>13</span>
               <span>14</span>
+              <span>15</span>
             </div>
 
               <pre>
-<code>import { HelloWorldClass } from "./sdk/hello.sdk.js";
-
-const [name, setName] = React.useState("Billy");
-const [location, setLocation] = React.useState("Paris"); 
+<code>import { useState } from "react"
+import { HelloClass } from "./sdk/hello.sdk.js";
+      
+const [name, setName] = useState("Billy");
+const [location, setLocation] = useState("NY"); 
 
 const View = () => {
   return (
     <>
-      `${HelloWorldClass.hello(name, location)}`
+      `${HelloClass.hello(name, location)}`
     </>
   );
 };

@@ -43,6 +43,22 @@ disableHugoGeneratorInject = true
         hero_background_gradient_two = "#9477c4"
 
 
+# Footer Pages 
+[[menu.footer_pages]]
+    name = "Genezio Documentation"
+    url = "https://docs.genez.io/genezio-documentation/"
+    weight = 1
+
+[[menu.footer_pages]]
+    name = "Full Stack Dart App"
+    url = "/full-stack-dart-application/"
+    weight = 2
+
+[[menu.footer_pages]]
+    name = "Landing Page"
+    url = "/"
+    weight = 3
+
 # Footer Menu Third
 [[menu.footer_tertiary]]
     name = "Contact us at: contact@genez.io"
@@ -63,6 +79,6 @@ disableHugoGeneratorInject = true
     name = "Brand Assets"
     url = "https://drive.google.com/drive/folders/1DUTEllKJygFyO3lsHi4uu703iZfYQHB5?usp=sharing"
     weight = 4
-    
+
 [permalinks]
     posts = "/blog/:title/"

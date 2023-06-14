@@ -41,8 +41,15 @@
     .row {
       max-height: 50%;
     }
+    .title {
+      font-size: 50px;
+    }
     @include media-breakpoint-down(md) {
       height: 160vh;
+      .title {
+        font-size: 30px;
+        line-height: 40px;
+      }
     }
     @media only screen and (min-height: 1000px) {
       padding-top: 150px;

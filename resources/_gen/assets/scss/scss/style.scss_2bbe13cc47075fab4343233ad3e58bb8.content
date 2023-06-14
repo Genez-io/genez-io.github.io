@@ -16156,9 +16156,14 @@ ul.pagination li {
   padding-top: 75px; }
   .page-home .lead-container .row {
     max-height: 50%; }
+  .page-home .lead-container .title {
+    font-size: 50px; }
   @media (max-width: 991.98px) {
     .page-home .lead-container {
-      height: 160vh; } }
+      height: 160vh; }
+      .page-home .lead-container .title {
+        font-size: 30px;
+        line-height: 40px; } }
   @media only screen and (min-height: 1000px) {
     .page-home .lead-container {
       padding-top: 150px; } }
