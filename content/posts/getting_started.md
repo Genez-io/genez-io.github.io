@@ -39,7 +39,7 @@ Conversion notes:
 
 ### Introduction
 
-genezio is a serverless solution for seamlessly building full-stack web and mobile applications in a scalable and cost-efficient way.
+Genezio is a serverless solution for seamlessly building full-stack web and mobile applications in a scalable and cost-efficient way.
 
 
 ### Documentation
@@ -65,7 +65,7 @@ First, you need to install genezio on your working machine by running the follow
 
 
 ```
-npm install genezio
+npm install genezio -g
 ```
 
 
@@ -100,7 +100,7 @@ cd ./genezio-examples/javascript/getting-started/backend
 ```
 
 
-By running this set of commands, the repository is cloned into a local directory named _genezio-examples, _and then the _getting-started_ project folder for JavaScript is entered.
+By running this set of commands, the repository is cloned into a local directory named genezio-examples, and then the getting-started project folder for JavaScript is entered.
 
 
 ## Test your application locally
@@ -124,7 +124,7 @@ genezio deploy
 ```
 
 
-This command deploys your classes and automatically creates a SDK in the client folder that you can use in the frontend application.
+This command deploys your classes and automatically creates an SDK in the client folder that you can use in the frontend application. It also deployes the frontend application to the genezio's CDN and gives you a subdomain for your application.
 
 The SDK is basically calling the deployed code using JSON-RPC standard.
 
@@ -135,6 +135,8 @@ You should see the following output:
 Deploy your project to genezio infrastructure. . .
 Your code was deployed and the SDK was successfully generated!
 Your project has been deployed and is available at https://app.genez.io/project/<projectId>
+
+Frontend successfully deployed at https://<random-subdomain>.dev.app.genez.io.
 ```
 
 
@@ -143,14 +145,14 @@ You can see the logs of the project on your genezio dashboard. Also, from there 
 
 ### Success
 
-Now that the backend of the application is deployed, you can run and test the frontend application.
-
-
-```
-cd  ./../frontend
-npm install
-npm start
-```
-
+Now that the full-stack application is deployed, you can test it directly on the provided link or by using our testing tool from the dashboard.
 
 Congratulations, you’ve now finished your first genezio application!
+
+
+### Useful Links
+ - [Genezio Documentation](https://docs.genez.io/genezio-documentation/)
+ - [Genezio Examples](https://github.com/genez-io/genezio-examples)
+ - [Join Discord Community](https://discord.com/invite/uc9H5YKjXv)
+
+
