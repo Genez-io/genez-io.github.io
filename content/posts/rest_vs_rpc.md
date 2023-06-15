@@ -161,7 +161,7 @@ export class MusicPlayerService {
 
 		// Do your business logic for playing a song
 
-		return ‘♪♫ *music ♫♪’
+		return ‘♪♫ * music * ♫♪’
 
 	}
 
