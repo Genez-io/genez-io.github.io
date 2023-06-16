@@ -231,6 +231,20 @@
       "getting-started-configuration",
       "governing-law",
       "header",
+      "heading",
+      "heading-1",
+      "heading-10",
+      "heading-11",
+      "heading-12",
+      "heading-13",
+      "heading-2",
+      "heading-3",
+      "heading-4",
+      "heading-5",
+      "heading-6",
+      "heading-7",
+      "heading-8",
+      "heading-9",
       "hs-script-loader",
       "implement-the-backend-class",
       "implement-the-client-side-project",
@@ -301,7 +315,8 @@
       "why-use-genezio",
       "write",
       "writecleancode",
-      "writecleancode-container"
+      "writecleancode-container",
+      "you-have-todos-on-each-part-of-the-code-where-you-have-to-work-on"
     ]
   }
 }
