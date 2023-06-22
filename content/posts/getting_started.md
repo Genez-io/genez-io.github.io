@@ -36,47 +36,37 @@ Conversion notes:
 * Tables are currently converted to HTML tables.
 ----->
 
-
 ### Introduction
 
 Genezio is a serverless solution for seamlessly building full-stack web and mobile applications in a scalable and cost-efficient way.
-
 
 ### Documentation
 
 Only a small part of genezio’s functionality is discussed in this article.
 
-For a complete developer documentation, please go to the official [genezio Documentation](https://docs.genez.io).
-
+For complete developer documentation, please go to our [Official Documentation.](https://docs.genez.io)
 
 ### Support
 
-If you can’t find the answer to some of your questions in this article or in our documentation, we invite you to join our [Discord Community](https://discord.gg/uc9H5YKjXv).
-
+We invite you to join our community on [Discord](https://discord.gg/uc9H5YKjXv) for further information and help.
 
 ## Let’s Get Started
 
 This guide will get you up and running with genezio in less than five minutes. We’ve already made an application which is ready for you to deploy in the genezio infrastructure.
 
-
 ### Install genezio CLI
 
 First, you need to install genezio on your working machine by running the following command:
-
 
 ```
 npm install genezio -g
 ```
 
-
-
 ### Log in to the genezio Cloud
-
 
 ```
 genezio login
 ```
-
 
 A web browser will open and you will need to create an account using your Google or GitHub account.
 
@@ -88,48 +78,38 @@ After you log in, you will be redirected to a page that will automatically authe
 
 A success message will appear on the screen, and you can now return to your terminal.
 
-
 ### Clone the Getting Started Example
 
 Now that you are logged in, let’s make this easy. Clone this GitHub repository to your computer. If you don’t remember how to do this, copy and paste these commands in your terminal:
-
 
 ```
 git clone https://github.com/Genez-io/genezio-examples.git
 cd ./genezio-examples/javascript/getting-started/backend
 ```
 
-
 By running this set of commands, the repository is cloned into a local directory named genezio-examples, and then the getting-started project folder for JavaScript is entered.
-
 
 ## Test your application locally
 
-Run the following command to open a local test environment that simulates the same behaviour as the one in the production. 
-
+Run the following command to open a local test environment that simulates the same behavior as the one in the production.
 
 ```
 genezio local
 ```
 
-
-
 ## Deploy Your First Application
 
 Let’s deploy the application!
-
 
 ```
 genezio deploy
 ```
 
-
-This command deploys your classes and automatically creates an SDK in the client folder that you can use in the frontend application. It also deployes the frontend application to the genezio's CDN and gives you a subdomain for your application.
+This command deploys your backend classes and automatically creates an SDK in the client folder that you can use in the frontend application. It also deploys the frontend application to the genezio’s CDN and gives you a subdomain for your application.
 
 The SDK is basically calling the deployed code using JSON-RPC standard.
 
 You should see the following output:
-
 
 ```
 Deploy your project to genezio infrastructure. . .
@@ -139,9 +119,7 @@ Your project has been deployed and is available at https://app.genez.io/project/
 Frontend successfully deployed at https://<random-subdomain>.dev.app.genez.io.
 ```
 
-
 You can see the logs of the project on your genezio dashboard. Also, from there you can pause or delete the project.
-
 
 ### Success
 
@@ -149,10 +127,8 @@ Now that the full-stack application is deployed, you can test it directly on the
 
 Congratulations, you’ve now finished your first genezio application!
 
-
 ### Useful Links
- - [Genezio Documentation](https://docs.genez.io/genezio-documentation/)
- - [Genezio Examples](https://github.com/genez-io/genezio-examples)
- - [Join Discord Community](https://discord.com/invite/uc9H5YKjXv)
 
-
+- [Genezio Documentation](https://docs.genez.io/genezio-documentation/)
+- [Genezio Examples](https://github.com/genez-io/genezio-examples)
+- [Join Discord Community](https://discord.com/invite/uc9H5YKjXv)
