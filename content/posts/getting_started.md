@@ -72,7 +72,7 @@ A web browser will open and you will need to create an account using your Google
 
 ![Street Art Image](/posts/genezio_login_google.png)
 
-Figure 1: Screenshot of the genezio Sign In page
+##### Figure 1: Screenshot of the genezio Sign In page
 
 After you log in, you will be redirected to a page that will automatically authenticate your CLI application.
 
