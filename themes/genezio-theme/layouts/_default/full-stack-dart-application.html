@@ -556,7 +556,7 @@ class HelloClass {
           <h1 class="text-center">{{ .Site.Params.homepage.pricing_title }}</h1>
         </div>
         <div class="plans">
-          <script>
+          <script async defer>
             fetch("https://api.genez.io/plans")
               .then((response) => response.json())
               .then(({ subscriptionPlans }) => {
