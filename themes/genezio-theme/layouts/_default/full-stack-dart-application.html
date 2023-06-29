@@ -38,14 +38,7 @@
         <h2>{{ .Params.leadTitle }}</h2>
         <div class="lead-buttons">
           {{ if .Params.leadButtonOneLink }}
-          <a class="button-demo start-for-free" href="{{ .Params.leadButtonOneLink | relURL }}"
-            >{{ .Params.leadButtonOneText }}</a
-          >
-          {{ end }} {{ if .Params.leadButtonTwoLink }}
-          <a class="button-discord-hero" href="{{ .Params.leadButtonTwoLink | relURL }}"
-            >{{ .Params.leadButtonTwoText }}</a
-          >
-          {{ end }}
+          <a class="button-demo start-for-free" href="{{ .Params.leadButtonOneLink | relURL }}">{{ .Params.leadButtonOneText }}</a>{{ end }}{{ if .Params.leadButtonTwoLink }}<a class="button-discord-hero" href="{{ .Params.leadButtonTwoLink | relURL }}">{{ .Params.leadButtonTwoText }}</a>{{ end }}
         </div>
         {{ .Content }}
       </div>
