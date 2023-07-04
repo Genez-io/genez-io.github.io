@@ -1,4 +1,4 @@
-name: genezio-landing
+name: GENEZIO-PRODUCTION-WEBSITE
 region: us-east-1
 cloudProvider: aws
 sdk:
