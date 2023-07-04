@@ -6,7 +6,7 @@
 import { Remote } from "./remote.js"
 
 export class HelloWorldClass {
-  static remote = new Remote("https://i6yc73e6blbas75ccxbx4xc2540zfykq.lambda-url.us-east-1.on.aws/HelloWorldClass")
+  static remote = new Remote("https://6bhnrkb6cyqhhpru6xpmoq3squ0opnoa.lambda-url.us-east-1.on.aws/HelloWorldClass")
 
   static async helloWorld() {
     return HelloWorldClass.remote.call("HelloWorldClass.helloWorld")
