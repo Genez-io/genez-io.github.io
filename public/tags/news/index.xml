@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>News on genezio</title>
+    <link>/tags/news/</link>
+    <description>Recent content in News on genezio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 30 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="/tags/news/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Genezio New Release</title>
+      <link>/blog/genezio-new-release/</link>
+      <pubDate>Tue, 30 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/genezio-new-release/</guid>
+      <description>I’m excited to work with such a productive team! Since our last release, we’ve added some new features, improved a couple of things and resolved a few bugs. Let’s dive in the latest developments made by our amazing team:
+Updates We are thrilled to announce that we are officially open source! Enjoy genezio at its fullest by choosing whether to deploy on your own AWS or on genezio. This allows you to have the freedom and flexibility while also making use of our amazing features.</description>
+    </item>
+    
+  </channel>
+</rss>
