@@ -8,12 +8,18 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-20.04
+    ruruns-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
         with:
-          submodules: true # Fetch Hugo themes (true OR recursive)
-          fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
+          node-version: 16
+
+      - uses: Genez-io/genezio-github-action@main
+        with:
+          genezio-version: latest
+          token: ${{ secrets.GENEZIO_TOKEN }}
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
@@ -22,11 +28,4 @@ jobs:
           # extended: true
 
       - name: Build
-        run: hugo --minify
-
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        if: github.ref == 'refs/heads/main'
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
+        run: genezio deploy --frontend
