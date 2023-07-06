@@ -1,6 +1,5 @@
 ---
 title: How to add a MongoDB to your genezio project
-#TODO: change date
 date: 2023-07-06
 tags:
   - Tutorials
