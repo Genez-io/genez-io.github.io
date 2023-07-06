@@ -16,7 +16,7 @@ meta_og_image: "https://genez.io/images/genezio_mongodb.webp"
 # meta data end
 ---
 
-In this tutorial, I will show you the steps of integrating a Mongo database into your genezio[ Getting Started project](https://github.com/Genez-io/genezio-examples/tree/master/typescript/getting-started).
+In this tutorial, I will show you the steps of integrating a Mongo database into your genezio [Getting Started project](https://github.com/Genez-io/genezio-examples/tree/master/typescript/getting-started).
 
 Following this tutorial, you will be able to:
 
@@ -47,7 +47,7 @@ Any time you get stuck or have questions, please contact me on [Discord](https:/
 
 - Have `npm` installed on your machine
 - Have `mongoose` installed on your machine
-- Create a free genezio account[ here](https://genez.io)
+- Create a free genezio account [here](https://genez.io)
 - Have `genezio` installed on your machine - you can install it with `npm install genezio -g`
 
 ## **Introduction**
@@ -60,7 +60,7 @@ As a cloud database service, MongoDB Atlas offers seamless scalability, high ava
 
 ### **Create a MongoDB Atlas account**
 
-Go to[ MongoDB Cloud Atlas](https://www.mongodb.com/cloud/atlas/register) and create an account. Personally, I recommend creating an account using Google Sign up.
+Go to [MongoDB Cloud Atlas](https://www.mongodb.com/cloud/atlas/register) and create an account. Personally, I recommend creating an account using Google Sign up.
 
 ### **Create a free cluster**
 
@@ -97,7 +97,7 @@ A pop-up with the MongoDB connection string will appear. Replace `<password>` wi
 
 ### **Integrate your newly created cluster into the project**
 
-Now you can go to your[ Getting Started project](https://github.com/Genez-io/genezio-examples/tree/master/typescript/getting-started) and open an IDE of your choice. I recommend VS Code.
+Now you can go to your [Getting Started project](https://github.com/Genez-io/genezio-examples/tree/master/typescript/getting-started) and open an IDE of your choice. I recommend VS Code.
 
 In the ‘server’ folder, create a `.env` file and add a line with the `MONGO_DB_URI=<your_connection_string>` value. You can then use it all over your code using `process.env.MONGO_DB_URI`.
 
@@ -134,7 +134,7 @@ After that, you can use all the functions provided by mongoose all over the func
 
 ### **Check your DB with MongoDB Compass**
 
-MongoDB Compass is one of the most powerful database clients for MongoDB. You can download it from[ here](https://www.mongodb.com/try/download/compass).
+MongoDB Compass is one of the most powerful database clients for MongoDB. You can download it from [here](https://www.mongodb.com/try/download/compass).
 
 I highly recommend using it for GUI queries to your database, and also for debugging your application.
 
