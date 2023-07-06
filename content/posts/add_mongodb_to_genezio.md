@@ -83,7 +83,7 @@ After, you have to create a user with a strong password. Make sure to store it s
 
 Fill in the required information and click ‘Create User’.
 
-Next, add an IP address to the whitelist. For testing purposes, you can add `0.0.0.0` - this means IPs are allowed. I highly disregard using this in a production environment.
+Next, add an IP address to the whitelist. For testing purposes, you can add `0.0.0.0` - this means IPs are allowed. I highly discourage using this in a production environment.
 
 Now click on ‘Add Entry’.
 
@@ -154,10 +154,10 @@ With MongoDB Atlas, there are 2 main ways to query the database.
 
 #### **Persistent Connection**
 
-This is the most conventional method of establishing a connection to a database, but encounters certain issues in a serverless environment, particularly when the initial connection consumes a significant amount of time.
+This is the most conventional method of establishing a connection to a database, but [IT] encounters certain issues in a serverless environment, particularly when the initial connection consumes a significant amount of time.
 
 #### **Data API**
 
-[Mongo DB Atlas Data API](https://www.mongodb.com/docs/atlas/api/data-api/) offers a solution where you can directly access the database through an API, eliminating the requirement of establishing an initial connection and the serverless cold-start will be decreased a lot.
+[Mongo DB Atlas Data API](https://www.mongodb.com/docs/atlas/api/data-api/) offers a solution where you can directly access the database through an API, eliminating the requirement of establishing an initial connection and reducing serverless cold-start significantly.
 
 &#x1F973; Congratulations on acquiring your own database that you can use to work on your projects!
