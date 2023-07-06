@@ -1,12 +1,13 @@
 ---
 title: How to add a MongoDB to your genezio project
+#TODO: change date
 date: 2023-07-06
 tags:
   - Tutorials
 author: Radu Dumitrescu
 linkedIn: https://www.linkedin.com/in/radu-andrei-dumitrescu/
 thumbnail: /images/genezio_mongodb.webp
-#TODO: change preview
+
 preview: In this tutorial, I will show you the steps of integrating a Mongo database into your genezio project.
 # meta data start
 description: "In this tutorial, I will show you the steps of integrating a Mongo database into your genezio Getting Started project."
