@@ -38,7 +38,13 @@
         <h2>{{ .Params.leadTitle }}</h2>
         <div class="lead-buttons">
           {{ if .Params.leadButtonOneLink }}
-          <a class="button-demo start-for-free" href="{{ .Params.leadButtonOneLink | relURL }}">{{ .Params.leadButtonOneText }}</a>{{ end }}{{ if .Params.leadButtonTwoLink }}<a class="button-discord-hero" href="{{ .Params.leadButtonTwoLink | relURL }}">{{ .Params.leadButtonTwoText }}</a>{{ end }}
+          <a class="button-demo start-for-free" href="{{ .Params.leadButtonOneLink | relURL }}"
+            >{{ .Params.leadButtonOneText }}</a
+          >{{ end }}{{ if .Params.leadButtonTwoLink }}<a
+            class="button-discord-hero"
+            href="{{ .Params.leadButtonTwoLink | relURL }}"
+            >{{ .Params.leadButtonTwoText }}</a
+          >{{ end }}
         </div>
         {{ .Content }}
       </div>
@@ -333,7 +339,7 @@
 <!--  Steps -->
 <div class="strip strip-white features pt-10 pb-md-1">
   <div class="container container-left-right">
-    <h1>Easy to use in just 3 steps</h1>
+    <h2 class="title">Easy to use in just 3 steps</h2>
 
     {{/* Step 1 */}}
     <div class="row left-right-row justify-content-center" style="align-items: center">
@@ -545,9 +551,11 @@ class HelloClass {
   <div class="container pb-10">
     <div class="row">
       <div class="col-12">
+        {{/*
         <div class="col-12 pb-5 pt-5">
           <h1 class="text-center">{{ .Site.Params.homepage.pricing_title }}</h1>
         </div>
+        */}}
         <div class="plans">
           <script async defer>
             fetch("https://api.genez.io/plans")
@@ -644,9 +652,11 @@ class HelloClass {
   <div class="container pb-10">
     <div class="row">
       <div class="col-12">
+        {{/*
         <div class="col-12 pt-5 justify-content-center">
           <h1 class="text-center">{{ .Site.Params.homepage.get_started }}</h1>
         </div>
+        */}}
         <div class="lead text-center">
           <div class="lead-buttons">
             {{ if .Params.leadButtonOneLink }}
