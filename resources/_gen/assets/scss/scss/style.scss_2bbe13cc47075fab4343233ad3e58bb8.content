@@ -14615,6 +14615,16 @@ h3 {
   padding-top: 10px;
   margin-bottom: 20px; }
 
+.content h5 {
+  text-align: center;
+  margin-top: -70px;
+  margin-bottom: 50px;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #121f3d; }
+  @media (max-width: 767.98px) {
+    .content h5 {
+      margin-top: -20px; } }
 .content ul,
 .content ol {
   margin-top: 10px;
@@ -14663,12 +14673,10 @@ h3 {
   color: #365bb2; }
 
 .content img {
-  margin: 40px 0 40px 0;
+  margin: 20px 0 20px 0;
   max-width: 100%;
   height: auto; }
-  @media (min-width: 768px) {
-    .content img {
-      margin: 60px 0 60px 0; } }
+
 .content code,
 .content pre {
   font-family: "Lucida Console", Monaco, monospace; }
@@ -14677,7 +14685,7 @@ h3 {
   border-radius: 3px;
   font-size: 14px;
   line-height: 18px;
-  padding: 30px;
+  padding: 20px;
   overflow: auto;
   font-family: "Lucida Console", Monaco, monospace; }
 
