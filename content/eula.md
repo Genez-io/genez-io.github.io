@@ -1,7 +1,7 @@
 ---
 title: "End-User License Agreement"
 # meta data start
-description: "genezio helps you write your API, deploy it and generate the SDK for easy integration in your website/mobile app."
+description: "genezio simplifies API development, deployment, and SDK generation for seamless integration on your website or mobile app."
 meta_og_url: "https://genez.io"
 meta_og_image: "https://genez.io/images/og.jpg"
 # meta data end
