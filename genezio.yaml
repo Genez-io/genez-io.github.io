@@ -1,4 +1,4 @@
-name: GENEZIO-PRODUCTION-WEBSITE
+name: GENEZIO-PROD-WEBSITE
 region: us-east-1
 cloudProvider: aws
 sdk:
@@ -6,7 +6,7 @@ sdk:
   path: ./sdk/
 frontend:
   path: ./public
-  subdomain: emerald-pure-barnacle
+  subdomain: genezio-prod-website
 classes:
   - path: hello.js
     type: jsonrpc
