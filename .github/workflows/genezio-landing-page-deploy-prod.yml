@@ -44,7 +44,7 @@ jobs:
         run: |
           hugo \
             --minify \
-            --baseURL "https://genez.io/"
+            --baseURL "https://genez.io"
       - uses: actions/setup-node@v3
         with:
           node-version: 16
