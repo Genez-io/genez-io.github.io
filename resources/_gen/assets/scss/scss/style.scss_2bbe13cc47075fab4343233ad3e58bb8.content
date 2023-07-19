@@ -16542,7 +16542,8 @@ ul.pagination li {
     border-radius: 4px;
     box-shadow: 0 3px 24px 1px rgba(25, 36, 138, 0.1); }
 
-.page-home .features h1 {
+.page-home .features h1,
+.page-home .features .title {
   font-family: "Inter";
   text-align: center;
   margin-bottom: 40px;
@@ -16554,7 +16555,8 @@ ul.pagination li {
   -webkit-text-fill-color: transparent;
   width: 100%; }
   @media (min-width: 768px) {
-    .page-home .features h1 {
+    .page-home .features h1,
+    .page-home .features .title {
       line-height: 57px;
       font-size: 38px; } }
 .page-home .span-or {
