@@ -1,5 +1,5 @@
 ---
-title: 'Write and host your serverless app'
+title: "" 
 date: 2019-02-22
 leadTitle: "The easiest way to write and host a serverless application"
 leadSubTitle: "MOVED INLINE"
