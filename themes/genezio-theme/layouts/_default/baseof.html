@@ -11,7 +11,7 @@
   <!-- End Google Tag Manager -->
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>{{ .Site.Title }}{{ if ne .Params.title "" }} | {{ with .Params.title }}{{ . }}{{ end }}{{ end }}</title>
+  <title>{{ .Site.Title }}{{ if ne .Params.title "genezio" }} | {{ with .Params.title }}{{ . }}{{ end }}{{ end }}</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="{{ .Site.Params.primary_color }}" media="(prefers-color-scheme: light)">
