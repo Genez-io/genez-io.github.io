@@ -1,5 +1,5 @@
 ---
-title: 'Write and host your serverless app'
+title: 'Dart'
 layout: 'full-stack-dart-application'
 summary: 'full-stack-dart-application'
 date: 2023-05-14T05:10:04+03:00
