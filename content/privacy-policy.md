@@ -1,11 +1,12 @@
 ---
 title: Privacy Policy
 # meta data start
-description: "genezio helps you write your API, deploy it and generate the SDK for easy integration in your website/mobile app."
+description: "The easiest way to write and host a serverless application"
 meta_og_url: "https://genez.io"
 meta_og_image: "https://genez.io/images/og.jpg"
 # meta data end
 ---
+
 <!-----
 
 Yay, no errors, warnings, or alerts!
@@ -27,7 +28,6 @@ Conversion notes:
 * Source doc: Privacy policy_Genezio_01.12.2022
 ----->
 
-
 **Privacy Policy**
 
 We respect your privacy and are committed to protecting it through our compliance with this privacy policy (“Policy”). This Policy describes the types of information we may collect from you or that you may provide (“Personal Information”) on the [https://genez.io/](https://genez.io/) website (“Website” or “Service”) and any of its related products and services (collectively, “Services”), and our practices for collecting, using, maintaining, protecting, and disclosing that Personal Information. It also describes the choices available to you regarding our use of your Personal Information and how you can access and update it.
@@ -46,11 +46,9 @@ You can access and use the Website and Services without telling us who you are o
 
 We receive and store any information you knowingly provide to us when you create an account, make a purchase, or fill any online forms on the Website. When required, this information may include the following:
 
-
-
-* Account details (such as user name, unique user ID, password, etc)
-* Contact information (such as email address, phone number, etc)
-* Basic personal information (such as name, country of residence, etc)
+- Account details (such as user name, unique user ID, password, etc)
+- Contact information (such as email address, phone number, etc)
+- Basic personal information (such as name, country of residence, etc)
 
 Some of the information we collect is directly from you via the Website and Services. However, we may also collect Personal Information about you from other sources such as public databases and our joint marketing partners.
 
@@ -72,29 +70,25 @@ We act in the capacity of a data processor in situations when you submit Persona
 
 In order to make the Website and Services available to you, or to meet a legal obligation, we may need to collect and use certain Personal Information. If you do not provide the information that we request, we may not be able to provide you with the requested products or services. Any of the information we collect from you may be used for the following purposes:
 
-
-
-* Create and manage user accounts
-* Fulfill and manage orders
-* Deliver products or services
-* Improve products and services
-* Send administrative information
-* Send product and service updates
-* Respond to inquiries and offer support
-* Request user feedback
-* Improve user experience
-* Respond to legal requests and prevent harm
-* Run and operate the Website and Services
+- Create and manage user accounts
+- Fulfill and manage orders
+- Deliver products or services
+- Improve products and services
+- Send administrative information
+- Send product and service updates
+- Respond to inquiries and offer support
+- Request user feedback
+- Improve user experience
+- Respond to legal requests and prevent harm
+- Run and operate the Website and Services
 
 Processing your Personal Information depends on how you interact with the Website and Services, where you are located in the world and if one of the following applies: (i) you have given your consent for one or more specific purposes; this, however, does not apply, whenever the processing of Personal Information is subject to California Consumer Privacy Act or European data protection law; (ii) provision of information is necessary for the performance of an agreement with you and/or for any pre-contractual obligations thereof; (iii) processing is necessary for compliance with a legal obligation to which you are subject; (iv) processing is related to a task that is carried out in the public interest or in the exercise of official authority vested in us; (v) processing is necessary for the purposes of the legitimate interests pursued by us or by a third party.
 
 We rely on the following legal bases as defined in the GDPR upon which we collect and process your Personal Information:
 
-
-
-* User’s consent
-* Performance of a contract
-* Our own legitimate interests
+- User’s consent
+- Performance of a contract
+- Our own legitimate interests
 
 Note that under some legislations we may be allowed to process information until you object to such processing by opting out, without having to rely on consent or any other of the legal bases above. In any case, we will be happy to clarify the specific legal basis that applies to the processing, and in particular whether the provision of Personal Information is a statutory or contractual requirement, or a requirement necessary to enter into a contract.
 
@@ -216,11 +210,11 @@ You acknowledge that you have read this Policy and agree to all its terms and co
 
 If you have any questions, concerns, or complaints regarding this Policy, the information we hold about you, or if you wish to exercise your rights, we encourage you to contact us using the details below:
 
-[andrada@simplecap.eu](mailto:andrada@simplecap.eu) 
+[andrada@simplecap.eu](mailto:andrada@simplecap.eu)
 
 Data protection officer: Andrada Damian
 
-[andrada@simplecap.eu](mailto:andrada@simplecap.eu) 
+[andrada@simplecap.eu](mailto:andrada@simplecap.eu)
 
 We will attempt to resolve complaints and disputes and make every reasonable effort to honor your wish to exercise your rights as quickly as possible and in any event, within the timescales provided by applicable data protection laws.
 
