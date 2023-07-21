@@ -1,0 +1,1 @@
+{{ $file := .Get "file" }} {{ readFile (printf "static/%s" $file) | safeHTML }}

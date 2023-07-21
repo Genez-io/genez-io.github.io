@@ -3,16 +3,22 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>/tags/comparison/</loc>
-    <lastmod>2023-06-15T00:00:00+00:00</lastmod>
+    <lastmod>2023-07-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blog/database-in-serverless-world-comparison/</loc>
+    <lastmod>2023-07-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/</loc>
-    <lastmod>2023-06-15T00:00:00+00:00</lastmod>
+    <lastmod>2023-07-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blog/how-to-add-a-mongodb-to-your-genezio-project/</loc>
+    <lastmod>2023-07-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/tutorials/</loc>
+    <lastmod>2023-07-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/blog/the-evolution-of-apis-a-history-of-rest-and-rpc/</loc>
     <lastmod>2023-06-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/tutorials/</loc>
-    <lastmod>2023-06-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/blog/unlocking-the-potential-of-prompt-engineering-with-genezio/</loc>
     <lastmod>2023-06-06T00:00:00+00:00</lastmod>

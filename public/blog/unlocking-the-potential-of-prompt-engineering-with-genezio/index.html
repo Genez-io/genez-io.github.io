@@ -12,6 +12,7 @@
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>genezio | Unlocking the potential of prompt engineering with genezio</title>
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#6f42c1" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#6f42c1" media="(prefers-color-scheme: dark)">
@@ -49,7 +50,7 @@
 
   
   
-  <link rel="stylesheet" href="/css/style.min.20947e3dd18aa4a0f65956a0e8a59ce664aa95639a9092a58746ce31876c1446.css">
+  <link rel="stylesheet" href="/css/style.min.e2d430114708ed98af06f908b2fd85dbdeb366bd4c79342239b7d7a1070b086c.css">
   
 
   
@@ -235,7 +236,8 @@
 <p>This is a tutorial on how to build a movie recommendation system using the OpenAI API <code>gpt.3-5-turbo</code> based on the user input.</p>
 <p>We are developing an application that generates a list of movies with summarized reviews. We aim to provide a seamless user experience by allowing the user to input their preferences and receive movie suggestions.</p>
 <p>A complete demo app can be accessed at <a href="https://movie-guru.app.genez.io/">https://movie-guru.app.genez.io</a>.</p>
-<p><img src="/images/promptimg.png" alt="alt_text"></p>
+<!-- raw HTML omitted -->
+<p><img src="/images/promptimg.webp" alt="alt_text"></p>
 <h2 id="introduction">Introduction</h2>
 <p>Welcome to this hands-on tutorial about creating advanced prompts and integrating OpenAI in your project using the OpenAI SDK.</p>
 <p>Building effective prompts is like learning a new language - you’ve got to know how to ask the right questions. Crafting solid prompts is key to getting back the kind of answers you want from language models.</p>
@@ -252,7 +254,7 @@
 <ul>
 <li>OpenAI API allows developers to integrate state-of-the-art natural language processing capabilities into their software. By leveraging the OpenAI API, developers can enable functionalities like language translation, sentiment analysis, chatbots, and text generation, enhancing the overall user experience for intelligent and interactive applications. Check out their full documentation here: <a href="https://platform.openai.com/docs/introduction">https://platform.openai.com/docs/introduction</a></li>
 <li>TMDB (The Movie Database) - A Movie API that we use to get movie reviews. Here is their official documentation: <a href="https://developer.themoviedb.org/reference/intro/getting-started">https://developer.themoviedb.org/reference/intro/getting-started</a></li>
-<li>React.js is a popular JavaScript library that forms a key component in many modern tech stacks. With its component-based architecture and efficient virtual DOM rendering, React.js enables developers to build dynamic and interactive user interfaces for web applications.  You can learn more by looking at their documentation: <a href="https://legacy.reactjs.org/docs/getting-started.html">https://legacy.reactjs.org/docs/getting-started.html</a></li>
+<li>React.js is a popular JavaScript library that forms a key component in many modern tech stacks. With its component-based architecture and efficient virtual DOM rendering, React.js enables developers to build dynamic and interactive user interfaces for web applications. You can learn more by looking at their documentation: <a href="https://legacy.reactjs.org/docs/getting-started.html">https://legacy.reactjs.org/docs/getting-started.html</a></li>
 <li>Genezio is a platform that simplifies the process of developing serverless applications. With genezio, you can effortlessly create and host applications by writing clean and organized code in your preferred programming language (JS, TS and Dart) for both the frontend and backend. It offers typesafe APIs, auto generated class interfaces, and the ability to directly call functions in your code, streamlining your development workflow and saving you time. Take a look at the documentation: <a href="https://docs.genez.io/genezio-documentation/">https://docs.genez.io/genezio-documentation/</a></li>
 </ul>
 <h2 id="technical-tutorial">Technical Tutorial</h2>
@@ -276,7 +278,7 @@
 </span></span></code></pre></div><p>This repository contains 2 folders. I recommend you to open it with an IDE:</p>
 <ul>
 <li><code>client</code> - all the frontend logic written in React</li>
-<li><code>server</code> - all the backend logic without the prompt.  We will create it in the next step</li>
+<li><code>server</code> - all the backend logic without the prompt. We will create it in the next step</li>
 </ul>
 <h3 id="implement-the-server-side">Implement the Server Side</h3>
 <p>You have TODOs on each part of the code where you have to work on.</p>
@@ -339,15 +341,15 @@
 <p>Now let’s make the modification in our code. The final prompt with delimiters should be inserted in the code at <strong>TODO1</strong>.</p>
 <p>To test this prompt we have to make a request to OpenAI API. We use the Open AI SDK for this. The following code is what you need. Replace <strong>TODO2</strong> with this:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">completion</span> <span class="o">=</span> <span class="kr">await</span> <span class="k">this</span><span class="p">.</span><span class="nx">openai</span><span class="p">.</span><span class="nx">createChatCompletion</span><span class="p">({</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">model</span><span class="o">:</span>  <span class="s2">&#34;gpt-3.5-turbo&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">temperature</span><span class="o">:</span>  <span class="mf">0.8</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">model</span><span class="o">:</span> <span class="s2">&#34;gpt-3.5-turbo&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">temperature</span><span class="o">:</span> <span class="mf">0.8</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">messages</span><span class="o">:</span> <span class="p">[</span>
 </span></span><span class="line"><span class="cl">    <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="s1">&#39;role&#39;</span><span class="o">:</span>  <span class="nx">ChatCompletionRequestMessageRoleEnum</span><span class="p">.</span><span class="nx">User</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="s1">&#39;content&#39;</span><span class="o">:</span>  <span class="nx">movieRecommendationPrompt</span><span class="p">(</span><span class="nx">userDescription</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">role</span><span class="o">:</span> <span class="nx">ChatCompletionRequestMessageRoleEnum</span><span class="p">.</span><span class="nx">User</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">content</span><span class="o">:</span> <span class="nx">movieRecommendationPrompt</span><span class="p">(</span><span class="nx">userDescription</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
 </span></span><span class="line"><span class="cl">  <span class="p">],</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">max_tokens</span><span class="o">:</span>  <span class="mi">2048</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">max_tokens</span><span class="o">:</span> <span class="mi">2048</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl"><span class="p">});</span>
 </span></span></code></pre></div><p>The <code>createChatCompletion</code> method takes a configuration object as parameter that has the following configurations:</p>
 <ul>
@@ -363,15 +365,21 @@
 <li><code>max_tokens</code> - maximum number of tokens in the output. You can control how long or short the message should be. To get a correlation between the number of words and the number of tokens refer to <a href="https://platform.openai.com/tokenizer">this tool</a>.</li>
 </ul>
 <p>Now we have to check the output of OpenAI, parse the output and return it. We have to properly validate the output since the API response is not deterministic and it can return, for example, wrongly formatted output.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="nx">completion</span><span class="p">.</span><span class="nx">data</span> <span class="o">&amp;&amp;</span> <span class="nx">completion</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">choices</span>
-</span></span><span class="line"><span class="cl">  <span class="o">&amp;&amp;</span> <span class="nx">completion</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">choices</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">0</span>
-</span></span><span class="line"><span class="cl">  <span class="o">&amp;&amp;</span> <span class="nx">completion</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">choices</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">message</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">completion</span><span class="p">.</span><span class="nx">data</span> <span class="o">&amp;&amp;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">completion</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">choices</span> <span class="o">&amp;&amp;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">completion</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">choices</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">completion</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">choices</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">message</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="k">try</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="kr">const</span>  <span class="nx">movies</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">completion</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">choices</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">message</span><span class="p">.</span><span class="nx">content</span><span class="p">).</span><span class="nx">movies</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span>  <span class="nx">movies</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">movies</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">completion</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">choices</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">message</span><span class="p">.</span><span class="nx">content</span><span class="p">).</span><span class="nx">movies</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nx">movies</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">e</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s2">&#34;Error parsing movie recommendations&#34;</span><span class="p">,</span> <span class="nx">completion</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">choices</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">message</span><span class="p">.</span><span class="nx">content</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;Error parsing movie recommendations&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">completion</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">choices</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">message</span><span class="p">.</span><span class="nx">content</span>
+</span></span><span class="line"><span class="cl">    <span class="p">);</span>
 </span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="p">[];</span>
 </span></span><span class="line"><span class="cl">  <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
@@ -379,12 +387,12 @@
 </span></span></code></pre></div><h3 id="get-movies-reviews-summary">Get Movies Reviews Summary</h3>
 <p>Now we will work in the function <code>getReviewSummary</code> from the <code>movie.ts </code>file. This prompt is easier than the previous one because here we control the input and we don’t have the problem with prompt injection. We only give a list of reviews and give to OpenAI the task to analyze and summarize the advantages and disadvantages of watching that movie. Write the following prompt instead of <strong>TODO3</strong> in <code>movies.ts</code> file:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">prompt</span> <span class="o">=</span> <span class="sb">`Here is a list of reviews for one movie. One review is delimited by ||| marks.
-</span></span></span><span class="line"><span class="cl"><span class="sb"></span><span class="si">${</span><span class="nx">reviews</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">x</span><span class="o">:</span> <span class="nx">string</span><span class="p">)</span> <span class="p">=&gt;</span>  <span class="sb">`|||</span><span class="si">${</span><span class="nx">x</span><span class="p">.</span><span class="nx">length</span>  <span class="o">&gt;</span>  <span class="mi">100</span> <span class="o">?</span> <span class="nx">x</span><span class="p">.</span><span class="nx">substring</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span> <span class="o">:</span> <span class="nx">x</span><span class="si">}</span><span class="sb">|||`</span><span class="p">).</span><span class="nx">join</span><span class="p">(</span><span class="s2">&#34;\n&#34;</span><span class="p">)</span><span class="si">}</span><span class="sb">
+</span></span></span><span class="line"><span class="cl"><span class="sb"></span><span class="si">${</span><span class="nx">reviews</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">x</span><span class="o">:</span> <span class="nx">string</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="sb">`|||</span><span class="si">${</span><span class="nx">x</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">100</span> <span class="o">?</span> <span class="nx">x</span><span class="p">.</span><span class="nx">substring</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span> <span class="o">:</span> <span class="nx">x</span><span class="si">}</span><span class="sb">|||`</span><span class="p">).</span><span class="nx">join</span><span class="p">(</span><span class="s2">&#34;\n&#34;</span><span class="p">)</span><span class="si">}</span><span class="sb">
 </span></span></span><span class="line"><span class="cl"><span class="sb">Your task is to analyze each review and give me a list of advantages and
 </span></span></span><span class="line"><span class="cl"><span class="sb">disadvantages of watching the movie.
 </span></span></span><span class="line"><span class="cl"><span class="sb">The result should be one JSON object with two fields &#34;advantages&#34; and &#34;disadvantages&#34;.
 </span></span></span><span class="line"><span class="cl"><span class="sb">Synthesize the reviews in these two fields. The advantages should contain the positives and the disadvantages the negatives. Don&#39;t use more than 30 words for each.
-</span></span></span><span class="line"><span class="cl"><span class="sb">Don&#39;t include anything else besides the JSON.`</span>
+</span></span></span><span class="line"><span class="cl"><span class="sb">Don&#39;t include anything else besides the JSON.`</span><span class="p">;</span>
 </span></span></code></pre></div><p>We use the delimiter <code>|||</code> to help the model understand easier where the given reviews are in the prompt.</p>
 <p>Now that we have the prompt, let’s test it. We write once again the request to send this prompt to OpenAI. Replace <strong>TODO4</strong> with this:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="nx">reviews</span><span class="p">.</span><span class="nx">length</span> <span class="o">===</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>

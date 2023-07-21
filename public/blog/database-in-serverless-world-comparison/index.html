@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5ZPQL3Z');</script>
+  
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>genezio | Database in Serverless World Comparison</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#6f42c1" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#6f42c1" media="(prefers-color-scheme: dark)">
+
+  
+  <link rel="shortcut icon" href="/favicon.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120-precomposed.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152-precomposed.png" />
+
+  
+  
+  <link rel="canonical" href="/blog/database-in-serverless-world-comparison/" />
+  
+
+
+
+  
+  <meta name="description" content="Decide on the right database for your project based on this analysis of their performance in a Function as a Service serverless environment.">
+  <meta property="og:title" content="Database in Serverless World Comparison" />
+  <meta property="og:description" content="Decide on the right database for your project based on this analysis of their performance in a Function as a Service serverless environment." />
+  <meta property="og:image" content="https://genez.io/images/database-performance.webp" />
+  <meta property="og:url" content="https://genez.io/blog/database_in_serverless_world_comparison" />
+  <meta property="og:type" content="website" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@GenezioNetwork" />
+  <meta name="twitter:creator" content="@GenezioNetwork" />
+  <meta name="twitter:title" content="Database in Serverless World Comparison" />
+  <meta name="twitter:description" content="Decide on the right database for your project based on this analysis of their performance in a Function as a Service serverless environment." />
+  <meta name="robots" content="index,follow">
+  
+
+
+
+
+  
+  
+  <link rel="stylesheet" href="/css/style.min.e2d430114708ed98af06f908b2fd85dbdeb366bd4c79342239b7d7a1070b086c.css">
+  
+
+  
+  
+
+
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VR905VXGKC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-VR905VXGKC');
+  </script>
+</head>
+
+<body class='page page-posts-single'>
+  
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5ZPQL3Z"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  
+  <div id="main-menu-mobile" class="main-menu-mobile">
+    <ul>
+      <li
+        class="menu-item-github"
+        title="Github">
+        <a href="https://github.com/Genez-io/genezio" style="display: flex; justify-content: center;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" style="
+          width: 38px;
+          height: 38px;
+          fill: white;
+      "><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>            </a>
+            </li>
+      <li
+        class="menu-item-sign in"
+        title="Docs">
+        <a class="filled" href="https://docs.genez.io/">
+          <span>Docs</span>
+        </a>
+      </li>
+      <li
+        class="menu-item-sign in"
+        title="Blog">
+        <a class="filled" href="/blog/">
+          <span>Blog</span>
+        </a>
+      </li>
+      <li
+        class="menu-item-sign in"
+        title="Sign In">
+        <a class="filled" href="https://app.genez.io/auth/login">
+          <span>Login </span>
+        </a>
+      </li>
+      <li
+        class="menu-item-trt for free"
+        title="Try for free">
+        <a class="outline start-for-free" href="https://app.genez.io/auth/signup">
+          <span>Try for free</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+  <div id="header"
+    class='header header-fixed '>
+    <div class="container">
+      
+      <div class="logos">
+        
+        <div class="logo">
+          <a href="/">
+            <img height="50px" alt="genezio Logo" src="/images/logo2.svg" />
+          </a>
+        </div>
+        <div class="logo-invert">
+          <a href="/">
+            <img width="50px" height="40px" alt="genezio Logo" src="/images/logo-invert.svg" />
+            <h2>genezio</h2>
+          </a>
+        </div>
+        <div class="logo-mobile">
+          <a href="/">
+            <img height="30px" width="120px" alt="genezio Logo" src="/images/logo2.svg" />
+          </a>
+        </div>
+        <div class="logo-invert-mobile">
+          <a href="/">
+            <img width="50px" height="40px" alt="genezio Logo"
+              src="/images/logo-invert-mobile.svg" />
+          </a>
+        </div>
+      </div>
+      
+
+      
+      <div id="menu-main" class="menu-main">
+        <ul>
+          <li
+            class="menu-item-github"
+            title="Github">
+            <a href="https://github.com/Genez-io/genezio" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" style="
+              width: 38px;
+              height: 38px;
+              fill: white;
+          "><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>            </a>
+          
+        
+        </li>
+          <li
+            class="menu-item-sign in"
+            title="Docs">
+            <a class="outline" href="https://docs.genez.io/" target="_blank">
+              <span>Docs</span>
+            </a>
+          </li>
+          <li
+            class="menu-item-sign in"
+            title="Blog">
+            <a class="outline" href="/blog/">
+              <span>Blog</span>
+            </a>
+          </li>
+          <li
+            class="menu-item-sign in"
+            title="Sign In">
+            <a class="outline" href="https://app.genez.io/auth/login">
+              <span>Login</span>
+            </a>
+          </li>
+          <li
+            class="menu-item-trt for free"
+            title="Try for free">
+            <a class="filled start-for-free" href="https://app.genez.io/auth/signup">
+              <span>Start for free!</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      
+      <div id="toggle-main-menu-mobile" class="menu-trigger">
+        <button class="hamburger">Menu</button>
+      </div>
+    </div>
+  </div>
+  
+
+  
+  <div class="wrapper">
+    
+<div class="strip strip-secondary-light pt-10">
+  <div class="container pt-10">
+    <div class="row position-relative justify-content-center">
+      <div class="col-12 col-lg-8">
+        
+        <div class="post-tags">
+          
+          <a class="post-tag" href="/tags/comparison">Comparison</a>
+          
+        </div>
+        
+        <h1>Database in Serverless World Comparison</h1>
+        <a class="post-author-name" href="https://www.linkedin.com/in/iulian-bogdan-vlad/">Bogdan Vlad</a>
+        <div class="post-date pt-1">
+        
+            
+            <span class="post-date-date">Jul 20, 2023</span>
+        
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="strip strip-white">
+  <div class="container pt-10 pt-md-8 pb-4 pb-md-10">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-8">
+        <div class="content"><h2 id="unveiling-database-performance-selecting-the-right-solution-for-your-serverless-application">Unveiling Database Performance: Selecting the Right Solution for Your Serverless Application</h2>
+<h2 id="introduction">Introduction</h2>
+<p>Deciding on the right database is often a challenging task when starting a new project. If you plan to deploy your server on a function as a service infrastructure, the decision is even more important because it will have a huge impact on how fast your server will respond to queries.</p>
+<h2 id="in-a-nutshell">In a nutshell</h2>
+<p>In this article, I performed a quite deep analysis of how different databases are performing in a Function as a Service environment, but if you just want the short version, here it is:</p>
+<ul>
+<li>You should host the database as close as possible to where the serverless functions are executed.</li>
+<li><strong>MongoDB</strong> is extremely fast once the connection to the database is established, but it might be slow during the cold start.</li>
+<li><strong>Firestore</strong> is very slow during the cold start!</li>
+<li><strong>DynamoDB</strong> performs quite well both during cold start and when the function is warm.</li>
+<li>You might start having problems if you start scaling to hundreds of functions depending on what database technology you choose. <strong>Zombie connections</strong> can be scary!</li>
+</ul>
+<p>If you want to know how I reached these results and to delve deeper into even more insights, grab your favorite drink and let’s continue!</p>
+<h2 id="why-is-choosing-the-right-db-so-important">Why is choosing the right DB so important?</h2>
+<p>The Function as a Service (FaaS) architectures represent a paradigm shift in the manner we conceptualize, develop, and deploy servers. Traditional servers are long-standing processes that frequently maintain a persistent connection with a database for executing queries. This isn’t the case with FaaS. Each instance of a function is a short living process and multiple such instances can coexist concurrently. This means that:</p>
+<ul>
+<li>You could have many open connections to your database.</li>
+<li>If a request is received and a function process needs to be started (this is called a ‘cold start’), the response time will also encompass the duration required to connect to the database.</li>
+</ul>
+<p>You have to make sure that as your prototype becomes popular, the database doesn’t become the bottleneck, swamped by a surge of connections. Moreover, it’s important to keep the connection time optimized, as excessive durations can negatively affect the overall response time.</p>
+<h2 id="experiments-and-results">Experiments and results</h2>
+<h3 id="performance-tests">Performance tests</h3>
+<p>I’ve picked the following databases since these are the NoSQL options that I&rsquo;ve seen most frequently used in FaaS architecture.</p>
+<ul>
+<li><strong>DynamoDB:</strong> an AWS based NoSQL database. You can obtain one from your AWS account. Amazon DynamoDB pricing is based on provisioned throughput, storage, data transfer, and additional features like backups, restore, and streams.</li>
+<li><strong>MongoDB:</strong> a popular NoSQL database used to store unstructured data. MongoDB can easily be hosted on the MongoDB Atlas Cloud Platform. They offer different pricing plans: a pay as you go serverless pricing tier, a dedicated server solution for production applications and also a free tier. For this test, I’ve used an M30 database. If you think about going with the serverless pricing tier, pay attention to the fact that you can’t have more than 500 concurrent connections which is quite low if you plan to use it in a FaaS.</li>
+<li><strong>Atlas MongoDB Data API:</strong> this is using the same MongoDB, the distinction lies in the connection protocol. Rather than using the MongoDB Wire Protocol, it employs a HTTP-based API. This is useful if managing a connection pool is not feasible or if a MongoDB driver isn&rsquo;t compatible with your client application. This feature could be especially beneficial in a FaaS system as it eliminates the need to establish a database connection during the &lsquo;cold start&rsquo; phase.</li>
+<li><strong>Firestore:</strong> serverless NoSQL database provided by Google that is part of the Firebase app development platform.</li>
+</ul>
+<p>I wanted to see how these databases worked in a FaaS setup. My goal? To answer these key question:</p>
+<ul>
+<li>How long does it take to initialize the connection(s)?</li>
+<li>How many connections can the database hold?</li>
+<li>If you increase the number of active connections, does it have an impact on the performance?</li>
+<li>Does running multiple queries in parallel affect the performance?</li>
+</ul>
+<p>For each database, I did two tests: one simulating a &lsquo;cold start&rsquo; scenario with an AWS Lambda function, and another where the AWS Lambda function was already &lsquo;warm’. This was important even for databases utilizing an HTTPS API, as they might still experience a &lsquo;cold start&rsquo; during the first request. Before the query bytes are transmitted over the network, multiple steps need to occur including DNS lookup, TCP connection establishment, and TLS handshake. Because of multiple cache layers for these operations, later requests might be quicker.</p>
+<p>I used <a href="https://genez.io/">genezio</a> to execute these tests. I’ve used the self hosted feature of genezio which allows me to deploy the backend on AWS Lambdas belonging to my own AWS account. To understand more about what genezio does, you can read more <a href="https://github.com/vladiulianbogdan/database-benchmarking">here</a>. I designed a separate class for each database experiment. You can find the code <a href="https://github.com/Genez-io/database-benchmarking">here</a>.</p>
+<p>The database structure is the same for all databases: I have a `Task` table (or collection) and I insert 10000 entries. The query that I perform doesn’t use any filtering and retrieves 10 tasks.</p>
+<p>Once I&rsquo;d completed the code, I deployed the necessary AWS resources to my account by typing &lsquo;genezio deploy&rsquo; into the terminal. This action created an AWS Lambda for each class, along with an API Gateway. Following this, I raised the default limits of the AWS Lambdas: I increased the number of reserved concurrent functions and extended the timeout to 30 seconds. The genezio application and the database are both hosted in the eu-central-1 region. If you want the fastest query time possible, you need to have the database as close as possible to where you hosted the application.</p>
+<p>With the classes successfully deployed on AWS, it&rsquo;s time to invoke them and obtain the measurement results.</p>
+<p>As mentioned earlier, my focus was to examine how the database would handle a sudden surge of connections and queries. I made 300 requests with a 100 ms timeout between them which spawned 300 AWS Lambdas. Each Lambda made a query to the database, it slept for 25 seconds (this is needed to be sure that 300 Lambdas are spawned) and then it returned the query time. The reason why I have the 100 ms sleep time between requests is to not put too much pressure on the DBs right from the start. We will do that later on, no worries!</p>
+<p>I measured the response time for a query during the &lsquo;cold start&rsquo; phase, as well as the query time for an already warmed-up function. Let’s analyze the results!</p>
+ <!-- <?xml version='1.0' encoding='utf-8'?>
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" id="chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1" class="pygal-chart" viewBox="0 0 800 600"><!--Generated with pygal 3.0.0 (etree) ©Kozea 2012-2016 on 2023-07-11--><!--http://pygal.org--><!--http://github.com/Kozea/pygal--><defs><style type="text/css">#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1{-webkit-user-select:none;-webkit-font-smoothing:antialiased;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .title{font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;font-size:16px}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .legends .legend text{font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;font-size:14px}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .axis text{font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;font-size:10px}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .axis text.major{font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;font-size:10px}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .text-overlay text.value{font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;font-size:16px}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .text-overlay text.label{font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;font-size:10px}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .tooltip{font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;font-size:14px}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 text.no_data{font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;font-size:64px}
+#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1{background-color:rgba(249,249,249,1)}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 path,#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 line,#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 rect,#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 circle{-webkit-transition:150ms;-moz-transition:150ms;transition:150ms}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .graph &gt; .background{fill:rgba(249,249,249,1)}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .plot &gt; .background{fill:rgba(255,255,255,1)}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .graph{fill:rgba(0,0,0,.87)}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 text.no_data{fill:rgba(0,0,0,1)}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .title{fill:rgba(0,0,0,1)}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .legends .legend text{fill:rgba(0,0,0,.87)}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .legends .legend:hover text{fill:rgba(0,0,0,1)}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .axis .line{stroke:rgba(0,0,0,1)}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .axis .guide.line{stroke:rgba(0,0,0,.54)}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .axis .major.line{stroke:rgba(0,0,0,.87)}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .axis text.major{fill:rgba(0,0,0,1)}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .axis.y .guides:hover .guide.line,#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .line-graph .axis.x .guides:hover .guide.line,#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .stackedline-graph .axis.x .guides:hover .guide.line,#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .xy-graph .axis.x .guides:hover .guide.line{stroke:rgba(0,0,0,1)}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .axis .guides:hover text{fill:rgba(0,0,0,1)}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .reactive{fill-opacity:.7;stroke-opacity:.8;stroke-width:1}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .ci{stroke:rgba(0,0,0,.87)}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .reactive.active,#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .active .reactive{fill-opacity:.8;stroke-opacity:.9;stroke-width:4}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .ci .reactive.active{stroke-width:1.5}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .series text{fill:rgba(0,0,0,1)}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .tooltip rect{fill:rgba(255,255,255,1);stroke:rgba(0,0,0,1);-webkit-transition:opacity 150ms;-moz-transition:opacity 150ms;transition:opacity 150ms}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .tooltip .label{fill:rgba(0,0,0,.87)}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .tooltip .label{fill:rgba(0,0,0,.87)}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .tooltip .legend{font-size:.8em;fill:rgba(0,0,0,.54)}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .tooltip .x_label{font-size:.6em;fill:rgba(0,0,0,1)}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .tooltip .xlink{font-size:.5em;text-decoration:underline}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .tooltip .value{font-size:1.5em}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .bound{font-size:.5em}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .max-value{font-size:.75em;fill:rgba(0,0,0,.54)}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .map-element{fill:rgba(255,255,255,1);stroke:rgba(0,0,0,.54) !important}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .map-element .reactive{fill-opacity:inherit;stroke-opacity:inherit}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .color-0,#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .color-0 a:visited{stroke:#F44336;fill:#F44336}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .color-1,#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .color-1 a:visited{stroke:#3F51B5;fill:#3F51B5}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .color-2,#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .color-2 a:visited{stroke:#009688;fill:#009688}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .color-3,#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .color-3 a:visited{stroke:#FFC107;fill:#FFC107}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .color-4,#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .color-4 a:visited{stroke:#FF5722;fill:#FF5722}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .color-5,#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .color-5 a:visited{stroke:#9C27B0;fill:#9C27B0}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .color-6,#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .color-6 a:visited{stroke:#03A9F4;fill:#03A9F4}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .color-7,#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .color-7 a:visited{stroke:#8BC34A;fill:#8BC34A}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .text-overlay .color-0 text{fill:black}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .text-overlay .color-1 text{fill:black}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .text-overlay .color-2 text{fill:black}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .text-overlay .color-3 text{fill:black}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .text-overlay .color-4 text{fill:black}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .text-overlay .color-5 text{fill:black}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .text-overlay .color-6 text{fill:black}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .text-overlay .color-7 text{fill:black}
+#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 text.no_data{text-anchor:middle}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .guide.line{fill:none}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .centered{text-anchor:middle}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .title{text-anchor:middle}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .legends .legend text{fill-opacity:1}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .axis.x text{text-anchor:middle}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .axis.x:not(.web) text[transform]{text-anchor:start}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .axis.x:not(.web) text[transform].backwards{text-anchor:end}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .axis.y text{text-anchor:end}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .axis.y text[transform].backwards{text-anchor:start}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .axis.y2 text{text-anchor:start}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .axis.y2 text[transform].backwards{text-anchor:end}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .axis .guide.line{stroke-dasharray:4,4;stroke:black}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .axis .major.guide.line{stroke-dasharray:6,6;stroke:black}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .horizontal .axis.y .guide.line,#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .horizontal .axis.y2 .guide.line,#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .vertical .axis.x .guide.line{opacity:0}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .horizontal .axis.always_show .guide.line,#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .vertical .axis.always_show .guide.line{opacity:1 !important}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .axis.y .guides:hover .guide.line,#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .axis.y2 .guides:hover .guide.line,#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .axis.x .guides:hover .guide.line{opacity:1}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .axis .guides:hover text{opacity:1}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .nofill{fill:none}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .subtle-fill{fill-opacity:.2}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .dot{stroke-width:1px;fill-opacity:1;stroke-opacity:1}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .dot.active{stroke-width:5px}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .dot.negative{fill:transparent}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 text,#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 tspan{stroke:none !important}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .series text.active{opacity:1}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .tooltip rect{fill-opacity:.95;stroke-width:.5}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .tooltip text{fill-opacity:1}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .showable{visibility:hidden}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .showable.shown{visibility:visible}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .gauge-background{fill:rgba(229,229,229,1);stroke:none}#chart-e5fb8b74-6d23-49cb-a074-6911f898b1c1 .bg-lines{stroke:rgba(249,249,249,1);stroke-width:2px}</style><script type="text/javascript">window.pygal = window.pygal || {};window.pygal.config = window.pygal.config || {};window.pygal.config['e5fb8b74-6d23-49cb-a074-6911f898b1c1'] = {"allow_interruptions": false, "box_mode": "extremes", "classes": ["pygal-chart"], "css": ["file://style.css", "file://graph.css"], "defs": [], "disable_xml_declaration": false, "dots_size": 2.5, "dynamic_print_values": false, "explicit_size": false, "fill": false, "force_uri_protocol": "https", "formatter": null, "half_pie": false, "height": 600, "include_x_axis": false, "inner_radius": 0, "interpolate": null, "interpolation_parameters": {}, "interpolation_precision": 250, "inverse_y_axis": false, "js": ["//kozea.github.io/pygal.js/2.0.x/pygal-tooltips.min.js"], "legend_at_bottom": true, "legend_at_bottom_columns": null, "legend_box_size": 12, "logarithmic": false, "margin": 20, "margin_bottom": null, "margin_left": null, "margin_right": null, "margin_top": null, "max_scale": 16, "min_scale": 4, "missing_value_fill_truncation": "x", "no_data_text": "No data", "no_prefix": false, "order_min": null, "pretty_print": false, "print_labels": false, "print_values": false, "print_values_position": "center", "print_zeroes": true, "range": [-98.0, 1323.0], "rounded_bars": null, "secondary_range": null, "show_dots": true, "show_legend": true, "show_minor_x_labels": true, "show_minor_y_labels": true, "show_only_major_dots": false, "show_x_guides": false, "show_x_labels": true, "show_y_guides": true, "show_y_labels": true, "spacing": 10, "stack_from_top": false, "strict": false, "stroke": true, "stroke_style": null, "style": {"background": "rgba(249, 249, 249, 1)", "ci_colors": [], "colors": ["#F44336", "#3F51B5", "#009688", "#FFC107", "#FF5722", "#9C27B0", "#03A9F4", "#8BC34A", "#FF9800", "#E91E63", "#2196F3", "#4CAF50", "#FFEB3B", "#673AB7", "#00BCD4", "#CDDC39", "#9E9E9E", "#607D8B"], "dot_opacity": "1", "font_family": "Consolas, \"Liberation Mono\", Menlo, Courier, monospace", "foreground": "rgba(0, 0, 0, .87)", "foreground_strong": "rgba(0, 0, 0, 1)", "foreground_subtle": "rgba(0, 0, 0, .54)", "guide_stroke_color": "black", "guide_stroke_dasharray": "4,4", "label_font_family": "Consolas, \"Liberation Mono\", Menlo, Courier, monospace", "label_font_size": 10, "legend_box_size": 20, "legend_font_family": "Consolas, \"Liberation Mono\", Menlo, Courier, monospace", "legend_font_size": 14, "major_guide_stroke_color": "black", "major_guide_stroke_dasharray": "6,6", "major_label_font_family": "Consolas, \"Liberation Mono\", Menlo, Courier, monospace", "major_label_font_size": 10, "no_data_font_family": "Consolas, \"Liberation Mono\", Menlo, Courier, monospace", "no_data_font_size": 64, "opacity": ".7", "opacity_hover": ".8", "plot_background": "rgba(255, 255, 255, 1)", "stroke_opacity": ".8", "stroke_opacity_hover": ".9", "stroke_width": "1", "stroke_width_hover": "4", "title_font_family": "Consolas, \"Liberation Mono\", Menlo, Courier, monospace", "title_font_size": 16, "tooltip_font_family": "Consolas, \"Liberation Mono\", Menlo, Courier, monospace", "tooltip_font_size": 14, "transition": "150ms", "value_background": "rgba(229, 229, 229, 1)", "value_colors": [], "value_font_family": "Consolas, \"Liberation Mono\", Menlo, Courier, monospace", "value_font_size": 16, "value_label_font_family": "Consolas, \"Liberation Mono\", Menlo, Courier, monospace", "value_label_font_size": 10}, "title": "Query times for 300 concurrent requests with DB on another region", "tooltip_border_radius": 0, "tooltip_fancy_mode": true, "truncate_label": null, "truncate_legend": null, "width": 800, "x_label_rotation": 0, "x_labels": null, "x_labels_major": null, "x_labels_major_count": null, "x_labels_major_every": null, "x_title": null, "xrange": null, "y_label_rotation": 0, "y_labels": null, "y_labels_major": null, "y_labels_major_count": null, "y_labels_major_every": null, "y_title": null, "zero": 0, "legends": ["Dynamo cold", " Dynamo warm", "Mongo Data cold", " Mongo Data warm", " Firebase cold", " Firebase warm", " Mongo Connect cold", " Mongo Connect warm"]}</script><script type="text/javascript" xlink:href="https://kozea.github.io/pygal.js/2.0.x/pygal-tooltips.min.js" /></defs><title>Query times for 300 concurrent requests with DB on another region</title><g class="graph box-graph vertical"><rect x="0" y="0" width="800" height="600" class="background" /><g transform="translate(54, 46)" class="plot"><rect x="0" y="0" width="726.0" height="468.0" class="background" /><g class="axis y always_show"><g class="guides"><path d="M0.000000 427.965517 h726.000000" class="axis major line" /><text x="-5" y="431.4655172413793" class="major">0</text><title>0</title></g><g class="guides"><path d="M0.000000 396.297678 h726.000000" class="guide line" /><text x="-5" y="399.79767769176635" class="">100</text><title>100</title></g><g class="guides"><path d="M0.000000 364.629838 h726.000000" class="guide line" /><text x="-5" y="368.1298381421534" class="">200</text><title>200</title></g><g class="guides"><path d="M0.000000 332.961999 h726.000000" class="guide line" /><text x="-5" y="336.46199859254045" class="">300</text><title>300</title></g><g class="guides"><path d="M0.000000 301.294159 h726.000000" class="guide line" /><text x="-5" y="304.79415904292756" class="">400</text><title>400</title></g><g class="guides"><path d="M0.000000 269.626319 h726.000000" class="major guide line" /><text x="-5" y="273.12631949331455" class="major">500</text><title>500</title></g><g class="guides"><path d="M0.000000 237.958480 h726.000000" class="guide line" /><text x="-5" y="241.45847994370163" class="">600</text><title>600</title></g><g class="guides"><path d="M0.000000 206.290640 h726.000000" class="guide line" /><text x="-5" y="209.7906403940887" class="">700</text><title>700</title></g><g class="guides"><path d="M0.000000 174.622801 h726.000000" class="guide line" /><text x="-5" y="178.12280084447576" class="">800</text><title>800</title></g><g class="guides"><path d="M0.000000 142.954961 h726.000000" class="guide line" /><text x="-5" y="146.45496129486276" class="">900</text><title>900</title></g><g class="guides"><path d="M0.000000 111.287122 h726.000000" class="major guide line" /><text x="-5" y="114.7871217452498" class="major">1000</text><title>1000</title></g><g class="guides"><path d="M0.000000 79.619282 h726.000000" class="guide line" /><text x="-5" y="83.11928219563686" class="">1100</text><title>1100</title></g><g class="guides"><path d="M0.000000 47.951443 h726.000000" class="guide line" /><text x="-5" y="51.45144264602391" class="">1200</text><title>1200</title></g><g class="guides"><path d="M0.000000 16.283603 h726.000000" class="guide line" /><text x="-5" y="19.783603096410957" class="">1300</text><title>1300</title></g></g><g class="series serie-0 color-0"><g class="boxes"><g class="box"><path stroke-width="3" d="M38.394231 408.964814 L76.788462 408.964814" class="reactive tooltip-trigger" /><path stroke-width="3" d="M19.197115 404.531316 L95.985577 404.531316" class="reactive tooltip-trigger" /><path stroke-width="3" d="M38.394231 378.247009 L76.788462 378.247009" class="reactive tooltip-trigger" /><path stroke-width="2" d="M57.591346 408.964814 L57.591346 406.114708" class="reactive tooltip-trigger" /><path stroke-width="2" d="M57.591346 378.247009 L57.591346 402.314567" class="reactive tooltip-trigger" /><rect x="19.197115384615383" y="402.3145672061928" height="3.80014074595357" width="76.78846153846155" class="subtle-fill reactive tooltip-trigger" /><desc class="value">Min: 60
+Q1 : 69
+Q2 : 74
+Q3 : 81
+Max: 157</desc><desc class="x centered">57.59134615384616</desc><desc class="y centered">400.0344827586207</desc></g></g></g><g class="series serie-1 color-1"><g class="boxes"><g class="box"><path stroke-width="3" d="M125.653846 426.698804 L164.048077 426.698804" class="reactive tooltip-trigger" /><path stroke-width="3" d="M106.456731 426.382125 L183.245192 426.382125" class="reactive tooltip-trigger" /><path stroke-width="3" d="M125.653846 420.998593 L164.048077 420.998593" class="reactive tooltip-trigger" /><path stroke-width="2" d="M144.850962 426.698804 L144.850962 426.382125" class="reactive tooltip-trigger" /><path stroke-width="2" d="M144.850962 420.998593 L144.850962 426.065447" class="reactive tooltip-trigger" /><rect x="106.45673076923076" y="426.06544686840255" height="0.3166783954961261" width="76.78846153846155" class="subtle-fill reactive tooltip-trigger" /><desc class="value">Min: 4
+Q1 : 5
+Q2 : 5
+Q3 : 6
+Max: 22</desc><desc class="x centered">144.85096153846155</desc><desc class="y centered">425.30541871921184</desc></g></g></g><g class="series serie-2 color-2"><g class="boxes"><g class="box"><path stroke-width="3" d="M212.913462 415.298381 L251.307692 415.298381" class="reactive tooltip-trigger" /><path stroke-width="3" d="M193.716346 401.997889 L270.504808 401.997889" class="reactive tooltip-trigger" /><path stroke-width="3" d="M212.913462 396.614356 L251.307692 396.614356" class="reactive tooltip-trigger" /><path stroke-width="2" d="M232.110577 415.298381 L232.110577 402.947924" class="reactive tooltip-trigger" /><path stroke-width="2" d="M232.110577 396.614356 L232.110577 400.731175" class="reactive tooltip-trigger" /><rect x="193.71634615384616" y="400.7311752287122" height="2.2167487684728826" width="76.78846153846155" class="subtle-fill reactive tooltip-trigger" /><desc class="value">Min: 40
+Q1 : 79
+Q2 : 82
+Q3 : 86
+Max: 99</desc><desc class="x centered">232.11057692307693</desc><desc class="y centered">403.51794510907814</desc></g></g></g><g class="series serie-3 color-3"><g class="boxes"><g class="box"><path stroke-width="3" d="M300.173077 418.148487 L338.567308 418.148487" class="reactive tooltip-trigger" /><path stroke-width="3" d="M280.975962 415.931738 L357.764423 415.931738" class="reactive tooltip-trigger" /><path stroke-width="3" d="M300.173077 359.246305 L338.567308 359.246305" class="reactive tooltip-trigger" /><path stroke-width="2" d="M319.370192 418.148487 L319.370192 416.565095" class="reactive tooltip-trigger" /><path stroke-width="2" d="M319.370192 359.246305 L319.370192 415.298381" class="reactive tooltip-trigger" /><rect x="280.97596153846155" y="415.29838142153415" height="1.2667135819845043" width="76.78846153846155" class="subtle-fill reactive tooltip-trigger" /><desc class="value">Min: 31
+Q1 : 36
+Q2 : 38
+Q3 : 40
+Max: 217</desc><desc class="x centered">319.3701923076923</desc><desc class="y centered">405.03800140745955</desc></g></g></g><g class="series serie-4 color-4"><g class="boxes"><g class="box"><path stroke-width="3" d="M387.432692 85.952850 L425.826923 85.952850" class="reactive tooltip-trigger" /><path stroke-width="3" d="M368.235577 44.784659 L445.024038 44.784659" class="reactive tooltip-trigger" /><path stroke-width="3" d="M387.432692 9.000000 L425.826923 9.000000" class="reactive tooltip-trigger" /><path stroke-width="2" d="M406.629808 85.952850 L406.629808 51.118227" class="reactive tooltip-trigger" /><path stroke-width="2" d="M406.629808 9.000000 L406.629808 38.767769" class="reactive tooltip-trigger" /><rect x="368.2355769230769" y="38.76776917663619" height="12.350457424349031" width="76.78846153846155" class="subtle-fill reactive tooltip-trigger" /><desc class="value">Min: 1080
+Q1 : 1190
+Q2 : 1210
+Q3 : 1229
+Max: 1323</desc><desc class="x centered">406.6298076923077</desc><desc class="y centered">45.92470091484864</desc></g></g></g><g class="series serie-5 color-5"><g class="boxes"><g class="box"><path stroke-width="3" d="M474.692308 423.848698 L513.086538 423.848698" class="reactive tooltip-trigger" /><path stroke-width="3" d="M455.495192 422.898663 L532.283654 422.898663" class="reactive tooltip-trigger" /><path stroke-width="3" d="M474.692308 417.831809 L513.086538 417.831809" class="reactive tooltip-trigger" /><path stroke-width="2" d="M493.889423 423.848698 L493.889423 423.215341" class="reactive tooltip-trigger" /><path stroke-width="2" d="M493.889423 417.831809 L493.889423 422.265306" class="reactive tooltip-trigger" /><rect x="455.49519230769226" y="422.265306122449" height="0.9500351864883783" width="76.78846153846155" class="subtle-fill reactive tooltip-trigger" /><desc class="value">Min: 13
+Q1 : 15
+Q2 : 16
+Q3 : 18
+Max: 32</desc><desc class="x centered">493.88942307692304</desc><desc class="y centered">422.0119634060521</desc></g></g></g><g class="series serie-6 color-6"><g class="boxes"><g class="box"><path stroke-width="3" d="M561.951923 362.729768 L600.346154 362.729768" class="reactive tooltip-trigger" /><path stroke-width="3" d="M542.754808 337.395496 L619.543269 337.395496" class="reactive tooltip-trigger" /><path stroke-width="3" d="M561.951923 313.011260 L600.346154 313.011260" class="reactive tooltip-trigger" /><path stroke-width="2" d="M581.149038 362.729768 L581.149038 351.487685" class="reactive tooltip-trigger" /><path stroke-width="2" d="M581.149038 313.011260 L581.149038 329.953554" class="reactive tooltip-trigger" /><rect x="542.7548076923077" y="329.9535538353273" height="21.5341308937368" width="76.78846153846155" class="subtle-fill reactive tooltip-trigger" /><desc class="value">Min: 206
+Q1 : 241.5
+Q2 : 286
+Q3 : 309.5
+Max: 363</desc><desc class="x centered">581.1490384615386</desc><desc class="y centered">338.91555242786774</desc></g></g></g><g class="series serie-7 color-7"><g class="boxes"><g class="box"><path stroke-width="3" d="M649.211538 427.332160 L687.605769 427.332160" class="reactive tooltip-trigger" /><path stroke-width="3" d="M630.014423 427.015482 L706.802885 427.015482" class="reactive tooltip-trigger" /><path stroke-width="3" d="M649.211538 418.465165 L687.605769 418.465165" class="reactive tooltip-trigger" /><path stroke-width="2" d="M668.408654 427.332160 L668.408654 427.015482" class="reactive tooltip-trigger" /><path stroke-width="2" d="M668.408654 418.465165 L668.408654 427.015482" class="reactive tooltip-trigger" /><rect x="630.0144230769231" y="427.0154820548909" height="0.0" width="76.78846153846155" class="subtle-fill reactive tooltip-trigger" /><desc class="value">Min: 2
+Q1 : 3
+Q2 : 3
+Q3 : 3
+Max: 30</desc><desc class="x centered">668.4086538461538</desc><desc class="y centered">425.36875439831107</desc></g></g></g></g><g class="titles"><text x="400.0" y="26" class="title plot_title">Query times for 300 concurrent requests with DB on another region</text></g><g transform="translate(54, 46)" class="plot overlay"><g class="series serie-0 color-0" /><g class="series serie-1 color-1" /><g class="series serie-2 color-2" /><g class="series serie-3 color-3" /><g class="series serie-4 color-4" /><g class="series serie-5 color-5" /><g class="series serie-6 color-6" /><g class="series serie-7 color-7" /></g><g transform="translate(54, 46)" class="plot text-overlay"><g class="series serie-0 color-0" /><g class="series serie-1 color-1" /><g class="series serie-2 color-2" /><g class="series serie-3 color-3" /><g class="series serie-4 color-4" /><g class="series serie-5 color-5" /><g class="series serie-6 color-6" /><g class="series serie-7 color-7" /></g><g transform="translate(54, 46)" class="plot tooltip-overlay"><g transform="translate(0 0)" style="opacity: 0" class="tooltip"><rect rx="0" ry="0" width="0" height="0" class="tooltip-box" /><g class="text" /></g></g><g transform="translate(64, 524)" class="legends"><g id="activate-serie-0" class="legend reactive activate-serie"><rect x="0.0" y="1.0" width="12" height="12" class="color-0 reactive" /><text x="17.0" y="11.2">Dynamo cold</text></g><g id="activate-serie-1" class="legend reactive activate-serie"><rect x="242.0" y="1.0" width="12" height="12" class="color-1 reactive" /><text x="259.0" y="11.2"> Dynamo warm</text></g><g id="activate-serie-2" class="legend reactive activate-serie"><rect x="484.0" y="1.0" width="12" height="12" class="color-2 reactive" /><text x="501.0" y="11.2">Mongo Data cold</text></g><g id="activate-serie-3" class="legend reactive activate-serie"><rect x="0.0" y="22.0" width="12" height="12" class="color-3 reactive" /><text x="17.0" y="32.2"> Mongo Data warm</text></g><g id="activate-serie-4" class="legend reactive activate-serie"><rect x="242.0" y="22.0" width="12" height="12" class="color-4 reactive" /><text x="259.0" y="32.2"> Firebase cold</text></g><g id="activate-serie-5" class="legend reactive activate-serie"><rect x="484.0" y="22.0" width="12" height="12" class="color-5 reactive" /><text x="501.0" y="32.2"> Firebase warm</text></g><g id="activate-serie-6" class="legend reactive activate-serie"><rect x="0.0" y="43.0" width="12" height="12" class="color-6 reactive" /><text x="17.0" y="53.2"> Mongo Connect cold</text></g><g id="activate-serie-7" class="legend reactive activate-serie"><rect x="242.0" y="43.0" width="12" height="12" class="color-7 reactive" /><text x="259.0" y="53.2"> Mongo Connect warm</text></g></g></g></svg> -->
+
+<p>Figure 1: Results of the experiment with 300 requests every 100 ms for all databases.</p>
+<p>The first thing we notice is the <strong>Firebase</strong> cold time which is quite huge. During the cold start phase, when the function initiates and establishes connections with the Firebase servers, it takes approximately 1200 ms to return a response for a query. However, once the function is already warm, its performance improves significantly, with an average query response time of around 20ms.</p>
+<p>The second database with a painful cold start is <strong>MongoDB</strong> which suffers a ~ 300 ms response time during cold start. Nevertheless, after the driver establishes the connections, the queries are extremely fast with times averaging around 4ms.</p>
+<p>When using the <strong>Atlas MongoDB Data API</strong>, we observe a notably favorable response time during cold starts compared to the other databases. However, subsequent requests exhibit slower performance compared to a MongoDB instance with an already established connection, averaging around 35ms.</p>
+<p><strong>DynamoDB</strong> performs exceptionally well with a good query time during cold start (~70ms) and an excellent warm query time similar to Mongo DB with connection (~5ms).</p>
+<p>Furthermore, I conducted the same set of experiments with the genezio application, which was now hosted in a different region (us-east-1) than the database (eu-central-1). This aspect becomes useful when considering scenarios such as deploying a multi-region application while using a single database.</p>
+ <?xml version='1.0' encoding='utf-8'?>
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" id="chart-4f1c270f-b879-472f-ad70-1b4247592bdd" class="pygal-chart" viewBox="0 0 800 600"><!--Generated with pygal 3.0.0 (etree) ©Kozea 2012-2016 on 2023-07-11--><!--http://pygal.org--><!--http://github.com/Kozea/pygal--><defs><style type="text/css">#chart-4f1c270f-b879-472f-ad70-1b4247592bdd{-webkit-user-select:none;-webkit-font-smoothing:antialiased;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .title{font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;font-size:16px}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .legends .legend text{font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;font-size:14px}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .axis text{font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;font-size:10px}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .axis text.major{font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;font-size:10px}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .text-overlay text.value{font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;font-size:16px}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .text-overlay text.label{font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;font-size:10px}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .tooltip{font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;font-size:14px}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd text.no_data{font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;font-size:64px}
+#chart-4f1c270f-b879-472f-ad70-1b4247592bdd{background-color:rgba(249,249,249,1)}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd path,#chart-4f1c270f-b879-472f-ad70-1b4247592bdd line,#chart-4f1c270f-b879-472f-ad70-1b4247592bdd rect,#chart-4f1c270f-b879-472f-ad70-1b4247592bdd circle{-webkit-transition:150ms;-moz-transition:150ms;transition:150ms}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .graph &gt; .background{fill:rgba(249,249,249,1)}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .plot &gt; .background{fill:rgba(255,255,255,1)}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .graph{fill:rgba(0,0,0,.87)}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd text.no_data{fill:rgba(0,0,0,1)}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .title{fill:rgba(0,0,0,1)}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .legends .legend text{fill:rgba(0,0,0,.87)}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .legends .legend:hover text{fill:rgba(0,0,0,1)}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .axis .line{stroke:rgba(0,0,0,1)}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .axis .guide.line{stroke:rgba(0,0,0,.54)}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .axis .major.line{stroke:rgba(0,0,0,.87)}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .axis text.major{fill:rgba(0,0,0,1)}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .axis.y .guides:hover .guide.line,#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .line-graph .axis.x .guides:hover .guide.line,#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .stackedline-graph .axis.x .guides:hover .guide.line,#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .xy-graph .axis.x .guides:hover .guide.line{stroke:rgba(0,0,0,1)}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .axis .guides:hover text{fill:rgba(0,0,0,1)}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .reactive{fill-opacity:.7;stroke-opacity:.8;stroke-width:1}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .ci{stroke:rgba(0,0,0,.87)}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .reactive.active,#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .active .reactive{fill-opacity:.8;stroke-opacity:.9;stroke-width:4}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .ci .reactive.active{stroke-width:1.5}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .series text{fill:rgba(0,0,0,1)}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .tooltip rect{fill:rgba(255,255,255,1);stroke:rgba(0,0,0,1);-webkit-transition:opacity 150ms;-moz-transition:opacity 150ms;transition:opacity 150ms}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .tooltip .label{fill:rgba(0,0,0,.87)}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .tooltip .label{fill:rgba(0,0,0,.87)}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .tooltip .legend{font-size:.8em;fill:rgba(0,0,0,.54)}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .tooltip .x_label{font-size:.6em;fill:rgba(0,0,0,1)}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .tooltip .xlink{font-size:.5em;text-decoration:underline}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .tooltip .value{font-size:1.5em}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .bound{font-size:.5em}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .max-value{font-size:.75em;fill:rgba(0,0,0,.54)}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .map-element{fill:rgba(255,255,255,1);stroke:rgba(0,0,0,.54) !important}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .map-element .reactive{fill-opacity:inherit;stroke-opacity:inherit}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .color-0,#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .color-0 a:visited{stroke:#F44336;fill:#F44336}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .color-1,#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .color-1 a:visited{stroke:#3F51B5;fill:#3F51B5}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .color-2,#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .color-2 a:visited{stroke:#009688;fill:#009688}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .color-3,#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .color-3 a:visited{stroke:#FFC107;fill:#FFC107}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .color-4,#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .color-4 a:visited{stroke:#FF5722;fill:#FF5722}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .color-5,#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .color-5 a:visited{stroke:#9C27B0;fill:#9C27B0}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .color-6,#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .color-6 a:visited{stroke:#03A9F4;fill:#03A9F4}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .color-7,#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .color-7 a:visited{stroke:#8BC34A;fill:#8BC34A}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .text-overlay .color-0 text{fill:black}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .text-overlay .color-1 text{fill:black}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .text-overlay .color-2 text{fill:black}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .text-overlay .color-3 text{fill:black}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .text-overlay .color-4 text{fill:black}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .text-overlay .color-5 text{fill:black}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .text-overlay .color-6 text{fill:black}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .text-overlay .color-7 text{fill:black}
+#chart-4f1c270f-b879-472f-ad70-1b4247592bdd text.no_data{text-anchor:middle}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .guide.line{fill:none}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .centered{text-anchor:middle}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .title{text-anchor:middle}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .legends .legend text{fill-opacity:1}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .axis.x text{text-anchor:middle}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .axis.x:not(.web) text[transform]{text-anchor:start}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .axis.x:not(.web) text[transform].backwards{text-anchor:end}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .axis.y text{text-anchor:end}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .axis.y text[transform].backwards{text-anchor:start}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .axis.y2 text{text-anchor:start}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .axis.y2 text[transform].backwards{text-anchor:end}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .axis .guide.line{stroke-dasharray:4,4;stroke:black}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .axis .major.guide.line{stroke-dasharray:6,6;stroke:black}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .horizontal .axis.y .guide.line,#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .horizontal .axis.y2 .guide.line,#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .vertical .axis.x .guide.line{opacity:0}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .horizontal .axis.always_show .guide.line,#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .vertical .axis.always_show .guide.line{opacity:1 !important}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .axis.y .guides:hover .guide.line,#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .axis.y2 .guides:hover .guide.line,#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .axis.x .guides:hover .guide.line{opacity:1}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .axis .guides:hover text{opacity:1}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .nofill{fill:none}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .subtle-fill{fill-opacity:.2}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .dot{stroke-width:1px;fill-opacity:1;stroke-opacity:1}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .dot.active{stroke-width:5px}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .dot.negative{fill:transparent}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd text,#chart-4f1c270f-b879-472f-ad70-1b4247592bdd tspan{stroke:none !important}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .series text.active{opacity:1}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .tooltip rect{fill-opacity:.95;stroke-width:.5}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .tooltip text{fill-opacity:1}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .showable{visibility:hidden}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .showable.shown{visibility:visible}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .gauge-background{fill:rgba(229,229,229,1);stroke:none}#chart-4f1c270f-b879-472f-ad70-1b4247592bdd .bg-lines{stroke:rgba(249,249,249,1);stroke-width:2px}</style><script type="text/javascript">window.pygal = window.pygal || {};window.pygal.config = window.pygal.config || {};window.pygal.config['4f1c270f-b879-472f-ad70-1b4247592bdd'] = {"allow_interruptions": false, "box_mode": "extremes", "classes": ["pygal-chart"], "css": ["file://style.css", "file://graph.css"], "defs": [], "disable_xml_declaration": false, "dots_size": 2.5, "dynamic_print_values": false, "explicit_size": false, "fill": false, "force_uri_protocol": "https", "formatter": null, "half_pie": false, "height": 600, "include_x_axis": false, "inner_radius": 0, "interpolate": null, "interpolation_parameters": {}, "interpolation_precision": 250, "inverse_y_axis": false, "js": ["//kozea.github.io/pygal.js/2.0.x/pygal-tooltips.min.js"], "legend_at_bottom": true, "legend_at_bottom_columns": null, "legend_box_size": 12, "logarithmic": false, "margin": 20, "margin_bottom": null, "margin_left": null, "margin_right": null, "margin_top": null, "max_scale": 16, "min_scale": 4, "missing_value_fill_truncation": "x", "no_data_text": "No data", "no_prefix": false, "order_min": null, "pretty_print": false, "print_labels": false, "print_values": false, "print_values_position": "center", "print_zeroes": true, "range": [-5.0, 2062.0], "rounded_bars": null, "secondary_range": null, "show_dots": true, "show_legend": true, "show_minor_x_labels": true, "show_minor_y_labels": true, "show_only_major_dots": false, "show_x_guides": false, "show_x_labels": true, "show_y_guides": true, "show_y_labels": true, "spacing": 10, "stack_from_top": false, "strict": false, "stroke": true, "stroke_style": null, "style": {"background": "rgba(249, 249, 249, 1)", "ci_colors": [], "colors": ["#F44336", "#3F51B5", "#009688", "#FFC107", "#FF5722", "#9C27B0", "#03A9F4", "#8BC34A", "#FF9800", "#E91E63", "#2196F3", "#4CAF50", "#FFEB3B", "#673AB7", "#00BCD4", "#CDDC39", "#9E9E9E", "#607D8B"], "dot_opacity": "1", "font_family": "Consolas, \"Liberation Mono\", Menlo, Courier, monospace", "foreground": "rgba(0, 0, 0, .87)", "foreground_strong": "rgba(0, 0, 0, 1)", "foreground_subtle": "rgba(0, 0, 0, .54)", "guide_stroke_color": "black", "guide_stroke_dasharray": "4,4", "label_font_family": "Consolas, \"Liberation Mono\", Menlo, Courier, monospace", "label_font_size": 10, "legend_box_size": 20, "legend_font_family": "Consolas, \"Liberation Mono\", Menlo, Courier, monospace", "legend_font_size": 14, "major_guide_stroke_color": "black", "major_guide_stroke_dasharray": "6,6", "major_label_font_family": "Consolas, \"Liberation Mono\", Menlo, Courier, monospace", "major_label_font_size": 10, "no_data_font_family": "Consolas, \"Liberation Mono\", Menlo, Courier, monospace", "no_data_font_size": 64, "opacity": ".7", "opacity_hover": ".8", "plot_background": "rgba(255, 255, 255, 1)", "stroke_opacity": ".8", "stroke_opacity_hover": ".9", "stroke_width": "1", "stroke_width_hover": "4", "title_font_family": "Consolas, \"Liberation Mono\", Menlo, Courier, monospace", "title_font_size": 16, "tooltip_font_family": "Consolas, \"Liberation Mono\", Menlo, Courier, monospace", "tooltip_font_size": 14, "transition": "150ms", "value_background": "rgba(229, 229, 229, 1)", "value_colors": [], "value_font_family": "Consolas, \"Liberation Mono\", Menlo, Courier, monospace", "value_font_size": 16, "value_label_font_family": "Consolas, \"Liberation Mono\", Menlo, Courier, monospace", "value_label_font_size": 10}, "title": "Query times for 300 concurrent requests with DB on another region", "tooltip_border_radius": 0, "tooltip_fancy_mode": true, "truncate_label": null, "truncate_legend": null, "width": 800, "x_label_rotation": 0, "x_labels": null, "x_labels_major": null, "x_labels_major_count": null, "x_labels_major_every": null, "x_title": null, "xrange": null, "y_label_rotation": 0, "y_labels": null, "y_labels_major": null, "y_labels_major_count": null, "y_labels_major_every": null, "y_title": null, "zero": 0, "legends": ["DynamoDB cold", " DynamoDB warm", "MongoDB Data API cold", " MongoDB Data API warm", " Firebase cold", " Firebase warm", " MongoDB Connect cold", " MongoDB Connect warm"]}</script><script type="text/javascript" xlink:href="https://kozea.github.io/pygal.js/2.0.x/pygal-tooltips.min.js" /></defs><title>Query times for 300 concurrent requests with DB on another region</title><g class="graph box-graph vertical"><rect x="0" y="0" width="800" height="600" class="background" /><g transform="translate(54, 46)" class="plot"><rect x="0" y="0" width="726.0" height="468.0" class="background" /><g class="axis y always_show"><g class="guides"><path d="M0.000000 457.911466 h726.000000" class="axis major line" /><text x="-5" y="461.41146589259796" class="major">0</text><title>0</title></g><g class="guides"><path d="M0.000000 414.370102 h726.000000" class="guide line" /><text x="-5" y="417.8701015965167" class="">200</text><title>200</title></g><g class="guides"><path d="M0.000000 370.828737 h726.000000" class="guide line" /><text x="-5" y="374.3287373004354" class="">400</text><title>400</title></g><g class="guides"><path d="M0.000000 327.287373 h726.000000" class="guide line" /><text x="-5" y="330.78737300435415" class="">600</text><title>600</title></g><g class="guides"><path d="M0.000000 283.746009 h726.000000" class="guide line" /><text x="-5" y="287.2460087082729" class="">800</text><title>800</title></g><g class="guides"><path d="M0.000000 240.204644 h726.000000" class="major guide line" /><text x="-5" y="243.70464441219164" class="major">1000</text><title>1000</title></g><g class="guides"><path d="M0.000000 196.663280 h726.000000" class="guide line" /><text x="-5" y="200.16328011611034" class="">1200</text><title>1200</title></g><g class="guides"><path d="M0.000000 153.121916 h726.000000" class="guide line" /><text x="-5" y="156.62191582002907" class="">1400</text><title>1400</title></g><g class="guides"><path d="M0.000000 109.580552 h726.000000" class="guide line" /><text x="-5" y="113.0805515239478" class="">1600</text><title>1600</title></g><g class="guides"><path d="M0.000000 66.039187 h726.000000" class="guide line" /><text x="-5" y="69.53918722786653" class="">1800</text><title>1800</title></g><g class="guides"><path d="M0.000000 22.497823 h726.000000" class="major guide line" /><text x="-5" y="25.997822931785265" class="major">2000</text><title>2000</title></g></g><g class="series serie-0 color-0"><g class="boxes"><g class="box"><path stroke-width="3" d="M38.394231 367.127721 L76.788462 367.127721" class="reactive tooltip-trigger" /><path stroke-width="3" d="M19.197115 363.426705 L95.985577 363.426705" class="reactive tooltip-trigger" /><path stroke-width="3" d="M38.394231 342.962264 L76.788462 342.962264" class="reactive tooltip-trigger" /><path stroke-width="2" d="M57.591346 367.127721 L57.591346 364.515239" class="reactive tooltip-trigger" /><path stroke-width="2" d="M57.591346 342.962264 L57.591346 362.011611" class="reactive tooltip-trigger" /><rect x="19.197115384615383" y="362.01161103047895" height="2.5036284470247097" width="76.78846153846155" class="subtle-fill reactive tooltip-trigger" /><desc class="value">Min: 417
+Q1 : 429
+Q2 : 434
+Q3 : 440.5
+Max: 528</desc><desc class="x centered">57.59134615384616</desc><desc class="y centered">360.0087082728592</desc></g></g></g><g class="series serie-1 color-1"><g class="boxes"><g class="box"><path stroke-width="3" d="M125.653846 437.229318 L164.048077 437.229318" class="reactive tooltip-trigger" /><path stroke-width="3" d="M106.456731 436.793904 L183.245192 436.793904" class="reactive tooltip-trigger" /><path stroke-width="3" d="M125.653846 429.174165 L164.048077 429.174165" class="reactive tooltip-trigger" /><path stroke-width="2" d="M144.850962 437.229318 L144.850962 437.011611" class="reactive tooltip-trigger" /><path stroke-width="2" d="M144.850962 429.174165 L144.850962 436.576197" class="reactive tooltip-trigger" /><rect x="106.45673076923076" y="436.57619738751816" height="0.435413642960782" width="76.78846153846155" class="subtle-fill reactive tooltip-trigger" /><desc class="value">Min: 95
+Q1 : 96
+Q2 : 97
+Q3 : 98
+Max: 132</desc><desc class="x centered">144.85096153846155</desc><desc class="y centered">435.3570391872279</desc></g></g></g><g class="series serie-2 color-2"><g class="boxes"><g class="box"><path stroke-width="3" d="M212.913462 384.979681 L251.307692 384.979681" class="reactive tooltip-trigger" /><path stroke-width="3" d="M193.716346 373.223512 L270.504808 373.223512" class="reactive tooltip-trigger" /><path stroke-width="3" d="M212.913462 360.596517 L251.307692 360.596517" class="reactive tooltip-trigger" /><path stroke-width="2" d="M232.110577 384.979681 L232.110577 376.924528" class="reactive tooltip-trigger" /><path stroke-width="2" d="M232.110577 360.596517 L232.110577 368.978229" class="reactive tooltip-trigger" /><rect x="193.71634615384616" y="368.97822931785197" height="7.946298984034797" width="76.78846153846155" class="subtle-fill reactive tooltip-trigger" /><desc class="value">Min: 335
+Q1 : 372
+Q2 : 389
+Q3 : 408.5
+Max: 447</desc><desc class="x centered">232.11057692307693</desc><desc class="y centered">372.94049346879535</desc></g></g></g><g class="series serie-3 color-3"><g class="boxes"><g class="box"><path stroke-width="3" d="M300.173077 432.004354 L338.567308 432.004354" class="reactive tooltip-trigger" /><path stroke-width="3" d="M280.975962 429.827286 L357.764423 429.827286" class="reactive tooltip-trigger" /><path stroke-width="3" d="M300.173077 408.056604 L338.567308 408.056604" class="reactive tooltip-trigger" /><path stroke-width="2" d="M319.370192 432.004354 L319.370192 430.480406" class="reactive tooltip-trigger" /><path stroke-width="2" d="M319.370192 408.056604 L319.370192 429.174165" class="reactive tooltip-trigger" /><rect x="280.97596153846155" y="429.17416545718436" height="1.3062409288824028" width="76.78846153846155" class="subtle-fill reactive tooltip-trigger" /><desc class="value">Min: 119
+Q1 : 126
+Q2 : 129
+Q3 : 132
+Max: 229</desc><desc class="x centered">319.3701923076923</desc><desc class="y centered">425.90856313497824</desc></g></g></g><g class="series serie-4 color-4"><g class="boxes"><g class="box"><path stroke-width="3" d="M387.432692 182.730044 L425.826923 182.730044" class="reactive tooltip-trigger" /><path stroke-width="3" d="M368.235577 85.632801 L445.024038 85.632801" class="reactive tooltip-trigger" /><path stroke-width="3" d="M387.432692 9.000000 L425.826923 9.000000" class="reactive tooltip-trigger" /><path stroke-width="2" d="M406.629808 182.730044 L406.629808 90.857765" class="reactive tooltip-trigger" /><path stroke-width="2" d="M406.629808 9.000000 L406.629808 79.319303" class="reactive tooltip-trigger" /><rect x="368.2355769230769" y="79.31930333817132" height="11.538461538461547" width="76.78846153846155" class="subtle-fill reactive tooltip-trigger" /><desc class="value">Min: 1264
+Q1 : 1686
+Q2 : 1710
+Q3 : 1739
+Max: 2062</desc><desc class="x centered">406.6298076923077</desc><desc class="y centered">89.50798258345435</desc></g></g></g><g class="series serie-5 color-5"><g class="boxes"><g class="box"><path stroke-width="3" d="M474.692308 435.923077 L513.086538 435.923077" class="reactive tooltip-trigger" /><path stroke-width="3" d="M455.495192 435.269956 L532.283654 435.269956" class="reactive tooltip-trigger" /><path stroke-width="3" d="M474.692308 339.696662 L513.086538 339.696662" class="reactive tooltip-trigger" /><path stroke-width="2" d="M493.889423 435.923077 L493.889423 435.487663" class="reactive tooltip-trigger" /><path stroke-width="2" d="M493.889423 339.696662 L493.889423 434.399129" class="reactive tooltip-trigger" /><rect x="455.49519230769226" y="434.3991291727141" height="1.0885341074020403" width="76.78846153846155" class="subtle-fill reactive tooltip-trigger" /><desc class="value">Min: 101
+Q1 : 103
+Q2 : 104
+Q3 : 108
+Max: 543</desc><desc class="x centered">493.88942307692304</desc><desc class="y centered">416.15529753265605</desc></g></g></g><g class="series serie-6 color-6"><g class="boxes"><g class="box"><path stroke-width="3" d="M561.951923 102.396226 L600.346154 102.396226" class="reactive tooltip-trigger" /><path stroke-width="3" d="M542.754808 86.285922 L619.543269 86.285922" class="reactive tooltip-trigger" /><path stroke-width="3" d="M561.951923 62.773585 L600.346154 62.773585" class="reactive tooltip-trigger" /><path stroke-width="2" d="M581.149038 102.396226 L581.149038 92.708273" class="reactive tooltip-trigger" /><path stroke-width="2" d="M581.149038 62.773585 L581.149038 79.754717" class="reactive tooltip-trigger" /><rect x="542.7548076923077" y="79.7547169811321" height="12.953555878084217" width="76.78846153846155" class="subtle-fill reactive tooltip-trigger" /><desc class="value">Min: 1633
+Q1 : 1677.5
+Q2 : 1707
+Q3 : 1737
+Max: 1815</desc><desc class="x centered">581.1490384615386</desc><desc class="y centered">84.78374455732956</desc></g></g></g><g class="series serie-7 color-7"><g class="boxes"><g class="box"><path stroke-width="3" d="M649.211538 437.229318 L687.605769 437.229318" class="reactive tooltip-trigger" /><path stroke-width="3" d="M630.014423 437.011611 L706.802885 437.011611" class="reactive tooltip-trigger" /><path stroke-width="3" d="M649.211538 434.834543 L687.605769 434.834543" class="reactive tooltip-trigger" /><path stroke-width="2" d="M668.408654 437.229318 L668.408654 437.011611" class="reactive tooltip-trigger" /><path stroke-width="2" d="M668.408654 434.834543 L668.408654 437.011611" class="reactive tooltip-trigger" /><rect x="630.0144230769231" y="437.01161103047895" height="0.0" width="76.78846153846155" class="subtle-fill reactive tooltip-trigger" /><desc class="value">Min: 95
+Q1 : 96
+Q2 : 96
+Q3 : 96
+Max: 106</desc><desc class="x centered">668.4086538461538</desc><desc class="y centered">436.6197387518142</desc></g></g></g></g><g class="titles"><text x="400.0" y="26" class="title plot_title">Query times for 300 concurrent requests with DB on another region</text></g><g transform="translate(54, 46)" class="plot overlay"><g class="series serie-0 color-0" /><g class="series serie-1 color-1" /><g class="series serie-2 color-2" /><g class="series serie-3 color-3" /><g class="series serie-4 color-4" /><g class="series serie-5 color-5" /><g class="series serie-6 color-6" /><g class="series serie-7 color-7" /></g><g transform="translate(54, 46)" class="plot text-overlay"><g class="series serie-0 color-0" /><g class="series serie-1 color-1" /><g class="series serie-2 color-2" /><g class="series serie-3 color-3" /><g class="series serie-4 color-4" /><g class="series serie-5 color-5" /><g class="series serie-6 color-6" /><g class="series serie-7 color-7" /></g><g transform="translate(54, 46)" class="plot tooltip-overlay"><g transform="translate(0 0)" style="opacity: 0" class="tooltip"><rect rx="0" ry="0" width="0" height="0" class="tooltip-box" /><g class="text" /></g></g><g transform="translate(64, 524)" class="legends"><g id="activate-serie-0" class="legend reactive activate-serie"><rect x="0.0" y="1.0" width="12" height="12" class="color-0 reactive" /><text x="17.0" y="11.2">DynamoDB cold</text></g><g id="activate-serie-1" class="legend reactive activate-serie"><rect x="242.0" y="1.0" width="12" height="12" class="color-1 reactive" /><text x="259.0" y="11.2"> DynamoDB warm</text></g><g id="activate-serie-2" class="legend reactive activate-serie"><rect x="484.0" y="1.0" width="12" height="12" class="color-2 reactive" /><text x="501.0" y="11.2">MongoDB Data API cold</text></g><g id="activate-serie-3" class="legend reactive activate-serie"><rect x="0.0" y="22.0" width="12" height="12" class="color-3 reactive" /><text x="17.0" y="32.2"> MongoDB Data API warm</text></g><g id="activate-serie-4" class="legend reactive activate-serie"><rect x="242.0" y="22.0" width="12" height="12" class="color-4 reactive" /><text x="259.0" y="32.2"> Firebase cold</text></g><g id="activate-serie-5" class="legend reactive activate-serie"><rect x="484.0" y="22.0" width="12" height="12" class="color-5 reactive" /><text x="501.0" y="32.2"> Firebase warm</text></g><g id="activate-serie-6" class="legend reactive activate-serie"><rect x="0.0" y="43.0" width="12" height="12" class="color-6 reactive" /><text x="17.0" y="53.2"> MongoDB Connect cold</text></g><g id="activate-serie-7" class="legend reactive activate-serie"><rect x="242.0" y="43.0" width="12" height="12" class="color-7 reactive" /><text x="259.0" y="53.2"> MongoDB Connect warm</text></g></g></g></svg>
+
+<p>is hosted in a different region than the database.</p>
+<p>We can see that the performance is, of course, worse. This is because our application is further away from the database servers. Notably, the cold start response time for the <strong>MongoDB</strong> instance becomes way worse. This is probably because MongoDB exchanges many messages during the connection establishment and the increased latency adds up resulting in such a painful cold start. For more information check <a href="https://github.com/mongodb/specifications/blob/master/source/auth/auth.rst#authentication-handshake">this</a> out!</p>
+<p>It’s now time to remove the 100 ms interval between requests and be as harsh as possible with our databases to see under which conditions the performance starts to decrease.</p>
+<h3 id="pushing-database-performance-to-its-limits">Pushing Database Performance to its Limits</h3>
+<h4 id="firestore">Firestore </h4>
+<p>I’ve tried to break Firestore but it was quite hard. I’ve eliminated the timeout between requests and I’ve increased the number of AWS Lambda running in parallel to 900.</p>
+<p>The results are presented below. The Y value of the X-th percentile means that Y% has smaller values than X. We can see for example that in the initial test (Figure 3), 99,99% of the cold response times are below 1321.01 ms. The next values (Figure 4) show that 99,99% of the cold response times are below 1641.257 ms.</p>
+<p>For the warm start, we observe similar results, except there is a noticeably higher response at the 99.99th percentile. This means that it is unusual for queries to take more than 30 milliseconds. Such cases are the exception.</p>
+<p><img src="/posts/dbtable1.webp" alt="alt_text"></p>
+<p>Figure 3: Percentile statistics for 300 concurrent requests with 100ms timeout between them.</p>
+<p><img src="/posts/dbtable2.webp" alt="alt_text"></p>
+<p>Figure 4: Percentile statistics for 900 concurrent requests with no timeout between them.</p>
+<h4 id="mongodb-with-connection">MongoDB with connection</h4>
+<p>For MongoDB with an established connection it was way easier to find the point where the performance decreases. I just had to decrease the sleep period between requests to 10ms and even with 100 concurrent requests I saw a decrease in performance.</p>
+<p>We can see that the cold start increases from a steady 280-300 ms (Figure 5) to more than 800 ms (Figure 6). The warm query time remains constant. The problem is establishing the connection, but once the connection is successfully established, the time will remain constant.</p>
+<p><img src="/posts/dbtable3.webp" alt="alt_text"></p>
+<p>Figure 5: Percentile statistics for MongoDB with wire protocol connections and 300 concurrent requests with 100ms timeout between them.</p>
+<p><img src="/posts/dbtable4.webp" alt="alt_text"></p>
+<p>Figure 6: Percentile statistics for MongoDB with wire protocol connections and 100 concurrent requests with 10ms timeout between them.</p>
+<h4 id="mongodb-data-api">MongoDB Data API</h4>
+<p>The MongoDB Data API is behaving better during a spike of traffic. I’ve done 900 concurrent requests without any sleep time between the requests.</p>
+<p>We see a slight decrease in the performance during the cold start, but nothing substantial. For the warm time responses, the response time is the same. Same as for the Firestore Database, we barely touched the breaking point and we can say with confidence that the MongoDB Data API could handle even more traffic.</p>
+<p><img src="/posts/dbtable5.webp" alt="alt_text"></p>
+<p>Figure 7: Percentile statistics for MongoDB Data API with 300 concurrent requests with 100ms timeout between them.</p>
+<p><img src="/posts/dbtable6.webp" alt="alt_text"></p>
+<p>Figure 8: Percentile statistics for MongoDB Data API with 900 concurrent requests with no timeout between them.</p>
+<h4 id="dynamodb">DynamoDB</h4>
+<p>Lastly, DynamoDB was tested with 900 concurrent requests without any sleep time between the requests.</p>
+<p><img src="/posts/dbtable7.webp" alt="alt_text"></p>
+<p>Figure 9: Percentile statistics for DynamoDB with  300 concurrent requests with 100ms timeout between them.</p>
+<p><img src="/posts/dbtable8.webp" alt="alt_text"></p>
+<p>Figure 10: Percentile statistics for DynamoDB with 900 concurrent requests with no timeout between them.</p>
+<p>The results are very good. We observe a decrease in performance only for a very few queries.</p>
+<h3 id="zombie-connection-tests">Zombie connection tests</h3>
+<p>Databases that maintain persistent connections with the server can be susceptible to a phenomenon commonly known as a ‘zombie connection’. When a function initializes, it establishes a TCP connection with the database server. However, if the function gets terminated by the FaaS system, the TCP connection isn&rsquo;t explicitly closed, leading the database server unaware that the other end of the connection has become unresponsive. It may take some time before this connection gets closed. The concern here is that each open connection consumes RAM, which can potentially slow down the server. Furthermore, in the case of Atlas MongoDB, each instance type has a set maximum number of open connections. This limit could be reached if your application begins to scale, posing additional challenges.</p>
+<p>To gauge the severity and reproducibility of this error I ran the following experiment:</p>
+<ol>
+<li>I set up an M10 MongoDB instance in Atlas MongoDB.</li>
+<li>I made 300 requests in parallel to spawn 300 AWS Lambdas.</li>
+<li>I executed the `genezio deploy` command to force a redeploy resulting in AWS Lambda terminating all the VMs.</li>
+</ol>
+<p>The steps 2 and 3 were repeated five times. Afterwards, I inspected the Atlas MongoDB&rsquo;s monitoring dashboard to observe the impact on the number of active connections. The results can be seen in Figure 11.</p>
+<p><img src="/posts/dbchart.webp" alt="alt_text"></p>
+<p>Figure 11: Atlas MongoDB&rsquo;s monitoring dashboard</p>
+<p>I started the experiment at 12:30 and at 12:33 I hit the maximum amount of opened connections. In an ideal scenario, connections should vanish after each redeployment, and at no point during the experiment should there be more than 300 connections. We can see that the connections from the perspective of the server were not destroyed when the function’s VMs were destroyed. They kept on growing until it hit the maximum amount of opened connections (1500 connections for the M10 instance). It took almost 10 minutes for Atlas to clear all the zombie connections. This is indeed problematic in a real life application that needs to scale up and down very quickly.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>I’ve conducted the experiments and got some interesting results that I hope you will find helpful. My main takeaway from these experiments are:</p>
+<ul>
+<li><strong>MongoDB</strong> is blazingly fast once the connection is established, but if there is a flood of incoming requests it will start behaving slower during cold start when your functions start scaling up.</li>
+<li>Be very careful what <strong>Atlas MongoDB</strong> <strong>instance</strong> you are picking: choose one that has enough connections to accommodate also the zombie connections.</li>
+<li><strong>Firestore</strong> takes a lot of time to initialize the connections.</li>
+<li><strong>MongoDB Data API</strong> and <strong>DynamoDB</strong> are good options if you don’t want to have any problems with up scaling and you want consistent and decent query response times.</li>
+<li>For the use cases that I’ve tried, <strong>DynamoDB</strong> is the fastest and handles spikes in traffic very well.</li>
+</ul>
+<p>I plan to include more databases in the experiments and I will come with follow-ups to this article. The code used for this experiment can be found <a href="https://github.com/vladiulianbogdan/database-benchmarking">here</a>. I am looking forward to hearing what you think. You can contact me at any time at <a href="mailto:bogdan@genez.io">bogdan@genez.io</a> with any questions, issues or ideas.</p>
+</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+  
+
+
+  
+  <div class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <div class="footer-branding">
+            <a class="footer-logo" href="/">
+              <img width="140px" height="40px" alt="genezio Logo" src="/images/logo2.svg" />
+            </a>
+          </div>
+          <div class="footer-description">
+            <p>genezio is a new paradigm in cloud native programming, making it accessible to everyone, allowing elegant and quick development of websites, mobile apps, IoT apps, and many others.</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="footer-menu d-md-flex">
+            
+              <div class="col-12 col-md-7">
+                <h2 class="footer-title-support">Support</h3>
+                <div class="menu-footer-tertiary">
+                  <ul>
+                    
+                    
+                    <li class="menu-item-contact us at: contact@genez.io">
+                      <a href="mailto:contact@genez.io">
+                        
+                        <span>Contact us at: contact@genez.io</span>
+                      </a>
+                    </li>
+                    
+                    <li class="menu-item-privacy policy">
+                      <a href="/privacy-policy/">
+                        
+                        <span>Privacy Policy</span>
+                      </a>
+                    </li>
+                    
+                    <li class="menu-item-terms &amp; conditions">
+                      <a href="/eula/">
+                        
+                        <span>Terms &amp; Conditions</span>
+                      </a>
+                    </li>
+                    
+                    <li class="menu-item-brand assets">
+                      <a href="https://drive.google.com/drive/folders/1DUTEllKJygFyO3lsHi4uu703iZfYQHB5?usp=sharing">
+                        
+                        <span>Brand Assets</span>
+                      </a>
+                    </li>
+                    
+                  </ul>
+                </div>
+              </div>
+              
+              
+              <div class="col-12 col-md-6">
+                <h2 class="footer-title-support">Product</h3>
+                <div class="menu-footer-tertiary">
+                  <ul>
+                    
+                    
+                    <li>
+                       <a target="_blank" href="https://docs.genez.io/genezio-documentation/">
+        
+        <span>Genezio Documentation</span>
+      </a>
+                    </li>
+                    
+                    <li>
+                       <a  href="/full-stack-dart-application/">
+        
+        <span>Full Stack Dart App</span>
+      </a>
+                    </li>
+                    
+                    <li>
+                       <a  href="/">
+        
+        <span>Landing Page</span>
+      </a>
+                    </li>
+                    
+                  </ul>
+                </div>
+              </div>
+              
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="footer-social">
+          <ul class="social">
+            <li>
+              <a href="https://www.facebook.com/profile.php?id=100086667803855" target="blank">
+                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <title>Facebook icon</title>
+                  <path
+                    d="M22.676 0H1.324C.593 0 0 .593 0 1.324v21.352C0 23.408.593 24 1.324 24h11.494v-9.294H9.689v-3.621h3.129V8.41c0-3.099 1.894-4.785 4.659-4.785 1.325 0 2.464.097 2.796.141v3.24h-1.921c-1.5 0-1.792.721-1.792 1.771v2.311h3.584l-.465 3.63H16.56V24h6.115c.733 0 1.325-.592 1.325-1.324V1.324C24 .593 23.408 0 22.676 0" />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/Geneziodev" target="blank">
+                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <title>Twitter icon</title>
+                  <path
+                    d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z" />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/company/genez-io/" target="blank">
+                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <title>LinkedIn icon</title>
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/genezio.dev/" target="blank">
+                <svg role="img" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                  <title>Instagram icon</title>
+                  <path
+                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"></path>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://discord.com/invite/uc9H5YKjXv" target="blank">
+                <svg role="img" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                  <title>Discord icon</title>
+                  <path 
+                    d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612Zm5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612Z">
+                  </path>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+  
+  
+  
+  
+
+  
+
+  
+  <script type="text/javascript" src="/js/bundle.min.08dc218caff10a5b4c9aea8e3e9d15d68f0cd13f15fc9919363ce2f2e25af5f6.js"></script>
+  
+  
+  
+  <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/26189618.js"></script>
+  
+</body>
+</html>

@@ -6,7 +6,17 @@
     <description>Recent content in Comparison on genezio</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 15 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="/tags/comparison/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 20 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="/tags/comparison/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Database in Serverless World Comparison</title>
+      <link>/blog/database-in-serverless-world-comparison/</link>
+      <pubDate>Thu, 20 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/database-in-serverless-world-comparison/</guid>
+      <description>Unveiling Database Performance: Selecting the Right Solution for Your Serverless Application Introduction Deciding on the right database is often a challenging task when starting a new project. If you plan to deploy your server on a function as a service infrastructure, the decision is even more important because it will have a huge impact on how fast your server will respond to queries.
+In a nutshell In this article, I performed a quite deep analysis of how different databases are performing in a Function as a Service environment, but if you just want the short version, here it is:</description>
+    </item>
+    
     <item>
       <title>The Evolution of APIs: A History of REST and RPC</title>
       <link>/blog/the-evolution-of-apis-a-history-of-rest-and-rpc/</link>

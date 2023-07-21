@@ -6,7 +6,18 @@
     <description>Recent content in Tutorials on genezio</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 06 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="/tags/tutorials/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 06 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="/tags/tutorials/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to add a MongoDB to your genezio project</title>
+      <link>/blog/how-to-add-a-mongodb-to-your-genezio-project/</link>
+      <pubDate>Thu, 06 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/how-to-add-a-mongodb-to-your-genezio-project/</guid>
+      <description>In this tutorial, I will show you the steps of integrating a Mongo database into your genezio Getting Started project.
+Following this tutorial, you will be able to:
+Create a free-tier MongoDB Atlas cluster Connect to the MongoDB cluster using a MongoDB client Integrate the Mongo database into your project using mongoose Any time you get stuck or have questions, please contact me on Discord or write me an email at radu@genez.</description>
+    </item>
+    
     <item>
       <title>Unlocking the potential of prompt engineering with genezio</title>
       <link>/blog/unlocking-the-potential-of-prompt-engineering-with-genezio/</link>
