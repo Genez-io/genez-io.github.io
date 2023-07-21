@@ -90,7 +90,7 @@ Furthermore, I conducted the same set of experiments with the genezio applicatio
 
 {{< svg file="/posts/dbchart2.svg" >}}
 
-is hosted in a different region than the database.
+Figure 2: Results of the experiment with 300 requests every 100 ms for all databases when the app is hosted in a different region than the database.
 
 We can see that the performance is, of course, worse. This is because our application is further away from the database servers. Notably, the cold start response time for the **MongoDB** instance becomes way worse. This is probably because MongoDB exchanges many messages during the connection establishment and the increased latency adds up resulting in such a painful cold start. For more information check [this](https://github.com/mongodb/specifications/blob/master/source/auth/auth.rst#authentication-handshake) out!
 
