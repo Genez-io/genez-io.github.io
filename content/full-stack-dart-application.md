@@ -8,7 +8,7 @@ leadTitle: "As developers, we believe that having a unified tech stack is the bo
 leadSubTitle: "MOVED INLINE"
 callToAction: 'Learn more'
 leadButtonOneText: 'Start for free'
-leadButtonOneLink: 'https://app.genez.io/'
+leadButtonOneLink: 'https://app.genez.io/auth/signup'
 leadButtonTwoText: 'Check our Docs'
 leadButtonTwoLink: 'https://docs.genez.io/'
 productTextP1: "Because you, just like us, are passionate about developing new apps, new features. You want to bring them to your users as fast as possible. You want to focus on your code, develop, debug, release and iterate fast."
