@@ -1,5 +1,6 @@
 ---
-title: "Database in Serverless World Comparison"
+title: "Comparison Between Databases in the Serverless World"
+url: /blog/database-in-serverless-world-comparison/
 date: 2023-07-20
 tags:
   - Comparison
@@ -14,8 +15,6 @@ meta_og_image: "https://genez.io/images/database-performance.webp"
 # meta data end
 # svg = “xyz”
 ---
-
-## Unveiling Database Performance: Selecting the Right Solution for Your Serverless Application
 
 ## Introduction
 
