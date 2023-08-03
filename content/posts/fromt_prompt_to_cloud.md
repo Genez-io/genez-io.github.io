@@ -5,12 +5,12 @@ tags:
   - Tutorials
 author: Radu Dumitrescu
 linkedIn: https://www.linkedin.com/in/radu-andrei-dumitrescu/
-thumbnail: /images/fromPromptToCloud.png
+thumbnail: /images/fromPromptToCloud.webp
 preview: We are developing an application that generates a list of movies with summarized reviews
 # meta data start
 description: "We are developing an application that generates a list of movies with summarized reviews. We aim to provide a seamless user experience by allowing the user to input his preferences and receive movie suggestions."
 meta_og_url: "https://genez.io/blog/unlocking-the-potential-of-prompt-engineering-with-genezio"
-meta_og_image: "https://genez.io/images/fromPromptToCloud.png"
+meta_og_image: "https://genez.io/images/fromPromptToCloud.webp"
 # meta data end
 ---
 
