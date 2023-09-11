@@ -67,10 +67,14 @@ Prerequisites:
 
 
 
-* Install [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
-* Have an IDE installed, I personally recommend [Visual Studio Code](https://code.visualstudio.com/download)
-* Create a free account on [OpenAI](https://openai.com/)
-* Create a free [genezio](https://genez.io/) account
+* Install {{< external-link link="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm" >}}npm{{< /external-link >}}
+
+* Have an IDE installed, I personally recommend {{< external-link link="https://code.visualstudio.com/download" >}}Visual Studio Code{{< /external-link >}}
+
+* Create a free account on {{< external-link link="https://openai.com/" >}}OpenAI{{< /external-link >}}
+
+* Create a free {{< external-link link="https://genez.io/" >}}genezio{{< /external-link >}}
+ account
 
 
 ## Introduction
@@ -92,13 +96,16 @@ The first problem I had was when I tried using my older OpenAI account. I signed
 
 As of January 2023 - the date of writing this article -, the paywall for OpenAI had a call limitation of 20 calls per minute or 150,000 tokens per minute. For those of you who don’t know what a token is, it is defined as a relevant word that needs to be analysed by the engine.
 
-Keep in mind that additional charges may be made if exceeding these limits. Make sure you read the relevant articles published on their [website](https://help.openai.com/en/articles/5955598-is-api-usage-subject-to-any-rate-limits).
+Keep in mind that additional charges may be made if exceeding these limits. Make sure you read the relevant articles published on their {{< external-link link="https://help.openai.com/en/articles/5955598-is-api-usage-subject-to-any-rate-limits" >}}website{{< /external-link >}}
+.
 
 The free tier may be slower than the paid one, and can also offer lower quality of service. It is important to carefully consider the trade-offs between the free and paid options and choose the one that best fits your needs.
 
-Now, let’s get back to our Reprashing App and dive into the detailed step-by-step tutorial!  You can find the complete project on [Github](https://github.com/Genez-io/genezio-examples/tree/master/javascript/chatgpt-project)
+Now, let’s get back to our Reprashing App and dive into the detailed step-by-step tutorial!  You can find the complete project on {{< external-link link="https://github.com/Genez-io/genezio-examples/tree/master/javascript/chatgpt-project" >}}Github{{< /external-link >}}
 
-Let me know if you need help by contacting me on [Discord](https://discord.gg/XmpKD9ytxS) or write me an email at contact@genez.io.
+
+Let me know if you need help by contacting me on {{< external-link link="https://discord.gg/XmpKD9ytxS" >}}Discord{{< /external-link >}}
+ or write me an email at contact@genez.io.
 
  
 
@@ -112,13 +119,15 @@ Let me know if you need help by contacting me on [Discord](https://discord.gg/Xm
 
 
 
-1. Go to the OpenAI website at[ https://beta.openai.com/signup/](https://beta.openai.com/signup/)
+1. Go to the OpenAI website at{{< external-link link="https://beta.openai.com/signup/" >}} beta.openai.com/signup/{{< /external-link >}}
+
 2. Use one of the methods provided to create your account.
 
 ![Street Art Image](/posts/create-account.webp)
 
 
-3. Go to[ https://beta.openai.com/account/api-keys](https://beta.openai.com/account/api-keys) 
+3. Go to{{< external-link link="https://beta.openai.com/account/api-keys" >}} beta.openai.com/account/api-keys{{< /external-link >}}
+ 
 4. Click on the "Create new secret key" button.
 
 ![Street Art Image](/posts/api-keys.webp)
@@ -329,7 +338,8 @@ Also,  `prompt: "rephrase this:" + requestText` tells ChatGPT to rephrase the `r
 
 Finally, the method logs the request and the response, and then returns the response.
 
-For complete OpenAI API Documentation, you can go to this website: [ https://beta.openai.com/docs/api-reference/completions](https://beta.openai.com/docs/api-reference/completions)
+For complete OpenAI API Documentation, you can go to this website: {{< external-link link="https://beta.openai.com/docs/api-reference/completions" >}} beta.openai.com/docs/api-reference/completions{{< /external-link >}}
+
 
 
 ### **The Client-side React Project**
@@ -599,7 +609,8 @@ export default App;
 
 Note: We are providing you with a complete CSS for this interface for `src/App.css`.
 
-This is it! You can find the complete project on our [Github](https://github.com/Genez-io/genezio-examples/tree/master/javascript/chatgpt-project)
+This is it! You can find the complete project on our {{< external-link link="https://github.com/Genez-io/genezio-examples/tree/master/javascript/chatgpt-project" >}}Github{{< /external-link >}}
+
 
 I hope that you found this tutorial informative and helpful, and I encourage you to check out our other articles for more tips and tricks on mastering your craft.
 

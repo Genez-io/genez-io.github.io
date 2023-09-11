@@ -45,7 +45,8 @@ This is a tutorial on how to build a movie recommendation system using the OpenA
 
 We are developing an application that generates a list of movies with summarized reviews. We aim to provide a seamless user experience by allowing the user to input their preferences and receive movie suggestions.
 
-A complete demo app can be accessed at [https://movie-guru.app.genez.io](https://movie-guru.app.genez.io/).
+A complete demo app can be accessed at {{< external-link link="https://movie-guru.app.genez.io/" >}}movie-guru.app.genez.io{{< /external-link >}}
+.
 
 <!-- TODO: -->
 
@@ -70,25 +71,36 @@ By the end of this tutorial you will be able to:
 
 ## Tech Stack
 
-- OpenAI API allows developers to integrate state-of-the-art natural language processing capabilities into their software. By leveraging the OpenAI API, developers can enable functionalities like language translation, sentiment analysis, chatbots, and text generation, enhancing the overall user experience for intelligent and interactive applications. Check out their full documentation here: [https://platform.openai.com/docs/introduction](https://platform.openai.com/docs/introduction)
-- TMDB (The Movie Database) - A Movie API that we use to get movie reviews. Here is their official documentation: [https://developer.themoviedb.org/reference/intro/getting-started](https://developer.themoviedb.org/reference/intro/getting-started)
-- React.js is a popular JavaScript library that forms a key component in many modern tech stacks. With its component-based architecture and efficient virtual DOM rendering, React.js enables developers to build dynamic and interactive user interfaces for web applications. You can learn more by looking at their documentation: [https://legacy.reactjs.org/docs/getting-started.html](https://legacy.reactjs.org/docs/getting-started.html)
-- Genezio is a platform that simplifies the process of developing serverless applications. With genezio, you can effortlessly create and host applications by writing clean and organized code in your preferred programming language (JS, TS and Dart) for both the frontend and backend. It offers typesafe APIs, auto generated class interfaces, and the ability to directly call functions in your code, streamlining your development workflow and saving you time. Take a look at the documentation: [https://docs.genez.io/genezio-documentation/](https://docs.genez.io/genezio-documentation/)
+- OpenAI API allows developers to integrate state-of-the-art natural language processing capabilities into their software. By leveraging the OpenAI API, developers can enable functionalities like language translation, sentiment analysis, chatbots, and text generation, enhancing the overall user experience for intelligent and interactive applications. Check out their full documentation here: {{< external-link link="https://platform.openai.com/docs/introduction" >}}platform.openai.com/docs/introduction{{< /external-link >}}
+
+- TMDB (The Movie Database) - A Movie API that we use to get movie reviews. Here is their official documentation: {{< external-link link="https://developer.themoviedb.org/reference/intro/getting-started" >}}developer.themoviedb.org/reference/intro/getting-started{{< /external-link >}}
+
+- React.js is a popular JavaScript library that forms a key component in many modern tech stacks. With its component-based architecture and efficient virtual DOM rendering, React.js enables developers to build dynamic and interactive user interfaces for web applications. You can learn more by looking at their documentation: {{< external-link link="https://legacy.reactjs.org/docs/getting-started.html" >}}legacy.reactjs.org/docs/getting-started.html{{< /external-link >}}
+
+- Genezio is a platform that simplifies the process of developing serverless applications. With genezio, you can effortlessly create and host applications by writing clean and organized code in your preferred programming language (JS, TS and Dart) for both the frontend and backend. It offers typesafe APIs, auto generated class interfaces, and the ability to directly call functions in your code, streamlining your development workflow and saving you time. Take a look at the documentation: {{< external-link link="https://docs.genez.io/genezio-documentation/" >}}docs.genez.io/genezio-documentation/{{< /external-link >}}
+
 
 ## Technical Tutorial
 
 ### Configuration & Prerequisites
 
-- Install `node` and `npm` [https://nodejs.org/en/download](https://nodejs.org/en/download)
+- Install `node` and `npm` {{< external-link link="https://nodejs.org/en/download" >}}nodejs.org/en/download{{< /external-link >}}
+
 - Install genezio: `npm install genezio -g`
-- Get the API Key from [OpenAI](https://openai.com/):
-- Go to [https://openai.com/](https://openai.com/) and click on `Sign Up`
-- After you log in go to: [https://platform.openai.com/account/api-keys](https://platform.openai.com/account/api-keys)
+- Get the API Key from {{< external-link link="https://openai.com/" >}}OpenAI{{< /external-link >}}
+:
+- Go to {{< external-link link="https://openai.com/" >}}openai.com{{< /external-link >}}
+ and click on `Sign Up`
+- After you log in go to: {{< external-link link="https://platform.openai.com/account/api-keys" >}}platform.openai.com/account/api-keys{{< /external-link >}}
+
 - Click `Create new secret key` and give it a name
 - Save the generated secret key somewhere safe, we will need it later on
-- Get API Key for [The Movie Database](https://www.themoviedb.org/)
-- Go to [https://www.themoviedb.org/signup](https://www.themoviedb.org/signup) and create an account
-- After you log in go to [https://www.themoviedb.org/settings/api/new?type=developer](https://www.themoviedb.org/settings/api/new?type=developer) and fill in the form
+- Get API Key for {{< external-link link="https://www.themoviedb.org/" >}}The Movie Database{{< /external-link >}}
+
+- Go to {{< external-link link="https://www.themoviedb.org/signup" >}}themoviedb.org/signup{{< /external-link >}}
+ and create an account
+- After you log in go to {{< external-link link="https://www.themoviedb.org/settings/api/new?type=developer" >}}themoviedb.org/settings/api/new?type=developer{{< /external-link >}}
+ and fill in the form
 - Get the JWT from `API Read Access Token` and store it somewhere safe, we will need it later on
 
 ### Clone the Template
@@ -96,7 +108,7 @@ By the end of this tutorial you will be able to:
 Clone the following repo:
 
 ```
-git clone https://github.com/Genez-io/techsylvania_workshop
+git clone https://github.com/Genez-io/techsylvania_workshop 
 ```
 
 This repository contains 2 folders. I recommend you to open it with an IDE:
@@ -112,11 +124,13 @@ You have TODOs on each part of the code where you have to work on.
 - Install the required dependencies: `npm install`
 - Create a file named `.env` and add `OPENAI_SECRET_KEY=&lt;your_openai_secret_key>` and `TMDB_API_KEY=&lt;your_key>`
 - Run genezio local test environment: `genezio local`
-- Go to [https://app.genez.io/test-interface/local?port=8083](https://app.genez.io/test-interface/local?port=8083) to test your backend. Keep in mind that it will not work on Safari
+- Go to {{< external-link link="https://app.genez.io/test-interface/local?port=8083" >}}app.genez.io/test-interface/local?port=8083{{< /external-link >}}
+ to test your backend. Keep in mind that it will not work on Safari
 
 ### Get Movies Recommendation by User Input
 
-It is almost impossible to create a perfect prompt from the first try. It is an iterative process. A useful tool to iteratively test your prompt is the [OpenAI Playground](https://platform.openai.com/playground).
+It is almost impossible to create a perfect prompt from the first try. It is an iterative process. A useful tool to iteratively test your prompt is the {{< external-link link="https://platform.openai.com/playground" >}}OpenAI Playground{{< /external-link >}}
+.
 
 First, let’s think about what we want to achieve with this prompt:
 
@@ -213,7 +227,8 @@ The `createChatCompletion` method takes a configuration object as parameter that
 - message object
   - `role` - this represents the author of this message. It can be: `system`, `assistant` or `user`. This is useful when you have to send the entire conversation to OpenAI as context when a new message is received
   - `content` - the content of the message
-- `max_tokens` - maximum number of tokens in the output. You can control how long or short the message should be. To get a correlation between the number of words and the number of tokens refer to [this tool](https://platform.openai.com/tokenizer).
+- `max_tokens` - maximum number of tokens in the output. You can control how long or short the message should be. To get a correlation between the number of words and the number of tokens refer to {{< external-link link="https://platform.openai.com/tokenizer" >}}this tool{{< /external-link >}}
+.
 
 Now we have to check the output of OpenAI, parse the output and return it. We have to properly validate the output since the API response is not deterministic and it can return, for example, wrongly formatted output.
 
@@ -287,7 +302,7 @@ Now we have the backend complete and it’s time to test the frontend applicatio
 - Open a terminal and navigate to the server directory: `cd ./../client`
 - Install the required dependencies: `npm install`
 - Start the frontend application: `npm start`
-- Go to http://localhost:3000 to try your app
+- Go to {{< external-link link="http://localhost:3000" >}}localhost:3000{{< /external-link >}} to try your app
 
 ### Deploy Your App
 
@@ -308,4 +323,5 @@ Get ready to take your AI interactions to new heights!
 
 ## What’s Next?
 
-We at genezio aim to offer our users the best experience possible while having access to excellent time and money saving services. Stay tuned and join our [Discord community](https://discord.gg/uc9H5YKjXv) to be the first to hear about new tutorials and features.
+We at genezio aim to offer our users the best experience possible while having access to excellent time and money saving services. Stay tuned and join our {{< external-link link="https://discord.gg/uc9H5YKjXv" >}}Discord community{{< /external-link >}}
+ to be the first to hear about new tutorials and features.

@@ -47,9 +47,11 @@ After following through with this tutorial, you’ll be able to brag to your fri
 4. Use React to develop a minimalist frontend
 5. Deploy a full stack application on genezio
 
-You can find the complete project on [Github](https://github.com/Genez-io/genezio-examples/tree/master/javascript/blockchain). Check it out to get a feeling of how the project should look like when is complete.
+You can find the complete project on {{< external-link link="https://github.com/Genez-io/genezio-examples/tree/master/javascript/blockchain" >}}Github{{< /external-link >}}
+. Check it out to get a feeling of how the project should look like when is complete.
 
-If you get stuck along the way or you have any questions, don’t hesitate to contact me on [Discord](https://discord.gg/XmpKD9ytxS) or write me an email at andreia@genez.io. I am more than happy to help 😄
+If you get stuck along the way or you have any questions, don’t hesitate to contact me on {{< external-link link="https://discord.gg/XmpKD9ytxS" >}}Discord{{< /external-link >}}
+ or write me an email at andreia@genez.io. I am more than happy to help 😄
 
 
 ## **Contents**
@@ -109,22 +111,30 @@ This step is going to introduce you to quite a few new tools for interacting wit
 
 
 
-1. Install [node](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) and [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
+1. Install {{< external-link link="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm" >}}node{{< /external-link >}}
+ and {{< external-link link="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm" >}}npm{{< /external-link >}}
+
 2. Create a Mongo Database
-3. Create a wallet with [Metamask](https://metamask.io/)
-4. Get access to an Ethereum endpoint using [Blast API](https://blastapi.io/)
-5. Create a free account with [genezio](https://genez.io/)
-6. Get a smart contract address from [Etherscan](https://etherscan.io/)
+3. Create a wallet with {{< external-link link="https://metamask.io/" >}}Metamask{{< /external-link >}}
+
+4. Get access to an Ethereum endpoint using {{< external-link link="https://blastapi.io/" >}}Blast API{{< /external-link >}}
+
+5. Create a free account with {{< external-link link="https://genez.io/" >}}genezio{{< /external-link >}}
+
+6. Get a smart contract address from {{< external-link link="https://etherscan.io/" >}}Etherscan{{< /external-link >}}
+
 
 
 #### **Instal node and npm**
 
-This is the easiest step. Head over to the [documentation page](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) to install `node` and `npm` on your machine.
+This is the easiest step. Head over to the {{< external-link link="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm" >}}documentation page{{< /external-link >}}
+ to install `node` and `npm` on your machine.
 
 
 #### **Create a Mongo Database**
 
-Go to the [MongoDB Cloud on Atlas](https://www.mongodb.com/cloud/atlas/register) and create a free account. Once logged in you can create a free demo database. Click on “Create” and follow the steps that are popping up.
+Go to the {{< external-link link="https://www.mongodb.com/cloud/atlas/register" >}}MongoDB Cloud on Atlas{{< /external-link >}}
+ and create a free account. Once logged in you can create a free demo database. Click on “Create” and follow the steps that are popping up.
 
 When you have the database up and running, you can get a URI to connect through it from your application. Click on _“Connect”_:
 
@@ -140,9 +150,11 @@ There you can find the Mongo DB URI. Replace `<admin>`:`<password>` with the adm
 
 #### **Create a wallet with Metamask**
 
-[Metamask](https://metamask.io/) is a browser extension that will allow your browser to access the Ethereum blockchain. More than that, Metamask will also allow you to manage your ETH transactions.
+{{< external-link link="https://metamask.io/" >}}Metamask{{< /external-link >}}
+ is a browser extension that will allow your browser to access the Ethereum blockchain. More than that, Metamask will also allow you to manage your ETH transactions.
 
-To install Metamask, go to the plugin store of your browser and search for it. If you are a Google Chrome user, you can follow this [link](https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn). After adding the Metamask extension follow their quick walkthrough to create a wallet.
+To install Metamask, go to the plugin store of your browser and search for it. If you are a Google Chrome user, you can follow this {{< external-link link="https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn" >}}link{{< /external-link >}}
+. After adding the Metamask extension follow their quick walkthrough to create a wallet.
 
 Note to yourself - Remember the password you set because it will be useful in the next steps.
 
@@ -159,7 +171,8 @@ A blockchain is very similar to a public network of machines. In order to connec
 
 To interact with a given blockchain, you can either host and add your node to the blockchain or access an existing node. In this tutorial, we are going to use Blast API to get an endpoint to an existing node from the Ethereum Mainnet.
 
-Head over to the [Blast API webpage](https://blastapi.io/) and click on _“Get Endpoint”_ - this will allow you to interact with the blockchain using an existing node.
+Head over to the {{< external-link link="https://blastapi.io/" >}}Blast API webpage{{< /external-link >}}
+ and click on _“Get Endpoint”_ - this will allow you to interact with the blockchain using an existing node.
 
 ![Street Art Image](/posts/screenshot_2.webp)
 
@@ -190,18 +203,21 @@ To be able to interact with the node in your application, click on the_ “Activ
 
 To brag about your first Web3 app to your friends, you’ll need to host it somewhere on the cloud where they can easily access it and play around with it. For this, you can use genezio - a platform that is deploying you backend code on AWS Lambda and hosting your frontend.
 
-Head to the [genezio login page](https://app.genez.io/auth/login) and create a free account by following the sign-up steps.
+Head to the {{< external-link link="https://app.genez.io/auth/login" >}}genezio login page{{< /external-link >}}
+ and create a free account by following the sign-up steps.
 
 
 #### **Get a smart contract address and ABI (Application Binary Interface)**
 
-Head to [OpenSea](https://opensea.io/) and choose the cutest NFT collection from trending.
+Head to {{< external-link link="https://opensea.io/" >}}OpenSea{{< /external-link >}}
+ and choose the cutest NFT collection from trending.
 
 Open the collection and select “View on EtherScan”. 
 
 ![Street Art Image](/posts/ss_8.webp)
 
-[EtherScan](https://etherscan.io/) is an analytics platform for smart contracts deployed on the Ethereum blockchain. Here you can see all of the events managed by this smart contract under the “Events” tab.
+{{< external-link link="https://etherscan.io/" >}}EtherScan{{< /external-link >}}
+ is an analytics platform for smart contracts deployed on the Ethereum blockchain. Here you can see all of the events managed by this smart contract under the “Events” tab.
 
 ![Street Art Image](/posts/ss_9.webp)
 
@@ -746,7 +762,8 @@ Test your code at https://app.genez.io/test-interface/local?port=8083
 
 Server listening on port 8083
 ```
-Right now the server side of your project is listening to port 8083. You can head to [https://app.genez.io/test-interface/local?port=8083](https://app.genez.io/test-interface/local?port=8083) to interact with it from the GUI.
+Right now the server side of your project is listening to port 8083. You can head to {{< external-link link="https://app.genez.io/test-interface/local?port=8083" >}}app.genez.io/test-interface/local?port=8083{{< /external-link >}}
+ to interact with it from the GUI.
 
 You can also test the client side of your project. Do not stop the `genezio local` process. Open up a new terminal and head over to the `client` directory. There you can execute the following commands:
 ```

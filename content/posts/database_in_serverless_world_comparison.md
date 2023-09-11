@@ -61,7 +61,8 @@ I wanted to see how these databases worked in a FaaS setup. My goal? To answer t
 
 For each database, I did two tests: one simulating a 'cold start' scenario with an AWS Lambda function, and another where the AWS Lambda function was already 'warm’. This was important even for databases utilizing an HTTPS API, as they might still experience a 'cold start' during the first request. Before the query bytes are transmitted over the network, multiple steps need to occur including DNS lookup, TCP connection establishment, and TLS handshake. Because of multiple cache layers for these operations, later requests might be quicker.
 
-I used [genezio](https://genez.io/) to execute these tests. I’ve used the self hosted feature of genezio which allows me to deploy the backend on AWS Lambdas belonging to my own AWS account. To understand more about what genezio does, you can read more [here](https://github.com/vladiulianbogdan/database-benchmarking). I designed a separate class for each database experiment. You can find the code [here](https://github.com/Genez-io/database-benchmarking).
+I used {{< external-link link="https://genez.io/">}}genezio{{< /external-link >}} that opens in a new tab.
+ to execute these tests. I’ve used the self hosted feature of genezio which allows me to deploy the backend on AWS Lambdas belonging to my own AWS account. To understand more about what genezio does, you can read more {{< external-link link="https://github.com/vladiulianbogdan/database-benchmarking">}}here{{< /external-link >}}. I designed a separate class for each database experiment. You can find the code {{< external-link link="https://github.com/Genez-io/database-benchmarking">}}here{{< /external-link >}}.
 
 The database structure is the same for all databases: I have a \`Task\` table (or collection) and I insert 10000 entries. The query that I perform doesn’t use any filtering and retrieves 10 tasks.
 
@@ -91,7 +92,7 @@ Furthermore, I conducted the same set of experiments with the genezio applicatio
 
 ###### Figure 2: Results of the experiment with 300 requests every 100 ms for all databases when the app is hosted in a different region than the database.
 
-We can see that the performance is, of course, worse. This is because our application is further away from the database servers. Notably, the cold start response time for the **MongoDB** instance becomes way worse. This is probably because MongoDB exchanges many messages during the connection establishment and the increased latency adds up resulting in such a painful cold start. For more information check [this](https://github.com/mongodb/specifications/blob/master/source/auth/auth.rst#authentication-handshake) out!
+We can see that the performance is, of course, worse. This is because our application is further away from the database servers. Notably, the cold start response time for the **MongoDB** instance becomes way worse. This is probably because MongoDB exchanges many messages during the connection establishment and the increased latency adds up resulting in such a painful cold start. For more information check {{< external-link link="https://github.com/mongodb/specifications/blob/master/source/auth/auth.rst#authentication-handshake">}}this{{< /external-link >}} out!
 
 It’s now time to remove the 100 ms interval between requests and be as harsh as possible with our databases to see under which conditions the performance starts to decrease.
 
@@ -183,4 +184,6 @@ I’ve conducted the experiments and got some interesting results that I hope yo
 - **MongoDB Data API** and **DynamoDB** are good options if you don’t want to have any problems with up scaling and you want consistent and decent query response times.
 - For the use cases that I’ve tried, **DynamoDB** is the fastest and handles spikes in traffic very well.
 
-I plan to include more databases in the experiments and I will come with follow-ups to this article. The code used for this experiment can be found [here](https://github.com/vladiulianbogdan/database-benchmarking). I am looking forward to hearing what you think. You can contact me at any time at [bogdan@genez.io](mailto:bogdan@genez.io) with any questions, issues or ideas.
+I plan to include more databases in the experiments and I will come with follow-ups to this article. The code used for this experiment can be found {{< external-link link="https://github.com/vladiulianbogdan/database-benchmarking" >}}here{{< /external-link >}}
+. I am looking forward to hearing what you think. You can contact me at any time at {{< external-link link="mailto:bogdan@genez.io" >}}bogdan@genez.io{{< /external-link >}}
+ with any questions, issues or ideas.

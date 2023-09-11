@@ -44,11 +44,13 @@ Genezio is a serverless solution for seamlessly building full-stack web and mobi
 
 Only a small part of genezio’s functionality is discussed in this article.
 
-For complete developer documentation, please go to our [Official Documentation.](https://docs.genez.io)
+For complete developer documentation, please go to our {{< external-link link="https://docs.genez.io" >}}Official Documentation.{{< /external-link >}}
+
 
 ### Support
 
-We invite you to join our community on [Discord](https://discord.gg/uc9H5YKjXv) for further information and help.
+We invite you to join our community on {{< external-link link="https://discord.gg/uc9H5YKjXv" >}}Discord{{< /external-link >}}
+ for further information and help.
 
 ## Let’s Get Started
 
@@ -129,6 +131,9 @@ Congratulations, you’ve now finished your first genezio application!
 
 ### Useful Links
 
-- [Genezio Documentation](https://docs.genez.io/genezio-documentation/)
-- [Genezio Examples](https://github.com/genez-io/genezio-examples)
-- [Join Discord Community](https://discord.com/invite/uc9H5YKjXv)
+- {{< external-link link="https://docs.genez.io/genezio-documentation/" >}}Genezio Documentation{{< /external-link >}}
+
+- {{< external-link link="https://github.com/genez-io/genezio-examples" >}}Genezio Examples{{< /external-link >}}
+
+- {{< external-link link="https://discord.com/invite/uc9H5YKjXv" >}}Join Discord Community{{< /external-link >}}
+

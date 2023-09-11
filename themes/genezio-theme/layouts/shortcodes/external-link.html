@@ -1,0 +1,10 @@
+{{ $linkText := .Inner | markdownify }}
+{{ $linkURL := .Get "link" }}
+
+{{ if eq $linkText $linkURL }}
+<a href="{{ $linkURL }}" target="_blank">{{ $linkURL }}</a>
+{{ else }}
+<a href="{{ $linkURL }}" target="_blank">{{ $linkText }}</a>
+{{ end }}
+
+

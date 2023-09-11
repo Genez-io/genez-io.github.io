@@ -48,9 +48,11 @@ I’m excited to work with such a productive team! Since our last release, we’
 * Stop worrying about complicated setup or technical configurations! You can now set your own **custom domain** for your web application. Establish your online presence with a domain that reflects your brand and personal identity.
 * We’ve worked hard towards offering you a **smoother experience** when it comes to using TypeScript, Dart, or Python. Improvements and bug fixes were made in this release.
 * Debugging is now easier! You can now see your **live logs** directly on our Test Interface.
-* **New examples** on how to use genezio are now available on [GitHub](https://github.com/genez-io/genezio-examples).  
+* **New examples** on how to use genezio are now available on {{< external-link link="https://github.com/genez-io/genezio-examples" >}}GitHub{{< /external-link >}}
+.  
 
 
 ## What’s next?
 
-We at genezio aim to offer our users the best experience possible while having access to excellent time and money saving services. Stay tuned and join our [Discord community](https://discord.gg/uc9H5YKjXv) to be the first to hear about new features.
+We at genezio aim to offer our users the best experience possible while having access to excellent time and money saving services. Stay tuned and join our {{< external-link link="https://discord.gg/uc9H5YKjXv" >}}Discord community{{< /external-link >}}
+ to be the first to hear about new features.
