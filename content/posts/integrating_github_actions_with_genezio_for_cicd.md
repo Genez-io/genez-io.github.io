@@ -41,26 +41,26 @@ Navigate to your repository on GitHub, and click on the Actions tab. Start a new
 For our purpose, we’ll be creating a simple workflow that triggers on every push to the \`main\` branch.
 
 ```yaml
-    name: genezio-workflow
-    on:
-     push:
-       branches:
-         - main
+name: genezio-workflow
+on:
+  push:
+    branches:
+      - main
 
-    jobs:
-      deploy-backend:
-       runs-on: ubuntu-latest
-       steps:
-         - uses: actions/checkout@v3
-         - uses: actions/setup-node@v3
-           with:
-             node-version: 16
-         - uses: Genez-io/genezio-github-action@main
-           with:
-             token: ${{ secrets.GENEZIO_TOKEN }}
-         - name: Deploy backend
-           working-directory: ./server
-           run: genezio deploy —stage prod
+jobs:
+  deploy-backend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - uses: Genez-io/genezio-github-action@main
+        with:
+          token: ${{ secrets.GENEZIO_TOKEN }}
+      - name: Deploy backend
+        working-directory: ./server
+        run: genezio deploy —stage prod
 ```
 
 #### 3. Store genezio Token securely:
@@ -73,11 +73,11 @@ Go to your GitHub repository.
 
 Click on Settings > Secrets.
 
-Click New repository secret and name it \`GENEZIO_TOKEN\`.
+Click New repository secret and name it `GENEZIO_TOKEN`.
 
 Enter your Genezio API key as the value.
 
-By referring to it as ${{ secrets.GENEZIO\_TOKEN }} in your workflow file, GitHub Actions can securely use it without exposing it in logs or to unauthorized users.
+By referring to it as `${{ secrets.GENEZIO\_TOKEN }}` in your workflow file, GitHub Actions can securely use it without exposing it in logs or to unauthorized users.
 
 #### 4. Push your changes
 
