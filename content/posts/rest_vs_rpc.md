@@ -24,9 +24,12 @@ Prerequisites for the tutorial:
 
 
 
-* Install [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
-* Have an IDE or text editor installed, e.g. [Visual Studio Code](https://code.visualstudio.com/download)
-* Create a free [genezio](https://genez.io/) account
+* Install {{< external-link link="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm" >}}npm{{< /external-link >}}
+
+* Have an IDE or text editor installed, e.g. {{< external-link link="https://code.visualstudio.com/download" >}}Visual Studio Code{{< /external-link >}}
+
+* Create a free {{< external-link link="https://genez.io/" >}}genezio{{< /external-link >}}
+ account
 
 
 ## Summary
@@ -107,7 +110,8 @@ Despite the rapid, widespread adoption of REST, RPC withstood the test of time. 
 
 JSON-RPC encodes the calls in the JSON format, which allows data to be transmitted efficiently and easily between clients and servers. Ethereum employs JSON-RPC as its primary communication interface to interact with the Ethereum network due to its specific characteristics that align well with the platform's requirements. Its stateless nature allows Ethereum to maintain consistency across multiple nodes, crucial for decentralized systems. This choice is also advantageous due to JSON-RPC's lightweight nature, human-readable format, and language-agnostic design, which facilitate efficient and seamless interaction with Ethereum nodes. Consequently, developers can effortlessly create decentralized applications (dApps), manage transactions, and query blockchain data, fostering a robust and accessible ecosystem for Ethereum-based projects.
 
-gRPC was developed by Google and is based on the open-source protocol buffers data serialization format. It uses HTTP/2 for transport and provides features such as bi-directional streaming, flow control, and error handling. This makes gRPC faster and more efficient than traditional RPC systems, as it reduces the overhead of network requests and responses. However, integration of gRPC may not be seamless, as some browsers do not expose a HTTP/2-compliant API. One way to overcome this is by using [gRPC-web](https://github.com/grpc/grpc-web).
+gRPC was developed by Google and is based on the open-source protocol buffers data serialization format. It uses HTTP/2 for transport and provides features such as bi-directional streaming, flow control, and error handling. This makes gRPC faster and more efficient than traditional RPC systems, as it reduces the overhead of network requests and responses. However, integration of gRPC may not be seamless, as some browsers do not expose a HTTP/2-compliant API. One way to overcome this is by using {{< external-link link="https://github.com/grpc/grpc-web" >}}gRPC-web{{< /external-link >}}
+.
 
 A major benefit of gRPC is its support for service discovery and load balancing. This allows applications to dynamically discover and connect to available services, and distribute traffic across multiple instances of a service, improving reliability and scalability. In addition to gRPC, other modern RPC frameworks such as Apache Thrift, Finagle, and RSocket have also gained popularity in recent years, each with their own unique features and benefits.
 
@@ -186,7 +190,8 @@ export class MusicPlayerService {
 
 
 4. Use the command ``genezio addClass hello.js`` to add the class to the bundle. Execute ``genezio local`` to test it locally or ``genezio deploy –backend`` to deploy it on the genezio infrastructure.
-5. Excellent! You can now test this RPC interface using the URLs returned by the deploy command used and the SDK and/or with our test interface that you can find on the [dashboard](https://app.genez.io/dashboard).
+5. Excellent! You can now test this RPC interface using the URLs returned by the deploy command used and the SDK and/or with our test interface that you can find on the {{< external-link link="https://app.genez.io/dashboard" >}}dashboard{{< /external-link >}}
+.
 
 
 ### Using genezio to create a RESTful web service for the playlist functionality
@@ -250,6 +255,9 @@ export class RestPlaylist {
 
 
 2. Great! Now, we need to add this class to our genezio bundle, and deploy it. Run `genezio addClass index.js http` to add this class to the bundle. Run `genezio local` to deploy it locally, or `genezio deploy` to deploy it on the genezio infrastructure.
-3. Congrats! You can now test this RESTful interface using the URLs returned by the deploy command used and the SDK and/or with our test interface that you can find on the [dashboard](https://app.genez.io/dashboard).
+3. Congrats! You can now test this RESTful interface using the URLs returned by the deploy command used and the SDK and/or with our test interface that you can find on the {{< external-link link="https://app.genez.io/dashboard" >}}dashboard{{< /external-link >}}
+.
 
-You can check out the code for this application [here](https://github.com/MagoDelBlocco/genezio-music-app/tree/master). For a more complex application that uses a REST interface, you can check out our [Webhook example](https://github.com/Genez-io/genezio-examples/tree/master/javascript/webhook).
+You can check out the code for this application {{< external-link link="https://github.com/MagoDelBlocco/genezio-music-app/tree/master" >}}here{{< /external-link >}}
+. For a more complex application that uses a REST interface, you can check out our {{< external-link link="https://github.com/Genez-io/genezio-examples/tree/master/javascript/webhook" >}}Webhook example{{< /external-link >}}
+.

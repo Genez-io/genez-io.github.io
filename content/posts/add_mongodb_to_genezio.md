@@ -16,7 +16,8 @@ meta_og_image: "https://genez.io/images/genezio_mongodb.webp"
 # meta data end
 ---
 
-In this tutorial, I will show you the steps of integrating a Mongo database into your genezio [Getting Started project](https://github.com/Genez-io/genezio-examples/tree/master/typescript/getting-started).
+In this tutorial, I will show you the steps of integrating a Mongo database into your genezio {{< external-link link="https://github.com/Genez-io/genezio-examples/tree/master/typescript/getting-started" >}}Getting Started project{{< /external-link >}}
+.
 
 Following this tutorial, you will be able to:
 
@@ -24,7 +25,8 @@ Following this tutorial, you will be able to:
 - Connect to the MongoDB cluster using a MongoDB client
 - Integrate the Mongo database into your project using `mongoose`
 
-Any time you get stuck or have questions, please contact me on [Discord](https://discord.gg/XmpKD9ytxS) or write me an email at radu@genez.io. I am more than happy to help you 😄
+Any time you get stuck or have questions, please contact me on {{< external-link link="https://discord.gg/XmpKD9ytxS" >}}Discord{{< /external-link >}}
+ or write me an email at radu@genez.io. I am more than happy to help you 😄
 
 ## **Contents**
 
@@ -47,7 +49,8 @@ Any time you get stuck or have questions, please contact me on [Discord](https:/
 
 - Have `npm` installed on your machine
 - Have `mongoose` installed on your machine
-- Create a free genezio account [here](https://genez.io)
+- Create a free genezio account {{< external-link link="https://genez.io" >}}here{{< /external-link >}}
+
 - Have `genezio` installed on your machine - you can install it with `npm install genezio -g`
 
 ## **Introduction**
@@ -60,7 +63,8 @@ As a cloud database service, MongoDB Atlas offers seamless scalability, high ava
 
 ### **Create a MongoDB Atlas account**
 
-Go to [MongoDB Cloud Atlas](https://www.mongodb.com/cloud/atlas/register) and create an account. Personally, I recommend creating an account using Google Sign up.
+Go to {{< external-link link="https://www.mongodb.com/cloud/atlas/register" >}}MongoDB Cloud Atlas{{< /external-link >}}
+ and create an account. Personally, I recommend creating an account using Google Sign up.
 
 ### **Create a free cluster**
 
@@ -97,7 +101,8 @@ A pop-up with the MongoDB connection string will appear. Replace `<password>` wi
 
 ### **Integrate your newly created cluster into the project**
 
-Now you can go to your [Getting Started project](https://github.com/Genez-io/genezio-examples/tree/master/typescript/getting-started) and open an IDE of your choice. I recommend VS Code.
+Now you can go to your {{< external-link link="https://github.com/Genez-io/genezio-examples/tree/master/typescript/getting-started" >}}Getting Started project{{< /external-link >}}
+ and open an IDE of your choice. I recommend VS Code.
 
 In the ‘server’ folder, create a `.env` file and add a line with the `MONGO_DB_URI=<your_connection_string>` value. You can then use it all over your code using `process.env.MONGO_DB_URI`.
 
@@ -134,7 +139,8 @@ After that, you can use all the functions provided by mongoose all over the func
 
 ### **Check your DB with MongoDB Compass**
 
-MongoDB Compass is one of the most powerful database clients for MongoDB. You can download it from [here](https://www.mongodb.com/try/download/compass).
+MongoDB Compass is one of the most powerful database clients for MongoDB. You can download it from {{< external-link link="https://www.mongodb.com/try/download/compass" >}}here{{< /external-link >}}
+.
 
 I highly recommend using it for GUI queries to your database, and also for debugging your application.
 
@@ -158,6 +164,7 @@ This is the most conventional method of establishing a connection to a database,
 
 #### **Data API**
 
-[Mongo DB Atlas Data API](https://www.mongodb.com/docs/atlas/api/data-api/) offers a solution where you can directly access the database through an API, eliminating the requirement of establishing an initial connection and reducing serverless cold-start significantly.
+{{< external-link link="https://www.mongodb.com/docs/atlas/api/data-api/" >}}Mongo DB Atlas Data API{{< /external-link >}}
+ offers a solution where you can directly access the database through an API, eliminating the requirement of establishing an initial connection and reducing serverless cold-start significantly.
 
 &#x1F973; Congratulations on acquiring your own database that you can use to work on your projects!

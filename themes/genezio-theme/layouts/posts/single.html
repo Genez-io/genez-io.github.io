@@ -10,12 +10,12 @@
         {{ if .Params.tags }}
         <div class="post-tags">
           {{ range .Params.tags }}
-          <a class="post-tag" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+          <a class="post-tag" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" target="_blank">{{ . }}</a>
           {{ end }}
         </div>
         {{ end }}
         <h1>{{ .Title }}</h1>
-        <a class="post-author-name" href="{{ .Params.linkedIn }}">{{ .Params.author }}</a>
+        <a class="post-author-name" href="{{ .Params.linkedIn }}" target="_blank">{{ .Params.author }}</a>
         <div class="post-date pt-1">
         {{ $dateFormat := default "Jan 2, 2006" (index .Site.Params "date_format") }}
             {{ if not .Date.IsZero }}
