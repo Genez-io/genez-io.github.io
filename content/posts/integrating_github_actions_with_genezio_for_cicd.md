@@ -40,6 +40,7 @@ Navigate to your repository on GitHub, and click on the Actions tab. Start a new
 
 For our purpose, we’ll be creating a simple workflow that triggers on every push to the \`main\` branch.
 
+```yaml
     name: genezio-workflow
     on:
      push:
@@ -60,6 +61,7 @@ For our purpose, we’ll be creating a simple workflow that triggers on every pu
          - name: Deploy backend
            working-directory: ./server
            run: genezio deploy —stage prod
+```
 
 #### 3. Store genezio Token securely:
 
