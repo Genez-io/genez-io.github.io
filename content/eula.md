@@ -32,7 +32,7 @@ Conversion notes:
 
 End-User License Agreement ("Agreement")
 
-Last updated: January 10<sup>th</sup>, 2022
+Last updated: October 3<sup>rd</sup>, 2023
 
 Please read this End-User License Agreement carefully before signing into, downloading or using genezio.
 

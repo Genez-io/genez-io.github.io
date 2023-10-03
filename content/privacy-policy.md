@@ -218,4 +218,4 @@ Data protection officer: Andrada Damian
 
 We will attempt to resolve complaints and disputes and make every reasonable effort to honor your wish to exercise your rights as quickly as possible and in any event, within the timescales provided by applicable data protection laws.
 
-This document was last updated on December 1<sup>st</sup>, 2022
+This document was last updated on October 3<sup>rd</sup>, 2023
