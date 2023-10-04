@@ -32,7 +32,7 @@ Conversion notes:
 
 End-User License Agreement ("Agreement")
 
-Last updated: January 10<sup>th</sup>, 2022
+Last updated: October 3<sup>rd</sup>, 2023
 
 Please read this End-User License Agreement carefully before signing into, downloading or using genezio.
 
@@ -50,7 +50,7 @@ For the purposes of this End-User License Agreement:
 
 **Application** / **Tool** means the software program / tool / software development kit (SDK) provided by the Company downloaded by / used by You on a personal device and for personal use, named **genezio**, a tool which aims at providing a frame whereby the development, implementation and scaling of apps which use cloud data servers and management, in such a manner to contribute for their faster, more efficient development / performance, using less resources.
 
-**Company** (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to Simple Capital SRL, Bucharest.
+**Company** (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to Genezio SRL, Bucharest.
 
 **Content** refers to content such as text, images, or other information that can be posted, uploaded, linked to or otherwise made available by You, regardless of the form of that content.
 
