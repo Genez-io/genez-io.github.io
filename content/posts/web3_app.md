@@ -48,8 +48,7 @@ After following through with this tutorial, you’ll be able to:
 You can find the complete project on {{< external-link link="https://github.com/Genez-io/genezio-examples/tree/master/javascript/blockchain" >}}Github{{< /external-link >}}
 . Feel free to take a look at it to better understand how the complete project should look.
 
-If you get stuck along the way or you have any questions, don’t hesitate to contact me on {{< external-link link="https://discord.gg/XmpKD9ytxS" >}}Discord{{< /external-link >}}
- or write me an email at andreia@genez.io. I am more than happy to help 😄
+If you get stuck along the way or you have any questions, don’t hesitate to contact me on {{< external-link link="https://discord.gg/XmpKD9ytxS" >}}Discord{{< /external-link >}} or write me an email at andreia@genez.io. I am more than happy to help 😄
 
 ## **Contents**
 
@@ -92,11 +91,9 @@ Let’s install the dependencies needed for the smart contract indexer app.
 
 This step is going to introduce you to quite a few new tools for interacting with a blockchain. Don’t worry if you’ve never worked with them because I am going to walk you through every new concept.
 
-
 ### **Instal node and npm**
 
 This is the easiest step. Head over to their {{< external-link link="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm" >}}documentation page{{< /external-link >}} to install `node` and `npm` on your machine.
-
 
 ### **Install genezio**
 
@@ -107,21 +104,25 @@ Install genezio using npm:
 npm install genezio -g
 ```
 
+Start using genezio by running the following command in your terminal:
+```
+genezio login
+```
+
 ### **Set up the project**
 
-Fire up your preferred IDE and your terminal and let’s get our hands dirty with some coding. You will use genezio to make your life easier while building your app.
+You will use genezio to deploy your quickly and easy with just a single command.
 
 At the end of this tutorial, the folder hierarchy of your project should be similar to this:
 ```
 blockchain-project/
-├── server/
+├── server-blockchain-project/
 │   ├── genezio.yaml
-│   ├── models/
-│   │   └── event.js
+│   ├── event.js
 │   ├── blockchain.js
 │   ├── abi.js
 │   └── config.js
-└── client/
+└── client-blockchain-project/
     ├── src/
     │   ├── sdk/
     │   └── App.js
@@ -129,18 +130,12 @@ blockchain-project/
 ```
 This is just a small spoiler to understand where things are going to fit in.
 
-Start using genezio by log in in to your account:
-```
-genezio login
-```
-
 At any step, if you get stuck at any moment you can use `genezio help` or `genezio [command] help` to get more help with the tool.
-
 
 Create the folders hierarchy for the project:
 ```
-mkdir -p blockchain-project/server
-cd blockchain-project/server
+mkdir -p blockchain-project/
+cd blockchain-project/
 ```
 
 To set up a new genezio project, initialize your configuration:
@@ -148,16 +143,21 @@ To set up a new genezio project, initialize your configuration:
 genezio init
 ```
 
-`genezio init` will create a `genezio.yaml` file in the `server` directory that will contain the configuration for the project server.
+`genezio init` will create a `genezio.yaml` file in the `server-blockchain-project` directory that will contain the configuration for the project server.
 
 After completing the wizard, your terminal should look like this:
 ```
-What is the name of the project: blockchain-project
+What is the name of the project: server-blockchain-project
 What region do you want to deploy your project to? [default value: us-east-1]: us-east-1
 
 Your genezio project was successfully initialized!
 
 The genezio.yaml configuration file was generated. You can now add the classes that you want to deploy using the 'genezio addClass <className> <classType>' command.
+```
+
+Change into the newly created `server-blockchain-project` folder:
+```
+cd server-blockchain-project
 ```
 
 Create a package.json using npm:
@@ -171,11 +171,13 @@ npm install web3
 npm install mongoose
 ```
 
-Create a `client` directory in the root directory of your project where you'll build the frontend application.
+These npm packages will be used to interact with the blockchain and to save the events triggered on the blockchain in a Mongo database.
+
+Create a `client-blockchain-project` directory in the root directory of your project where you'll build the frontend application.
 
 ```
-mkdir -p blockchain-project/client
-cd blockchain-project/client
+mkdir -p blockchain-project/client-blockchain-project
+cd blockchain-project/client-blockchain-project
 ```
 
 Create a new React app with the following command:
@@ -189,7 +191,6 @@ Install the following packages to get Material React UI components:
 ```
 npm install @mui/material @emotion/react @emotion/styled
 ```
-
 
 #### **Create a Mongo Database**
 
@@ -270,7 +271,7 @@ Click on the _“Contract”_ tab and scroll down to the _“Contract ABI”_ se
 
 #### **Implement the server-side class**
 
-Create a `config.js` file in the `server` directory and paste there the constants that you obtained in the steps above:
+Create a `config.js` file in the `server-blockchain-project` directory and paste there the constants that you obtained in the steps above:
 
 ```javascript
 // config.js
@@ -281,7 +282,7 @@ export const BLAST_API_RPC_ENDPOINT = <todo-paste-the-blast-api-rpc-endpoint-her
 export const MONGO_DB_URI = <todo-paste-the-mongo-db-uri-here>
 ```
 
-Create an `abi.js` in the `server` directory and paste there the Ethereum bytecode of the smart contract:
+Create an `abi.js` in the `server-blockchain-project` directory and paste there the Ethereum bytecode of the smart contract:
 
 ```javascript
 // abi.js
@@ -291,9 +292,11 @@ export const abi =
 `
 ```
 
-Create a Mongo database model to save the events triggered on the smart contract. Create a directory at the path `server/models` and inside it, a file named `event.js`.
+Create a Mongo database model to save the events triggered on the smart contract.
+Inside a file at the path `server-blockchain-project/event.js` add the following code snippet:
+
 ```javascript
-// models/event.js
+// server-blockchain-project/event.js
 import mongoose from 'mongoose'
 const eventSchema = new mongoose.Schema({
   id: String,
@@ -307,10 +310,10 @@ export const EventModel = mongoose.models.Event || mongoose.model('Event', event
 
 Create a `blockchain.js` file in the `server` directory with a class name `BlockchainServer`. The class will have a constructor that will initialize the services used by the application - the endpoint to the Ethereum Blockchain using Blast API and it will set up the smart contract of your selected NFT.
 ```javascript
-// blockchain.js
+// server-blockchain-project/blockchain.js
 import Web3 from "web3"
 import { mongoose } from "mongoose";
-import { EventModel } from "./models/event.js"
+import { EventModel } from "./event.js"
 import { abi } from "./abi.js";
 import { CONTRACT_ADDRESS, BLAST_API_RPC_ENDPOINT, MONGO_DB_URI} from "./config.js";
 /**
@@ -436,7 +439,7 @@ name: blockchain-project
 region: us-east-1
 sdk:
   language: js
-  path: ../client/src/sdk/
+  path: ../client-blockchain-project/src/sdk/
 classes:
   - path: ./blockchain.js
     type: jsonrpc
@@ -514,8 +517,13 @@ export default App;
 
 It is recommended to test your project locally before deploying it to make sure that everything works as expected. Execute the following commands to change the directory and start a local testing process:
 
+Make sure that you are in the `server-blockchain-project` directory:
 ```
-cd server
+cd server-blockchain-project
+```
+
+Run the following command to start a local testing process:
+```
 genezio local
 ```
 
@@ -533,7 +541,7 @@ Server listening on port 8083
 Right now the server side of your project is listening to port 8083. You can head to {{< external-link link="https://app.genez.io/test-interface/local?port=8083" >}}app.genez.io/test-interface/local?port=8083{{< /external-link >}}
  to interact with it from the GUI.
 
-You can also test the client side of your project. Do not stop the `genezio local` process. Open up a new terminal and head over to the `client` directory. There you can execute the following commands:
+You can also test the client side of your project. Do not stop the `genezio local` process. Open up a new terminal and head over to the `client-blockchain-project` directory. There you can execute the following commands:
 ```
 npm install
 npm start
@@ -543,17 +551,17 @@ npm start
 
 Prepare the configuration for your server before deploying it.
 
-Your `server/genezio.yaml` file should look like this:
+Your `server-blockchain-project/genezio.yaml` file should look like this:
 ```yaml
 name: blockchain-project
 region: us-east-1
 sdk:
   language: js
-  path: ../client/src/sdk/
+  path: ../client-blockchain-project/src/sdk/
 scripts:
-  preFrontendDeploy: cd ../client && npm install && npm run build
+  preFrontendDeploy: cd ../client-blockchain-project && npm install && npm run build
 frontend:
-  path: ../client/build
+  path: ../client-blockchain-project/build
 classes:
   - path: ./blockchain.js
     type: jsonrpc
@@ -563,10 +571,10 @@ classes:
         cronString: "* * * * *"
 ```
 
-To deploy both the backend and frontend of your app, go to the `server` directory and deploy it with genezio. Hang in there because it might take a while.
+To deploy both the backend and frontend of your app, go to the `server-blockchain-project` directory and deploy it with genezio. Hang in there because it might take a while.
 
 ```
-cd server/
+cd server-blockchain-project/
 genezio deploy
 ```
 
@@ -593,18 +601,3 @@ Frontend successfully deployed at https://cyan-light-owl.app.genez.io.
 Congrats again 🥳 Now you can manage your project from the genezio Dashboard - you can test it, check the logs, or delete it if you don’t need it anymore.
 
 I hope you enjoyed this tutorial and I encourage you to check out our other tutorials for more tips and tricks on developing your ninja developer skills 🥷 💻
-
-## Blockchain Concepts
-
-### **What is a blockchain?**
-
-A blockchain is a digital ledger of transactions that is decentralized. The ledger is maintained and updated by a network of computers, or nodes, that work together to validate and record transactions.
-
-You can think of a blockchain as a network of computers that work together to create a public network that anyone can access and perform operations on, like sending tokens or running programs. Every node that’s part of this network has access to the data stored by the ledger and all of these nodes are ensuring that the data stays unchanged.
-
-
-### **What are smart contracts?**
-
-A smart contract is a self-executing program that automatically enforces the rules of an agreement between two or more parties. To make an analogy, if a blockchain can be associated with a large, public database, then a smart contract is an API that is able to read, write and execute commands over this database.
-
-Because smart contracts are executed by a decentralized network of nodes rather than a central entity, they have been built to be transparent, immutable, and difficult to tamper with. This makes them ideal for use in applications where trust is important, such as financial transactions, supply chain management, and digital identity verification.
