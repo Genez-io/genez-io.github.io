@@ -56,20 +56,14 @@ If you get stuck along the way or you have any questions, don’t hesitate to co
 * [Technical Tutorial](#technical-tutorial)
   * [Install node and npm](#install-node-and-npm)
   * [Install genezio](#install-genezio)
-  * [Set up the project](#set-up-the-project)
+  * [Implement the server-side](#implement-the-server-side)
+  * [Implement the client-side](#implement-the-client-side)
   * [Create a Mongo Database](#create-a-mongo-database)
   * [Create a wallet with Metamask](#create-a-wallet-with-metamask)
   * [Get access to an Ethereum endpoint using Blast API](#get-access-to-an-ethereum-endpoint-using-blast-api)
   * [Get a smart contract address and ABI (Application Binary Interface)](#get-a-smart-contract-address-and-abi-application-binary-interface)
-  * [Implement the server-side class](#implement-the-server-side-class)
-  * [The client-side project](#the-client-side-project)
-  * [Set up the client-side project](#set-up-the-client-side-project)
-  * [Implement the client-side project](#implement-the-client-side-project)
 * [Test your project locally](#test-your-project-locally)
 * [Deploy your project](#deploy-your-project)
-* [Blockchain Concepts](#blockchain-concepts)
-    * [What is a blockchain?](#what-is-a-blockchain)
-    * [What are smart contracts?](#what-are-smart-contracts)
 
 
 ## **Introduction**
@@ -91,28 +85,6 @@ Let’s install the dependencies needed for the smart contract indexer app.
 
 This step is going to introduce you to quite a few new tools for interacting with a blockchain. Don’t worry if you’ve never worked with them because I am going to walk you through every new concept.
 
-### **Instal node and npm**
-
-This is the easiest step. Head over to their {{< external-link link="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm" >}}documentation page{{< /external-link >}} to install `node` and `npm` on your machine.
-
-### **Install genezio**
-
-To start implementing your first Web3 app, you’ll need to host it somewhere on the cloud where it can be easily accessed by your users. For this, you can use genezio - a platform that is deploying your full stack application to the cloud.
-
-Install genezio using npm:
-```
-npm install genezio -g
-```
-
-Start using genezio by running the following command in your terminal:
-```
-genezio login
-```
-
-### **Set up the project**
-
-You will use genezio to deploy your quickly and easy with just a single command.
-
 At the end of this tutorial, the folder hierarchy of your project should be similar to this:
 ```
 blockchain-project/
@@ -131,6 +103,28 @@ blockchain-project/
 This is just a small spoiler to understand where things are going to fit in.
 
 At any step, if you get stuck at any moment you can use `genezio help` or `genezio [command] help` to get more help with the tool.
+
+### **Instal node and npm**
+
+This is the easiest step. Head over to their {{< external-link link="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm" >}}documentation page{{< /external-link >}} to install `node` and `npm` on your machine.
+
+### **Install genezio**
+
+To start implementing your first Web3 app, you’ll need to host it somewhere on the cloud where it can be easily accessed by your users. For this, you can use genezio - a platform that is deploying your full stack application to the cloud.
+
+Install genezio using npm:
+```
+npm install genezio -g
+```
+
+Start using genezio by running the following command in your terminal:
+```
+genezio login
+```
+
+### **Implement the server-side**
+
+You will use genezio to deploy your quickly and easy with just a single command.
 
 Create the folders hierarchy for the project:
 ```
@@ -173,108 +167,10 @@ npm install mongoose
 
 These npm packages will be used to interact with the blockchain and to save the events triggered on the blockchain in a Mongo database.
 
-Create a `client-blockchain-project` directory in the root directory of your project where you'll build the frontend application.
-
-```
-mkdir -p blockchain-project/client-blockchain-project
-cd blockchain-project/client-blockchain-project
-```
-
-Create a new React app with the following command:
-
-```
-npx create-react-app .
-```
-
-Install the following packages to get Material React UI components:
-
-```
-npm install @mui/material @emotion/react @emotion/styled
-```
-
-#### **Create a Mongo Database**
-
-You will need to set up a Mongo Database to store the events that are triggered on the smart contract. Follow the steps from this tutorial to create a free Mongo Database on {{< external-link link="https://genez.io/blog/how-to-add-a-mongodb-to-your-genezio-project/" >}}MongoDB Atlas{{< /external-link >}} and integrate it within your genezio project.
-
-#### **Create a wallet with Metamask**
-
-{{< external-link link="https://metamask.io/" >}}Metamask{{< /external-link >}}
- is a browser extension that will allow your browser to access the Ethereum blockchain. More than that, Metamask will also allow you to manage your ETH transactions. Install Metamask on your machine following the steps from their page.
-
-Note to yourself - Remember the password you set because it will be useful in the next steps.
-
-When you successfully finish this step, your screen should look like this:
-
-![Street Art Image](/posts/screenshot_1.webp)
-
-The wallet created with Metamask will be used to connect to an Ethereum endpoint using Blast API in the next step.
-
-#### **Get access to an Ethereum endpoint using Blast API**
-
-A blockchain is very similar to a public network of machines. In order to connect to the network you either need to plug your machine into the network and receive an IP address of your own, or you can remotely connect to an existing machine and use it to interact with the network.
-
-To interact with a given blockchain, you can either host and add your node to the blockchain or access an existing node. In this tutorial, we are going to use Blast API to get an endpoint to an existing node from the Ethereum Mainnet.
-
-Head over to the {{< external-link link="https://blastapi.io/" >}}Blast API webpage{{< /external-link >}}
- and click on _“Get Endpoint”_ - this will allow you to interact with the blockchain using an existing node.
-
-![Street Art Image](/posts/screenshot_2.webp)
-
-From there, select _“Create a Consumer App”_ and connect using your Metamask wallet. Follow through the pop-ups that are appearing on your screen.
-
-![Street Art Image](/posts/ss_3.webp)
-
-Now you can set up a project to get access to an Ethereum endpoint. Select _“Add a new project”_.
-
-![Street Art Image](/posts/ss_4.webp)
-
-Enter a project name and select the _“development”_ environment. After you are happy with the name, hit the _“Create project”_ button.
-
-![Street Art Image](/posts/ss_5.webp)
-
-A dashboard with your active endpoints will appear. For now, there is no endpoint you are connected to, so let’s change that. Head to the _“Available Endpoints”_ tab and select _“Ethereum”_ and, then, _“Ethereum Mainnet”_.
-
-![Street Art Image](/posts/ss_6.webp)
-
-Congrats 🥳 Now you are connected to an Ethereum node.
-
-To be able to interact with the node in your application, click on the_ “Active Endpoints”_, on the _“Ethereum”_ widget and copy the RPC endpoint for later. This will allow you to send requests to the node.
-
-![Street Art Image](/posts/ss_7.webp)
-
-#### **Get a smart contract address and ABI (Application Binary Interface)**
-
-Head to {{< external-link link="https://opensea.io/" >}}OpenSea{{< /external-link >}}
- and choose the cutest NFT collection from trending.
-
-Open the collection and select “View on EtherScan”.
-
-![Street Art Image](/posts/ss_8.webp)
-
-{{< external-link link="https://etherscan.io/" >}}EtherScan{{< /external-link >}}
- is an analytics platform for smart contracts deployed on the Ethereum blockchain. Here you can see all of the events managed by this smart contract under the “Events” tab.
-
-![Street Art Image](/posts/ss_9.webp)
-
-What is important on this page is:
-
-1. The contract address - think of it as a unique name for the smart contract
-Copy the contract address from the main page.
-
-![Street Art Image](/posts/ss_10.webp)
-
-2. The ABI - the binary that the Ethereum Virtual Machine knows how to execute.
-
-Click on the _“Contract”_ tab and scroll down to the _“Contract ABI”_ section. Copy it from here.
-
-![Street Art Image](/posts/ss_11.webp)
-
-#### **Implement the server-side class**
-
-Create a `config.js` file in the `server-blockchain-project` directory and paste there the constants that you obtained in the steps above:
+Next, create a `config.js` file in the `server-blockchain-project` directory. We are going to complete this file later in the tutorial:
 
 ```javascript
-// config.js
+// server-blockchain-project/config.js
 
 // Replace these values with your own
 export const CONTRACT_ADDRESS = <todo-paste-the-contract-address-here>
@@ -285,11 +181,31 @@ export const MONGO_DB_URI = <todo-paste-the-mongo-db-uri-here>
 Create an `abi.js` in the `server-blockchain-project` directory and paste there the Ethereum bytecode of the smart contract:
 
 ```javascript
-// abi.js
-export const abi =
-`
-[{"inputs":[{"internalType":"string","name":"name_","type":"string"},{"internalType":"string","name":"symbol_","type":"string"},{"internalType":"string","name":"baseURI_","type":"string"}],"stateMutability":"nonpayable","type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"owner","type":"address"},{"indexed":true,"internalType":"address","name":"approved","type":"address"},{"indexed":true,"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"Approval","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"owner","type":"address"},{"indexed":true,"internalType":"address","name":"operator","type":"address"},{"indexed":false,"internalType":"bool","name":"approved","type":"bool"}],"name":"ApprovalForAll","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"minter","type":"address"},{"indexed":false,"internalType":"uint256","name":"startWith","type":"uint256"},{"indexed":false,"internalType":"uint256","name":"times","type":"uint256"}],"name":"MintSeals","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"previousOwner","type":"address"},{"indexed":true,"internalType":"address","name":"newOwner","type":"address"}],"name":"OwnershipTransferred","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"from","type":"address"},{"indexed":true,"internalType":"address","name":"to","type":"address"},{"indexed":true,"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"Transfer","type":"event"},{"inputs":[{"internalType":"address","name":"_addr","type":"address"},{"internalType":"uint256","name":"numberOfMints","type":"uint256"}],"name":"addToWhitelist","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address[]","name":"_addr","type":"address[]"},{"internalType":"uint256[]","name":"_numberOfMints","type":"uint256[]"}],"name":"addToWhitelistBulk","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"_times","type":"uint256"}],"name":"adminMint","outputs":[],"stateMutability":"payable","type":"function"},{"inputs":[{"internalType":"address","name":"_addr","type":"address"}],"name":"adminMintGiveaways","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"approve","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"owner","type":"address"}],"name":"balanceOf","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"baseURI","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"newDate","type":"uint256"}],"name":"changePresaleStartDate","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"_newPrice","type":"uint256"}],"name":"changePrice","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"newDate","type":"uint256"}],"name":"changeStartDate","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"getApproved","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"_addr","type":"address"}],"name":"getWhitelistMintAmount","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"_addr","type":"address"}],"name":"isAddressInWhitelist","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"owner","type":"address"},{"internalType":"address","name":"operator","type":"address"}],"name":"isApprovedForAll","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"maxBatch","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"_times","type":"uint256"}],"name":"mintSeal","outputs":[],"stateMutability":"payable","type":"function"},{"inputs":[],"name":"name","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"owner","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"ownerOf","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"presaleRelease","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"price","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"releaseUnix","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"renounceOwnership","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"from","type":"address"},{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"safeTransferFrom","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"from","type":"address"},{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"tokenId","type":"uint256"},{"internalType":"bytes","name":"_data","type":"bytes"}],"name":"safeTransferFrom","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"operator","type":"address"},{"internalType":"bool","name":"approved","type":"bool"}],"name":"setApprovalForAll","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"string","name":"_newURI","type":"string"}],"name":"setBaseURI","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"bool","name":"_start","type":"bool"}],"name":"setNormalStart","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"_tokenId","type":"uint256"},{"internalType":"string","name":"_tokenURI","type":"string"}],"name":"setTokenURI","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"bool","name":"_start","type":"bool"}],"name":"setWhiteListStart","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"started","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"bytes4","name":"interfaceId","type":"bytes4"}],"name":"supportsInterface","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"symbol","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"tokenURI","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"totalCount","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"totalSeals","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"totalSupply","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"from","type":"address"},{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"transferFrom","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"newOwner","type":"address"}],"name":"transferOwnership","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"whiteListStart","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"_times","type":"uint256"}],"name":"whitelistMint","outputs":[],"stateMutability":"payable","type":"function"}]
-`
+// server-blockchain-project/abi.js
+export const abi = <todo-paste-the-abi-here>
+```
+
+Create a `blockchain.js` file in the `server-blockchain-project` directory with a class name `BlockchainServer`. The class will have a constructor that will initialize the services used by the application - the endpoint to the Ethereum Blockchain using Blast API and it will set up the smart contract of your selected NFT.
+
+```javascript
+// server-blockchain-project/blockchain.js
+import Web3 from "web3"
+import { mongoose } from "mongoose";
+import { abi } from "./abi.js";
+import { CONTRACT_ADDRESS, BLAST_API_RPC_ENDPOINT, MONGO_DB_URI} from "./config.js";
+/**
+ * The Blockchain server class that will be deployed on the genezio infrastructure.
+ */
+export class BlockchainServer {
+    constructor() {
+        mongoose.connect(MONGO_DB_URI);
+        this.web3 = new Web3(BLAST_API_RPC_ENDPOINT);
+        this.contract = new this.web3.eth.Contract(JSON.parse(abi), CONTRACT_ADDRESS);
+        this.knownEventTokens = this.contract.options.jsonInterface.filter((token) => {
+            return token.type === 'event';
+        });
+    }
+}
 ```
 
 Create a Mongo database model to save the events triggered on the smart contract.
@@ -306,29 +222,6 @@ const eventSchema = new mongoose.Schema({
   logIndex: Number,
 });
 export const EventModel = mongoose.models.Event || mongoose.model('Event', eventSchema);
-```
-
-Create a `blockchain.js` file in the `server` directory with a class name `BlockchainServer`. The class will have a constructor that will initialize the services used by the application - the endpoint to the Ethereum Blockchain using Blast API and it will set up the smart contract of your selected NFT.
-```javascript
-// server-blockchain-project/blockchain.js
-import Web3 from "web3"
-import { mongoose } from "mongoose";
-import { EventModel } from "./event.js"
-import { abi } from "./abi.js";
-import { CONTRACT_ADDRESS, BLAST_API_RPC_ENDPOINT, MONGO_DB_URI} from "./config.js";
-/**
- * The Blockchain server class that will be deployed on the genezio infrastructure.
- */
-export class BlockchainServer {
-    constructor() {
-        mongoose.connect(MONGO_DB_URI);
-        this.web3 = new Web3(BLAST_API_RPC_ENDPOINT);
-        this.contract = new this.web3.eth.Contract(JSON.parse(abi), CONTRACT_ADDRESS);
-        this.knownEventTokens = this.contract.options.jsonInterface.filter((token) => {
-            return token.type === 'event';
-        });
-    }
-}
 ```
 
 Add a method in the class `BlockchainServer` to decode events from the blockchain. This method is going to be private.
@@ -368,7 +261,8 @@ Add a method in the class `BlockchainServer` to decode events from the blockchai
     }
 ```
 
-Add a method that will sync the events triggered on the smart contract and index them in our database. This method will be called periodically by configuring a cron in `genezio.yaml`.
+Add a method that will sync the events triggered on the smart contract and index them in our database.
+This method will be called periodically by configuring a scheduled expression (cron) in `genezio.yaml`.
 
 ```javascript
    /**
@@ -432,7 +326,8 @@ Add `blockchain.js` to the genezio configuration file to prepare this class for 
 genezio addClass blockchain.js
 ```
 
-Configure the `sync()` method in the `genezio.yaml` to be a cron that triggers every minute. Your `genezio.yaml` file should look like this:
+Configure the `sync()` method in the `genezio.yaml` to be a cron that triggers every minute.
+The file `genezio.yaml` file should look like this:
 
 ```yaml
 name: blockchain-project
@@ -449,9 +344,30 @@ classes:
         cronString: "* * * * *"
 ```
 
-Now the server side of your project is finished. You can continue to the next section where you’ll build the client side. This is going to be a simple React app.
+For now, the server side is not fully completed because we still need to add the smart contract address and the Blast API endpoint to the `config.js` file. Continue reading to find out how to get these values.
 
-#### **Implement the client-side project**
+### **Implement the client-side**
+
+In this section you’ll build the client side of the project. This is going to be a simple React app.
+
+Create a `client-blockchain-project` directory in the root directory of your project where you'll build the frontend application.
+
+```
+mkdir -p blockchain-project/client-blockchain-project
+cd blockchain-project/client-blockchain-project
+```
+
+Create a new React app with the following command:
+
+```
+npx create-react-app .
+```
+
+Install the following packages to get Material React UI components:
+
+```
+npm install @mui/material @emotion/react @emotion/styled
+```
 
 Modify `src/App.js` as follows:
 ```javascript
@@ -513,7 +429,86 @@ function App() {
 export default App;
 ```
 
-### **Test your project locally**
+### **Create a Mongo Database**
+
+You will need to set up a Mongo Database to store the events that are triggered on the smart contract. Follow the steps from this tutorial to create a free Mongo Database on {{< external-link link="https://genez.io/blog/how-to-add-a-mongodb-to-your-genezio-project/" >}}MongoDB Atlas{{< /external-link >}} and integrate it within your genezio project.
+
+After you get a Mongo Database URI, add it to the `config.js` file in the `server-blockchain-project` directory.
+
+### **Create a wallet with Metamask**
+
+{{< external-link link="https://metamask.io/" >}}Metamask{{< /external-link >}}
+ is a browser extension that will allow your browser to access the Ethereum blockchain. More than that, Metamask will also allow you to manage your ETH transactions. Install Metamask on your machine following the steps from their page.
+
+Note to yourself - Remember the password you set because it will be useful in the next steps.
+
+When you successfully finish this step, your screen should look like this:
+
+![Street Art Image](/posts/screenshot_1.webp)
+
+The wallet created with Metamask will be used to connect to an Ethereum endpoint using Blast API in the next step.
+
+### **Get access to an Ethereum endpoint using Blast API**
+
+A blockchain is very similar to a public network of machines. In order to connect to the network you either need to plug your machine into the network and receive an IP address of your own, or you can remotely connect to an existing machine and use it to interact with the network.
+
+To interact with a given blockchain, you can either host and add your node to the blockchain or access an existing node. In this tutorial, we are going to use Blast API to get an endpoint to an existing node from the Ethereum Mainnet.
+
+Head over to the {{< external-link link="https://blastapi.io/" >}}Blast API webpage{{< /external-link >}}
+ and click on _“Get Endpoint”_ - this will allow you to interact with the blockchain using an existing node.
+
+![Street Art Image](/posts/screenshot_2.webp)
+
+From there, select _“Create a Consumer App”_ and connect using your Metamask wallet. Follow through the pop-ups that are appearing on your screen.
+
+![Street Art Image](/posts/ss_3.webp)
+
+Now you can set up a project to get access to an Ethereum endpoint. Select _“Add a new project”_.
+
+![Street Art Image](/posts/ss_4.webp)
+
+Enter a project name and select the _“development”_ environment. After you are happy with the name, hit the _“Create project”_ button.
+
+![Street Art Image](/posts/ss_5.webp)
+
+A dashboard with your active endpoints will appear. For now, there is no endpoint you are connected to, so let’s change that. Head to the _“Available Endpoints”_ tab and select _“Ethereum”_ and, then, _“Ethereum Mainnet”_.
+
+![Street Art Image](/posts/ss_6.webp)
+
+Congrats 🥳 Now you are connected to an Ethereum node.
+
+To be able to interact with the node in your application, click on the_ “Active Endpoints”_, on the _“Ethereum”_ widget and copy the RPC endpoint and paste it in the `config.js` file in the `server-blockchain-project` directory.
+
+![Street Art Image](/posts/ss_7.webp)
+
+### **Get a smart contract address and ABI (Application Binary Interface)**
+
+Head to {{< external-link link="https://opensea.io/" >}}OpenSea{{< /external-link >}}
+ and choose the cutest NFT collection from trending.
+
+Open the collection and select “View on EtherScan”.
+
+![Street Art Image](/posts/ss_8.webp)
+
+{{< external-link link="https://etherscan.io/" >}}EtherScan{{< /external-link >}}
+ is an analytics platform for smart contracts deployed on the Ethereum blockchain. Here you can see all of the events managed by this smart contract under the “Events” tab.
+
+![Street Art Image](/posts/ss_9.webp)
+
+What is important on this page is:
+
+1. The contract address - think of it as a unique name for the smart contract
+Copy the contract address from the main page and paste it in the `config.js` file in the `server-blockchain-project` directory.
+
+![Street Art Image](/posts/ss_10.webp)
+
+2. The ABI - the binary that the Ethereum Virtual Machine knows how to execute.
+
+Click on the _“Contract”_ tab and scroll down to the _“Contract ABI”_ section. Copy it from here and paste it in the `abi.js` file in the `server-blockchain-project` directory.
+
+![Street Art Image](/posts/ss_11.webp)
+
+## **Test your project locally**
 
 It is recommended to test your project locally before deploying it to make sure that everything works as expected. Execute the following commands to change the directory and start a local testing process:
 
@@ -547,7 +542,7 @@ npm install
 npm start
 ```
 
-### **Deploy your project**
+## **Deploy your project**
 
 Prepare the configuration for your server before deploying it.
 
