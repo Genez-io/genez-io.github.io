@@ -57,14 +57,14 @@ If you get stuck along the way or you have any questions, don’t hesitate to co
 * [Technical Tutorial](#technical-tutorial)
   * [Install node and npm](#install-node-and-npm)
   * [Install genezio](#install-genezio)
-  * [Setup the project](#setup-the-project)
+  * [Set up the project](#set-up-the-project)
   * [Create a Mongo Database](#create-a-mongo-database)
   * [Create a wallet with Metamask](#create-a-wallet-with-metamask)
   * [Get access to an Ethereum endpoint using Blast API](#get-access-to-an-ethereum-endpoint-using-blast-api)
   * [Get a smart contract address and ABI (Application Binary Interface)](#get-a-smart-contract-address-and-abi-application-binary-interface)
   * [Implement the server-side class](#implement-the-server-side-class)
   * [The client-side project](#the-client-side-project)
-  * [Setup the client-side project](#setup-the-client-side-project)
+  * [Set up the client-side project](#set-up-the-client-side-project)
   * [Implement the client-side project](#implement-the-client-side-project)
 * [Test your project locally](#test-your-project-locally)
 * [Deploy your project](#deploy-your-project)
@@ -77,7 +77,7 @@ If you get stuck along the way or you have any questions, don’t hesitate to co
 
 ### **What are you going to build?**
 
-Today, you are going to build a **smart contract indexer** application. This app will be able to allow users to query events related to smart contracts on various blockchain networks. For this example, I chose to show you how to connect to the {{< external-link link="https://ethereum.org/en/" >}}Ethereum Mainnet{{< /external-link >}} because it is the most popular blockchain that supports smart contracts.
+Today, you are going to build a **smart contract indexer** application. This app will be able to allow users to query events related to smart contracts on various blockchain networks. For this example, I chose to show you how to connect to the {{< external-link link="https://ethereum.org/en/" >}}Ethereum Mainnet{{< /external-link >}}.
 
 Following, I am going to break down the steps you are going to get through:
 
@@ -95,8 +95,7 @@ This step is going to introduce you to quite a few new tools for interacting wit
 
 ### **Instal node and npm**
 
-This is the easiest step. Head over to the {{< external-link link="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm" >}}documentation page{{< /external-link >}}
- to install `node` and `npm` on your machine.
+This is the easiest step. Head over to their {{< external-link link="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm" >}}documentation page{{< /external-link >}} to install `node` and `npm` on your machine.
 
 
 ### **Install genezio**
@@ -108,7 +107,7 @@ Install genezio using npm:
 npm install genezio -g
 ```
 
-### **Setup the project**
+### **Set up the project**
 
 Fire up your preferred IDE and your terminal and let’s get our hands dirty with some coding. You will use genezio to make your life easier while building your app.
 
@@ -130,7 +129,7 @@ blockchain-project/
 ```
 This is just a small spoiler to understand where things are going to fit in.
 
-Start using genezio by login in to your account:
+Start using genezio by log in in to your account:
 ```
 genezio login
 ```
@@ -194,7 +193,7 @@ npm install @mui/material @emotion/react @emotion/styled
 
 #### **Create a Mongo Database**
 
-You will need to setup a Mongo Database to store the events that are triggered on the smart contract. Follow the steps from this tutorial to create a free Mongo Database on {{< external-link link="https://genez.io/blog/how-to-add-a-mongodb-to-your-genezio-project/" >}}MongoDB Atlas{{< /external-link >}} and integrate it within your genezio project.
+You will need to set up a Mongo Database to store the events that are triggered on the smart contract. Follow the steps from this tutorial to create a free Mongo Database on {{< external-link link="https://genez.io/blog/how-to-add-a-mongodb-to-your-genezio-project/" >}}MongoDB Atlas{{< /external-link >}} and integrate it within your genezio project.
 
 #### **Create a wallet with Metamask**
 
