@@ -176,8 +176,7 @@ export const abi = <todo-paste-the-abi-here>
 
 Expand each of the following sections to get the necessary variables (`CONTRACT_ADDRESS`, `abi`, `BLAST_API_RPC_ENDPOINT`, `MONGO_DB_URI`) if you don't have them already.
 
-<details>
-  <summary> Get a smart contract address and ABI (Application Binary Interface) </summary>
+{{< details "Get a smart contract address and ABI - Application Binary Interface" >}}
 
 ### **Get a smart contract address and ABI (Application Binary Interface)**
 
@@ -204,10 +203,9 @@ Click on the _“Contract”_ tab and scroll down to the _“Contract ABI”_ se
 
 ![Street Art Image](/posts/ss_11.webp)
 
-</details>
+{{< /details >}}
 
-<details>
-  <summary> Get access to an Ethereum endpoint using Blast API</summary>
+{{< details "Get access to an Ethereum endpoint using Blast API" >}}
 
  ### **Create a wallet with Metamask**
 
@@ -253,16 +251,15 @@ Congrats 🥳 Now you are connected to an Ethereum node.
 To be able to interact with the node in your application, click on the_ “Active Endpoints”_, on the _“Ethereum”_ widget and copy the RPC endpoint and paste it in the `config.js` file in the `server-blockchain-project` directory.
 
 ![Street Art Image](/posts/ss_7.webp)
-</details>
+{{< /details >}}
 
-<details>
-  <summary> Create a Mongo Database </summary>
+{{< details "Create a Mongo Database" >}}
 
   ### **Create a Mongo Database**
 You will need to set up a Mongo Database to store the events that are triggered on the smart contract. Follow the steps from this tutorial to create a free Mongo Database on {{< external-link link="https://genez.io/blog/how-to-add-a-mongodb-to-your-genezio-project/" >}}MongoDB Atlas{{< /external-link >}} and integrate it within your genezio project.
 
 After you get a Mongo Database URI, add it to the `config.js` file in the `server-blockchain-project` directory.
-</details>
+{{< /details >}}
 
 Create a Mongo database model to save the events triggered on the smart contract.
 Inside a file at the path `server-blockchain-project/event.js` add the following code snippet:
