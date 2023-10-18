@@ -45,8 +45,7 @@ After following through with this tutorial, you’ll be able to:
 4. Use React to develop a minimalist frontend
 5. Deploy a full stack application on genezio
 
-You can find the complete project on {{< external-link link="https://github.com/Genez-io/genezio-examples/tree/master/javascript/blockchain" >}}Github{{< /external-link >}}
-. Feel free to take a look at it to better understand how the complete project should look.
+You can find the complete project on {{< external-link link="https://github.com/Genez-io/genezio-examples/tree/master/javascript/blockchain" >}}Github{{< /external-link >}}. Feel free to take a look at it to better understand how the complete project should look.
 
 If you get stuck along the way or you have any questions, don’t hesitate to contact me on {{< external-link link="https://discord.gg/XmpKD9ytxS" >}}Discord{{< /external-link >}} or write me an email at andreia@genez.io. I am more than happy to help 😄
 
@@ -58,10 +57,6 @@ If you get stuck along the way or you have any questions, don’t hesitate to co
   * [Install genezio](#install-genezio)
   * [Implement the server-side](#implement-the-server-side)
   * [Implement the client-side](#implement-the-client-side)
-  * [Create a Mongo Database](#create-a-mongo-database)
-  * [Create a wallet with Metamask](#create-a-wallet-with-metamask)
-  * [Get access to an Ethereum endpoint using Blast API](#get-access-to-an-ethereum-endpoint-using-blast-api)
-  * [Get a smart contract address and ABI (Application Binary Interface)](#get-a-smart-contract-address-and-abi-application-binary-interface)
 * [Test your project locally](#test-your-project-locally)
 * [Deploy your project](#deploy-your-project)
 
@@ -75,15 +70,33 @@ Today, you are going to build a **smart contract indexer** application. This app
 Following, I am going to break down the steps you are going to get through:
 
 1. Install dependencies and set up your project
-2. Implement the server (backend) side of the project using Blast API
+2. Implement the server (backend) side of the project using NodeJS and genezio
 3. Implement the client (frontend) side of the project using React
 4. Test and deploy your application using genezio
 
 ## **Technical Tutorial**
 
-Let’s install the dependencies needed for the smart contract indexer app.
-
 This step is going to introduce you to quite a few new tools for interacting with a blockchain. Don’t worry if you’ve never worked with them because I am going to walk you through every new concept.
+
+### **Install genezio**
+
+To start implementing your first Web3 app, you’ll need to host it somewhere on the cloud where it can be easily accessed by your users.
+
+You will use genezio to deploy your project quickly and easy with just a single command.
+
+If you don't have node and npm installed on your machine, head over to their {{< external-link link="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm" >}}documentation page{{< /external-link >}} to set them.
+
+Install genezio using npm:
+```
+npm install genezio -g
+```
+
+Start using genezio by running the following command in your terminal:
+```
+genezio login
+```
+
+At any step, if you get stuck at any moment you can use `genezio help` or `genezio [command] help` to get more help with the tool.
 
 At the end of this tutorial, the folder hierarchy of your project should be similar to this:
 ```
@@ -102,34 +115,11 @@ blockchain-project/
 ```
 This is just a small spoiler to understand where things are going to fit in.
 
-At any step, if you get stuck at any moment you can use `genezio help` or `genezio [command] help` to get more help with the tool.
-
-### **Instal node and npm**
-
-This is the easiest step. Head over to their {{< external-link link="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm" >}}documentation page{{< /external-link >}} to install `node` and `npm` on your machine.
-
-### **Install genezio**
-
-To start implementing your first Web3 app, you’ll need to host it somewhere on the cloud where it can be easily accessed by your users. For this, you can use genezio - a platform that is deploying your full stack application to the cloud.
-
-Install genezio using npm:
-```
-npm install genezio -g
-```
-
-Start using genezio by running the following command in your terminal:
-```
-genezio login
-```
-
 ### **Implement the server-side**
-
-You will use genezio to deploy your quickly and easy with just a single command.
 
 Create the folders hierarchy for the project:
 ```
-mkdir -p blockchain-project/
-cd blockchain-project/
+mkdir blockchain-project && cd blockchain-project
 ```
 
 To set up a new genezio project, initialize your configuration:
@@ -154,20 +144,19 @@ Change into the newly created `server-blockchain-project` folder:
 cd server-blockchain-project
 ```
 
-Create a package.json using npm:
+Create a `package.json` using npm:
 ```
 npm init -y
 ```
 
 Install the `web3` and `mongoose` npm packages by executing:
 ```
-npm install web3
-npm install mongoose
+npm install web3 mongoose
 ```
 
 These npm packages will be used to interact with the blockchain and to save the events triggered on the blockchain in a Mongo database.
 
-Next, create a `config.js` file in the `server-blockchain-project` directory. We are going to complete this file later in the tutorial:
+Create a `config.js` file in the `server-blockchain-project` directory.
 
 ```javascript
 // server-blockchain-project/config.js
@@ -185,28 +174,95 @@ Create an `abi.js` in the `server-blockchain-project` directory and paste there 
 export const abi = <todo-paste-the-abi-here>
 ```
 
-Create a `blockchain.js` file in the `server-blockchain-project` directory with a class name `BlockchainServer`. The class will have a constructor that will initialize the services used by the application - the endpoint to the Ethereum Blockchain using Blast API and it will set up the smart contract of your selected NFT.
+Expand each of the following sections to get the necessary variables (`CONTRACT_ADDRESS`, `abi`, `BLAST_API_RPC_ENDPOINT`, `MONGO_DB_URI`) if you don't have them already.
 
-```javascript
-// server-blockchain-project/blockchain.js
-import Web3 from "web3"
-import { mongoose } from "mongoose";
-import { abi } from "./abi.js";
-import { CONTRACT_ADDRESS, BLAST_API_RPC_ENDPOINT, MONGO_DB_URI} from "./config.js";
-/**
- * The Blockchain server class that will be deployed on the genezio infrastructure.
- */
-export class BlockchainServer {
-    constructor() {
-        mongoose.connect(MONGO_DB_URI);
-        this.web3 = new Web3(BLAST_API_RPC_ENDPOINT);
-        this.contract = new this.web3.eth.Contract(JSON.parse(abi), CONTRACT_ADDRESS);
-        this.knownEventTokens = this.contract.options.jsonInterface.filter((token) => {
-            return token.type === 'event';
-        });
-    }
-}
-```
+<details>
+  <summary> Get a smart contract address and ABI (Application Binary Interface) </summary>
+
+### **Get a smart contract address and ABI (Application Binary Interface)**
+
+Head to {{< external-link link="https://opensea.io/" >}}OpenSea{{< /external-link >}} and choose the cutest NFT collection from trending.
+
+Open the collection and select “View on EtherScan”.
+
+![Street Art Image](/posts/ss_8.webp)
+
+{{< external-link link="https://etherscan.io/" >}}EtherScan{{< /external-link >}} is an analytics platform for smart contracts deployed on the Ethereum blockchain. Here you can see all of the events managed by this smart contract under the “Events” tab.
+
+![Street Art Image](/posts/ss_9.webp)
+
+What is important on this page is:
+
+1. The contract address - think of it as a unique name for the smart contract
+Copy the contract address from the main page and paste it in the `config.js` file in the `server-blockchain-project` directory.
+
+![Street Art Image](/posts/ss_10.webp)
+
+2. The ABI - the binary that the Ethereum Virtual Machine knows how to execute.
+
+Click on the _“Contract”_ tab and scroll down to the _“Contract ABI”_ section. Copy it from here and paste it in the `abi.js` file in the `server-blockchain-project` directory.
+
+![Street Art Image](/posts/ss_11.webp)
+
+</details>
+
+<details>
+  <summary> Get access to an Ethereum endpoint using Blast API</summary>
+
+ ### **Create a wallet with Metamask**
+
+{{< external-link link="https://metamask.io/" >}}Metamask{{< /external-link >}} is a browser extension that will allow your browser to access the Ethereum blockchain. More than that, Metamask will also allow you to manage your ETH transactions. Install Metamask on your machine following the steps from their page.
+
+Note to yourself - Remember the password you set because it will be useful in the next steps.
+
+When you successfully finish this step, your screen should look like this:
+
+![Street Art Image](/posts/screenshot_1.webp)
+
+The wallet created with Metamask will be used to connect to an Ethereum endpoint using Blast API in the next step.
+
+### **Get access to an Ethereum endpoint using Blast API**
+
+A blockchain is very similar to a public network of machines. In order to connect to the network you either need to plug your machine into the network and receive an IP address of your own, or you can remotely connect to an existing machine and use it to interact with the network.
+
+To interact with a given blockchain, you can either host and add your node to the blockchain or access an existing node. In this tutorial, we are going to use Blast API to get an endpoint to an existing node from the Ethereum Mainnet.
+
+Head over to the {{< external-link link="https://blastapi.io/" >}}Blast API webpage{{< /external-link >}}
+ and click on _“Get Endpoint”_ - this will allow you to interact with the blockchain using an existing node.
+
+![Street Art Image](/posts/screenshot_2.webp)
+
+From there, select _“Create a Consumer App”_ and connect using your Metamask wallet. Follow through the pop-ups that are appearing on your screen.
+
+![Street Art Image](/posts/ss_3.webp)
+
+Now you can set up a project to get access to an Ethereum endpoint. Select _“Add a new project”_.
+
+![Street Art Image](/posts/ss_4.webp)
+
+Enter a project name and select the _“development”_ environment. After you are happy with the name, hit the _“Create project”_ button.
+
+![Street Art Image](/posts/ss_5.webp)
+
+A dashboard with your active endpoints will appear. For now, there is no endpoint you are connected to, so let’s change that. Head to the _“Available Endpoints”_ tab and select _“Ethereum”_ and, then, _“Ethereum Mainnet”_.
+
+![Street Art Image](/posts/ss_6.webp)
+
+Congrats 🥳 Now you are connected to an Ethereum node.
+
+To be able to interact with the node in your application, click on the_ “Active Endpoints”_, on the _“Ethereum”_ widget and copy the RPC endpoint and paste it in the `config.js` file in the `server-blockchain-project` directory.
+
+![Street Art Image](/posts/ss_7.webp)
+</details>
+
+<details>
+  <summary> Create a Mongo Database </summary>
+
+  ### **Create a Mongo Database**
+You will need to set up a Mongo Database to store the events that are triggered on the smart contract. Follow the steps from this tutorial to create a free Mongo Database on {{< external-link link="https://genez.io/blog/how-to-add-a-mongodb-to-your-genezio-project/" >}}MongoDB Atlas{{< /external-link >}} and integrate it within your genezio project.
+
+After you get a Mongo Database URI, add it to the `config.js` file in the `server-blockchain-project` directory.
+</details>
 
 Create a Mongo database model to save the events triggered on the smart contract.
 Inside a file at the path `server-blockchain-project/event.js` add the following code snippet:
@@ -224,100 +280,124 @@ const eventSchema = new mongoose.Schema({
 export const EventModel = mongoose.models.Event || mongoose.model('Event', eventSchema);
 ```
 
-Add a method in the class `BlockchainServer` to decode events from the blockchain. This method is going to be private.
+Create a `blockchain.js` file in the `server-blockchain-project` directory with a class name `BlockchainServer`. The class will have a constructor that will initialize the services used by the application - the endpoint to the Ethereum Blockchain using Blast API and it will set up the smart contract of your selected NFT.
+
 ```javascript
-   /**
-     * Private method that decodes an event and returns the name and the parameters.
-     *
-     * This will not be callable using the genezio SDK. Only the public methods are exposed publicly.
-     *
-     * @param {*} event
-     * @returns An object containing the name of the event and its parameters.
-     */
-    #decodeEvent(event) {
-        // Retrieve the event declaration from the ABI
-        const eventToken = this.knownEventTokens.find((knownEventToken) => {
-            return knownEventToken.signature === event.topics[0];
-        });
-        if (!eventToken) {
-            console.log('cannot process log %d', event.logIndex);
-            return undefined;
-        }
-        // Decode the event
-        const decodedEvent = this.web3.eth.abi.decodeLog(
-            eventToken.inputs,
-            event.data,
-            event.topics.slice(1),
-        )
-        // Parse the parameters in a simple dictionary
-        const parameters = {}
-        eventToken.inputs.forEach((input) => {
-            parameters[input.name] = decodedEvent[input.name]
-        })
-        return {
-            name: eventToken.name,
-            parameters,
-        }
-    }
+// server-blockchain-project/blockchain.js
+import Web3 from "web3"
+import { mongoose } from "mongoose";
+import { abi } from "./abi.js";
+import { CONTRACT_ADDRESS, BLAST_API_RPC_ENDPOINT, MONGO_DB_URI} from "./config.js";
+/**
+ * The Blockchain server class that will be deployed on the genezio infrastructure.
+ */
+export class BlockchainServer {
+  constructor() {
+    mongoose.connect(MONGO_DB_URI);
+    this.web3 = new Web3(BLAST_API_RPC_ENDPOINT);
+    this.contract = new this.web3.eth.Contract(JSON.parse(abi), CONTRACT_ADDRESS);
+    this.knownEventTokens = this.contract.options.jsonInterface.filter((token) => {
+      return token.type === 'event';
+    });
+  }
+}
+```
+
+Add a method in the class `BlockchainServer` to decode events from the blockchain. This method is going to be private.
+
+```javascript
+/**
+ * Private method that decodes an event and returns the name and the parameters.
+ *
+ * This will not be callable using the genezio SDK. Only the public methods are exposed publicly.
+ *
+ * @param {*} event
+ * @returns An object containing the name of the event and its parameters.
+ */
+#decodeEvent(event) {
+  // Retrieve the event declaration from the ABI
+  const eventToken = this.knownEventTokens.find((knownEventToken) => {
+    return knownEventToken.signature === event.topics[0];
+  });
+  if (!eventToken) {
+    console.log('cannot process log %d', event.logIndex);
+    return undefined;
+  }
+  // Decode the event
+  const decodedEvent = this.web3.eth.abi.decodeLog(
+    eventToken.inputs,
+    event.data,
+    event.topics.slice(1),
+  )
+  // Parse the parameters in a simple dictionary
+  const parameters = {}
+  eventToken.inputs.forEach((input) => {
+    parameters[input.name] = decodedEvent[input.name]
+  })
+  return {
+    name: eventToken.name,
+    parameters,
+  }
+}
 ```
 
 Add a method that will sync the events triggered on the smart contract and index them in our database.
 This method will be called periodically by configuring a scheduled expression (cron) in `genezio.yaml`.
 
 ```javascript
-   /**
-     * Method that will be called periodically by the genezio infrastructure to index the events.
-     *
-     * The frequency with which the method will be called can be modified from the genezio YAML file.
-     *
-     */
-    async sync() {
-        // Get the current block number and request the last 100 blocks
-        const blockNumber = await this.web3.eth.getBlockNumber()
-        let events = await this.web3.eth.getPastLogs({ address: CONTRACT_ADDRESS, fromBlock: blockNumber - 50, toBlock: blockNumber });
-        console.log(`New sync started with ${events.length} to save`)
-        for (const event of events) {
-            const decodedEvent = this.#decodeEvent(event)
-            if (!decodedEvent) {
-                continue
-            }
-
-            // Insert the missing events.
-            await EventModel.findOneAndUpdate({ id: `${event.transactionHash}-${event.logIndex}` }, {
-                $setOnInsert: {
-                    id: `${event.transactionHash}-${event.logIndex}`,
-                    name: decodedEvent.name,
-                    parameters: decodedEvent.parameters,
-                    blockNumber: event.blockNumber,
-                    logIndex: event.logIndex
-                }
-            }, { upsert: true });
-        }
+/**
+ * Method that will be called periodically by the genezio infrastructure to index the events.
+ *
+ * The frequency with which the method will be called can be modified from the genezio YAML file.
+ *
+ */
+async sync() {
+  // Get the current block number and request the last 100 blocks
+  const blockNumber = await this.web3.eth.getBlockNumber()
+  let events = await this.web3.eth.getPastLogs({ address: CONTRACT_ADDRESS, fromBlock: blockNumber - 50, toBlock: blockNumber });
+  console.log(`New sync started with ${events.length} to save`)
+  for (const event of events) {
+    const decodedEvent = this.#decodeEvent(event)
+    if (!decodedEvent) {
+      continue
     }
+
+    // Insert the missing events.
+    await EventModel.findOneAndUpdate({ id: `${event.transactionHash}-${event.logIndex}` }, {
+      $setOnInsert: {
+        id: `${event.transactionHash}-${event.logIndex}`,
+        name: decodedEvent.name,
+        parameters: decodedEvent.parameters,
+        blockNumber: event.blockNumber,
+        logIndex: event.logIndex
+      }
+    }, { upsert: true });
+  }
+}
 ```
 
 Lastly, add a method to get the saved events from the database.
 
 ```javascript
-   /**
-     * Method used to get all the events in a paginated way.
-     *
-     * The method will be part of the genezio SDK.
-     *
-     * @param {*} from The starting index of the first event.
-     * @param {*} limit The number of events that will be part of the response.
-     * @returns
-     */
-    async GetEvents(from, limit) {
-        console.log(`Received getEvents request with from = ${from} limit = ${limit}`)
-        const count = await EventModel.count()
-        console.log("Event count", count)
-        const events = await EventModel.find(undefined, undefined, { skip: from, limit, sort: { "blockNumber": -1, "logIndex": -1 } })
-        return {
-            count,
-            "events": events.map((event) => ({ id: event.id, name: event.name, parameters: event.parameters, blockNumber: event.blockNumber }))
-        }
-    }
+/**
+ * Method used to get all the events in a paginated way.
+ *
+ * The method will be part of the genezio SDK.
+ *
+ * @param {*} from The starting index of the first event.
+ * @param {*} limit The number of events that will be part of the response.
+ * @returns
+ */
+async GetEvents(from, limit) {
+  console.log(`Received getEvents request with from = ${from} limit = ${limit}`)
+  const count = await EventModel.count()
+  console.log("Event count", count)
+  const events = await EventModel.find(undefined, undefined, { skip: from, limit, sort: { "blockNumber": -1, "logIndex": -1 } })
+  return {
+    count,
+    "events": events.map((event) => ({ id: event.id, name: event.name, parameters: event.parameters, blockNumber: event.blockNumber }))
+  }
+}
 ```
 
 Add `blockchain.js` to the genezio configuration file to prepare this class for deployment.
@@ -344,8 +424,6 @@ classes:
         cronString: "* * * * *"
 ```
 
-For now, the server side is not fully completed because we still need to add the smart contract address and the Blast API endpoint to the `config.js` file. Continue reading to find out how to get these values.
-
 ### **Implement the client-side**
 
 In this section you’ll build the client side of the project. This is going to be a simple React app.
@@ -353,8 +431,9 @@ In this section you’ll build the client side of the project. This is going to 
 Create a `client-blockchain-project` directory in the root directory of your project where you'll build the frontend application.
 
 ```
-mkdir -p blockchain-project/client-blockchain-project
-cd blockchain-project/client-blockchain-project
+cd ../
+mkdir client-blockchain-project
+cd client-blockchain-project
 ```
 
 Create a new React app with the following command:
@@ -429,92 +508,13 @@ function App() {
 export default App;
 ```
 
-### **Create a Mongo Database**
-
-You will need to set up a Mongo Database to store the events that are triggered on the smart contract. Follow the steps from this tutorial to create a free Mongo Database on {{< external-link link="https://genez.io/blog/how-to-add-a-mongodb-to-your-genezio-project/" >}}MongoDB Atlas{{< /external-link >}} and integrate it within your genezio project.
-
-After you get a Mongo Database URI, add it to the `config.js` file in the `server-blockchain-project` directory.
-
-### **Create a wallet with Metamask**
-
-{{< external-link link="https://metamask.io/" >}}Metamask{{< /external-link >}}
- is a browser extension that will allow your browser to access the Ethereum blockchain. More than that, Metamask will also allow you to manage your ETH transactions. Install Metamask on your machine following the steps from their page.
-
-Note to yourself - Remember the password you set because it will be useful in the next steps.
-
-When you successfully finish this step, your screen should look like this:
-
-![Street Art Image](/posts/screenshot_1.webp)
-
-The wallet created with Metamask will be used to connect to an Ethereum endpoint using Blast API in the next step.
-
-### **Get access to an Ethereum endpoint using Blast API**
-
-A blockchain is very similar to a public network of machines. In order to connect to the network you either need to plug your machine into the network and receive an IP address of your own, or you can remotely connect to an existing machine and use it to interact with the network.
-
-To interact with a given blockchain, you can either host and add your node to the blockchain or access an existing node. In this tutorial, we are going to use Blast API to get an endpoint to an existing node from the Ethereum Mainnet.
-
-Head over to the {{< external-link link="https://blastapi.io/" >}}Blast API webpage{{< /external-link >}}
- and click on _“Get Endpoint”_ - this will allow you to interact with the blockchain using an existing node.
-
-![Street Art Image](/posts/screenshot_2.webp)
-
-From there, select _“Create a Consumer App”_ and connect using your Metamask wallet. Follow through the pop-ups that are appearing on your screen.
-
-![Street Art Image](/posts/ss_3.webp)
-
-Now you can set up a project to get access to an Ethereum endpoint. Select _“Add a new project”_.
-
-![Street Art Image](/posts/ss_4.webp)
-
-Enter a project name and select the _“development”_ environment. After you are happy with the name, hit the _“Create project”_ button.
-
-![Street Art Image](/posts/ss_5.webp)
-
-A dashboard with your active endpoints will appear. For now, there is no endpoint you are connected to, so let’s change that. Head to the _“Available Endpoints”_ tab and select _“Ethereum”_ and, then, _“Ethereum Mainnet”_.
-
-![Street Art Image](/posts/ss_6.webp)
-
-Congrats 🥳 Now you are connected to an Ethereum node.
-
-To be able to interact with the node in your application, click on the_ “Active Endpoints”_, on the _“Ethereum”_ widget and copy the RPC endpoint and paste it in the `config.js` file in the `server-blockchain-project` directory.
-
-![Street Art Image](/posts/ss_7.webp)
-
-### **Get a smart contract address and ABI (Application Binary Interface)**
-
-Head to {{< external-link link="https://opensea.io/" >}}OpenSea{{< /external-link >}}
- and choose the cutest NFT collection from trending.
-
-Open the collection and select “View on EtherScan”.
-
-![Street Art Image](/posts/ss_8.webp)
-
-{{< external-link link="https://etherscan.io/" >}}EtherScan{{< /external-link >}}
- is an analytics platform for smart contracts deployed on the Ethereum blockchain. Here you can see all of the events managed by this smart contract under the “Events” tab.
-
-![Street Art Image](/posts/ss_9.webp)
-
-What is important on this page is:
-
-1. The contract address - think of it as a unique name for the smart contract
-Copy the contract address from the main page and paste it in the `config.js` file in the `server-blockchain-project` directory.
-
-![Street Art Image](/posts/ss_10.webp)
-
-2. The ABI - the binary that the Ethereum Virtual Machine knows how to execute.
-
-Click on the _“Contract”_ tab and scroll down to the _“Contract ABI”_ section. Copy it from here and paste it in the `abi.js` file in the `server-blockchain-project` directory.
-
-![Street Art Image](/posts/ss_11.webp)
-
 ## **Test your project locally**
 
 It is recommended to test your project locally before deploying it to make sure that everything works as expected. Execute the following commands to change the directory and start a local testing process:
 
 Make sure that you are in the `server-blockchain-project` directory:
 ```
-cd server-blockchain-project
+cd ../server-blockchain-project
 ```
 
 Run the following command to start a local testing process:
@@ -533,14 +533,14 @@ Test your code at https://app.genez.io/test-interface/local?port=8083
 Server listening on port 8083
 ```
 
-Right now the server side of your project is listening to port 8083. You can head to {{< external-link link="https://app.genez.io/test-interface/local?port=8083" >}}app.genez.io/test-interface/local?port=8083{{< /external-link >}}
- to interact with it from the GUI.
+Right now the server side of your project is listening to port 8083. You can head to {{< external-link link="https://app.genez.io/test-interface/local?port=8083" >}}app.genez.io/test-interface/local?port=8083{{< /external-link >}} to interact with it from the GUI.
 
 You can also test the client side of your project. Do not stop the `genezio local` process. Open up a new terminal and head over to the `client-blockchain-project` directory. There you can execute the following commands:
 ```
-npm install
 npm start
 ```
+
+You can now interact with your project from the browser at {{< external-link link="http://localhost:3000" >}}http://localhost:3000{{< /external-link >}}.
 
 ## **Deploy your project**
 
