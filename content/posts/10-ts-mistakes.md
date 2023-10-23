@@ -22,7 +22,7 @@ Below are the subjects we will address:
 
 1. [Overuse of type "any"](#1-overuse-of-type-any)
 2. [Misusing "as" Casts](#2-misusing-as-casts)
-3. [Ignoring Typecheck Errors and Warning](#3-ignoring-typecheck-errors-and-warning)
+3. [Ignoring Type-check Errors and Warning](#3-ignoring-type-check-errors-and-warning)
 4. [Not Using Strict Mode](#4-not-using-strict-mode)
 5. [Implicit "any" in Function Return Types](#5-implicit-any-in-function-return-types)
 6. [Not using "const" and "read-only" correctly](#6-not-using-const-and-read-only-correctly)
@@ -79,10 +79,10 @@ console.log(strLength); // Outputs: 18
 
 While this code works in this particular scenario, it's considered a misuse of `as` casts because we are bypassing TypeScript's type-checking. If `userInput` were not a string, a runtime error would occur.
 
-## 3. Ignoring Typecheck Errors and Warning
+## 3. Ignoring Type-check Errors and Warning
 
-TypeScript provides valuable type-checking and inference, but some developers ignore or suppress typecheck errors and warnings using the `//@ts-ignore` comment.
-Ignoring these messages may hide potential issues that could lead to runtime errors or unexpected behavior. It's crucial to address typecheck errors and warnings systematically to ensure code correctness.
+TypeScript provides valuable type-checking and inference, but some developers ignore or suppress type-check errors and warnings using the `//@ts-ignore` comment.
+Ignoring these messages may hide potential issues that could lead to runtime errors or unexpected behavior. It's crucial to address type-check errors and warnings systematically to ensure code correctness.
 
 ```typescript
 function add(a: number, b: number): number {
@@ -143,7 +143,7 @@ Attempting to change the `radius` property of the circle object after it has bee
 
 ## 7. Inconsistent Coding Conventions
 
-Inconsistent coding conventions, such as using different naming conventions for variables or not following a consistent folder structure, can make your TypeScript project challenging to maintain. Establish clear coding conventions and adhere to them to enhance code readability and a better collaboration among team members.
+Inconsistent coding conventions, such as using different naming conventions for variables or not following a consistent folder structure, can make your TypeScript project challenging to maintain. Establish clear coding conventions and adhere to them to enhance code readability and better collaboration among team members.
 
 ```typescript
 // Inconsistent variable naming
