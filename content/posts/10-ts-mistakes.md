@@ -20,25 +20,25 @@ meta_og_image: "https://genez.io/images/chatgptapp.svg"
  
 Below are the subjects we will address:
 
-1. Overuse of type "any"
-2. Misusing "as" Casts
-3. Ignoring Typecheck Errors and Warning
-4. Not Using Strict Mode
-5. Implicit "any" in Function Return Types
-6. Not using "const" and "read-only" correctly
-7. Inconsistent Coding Conventions
-8. Overcomplicating Types
-9. Not Leveraging TypeScript Features
-10. Using third-party libraries
+1. [Overuse of type "any"](#1-overuse-of-type-any)
+2. [Misusing "as" Casts](#2-misusing-as-casts)
+3. [Ignoring Typecheck Errors and Warning](#3-ignoring-typecheck-errors-and-warning)
+4. [Not Using Strict Mode](#4-not-using-strict-mode)
+5. [Implicit "any" in Function Return Types](#5-implicit-any-in-function-return-types)
+6. [Not using "const" and "read-only" correctly](#6-not-using-const-and-read-only-correctly)
+7. [Inconsistent Coding Conventions](#7-inconsistent-coding-conventions)
+8. [Overcomplicating Types](#8-overcomplicating-types)
+9. [Not Leveraging TypeScript Features](#9-not-leveraging-typescript-features)
+10. [Using third-party libraries](#10-using-third-party-libraries)
 
-## 1. Overuse of type "any"
+## 1. Overuse of type `any`
 
-Most developers fall into the habit of using the "any" type excessively. While "any" can be handy in certain situations, relying on it too heavily undermines TypeScript's benefits.
+Most developers fall into the habit of using the `any` type excessively. While `any` can be handy in certain situations, relying on it too heavily undermines TypeScript's benefits.
 It's essential to use more specific types whenever possible to catch potential bugs early in the development process.
 
-Here are two code examples illustrating the overuse of the "any" type and how it can lead to issues in TypeScript:
+Here are two code examples illustrating the overuse of the `any` type and how it can lead to issues in TypeScript:
 
-#####  Overusing "any" in Function Declarations:
+#####  Overusing `any` in Function Declarations:
 ```typescript
 function add(a: any, b: any): any {
   return a + b;
@@ -47,27 +47,27 @@ function add(a: any, b: any): any {
 const result = add(5, "10"); // No TypeScript error, but runtime error
 console.log(result); // Outputs "510" instead of 15
 ```
-In this example, the add function uses the "any" type for its parameters and return type. While TypeScript doesn't complain, it allows for adding two values of different types (number and string), which results in an unexpected behavior.
+In this example, the add function uses the `any` type for its parameters and return type. While TypeScript doesn't complain, it allows for adding two values of different types (number and string), which results in an unexpected behavior.
 
 
-##### Overusing "any" in Arrays:
+##### Overusing `any` in Arrays:
 ```typescript
 const data: any[] = [1, "two", true, { value: 4 }];
 
 for (const item of data) {
-  // No type checking here
+  // No type-checking here
   console.log(item);
 }
 
 data.push(null); // No TypeScript error, but it can lead to issues later
 ```
 
-Here an array data is declared with the type "any[]," which means it can contain elements of any type. While this may be convenient in the short term, it bypasses TypeScript's type checking for array elements, potentially leading to runtime errors or unexpected behavior when working with the array's contents.
+Here an array `data` is declared with the type `any[]`, which means it can contain elements of any type. While this may be convenient in the short term, it bypasses TypeScript's type-checking for array elements, potentially leading to runtime errors or unexpected behavior when working with the array's contents.
 
-## 2. Misusing "as" Casts
+## 2. Misusing `as` Casts
 
-The "as" keyword allows you to assert a type for a variable, but it should be used with caution. Misusing "as" casts can lead to runtime errors if the assertion is incorrect.
-It's better to let TypeScript infer types whenever possible and use "as" only when you have strong reasons to do so, such as when dealing with third-party libraries or complex type transformations.
+The `as` keyword allows you to assert a type for a variable, but it should be used with caution. Misusing `as` casts can lead to runtime errors if the assertion is incorrect.
+It's better to let TypeScript infer types whenever possible and use `as` only when you have strong reasons to do so, such as when dealing with third-party libraries or complex type transformations.
 
 
 ```typescript
@@ -77,11 +77,11 @@ let strLength: number = (userInput as string).length;
 console.log(strLength); // Outputs: 18
 ```
 
-While this code works in this particular scenario, it's considered a misuse of "as" casts because we are bypassing TypeScript's type checking. If userInput were not a string, a runtime error would occur.
+While this code works in this particular scenario, it's considered a misuse of `as` casts because we are bypassing TypeScript's type-checking. If `userInput` were not a string, a runtime error would occur.
 
 ## 3. Ignoring Typecheck Errors and Warning
 
-TypeScript provides valuable type checking and inference, but some developers ignore or suppress typecheck errors and warnings using the "//@ts-ignore" comment.
+TypeScript provides valuable type-checking and inference, but some developers ignore or suppress typecheck errors and warnings using the `//@ts-ignore` comment.
 Ignoring these messages may hide potential issues that could lead to runtime errors or unexpected behavior. It's crucial to address typecheck errors and warnings systematically to ensure code correctness.
 
 ```typescript
@@ -96,15 +96,15 @@ console.log(result); // Outputs "510" instead of 15
 
 ## 4. Not Using Strict Mode
 
-TypeScript's "strict" mode enables a set of stricter type checking options, including `noImplicitAny`, `strictNullChecks`. If you don't enable strict mode in your TypeScript configuration can result in less robust code. Enabling strict mode helps catch more type-related issues at compile-time and promotes safer coding practices.
+TypeScript's `strict` mode enables a set of stricter type-checking options, including `noImplicitAny`, `strictNullChecks`. If you don't enable strict mode in your TypeScript configuration can result in less robust code. Enabling strict mode helps catch more type-related issues at compile-time and promotes safer coding practices.
 
-## 5. Implicit "any" in Function Return Types
+## 5. Implicit `any` in Function Return Types
 
-When TypeScript cannot infer the return type of a function, it defaults to "any." This can lead to unexpected behavior and null/undefined-related errors. Always explicitly declare function return types to ensure that TypeScript provides accurate type checking and to make your code more predictable.
+When TypeScript cannot infer the return type of a function, it defaults to `any`. This can lead to unexpected behavior and `null / undefined` related errors. Always explicitly declare function return types to ensure that TypeScript provides accurate type-checking and to make your code more predictable.
 
-## 6. Not using "const" and "read-only" correctly
+## 6. Not using `const` and `read-only` correctly
 
-TypeScript supports "const" assertions and "readonly" properties to enforce immutability. Failing to use these features correctly can result in unintentional mutations and errors. Utilize "const" and "readonly" appropriately to ensure that your data remains consistent and your code behaves as expected.
+TypeScript supports `const` assertions and `readonly` properties to enforce immutability. Failing to use these features correctly can result in unintentional mutations and errors. Utilize "const" and `readonly` appropriately to ensure that your data remains consistent and your code behaves as expected.
 
 
 ```typescript
@@ -200,7 +200,7 @@ const readOnlyData: MakeReadOnly<OriginalData> = {
   city: "New York",
 };
 ```
-In this example, a mapped type MakeReadOnly is used to make all properties of a type readonly. While mapped types can be useful, excessive use of them can lead to code that is difficult to understand and maintain.
+In this example, a mapped type `MakeReadOnly` is used to make all properties of a type `readonly`. While mapped types can be useful, excessive use of them can lead to code that is difficult to understand and maintain.
 
 ##### Complex Conditional Types
 ```typescript
@@ -213,7 +213,7 @@ type IsTwoWheeler<T> = T extends { wheels: 2 } ? true : false;
 
 const isBicycle: IsTwoWheeler<Vehicle> = true;
 ```
-In this example, a complex conditional type IsTwoWheeler is used to determine if a given Vehicle type has two wheels.
+In this example, a complex conditional type `IsTwoWheeler` is used to determine if a given `Vehicle` type has two wheels.
 
 ## 9. Not Leveraging TypeScript Features
 
@@ -228,7 +228,7 @@ const fruits = ["apple", "banana", "cherry"];
 // TypeScript infers the type of 'fruits' as string[]
 ```
 
-Here, TypeScript automatically infers the type of the fruits array as string[] based on the values it contains, eliminating the need for explicit type annotations.
+Here, TypeScript automatically infers the type of the fruits `array as string[]` based on the values it contains, eliminating the need for explicit type annotations.
 
 ##### Using Generic Types for Reusability
 ```typescript
@@ -253,7 +253,7 @@ function calculateDistance(point1: Point, point2: Point): number {
   return Math.sqrt(Math.pow(point2.x - point1.x, 2) + Math.pow(point2.y - point1.y, 2));
 }
 ```
-Here, we define a `Point` type alias to make the code more self-explanatory, maintainable, and more readable.
+Here, we define a `Point` type alias to make the code more self-explanatory, maintainable, and readable.
 
 ## 10. Using third-party libraries
 
