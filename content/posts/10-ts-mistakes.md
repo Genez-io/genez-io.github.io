@@ -1,6 +1,6 @@
 ---
 title: 10 Common Mistakes in Typescript Development
-date: 2023-10-30
+date: 2023-10-23
 tags:
   - Tutorials
 author: Radu Dumitrescu
@@ -14,10 +14,8 @@ meta_og_image: "https://genez.io/images/chatgptapp.svg"
 # meta data end
 ---
 
-# 10 Common Mistakes in Typescript Development
+We will walk through the most common 10 mistakes from the TypeScript world, hoping to write cleaner, more reliable code.
 
- We will walk through the most common 10 mistakes from the TypeScript world, hoping to write cleaner, more reliable code.
- 
 Below are the subjects we will address:
 
 1. [Overuse of type "any"](#1-overuse-of-type-any)
@@ -38,25 +36,27 @@ It's essential to use more specific types whenever possible to catch potential b
 
 Here are two code examples illustrating the overuse of the `any` type and how it can lead to issues in TypeScript:
 
-#####  Overusing `any` in Function Declarations:
+##### Overusing `any` in Function Declarations:
+
 ```typescript
 function add(a: any, b: any): any {
   return a + b;
 }
 
-const result = add(5, "10"); // No TypeScript error, but runtime error
+const result = add(5, "10"); // No TypeScript error, logic error
 console.log(result); // Outputs "510" instead of 15
 ```
+
 In this example, the add function uses the `any` type for its parameters and return type. While TypeScript doesn't complain, it allows for adding two values of different types (number and string), which results in an unexpected behavior.
 
-
 ##### Overusing `any` in Arrays:
+
 ```typescript
 const data: any[] = [1, "two", true, { value: 4 }];
 
 for (const item of data) {
   // No type-checking here
-  console.log(item);
+  console.log(item.value);
 }
 
 data.push(null); // No TypeScript error, but it can lead to issues later
@@ -68,7 +68,6 @@ Here an array `data` is declared with the type `any[]`, which means it can conta
 
 The `as` keyword allows you to assert a type for a variable, but it should be used with caution. Misusing `as` casts can lead to runtime errors if the assertion is incorrect.
 It's better to let TypeScript infer types whenever possible and use `as` only when you have strong reasons to do so, such as when dealing with third-party libraries or complex type transformations.
-
 
 ```typescript
 let userInput: any = "Hello, TypeScript!";
@@ -106,13 +105,22 @@ When TypeScript cannot infer the return type of a function, it defaults to `any`
 
 TypeScript supports `const` assertions and `readonly` properties to enforce immutability. Failing to use these features correctly can result in unintentional mutations and errors. Utilize "const" and `readonly` appropriately to ensure that your data remains consistent and your code behaves as expected.
 
+Below are some examples of incorrect usage of `const` and `readonly`:
+
+##### Incorrect Usage of `const` with Arrays
 
 ```typescript
-// Using const for variables
-const pi = 3.14159;
-// pi = 3.14; // Error: Cannot assign to 'pi' because it is a constant.
+const numbers = [1, 2, 3];
 
-// Using readonly for class properties
+numbers.push(4); // No TypeScript error, but the array is modified.
+numbers = [4, 5, 6]; // Error: Cannot assign to 'numbers' because it is a constant.
+```
+
+In this example, `const` is used to declare an array of numbers. While attempting to reassign the entire array results in an error, modifying the array using `push` does not produce a TypeScript error, even though it changes the array's content.
+
+##### Misusing `readonly` with Class Properties
+
+```typescript
 class Circle {
   readonly radius: number;
 
@@ -120,26 +128,14 @@ class Circle {
     this.radius = radius;
   }
 
-  getArea() {
-    return Math.PI * this.radius * this.radius;
+  setRadius(newRadius: number) {
+    // Error: Cannot assign to 'radius' because it is a read-only property.
+    this.radius = newRadius;
   }
 }
-
-const circle = new Circle(5);
-console.log(circle.getArea()); // Outputs: 78.53975
-
-// Attempting to change a readonly property (will result in a TypeScript error)
-// circle.radius = 10; // Error: Cannot assign to 'radius' because it is a read-only property.
 ```
 
-We use const to declare the constant `pi`, and attempting to reassign it later in the code results in a TypeScript error, as constants cannot be reassigned.
-
-We define a Circle class with a readonly property `radius`. The `readonly` keyword ensures that the `radius` property can only be set within the class constructor and cannot be modified afterward.
-
-We create an instance of the `Circle` class with a `radius = 5` and calculate its area using the `getArea` method.
-
-Attempting to change the `radius` property of the circle object after it has been created results in a TypeScript error, demonstrating the enforcement of readonly properties.
-
+In this example, the `readonly` keyword is used correctly to declare a read-only property radius in the `Circle` class. However, the `setRadius` method attempts to reassign the `radius` property, which is not allowed.
 
 ## 7. Inconsistent Coding Conventions
 
@@ -154,27 +150,24 @@ const userAddress = "123 Main St";
 // Inconsistent indentation
 function greet() {
   console.log("Hello,");
-    console.log("World!");
+  console.log("World!");
 }
 
 // Inconsistent use of quotes
 const message = "Hello, TypeScript!";
-const title = 'Welcome to the TypeScript tutorial.';
+const title = "Welcome to the TypeScript tutorial.";
 
 // Inconsistent bracing style
 if (condition) {
   console.log("This uses the 'K&R' style.");
-}
-else
-{
-    console.log("This uses a different style.");
+} else {
+  console.log("This uses a different style.");
 }
 
 // Inconsistent file naming
-- userManagement.ts
-- User-Service.ts
-- userStore.ts
+-userManagement.ts - User - Service.ts - userStore.ts;
 ```
+
 ## 8. Overcomplicating Types
 
 While TypeScript allows you to create complex types, overcomplicating them can lead to code that is challenging to understand and maintain
@@ -183,6 +176,7 @@ Look for a balance between precision and simplicity in your type definitions, an
 Some examples of overcomplicated types:
 
 ##### Excessive Use of Mapped Types
+
 ```typescript
 type OriginalData = {
   name: string;
@@ -197,12 +191,14 @@ type MakeReadOnly<T> = {
 const readOnlyData: MakeReadOnly<OriginalData> = {
   name: "Alice",
   age: 30,
-  city: "New York",
+  city: "New York"
 };
 ```
+
 In this example, a mapped type `MakeReadOnly` is used to make all properties of a type `readonly`. While mapped types can be useful, excessive use of them can lead to code that is difficult to understand and maintain.
 
 ##### Complex Conditional Types
+
 ```typescript
 type Vehicle = {
   type: "car" | "motorcycle" | "bicycle";
@@ -213,6 +209,7 @@ type IsTwoWheeler<T> = T extends { wheels: 2 } ? true : false;
 
 const isBicycle: IsTwoWheeler<Vehicle> = true;
 ```
+
 In this example, a complex conditional type `IsTwoWheeler` is used to determine if a given `Vehicle` type has two wheels.
 
 ## 9. Not Leveraging TypeScript Features
@@ -231,6 +228,7 @@ const fruits = ["apple", "banana", "cherry"];
 Here, TypeScript automatically infers the type of the fruits `array as string[]` based on the values it contains, eliminating the need for explicit type annotations.
 
 ##### Using Generic Types for Reusability
+
 ```typescript
 function identity<T>(arg: T): T {
   return arg;
@@ -239,9 +237,11 @@ function identity<T>(arg: T): T {
 const str: string = identity("Hello, TypeScript!"); // Type is inferred as string
 const num: number = identity(42); // Type is inferred as number
 ```
+
 In this example, we use a generic function `identity` that allows us to work with various types while maintaining type safety. This promotes code reusability and flexibility.
 
 ##### Type Aliases for Clarity
+
 ```typescript
 type Point = {
   x: number;
@@ -250,20 +250,20 @@ type Point = {
 
 function calculateDistance(point1: Point, point2: Point): number {
   // Calculate distance
-  return Math.sqrt(Math.pow(point2.x - point1.x, 2) + Math.pow(point2.y - point1.y, 2));
+  return Math.sqrt(
+    Math.pow(point2.x - point1.x, 2) + Math.pow(point2.y - point1.y, 2)
+  );
 }
 ```
+
 Here, we define a `Point` type alias to make the code more self-explanatory, maintainable, and readable.
 
 ## 10. Using third-party libraries
 
 Using third-party libraries is common in modern development, but not all libraries have strong TypeScript support. Relying on poorly typed or untyped libraries can introduce type-related bugs into your codebase. Whenever possible, choose well-maintained libraries with TypeScript typings or write your own typings to ensure type safety.
 
-
 ## Conclusion
 
 TypeScript is a valuable tool for writing safer and more maintainable code, but it's essential to use it correctly. By avoiding these common mistakes and following best practices, you can harness the full potential of TypeScript and build more reliable software.
 
 Let me know if you need help by contacting me on {{< external-link link="https://discord.gg/XmpKD9ytxS" >}}Discord{{< /external-link >}} or write me an email at radu@genez.io.
-
- 
