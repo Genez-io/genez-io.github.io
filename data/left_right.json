@@ -3,8 +3,8 @@
     "textAlignment": "left",
     "header": "Your backend. Redeployed.",
     "title": "Cloud resource optimization",
-    "paragraphHead1": "Zero Devops Involvement",
-    "paragraph1": "One command line deploys on amazon lambda. Extensible to other platforms, open source. Working to bring our cloud to you. Faster cheaper open source",
+    "paragraphHead1": "Zero devops involvement",
+    "paragraph1": "One command line deploys on Amazon Lambda. Extensible to other platforms, open source. Working to bring our cloud to you. Faster cheaper open source.",
     "paragraphHead2": "Auto upscale and downscale",
     "paragraph2": "Scale backend code automatically to zero or to millions of users with no AWS knowledge.",
     "row": "1"
@@ -14,7 +14,7 @@
     "header": "Your preferred language - Javascript",
     "title": "Focus on what truly matters",
     "paragraphHead1": "Framework agnostic",
-    "paragraph1": "Know and love react, svelte or vue? Use node.js to write and genezio deploy the complete full stack app",
+    "paragraph1": "Know and love React, Svelte or Vue? Use Node.js to write and genezio deploy the complete full-stack app.",
     "paragraphHead2": "Unlearn REST",
     "paragraph2": "Natural function calls for backend method invocation replaces REST bringing type safety, code clarity and auto completion in your favorite IDE.",
     "row": "2"
