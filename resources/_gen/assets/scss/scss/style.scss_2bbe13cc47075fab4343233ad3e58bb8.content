@@ -16313,7 +16313,7 @@ ul.pagination li {
       margin-top: 10px;
       padding-left: 0px; } }
 .page-home .review {
-  width: 56%;
+  width: 61%;
   margin-bottom: 30px; }
   .page-home .review p {
     line-height: 31.47px;

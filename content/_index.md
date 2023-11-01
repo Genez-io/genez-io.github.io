@@ -1,12 +1,12 @@
 ---
 title: "genezio" 
 date: 2019-02-22
-leadTitle: "The easiest way to write and host a serverless application"
+leadTitle: "Next gen. full-stack platform for modern software development"
 leadSubTitle: "MOVED INLINE"
 callToAction: 'Learn more'
-leadButtonOneText: 'Start for free'
+leadButtonOneText: 'Start for Free'
 leadButtonOneLink: 'https://app.genez.io/auth/signup'
-leadButtonTwoText: 'Check our Docs'
+leadButtonTwoText: 'Check our Demo/Docs'
 leadButtonTwoLink: 'https://docs.genez.io/'
 productTextP1: "Because you, just like us, are passionate about developing new apps, new features. You want to bring them to your users as fast as possible. You want to focus on your code, develop, debug, release and iterate fast."
 productTextP2: "Because you like writing elegant code. You don’t want to lose time 
