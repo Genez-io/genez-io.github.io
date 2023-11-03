@@ -16,8 +16,6 @@ meta_og_image: "https://genez.io/images/genezio_xday.webp"
 # meta data end
 ---
 
-Genezio Empowered Web3 Innovation at the xDay.2023 Hackathon
-
 This article will present DeFiBuilder and GiveCup, two emerging Web3 startups that started their journey at the xDay.2023 Hackathon, one of Europe’s largest Web3 developers competitions.
 
 Teams from both DeFiBuilder and GiveCup won big prizes at the hackathon, and we are very excited to tell you that genezio helped them save a lot of time during the hackathon. The winning teams said genezio enabled them to focus on developing their features, rather than spend time on configuring servers and settings.
