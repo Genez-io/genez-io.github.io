@@ -1,5 +1,5 @@
 ---
-title: Use genezio to win hackathons - XDay.2023 success stories
+title: Genezio Empowered Web3 Innovation at the xDay.2023 Hackathon
 date: 2023-11-03
 tags:
   - News
