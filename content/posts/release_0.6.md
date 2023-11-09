@@ -14,7 +14,6 @@ meta_og_image: "https://genez.io/images/release0.6.webp"
 # meta data end
 ---
 
-
 ## Genezio New Release
 
 Since our last release, we've introduced some new features that make it easier to integrate a database, simplify yaml configuration files, and many more. Let's explore the latest updates:
