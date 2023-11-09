@@ -1,6 +1,13 @@
 name: GENEZIO-PROD-WEBSITE
 region: us-east-1
 cloudProvider: aws
+sdk:
+  language: js
+  path: ./sdk/
 frontend:
   path: ./public
   subdomain: genezio-prod-website
+classes:
+  - path: hello.js
+    type: jsonrpc
+    methods: []
