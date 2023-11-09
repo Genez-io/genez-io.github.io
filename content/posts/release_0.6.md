@@ -1,4 +1,4 @@
-<!-- ---
+---
 title: Integrate Redis and Postgres plus much more - genezio v0.6
 date: 2023-11-09
 tags:
@@ -104,4 +104,4 @@ Create your project faster than ever with the new **genezio command**! With the 
 
 ## What’s next?
 
-At genezio we aim to offer our users the best experience with our product, while saving precious time and money. Stay tuned and join our {{< external-link link="https://discord.gg/uc9H5YKjXv" >}}Discord community{{< /external-link >}} to be the first to hear about new features. If you need any help or advice, write a message on Discord or send us an email at <contact@genez.io>. -->
+At genezio we aim to offer our users the best experience with our product, while saving precious time and money. Stay tuned and join our {{< external-link link="https://discord.gg/uc9H5YKjXv" >}}Discord community{{< /external-link >}} to be the first to hear about new features. If you need any help or advice, write a message on Discord or send us an email at <contact@genez.io>.
