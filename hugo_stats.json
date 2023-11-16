@@ -198,7 +198,6 @@
     "ids": [
       "1-overuse-of-type-any",
       "1-set-up-your-github-repository",
-      "10-common-mistakes-in-typescript-development",
       "10-using-third-party-libraries",
       "2-misusing-as-casts",
       "2-setting-up-github-actions",
@@ -286,8 +285,6 @@
       "log-in-to-the-genezio-cloud",
       "main-menu-mobile",
       "menu-main",
-      "meta-data-end",
-      "meta-data-start",
       "misusing-readonly-with-class-properties",
       "no-warranties",
       "objectives",

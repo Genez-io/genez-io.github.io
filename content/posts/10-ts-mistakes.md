@@ -1,20 +1,20 @@
 ---
 title: 10 Common Mistakes in Typescript Development
-date: 2023-10-23
+date: 2023-10-16
 tags:
   - Tutorials
 author: Radu Dumitrescu
 linkedIn: https://www.linkedin.com/in/radu-andrei-dumitrescu/
-thumbnail: /images/chatgptapp.svg
+thumbnail: /images/mistakesintypescript.webp
 preview: We will walk through the most common 10 mistakes in typescript and how to avoid them.
 # meta data start
 description: "We will walk through the most common 10 mistakes in typescript and how to avoid them."
 meta_og_url: "https://genez.io/blog/10-common-mistakes-in-typescript-development"
-meta_og_image: "https://genez.io/images/chatgptapp.svg"
+meta_og_image: "https://genez.io/images/mistakesintypescript.webp"
 # meta data end
 ---
 
-We will walk through the most common 10 mistakes from the TypeScript world, hoping to write cleaner, more reliable code.
+We will walk through the most common 10 mistakes made in the TypeScript world, hoping to write cleaner, more reliable code.
 
 Below are the subjects we will address:
 
@@ -31,12 +31,11 @@ Below are the subjects we will address:
 
 ## 1. Overuse of type `any`
 
-Most developers fall into the habit of using the `any` type excessively. While `any` can be handy in certain situations, relying on it too heavily undermines TypeScript's benefits.
-It's essential to use more specific types whenever possible to catch potential bugs early in the development process.
+One of the most common mistakes when transiting from a non typed language to a typed one is using any type excessively. While any can come in handy in certain situations, relying on it too heavily undermines TypeScript’s benefits. It’s essential to use more specific types whenever possible to catch potential bugs early in the development process.
 
-Here are two code examples illustrating the overuse of the `any` type and how it can lead to issues in TypeScript:
+Here are two code examples illustrating the overuse of any type and how it can lead to issues in TypeScript:
 
-##### Overusing `any` in Function Declarations:
+Overusing any in Function Declarations:
 
 ```typescript
 function add(a: any, b: any): any {
@@ -47,9 +46,9 @@ const result = add(5, "10"); // No TypeScript error, logic error
 console.log(result); // Outputs "510" instead of 15
 ```
 
-In this example, the add function uses the `any` type for its parameters and return type. While TypeScript doesn't complain, it allows for adding two values of different types (number and string), which results in an unexpected behavior.
+In this example, the add function uses any type for its parameters and return type. While TypeScript doesn’t complain, it allows for adding up two values of different types (number and string), which results in an unexpected behavior.
 
-##### Overusing `any` in Arrays:
+Overusing any in Arrays:
 
 ```typescript
 const data: any[] = [1, "two", true, { value: 4 }];
@@ -62,7 +61,7 @@ for (const item of data) {
 data.push(null); // No TypeScript error, but it can lead to issues later
 ```
 
-Here an array `data` is declared with the type `any[]`, which means it can contain elements of any type. While this may be convenient in the short term, it bypasses TypeScript's type-checking for array elements, potentially leading to runtime errors or unexpected behavior when working with the array's contents.
+Here an array data is declared with the type any\[], which means it can contain elements of any type. While this may be convenient in the short term, it bypasses TypeScript’s type-checking for array elements, potentially leading to runtime errors or unexpected behavior when working with the array’s contents.
 
 ## 2. Misusing `as` Casts
 
@@ -107,7 +106,7 @@ TypeScript supports `const` assertions and `readonly` properties to enforce immu
 
 Below are some examples of incorrect usage of `const` and `readonly`:
 
-##### Incorrect Usage of `const` with Arrays
+#### Incorrect Usage of `const` with Arrays
 
 ```typescript
 const numbers = [1, 2, 3];
@@ -118,7 +117,7 @@ numbers = [4, 5, 6]; // Error: Cannot assign to 'numbers' because it is a consta
 
 In this example, `const` is used to declare an array of numbers. While attempting to reassign the entire array results in an error, modifying the array using `push` does not produce a TypeScript error, even though it changes the array's content.
 
-##### Misusing `readonly` with Class Properties
+#### Misusing `readonly` with Class Properties
 
 ```typescript
 class Circle {
@@ -175,7 +174,7 @@ Look for a balance between precision and simplicity in your type definitions, an
 
 Some examples of overcomplicated types:
 
-##### Excessive Use of Mapped Types
+#### Excessive Use of Mapped Types
 
 ```typescript
 type OriginalData = {
@@ -191,13 +190,13 @@ type MakeReadOnly<T> = {
 const readOnlyData: MakeReadOnly<OriginalData> = {
   name: "Alice",
   age: 30,
-  city: "New York"
+  city: "New York",
 };
 ```
 
 In this example, a mapped type `MakeReadOnly` is used to make all properties of a type `readonly`. While mapped types can be useful, excessive use of them can lead to code that is difficult to understand and maintain.
 
-##### Complex Conditional Types
+#### Complex Conditional Types
 
 ```typescript
 type Vehicle = {
@@ -218,7 +217,7 @@ TypeScript offers various advanced features like union types, intersection types
 
 Some examples of TypeScript features that are not used effectively:
 
-##### Leveraging Type Inference
+#### Leveraging Type Inference
 
 ```typescript
 const fruits = ["apple", "banana", "cherry"];
@@ -227,7 +226,7 @@ const fruits = ["apple", "banana", "cherry"];
 
 Here, TypeScript automatically infers the type of the fruits `array as string[]` based on the values it contains, eliminating the need for explicit type annotations.
 
-##### Using Generic Types for Reusability
+#### Using Generic Types for Reusability
 
 ```typescript
 function identity<T>(arg: T): T {
@@ -240,7 +239,7 @@ const num: number = identity(42); // Type is inferred as number
 
 In this example, we use a generic function `identity` that allows us to work with various types while maintaining type safety. This promotes code reusability and flexibility.
 
-##### Type Aliases for Clarity
+#### Type Aliases for Clarity
 
 ```typescript
 type Point = {
@@ -250,9 +249,7 @@ type Point = {
 
 function calculateDistance(point1: Point, point2: Point): number {
   // Calculate distance
-  return Math.sqrt(
-    Math.pow(point2.x - point1.x, 2) + Math.pow(point2.y - point1.y, 2)
-  );
+  return Math.sqrt(Math.pow(point2.x - point1.x, 2) + Math.pow(point2.y - point1.y, 2));
 }
 ```
 
