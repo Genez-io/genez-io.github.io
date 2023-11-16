@@ -17,6 +17,7 @@
   <meta name="theme-color" content="{{ .Site.Params.primary_color }}" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="{{ .Site.Params.primary_color }}" media="(prefers-color-scheme: dark)">
 
+  
   <!-- Favicon -->
   <link rel="shortcut icon" href="{{ .Site.BaseURL }}favicon.png">
   <link rel="apple-touch-icon" sizes="120x120" href="{{ .Site.BaseURL }}apple-touch-icon-120x120-precomposed.png" />
@@ -71,6 +72,15 @@
 
     gtag('config', 'G-VR905VXGKC');
   </script>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-11377331429">
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-11377331429');
+</script>
 </head>
 
 <body class='page {{ block "body_classes" . }}{{ end }}'>

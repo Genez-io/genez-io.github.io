@@ -2,7 +2,7 @@ baseURL = "/"
 languageCode = "en-us"
 title = "genezio"
 theme = "genezio-theme"
-paginate = 12
+paginate = 20
 
 pygmentsCodeFences = true
 pygmentsCodefencesGuessSyntax = true

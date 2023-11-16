@@ -85,11 +85,11 @@ A success message will appear on the screen, and you can now return to your term
 Now that you are logged in, let’s make this easy. Clone this GitHub repository to your computer. If you don’t remember how to do this, copy and paste these commands in your terminal:
 
 ```
-git clone https://github.com/Genez-io/genezio-examples.git
-cd ./genezio-examples/javascript/getting-started/backend
+git clone https://github.com/Genez-io/genezio-getting-started-typescript.git
+cd ./genezio-getting-started-typescript
 ```
 
-By running this set of commands, the repository is cloned into a local directory named genezio-examples, and then the getting-started project folder for JavaScript is entered.
+By running this set of commands, the repository is cloned into a local directory named `genezio-getting-started-typescript`, and then going to that project.
 
 ## Test your application locally
 
