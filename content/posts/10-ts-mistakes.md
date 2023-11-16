@@ -1,6 +1,6 @@
 ---
 title: 10 Common Mistakes in Typescript Development
-date: 2023-10-16
+date: 2023-11-16
 tags:
   - Tutorials
 author: Radu Dumitrescu
