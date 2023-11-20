@@ -6,7 +6,7 @@ tags:
 author: Andreia Ocanoaia
 linkedIn: https://www.linkedin.com/in/andreia-irina-ocanoaia/
 thumbnail:
-preview: Learn how to build a shopping cart app with Typescript, Redis and React.
+preview: Learn how to build a shopping cart app with Typescript, Redis, and React.
 # meta data start
 description: Learn how to seamlessly implement a scalable, fast, and robust shopping cart using Redis, NodeJs, and React. Whether you're building from scratch or extending your e-commerce application, this tutorial guides you step-by-step through implementing a reliable shopping cart feature.
 meta_og_url:
@@ -14,9 +14,9 @@ meta_og_image:
 # meta data end
 ---
 
-In this tutorial, I'll show you to use Redis, NodeJs and React to easily implement a shopping cart for your online store.
+In this tutorial, I'll show you how to use Redis, NodeJs, and React to easily implement a shopping cart for your online store.
 
-There are a lot of things to consider when implementing a shopping cart functionality for an online store - the cart feature should be scalable, fast and robust to offer a great experience for your users.
+There are a lot of things to consider when implementing a shopping cart functionality for an online store - the cart feature should be scalable, fast, and robust to offer a great experience for your users.
 
 The best part of this tutorial is that you can easily extend it or integrate it with your existing application.
 
@@ -36,28 +36,28 @@ Let's get started! 🚀
 
 ## Introduction
 
-A possible implementation of a shopping cart is to store the items as a cookie on the client-side. The disadvantage of this approach is that the cookie is attached to every request and large cookies can significantly slow down your application.
+A possible implementation of a shopping cart is to store the items as a cookie on the client side. The disadvantage of this approach is that the cookie is attached to every request and large cookies can significantly slow down your application.
 
-A better option is to use a Redis database on the server-side to store items persistently and retrieve them very fast when needed.
+A better option is to use a Redis database on the server side to store items persistently and retrieve them very fast when needed.
 
 This tutorial will show you how to harness the speed of a Redis database to build a shopping cart functionality using TypeScript/NodeJs.
 
 {{< details "Expand this section to get more information on what's Redis" >}}
 
-Redis is an open-source, in-memory database that stores key, values pairs. Redis is a highly versatile and performant database system. One of Redis's key features is its speed, as it primarily operates in-memory, enabling rapid data access. It is widely used for caching, real-time analytics, message brokering, and other applications where low-latency and high-throughput data storage and retrieval are crucial. Redis also provides persistence options, allowing data to be saved to disk for durability. Its simplicity, efficiency, and support for advanced data structures make Redis a popular choice for applications requiring fast and scalable data storage and retrieval.
+Redis is an open-source, in-memory database that stores key, value pairs. Redis is a highly versatile and performant database system. One of Redis's key features is its speed, as it primarily operates in-memory, enabling rapid data access. It is widely used for caching, real-time analytics, message brokering, and other applications where low-latency and high-throughput data storage and retrieval are crucial. Redis also provides persistence options, allowing data to be saved to disk for durability. Its simplicity, efficiency, and support for advanced data structures make Redis a popular choice for applications requiring fast and scalable data storage and retrieval.
 
 [Upstash](https://upstash.com/) is a cutting-edge platform for modern developers seeking seamless data management in serverless and cloud-native applications. Offering Redis-compatible, in-memory database services, Upstash simplifies data storage and access, making it a natural fit for serverless functions, web apps, and cloud-native architectures.
 
-By partnering with Upstash, genezio provides an easy to use solution to add an Upstash Redis database to your project from the genezio dashboard.
+By partnering with Upstash, genezio provides an easy-to-use solution to add an Upstash Redis database to your project from the genezio dashboard.
 {{< /details >}}
 
 On the frontend side, we'll use React and Bootstrap to implement a minimal frontend for the online store.
-The great part about a minimal design, is that you can go as wild as you'd like with the frontend and tweak it further to your liking.
+The great part about a minimal design is that you can go as wild as you'd like with the frontend and tweak it further to your liking.
 
 {{< details "Expand this section to get more information on what's React and Bootstrap" >}}
 
-Bootstrap is a widely-used open-source frontend framework that helps you minify build your frontend application by providing a responsive grid system and lots of pre-designed components.
-Reactstrap s a library that brings Bootstrap components into React applications. Reactstrap provides React-friendly versions of Bootstrap components, allowing developers to use the power of Bootstrap's styling and functionality within a React application.
+Bootstrap is a widely-used open-source frontend framework that helps you minify your frontend application by providing a responsive grid system and lots of pre-designed components.
+Reactstrap is a library that brings Bootstrap components into React applications. Reactstrap provides React-friendly versions of Bootstrap components, allowing developers to use the power of Bootstrap's styling and functionality within a React application.
 
 Check out the [Reacstrap documentation](https://reactstrap.github.io/?path=/story/home-installation--page) to learn more about the framework and see the components available.
 
@@ -65,7 +65,7 @@ Check out the [Reacstrap documentation](https://reactstrap.github.io/?path=/stor
 
 We will use `genezio` to help you scaffold the web app and deploy it to the cloud.
 
-The end result of this tutorial will be a web application that looks like this:
+The result of this tutorial will be a web application that looks like this:
 
 ![Alt text](/images/blog/shopping_cart_example/shopping_cart_preview.png)
 
@@ -77,17 +77,17 @@ If you don't already have them, you'll need to install the following tools:
 - [Genezio](https://genez.io)
 
 Note: I recommend you to use [nvm](https://github.com/nvm-sh/nvm#installing-and-updating) to manage NodeJs and npm versions.
-After installing `nvm`, you can easily get the any version of `node` by running `nvm install <node_version>`.
+After installing `nvm`, you can easily get any version of `node` by running `nvm install <node_version>`.
 `nvm` will automatically install the corresponding `npm` version.
 
 ## Getting Started
 
 Firstly, you'll need to create a new project with a server and a client.
-The server will be responsible to communicate (store, retrieve, update, delete) with the Redis database.
+The server will be responsible for communicating (storing, retrieving, updating, deleting) with the Redis database.
 The client will render the products available in the store and allow the user to add them to the shopping cart.
 
 To get started with a template, install `genezio` using `npm` and run it in your terminal.
-Later on, `genezio` come in handy to deploy and host your web applications in the cloud.
+Later on, `genezio` will come in handy to deploy and host your web applications in the cloud.
 
 ```bash
 npm install -g genezio
@@ -134,7 +134,7 @@ The output from the `genezio` command will contain a randomly-assigned subdomain
 Now that you have a template to start from, fire up your favorite code editor and open the project's directory.
 
 
-The following piece of code will connect you to a Redis database and allow you to store and retrieve items to the shopping cart based on a session id.
+The following piece of code will connect you to a Redis database and allow you to store and retrieve items to the shopping cart based on a session ID.
 This approach will be useful to accommodate more than 1 user on your web app.
 
 Create a new file called `shoppingCartService.ts` in the `server` directory and paste the following code snippet to it.
@@ -173,7 +173,7 @@ export class ShoppingCartService{
     const cart = await this.client.hgetall('cart:' + sessionId).catch((err) => {
       throw new Error(err);
     });
-    // check if cart is empty
+    // check if the cart is empty
     if (Object.keys(cart).length === 0) {
       console.error("Cart is empty");
       return [];
@@ -211,7 +211,7 @@ Go to the [genezio dashboard](https://app.genez.io) and add an Upstash Redis int
 
 If you get stuck at this step, you can follow the [Upstash Redis integration tutorial](https://docs.genez.io/genezio-documentation/integrations/upstash-redis).
 
-After adding the Upstash Redis integration, copy the environment variable from the `.env` section. Go back to your `server` directory, create a new file called `.env` and paste the contents there.
+After adding the Upstash Redis integration, copy the environment variable from the `.env` section. Go back to your `server` directory, create a new file called `.env`, and paste the contents there.
 
 ![Alt text](/images/blog/shopping_cart_example/copy_env_vars.png)
 
@@ -229,7 +229,7 @@ You can test your application from the genezio dashboard by following the URL ex
 Test your code at https://app.genez.io/test-interface/local?port=8083
 ```
 
-From the genezio dashboard you can send requests to your backend classes and see the responses.
+From the genezio dashboard, you can send requests to your backend classes and see the response.
 
 ![Alt text](/images/blog/shopping_cart_example/test_backend.png)
 
@@ -290,7 +290,7 @@ Now that your backend logic is ready, you can thoroughly test it by sending requ
 
 Going forward, you'll need to create a React app to render the products available in the store and allow the user to add them to the shopping cart.
 
-For the purposes of this tutorial, the online store will be populated with dummy products using [dummyjson](https://dummyjson.com/products). This API will return a list of dummy products in JSON format with various fields.
+For this tutorial, the online store will be populated with dummy products using [dummyjson](https://dummyjson.com/products). This API will return a list of dummy products in JSON format with various fields.
 
 Firstly, let's render the products in the online store. To avoid writing a lot of CSS, you can use [Bootstrap](https://getbootstrap.com/) to style your application. Bootstrap provides a lot of ready-to-use components that you can use in your application.
 
@@ -370,7 +370,7 @@ Create a state to keep track if the cart button was clicked. This state will be 
 ```
 
 To start the frontend on your localhost, run `npm run start`. This will initialize the frontend application on `localhost:3000`.
-Keep the frontend running in the background and open `localhost:3000` in your browser to see the changes real-time every time you change the source code.
+Keep the frontend running in the background and open `localhost:3000` in your browser to see the changes in real-time every time you change the source code.
 
 Add a list with the fetched products.
 
@@ -403,7 +403,7 @@ Add a list with the fetched products.
   </Container>
 ```
 
-Add a modal that opens when the shopping cart button is clicked. In the modal, we'll display the content of the shopping cart and allow the user to close the cart, clear the cart or delete an item from it.
+Add a modal that opens when the shopping cart button is clicked. In the modal, we'll display the content of the shopping cart and allow the user to close the cart, clear the cart, or delete an item from it.
 
 ```typescript
 {isCartVisible && (
@@ -517,7 +517,7 @@ Send a request to the backend to clear the cart when the `Clear Cart` button is 
 
 Your application is now ready to be deployed to the cloud to be used by your clients.
 
-Before deploying your application, you can change the randomly-assigned subdomain to something more meaningful for your application.
+Before deploying your application, you can change the randomly assigned subdomain to something more meaningful for your application.
 To do that, go to genezio config file - `genezio.yaml` - and modify the `subdomain` field.
 
 To deploy your application, run the following command in the root directory of your project:
@@ -532,11 +532,11 @@ You can continue to manage, test, update and monitor your project from the genez
 
 ## Improvements
 
-If you feel tired you can jump to the conclusions. But if you want to improve your web development skills, here are some ideas to extend the application.
+If you feel tired you can jump to the conclusions section. But if you want to improve your web development skills, here are some ideas to extend the application.
 
 ### Add a counter for the number of items in the cart
 
-It would be great if the user can see the number of items in the cart each time the `Buy now` button is clicked.
+It would be great if the user could see the number of items in the cart each time the `Buy now` button is clicked.
 This way, the user has a visual indication that the item was successfully added to the cart.
 
 Add a new state to keep track of the number of items in the cart.
@@ -587,7 +587,7 @@ This state should be updated each time an item is added or removed from the cart
 
 To improve the UI even further, you can add spinners to indicate loading states on the buttons that are sending requests to the backend.
 
-Each button should have a its own loading state to indicate that the request is being processed.
+Each button should have its own loading state to indicate that the request is being processed.
 
 Below is an example of how to add a loading state to the `Buy now` button.
 
@@ -627,4 +627,4 @@ Congratulations! 🥳
 
 The codebase for this tutorial is open-source, and you can find it on the [GitHub repository](https://github.com/genez-io/genezio-examples/tree/main/typescript/shopping-cart).
 
-I hope you enjoyed this tutorial and I encourage you to check out our other [tutorials](https://genez.io/blog) for more tips and tricks on improving your software engineer skills. 🥷 💻
+I hope you enjoyed this tutorial and I encourage you to check out our other [tutorials](https://genez.io/blog) for more tips and tricks on improving your software engineering skills. 🥷 💻
