@@ -233,7 +233,7 @@ From the genezio dashboard you can send requests to your backend classes and see
 
 ![Alt text](/images/blog/shopping_cart_example/test_backend.png)
 
-You'll also need 2 more methods in the backend source code - a method to remove only an item from the cart and a method to delete the entire cart.
+ You'll also need 2 more methods in the backend source code - a method to remove only one item from the cart and a method to delete the entire cart.
 
 Add the following methods to the `ShoppingCartService` class:
 
