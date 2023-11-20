@@ -101,7 +101,7 @@ genezio
 
 The command above will get you through a series of questions to help you customize and prepare your project for production deployment.
 
-Your terminal should similar to the following output:
+Your terminal should look similar to the following output:
 ```
 ~ genezio
 Redirecting to browser to complete authentication...
