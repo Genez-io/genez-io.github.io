@@ -517,7 +517,7 @@ Send a request to the backend to clear the cart when the `Clear Cart` button is 
 
 Your application is now ready to be deployed to the cloud to be used by your clients.
 
-Before deploying your application, you can change the randomly-assigned subdomain to something more meaningly for your application.
+Before deploying your application, you can change the randomly-assigned subdomain to something more meaningful for your application.
 To do that, go to genezio config file - `genezio.yaml` - and modify the `subdomain` field.
 
 To deploy your application, run the following command in the root directory of your project:
