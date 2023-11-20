@@ -295,6 +295,81 @@ For this tutorial, the online store will be populated with dummy products using 
 
 Firstly, let's render the products in the online store. To avoid writing a lot of CSS, you can use [Bootstrap](https://getbootstrap.com/) to style your application. Bootstrap provides a lot of ready-to-use components that you can use in your application.
 
+In this section of the tutorial, there are quite a few code snippets coming your way. If you ever feel lost, you can check out the codebase for this tutorial on the [GitHub repository](https://github.com/genez-io/genezio-examples/tree/main/typescript/shopping-cart).
+
+{{< details "Expand for more details on how to structure a React project" >}}
+
+A typical React project has the following directory structure:
+```
+.
+├── README.md
+├── build/
+├── public/
+├── src
+│   ├── App.css
+│   ├── App.tsx
+│   ├── index.css
+│   ├── index.tsx
+│   ├── models.tsx
+│   ├── react-app-env.d.ts
+│   └── reportWebVitals.ts
+├── package-lock.json
+├── package.json
+└── tsconfig.json
+```
+
+In the `build` directory there is the bundle source code for the web application. This directory is generated when you run `npm run build` in the project directory. This will also be uploaded and host in the cloud to be accessible for your users.
+
+In the `public` directory you can store static files that will be used in your application. For example, you can store images, fonts, or other assets in this directory.
+
+In the `src` directory you can find the source code for your application. The `index.tsx` file is the entry point for your application. This file will be responsible for rendering the `App` component in the `public/index.html` file.
+
+The `App.tsx` file is the main component of your application. This component will be responsible for rendering the other components in your application. This is where you'll write most of your code.
+
+In the `models.tsx` file you can declare the interfaces that will be used in your application. This file will be useful to keep track of the data types used in your application.
+
+If you open up `App.tsx` in your IDE, you'll see the following code snippet:
+```typescript
+// Import necessary dependencies
+import React from 'react';
+import './App.css'; // Import your styles if needed
+
+// Define the App component
+const App: React.FC = () => {
+  // Define the states of the app
+  const [count, setCount] = useState(0);
+
+  // Implement the different logic based on the states
+  const handleCounter = (amount: number) => {
+    setCount(count + amount);
+  };
+
+
+  return (
+    <div className="app">
+      {/* Header component */}
+      <Header />
+
+      {/* Main content component */}
+      <MainContent />
+
+      // Use triggers to change the states
+      <div>
+        <p>Count: {count}</p>
+        <button onClick={() => handleCounter(1)}>Add</button>
+        <button onClick={() => handleCounter(-1)}>Subtract</button>
+      </div>
+
+      {/* Footer component */}
+      <Footer />
+    </div>
+  );
+};
+
+export default App;
+```
+
+{{< /details >}}
 Firstly, let's install the dependencies for the frontend by running the following command in the `client` directory of your project:
 
 ```bash
