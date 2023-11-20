@@ -229,7 +229,7 @@ You can test your application from the genezio dashboard by following the URL ex
 Test your code at https://app.genez.io/test-interface/local?port=8083
 ```
 
-From the genezio dashboard you can sent request to your backend classes and see the response.
+From the genezio dashboard you can send requests to your backend classes and see the responses.
 
 ![Alt text](/images/blog/shopping_cart_example/test_backend.png)
 
