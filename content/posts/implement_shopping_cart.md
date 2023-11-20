@@ -625,6 +625,6 @@ Below is an example of how to add a loading state to the `Buy now` button.
 
 Congratulations! 🥳
 
-The codebase for this tutorial is open-source and you can find it on the [GitHub repository](https://github.com/genez-io/genezio-examples/tree/main/typescript/shopping-cart).
+The codebase for this tutorial is open-source, and you can find it on the [GitHub repository](https://github.com/genez-io/genezio-examples/tree/main/typescript/shopping-cart).
 
 I hope you enjoyed this tutorial and I encourage you to check out our other [tutorials](https://genez.io/blog) for more tips and tricks on improving your software engineer skills. 🥷 💻
