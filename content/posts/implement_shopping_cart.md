@@ -131,7 +131,7 @@ The output from the `genezio` command will contain a randomly-assigned subdomain
 
 ## Setting up the backend
 
-Now that you have a template to start from, fire up your favorite code editor and open project's directory.
+Now that you have a template to start from, fire up your favorite code editor and open the project's directory.
 
 
 The following piece of code will connect you to a Redis database and allow you to store and retrieve items to the shopping cart based on a session id.
