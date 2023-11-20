@@ -46,7 +46,7 @@ This tutorial will show you how to harness the speed of a Redis database to buil
 
 Redis is an open-source, in-memory database that stores key, value pairs. Redis is a highly versatile and performant database system. One of Redis's key features is its speed, as it primarily operates in-memory, enabling rapid data access. It is widely used for caching, real-time analytics, message brokering, and other applications where low-latency and high-throughput data storage and retrieval are crucial. Redis also provides persistence options, allowing data to be saved to disk for durability. Its simplicity, efficiency, and support for advanced data structures make Redis a popular choice for applications requiring fast and scalable data storage and retrieval.
 
-[Upstash](https://upstash.com/) is a cutting-edge platform for modern developers seeking seamless data management in serverless and cloud-native applications. Offering Redis-compatible, in-memory database services, Upstash simplifies data storage and access, making it a natural fit for serverless functions, web apps, and cloud-native architectures.
+{{< external-link link="https://upstash.com/" >}}Upstash{{< /external-link >}} is a cutting-edge platform for modern developers seeking seamless data management in serverless and cloud-native applications. Offering Redis-compatible, in-memory database services, Upstash simplifies data storage and access, making it a natural fit for serverless functions, web apps, and cloud-native architectures.
 
 By partnering with Upstash, genezio provides an easy-to-use solution to add an Upstash Redis database to your project from the genezio dashboard.
 {{< /details >}}
@@ -59,7 +59,7 @@ The great part about a minimal design is that you can go as wild as you'd like w
 Bootstrap is a widely-used open-source frontend framework that helps you minify your frontend application by providing a responsive grid system and lots of pre-designed components.
 Reactstrap is a library that brings Bootstrap components into React applications. Reactstrap provides React-friendly versions of Bootstrap components, allowing developers to use the power of Bootstrap's styling and functionality within a React application.
 
-Check out the [Reacstrap documentation](https://reactstrap.github.io/?path=/story/home-installation--page) to learn more about the framework and see the components available.
+Check out the {{< external-link link="https://reactstrap.github.io/?path=/story/home-installation--page" >}}Reacstrap documentation{{< /external-link >}} to learn more about the framework and see the components available.
 
 {{< /details >}}
 
@@ -72,11 +72,11 @@ The result of this tutorial will be a web application that looks like this:
 ## Prerequisites
 
 If you don't already have them, you'll need to install the following tools:
-- [Node.js](https://nodejs.org/en/download/current) (version >= 16.0.0)
-- [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
-- [Genezio](https://genez.io)
+- {{< external-link link="https://nodejs.org/en/download/current" >}}Node.js{{< /external-link >}}
+- {{< external-link link="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm" >}}npm{{< /external-link >}}
+- {{< external-link link="https://genez.io" >}}Genezio{{< /external-link >}}
 
-Note: I recommend you to use [nvm](https://github.com/nvm-sh/nvm#installing-and-updating) to manage NodeJs and npm versions.
+Note: I recommend you to use {{< external-link link="https://github.com/nvm-sh/nvm#installing-and-updating" >}}nvm{{< /external-link >}} to manage NodeJs and npm versions.
 After installing `nvm`, you can easily get any version of `node` by running `nvm install <node_version>`.
 `nvm` will automatically install the corresponding `npm` version.
 
@@ -205,11 +205,11 @@ Right now, the backend won't work properly because there is no `UPSTASH_REDIS_UR
 Let's create a Redis database and connect it to your web application using a `.env` file.
 
 Luckily, genezio makes it very easy to add an Upstash Redis integration to your project.
-Go to the [genezio dashboard](https://app.genez.io) and add an Upstash Redis integration to your project.
+Go to the {{< external-link link="https://app.genez.io" >}}genezio dashboard{{< /external-link >}} and add an Upstash Redis integration to your project.
 
 ![Alt text](/images/blog/shopping_cart_example/add_integration.png)
 
-If you get stuck at this step, you can follow the [Upstash Redis integration tutorial](https://docs.genez.io/genezio-documentation/integrations/upstash-redis).
+If you get stuck at this step, you can follow the {{< external-link link="https://docs.genez.io/genezio-documentation/integrations/upstash-redis" >}}Upstash Redis integration tutorial{{< /external-link >}}.
 
 After adding the Upstash Redis integration, copy the environment variables from the `.env` section. Use the copy button to disclose the contents of the environment variables and copy them to your clipboard.
 Go back to your `server` directory, create a new file called `.env`, and paste the contents there.
@@ -285,17 +285,17 @@ Add the following methods to the `ShoppingCartService` class:
 
 Note: There is no need to restart `genezio local`. The process will detect any changes in your code and restart automatically.
 
-Now that your backend logic is ready, you can thoroughly test it by sending requests to it from the [genezio dashboard](https://app.genez.io/test-interface/local?port=8083).
+Now that your backend logic is ready, you can thoroughly test it by sending requests to it from the {{< external-link link="https://app.genez.io/test-interface/local?port=8083" >}}genezio dashboard{{< /external-link >}}.
 
 ## Setting up the frontend
 
 Going forward, you'll need to create a React app to render the products available in the store and allow the user to add them to the shopping cart.
 
-For this tutorial, the online store will be populated with dummy products using [dummyjson](https://dummyjson.com/products). This API will return a list of dummy products in JSON format with various fields.
+For this tutorial, the online store will be populated with dummy products using {{< external-link link="https://dummyjson.com/products" >}}dummyjson{{< /external-link >}}. This API will return a list of dummy products in JSON format with various fields.
 
-Firstly, let's render the products in the online store. To avoid writing a lot of CSS, you can use [Bootstrap](https://getbootstrap.com/) to style your application. Bootstrap provides a lot of ready-to-use components that you can use in your application.
+Firstly, let's render the products in the online store. To avoid writing a lot of CSS, you can use {{< external-link link="https://getbootstrap.com/" >}}Bootstrap{{< /external-link >}} to style your application. Bootstrap provides a lot of ready-to-use components that you can use in your application.
 
-In this section of the tutorial, there are quite a few code snippets coming your way. If you ever feel lost, you can check out the codebase for this tutorial on the [GitHub repository](https://github.com/genez-io/genezio-examples/tree/main/typescript/shopping-cart).
+In this section of the tutorial, there are quite a few code snippets coming your way. If you ever feel lost, you can check out the codebase for this tutorial on the {{< external-link link="https://github.com/genez-io/genezio-examples/tree/main/typescript/shopping-cart" >}}GitHub repository{{< /external-link >}}.
 
 {{< details "Expand for more details on how to structure a React project" >}}
 
@@ -701,6 +701,6 @@ Below is an example of how to add a loading state to the `Buy now` button.
 
 Congratulations! 🥳
 
-The codebase for this tutorial is open-source, and you can find it on the [GitHub repository](https://github.com/genez-io/genezio-examples/tree/main/typescript/shopping-cart).
+The codebase for this tutorial is open-source, and you can find it on the {{< external-link link="https://github.com/genez-io/genezio-examples/tree/main/typescript/shopping-cart" >}}GitHub repository{{< /external-link >}}.
 
-I hope you enjoyed this tutorial and I encourage you to check out our other [tutorials](https://genez.io/blog) for more tips and tricks on improving your software engineering skills. 🥷 💻
+I hope you enjoyed this tutorial and I encourage you to check out our other {{< external-link link="https://genez.io/blog" >}}tutorials{{< /external-link >}} for more tips and tricks on improving your software engineering skills. 🥷 💻
