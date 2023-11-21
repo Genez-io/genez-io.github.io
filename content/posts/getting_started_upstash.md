@@ -1,37 +1,27 @@
 ---
-title: "Announcing Upstash Redis Integration"
-date: 2023-11-20
+title: "Now Available: Upstash Redis"
+date: 2023-11-21
 tags:
-  - News, Tutorials
+  - News
 author: Andreia Ocanoaia
 linkedIn: https://www.linkedin.com/in/andreia-irina-ocanoaia/
 thumbnail: /images/todo.svg
-preview: Learn how to integrate an Upstash Redis database into your project
-description: "In this short guide, you will learn how to integrate a Redis database into your project. Upstash Redis simplifies data storage and access, making it a natural fit for serverless web applications and cloud-native architectures.
-"
-meta_og_url: ""
-meta_og_image: ""
+preview: Caching, session storage and much more with Upstash Redis
+description: "Learn how to integrate a Redis database into your project. Upstash Redis simplifies data storage and access, making it a natural fit for serverless web applications and cloud-native architectures."
+meta_og_url: "https://genez.io/blog/now-available-upstash-redis"
+meta_og_image: "https://genez.io/images/todo.svg"
 ---
 
-
-# Getting Started with Upstash Redis and Genezio
-
-At Genezio, our goal is to create a powerful platform that allows developers to build and deploy applications easier.
+Upstash Redis simplifies data storage and access, making it a natural fit for serverless web applications and cloud-native architectures.
+Its key-value store functionality allows for rapid data access, making it ideal for caching frequently accessed data and improving overall application performance.
+Redis also supports complex data structures such as lists, sets, and hashes, providing versatility in data modeling.
 
 Today, we are excited to announce the integration with Upstash Redis, a serverless Redis provider, into the Genezio platform.
 The integration allows you to easily manage and connect Redis databases directly from the Genezio dashboard.
 
-Upstash Redis simplifies data storage and access, making it a natural fit for serverless web applications and cloud-native architectures.
+# Use cases
 
-## Redis
-
-Redis is a powerful database that serves as a highly performant solution for various use cases.
-Its key-value store functionality allows for rapid data access, making it ideal for caching frequently accessed data and improving overall application performance.
-Redis also supports complex data structures such as lists, sets, and hashes, providing versatility in data modeling.
-
-## Use cases
-
-### Out-of-the-box Caching System
+## Out-of-the-box caching system
 
 Redis is often used as a caching layer to store frequently accessed data in memory, reducing the need to fetch data from slower disk-based databases. This can significantly improve application performance.
 
@@ -59,7 +49,7 @@ export class CacheService {
 }
 ```
 
-### Session Storage
+## Session storage
 
 Storing session data in Redis is a common practice. Because of its speed, Redis is well-suited for managing user sessions in web applications. It allows for quick and efficient retrieval of user-specific information.
 
@@ -85,18 +75,18 @@ export class SessionService {
 }
 ```
 
-### Pub/Sub Messaging
+## Pub/Sub Messaging
 
 Redis has built-in support for publish/subscribe messaging patterns. It can be used as a message broker to facilitate communication between different components of a system in a decoupled manner.
 
-### Rate limiting
+## Rate limiting
 
 Redis can be used to implement rate-limiting mechanisms. By tracking and controlling access rates for different operations, Redis helps prevent abuse and ensures the stability and performance of an application.
 
-## Connect your backend to Upstash Redis
+# Connect your backend to Upstash Redis
 In this short guide, you will learn how to integrate a Redis database into your project.
 
-### Step 1: Create a new genezio project
+## Step 1: Create a new genezio project
 If you already have a genezio project deployed, you can skip to [Step 2: Initialize an Upstash Redis database](#step-2-initialize-an-upstash-redis-database).
 
 Otherwise, you can create a new genezio project by running the following next steps.
@@ -141,7 +131,7 @@ Your backend project has been deployed and is available at https://app.genez.io/
 
 Navigate the link in your terminal to open your project page in the genezio dashboard.
 
-### Step 2: Initialize an Upstash Redis database
+## Step 2: Initialize an Upstash Redis database
 
 Go to the `Integrations` tab and select to install the Upstash Redis integration:
 
@@ -159,7 +149,7 @@ Hit the `Save` button to set the database credentials as environment variables i
 
 ![Alt text](/images/blog/getting_started_upstash_images/image-2.png)
 
-### Step 3: Connect your backend to the Redis database
+## Step 3: Connect your backend to the Redis database
 
 To connect to the Redis database from your NodeJs backend, create a new file called `redis.ts` in the root folder of your project.
 
@@ -181,13 +171,13 @@ export class RedisService{
 }
 ```
 
-### Step 4: Store and retrieve data from Redis
+## Step 4: Store and retrieve data from Redis
 
 Implement two methods to store and retrieve <key, value> pairs in the Redis database:
 
 ```ts
 @GenezioDeploy()
-export class RedisService{
+export class ProductService{
   client: Redis;
   constructor() {
     if (!process.env.UPSTASH_REDIS_URL) {
@@ -196,7 +186,8 @@ export class RedisService{
     this.client = new Redis(process.env.UPSTASH_REDIS_URL);
   }
 
-  insert(key: string, value: string) {
+  saveProductCount(key: string, value: string) : Promise<boolean>{
+    // Save the product review in Redis
     return this.client.set(key, value);
   }
 
@@ -206,7 +197,7 @@ export class RedisService{
 }
 ```
 
-### Step 5: Test your Redis service
+## Step 5: Test your Redis service
 
 To locally test your Redis service, you have to use the copy button to add the environment variables to your clipboard.
 Using the copy button will disclose the sensitive information from the environment variables.
@@ -232,7 +223,7 @@ Open the testing page in your browser by navigating to {{< external-link link="h
 
 Here you can create and send a request to your backend to test if it works as expected.
 
-### Step 5: Deploy your application
+## Step 5: Deploy your application
 
 After you tested your application, you can deploy it by running the following command in your terminal:
 
@@ -240,7 +231,7 @@ After you tested your application, you can deploy it by running the following co
 genezio deploy
 ```
 
-## Now available in the Genezio dashboard
+# Now available in the Genezio dashboard
 
 The integration with Upstash Redis is available today in the Genezio dashboard.
 
