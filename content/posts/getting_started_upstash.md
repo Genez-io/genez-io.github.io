@@ -32,19 +32,25 @@ import { GenezioDeploy } from "@genezio/types";
 import Redis from "ioredis"
 
 @GenezioDeploy()
-export class CacheService {
+export class EcommerceCacheService {
   client: Redis;
 
   constructor() {
     this.client = new Redis(process.env.REDIS_URL);
   }
 
-  cacheData(key: string, data: string, expirationInSeconds: number) {
-    return this.client.set(key, data, 'EX', expirationInSeconds);
+  cacheProductDetails(productId: string, productDetails: string): Promise<boolean> {
+    const key = `product:${productId}`;
+    await this.client.set(key, productDetails, 'EX', expirationInSeconds);
+
+    // the rest of the implementation goes here
   }
 
-  getCachedData(key: string) {
-    return this.client.get(key);
+  getCachedProductDetails(productId: string): Promise<string | null> {
+    const key = `product:${productId}`;
+    const cachedProductDetails = await this.client.get(key);
+
+    // the rest of the implementation goes here
   }
 }
 ```
@@ -58,19 +64,23 @@ import { GenezioDeploy } from "@genezio/types";
 import Redis from "ioredis"
 
 @GenezioDeploy()
-export class SessionService {
+export class EcommerceSessionService {
   client: Redis;
 
   constructor() {
     this.client = new Redis(process.env.REDIS_URL);
   }
 
-  storeSessionData(userId: string, sessionData: string) {
-    return this.client.set(`user:${userId}:session`, sessionData);
+  storeSessionData(userId: string, sessionData: string): Promise<boolean> {
+    await this.client.set(`user:${userId}:session`, sessionData);
+
+    // the rest of the implementation goes here
   }
 
-  getSessionData(userId: string) {
-    return this.client.get(`user:${userId}:session`);
+  getSessionData(userId: string): Promise<string | null> {
+    const sessionData = await this.client.get(`user:${userId}:session`);
+
+    // the rest of the implementation goes here
   }
 }
 ```
@@ -160,7 +170,7 @@ import { GenezioDeploy } from "@genezio/types";
 import Redis from "ioredis"
 
 @GenezioDeploy()
-export class RedisService{
+export class ShoppingCartService{
   client: Redis;
   constructor() {
     if (!process.env.UPSTASH_REDIS_URL) {
@@ -177,7 +187,7 @@ Implement two methods to store and retrieve <key, value> pairs in the Redis data
 
 ```ts
 @GenezioDeploy()
-export class ProductService{
+export class ShoppingCartService{
   client: Redis;
   constructor() {
     if (!process.env.UPSTASH_REDIS_URL) {
@@ -186,13 +196,18 @@ export class ProductService{
     this.client = new Redis(process.env.UPSTASH_REDIS_URL);
   }
 
-  saveProductCount(key: string, value: string) : Promise<boolean>{
-    // Save the product review in Redis
-    return this.client.set(key, value);
+  addItemToCart(cartId: string, productId: string, quantity: number): Promise<boolean> {
+    const cartKey = `cart:${cartId}`;
+    await this.client.set(`${cartKey}:${productId}`, quantity);
+
+    // the rest of the implementation goes here
   }
 
-  get(key: string) {
-    return this.client.get(key);
+  getCartContents(cartId: string): Promise<Map<string, number> | null> {
+    const cartKey = `cart:${cartId}`;
+    const cartItems = await this.client.keys(`${cartKey}:*`);
+
+    // the rest of the implementation goes here
   }
 }
 ```
