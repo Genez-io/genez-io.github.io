@@ -6,7 +6,7 @@ tags:
 author: Andreia Ocanoaia
 linkedIn: https://www.linkedin.com/in/andreia-irina-ocanoaia/
 thumbnail: /images/todo.svg
-preview: Caching, session storage and much more with Upstash Redis
+preview: Caching, session storage and much more with Upstash Redis.
 description: "Learn how to integrate a Redis database into your project. Upstash Redis simplifies data storage and access, making it a natural fit for serverless web applications and cloud-native architectures."
 meta_og_url: "https://genez.io/blog/now-available-upstash-redis"
 meta_og_image: "https://genez.io/images/todo.svg"
@@ -16,8 +16,8 @@ Upstash Redis simplifies data storage and access, making it a natural fit for se
 Its key-value store functionality allows for rapid data access, making it ideal for caching frequently accessed data and improving overall application performance.
 Redis also supports complex data structures such as lists, sets, and hashes, providing versatility in data modeling.
 
-Today, we are excited to announce the integration with Upstash Redis, a serverless Redis provider, into the Genezio platform.
-The integration allows you to easily manage and connect Redis databases directly from the Genezio dashboard.
+Today, we are excited to announce the integration with Upstash Redis, a serverless Redis provider, into the genezio platform.
+The integration allows you to easily manage and connect Redis databases directly from the genezio dashboard.
 
 # Use cases
 
@@ -99,7 +99,7 @@ In this short guide, you will learn how to integrate a Redis database into your 
 ## Step 1: Create a new genezio project
 If you already have a genezio project deployed, you can skip to [Step 2: Initialize an Upstash Redis database](#step-2-initialize-an-upstash-redis-database).
 
-Otherwise, you can create a new genezio project by running the following next steps.
+Otherwise, you can create a new genezio project by running the following steps.
 
 First, you have to install `genezio` from npmjs:
 
@@ -246,9 +246,9 @@ After you tested your application, you can deploy it by running the following co
 genezio deploy
 ```
 
-# Now available in the Genezio dashboard
+# Now available in the genezio dashboard
 
-The integration with Upstash Redis is available today in the Genezio dashboard.
+The integration with Upstash Redis is available today in the genezio dashboard.
 
 It might not be perfect yet, but we prefer bringing you new features sooner, rather than later.
 Your feedback in the early stages of feature development is essential to us as it helps improve the product to better suit your needs.
