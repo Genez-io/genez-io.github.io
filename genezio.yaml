@@ -4,4 +4,3 @@ language: ts
 cloudProvider: genezio
 frontend:
   path: ./public
-  subdomain: peach-unable-jellyfish
