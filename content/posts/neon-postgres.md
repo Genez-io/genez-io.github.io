@@ -47,15 +47,6 @@ If you already have a genezio project deployed and you just want to integrate Ne
 Install genezio by running the following command in your terminal:
 
 `npm install genezio -g`
-After that, you can initialize a brand new project by running `genezio` in your preferred directory:
-
-`genezio`
-
-This command will guide you through all the necessary steps to initialize and deploy your genezio project. After you successfully ran the command, your terminal should look something like this:
-
-Install genezio by running the following command in your terminal:
-
-`npm install genezio -g`
 
 After that, you can initialize a brand new project by running `genezio` in your preferred directory:
 
