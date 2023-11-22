@@ -134,15 +134,15 @@ This package will allow you to use the `pg` module so that you can connect to yo
 
 In the `postgres.ts` file, add the following code snippet:
 
-```
+```javascript
 import { GenezioDeploy } from "@genezio/types";
-import pg from 'pg'
-const { Pool } = pg
+import pg from "pg";
+const { Pool } = pg;
 
 @GenezioDeploy()
 export class PostgresService {
   pool = new Pool({
-    connectionString:process.env.NEON_POSTGRES_URL,
+    connectionString: process.env.NEON_POSTGRES_URL,
     ssl: true,
   });
 
