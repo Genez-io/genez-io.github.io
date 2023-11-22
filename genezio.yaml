@@ -1,5 +1,6 @@
-name: GENEZIO-PROD-WEBSITE
+name: landing-page-live-preview
 region: us-east-1
+language: ts
+cloudProvider: genezio
 frontend:
   path: ./public
-  subdomain: genezio-prod-website
