@@ -169,7 +169,7 @@ export class ShoppingCartService{
   }
 
   async getCart(sessionId: string): Promise<CartItem[]> {
-    // get all items from the map corresponding to the sessionId
+    // get all items from the hashmap corresponding to the sessionId
     const cart = await this.client.hgetall('cart:' + sessionId).catch((err) => {
       throw new Error(err);
     });
@@ -193,6 +193,18 @@ export class ShoppingCartService{
   }
 }
 ```
+
+At this point you are probably asking yourself what `hincrby` or `hgetall` are actually doing.
+
+The Redis database has the following structure - each entry is uniquely identified by a key `cart:uniqueSessionId` and it points to a hashmap that contains pairs of `item:count` for each item in the shopping cart.
+
+![Alt text](/images/blog/shopping_cart_example/redis_structure.png)
+
+`hincrby` is a command that increments the value of a hashmap key by a given amount - for this example, it means it increments the counter for a specific bought product. If the key does not exist, it is created and set to 0 before actually incrementing it. `hincrby` can also be used to decrement the value of a hashmap key by a given amount.
+
+`hgetall` is a command that returns all the fields and values of the hashmap for a specific session id.
+
+Later in this tutorial, we are going to use `hexists` to check if an item exists in the hashmap and `hdel` to delete an item from the hashmap.
 
 Install the dependencies by running the following command in the `server` directory:
 
@@ -238,9 +250,9 @@ From the genezio dashboard, you can send requests to your backend classes and se
 
 Add the following methods to the `ShoppingCartService` class:
 
-```typescript
+```ts
   async removeItemFromCart(sessionId: string, item: string): Promise<string> {
-    // check if item exists in the map
+    // check if the item exists in the hashmap
     const itemExists = await this.client.hexists('cart:' + sessionId, item).catch((err) => {
       throw new Error(err);
     });
@@ -253,7 +265,7 @@ Add the following methods to the `ShoppingCartService` class:
       throw new Error(err);
     });
 
-    // check if item count is 0 for a specific item, if so delete the entry from the map
+    // check if the item count is 0 for a specific item, if so delete the entry from the hashmap
     const itemCount = await this.client.hget('cart:' + sessionId, item).catch((err) => {
       throw new Error(err);
     });
@@ -266,7 +278,7 @@ Add the following methods to the `ShoppingCartService` class:
   }
 
   async deleteCart(sessionId: string): Promise<string> {
-    // check if cart exists in the database
+    // check if the cart exists
     const cartExists = await this.client.exists('cart:' + sessionId).catch((err) => {
       throw new Error(err);
     });
