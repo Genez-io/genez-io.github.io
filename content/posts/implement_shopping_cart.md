@@ -1,5 +1,5 @@
 ---
-title: How to implement a Shopping Cart feature using TypeScript, Redis and React
+title: How to implement a shopping cart using TypeScript, Redis and React
 date: 2023-11-20
 tags:
   - Tutorials
@@ -14,9 +14,9 @@ meta_og_image:
 # meta data end
 ---
 
-In this tutorial, I'll show you how to use Redis, NodeJs, and React to easily implement a shopping cart for your online store.
-
 There are a lot of things to consider when implementing a shopping cart functionality for an online store - the cart feature should be scalable, fast, and robust to offer a great experience for your users.
+
+In this tutorial, I'll show you how to use Redis, NodeJs, and React to easily implement a shopping cart for your online store.
 
 The best part of this tutorial is that you can easily extend it or integrate it with your existing application.
 
@@ -57,7 +57,9 @@ The great part about a minimal design is that you can go as wild as you'd like w
 {{< details "Expand this section to get more information on what's React and Bootstrap" >}}
 
 Bootstrap is a widely-used open-source frontend framework that helps you minify your frontend application by providing a responsive grid system and lots of pre-designed components.
-Reactstrap is a library that brings Bootstrap components into React applications. Reactstrap provides React-friendly versions of Bootstrap components, allowing developers to use the power of Bootstrap's styling and functionality within a React application.
+Reactstrap is a library that brings Bootstrap components into React applications.
+
+Reactstrap provides React-friendly versions of Bootstrap components, allowing developers to use the power of Bootstrap's styling and functionality within a React application.
 
 {{< /details >}}
 
