@@ -1,24 +1,23 @@
 ---
-title: How to implement a shopping cart using TypeScript, Redis and React
-date: 2023-11-20
+title: "How to implement a shopping cart using TypeScript, Redis and React"
+date: 2023-11-29
 tags:
-  - Tutorials
+  - News, Tutorials
 author: Andreia Ocanoaia
 linkedIn: https://www.linkedin.com/in/andreia-irina-ocanoaia/
-thumbnail:
+thumbnail: /images/implement__shopping_cart_redis.jpg
 preview: Learn how to build a shopping cart app with Typescript, Redis, and React.
-# meta data start
-description: Learn how to seamlessly implement a scalable, fast, and robust shopping cart using Redis, NodeJs, and React. Whether you're building from scratch or extending your e-commerce application, this tutorial guides you step-by-step through implementing a reliable shopping cart feature.
-meta_og_url:
-meta_og_image:
-# meta data end
+description: Implement a scalable, fast, and robust shopping cart using Redis, NodeJs, and React. This tutorial guides you step-by-step through building a cart feature.
+meta_og_url: "https://genez.io/blog/implement-shopping-cart-redis"
+meta_og_image: "https://genez.io/images/implement__shopping_cart_redis.jpg"
 ---
-
-There are a lot of things to consider when implementing a shopping cart functionality for an online store - the cart feature should be scalable, fast, and robust to offer a great experience for your users.
 
 In this tutorial, I'll show you how to use Redis, NodeJs, and React to easily implement a shopping cart for your online store.
 
-The best part of this tutorial is that you can easily extend it or integrate it with your existing application.
+There are a lot of things to consider when implementing a shopping cart functionality for an online store.
+The cart feature should be scalable, fast, and robust to offer your users a great experience.
+
+The best part of this tutorial is that you can easily extend it or integrate it with an existing application.
 
 Let's get started! 🚀
 
@@ -57,9 +56,8 @@ The great part about a minimal design is that you can go as wild as you'd like w
 {{< details "Expand this section to get more information on what's React and Bootstrap" >}}
 
 Bootstrap is a widely-used open-source frontend framework that helps you minify your frontend application by providing a responsive grid system and lots of pre-designed components.
-Reactstrap is a library that brings Bootstrap components into React applications.
 
-Reactstrap provides React-friendly versions of Bootstrap components, allowing developers to use the power of Bootstrap's styling and functionality within a React application.
+Reactstrap is a library that brings Bootstrap components into React applications. Reactstrap provides React-friendly versions of Bootstrap components, allowing developers to use the power of Bootstrap's styling and functionality within a React application.
 
 {{< /details >}}
 
@@ -87,7 +85,7 @@ The server will be responsible for communicating (storing, retrieving, updating,
 The client will render the products available in the store and allow the user to add them to the shopping cart.
 
 To get started with a template, install `genezio` using `npm` and run it in your terminal.
-Later on, `genezio` will come in handy to deploy and host your web applications in the cloud.
+Later on, `genezio` comes in handy to deploy and host your web applications in the cloud.
 
 ```bash
 npm install -g genezio
@@ -104,7 +102,7 @@ The command above will get you through a series of questions to help you customi
 Your terminal should look similar to the following output:
 ```
 ~ genezio
-Redirecting to browser to complete authentication...
+Redirecting to the browser to complete authentication...
 
 ? Choose a template for your genezio project Fullstack
 Your project will start from the Fullstack template.
@@ -137,7 +135,7 @@ Now that you have a template to start from, fire up your favorite code editor an
 The following piece of code will connect you to a Redis database and allow you to store and retrieve items to the shopping cart based on a session ID.
 This approach will be useful to accommodate more than 1 user on your web app.
 
-Create a new file called `shoppingCartService.ts` in the `server` directory and paste the following code snippet to it.
+Create a new file called `shoppingCartService.ts` in the `server` directory and paste the following code snippet into it.
 
 ```typescript
 import { GenezioDeploy } from "@genezio/types";
@@ -305,7 +303,7 @@ Going forward, you'll need to create a React app to render the products availabl
 
 For this tutorial, the online store will be populated with dummy products using {{< external-link link="https://dummyjson.com/products" >}}dummyjson{{< /external-link >}}. This API will return a list of dummy products in JSON format with various fields.
 
-Firstly, let's render the products in the online store. To avoid writing a lot of CSS, you can use {{< external-link link="https://getbootstrap.com/" >}}Bootstrap{{< /external-link >}} to style your application. Bootstrap provides a lot of ready-to-use components that you can use in your application.
+Let's render the products in the online store. To avoid writing a lot of CSS, you can use {{< external-link link="https://getbootstrap.com/" >}}Bootstrap{{< /external-link >}} to style your application. Bootstrap provides a lot of ready-to-use components that you can use.
 
 In this section of the tutorial, there are quite a few code snippets coming your way. If you ever feel lost, you can check out the codebase for this tutorial on the {{< external-link link="https://github.com/genez-io/genezio-examples/tree/main/typescript/shopping-cart" >}}GitHub repository{{< /external-link >}}.
 
@@ -446,7 +444,7 @@ Add a header with a shopping cart button.
 
 ```
 
-Create a state to keep track if the cart button was clicked. This state will be used to toggle on and off the cart modal.
+Create a state to keep track if the cart button was clicked. This state will be used to toggle the cart modal on and off.
 
 ```typescript
   const [isCartVisible, setIsCartVisible] = useState(false);
@@ -541,7 +539,7 @@ Add a token in local storage to keep track of the session id. This token will be
   }
 ```
 
-Send a request to the backend to add an item to the cart when `Buy now` is clicked.
+Send a request to the backend to add an item to the cart when the `Buy now` button is clicked.
 
 ```typescript
   const handleBuyClick = async (e: any, product: Product) => {
@@ -607,7 +605,7 @@ Send a request to the backend to clear the cart when the `Clear Cart` button is 
 Your application is now ready to be deployed to the cloud to be used by your clients.
 
 Before deploying your application, you can change the randomly assigned subdomain to something more meaningful for your application.
-To do that, go to genezio config file - `genezio.yaml` - and modify the `subdomain` field.
+To do that, go to the genezio config file - `genezio.yaml` - and modify the `subdomain` field.
 
 To deploy your application, run the following command in the root directory of your project:
 
@@ -714,6 +712,6 @@ Below is an example of how to add a loading state to the `Buy now` button.
 
 Congratulations! 🥳
 
-The codebase for this tutorial is open-source, and you can find it on the {{< external-link link="https://github.com/genez-io/genezio-examples/tree/main/typescript/shopping-cart" >}}GitHub repository{{< /external-link >}}.
+The codebase for this tutorial is open-source, and you can find it in this {{< external-link link="https://github.com/genez-io/genezio-examples/tree/main/typescript/shopping-cart" >}}GitHub repository{{< /external-link >}}.
 
 I hope you enjoyed this tutorial and I encourage you to check out our other {{< external-link link="https://genez.io/blog" >}}tutorials{{< /external-link >}} for more tips and tricks on improving your software engineering skills. 🥷 💻
