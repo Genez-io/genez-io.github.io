@@ -1,0 +1,35 @@
+# Sample workflow for building and deploying a Hugo site to GitHub Pages
+name: Deploy the landing page on genezio for a live preview
+
+on:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      HUGO_VERSION: 0.102.3
+    steps:
+      - name: Install Hugo CLI
+        run: |
+          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.deb \
+          && sudo dpkg -i ${{ runner.temp }}/hugo.deb
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - uses: Genez-io/genezio-github-action@main
+        with:
+          genezio-version: latest
+          token: ${{ secrets.GENEZIO_TOKEN }}
+
+      - name: Checkout to the PR branch
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
+
+      # The subdomain is the PR branch name with all the special characters replaced by dashes
+      # E.g. if the branch name is "feature/landing-page", the URL will be "https://app.genez.io/feature-landing-page"
+      - name: Deploy with genezio
+        run: |
+          export SUBDOMAIN=$(echo ${{ github.head_ref }} | tr "[:upper:]" "[:lower:]" | sed -e 's/_/-/g; s/\//-/g')
+          genezio deploy --frontend --subdomain $SUBDOMAIN
