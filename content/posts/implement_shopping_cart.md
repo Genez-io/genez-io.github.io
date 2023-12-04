@@ -2,7 +2,8 @@
 title: "Implement a shopping cart using TypeScript, Redis and React"
 date: 2023-12-04
 tags:
-  - News, Tutorials
+  - News
+  - Tutorials
 author: Andreia Ocanoaia
 linkedIn: https://www.linkedin.com/in/andreia-irina-ocanoaia/
 thumbnail: /images/implement_shopping_cart_redis.jpg
@@ -45,7 +46,6 @@ This tutorial will show you how to harness the speed of a Redis database to buil
 
 Redis is an open-source, in-memory database that stores key, value pairs. Redis is a highly versatile and performant database system. One of Redis's key features is its speed, as it primarily operates in-memory, enabling rapid data access. It is widely used for caching, real-time analytics, message brokering, and other applications where low-latency and high-throughput data storage and retrieval are crucial. Redis also provides persistence options, allowing data to be saved to disk for durability. Its simplicity, efficiency, and support for advanced data structures make Redis a popular choice for applications requiring fast and scalable data storage and retrieval.
 
-{{< external-link link="https://upstash.com/?utm_source=genezio+&utm_medium=blog&utm_campaign=post" >}}Upstash {{< /external-link >}}
 Upstash is a cutting-edge platform for modern developers seeking seamless data management in serverless and cloud-native applications. Offering Redis-compatible, in-memory database services, Upstash simplifies data storage and access, making it a natural fit for serverless functions, web apps, and cloud-native architectures.
 
 By partnering with Upstash, genezio provides an easy-to-use solution to add an Upstash Redis database to your project from the genezio dashboard.
@@ -215,7 +215,7 @@ npm --save-dev install @types/node
 Right now, the backend won't work properly because there is no `UPSTASH_REDIS_URL` environment variable set in the `.env`.
 Let's create a Redis database and connect it to your web application using a `.env` file.
 
-Luckily, genezio makes it very easy to add an Upstash Redis integration to your project.
+Luckily, genezio makes it very easy to add an {{< external-link link="https://upstash.com/?utm_source=genezio+&utm_medium=blog&utm_campaign=post" >}}Upstash Redis{{< /external-link >}} integration to your project.
 Go to the {{< external-link link="https://app.genez.io" >}}genezio dashboard{{< /external-link >}} and add an Upstash Redis integration to your project.
 
 ![Alt text](/images/blog/shopping_cart_example/add_integration.png)
