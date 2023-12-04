@@ -62,7 +62,7 @@ $hero-gradient-end: {{ .Site.Params.primary_color | default "#9477c4" }};
 // Syntax Highlighting
 @import 'libraries/pygments/monokai';
 
-// Global 
+// Global
 @import 'global/page';
 @import 'global/type';
 @import 'global/buttons';
