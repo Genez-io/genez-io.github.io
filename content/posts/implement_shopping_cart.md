@@ -1,5 +1,5 @@
 ---
-title: "How to implement a shopping cart using TypeScript, Redis and React"
+title: "Implement a shopping cart using TypeScript, Redis and React"
 date: 2023-12-04
 tags:
   - News, Tutorials
