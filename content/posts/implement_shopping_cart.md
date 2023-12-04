@@ -1,15 +1,15 @@
 ---
 title: "How to implement a shopping cart using TypeScript, Redis and React"
-date: 2023-11-29
+date: 2023-12-04
 tags:
   - News, Tutorials
 author: Andreia Ocanoaia
 linkedIn: https://www.linkedin.com/in/andreia-irina-ocanoaia/
-thumbnail: /images/implement__shopping_cart_redis.jpg
+thumbnail: /images/implement_shopping_cart_redis.jpg
 preview: Learn how to build a shopping cart app with Typescript, Redis, and React.
 description: Implement a scalable, fast, and robust shopping cart using Redis, NodeJs, and React. This tutorial guides you step-by-step through building a cart feature.
 meta_og_url: "https://genez.io/blog/implement-shopping-cart-redis"
-meta_og_image: "https://genez.io/images/implement__shopping_cart_redis.jpg"
+meta_og_image: "https://genez.io/images/implement_shopping_cart_redis.jpg"
 ---
 
 In this tutorial, I'll show you how to use Redis, NodeJs, and React to easily implement a shopping cart for your online store.
