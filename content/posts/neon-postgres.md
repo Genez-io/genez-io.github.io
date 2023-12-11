@@ -42,7 +42,7 @@ You need to have nodejs and npm installed. If you need any help with the install
 
 ## Step 1: Create a new genezio project
 
-If you already have a genezio project deployed and you just want to integrate Neon with it, you can skip to step 2: Initialize a Neon Postgres database.
+If you already have a genezio project deployed and you just want to integrate Neon with it, you can skip to [step 2: Initialize a Neon Postgres database](#step-2-initialize-a-neon-postgres-database).
 
 Install genezio by running the following command in your terminal:
 
