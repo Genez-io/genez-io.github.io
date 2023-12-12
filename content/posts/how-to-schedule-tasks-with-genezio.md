@@ -87,11 +87,7 @@ This command will execute npm init (create package.json file) and install the on
 Next, you need to create a new class using the following command:
 
 ```
-<<<<<<< HEAD
 genezio addClass Scheduler.ts
-=======
-genezio addClass Sheduler.ts
->>>>>>> 3a1467c5cfa9e3c85c70aba92cc4bafd087fe0b3
 ```
 
 This command will create a new typescript class file named `Scheduler.ts`.
@@ -106,11 +102,7 @@ import { GenezioDeploy, GenezioMethod } from "@genezio/types";
  * using the "genezio deploy" command or tested locally using "genezio local".
  */
 @GenezioDeploy()
-<<<<<<< HEAD
 export class Scheduler {
-=======
-export class Sheduler {
->>>>>>> 3a1467c5cfa9e3c85c70aba92cc4bafd087fe0b3
   @GenezioMethod({ type: "cron", cronString: "* * * * *" })
   public async everyMinuteTask() {
     const output = "Every minute task executed at " + new Date().toISOString();
@@ -149,15 +141,9 @@ genezio deploy
 
 This will deploy the whole project to the cloud and make it run the task every minute. You can continue to manage, test, update and monitor your project from the genezio dashboard.
 
-<<<<<<< HEAD
 **Note 1:** You can deploy your scheduler together with your API Node.js application.
 
 **Note 2:** Your scheduler will be deployed in a Linux environment.
-=======
-**Note 1: **You can deploy your scheduler together with your API Node.js application.
-
-**Note 2: **Your scheduler will be deployed in a Linux environment.
->>>>>>> 3a1467c5cfa9e3c85c70aba92cc4bafd087fe0b3
 
 ## Create more complex schedulers
 
