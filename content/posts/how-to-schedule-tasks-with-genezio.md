@@ -198,9 +198,3 @@ I hope you enjoyed this tutorial and I encourage you to check out our other {{< 
 Also, I invite you to check your examples from {{< external-link link="https://github.com/Genez-io/genezio-examples/tree/master/javascript/cron" >}}GitHub{{< /external-link >}}.
 
 Start leveraging the power of Genezio for efficient task scheduling in your applications.
-
-—--
-
-Social media post (owner Andra/Andrei/Paula/Bogdan):
-
-Social media text
