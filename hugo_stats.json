@@ -3,6 +3,7 @@
     "tags": [
       "?xml",
       "a",
+      "blockquote",
       "body",
       "br",
       "button",
@@ -196,7 +197,6 @@
       "zindex-2"
     ],
     "ids": [
-      "-hahahugoshortcodes0hbhb",
       "1-overuse-of-type-any",
       "1-set-up-your-github-repository",
       "10-using-third-party-libraries",
@@ -310,6 +310,7 @@
       "misusing-readonly-with-class-properties",
       "monorepo-or-multirepo",
       "no-warranties",
+      "note-2-your-scheduler-will-be-deployed-in-a-linux-environment",
       "now-available-in-the-genezio-dashboard",
       "objectives",
       "out-of-the-box-caching-system",
