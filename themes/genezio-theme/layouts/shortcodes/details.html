@@ -1,5 +1,6 @@
-
-<details style="margin: 10px 0;color:black;">
-    <summary>{{ (.Get 0) | markdownify }}</summary>
+<details style="margin: 10px;text-align:left;">
+    <summary style="color:#6F42C1;font-size:large">{{ (.Get 0) | markdownify }}</summary>
+   <p>
     {{ .Inner | markdownify }}
+   </p>
 </details>

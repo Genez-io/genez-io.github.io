@@ -1,5 +1,13 @@
-name: GENEZIO-PROD-WEBSITE
+# This genezio.yaml is used to generate live preview
+# of the landing page and blog.
+# Manually generate a live preview by running:
+# genezio deploy --subdomain <preview-subdomain>
+
+name: landing-page-preview
 region: us-east-1
+language: ts
+cloudProvider: genezio
+scripts:
+  preFrontendDeploy: hugo
 frontend:
   path: ./public
-  subdomain: genezio-prod-website
