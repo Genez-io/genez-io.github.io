@@ -9,8 +9,8 @@ thumbnail: /images/scheduletasks.webp
 preview: This guide will walk you through the steps of building a scheduler with genezio.
 # meta data start
 description: "Schedulers are automated systems designed to carry out tasks at set intervals or specific times."
-meta_og_url: "https://genez.io/blog/how-to-schedule-tasks-with-genezio"
-meta_og_image: "https://genez.io/images/scheduletasks.webp"
+meta_og_url: "https://genezio.com/blog/how-to-schedule-tasks-with-genezio"
+meta_og_image: "https://genezio.com/images/scheduletasks.webp"
 url: how-to-schedule-tasks-with-genezio
 # meta data end
 ---
@@ -161,7 +161,7 @@ public async everyDay8AMTask() {
 
 In conclusion, scheduling tasks with Node.js and Genezio is a powerful and flexible solution for automating various processes in your applications. With the ability to create and manage complex schedules using cron expressions, you can ensure that your scheduled tasks run precisely when needed. However, it's essential to follow best practices, such as careful scheduling, monitoring, and error handling, to maintain the reliability and efficiency of your scheduled tasks. After this tutorial, you can harness the full potential of Genezio to streamline your workflow and enhance automation in your projects.
 
-I hope you enjoyed this tutorial and I encourage you to check out our other {{< external-link link="https://genez.io/blog" >}}tutorials{{< /external-link >}} for more tips and tricks on improving your software engineering skills. 🥷 💻
+I hope you enjoyed this tutorial and I encourage you to check out our other {{< external-link link="https://genezio.com/blog" >}}tutorials{{< /external-link >}} for more tips and tricks on improving your software engineering skills. 🥷 💻
 
 Also, I invite you to check your examples from {{< external-link link="https://github.com/Genez-io/genezio-examples/tree/master/javascript/cron" >}}GitHub{{< /external-link >}}.
 

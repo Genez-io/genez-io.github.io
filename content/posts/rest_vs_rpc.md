@@ -9,8 +9,8 @@ thumbnail: /images/rest-rpc.webp
 preview: REST and RPC are two distinct approaches to web services and distributed computing
 # meta data start
 description: "REST is focused on resource manipulation and provides a uniform interface for accessing and modifying resources, while RPC is focused on method invocation and provides a way for applications to access remote services and resources."
-meta_og_url: "https://genez.io/blog/the_evolution_of_apis_a_history_of_rest_and_rpc"
-meta_og_image: "https://genez.io/images/rest-rpc.webp"
+meta_og_url: "https://genezio.com/blog/the_evolution_of_apis_a_history_of_rest_and_rpc"
+meta_og_image: "https://genezio.com/images/rest-rpc.webp"
 # meta data end
 ---
 
@@ -28,7 +28,7 @@ Prerequisites for the tutorial:
 
 * Have an IDE or text editor installed, e.g. {{< external-link link="https://code.visualstudio.com/download" >}}Visual Studio Code{{< /external-link >}}
 
-* Create a free {{< external-link link="https://genez.io/" >}}genezio{{< /external-link >}}
+* Create a free {{< external-link link="https://genezio.com/" >}}genezio{{< /external-link >}}
  account
 
 

@@ -2,8 +2,8 @@
 title: "End-User License Agreement"
 # meta data start
 description: "genezio simplifies API development, deployment, and SDK generation for seamless integration on your website or mobile app."
-meta_og_url: "https://genez.io"
-meta_og_image: "https://genez.io/images/og.jpg"
+meta_og_url: "https://genezio.com"
+meta_og_image: "https://genezio.com/images/og.jpg"
 # meta data end
 ---
 
@@ -109,7 +109,7 @@ You must comply with applicable Third parties' Terms of agreement when using the
 
 # Privacy Policy
 
-The Company collects, stores, maintains, and shares information about You in accordance with [Our Privacy Policy](https://genez.io/privacy/).
+The Company collects, stores, maintains, and shares information about You in accordance with [Our Privacy Policy](https://genezio.com/privacy/).
 
 By accepting this Agreement, You acknowledge that You hereby agree and consent to the terms and conditions of Our Privacy Policy.
 

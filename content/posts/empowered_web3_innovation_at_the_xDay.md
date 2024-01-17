@@ -11,8 +11,8 @@ preview: This article will present DeFiBuilder and GiveCup, two emerging Web3 st
 # meta data start
 description: "Genezio is a powerful full-stack infrastructure that can help Web3 developers build and deploy their applications quickly and easily. Learn more about the benefits of Genezio for Web3 developers and how to get started today."
 
-meta_og_url: "https://genez.io/blog/empowered_web3_innovation_at_the_xDay"
-meta_og_image: "https://genez.io/images/genezio_xday.webp"
+meta_og_url: "https://genezio.com/blog/empowered_web3_innovation_at_the_xDay"
+meta_og_image: "https://genezio.com/images/genezio_xday.webp"
 # meta data end
 ---
 

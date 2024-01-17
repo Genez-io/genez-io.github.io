@@ -9,8 +9,8 @@ thumbnail: /images/release0.6.webp
 preview: "Since our last release, we've introduced some new features that make it easier to integrate a database, simplify yaml configuration files, and many more. Let's explore the latest updates"
 # meta data start
 description: "Since our last release, we've introduced some new features that make it easier to integrate a database, simplify yaml configuration files, and many more. Let's explore the latest updates:"
-meta_og_url: "https://genez.io/blog/integrate_redis_and_postgres_plus_much_more_genezio_v0.6"
-meta_og_image: "https://genez.io/images/release0.6.webp"
+meta_og_url: "https://genezio.com/blog/integrate_redis_and_postgres_plus_much_more_genezio_v0.6"
+meta_og_image: "https://genezio.com/images/release0.6.webp"
 # meta data end
 ---
 

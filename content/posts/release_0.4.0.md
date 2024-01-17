@@ -9,8 +9,8 @@ thumbnail: /images/release.webp
 preview: Since our last release, we’ve added some new features, improved a couple of things and resolved a few bugs
 # meta data start
 description: "I’m excited to work with such a productive team! Since our last release, we’ve added some new features, improved a couple of things and resolved a few bugs. Let’s dive in the latest developments made by our amazing team"
-meta_og_url: "https://genez.io/blog/genezio-new-release"
-meta_og_image: "https://genez.io/images/release.webp"
+meta_og_url: "https://genezio.com/blog/genezio-new-release"
+meta_og_image: "https://genezio.com/images/release.webp"
 # meta data end
 ---
 

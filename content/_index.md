@@ -17,7 +17,7 @@ productTextP3: "Because you care about the environment, just as we do.  We are p
 power consumption, and we are optimizing the way the code is run towards our goal of zero overhead, fastest cold start delay, best CPU and memory resource allocation."
 # meta data start
 description: "Next gen. full-stack platform for modern software development"
-meta_og_url: "https://genez.io"
-meta_og_image: "https://genez.io/images/og.jpg"
+meta_og_url: "https://genezio.com"
+meta_og_image: "https://genezio.com/images/og.jpg"
 # meta data end
 ---

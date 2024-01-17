@@ -11,8 +11,8 @@ preview: In this tutorial, I will show you the steps of integrating a Mongo data
 # meta data start
 description: "In this tutorial, I will show you the steps of integrating a Mongo database into your genezio Getting Started project."
 
-meta_og_url: "https://genez.io/blog/how-to-add-a-mongodb-to-your-genezio-project"
-meta_og_image: "https://genez.io/images/genezio_mongodb.webp"
+meta_og_url: "https://genezio.com/blog/how-to-add-a-mongodb-to-your-genezio-project"
+meta_og_image: "https://genezio.com/images/genezio_mongodb.webp"
 # meta data end
 ---
 

@@ -9,8 +9,8 @@ thumbnail: /images/web3app.svg
 preview: In this tutorial, I am going to show you how to create your first Web3 application
 # meta data start
 description: "Build your first Web3 application on Ethereum using genezio with this beginner-friendly tutorial. Create a smart contract indexer with React, and Metamask, and deploy the app on genezio."
-meta_og_url: "https://genez.io/blog/create-your-first-web3-app"
-meta_og_image: "https://genez.io/images/web3app.svg"
+meta_og_url: "https://genezio.com/blog/create-your-first-web3-app"
+meta_og_image: "https://genezio.com/images/web3app.svg"
 # meta data end
 ---
 <!-----
@@ -222,7 +222,7 @@ To be able to interact with the node in your application, click on the_ “Activ
 {{< details "Create a Mongo Database" >}}
 
   ### **Create a Mongo Database**
-You will need to set up a Mongo Database to store the events that are triggered on the smart contract. Follow the steps from this tutorial to create a free Mongo Database on {{< external-link link="https://genez.io/blog/how-to-add-a-mongodb-to-your-genezio-project/" >}}MongoDB Atlas{{< /external-link >}} and integrate it within your genezio project.
+You will need to set up a Mongo Database to store the events that are triggered on the smart contract. Follow the steps from this tutorial to create a free Mongo Database on {{< external-link link="https://genezio.com/blog/how-to-add-a-mongodb-to-your-genezio-project/" >}}MongoDB Atlas{{< /external-link >}} and integrate it within your genezio project.
 
 After you get a Mongo Database URI, add it to the `config.js` file in the `server` directory.
 {{< /details >}}

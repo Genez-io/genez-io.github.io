@@ -8,8 +8,8 @@ linkedIn: https://www.linkedin.com/in/andreia-irina-ocanoaia/
 thumbnail: /images/announcing_upstash.jpg
 preview: Caching, session storage and much more with Upstash Redis.
 description: "Learn how to integrate a Redis database into your project. Upstash Redis simplifies data storage and access, making it a natural fit for serverless web applications and cloud-native architectures."
-meta_og_url: "https://genez.io/blog/now-available-upstash-redis"
-meta_og_image: "https://genez.io/images/announcing_upstash.jpg"
+meta_og_url: "https://genezio.com/blog/now-available-upstash-redis"
+meta_og_image: "https://genezio.com/images/announcing_upstash.jpg"
 ---
 
 Upstash Redis simplifies data storage and access, making it a natural fit for serverless web applications and cloud-native architectures.
@@ -236,5 +236,5 @@ Your feedback in the early stages of feature development is essential to us as i
 
 We're thrilled about the amazing use cases the Upstash Redis integration will enable and we can't wait to see what you'll put together with it.
 
-Check out our {{< external-link link="https://genez.io/docs" >}}documentation{{< /external-link >}} and try the Upstash Redis integration today!
+Check out our {{< external-link link="https://genezio.com/docs" >}}documentation{{< /external-link >}} and try the Upstash Redis integration today!
 Let us know your thoughts and feedback through our {{< external-link link="https://app.genez.io" >}}support chat{{< /external-link >}} or on our {{< external-link link="https://discord.gg/uc9H5YKjXv" >}}Discord server{{< /external-link >}}.

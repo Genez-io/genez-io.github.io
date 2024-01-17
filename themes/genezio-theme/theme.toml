@@ -1,10 +1,10 @@
 name = "Genezio"
 description = "The coolest way to write and the cheapest way to host a serverless application."
-homepage = "https://genez.io"
+homepage = "https://genezio.com"
 tags = []
 features = []
 min_version = 0.51
 
 [author]
   name = "Genezio"
-  homepage = "https://genez.io"
+  homepage = "https://genezio.com"

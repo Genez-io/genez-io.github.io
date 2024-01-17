@@ -11,8 +11,8 @@ thumbnail: /images/genezio_neon.webp
 preview: Neon provides serverless Postgres databases that offer a generous free tier as well as other features such as autoscaling, bottomless storage, and branching.
 # meta data start
 description: "Learn how to create a simple genezio app and integrate it with a Postgres database using Neon."
-meta_og_url: "https://genez.io/blog/now-available-neon-postgres"
-meta_og_image: "https://genez.io/genezio_neon.webp"
+meta_og_url: "https://genezio.com/blog/now-available-neon-postgres"
+meta_og_image: "https://genezio.com/genezio_neon.webp"
 # meta data end
 ---
 

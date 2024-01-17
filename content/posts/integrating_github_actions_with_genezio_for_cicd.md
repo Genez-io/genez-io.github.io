@@ -9,8 +9,8 @@ thumbnail: /images/genezio_cicd.webp
 preview: GitHub Actions provides a powerful and flexible way to set up CI/CD workflows.
 # meta data start
 description: "GitHub Actions provides a powerful and flexible way to set up CI/CD workflows. By integrating it with genezio, you ensure that your serverless applications are always up-to-date and deployed seamlessly."
-meta_og_url: "https://genez.io/blog/how-to-add-a-mongodb-to-your-genezio-project"
-meta_og_image: "https://genez.io/genezio_cicd.webp"
+meta_og_url: "https://genezio.com/blog/how-to-add-a-mongodb-to-your-genezio-project"
+meta_og_image: "https://genezio.com/genezio_cicd.webp"
 # meta data end
 ---
 

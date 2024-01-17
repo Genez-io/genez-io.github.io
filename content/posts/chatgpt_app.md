@@ -9,8 +9,8 @@ thumbnail: /images/chatgptapp.svg
 preview: In this tutorial, I will show you how to create an app called the Rephrasing App.
 # meta data start
 description: "Learn how to build your first ChatGPT app in this step-by-step tutorial. Rephrase text and improve your writing with React and genezio. Get started now!"
-meta_og_url: "https://genez.io/blog/create-your-first-app-using-chatgpt"
-meta_og_image: "https://genez.io/images/chatgptapp.svg"
+meta_og_url: "https://genezio.com/blog/create-your-first-app-using-chatgpt"
+meta_og_image: "https://genezio.com/images/chatgptapp.svg"
 # meta data end
 ---
 
@@ -470,7 +470,7 @@ genezio deploy
 You can find the complete project on our {{< external-link link="https://github.com/Genez-io/genezio-examples/tree/master/javascript/chatgpt-project" >}}Github{{< /external-link >}}
 
 
-I hope that you found this tutorial informative and helpful, and I encourage you to check out our {{< external-link link="https://genez.io/blog/" >}}other articles{{< /external-link >}} for more tips and tricks on mastering your craft.
+I hope that you found this tutorial informative and helpful, and I encourage you to check out our {{< external-link link="https://genezio.com/blog/" >}}other articles{{< /external-link >}} for more tips and tricks on mastering your craft.
 
 Let me know if you need help by contacting me on {{< external-link link="https://discord.gg/XmpKD9ytxS" >}}Discord{{< /external-link >}}
  or write me an email at contact@genez.io.

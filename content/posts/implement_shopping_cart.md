@@ -9,8 +9,8 @@ linkedIn: https://www.linkedin.com/in/andreia-irina-ocanoaia/
 thumbnail: /images/implement_shopping_cart_redis.jpg
 preview: Learn how to build a shopping cart app with Typescript, Redis, and React.
 description: Implement a scalable, fast, and robust shopping cart using Redis, NodeJs, and React. This tutorial guides you step-by-step through building a cart feature.
-meta_og_url: "https://genez.io/blog/implement-shopping-cart-redis"
-meta_og_image: "https://genez.io/images/implement_shopping_cart_redis.jpg"
+meta_og_url: "https://genezio.com/blog/implement-shopping-cart-redis"
+meta_og_image: "https://genezio.com/images/implement_shopping_cart_redis.jpg"
 ---
 
 In this tutorial, I'll show you how to use Redis, NodeJs, and React to easily implement a shopping cart for your online store.
@@ -73,7 +73,7 @@ The result of this tutorial will be a web application that looks like this:
 If you don't already have them, you'll need to install the following tools:
 - {{< external-link link="https://nodejs.org/en/download/current" >}}Node.js{{< /external-link >}}
 - {{< external-link link="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm" >}}npm{{< /external-link >}}
-- {{< external-link link="https://genez.io" >}}Genezio{{< /external-link >}}
+- {{< external-link link="https://genezio.com" >}}Genezio{{< /external-link >}}
 
 Note: I recommend you to use {{< external-link link="https://github.com/nvm-sh/nvm#installing-and-updating" >}}nvm{{< /external-link >}} to manage NodeJs and npm versions.
 After installing `nvm`, you can easily get any version of `node` by running `nvm install <node_version>`.
@@ -642,4 +642,4 @@ Congratulations! 🥳
 
 The codebase for this tutorial is open-source, and you can find it in this {{< external-link link="https://github.com/genez-io/genezio-examples/tree/main/typescript/shopping-cart" >}}GitHub repository{{< /external-link >}}.
 
-I hope you enjoyed this tutorial and I encourage you to check out our other {{< external-link link="https://genez.io/blog" >}}tutorials{{< /external-link >}} for more tips and tricks on improving your software engineering skills. 🥷 💻
+I hope you enjoyed this tutorial and I encourage you to check out our other {{< external-link link="https://genezio.com/blog" >}}tutorials{{< /external-link >}} for more tips and tricks on improving your software engineering skills. 🥷 💻
