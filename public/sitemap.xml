@@ -2,19 +2,49 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>/blog/collaboration-queues-and-new-project-wizard-genezio-v0.7/</loc>
+    <lastmod>2023-12-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/news/</loc>
+    <lastmod>2023-12-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/</loc>
+    <lastmod>2023-12-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blog/how-to-setup-cron-jobs-with-genezio/</loc>
+    <lastmod>2023-12-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/tutorials/</loc>
+    <lastmod>2023-12-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blog/implement-a-shopping-cart-using-typescript-redis-and-react/</loc>
+    <lastmod>2023-12-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blog/now-available-neon-postgres/</loc>
+    <lastmod>2023-11-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blog/now-available-upstash-redis/</loc>
+    <lastmod>2023-11-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blog/10-common-mistakes-in-typescript-development/</loc>
+    <lastmod>2023-11-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blog/integrate-redis-and-postgres-plus-much-more-genezio-v0.6/</loc>
+    <lastmod>2023-11-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blog/genezio-empowered-web3-innovation-at-the-xday.2023-hackathon/</loc>
+    <lastmod>2023-11-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blog/integrating-github-actions-with-genezio-for-ci/cd/</loc>
+    <lastmod>2023-09-18T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/tags/comparison/</loc>
     <lastmod>2023-07-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/blog/database-in-serverless-world-comparison/</loc>
     <lastmod>2023-07-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/</loc>
-    <lastmod>2023-07-20T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>/blog/how-to-add-a-mongodb-to-your-genezio-project/</loc>
-    <lastmod>2023-07-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/tutorials/</loc>
     <lastmod>2023-07-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/blog/the-evolution-of-apis-a-history-of-rest-and-rpc/</loc>
@@ -24,9 +54,6 @@
     <lastmod>2023-06-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/blog/genezio-new-release/</loc>
-    <lastmod>2023-05-30T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/news/</loc>
     <lastmod>2023-05-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/full-stack-dart-application/</loc>

@@ -46,53 +46,16 @@ If you already have a genezio project deployed and you just want to integrate Ne
 
 Install genezio by running the following command in your terminal:
 
-`npm install genezio -g`
-
-After that, you can initialize a brand new project by running `genezio` in your preferred directory:
-
-`genezio`
-
-This command will guide you through all the necessary steps to initialize and deploy your genezio project. After you successfully ran the command, your terminal should look something like this:
-
+```bash
+npm install genezio -g
 ```
 
-Redirecting to browser to complete authentication...
-Loading...✅
-? Choose a template for your genezio project Backend-Only
-Your project will start from the Backend-Only template.
-? Please enter a name for your project: getting-started-with-neon
-Your project will be named getting-started-with-neon.
-? Choose a region for your project US East (Ohio)
-Your project will be deployed in US East (Ohio).
-? Please enter a name for your directory: getting-started-with-neon
-We are creating the project in ./getting-started-with-neon.
-Creating the project...✅
+After that, you can initialize a brand new project by running `genezio create` in your preferred directory:
 
-Deploying your project...
-
-Bundling your code...✅
-Checking your credentials...✅
-Changing the plumbing of the pipeline...✅
-Doing the final touch-ups...✅
-
-Deploying your backend project to the genezio infrastructure...
-Your code was deployed and the SDK was successfully generated!
-
-To install the SDK in your client,
-run this command in your client's root:
-npm install @genezio-sdk/getting-started-with-neon_us-east-2@1.0.0-prod
-
-Then import your classes like this:
-import { HelloWorldService } from
-"@genezio-sdk/getting-started-with-neon_us-east-2"
-
-After deployment is complete, you should be able to access your project by following the link provided by the terminal in the following message:
-
-Your backend project has been deployed and is available at https://app.genez.io/project/<project-id>
-
-Navigate to the link to open your genezio dashboard and manage your project.
-
+```bash
+genezio create backend ts-blank-api --name=getting-started-with-neon
 ```
+
 
 ## Step 2: Initialize a Neon Postgres database
 
@@ -195,4 +158,4 @@ Now you can test your deployed application by navigating to the genezio {{< exte
 
 ## Conclusion
 
-Congrats🥳! You successfully deployed a project that is fully integrated with a Neon Postgres database. To see a more flushed out tutorial that uses this integration, check out this article about how to create a full stack CRUD application.
+Congrats🥳! You successfully deployed a project that is fully integrated with a Neon Postgres database. To see a more flushed out tutorial that uses this integration.

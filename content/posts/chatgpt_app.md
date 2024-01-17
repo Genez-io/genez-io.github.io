@@ -13,41 +13,6 @@ meta_og_url: "https://genez.io/blog/create-your-first-app-using-chatgpt"
 meta_og_image: "https://genez.io/images/chatgptapp.svg"
 # meta data end
 ---
-<!-----
-
-You have some errors, warnings, or alerts. If you are using reckless mode, turn it off to see inline alerts.
-* ERRORs: 0
-* WARNINGs: 0
-* ALERTS: 3
-
-Conversion time: 1.222 seconds.
-
-
-Using this Markdown file:
-
-1. Paste this output into your source file.
-2. See the notes and action items below regarding this conversion run.
-3. Check the rendered output (headings, lists, code blocks, tables) for proper
-   formatting and use a linkchecker before you publish this page.
-
-Conversion notes:
-
-* Docs to Markdown version 1.0β34
-* Fri Feb 17 2023 07:02:14 GMT-0800 (PST)
-* Source doc: Untitled document
-* This document has images: check for >>>>>  gd2md-html alert:  inline image link in generated source and store images to your server. NOTE: Images in exported zip file from Google Docs may not appear in  the same order as they do in your doc. Please check the images!
-
------>
-
-
-<p style="color: red; font-weight: bold">>>>>>  gd2md-html alert:  ERRORs: 0; WARNINGs: 0; ALERTS: 3.</p>
-<ul style="color: red; font-weight: bold"><li>See top comment block for details on ERRORs and WARNINGs. <li>In the converted Markdown or HTML, search for inline alerts that start with >>>>>  gd2md-html alert:  for specific instances that need correction.</ul>
-
-<p style="color: red; font-weight: bold">Links to alert messages:</p><a href="#gdcalert1">alert1</a>
-<a href="#gdcalert2">alert2</a>
-<a href="#gdcalert3">alert3</a>
-
-<p style="color: red; font-weight: bold">>>>>> PLEASE check and correct alert issues and delete this message and the inline alerts.<hr></p>
 
  
 
@@ -132,60 +97,23 @@ genezio login
 
 
 
-Create a new project folder:
+Create a new project:
 
 
 ```
-mkdir chatgpt-project && cd chatgpt-project
-```
-
-
-In this folder you will add 2 more folders: **client_chatgpt** and **server_chatgpt**. The second one will be added with `genezio init` and the first one will be added using this command:
-
-
-```
-mkdir client_chatgpt
+genezio create fullstack ts-blank-api ts-blank-react --name=chatgpt-project
 ```
 
 
 
 ### **The Server-side Project**
 
-Set up a new genezio project:
+
+Change into the newly created `server` folder:
 
 
 ```
-genezio init
-```
-
-
-After you complete the wizard, your terminal should look like this:
-
-
-```
-What is the name of the project: server_chatgpt
-What region do you want to deploy your project to? [default value: us-east-1]: 
-
-Your genezio project was successfully initialized!
-
-The genezio.yaml configuration file was generated.
-You can now add the classes that you want to deploy using the'genezio addClass <className> <classType>' command.
-```
-
-
-Change into the newly created `server_chatgpt` folder:
-
-
-```
-cd server_chatgpt
-```
-
-
-Create a `package.json` file:
-
-
-```
-npm init -y
+cd ./chatgpt-project/server
 ```
 
 
@@ -204,19 +132,8 @@ npm install openai
 
 You will implement a class containing a function that you will deploy and then call it from the frontend application.
 
-You will need to install `dotenv` and create a `.env` file to securely store your secret key:
 
-
-```
-npm install dotenv
-```
-
-```
-touch .env
-```
-
-
-Open the `.env` file and add the following variable that will store your OpenAI secret key from your OpenAI account:
+Create the `.env` file and add the following variable that will store your OpenAI secret key from your OpenAI account:
 
 
 ```
@@ -225,19 +142,12 @@ OPENAI_SECRET_KEY=<your_secret_key>
 
 
 
-Now, create a new class using genezio:
-
-
-```
-genezio addClass gptCaller.js
-```
-Open the newly created `gptCaller.js` class and start by adding the dependencies:
+Create a new file `gptCaller.js` and start by adding the dependencies:
 
 
 ```javascript
+import { GenezioDeploy } from "@genezio/types";
 import OpenAI from 'openai';
-import dotenv from "dotenv";
-dotenv.config();
 ```
 
 
@@ -245,6 +155,7 @@ In the constructor of the class, instantiate the `openai` object:
 
 
 ```javascript
+@GenezioDeploy()
 export class GptCaller {
   openai = null;
 
@@ -263,11 +174,10 @@ Take a look at the complete file code:
 
 
 ```javascript
+import { GenezioDeploy } from "@genezio/types";
 import OpenAI from 'openai';
-import dotenv from "dotenv";
-dotenv.config();
 
-
+@GenezioDeploy()
 export class GptCaller {
   openai = null;
 
@@ -276,7 +186,8 @@ export class GptCaller {
       apiKey: process.env.OPENAI_SECRET_KEY
     });
   }
-// send a request to the ChatGPT API to get the requestText
+
+  // send a request to the ChatGPT API to get the requestText
   async askChatGPT(requestText) {
     const completion = await this.openai.chat.completions.create({
       // the used model at the moment of writing this article
@@ -295,64 +206,35 @@ export class GptCaller {
 
 **Note**: Please make sure to check out the OpenAI API {{< external-link link="https://platform.openai.com/docs/api-reference/completions" >}}Official Documentation{{< /external-link >}} for more information.
 
+Now run the following command to test your backend locally:
+```
+genezio local
+```
+
 
 
 
 ### **The Client-side React Project**
 
-Go to the `client_chatgpt` folder:
+Go to the `client` folder in a **new terminal**:
 
 
 ```
-cd ./../client_chatgpt
+cd ./../client
 ```
 
-
-Create a new React app:
-
-
-```
-npx create-react-app .
-```
-
-
-Now, you can deploy your backend project from the `server_chatgpt` folder to the genezio infrastructure (this might take up to 3 minutes, so be patient):
-
-
-```
-cd ./../server_chatgpt && genezio deploy --env .env
-```
-
-
-After the deployment is done, you can go to the genezio web app to see more information and logs of your project:
-
-
-```
-https://app.genez.io/project/<your_project_id>
-```
-
-
-Now that the backend is deployed, you can start the React app:
-
-
-```
-cd ./../client_chatgpt && npm start
-```
-
-
- 
 
 
 ### **Implement the User Interface**
 
-In this part of the article you will create the UI for chatting with the backend. This in the `src/App.js` file.
+In this part of the article you will create the UI for chatting with the backend. This in the `src/App.tsx` file.
 
 First, import the dependencies from `react`, `SDK`, and `CSS`:
 
 
 ```javascript
 import { useState } from "react";
-import { GptCaller } from "./sdk/gptCaller.sdk.js";
+import { GptCaller } from '@genezio-sdk/chatgpt-project_us-east-1';
 import "./App.css";
 ```
 
@@ -371,7 +253,7 @@ const [isRequesting, setIsRequesting] = useState(false);
 You will also need to write a method for sending the request:
 
 
-```javascript
+```typescript
 function sendRequest(e) {
   e.preventDefault();
   setIsRequesting(true);
@@ -403,7 +285,7 @@ For displaying the user’s input text and the response generated by ChatGPT, yo
 This will be done in a `map` of the messages:
 
 
-```jsx
+```tsx
 {messages.map((message, index) => {
   if (message.isUser) {
     return (
@@ -566,6 +448,22 @@ export default App;
 
 
 **Note:** We provide you with the complete CSS for this project in `src/App.css`.
+
+#### Test your code
+On the `client` folder start the frontend:
+```
+npm run dev
+```
+
+Open your browser and go to `http://localhost:5173/` to see the app in action.
+
+#### Deploy your project
+Go to the **root** folder of your project and run the following command:
+```
+genezio deploy
+```
+
+
 
 #### This is it!
 

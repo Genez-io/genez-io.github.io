@@ -92,46 +92,16 @@ Later on, `genezio` comes in handy to deploy and host your web applications in t
 npm install -g genezio
 ```
 
-After installing `genezio`, you can scaffold the application by running the following command:
+After installing `genezio`, you can create a black project by running the following command:
 
 ```bash
-genezio
+genezio create fullstack ts-blank-api ts-blank-react --name=my-online-store
 ```
 
-The command above will get you through a series of questions to help you customize and prepare your project for production deployment.
-
-Your terminal should look similar to the following output:
-```
-~ genezio
-Redirecting to the browser to complete authentication...
-
-? Choose a template for your genezio project Fullstack
-Your project will start from the Fullstack template.
-
-? Please enter a name for your project: my-online-store
-Your project will be named my-online-store.
-
-? Choose a region for your project US East (N. Virginia)
-Your project will be deployed in US East (N. Virginia).
-
-We are creating the project in the current directory.
-
-Deploying your backend project to genezio infrastructure...
-
-Your backend project has been deployed and is available at https://app.genez.io/project/c7e163b7-d0c9-47f6-8520-0e546f2e7b07/cdfc6daf-2c9d-4fae-9c94-4f011c8a84f2
-
-Deploying your frontend to genezio infrastructure...
-
-No subdomain specified in the genezio.yaml configuration file. We will provide a random one for you.
-Frontend successfully deployed at https://amber-cooperative-blackbird.app.genez.io.
-```
-
-The output from the `genezio` command will contain a randomly-assigned subdomain where your project was deployed for testing purposes.
 
 ## Setting up the backend
 
 Now that you have a template to start from, fire up your favorite code editor and open the project's directory.
-
 
 The following piece of code will connect you to a Redis database and allow you to store and retrieve items to the shopping cart based on a session ID.
 This approach will be useful to accommodate more than 1 user on your web app.
@@ -338,47 +308,6 @@ In the `src` directory you can find the source code for your application. The `i
 The `App.tsx` file is the main component of your application. This component will be responsible for rendering the other components in your application. This is where you'll write most of your code.
 
 In the `models.tsx` file you can declare the interfaces that will be used in your application. This file will be useful to keep track of the data types used in your application.
-
-If you open up `App.tsx` in your IDE, you'll see the following code snippet:
-```typescript
-// Import necessary dependencies
-import React from 'react';
-import './App.css'; // Import your styles if needed
-
-// Define the App component
-const App: React.FC = () => {
-  // Define the states of the app
-  const [count, setCount] = useState(0);
-
-  // Implement the different logic based on the states
-  const handleCounter = (amount: number) => {
-    setCount(count + amount);
-  };
-
-
-  return (
-    <div className="app">
-      {/* Header component */}
-      <Header />
-
-      {/* Main content component */}
-      <MainContent />
-
-      // Use triggers to change the states
-      <div>
-        <p>Count: {count}</p>
-        <button onClick={() => handleCounter(1)}>Add</button>
-        <button onClick={() => handleCounter(-1)}>Subtract</button>
-      </div>
-
-      {/* Footer component */}
-      <Footer />
-    </div>
-  );
-};
-
-export default App;
-```
 
 {{< /details >}}
 
@@ -605,8 +534,6 @@ Send a request to the backend to clear the cart when the `Clear Cart` button is 
 
 Your application is now ready to be deployed to the cloud to be used by your clients.
 
-Before deploying your application, you can change the randomly assigned subdomain to something more meaningful for your application.
-To do that, go to the genezio config file - `genezio.yaml` - and modify the `subdomain` field.
 
 To deploy your application, run the following command in the root directory of your project:
 

@@ -107,7 +107,7 @@ First, you have to install `genezio` from npmjs:
 npm install genezio -g
 ```
 
-Then, you can create a new genezio project by simply running `genezio` in your terminal:
+Then, you can create a new genezio project by simply running `genezio create` in your terminal:
 
 ```bash
 genezio
@@ -116,32 +116,13 @@ genezio
 The `genezio` command will walk you through the process of creating a new genezio project.
 Your terminal should look similar to the following snippets:
 
-```
-$ genezio
-Redirecting to browser to complete authentication...
-
-? Choose a template for your genezio project Backend-Only
-Your project will start from the Backend-Only template.
-
-? Please enter a name for your project: getting-started-with-upstash
-Your project will be named getting-started-with-upstash.
-
-? Choose a region for your project US East (N. Virginia)
-Your project will be deployed in US East (N. Virginia).
-
-? Please enter a name for your directory: getting-started-with-upstash
-We are creating the project in ./getting-started-with-upstash.
-```
-
-After the deployment is complete, you should see the following message in your terminal:
-
 ```bash
-Your backend project has been deployed and is available at https://app.genez.io/project/<project-id>/<environment-id>
+genezio create backend ts-blank-api --name=getting-started-with-upstash
 ```
-
-Navigate the link in your terminal to open your project page in the genezio dashboard.
 
 ## Step 2: Initialize an Upstash Redis database
+
+Navigate to your project page in the genezio dashboard: https://app.genez.io/
 
 Go to the `Integrations` tab and select to install the Upstash Redis integration:
 

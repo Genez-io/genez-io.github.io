@@ -1,5 +1,5 @@
 ---
-title: How to schedule tasks with genezio
+title: How to Setup Cron Jobs with genezio
 date: 2023-12-12
 tags:
   - Tutorials
@@ -11,10 +11,9 @@ preview: This guide will walk you through the steps of building a scheduler with
 description: "Schedulers are automated systems designed to carry out tasks at set intervals or specific times."
 meta_og_url: "https://genez.io/blog/how-to-schedule-tasks-with-genezio"
 meta_og_image: "https://genez.io/images/scheduletasks.webp"
+url: how-to-schedule-tasks-with-genezio
 # meta data end
 ---
-
-##
 
 This guide will walk you through the steps of building a scheduler with genezio. Schedulers are automated systems designed to carry out tasks at set intervals or specific times. They play a crucial role in various applications and automation. Use cases include sending emails, conducting routine database cleanup and database backup, or undertaking data analysis and reporting activities.
 
@@ -28,7 +27,7 @@ Genezio makes things easier for you, so you don’t need any additional npm libr
 4. [Test your Scheduler](#test-your-scheduler)
 5. [Deploy your Scheduler](#deploy-your-scheduler)
 6. [Create more complex schedules](#create-more-complex-schedulers)
-7. [Do’s and Don’ts Tips](#do’s-and-don’ts-tips)
+7. [Do’s and Don’ts Tips](#dos-and-donts-tips)
 8. [Conclusion](#conclusion)
 
 ## Prerequisites
@@ -38,7 +37,7 @@ If you don’t already have them, you’ll need to install the following tools:
 - {{< external-link link="https://nodejs.org/en/download/current" >}}Node.js{{< /external-link >}}
 - {{< external-link link="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm" >}}Npm{{< /external-link >}}
 
-**Note:** I recommend you use {{< external-link link="https://github.com/nvm-sh/nvm#installing-and-updating" >}}nvm{{< /external-link >}} to manage NodeJs and npm versions. After installing `nvm`, you can easily get any node version by running `nvm install &lt;node_version>`.
+**Note:** I recommend you use {{< external-link link="https://github.com/nvm-sh/nvm#installing-and-updating" >}}nvm{{< /external-link >}} to manage NodeJs and npm versions. After installing `nvm`, you can easily get any node version by running `nvm install <node_version>`.
 
 ## Getting Started
 
@@ -50,51 +49,20 @@ To get started with a template, install `genezio` using `npm` and run it in your
 npm install -g genezio
 ```
 
-After installing `genezio`, you can create a new Genezio Node.js project by running the following command in an empty new folder:
+After installing `genezio`, you can create a new Genezio Node.js project by running the following command:
 
 ```
-genezio
+genezio create backend ts-blank-api --name=genezio-scheduler
+cd ./genezio-scheduler
 ```
-
-The command above will get you through a series of questions to help you customize and prepare your project for production deployment.
-
-Your terminal should look similar to the following output:
-
-```
-~ genezio
-Redirecting to the browser to complete authentication...
-
-? Choose a template for your genezio project Backend-Only
-Your project will start from the Backend-Only template.
-
-? Please enter a name for your project: my-online-store
-Your project will be named scheduler-app.
-
-? Choose a region for your project US East (N. Virginia)
-Your project will be deployed in US East (N. Virginia).
-
-We are creating the project in the current directory.
-
-Deploying your backend project to genezio infrastructure...
-
-Your backend project has been deployed and is available at https://app.genez.io/project/<id>/<id>
-```
-
-This command will execute npm init (create package.json file) and install the only dependency we need for scheduled cron jobs(`@genezio/types`).
 
 ## Setting up your Scheduler
 
-Next, you need to create a new class using the following command:
-
-```
-genezio addClass Scheduler.ts
-```
-
-This command will create a new typescript class file named `Scheduler.ts`.
+Now create a new typescript file named `Scheduler.ts`.
 
 Open this newly created file in your preferred IDE and add the following code:
 
-```javascript
+```typescript
 import { GenezioDeploy, GenezioMethod } from "@genezio/types";
 
 /**

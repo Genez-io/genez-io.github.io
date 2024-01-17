@@ -9,6 +9,9 @@
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-5ZPQL3Z');</script>
   
+
+   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11335989676"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-11335989676'); </script>
+   <script> gtag('event', 'conversion', {'send_to': 'AW-11335989676/Vn9zCMKshYEZEKzztZ0q'}); </script>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>genezio | Exploring the Differences Between genezio and Express.js</title>
@@ -17,6 +20,7 @@
   <meta name="theme-color" content="#6f42c1" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#6f42c1" media="(prefers-color-scheme: dark)">
 
+  
   
   <link rel="shortcut icon" href="/favicon.png">
   <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120-precomposed.png" />
@@ -50,7 +54,7 @@
 
   
   
-  <link rel="stylesheet" href="/css/style.min.e2d430114708ed98af06f908b2fd85dbdeb366bd4c79342239b7d7a1070b086c.css">
+  <link rel="stylesheet" href="/css/style.min.f1ce87c748a07a08745d041c9860b6b8c6c175e6809b9e176ddc4ecb73ef38cc.css">
   
 
   
@@ -66,6 +70,15 @@
 
     gtag('config', 'G-VR905VXGKC');
   </script>
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-11377331429">
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-11377331429');
+</script>
 </head>
 
 <body class='page page-posts-single'>
@@ -210,12 +223,12 @@
         
         <div class="post-tags">
           
-          <a class="post-tag" href="/tags/comparison">Comparison</a>
+          <a class="post-tag" href="/tags/comparison" target="_blank">Comparison</a>
           
         </div>
         
         <h1>Exploring the Differences Between genezio and Express.js</h1>
-        <a class="post-author-name" href="https://www.linkedin.com/in/stefan-d-iordache/">Stefan Iordache</a>
+        <a class="post-author-name" href="https://www.linkedin.com/in/stefan-d-iordache/" target="_blank">Stefan Iordache</a>
         <div class="post-date pt-1">
         
             
@@ -233,9 +246,27 @@
       <div class="col-12 col-lg-8">
         <div class="content"><!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
-<p>APIs are one of the most important tools in software technology and are used for building modern and reliable software products. There are many ways of developing and exposing an API. Over time, frameworks were built, and doing this became much easier and user-friendlier. Today we will compare <a href="http://genez.io">genezio</a> with one of the major players in the market, Express. Let’s get started!</p>
+<p>APIs are one of the most important tools in software technology and are used for building modern and reliable software products. There are many ways of developing and exposing an API. Over time, frameworks were built, and doing this became much easier and user-friendlier. Today we will compare 
+
+
+
+<a href="http://genez.io" target="_blank">genezio</a>
+
+
+
+
+with one of the major players in the market, Express. Let’s get started!</p>
 <p>Express is one of the most popular frameworks used for backend programming. Developed on top of Node, it provides a robust set of features for building RESTful APIs. It allows developers to set common web application settings and add additional “middleware” at any point in the request handling pipeline. It is easy to use, well maintained, and a great choice for building almost any kind of web application.</p>
-<p><a href="http://genez.io">genezio</a> is a platform for developing serverless APIs. Compared with Express, or any other backend framework, it isn’t just a set of rules for writing server-side code, it is also a deployment mechanism for those who want to obtain performant and cost efficient serverless environments for their projects.</p>
+<p>
+
+
+
+<a href="http://genez.io" target="_blank">genezio</a>
+
+
+
+
+is a platform for developing serverless APIs. Compared with Express, or any other backend framework, it isn’t just a set of rules for writing server-side code, it is also a deployment mechanism for those who want to obtain performant and cost efficient serverless environments for their projects.</p>
 <p>This may sound a bit complicated, so let’s break down this comparison using some sample code. We will take a look at:</p>
 <ul>
 <li>Writing code</li>
@@ -280,7 +311,16 @@
 <p>A genezio project is structured with classes and functions, rather than routes and endpoints, making it easy to maintain.</p>
 <p><strong>Testing the Code</strong></p>
 <p>We worked very hard on our masterpiece project and we want to make sure that it is working properly before using the functionalities in our client application. Both tools offer the possibility of running a local server for testing web applications.</p>
-<p>The most common way of testing an Express application is by using an HTTP client such as <a href="https://www.postman.com">Postman</a>. You pass your endpoint, select the request type (GET, POST, PUT, DELETE, etc), send the request and receive the response.</p>
+<p>The most common way of testing an Express application is by using an HTTP client such as 
+
+
+
+<a href="https://www.postman.com" target="_blank">Postman</a>
+
+
+
+
+. You pass your endpoint, select the request type (GET, POST, PUT, DELETE, etc), send the request and receive the response.</p>
 <p>genezio comes with a custom tool for testing your projects locally, as well as after they are deployed. The interface is aware of your project’s structure and autocompletes your testing environment with the corresponding function and parameter names. You don’t have to manually add your endpoints, just select the function you want to test, input the parameters and click SEND.</p>
 <p><img src="/posts/test_interface.webp" alt="test interface" title="image_tooltip"></p>
 <p><strong>Accessing Your API</strong></p>
@@ -302,7 +342,25 @@
 </span></span><span class="line"><span class="cl"><span class="nx">axios</span><span class="p">.</span><span class="nx">request</span><span class="p">(</span><span class="nx">config</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">  <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">))</span> <span class="p">})</span>
 </span></span><span class="line"><span class="cl">  <span class="p">.</span><span class="k">catch</span><span class="p">((</span><span class="nx">error</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">});</span>
-</span></span></code></pre></div><p>With<a href="http://genez.io"> genezio</a>, you will access your functions using the autogenerated SDK provided when you deployed your project or ran it locally. The SDK contains the custom types (enums, classes, unions) you defined in your server code in order to provide a type-safe API. It also takes care of serializing and deserializing your data. You can import this SDK in your client-side project and call the functions just as if they were local functions.<a href="http://genez.io"> genezio</a> takes care of accessing the server and providing you the response.</p>
+</span></span></code></pre></div><p>With
+
+
+
+<a href="http://genez.io" target="_blank">genezio</a>
+
+
+
+
+, you will access your functions using the autogenerated SDK provided when you deployed your project or ran it locally. The SDK contains the custom types (enums, classes, unions) you defined in your server code in order to provide a type-safe API. It also takes care of serializing and deserializing your data. You can import this SDK in your client-side project and call the functions just as if they were local functions.
+
+
+
+<a href="http://genez.io" target="_blank">genezio</a>
+
+
+
+
+takes care of accessing the server and providing you the response.</p>
 <p>For our 2 little functions, the generated SDK in JavaScript will look something like this:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="cm">/**
 </span></span></span><span class="line"><span class="cl"><span class="cm">* This is an auto generated code. This code should not be modified since the file can be overwritten
@@ -323,15 +381,42 @@
 </span></span><span class="line"><span class="cl"> <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><p>The Remote object from the <code>remote.js</code> file referenced at the beginning (also autogenerated in the SDK) will take care of calling your remote functions using the <a href="https://www.jsonrpc.org/specification">JSON-RPC</a> protocol (<em>stay tuned for a future article about JSON-RPC and HTTP</em>), as opposed to plain HTTP used by the Express application. All you have to do is import this class in your client and call the methods. Calling the equivalent function of the POST request we just made should look like this:</p>
+</span></span></code></pre></div><p>The Remote object from the <code>remote.js</code> file referenced at the beginning (also autogenerated in the SDK) will take care of calling your remote functions using the 
+
+
+
+<a href="https://www.jsonrpc.org/specification" target="_blank">JSON-RPC</a>
+
+
+
+
+protocol (<em>stay tuned for a future article about JSON-RPC and HTTP</em>), as opposed to plain HTTP used by the Express application. All you have to do is import this class in your client and call the methods. Calling the equivalent function of the POST request we just made should look like this:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">HelloWorld</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;./sdk/hello.sdk.js&#34;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">HelloWorld</span><span class="p">.</span><span class="nx">greetName</span><span class="p">(</span><span class="s2">&#34;John&#34;</span><span class="p">));</span>
 </span></span></code></pre></div><p>A downside you may observe here is that the client application must be written in the same programming language as the generated SDK. Currently genezio supports JavaScript, TypeScript and Dart for backend programming, and JavaScript, TypeScript, Swift, Python and Dart for generating SDK. You can use any combination of these supported programming languages. Even though it may not have the complete language independence of HTTP, as time passes and genezio releases support for multiple programming languages, this barrier fades away.</p>
 <p><strong>Deploying the Code</strong></p>
 <p>With Express being just a backend framework, the deployment of your beautiful application stands on your shoulders. This can be a good thing if you have DevOps knowledge and want to be in control of everything, but it can also be a burden if you just want to get your code up and running without dealing with choosing providers, server specifications or autoscaling. Luckily there are a ton of third party tools that make this process a bit easier.</p>
-<p>With<a href="http://genez.io"> genezio</a>, you are one command away from deploying your project to a serverless cloud. Type <code>genezio deploy</code> and we will automatically optimize your code and deploy each class on a separate, scalable and independently manageable cloud environment.</p>
-<p>You can use your personal dashboard in <a href="https://app.genez.io/">The genezio WebApp</a> to see all your projects, inspect logs, disable or activate individual classes, as well as test your deployed projects.</p>
+<p>With
+
+
+
+<a href="http://genez.io" target="_blank">genezio</a>
+
+
+
+
+, you are one command away from deploying your project to a serverless cloud. Type <code>genezio deploy</code> and we will automatically optimize your code and deploy each class on a separate, scalable and independently manageable cloud environment.</p>
+<p>You can use your personal dashboard in 
+
+
+
+<a href="https://app.genez.io/" target="_blank">The genezio WebApp</a>
+
+
+
+
+to see all your projects, inspect logs, disable or activate individual classes, as well as test your deployed projects.</p>
 <p><strong>Conclusions</strong></p>
 <p>There are many key takeaways from this comparison. Express remains one of the best tools for building RESTful APIs, but if you are looking for a tool that automates a big part of your workflow and lets you focus on the logic of the code, then genezio might be a good fit for you.</p>
 <p>Advantages of Express:</p>
@@ -340,7 +425,16 @@
 <li>you can deploy your code anywhere you want</li>
 <li>uses widely spread RESTful APIs</li>
 </ul>
-<p>Advantages of<a href="http://genez.io"> genezio</a>:</p>
+<p>Advantages of
+
+
+
+<a href="http://genez.io" target="_blank">genezio</a>
+
+
+
+
+:</p>
 <ul>
 <li>you write cleaner and easier to maintain code</li>
 <li>deployment is taken care of</li>
@@ -348,7 +442,16 @@
 <li>it uses modern paradigm of serverless deployment</li>
 <li>interactive dashboard for managing and testing projects</li>
 </ul>
-<p>I hope you enjoyed reading this article! If you have any questions, don’t hesitate to reach out to us on our <a href="https://discord.gg/uc9H5YKjXv">Discord</a> server. Happy coding!</p>
+<p>I hope you enjoyed reading this article! If you have any questions, don’t hesitate to reach out to us on our 
+
+
+
+<a href="https://discord.gg/uc9H5YKjXv" target="_blank">Discord</a>
+
+
+
+
+server. Happy coding!</p>
 </div>
       </div>
     </div>

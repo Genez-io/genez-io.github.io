@@ -6,14 +6,67 @@
     <description>Recent content in Tutorials on genezio</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 06 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="/tags/tutorials/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 12 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="/tags/tutorials/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Setup Cron Jobs with genezio</title>
+      <link>/blog/how-to-setup-cron-jobs-with-genezio/</link>
+      <pubDate>Tue, 12 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/how-to-setup-cron-jobs-with-genezio/</guid>
+      <description>This guide will walk you through the steps of building a scheduler with genezio. Schedulers are automated systems designed to carry out tasks at set intervals or specific times. They play a crucial role in various applications and automation. Use cases include sending emails, conducting routine database cleanup and database backup, or undertaking data analysis and reporting activities.
+Genezio makes things easier for you, so you don’t need any additional npm library like node-cron.</description>
+    </item>
+    
+    <item>
+      <title>Implement a shopping cart using TypeScript, Redis and React</title>
+      <link>/blog/implement-a-shopping-cart-using-typescript-redis-and-react/</link>
+      <pubDate>Mon, 04 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/implement-a-shopping-cart-using-typescript-redis-and-react/</guid>
+      <description>In this tutorial, I&amp;rsquo;ll show you how to use Redis, NodeJs, and React to easily implement a shopping cart for your online store.
+There are a lot of things to consider when implementing a shopping cart functionality for an online store. The cart feature should be scalable, fast, and robust to offer your users a great experience.
+The best part of this tutorial is that you can easily extend it or integrate it with an existing application.</description>
+    </item>
+    
+    <item>
+      <title>Now Available: Neon Postgres</title>
+      <link>/blog/now-available-neon-postgres/</link>
+      <pubDate>Wed, 22 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/now-available-neon-postgres/</guid>
+      <description>Neon provides serverless Postgres databases that offer a generous free tier as well as other features such as autoscaling, bottomless storage, and branching. As such, Neon is an excellent choice as a database provider for serverless applications.
+We are happy to announce that genezio now has full support for integrating with Neon Postgres. The integration allows you to easily create a Postgres database which you can manage directly from your genezio dashboard.</description>
+    </item>
+    
+    <item>
+      <title>10 Common Mistakes in Typescript Development</title>
+      <link>/blog/10-common-mistakes-in-typescript-development/</link>
+      <pubDate>Thu, 16 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/10-common-mistakes-in-typescript-development/</guid>
+      <description>We will walk through the most common 10 mistakes made in the TypeScript world, hoping to write cleaner, more reliable code.
+Below are the subjects we will address:
+Overuse of type &amp;ldquo;any&amp;rdquo; Misusing &amp;ldquo;as&amp;rdquo; Casts Ignoring Type-check Errors and Warning Not Using Strict Mode Implicit &amp;ldquo;any&amp;rdquo; in Function Return Types Not using &amp;ldquo;const&amp;rdquo; and &amp;ldquo;read-only&amp;rdquo; correctly Inconsistent Coding Conventions Overcomplicating Types Not Leveraging TypeScript Features Using third-party libraries 1. Overuse of type any One of the most common mistakes when transiting from a non typed language to a typed one is using any type excessively.</description>
+    </item>
+    
+    <item>
+      <title>Integrating GitHub Actions with genezio for CI/CD</title>
+      <link>/blog/integrating-github-actions-with-genezio-for-ci/cd/</link>
+      <pubDate>Mon, 18 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/integrating-github-actions-with-genezio-for-ci/cd/</guid>
+      <description>Integrating GitHub Actions with genezio for CI/CD Introduction GitHub Actions provides a powerful and flexible way to set up CI/CD workflows. By integrating it with genezio, you ensure that your serverless applications are always up-to-date and deployed seamlessly. This enhances developer productivity and ensures a smoother delivery of features and updates to end-users.
+Let&amp;rsquo;s dive into how you can set up this integration.
+Prerequisites: A genezio account A GitHub account and a repository with your genezio project Familiarity with genezio’s CLI tools, especially the genezio deploy command Step-by-Step Guide: 1.</description>
+    </item>
+    
     <item>
       <title>How to add a MongoDB to your genezio project</title>
       <link>/blog/how-to-add-a-mongodb-to-your-genezio-project/</link>
       <pubDate>Thu, 06 Jul 2023 00:00:00 +0000</pubDate>
       
       <guid>/blog/how-to-add-a-mongodb-to-your-genezio-project/</guid>
-      <description>In this tutorial, I will show you the steps of integrating a Mongo database into your genezio Getting Started project.
+      <description>In this tutorial, I will show you the steps of integrating a Mongo database into your genezio Getting Started project .
 Following this tutorial, you will be able to:
 Create a free-tier MongoDB Atlas cluster Connect to the MongoDB cluster using a MongoDB client Integrate the Mongo database into your project using mongoose Any time you get stuck or have questions, please contact me on Discord or write me an email at radu@genez.</description>
     </item>
@@ -26,7 +79,7 @@ Create a free-tier MongoDB Atlas cluster Connect to the MongoDB cluster using a 
       <guid>/blog/unlocking-the-potential-of-prompt-engineering-with-genezio/</guid>
       <description>This is a tutorial on how to build a movie recommendation system using the OpenAI API gpt.3-5-turbo based on the user input.
 We are developing an application that generates a list of movies with summarized reviews. We aim to provide a seamless user experience by allowing the user to input their preferences and receive movie suggestions.
-A complete demo app can be accessed at https://movie-guru.app.genez.io.
+A complete demo app can be accessed at movie-guru.app.genez.io .
 Introduction Welcome to this hands-on tutorial about creating advanced prompts and integrating OpenAI in your project using the OpenAI SDK.</description>
     </item>
     
@@ -36,8 +89,8 @@ Introduction Welcome to this hands-on tutorial about creating advanced prompts a
       <pubDate>Fri, 03 Mar 2023 00:00:00 +0000</pubDate>
       
       <guid>/blog/create-your-first-web3-app/</guid>
-      <description>In this tutorial, I am going to show you how to create your first Web3 application on Ethereum using Blast API and genezio. You don’t have to know anything beforehand to follow along. I will introduce you to the most basic blockchain concepts and tools to get you from zero to hero in Web3 development. Excited? Let’s get started 🤩
-After following through with this tutorial, you’ll be able to brag to your friends about how you can:</description>
+      <description>In this tutorial, I am going to show you how to create your first Web3 application on Ethereum using genezio and Blast API. You don’t have to know anything beforehand to follow along. I will introduce you to the most basic blockchain concepts and tools to get you from zero to hero in Web3 development. Excited? Let’s get started 🤩
+After following through with this tutorial, you’ll be able to:</description>
     </item>
     
     <item>
@@ -58,8 +111,7 @@ It will have two main components: the frontend which will consist of a simple ch
       <guid>/blog/getting-started-with-genezio/</guid>
       <description>Introduction Genezio is a serverless solution for seamlessly building full-stack web and mobile applications in a scalable and cost-efficient way.
 Documentation Only a small part of genezio’s functionality is discussed in this article.
-For complete developer documentation, please go to our Official Documentation.
-Support We invite you to join our community on Discord for further information and help.
+For complete developer documentation, please go to our Official Documentation. Support We invite you to join our community on Discord for further information and help.
 Let’s Get Started This guide will get you up and running with genezio in less than five minutes.</description>
     </item>
     

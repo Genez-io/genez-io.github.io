@@ -9,6 +9,9 @@
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-5ZPQL3Z');</script>
   
+
+   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11335989676"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-11335989676'); </script>
+   <script> gtag('event', 'conversion', {'send_to': 'AW-11335989676/Vn9zCMKshYEZEKzztZ0q'}); </script>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>genezio | Unlocking the potential of prompt engineering with genezio</title>
@@ -17,6 +20,7 @@
   <meta name="theme-color" content="#6f42c1" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#6f42c1" media="(prefers-color-scheme: dark)">
 
+  
   
   <link rel="shortcut icon" href="/favicon.png">
   <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120-precomposed.png" />
@@ -33,7 +37,7 @@
   <meta name="description" content="We are developing an application that generates a list of movies with summarized reviews. We aim to provide a seamless user experience by allowing the user to input his preferences and receive movie suggestions.">
   <meta property="og:title" content="Unlocking the potential of prompt engineering with genezio" />
   <meta property="og:description" content="We are developing an application that generates a list of movies with summarized reviews. We aim to provide a seamless user experience by allowing the user to input his preferences and receive movie suggestions." />
-  <meta property="og:image" content="https://genez.io/images/fromPromptToCloud.png" />
+  <meta property="og:image" content="https://genez.io/images/fromPromptToCloud.webp" />
   <meta property="og:url" content="https://genez.io/blog/unlocking-the-potential-of-prompt-engineering-with-genezio" />
   <meta property="og:type" content="website" />
 
@@ -50,7 +54,7 @@
 
   
   
-  <link rel="stylesheet" href="/css/style.min.e2d430114708ed98af06f908b2fd85dbdeb366bd4c79342239b7d7a1070b086c.css">
+  <link rel="stylesheet" href="/css/style.min.f1ce87c748a07a08745d041c9860b6b8c6c175e6809b9e176ddc4ecb73ef38cc.css">
   
 
   
@@ -66,6 +70,15 @@
 
     gtag('config', 'G-VR905VXGKC');
   </script>
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-11377331429">
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-11377331429');
+</script>
 </head>
 
 <body class='page page-posts-single'>
@@ -210,12 +223,12 @@
         
         <div class="post-tags">
           
-          <a class="post-tag" href="/tags/tutorials">Tutorials</a>
+          <a class="post-tag" href="/tags/tutorials" target="_blank">Tutorials</a>
           
         </div>
         
         <h1>Unlocking the potential of prompt engineering with genezio</h1>
-        <a class="post-author-name" href="https://www.linkedin.com/in/radu-andrei-dumitrescu/">Radu Dumitrescu</a>
+        <a class="post-author-name" href="https://www.linkedin.com/in/radu-andrei-dumitrescu/" target="_blank">Radu Dumitrescu</a>
         <div class="post-date pt-1">
         
             
@@ -235,7 +248,16 @@
 <!-- raw HTML omitted -->
 <p>This is a tutorial on how to build a movie recommendation system using the OpenAI API <code>gpt.3-5-turbo</code> based on the user input.</p>
 <p>We are developing an application that generates a list of movies with summarized reviews. We aim to provide a seamless user experience by allowing the user to input their preferences and receive movie suggestions.</p>
-<p>A complete demo app can be accessed at <a href="https://movie-guru.app.genez.io/">https://movie-guru.app.genez.io</a>.</p>
+<p>A complete demo app can be accessed at 
+
+
+
+<a href="https://movie-guru.app.genez.io/" target="_blank">movie-guru.app.genez.io</a>
+
+
+
+
+.</p>
 <!-- raw HTML omitted -->
 <p><img src="/images/promptimg.webp" alt="alt_text"></p>
 <h2 id="introduction">Introduction</h2>
@@ -252,29 +274,151 @@
 </ul>
 <h2 id="tech-stack">Tech Stack</h2>
 <ul>
-<li>OpenAI API allows developers to integrate state-of-the-art natural language processing capabilities into their software. By leveraging the OpenAI API, developers can enable functionalities like language translation, sentiment analysis, chatbots, and text generation, enhancing the overall user experience for intelligent and interactive applications. Check out their full documentation here: <a href="https://platform.openai.com/docs/introduction">https://platform.openai.com/docs/introduction</a></li>
-<li>TMDB (The Movie Database) - A Movie API that we use to get movie reviews. Here is their official documentation: <a href="https://developer.themoviedb.org/reference/intro/getting-started">https://developer.themoviedb.org/reference/intro/getting-started</a></li>
-<li>React.js is a popular JavaScript library that forms a key component in many modern tech stacks. With its component-based architecture and efficient virtual DOM rendering, React.js enables developers to build dynamic and interactive user interfaces for web applications. You can learn more by looking at their documentation: <a href="https://legacy.reactjs.org/docs/getting-started.html">https://legacy.reactjs.org/docs/getting-started.html</a></li>
-<li>Genezio is a platform that simplifies the process of developing serverless applications. With genezio, you can effortlessly create and host applications by writing clean and organized code in your preferred programming language (JS, TS and Dart) for both the frontend and backend. It offers typesafe APIs, auto generated class interfaces, and the ability to directly call functions in your code, streamlining your development workflow and saving you time. Take a look at the documentation: <a href="https://docs.genez.io/genezio-documentation/">https://docs.genez.io/genezio-documentation/</a></li>
+<li>
+<p>OpenAI API allows developers to integrate state-of-the-art natural language processing capabilities into their software. By leveraging the OpenAI API, developers can enable functionalities like language translation, sentiment analysis, chatbots, and text generation, enhancing the overall user experience for intelligent and interactive applications. Check out their full documentation here: 
+
+
+
+<a href="https://platform.openai.com/docs/introduction" target="_blank">platform.openai.com/docs/introduction</a>
+
+
+
+</p>
+</li>
+<li>
+<p>TMDB (The Movie Database) - A Movie API that we use to get movie reviews. Here is their official documentation: 
+
+
+
+<a href="https://developer.themoviedb.org/reference/intro/getting-started" target="_blank">developer.themoviedb.org/reference/intro/getting-started</a>
+
+
+
+</p>
+</li>
+<li>
+<p>React.js is a popular JavaScript library that forms a key component in many modern tech stacks. With its component-based architecture and efficient virtual DOM rendering, React.js enables developers to build dynamic and interactive user interfaces for web applications. You can learn more by looking at their documentation: 
+
+
+
+<a href="https://legacy.reactjs.org/docs/getting-started.html" target="_blank">legacy.reactjs.org/docs/getting-started.html</a>
+
+
+
+</p>
+</li>
+<li>
+<p>Genezio is a platform that simplifies the process of developing serverless applications. With genezio, you can effortlessly create and host applications by writing clean and organized code in your preferred programming language (JS, TS and Dart) for both the frontend and backend. It offers typesafe APIs, auto generated class interfaces, and the ability to directly call functions in your code, streamlining your development workflow and saving you time. Take a look at the documentation: 
+
+
+
+<a href="https://docs.genez.io/genezio-documentation/" target="_blank">docs.genez.io/genezio-documentation/</a>
+
+
+
+</p>
+</li>
 </ul>
 <h2 id="technical-tutorial">Technical Tutorial</h2>
 <h3 id="configuration--prerequisites">Configuration &amp; Prerequisites</h3>
 <ul>
-<li>Install <code>node</code> and <code>npm</code> <a href="https://nodejs.org/en/download">https://nodejs.org/en/download</a></li>
-<li>Install genezio: <code>npm install genezio -g</code></li>
-<li>Get the API Key from <a href="https://openai.com/">OpenAI</a>:</li>
-<li>Go to <a href="https://openai.com/">https://openai.com/</a> and click on <code>Sign Up</code></li>
-<li>After you log in go to: <a href="https://platform.openai.com/account/api-keys">https://platform.openai.com/account/api-keys</a></li>
-<li>Click <code>Create new secret key</code> and give it a name</li>
-<li>Save the generated secret key somewhere safe, we will need it later on</li>
-<li>Get API Key for <a href="https://www.themoviedb.org/">The Movie Database</a></li>
-<li>Go to <a href="https://www.themoviedb.org/signup">https://www.themoviedb.org/signup</a> and create an account</li>
-<li>After you log in go to <a href="https://www.themoviedb.org/settings/api/new?type=developer">https://www.themoviedb.org/settings/api/new?type=developer</a> and fill in the form</li>
-<li>Get the JWT from <code>API Read Access Token</code> and store it somewhere safe, we will need it later on</li>
+<li>
+<p>Install <code>node</code> and <code>npm</code> 
+
+
+
+<a href="https://nodejs.org/en/download" target="_blank">nodejs.org/en/download</a>
+
+
+
+</p>
+</li>
+<li>
+<p>Install genezio: <code>npm install genezio -g</code></p>
+</li>
+<li>
+<p>Get the API Key from 
+
+
+
+<a href="https://openai.com/" target="_blank">OpenAI</a>
+
+
+
+
+:</p>
+</li>
+<li>
+<p>Go to 
+
+
+
+<a href="https://openai.com/" target="_blank">openai.com</a>
+
+
+
+
+and click on <code>Sign Up</code></p>
+</li>
+<li>
+<p>After you log in go to: 
+
+
+
+<a href="https://platform.openai.com/account/api-keys" target="_blank">platform.openai.com/account/api-keys</a>
+
+
+
+</p>
+</li>
+<li>
+<p>Click <code>Create new secret key</code> and give it a name</p>
+</li>
+<li>
+<p>Save the generated secret key somewhere safe, we will need it later on</p>
+</li>
+<li>
+<p>Get API Key for 
+
+
+
+<a href="https://www.themoviedb.org/" target="_blank">The Movie Database</a>
+
+
+
+</p>
+</li>
+<li>
+<p>Go to 
+
+
+
+<a href="https://www.themoviedb.org/signup" target="_blank">themoviedb.org/signup</a>
+
+
+
+
+and create an account</p>
+</li>
+<li>
+<p>After you log in go to 
+
+
+
+<a href="https://www.themoviedb.org/settings/api/new?type=developer" target="_blank">themoviedb.org/settings/api/new?type=developer</a>
+
+
+
+
+and fill in the form</p>
+</li>
+<li>
+<p>Get the JWT from <code>API Read Access Token</code> and store it somewhere safe, we will need it later on</p>
+</li>
 </ul>
 <h3 id="clone-the-template">Clone the Template</h3>
 <p>Clone the following repo:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git clone https://github.com/Genez-io/techsylvania_workshop
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git clone https://github.com/Genez-io/techsylvania_workshop 
 </span></span></code></pre></div><p>This repository contains 2 folders. I recommend you to open it with an IDE:</p>
 <ul>
 <li><code>client</code> - all the frontend logic written in React</li>
@@ -287,10 +431,28 @@
 <li>Install the required dependencies: <code>npm install</code></li>
 <li>Create a file named <code>.env</code> and add <code>OPENAI_SECRET_KEY=&amp;lt;your_openai_secret_key&gt;</code> and <code>TMDB_API_KEY=&amp;lt;your_key&gt;</code></li>
 <li>Run genezio local test environment: <code>genezio local</code></li>
-<li>Go to <a href="https://app.genez.io/test-interface/local?port=8083">https://app.genez.io/test-interface/local?port=8083</a> to test your backend. Keep in mind that it will not work on Safari</li>
+<li>Go to 
+
+
+
+<a href="https://app.genez.io/test-interface/local?port=8083" target="_blank">app.genez.io/test-interface/local?port=8083</a>
+
+
+
+
+to test your backend. Keep in mind that it will not work on Safari</li>
 </ul>
 <h3 id="get-movies-recommendation-by-user-input">Get Movies Recommendation by User Input</h3>
-<p>It is almost impossible to create a perfect prompt from the first try. It is an iterative process. A useful tool to iteratively test your prompt is the <a href="https://platform.openai.com/playground">OpenAI Playground</a>.</p>
+<p>It is almost impossible to create a perfect prompt from the first try. It is an iterative process. A useful tool to iteratively test your prompt is the 
+
+
+
+<a href="https://platform.openai.com/playground" target="_blank">OpenAI Playground</a>
+
+
+
+
+.</p>
 <p>First, let’s think about what we want to achieve with this prompt:</p>
 <ul>
 <li>Get the user input and integrate it in a prompt</li>
@@ -362,7 +524,16 @@
 <li><code>content</code> - the content of the message</li>
 </ul>
 </li>
-<li><code>max_tokens</code> - maximum number of tokens in the output. You can control how long or short the message should be. To get a correlation between the number of words and the number of tokens refer to <a href="https://platform.openai.com/tokenizer">this tool</a>.</li>
+<li><code>max_tokens</code> - maximum number of tokens in the output. You can control how long or short the message should be. To get a correlation between the number of words and the number of tokens refer to 
+
+
+
+<a href="https://platform.openai.com/tokenizer" target="_blank">this tool</a>
+
+
+
+
+.</li>
 </ul>
 <p>Now we have to check the output of OpenAI, parse the output and return it. We have to properly validate the output since the API response is not deterministic and it can return, for example, wrongly formatted output.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span>
@@ -420,7 +591,15 @@
 <li>Open a terminal and navigate to the server directory: <code>cd ./../client</code></li>
 <li>Install the required dependencies: <code>npm install</code></li>
 <li>Start the frontend application: <code>npm start</code></li>
-<li>Go to http://localhost:3000 to try your app</li>
+<li>Go to 
+
+
+
+<a href="http://localhost:3000" target="_blank">localhost:3000</a>
+
+
+
+ to try your app</li>
 </ul>
 <h3 id="deploy-your-app">Deploy Your App</h3>
 <p>If everything goes well you can now deploy your application on genezio’s infrastructure. In the server folder:</p>
@@ -434,7 +613,16 @@
 <p>Now you can confidently leverage the power of OpenAI’s language models and unleash their potential in your projects.</p>
 <p>Get ready to take your AI interactions to new heights!</p>
 <h2 id="whats-next">What’s Next?</h2>
-<p>We at genezio aim to offer our users the best experience possible while having access to excellent time and money saving services. Stay tuned and join our <a href="https://discord.gg/uc9H5YKjXv">Discord community</a> to be the first to hear about new tutorials and features.</p>
+<p>We at genezio aim to offer our users the best experience possible while having access to excellent time and money saving services. Stay tuned and join our 
+
+
+
+<a href="https://discord.gg/uc9H5YKjXv" target="_blank">Discord community</a>
+
+
+
+
+to be the first to hear about new tutorials and features.</p>
 </div>
       </div>
     </div>

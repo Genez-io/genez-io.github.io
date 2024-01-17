@@ -77,7 +77,7 @@ Click New repository secret and name it `GENEZIO_TOKEN`.
 
 Enter your Genezio API key as the value.
 
-By referring to it as `${{ secrets.GENEZIO\_TOKEN }}` in your workflow file, GitHub Actions can securely use it without exposing it in logs or to unauthorized users.
+By referring to it as `${{ secrets.GENEZIO_TOKEN }}` in your workflow file, GitHub Actions can securely use it without exposing it in logs or to unauthorized users.
 
 #### 4. Push your changes
 

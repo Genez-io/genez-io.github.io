@@ -8,12 +8,12 @@
     <language>en-us</language>
     <lastBuildDate>Thu, 20 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="/tags/comparison/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Database in Serverless World Comparison</title>
+      <title>Comparison Between Databases in the Serverless World</title>
       <link>/blog/database-in-serverless-world-comparison/</link>
       <pubDate>Thu, 20 Jul 2023 00:00:00 +0000</pubDate>
       
       <guid>/blog/database-in-serverless-world-comparison/</guid>
-      <description>Unveiling Database Performance: Selecting the Right Solution for Your Serverless Application Introduction Deciding on the right database is often a challenging task when starting a new project. If you plan to deploy your server on a function as a service infrastructure, the decision is even more important because it will have a huge impact on how fast your server will respond to queries.
+      <description>Introduction Deciding on the right database is often a challenging task when starting a new project. If you plan to deploy your server on a function as a service infrastructure, the decision is even more important because it will have a huge impact on how fast your server will respond to queries.
 In a nutshell In this article, I performed a quite deep analysis of how different databases are performing in a Function as a Service environment, but if you just want the short version, here it is:</description>
     </item>
     
@@ -25,7 +25,8 @@ In a nutshell In this article, I performed a quite deep analysis of how differen
       <guid>/blog/the-evolution-of-apis-a-history-of-rest-and-rpc/</guid>
       <description>Comparison This article has two main components: the history of the paradigms, and a tutorial on how to implement both paradigms using genezio.
 Prerequisites for the tutorial:
-Install npm Have an IDE or text editor installed, e.g. Visual Studio Code Create a free genezio account Summary REST and RPC are two distinct approaches to web services and distributed computing. REST is focused on resource manipulation and provides a uniform interface for accessing and modifying resources, while RPC is focused on method invocation and provides a way for applications to access remote services and resources.</description>
+Install npm Have an IDE or text editor installed, e.g. Visual Studio Code Create a free genezio account
+Summary REST and RPC are two distinct approaches to web services and distributed computing. REST is focused on resource manipulation and provides a uniform interface for accessing and modifying resources, while RPC is focused on method invocation and provides a way for applications to access remote services and resources.</description>
     </item>
     
     <item>

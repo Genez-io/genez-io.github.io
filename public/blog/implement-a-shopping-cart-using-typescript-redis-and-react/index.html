@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5ZPQL3Z');</script>
+  
+
+   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11335989676"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-11335989676'); </script>
+   <script> gtag('event', 'conversion', {'send_to': 'AW-11335989676/Vn9zCMKshYEZEKzztZ0q'}); </script>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>genezio | Implement a shopping cart using TypeScript, Redis and React</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#6f42c1" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#6f42c1" media="(prefers-color-scheme: dark)">
+
+  
+  
+  <link rel="shortcut icon" href="/favicon.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120-precomposed.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152-precomposed.png" />
+
+  
+  
+  <link rel="canonical" href="/blog/implement-a-shopping-cart-using-typescript-redis-and-react/" />
+  
+
+
+
+  
+  <meta name="description" content="Implement a scalable, fast, and robust shopping cart using Redis, NodeJs, and React. This tutorial guides you step-by-step through building a cart feature.">
+  <meta property="og:title" content="Implement a shopping cart using TypeScript, Redis and React" />
+  <meta property="og:description" content="Implement a scalable, fast, and robust shopping cart using Redis, NodeJs, and React. This tutorial guides you step-by-step through building a cart feature." />
+  <meta property="og:image" content="https://genez.io/images/implement_shopping_cart_redis.jpg" />
+  <meta property="og:url" content="https://genez.io/blog/implement-shopping-cart-redis" />
+  <meta property="og:type" content="website" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@GenezioNetwork" />
+  <meta name="twitter:creator" content="@GenezioNetwork" />
+  <meta name="twitter:title" content="Implement a shopping cart using TypeScript, Redis and React" />
+  <meta name="twitter:description" content="Implement a scalable, fast, and robust shopping cart using Redis, NodeJs, and React. This tutorial guides you step-by-step through building a cart feature." />
+  <meta name="robots" content="index,follow">
+  
+
+
+
+
+  
+  
+  <link rel="stylesheet" href="/css/style.min.f1ce87c748a07a08745d041c9860b6b8c6c175e6809b9e176ddc4ecb73ef38cc.css">
+  
+
+  
+  
+
+
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VR905VXGKC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-VR905VXGKC');
+  </script>
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-11377331429">
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-11377331429');
+</script>
+</head>
+
+<body class='page page-posts-single'>
+  
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5ZPQL3Z"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  
+  <div id="main-menu-mobile" class="main-menu-mobile">
+    <ul>
+      <li
+        class="menu-item-github"
+        title="Github">
+        <a href="https://github.com/Genez-io/genezio" style="display: flex; justify-content: center;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" style="
+          width: 38px;
+          height: 38px;
+          fill: white;
+      "><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>            </a>
+            </li>
+      <li
+        class="menu-item-sign in"
+        title="Docs">
+        <a class="filled" href="https://docs.genez.io/">
+          <span>Docs</span>
+        </a>
+      </li>
+      <li
+        class="menu-item-sign in"
+        title="Blog">
+        <a class="filled" href="/blog/">
+          <span>Blog</span>
+        </a>
+      </li>
+      <li
+        class="menu-item-sign in"
+        title="Sign In">
+        <a class="filled" href="https://app.genez.io/auth/login">
+          <span>Login </span>
+        </a>
+      </li>
+      <li
+        class="menu-item-trt for free"
+        title="Try for free">
+        <a class="outline start-for-free" href="https://app.genez.io/auth/signup">
+          <span>Try for free</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+  <div id="header"
+    class='header header-fixed '>
+    <div class="container">
+      
+      <div class="logos">
+        
+        <div class="logo">
+          <a href="/">
+            <img height="50px" alt="genezio Logo" src="/images/logo2.svg" />
+          </a>
+        </div>
+        <div class="logo-invert">
+          <a href="/">
+            <img width="50px" height="40px" alt="genezio Logo" src="/images/logo-invert.svg" />
+            <h2>genezio</h2>
+          </a>
+        </div>
+        <div class="logo-mobile">
+          <a href="/">
+            <img height="30px" width="120px" alt="genezio Logo" src="/images/logo2.svg" />
+          </a>
+        </div>
+        <div class="logo-invert-mobile">
+          <a href="/">
+            <img width="50px" height="40px" alt="genezio Logo"
+              src="/images/logo-invert-mobile.svg" />
+          </a>
+        </div>
+      </div>
+      
+
+      
+      <div id="menu-main" class="menu-main">
+        <ul>
+          <li
+            class="menu-item-github"
+            title="Github">
+            <a href="https://github.com/Genez-io/genezio" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" style="
+              width: 38px;
+              height: 38px;
+              fill: white;
+          "><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>            </a>
+          
+        
+        </li>
+          <li
+            class="menu-item-sign in"
+            title="Docs">
+            <a class="outline" href="https://docs.genez.io/" target="_blank">
+              <span>Docs</span>
+            </a>
+          </li>
+          <li
+            class="menu-item-sign in"
+            title="Blog">
+            <a class="outline" href="/blog/">
+              <span>Blog</span>
+            </a>
+          </li>
+          <li
+            class="menu-item-sign in"
+            title="Sign In">
+            <a class="outline" href="https://app.genez.io/auth/login">
+              <span>Login</span>
+            </a>
+          </li>
+          <li
+            class="menu-item-trt for free"
+            title="Try for free">
+            <a class="filled start-for-free" href="https://app.genez.io/auth/signup">
+              <span>Start for free!</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      
+      <div id="toggle-main-menu-mobile" class="menu-trigger">
+        <button class="hamburger">Menu</button>
+      </div>
+    </div>
+  </div>
+  
+
+  
+  <div class="wrapper">
+    
+<div class="strip strip-secondary-light pt-10">
+  <div class="container pt-10">
+    <div class="row position-relative justify-content-center">
+      <div class="col-12 col-lg-8">
+        
+        <div class="post-tags">
+          
+          <a class="post-tag" href="/tags/news" target="_blank">News</a>
+          
+          <a class="post-tag" href="/tags/tutorials" target="_blank">Tutorials</a>
+          
+        </div>
+        
+        <h1>Implement a shopping cart using TypeScript, Redis and React</h1>
+        <a class="post-author-name" href="https://www.linkedin.com/in/andreia-irina-ocanoaia/" target="_blank">Andreia Ocanoaia</a>
+        <div class="post-date pt-1">
+        
+            
+            <span class="post-date-date">Dec 4, 2023</span>
+        
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="strip strip-white">
+  <div class="container pt-10 pt-md-8 pb-4 pb-md-10">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-8">
+        <div class="content"><p>In this tutorial, I&rsquo;ll show you how to use Redis, NodeJs, and React to easily implement a shopping cart for your online store.</p>
+<p>There are a lot of things to consider when implementing a shopping cart functionality for an online store.
+The cart feature should be scalable, fast, and robust to offer your users a great experience.</p>
+<p>The best part of this tutorial is that you can easily extend it or integrate it with an existing application.</p>
+<p>Let&rsquo;s get started! 🚀</p>
+<h1 id="content">Content</h1>
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#prerequisites">Prerequisites</a></li>
+<li><a href="#getting-started">Getting Started</a></li>
+<li><a href="#setting-up-the-backend">Setting up the backend</a></li>
+<li><a href="#setting-up-the-frontend">Setting up the frontend</a></li>
+<li><a href="#deploying-the-application">Deploying the application</a></li>
+<li><a href="#improvements">Improvements</a>
+<ul>
+<li><a href="#add-a-counter-for-the-number-of-items-in-the-cart">Add a counter for the number of items in the cart</a></li>
+<li><a href="#add-spinners-animation-for-loading-states">Add spinners animation for loading states</a></li>
+</ul>
+</li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ul>
+<h2 id="introduction">Introduction</h2>
+<p>A possible implementation of a shopping cart is to store the items as a cookie on the client side. The disadvantage of this approach is that the cookie is attached to every request and large cookies can significantly slow down your application.</p>
+<p>A better option is to use a Redis database on the server side to store items persistently and retrieve them very fast when needed.</p>
+<p>This tutorial will show you how to harness the speed of a Redis database to build a shopping cart functionality using TypeScript/NodeJs.</p>
+<details style="margin: 10px;text-align:left;">
+    <summary style="color:#6F42C1;font-size:large">Expand this section to get more information on what&rsquo;s Redis</summary>
+   <p>
+    <p>Redis is an open-source, in-memory database that stores key, value pairs. Redis is a highly versatile and performant database system. One of Redis&rsquo;s key features is its speed, as it primarily operates in-memory, enabling rapid data access. It is widely used for caching, real-time analytics, message brokering, and other applications where low-latency and high-throughput data storage and retrieval are crucial. Redis also provides persistence options, allowing data to be saved to disk for durability. Its simplicity, efficiency, and support for advanced data structures make Redis a popular choice for applications requiring fast and scalable data storage and retrieval.</p>
+<p>Upstash is a cutting-edge platform for modern developers seeking seamless data management in serverless and cloud-native applications. Offering Redis-compatible, in-memory database services, Upstash simplifies data storage and access, making it a natural fit for serverless functions, web apps, and cloud-native architectures.</p>
+<p>By partnering with Upstash, genezio provides an easy-to-use solution to add an Upstash Redis database to your project from the genezio dashboard.</p>
+
+   </p>
+</details>
+
+<p>On the frontend side, we&rsquo;ll use React and Bootstrap to implement a minimal frontend for the online store.
+The great part about a minimal design is that you can go as wild as you&rsquo;d like with the frontend and tweak it further to your liking.</p>
+<details style="margin: 10px;text-align:left;">
+    <summary style="color:#6F42C1;font-size:large">Expand this section to get more information on what&rsquo;s React and Bootstrap</summary>
+   <p>
+    <p>Bootstrap is a widely-used open-source frontend framework that helps you minify your frontend application by providing a responsive grid system and lots of pre-designed components.</p>
+<p>Reactstrap is a library that brings Bootstrap components into React applications. Reactstrap provides React-friendly versions of Bootstrap components, allowing developers to use the power of Bootstrap&rsquo;s styling and functionality within a React application.</p>
+
+   </p>
+</details>
+
+<p>We will use <code>genezio</code> to help you scaffold the web app and deploy it to the cloud.</p>
+<p>The result of this tutorial will be a web application that looks like this:</p>
+<p><img src="/images/blog/shopping_cart_example/shopping_cart_preview.png" alt="Alt text"></p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>If you don&rsquo;t already have them, you&rsquo;ll need to install the following tools:</p>
+<ul>
+<li>
+
+
+
+<a href="https://nodejs.org/en/download/current" target="_blank">Node.js</a>
+
+
+
+</li>
+<li>
+
+
+
+<a href="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm" target="_blank">npm</a>
+
+
+
+</li>
+<li>
+
+
+
+<a href="https://genez.io" target="_blank">Genezio</a>
+
+
+
+</li>
+</ul>
+<p>Note: I recommend you to use 
+
+
+
+<a href="https://github.com/nvm-sh/nvm#installing-and-updating" target="_blank">nvm</a>
+
+
+
+ to manage NodeJs and npm versions.
+After installing <code>nvm</code>, you can easily get any version of <code>node</code> by running <code>nvm install &lt;node_version&gt;</code>.
+<code>nvm</code> will automatically install the corresponding <code>npm</code> version.</p>
+<h2 id="getting-started">Getting Started</h2>
+<p>Firstly, you&rsquo;ll need to create a new project with a server and a client.
+The server will be responsible for communicating (storing, retrieving, updating, deleting) with the Redis database.
+The client will render the products available in the store and allow the user to add them to the shopping cart.</p>
+<p>To get started with a template, install <code>genezio</code> using <code>npm</code> and run it in your terminal.
+Later on, <code>genezio</code> comes in handy to deploy and host your web applications in the cloud.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">npm install -g genezio
+</span></span></code></pre></div><p>After installing <code>genezio</code>, you can create a black project by running the following command:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">genezio create fullstack ts-blank-api ts-blank-frontend --name<span class="o">=</span>my-online-store
+</span></span></code></pre></div><h2 id="setting-up-the-backend">Setting up the backend</h2>
+<p>Now that you have a template to start from, fire up your favorite code editor and open the project&rsquo;s directory.</p>
+<p>The following piece of code will connect you to a Redis database and allow you to store and retrieve items to the shopping cart based on a session ID.
+This approach will be useful to accommodate more than 1 user on your web app.</p>
+<p>Create a new file called <code>shoppingCartService.ts</code> in the <code>server</code> directory and paste the following code snippet into it.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">GenezioDeploy</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&#34;@genezio/types&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="nx">Redis</span> <span class="kr">from</span> <span class="s2">&#34;ioredis&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">type</span> <span class="nx">CartItem</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">title</span>: <span class="kt">string</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">count</span>: <span class="kt">string</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">@GenezioDeploy</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">class</span> <span class="nx">ShoppingCartService</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">client</span>: <span class="kt">Redis</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kr">constructor</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">UPSTASH_REDIS_URL</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s2">&#34;It seems that UPSTASH_REDIS_URL is not set in the `.env` file.&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">this</span><span class="p">.</span><span class="nx">client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Redis</span><span class="p">(</span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">UPSTASH_REDIS_URL</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kr">async</span> <span class="nx">addItemToCart</span><span class="p">(</span><span class="nx">sessionId</span>: <span class="kt">string</span><span class="p">,</span> <span class="nx">item</span>: <span class="kt">string</span><span class="p">)</span><span class="o">:</span> <span class="nx">Promise</span><span class="p">&lt;</span><span class="nt">string</span><span class="p">&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// increment item count by 1 for a given item corresponding to the sessionId
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">await</span> <span class="k">this</span><span class="p">.</span><span class="nx">client</span><span class="p">.</span><span class="nx">hincrby</span><span class="p">(</span><span class="s1">&#39;cart:&#39;</span> <span class="o">+</span> <span class="nx">sessionId</span><span class="p">,</span> <span class="nx">item</span><span class="p">,</span> <span class="mi">1</span><span class="p">).</span><span class="k">catch</span><span class="p">((</span><span class="nx">err</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="s2">&#34;success&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kr">async</span> <span class="nx">getCart</span><span class="p">(</span><span class="nx">sessionId</span>: <span class="kt">string</span><span class="p">)</span><span class="o">:</span> <span class="nx">Promise</span><span class="p">&lt;</span><span class="nt">CartItem</span><span class="err">[]</span><span class="p">&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// get all items from the hashmap corresponding to the sessionId
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kr">const</span> <span class="nx">cart</span> <span class="o">=</span> <span class="k">await</span> <span class="k">this</span><span class="p">.</span><span class="nx">client</span><span class="p">.</span><span class="nx">hgetall</span><span class="p">(</span><span class="s1">&#39;cart:&#39;</span> <span class="o">+</span> <span class="nx">sessionId</span><span class="p">).</span><span class="k">catch</span><span class="p">((</span><span class="nx">err</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">});</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// check if the cart is empty
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">if</span> <span class="p">(</span><span class="nb">Object</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="nx">cart</span><span class="p">).</span><span class="nx">length</span> <span class="o">===</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s2">&#34;Cart is empty&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="p">[];</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// map cart items to an array of CartItem objects
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kr">const</span> <span class="nx">cartItems</span>: <span class="kt">CartItem</span><span class="p">[]</span> <span class="o">=</span> <span class="p">[];</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="kr">const</span> <span class="nx">key</span> <span class="k">in</span> <span class="nx">cart</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="kr">const</span> <span class="nx">item</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">title</span>: <span class="kt">key</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">count</span>: <span class="kt">cart</span><span class="p">[</span><span class="nx">key</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">      <span class="p">};</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">cartItems</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">item</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nx">cartItems</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>At this point you are probably asking yourself what <code>hincrby</code> or <code>hgetall</code> are actually doing.</p>
+<p>The Redis database has the following structure - each entry is uniquely identified by a key <code>cart:uniqueSessionId</code> and it points to a hashmap that contains pairs of <code>item:count</code> for each item in the shopping cart.</p>
+<p><img src="/images/blog/shopping_cart_example/redis_structure.png" alt="Alt text"></p>
+<p><code>hincrby</code> is a command that increments the value of a hashmap key by a given amount - for this example, it means it increments the counter for a specific bought product. If the key does not exist, it is created and set to 0 before actually incrementing it. <code>hincrby</code> can also be used to decrement the value of a hashmap key by a given amount.</p>
+<p><code>hgetall</code> is a command that returns all the fields and values of the hashmap for a specific session id.</p>
+<p>Later in this tutorial, we are going to use <code>hexists</code> to check if an item exists in the hashmap and <code>hdel</code> to delete an item from the hashmap.</p>
+<p>Install the dependencies by running the following command in the <code>server</code> directory:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">npm install ioredis
+</span></span><span class="line"><span class="cl">npm --save-dev install @types/node
+</span></span></code></pre></div><p>Right now, the backend won&rsquo;t work properly because there is no <code>UPSTASH_REDIS_URL</code> environment variable set in the <code>.env</code>.
+Let&rsquo;s create a Redis database and connect it to your web application using a <code>.env</code> file.</p>
+<p>Luckily, genezio makes it very easy to add an 
+
+
+
+<a href="https://upstash.com/?utm_source=genezio&#43;&amp;utm_medium=blog&amp;utm_campaign=post" target="_blank">Upstash Redis</a>
+
+
+
+ integration to your project.
+Go to the 
+
+
+
+<a href="https://app.genez.io" target="_blank">genezio dashboard</a>
+
+
+
+ and add an Upstash Redis integration to your project.</p>
+<p><img src="/images/blog/shopping_cart_example/add_integration.png" alt="Alt text"></p>
+<p>If you get stuck at this step, you can follow the 
+
+
+
+<a href="https://docs.genez.io/genezio-documentation/integrations/upstash-redis" target="_blank">Upstash Redis integration tutorial</a>
+
+
+
+.</p>
+<p>After adding the Upstash Redis integration, copy the environment variables from the <code>.env</code> section. Use the copy button to disclose the contents of the environment variables and copy them to your clipboard.
+Go back to your <code>server</code> directory, create a new file called <code>.env</code>, and paste the contents there.</p>
+<p><img src="/images/blog/shopping_cart_example/copy_env_vars.png" alt="Alt text"></p>
+<p>To test the code, you can run <code>genezio local</code> in the project directory.
+This will start a fast local development server on your machine.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">genezio <span class="nb">local</span>
+</span></span></code></pre></div><p>You can test your application from the genezio dashboard by following the URL exposed in the terminal by <code>genezio local</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">~ genezio local
+</span></span><span class="line"><span class="cl">Test your code at https://app.genez.io/test-interface/local?port=8083
+</span></span></code></pre></div><p>From the genezio dashboard, you can send requests to your backend classes and see the response.</p>
+<p><img src="/images/blog/shopping_cart_example/test_backend.png" alt="Alt text"></p>
+<p>You&rsquo;ll also need 2 more methods in the backend source code - a method to remove only one item from the cart and a method to delete the entire cart.</p>
+<p>Add the following methods to the <code>ShoppingCartService</code> class:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="line"><span class="cl">  <span class="kr">async</span> <span class="nx">removeItemFromCart</span><span class="p">(</span><span class="nx">sessionId</span>: <span class="kt">string</span><span class="p">,</span> <span class="nx">item</span>: <span class="kt">string</span><span class="p">)</span><span class="o">:</span> <span class="nx">Promise</span><span class="p">&lt;</span><span class="nt">string</span><span class="p">&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// check if the item exists in the hashmap
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kr">const</span> <span class="nx">itemExists</span> <span class="o">=</span> <span class="k">await</span> <span class="k">this</span><span class="p">.</span><span class="nx">client</span><span class="p">.</span><span class="nx">hexists</span><span class="p">(</span><span class="s1">&#39;cart:&#39;</span> <span class="o">+</span> <span class="nx">sessionId</span><span class="p">,</span> <span class="nx">item</span><span class="p">).</span><span class="k">catch</span><span class="p">((</span><span class="nx">err</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">});</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">itemExists</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s2">&#34;Item does not exist&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// decrement item count by 1 for a given item corresponding to the sessionId
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">await</span> <span class="k">this</span><span class="p">.</span><span class="nx">client</span><span class="p">.</span><span class="nx">hincrby</span><span class="p">(</span><span class="s1">&#39;cart:&#39;</span> <span class="o">+</span> <span class="nx">sessionId</span><span class="p">,</span> <span class="nx">item</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">).</span><span class="k">catch</span><span class="p">((</span><span class="nx">err</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// check if the item count is 0 for a specific item, if so delete the entry from the hashmap
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kr">const</span> <span class="nx">itemCount</span> <span class="o">=</span> <span class="k">await</span> <span class="k">this</span><span class="p">.</span><span class="nx">client</span><span class="p">.</span><span class="nx">hget</span><span class="p">(</span><span class="s1">&#39;cart:&#39;</span> <span class="o">+</span> <span class="nx">sessionId</span><span class="p">,</span> <span class="nx">item</span><span class="p">).</span><span class="k">catch</span><span class="p">((</span><span class="nx">err</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">});</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">itemCount</span> <span class="o">&amp;&amp;</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">itemCount</span><span class="p">)</span> <span class="o">===</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">await</span> <span class="k">this</span><span class="p">.</span><span class="nx">client</span><span class="p">.</span><span class="nx">hdel</span><span class="p">(</span><span class="s1">&#39;cart:&#39;</span> <span class="o">+</span> <span class="nx">sessionId</span><span class="p">,</span> <span class="nx">item</span><span class="p">).</span><span class="k">catch</span><span class="p">((</span><span class="nx">err</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="p">});</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="s2">&#34;success&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kr">async</span> <span class="nx">deleteCart</span><span class="p">(</span><span class="nx">sessionId</span>: <span class="kt">string</span><span class="p">)</span><span class="o">:</span> <span class="nx">Promise</span><span class="p">&lt;</span><span class="nt">string</span><span class="p">&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// check if the cart exists
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kr">const</span> <span class="nx">cartExists</span> <span class="o">=</span> <span class="k">await</span> <span class="k">this</span><span class="p">.</span><span class="nx">client</span><span class="p">.</span><span class="nx">exists</span><span class="p">(</span><span class="s1">&#39;cart:&#39;</span> <span class="o">+</span> <span class="nx">sessionId</span><span class="p">).</span><span class="k">catch</span><span class="p">((</span><span class="nx">err</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">});</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">cartExists</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s2">&#34;Cart does not exist&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// delete the cart corresponding to the sessionId
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">await</span> <span class="k">this</span><span class="p">.</span><span class="nx">client</span><span class="p">.</span><span class="nx">del</span><span class="p">(</span><span class="s1">&#39;cart:&#39;</span> <span class="o">+</span> <span class="nx">sessionId</span><span class="p">).</span><span class="k">catch</span><span class="p">((</span><span class="nx">err</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="s2">&#34;success&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span></code></pre></div><p>Note: There is no need to restart <code>genezio local</code>. The process will detect any changes in your code and restart automatically.</p>
+<p>Now that your backend logic is ready, you can thoroughly test it by sending requests to it from the 
+
+
+
+<a href="https://app.genez.io/test-interface/local?port=8083" target="_blank">genezio dashboard</a>
+
+
+
+.</p>
+<h2 id="setting-up-the-frontend">Setting up the frontend</h2>
+<p>Going forward, you&rsquo;ll need to create a React app to render the products available in the store and allow the user to add them to the shopping cart.</p>
+<p>For this tutorial, the online store will be populated with dummy products using 
+
+
+
+<a href="https://dummyjson.com/products" target="_blank">dummyjson</a>
+
+
+
+. This API will return a list of dummy products in JSON format with various fields.</p>
+<p>Let&rsquo;s render the products in the online store. To avoid writing a lot of CSS, you can use 
+
+
+
+<a href="https://getbootstrap.com/" target="_blank">Bootstrap</a>
+
+
+
+ to style your application. Bootstrap provides a lot of ready-to-use components that you can use.</p>
+<p>In this section of the tutorial, there are quite a few code snippets coming your way. If you ever feel lost, you can check out the codebase for this tutorial on the 
+
+
+
+<a href="https://github.com/genez-io/genezio-examples/tree/main/typescript/shopping-cart" target="_blank">GitHub repository</a>
+
+
+
+.</p>
+<details style="margin: 10px;text-align:left;">
+    <summary style="color:#6F42C1;font-size:large">Expand for more details on how to structure a React project</summary>
+   <p>
+    <p>A typical React project has the following directory structure:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">.
+</span></span><span class="line"><span class="cl">├── README.md
+</span></span><span class="line"><span class="cl">├── build/
+</span></span><span class="line"><span class="cl">├── public/
+</span></span><span class="line"><span class="cl">├── src
+</span></span><span class="line"><span class="cl">│   ├── App.css
+</span></span><span class="line"><span class="cl">│   ├── App.tsx
+</span></span><span class="line"><span class="cl">│   ├── index.css
+</span></span><span class="line"><span class="cl">│   ├── index.tsx
+</span></span><span class="line"><span class="cl">│   ├── models.tsx
+</span></span><span class="line"><span class="cl">│   ├── react-app-env.d.ts
+</span></span><span class="line"><span class="cl">│   └── reportWebVitals.ts
+</span></span><span class="line"><span class="cl">├── package-lock.json
+</span></span><span class="line"><span class="cl">├── package.json
+</span></span><span class="line"><span class="cl">└── tsconfig.json
+</span></span></code></pre></div><p>In the <code>build</code> directory there is the bundle source code for the web application. This directory is generated when you run <code>npm run build</code> in the project directory. This will also be uploaded and host in the cloud to be accessible for your users.</p>
+<p>In the <code>public</code> directory you can store static files that will be used in your application. For example, you can store images, fonts, or other assets in this directory.</p>
+<p>In the <code>src</code> directory you can find the source code for your application. The <code>index.tsx</code> file is the entry point for your application. This file will be responsible for rendering the <code>App</code> component in the <code>public/index.html</code> file.</p>
+<p>The <code>App.tsx</code> file is the main component of your application. This component will be responsible for rendering the other components in your application. This is where you&rsquo;ll write most of your code.</p>
+<p>In the <code>models.tsx</code> file you can declare the interfaces that will be used in your application. This file will be useful to keep track of the data types used in your application.</p>
+
+   </p>
+</details>
+
+<p>Firstly, let&rsquo;s install the dependencies for the frontend by running the following command in the <code>client</code> directory of your project:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">npm install axios reactstrap bootstrap
+</span></span></code></pre></div><p>Import Bootstrap in your frontend application by adding the following line in <code>client/src/index.tsx</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="kr">import</span> <span class="s1">&#39;bootstrap/dist/css/bootstrap.min.css&#39;</span><span class="p">;</span>
+</span></span></code></pre></div><p>Create a new file named <code>client/src/models.tsx</code> to declare the interfaces that will be used in the application.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="c1">// The fields declared for the dummy data
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">export</span> <span class="kr">interface</span> <span class="nx">Product</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">id</span>: <span class="kt">number</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">title</span>: <span class="kt">string</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">description</span>: <span class="kt">string</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">price</span>: <span class="kt">number</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">rating</span>: <span class="kt">number</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">thumbnail</span>: <span class="kt">string</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Information needed for a cart item
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">export</span> <span class="kr">interface</span> <span class="nx">CartItem</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">title</span>: <span class="kt">string</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">count</span>: <span class="kt">string</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Open <code>client/src/App.tsx</code> in your IDE and remove the existing code. We&rsquo;ll start from scratch for a better understanding.</p>
+<p>Add a header with a shopping cart button.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl">  <span class="c1">// Toggle the cart modal
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="kr">const</span> <span class="nx">toggleCartModal</span> <span class="o">=</span> <span class="p">(</span><span class="nx">e</span>: <span class="kt">any</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">setIsCartVisible</span><span class="p">(</span><span class="o">!</span><span class="nx">isCartVisible</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className</span><span class="o">=</span><span class="s">&#34;App&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className</span><span class="o">=</span><span class="s">&#34;bg-dark text-light p-3&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className</span><span class="o">=</span><span class="s">&#34;container&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className</span><span class="o">=</span><span class="s">&#34;row align-items-center&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className</span><span class="o">=</span><span class="s">&#34;col&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">              <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span><span class="nx">Product</span> <span class="nx">List</span><span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className</span><span class="o">=</span><span class="s">&#34;col text-right&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">              <span class="p">&lt;</span><span class="nt">Button</span> <span class="na">color</span><span class="o">=</span><span class="s">&#34;primary&#34;</span> <span class="na">onClick</span><span class="o">=</span><span class="p">{(</span><span class="nx">e</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">toggleCartModal</span><span class="p">(</span><span class="nx">e</span><span class="p">)}&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="p">&lt;</span><span class="nt">FaShoppingCart</span> <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="p">{</span><span class="nx">purchasedQuantity</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">                  <span class="p">&lt;</span><span class="nt">span</span> <span class="na">className</span><span class="o">=</span><span class="s">&#34;m-2&#34;</span><span class="p">&gt;{</span><span class="nx">purchasedQuantity</span><span class="p">}&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="p">)}</span>
+</span></span><span class="line"><span class="cl">              <span class="p">&lt;/</span><span class="nt">Button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">          <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span></code></pre></div><p>Create a state to keep track if the cart button was clicked. This state will be used to toggle the cart modal on and off.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl">  <span class="kr">const</span> <span class="p">[</span><span class="nx">isCartVisible</span><span class="p">,</span> <span class="nx">setIsCartVisible</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">// Toggle the cart modal
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="kr">const</span> <span class="nx">toggleCartModal</span> <span class="o">=</span> <span class="p">(</span><span class="nx">e</span>: <span class="kt">any</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">setIsCartVisible</span><span class="p">(</span><span class="o">!</span><span class="nx">isCartVisible</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">};</span>
+</span></span></code></pre></div><p>To start the frontend on your localhost, run <code>npm run start</code>. This will initialize the frontend application on <code>localhost:3000</code>.
+Keep the frontend running in the background and open <code>localhost:3000</code> in your browser to see the changes in real-time every time you change the source code.</p>
+<p>Add a list with the fetched products.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">Container</span> <span class="na">className</span><span class="o">=</span><span class="s">&#34;my-4&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">Row</span> <span class="na">className</span><span class="o">=</span><span class="s">&#34;justify-content-around&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">{</span><span class="nx">productData</span><span class="p">.</span><span class="nx">products</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">product</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">Col</span> <span class="na">key</span><span class="o">=</span><span class="p">{</span><span class="nx">product</span><span class="p">.</span><span class="nx">id</span><span class="p">}</span> <span class="na">md</span><span class="o">=</span><span class="s">&#34;4&#34;</span> <span class="na">className</span><span class="o">=</span><span class="s">&#34;mb-4&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className</span><span class="o">=</span><span class="s">&#34;product-card&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="p">{</span><span class="nx">product</span><span class="p">.</span><span class="nx">thumbnail</span><span class="p">}</span> <span class="na">alt</span><span class="o">=</span><span class="p">{</span><span class="nx">product</span><span class="p">.</span><span class="nx">title</span><span class="p">}</span> <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;{</span><span class="nx">product</span><span class="p">.</span><span class="nx">title</span><span class="p">}&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;{</span><span class="nx">product</span><span class="p">.</span><span class="nx">description</span><span class="p">}&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span><span class="nx">Price</span>: <span class="kt">$</span><span class="p">{</span><span class="nx">product</span><span class="p">.</span><span class="nx">price</span><span class="p">}&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span><span class="nx">Rating</span><span class="o">:</span> <span class="p">{</span><span class="nx">product</span><span class="p">.</span><span class="nx">rating</span><span class="p">}&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">&lt;</span><span class="nt">Button</span>
+</span></span><span class="line"><span class="cl">              <span class="na">color</span><span class="o">=</span><span class="s">&#34;primary&#34;</span>
+</span></span><span class="line"><span class="cl">              <span class="na">onClick</span><span class="o">=</span><span class="p">{(</span><span class="nx">e</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">handleBuyClick</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span> <span class="nx">product</span><span class="p">)}</span>
+</span></span><span class="line"><span class="cl">              <span class="na">disabled</span><span class="o">=</span><span class="p">{</span><span class="nx">addItemLoading</span><span class="p">[</span><span class="nx">product</span><span class="p">.</span><span class="nx">id</span><span class="p">]}</span>
+</span></span><span class="line"><span class="cl">            <span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">              <span class="p">{</span><span class="nx">addItemLoading</span><span class="p">[</span><span class="nx">product</span><span class="p">.</span><span class="nx">id</span><span class="p">]</span> <span class="o">?</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">                <span class="p">&lt;</span><span class="nt">Spinner</span> <span class="na">size</span><span class="o">=</span><span class="s">&#34;sm&#34;</span> <span class="na">color</span><span class="o">=</span><span class="s">&#34;light&#34;</span> <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">              <span class="p">)</span> <span class="o">:</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">                <span class="s1">&#39;Buy Now&#39;</span>
+</span></span><span class="line"><span class="cl">              <span class="p">)}</span>
+</span></span><span class="line"><span class="cl">            <span class="p">&lt;/</span><span class="nt">Button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">          <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;/</span><span class="nt">Col</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">))}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">Row</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">Container</span><span class="p">&gt;</span>
+</span></span></code></pre></div><p>Add a modal that opens when the shopping cart button is clicked. In the modal, we&rsquo;ll display the content of the shopping cart and allow the user to close the cart, clear the cart, or delete an item from it.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="p">{</span><span class="nx">isCartVisible</span> <span class="o">&amp;&amp;</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span>
+</span></span><span class="line"><span class="cl">    <span class="na">className</span><span class="o">=</span><span class="s">&#34;cart-overlay d-flex justify-content-center align-items-center position-fixed top-0 left-0 w-100 h-100&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="na">style</span><span class="o">=</span><span class="p">{{</span> <span class="nx">background</span><span class="o">:</span> <span class="s1">&#39;rgba(0, 0, 0, 0.7)&#39;</span> <span class="p">}}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className</span><span class="o">=</span><span class="s">&#34;cart-modal bg-white p-4 rounded shadow-lg&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">h2</span> <span class="na">className</span><span class="o">=</span><span class="s">&#34;mb-4 center&#34;</span><span class="p">&gt;</span><span class="nx">Shopping</span> <span class="nx">Cart</span><span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">ul</span> <span class="na">className</span><span class="o">=</span><span class="s">&#34;list-unstyled&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span><span class="nx">cartData</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">?</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">          <span class="nx">cartData</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">cartItem</span><span class="p">,</span> <span class="nx">index</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="p">&lt;</span><span class="nt">li</span> <span class="na">key</span><span class="o">=</span><span class="p">{</span><span class="nx">index</span><span class="p">}</span> <span class="na">className</span><span class="o">=</span><span class="s">&#34;mb-3&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">              <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;{</span><span class="nx">cartItem</span><span class="p">.</span><span class="nx">title</span><span class="p">}&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="p">&lt;</span><span class="nt">span</span> <span class="na">className</span><span class="o">=</span><span class="s">&#34;m-2&#34;</span><span class="p">&gt;</span><span class="nx">Quantity</span><span class="o">:</span> <span class="p">{</span><span class="nx">cartItem</span><span class="p">.</span><span class="nx">count</span><span class="p">}&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="p">&lt;</span><span class="nt">Button</span> <span class="na">color</span><span class="o">=</span><span class="s">&#34;danger&#34;</span> <span class="na">size</span><span class="o">=</span><span class="s">&#34;sm&#34;</span> <span class="na">className</span><span class="o">=</span><span class="s">&#34;m-2&#34;</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">FaTrash</span> <span class="p">/&gt;</span> <span class="p">&lt;/</span><span class="nt">Button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">              <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">          <span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span> <span class="o">:</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">li</span> <span class="na">className</span><span class="o">=</span><span class="s">&#34;empty-cart&#34;</span><span class="p">&gt;</span><span class="nx">Your</span> <span class="nx">cart</span> <span class="k">is</span> <span class="nx">empty</span><span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)}</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">{</span><span class="nx">cartData</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">?</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">Button</span> <span class="na">color</span><span class="o">=</span><span class="s">&#34;primary&#34;</span> <span class="na">className</span><span class="o">=</span><span class="s">&#34;m-2&#34;</span><span class="p">&gt;</span> <span class="s1">&#39;Clear Cart&#39;</span> <span class="p">&lt;/</span><span class="nt">Button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">)</span> <span class="o">:</span> <span class="kc">null</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">Button</span> <span class="na">color</span><span class="o">=</span><span class="s">&#34;primary&#34;</span> <span class="na">className</span><span class="o">=</span><span class="s">&#34;m-2&#34;</span><span class="p">&gt;</span> <span class="s1">&#39;Close&#39;</span> <span class="p">&lt;/</span><span class="nt">Button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">)}</span>
+</span></span></code></pre></div><p>Add a token in local storage to keep track of the session id. This token will be used to identify the cart corresponding to the user.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl">  <span class="c1">// Check if the token is set in localStorage
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="kd">let</span> <span class="nx">token</span> <span class="o">=</span> <span class="nx">localStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="s1">&#39;token&#39;</span><span class="p">)</span> <span class="kr">as</span> <span class="kt">string</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">// If token is not set, generate a 32-character token
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">token</span> <span class="o">||</span> <span class="nx">token</span> <span class="o">===</span> <span class="s1">&#39;&#39;</span> <span class="o">||</span> <span class="nx">token</span> <span class="o">===</span> <span class="s1">&#39;undefined&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">token</span> <span class="o">=</span>
+</span></span><span class="line"><span class="cl">      <span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">().</span><span class="nx">toString</span><span class="p">(</span><span class="mi">36</span><span class="p">).</span><span class="nx">substring</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">      <span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">().</span><span class="nx">toString</span><span class="p">(</span><span class="mi">36</span><span class="p">).</span><span class="nx">substring</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">15</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="s1">&#39;token&#39;</span><span class="p">,</span> <span class="nx">token</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span></code></pre></div><p>Send a request to the backend to add an item to the cart when the <code>Buy now</code> button is clicked.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">handleBuyClick</span> <span class="o">=</span> <span class="kr">async</span> <span class="p">(</span><span class="nx">e</span>: <span class="kt">any</span><span class="p">,</span> <span class="nx">product</span>: <span class="kt">Product</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// You can implement your buy logic here, e.g., add the product to a cart
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">await</span> <span class="nx">ShoppingCartService</span><span class="p">.</span><span class="nx">addItemToCart</span><span class="p">(</span><span class="nx">token</span><span class="p">,</span> <span class="nx">product</span><span class="p">.</span><span class="nx">title</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">};</span>
+</span></span></code></pre></div><p>Send a request to the backend to retrieve the cart data when the modal is opened.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl">  <span class="c1">// Fetch the cart contents when the cart modal is visible
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">useEffect</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">isCartVisible</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="kr">const</span> <span class="nx">fetchCartData</span> <span class="o">=</span> <span class="kr">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">try</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">          <span class="c1">// Call your ShoppingCartService.getCart method to the contents of the cart
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>          <span class="kr">const</span> <span class="nx">cart</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">ShoppingCartService</span><span class="p">.</span><span class="nx">getCart</span><span class="p">(</span><span class="nx">token</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">          <span class="nx">setCartData</span><span class="p">(</span><span class="nx">cart</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">          <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;Error fetching or parsing cart data:&#39;</span><span class="p">,</span> <span class="nx">error</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">      <span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      <span class="nx">fetchCartData</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span> <span class="p">[</span><span class="nx">isCartVisible</span><span class="p">,</span> <span class="nx">token</span><span class="p">]);</span>
+</span></span></code></pre></div><p>Send a request to the backend to delete an item from the cart when the <code>Delete</code> button is clicked.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">handleDeleteItem</span> <span class="o">=</span> <span class="kr">async</span> <span class="p">(</span><span class="nx">e</span>: <span class="kt">any</span><span class="p">,</span> <span class="nx">cartItem</span>: <span class="kt">CartItem</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">await</span> <span class="nx">ShoppingCartService</span><span class="p">.</span><span class="nx">removeItemFromCart</span><span class="p">(</span><span class="nx">token</span><span class="p">,</span> <span class="nx">cartItem</span><span class="p">.</span><span class="nx">title</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// You can implement your delete logic here
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kr">const</span> <span class="nx">updatedCartData</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">ShoppingCartService</span><span class="p">.</span><span class="nx">getCart</span><span class="p">(</span><span class="nx">token</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">setCartData</span><span class="p">(</span><span class="nx">updatedCartData</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">};</span>
+</span></span></code></pre></div><p>Send a request to the backend to clear the cart when the <code>Clear Cart</code> button is clicked.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">handleClearCart</span> <span class="o">=</span> <span class="kr">async</span> <span class="p">(</span><span class="nx">e</span>: <span class="kt">any</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// You can implement your clear cart logic here
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">await</span> <span class="nx">ShoppingCartService</span><span class="p">.</span><span class="nx">deleteCart</span><span class="p">(</span><span class="nx">token</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Update the cart data
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kr">const</span> <span class="nx">updatedCartData</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">ShoppingCartService</span><span class="p">.</span><span class="nx">getCart</span><span class="p">(</span><span class="nx">token</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">setCartData</span><span class="p">(</span><span class="nx">updatedCartData</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">};</span>
+</span></span></code></pre></div><h2 id="deploying-the-application">Deploying the application</h2>
+<p>Your application is now ready to be deployed to the cloud to be used by your clients.</p>
+<p>To deploy your application, run the following command in the root directory of your project:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">genezio deploy
+</span></span></code></pre></div><p>This will deploy the whole project to the cloud and make it available to your users using the subdomain you specified in the <code>genezio.yaml</code> file.</p>
+<p>You can continue to manage, test, update and monitor your project from the genezio dashboard.</p>
+<h2 id="improvements">Improvements</h2>
+<p>If you feel tired you can jump to the conclusions section. But if you want to improve your web development skills, here are some ideas to extend the application.</p>
+<h3 id="add-a-counter-for-the-number-of-items-in-the-cart">Add a counter for the number of items in the cart</h3>
+<p>It would be great if the user could see the number of items in the cart each time the <code>Buy now</code> button is clicked.
+This way, the user has a visual indication that the item was successfully added to the cart.</p>
+<p>Add a new state to keep track of the number of items in the cart.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl">  <span class="kr">const</span> <span class="p">[</span><span class="nx">purchasedQuantity</span><span class="p">,</span> <span class="nx">setPurchasedQuantity</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">handleBuyClick</span> <span class="o">=</span> <span class="kr">async</span> <span class="p">(</span><span class="nx">e</span>: <span class="kt">any</span><span class="p">,</span> <span class="nx">product</span>: <span class="kt">Product</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// ...
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Update the local state to reflect the purchased quantity
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">setPurchasedQuantity</span><span class="p">((</span><span class="nx">prevQuantity</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">prevQuantity</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// ...
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">handleDeleteItem</span> <span class="o">=</span> <span class="kr">async</span> <span class="p">(</span><span class="nx">e</span>: <span class="kt">any</span><span class="p">,</span> <span class="nx">cartItem</span>: <span class="kt">CartItem</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// ...
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Update the local state to reflect the purchased quantity
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">setPurchasedQuantity</span><span class="p">((</span><span class="nx">prevQuantity</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">prevQuantity</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// ...
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">handleClearCart</span> <span class="o">=</span> <span class="kr">async</span> <span class="p">(</span><span class="nx">e</span>: <span class="kt">any</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// ...
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Update the local state to reflect the purchased quantity
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">setPurchasedQuantity</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// ...
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">Button</span> <span class="na">color</span><span class="o">=</span><span class="s">&#34;primary&#34;</span> <span class="na">onClick</span><span class="o">=</span><span class="p">{(</span><span class="nx">e</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">toggleCartModal</span><span class="p">(</span><span class="nx">e</span><span class="p">)}&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">FaShoppingCart</span> <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">{</span><span class="nx">purchasedQuantity</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">span</span> <span class="na">className</span><span class="o">=</span><span class="s">&#34;m-2&#34;</span><span class="p">&gt;{</span><span class="nx">purchasedQuantity</span><span class="p">}&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">)}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">Button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">);</span>
+</span></span></code></pre></div><p>This state should be updated each time an item is added or removed from the cart. When the cart is cleared, the state should be reset to 0.</p>
+<h3 id="add-spinners-animation-for-loading-states">Add spinners animation for loading states</h3>
+<p>To improve the UI even further, you can add spinners to indicate loading states on the buttons that are sending requests to the backend.</p>
+<p>Each button should have its own loading state to indicate that the request is being processed.</p>
+<p>Below is an example of how to add a loading state to the <code>Buy now</code> button.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl">  <span class="kr">const</span> <span class="p">[</span><span class="nx">addItemLoading</span><span class="p">,</span> <span class="nx">setAddItemLoading</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="o">&lt;</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="nx">key</span>: <span class="kt">number</span><span class="p">]</span><span class="o">:</span> <span class="kr">boolean</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span><span class="o">&gt;</span><span class="p">({});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">handleBuyClick</span> <span class="o">=</span> <span class="kr">async</span> <span class="p">(</span><span class="nx">e</span>: <span class="kt">any</span><span class="p">,</span> <span class="nx">product</span>: <span class="kt">Product</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Set loading state to true to show the spinner
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">setAddItemLoading</span><span class="p">((</span><span class="nx">prevStates</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">({</span> <span class="p">...</span><span class="nx">prevStates</span><span class="p">,</span> <span class="p">[</span><span class="nx">product</span><span class="p">.</span><span class="nx">id</span><span class="p">]</span><span class="o">:</span> <span class="kc">true</span> <span class="p">}));</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// ...
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Set loading state to false to hide the spinner
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">setAddItemLoading</span><span class="p">((</span><span class="nx">prevStates</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">({</span> <span class="p">...</span><span class="nx">prevStates</span><span class="p">,</span> <span class="p">[</span><span class="nx">product</span><span class="p">.</span><span class="nx">id</span><span class="p">]</span><span class="o">:</span> <span class="kc">false</span> <span class="p">}));</span>
+</span></span><span class="line"><span class="cl">  <span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">Button</span>
+</span></span><span class="line"><span class="cl">      <span class="na">color</span><span class="o">=</span><span class="s">&#34;primary&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="na">onClick</span><span class="o">=</span><span class="p">{(</span><span class="nx">e</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">handleBuyClick</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span> <span class="nx">product</span><span class="p">)}</span>
+</span></span><span class="line"><span class="cl">      <span class="na">disabled</span><span class="o">=</span><span class="p">{</span><span class="nx">addItemLoading</span><span class="p">[</span><span class="nx">product</span><span class="p">.</span><span class="nx">id</span><span class="p">]}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">{</span><span class="nx">addItemLoading</span><span class="p">[</span><span class="nx">product</span><span class="p">.</span><span class="nx">id</span><span class="p">]</span> <span class="o">?</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">Spinner</span> <span class="na">size</span><span class="o">=</span><span class="s">&#34;sm&#34;</span> <span class="na">color</span><span class="o">=</span><span class="s">&#34;light&#34;</span> <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">)</span> <span class="o">:</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="s1">&#39;Buy Now&#39;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">)}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">Button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">);</span>
+</span></span></code></pre></div><h2 id="conclusion">Conclusion</h2>
+<p>Congratulations! 🥳</p>
+<p>The codebase for this tutorial is open-source, and you can find it in this 
+
+
+
+<a href="https://github.com/genez-io/genezio-examples/tree/main/typescript/shopping-cart" target="_blank">GitHub repository</a>
+
+
+
+.</p>
+<p>I hope you enjoyed this tutorial and I encourage you to check out our other 
+
+
+
+<a href="https://genez.io/blog" target="_blank">tutorials</a>
+
+
+
+ for more tips and tricks on improving your software engineering skills. 🥷 💻</p>
+</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+  
+
+
+  
+  <div class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <div class="footer-branding">
+            <a class="footer-logo" href="/">
+              <img width="140px" height="40px" alt="genezio Logo" src="/images/logo2.svg" />
+            </a>
+          </div>
+          <div class="footer-description">
+            <p>genezio is a new paradigm in cloud native programming, making it accessible to everyone, allowing elegant and quick development of websites, mobile apps, IoT apps, and many others.</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="footer-menu d-md-flex">
+            
+              <div class="col-12 col-md-7">
+                <h2 class="footer-title-support">Support</h3>
+                <div class="menu-footer-tertiary">
+                  <ul>
+                    
+                    
+                    <li class="menu-item-contact us at: contact@genez.io">
+                      <a href="mailto:contact@genez.io">
+                        
+                        <span>Contact us at: contact@genez.io</span>
+                      </a>
+                    </li>
+                    
+                    <li class="menu-item-privacy policy">
+                      <a href="/privacy-policy/">
+                        
+                        <span>Privacy Policy</span>
+                      </a>
+                    </li>
+                    
+                    <li class="menu-item-terms &amp; conditions">
+                      <a href="/eula/">
+                        
+                        <span>Terms &amp; Conditions</span>
+                      </a>
+                    </li>
+                    
+                    <li class="menu-item-brand assets">
+                      <a href="https://drive.google.com/drive/folders/1DUTEllKJygFyO3lsHi4uu703iZfYQHB5?usp=sharing">
+                        
+                        <span>Brand Assets</span>
+                      </a>
+                    </li>
+                    
+                  </ul>
+                </div>
+              </div>
+              
+              
+              <div class="col-12 col-md-6">
+                <h2 class="footer-title-support">Product</h3>
+                <div class="menu-footer-tertiary">
+                  <ul>
+                    
+                    
+                    <li>
+                       <a target="_blank" href="https://docs.genez.io/genezio-documentation/">
+        
+        <span>Genezio Documentation</span>
+      </a>
+                    </li>
+                    
+                    <li>
+                       <a  href="/full-stack-dart-application/">
+        
+        <span>Full Stack Dart App</span>
+      </a>
+                    </li>
+                    
+                    <li>
+                       <a  href="/">
+        
+        <span>Landing Page</span>
+      </a>
+                    </li>
+                    
+                  </ul>
+                </div>
+              </div>
+              
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="footer-social">
+          <ul class="social">
+            <li>
+              <a href="https://www.facebook.com/profile.php?id=100086667803855" target="blank">
+                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <title>Facebook icon</title>
+                  <path
+                    d="M22.676 0H1.324C.593 0 0 .593 0 1.324v21.352C0 23.408.593 24 1.324 24h11.494v-9.294H9.689v-3.621h3.129V8.41c0-3.099 1.894-4.785 4.659-4.785 1.325 0 2.464.097 2.796.141v3.24h-1.921c-1.5 0-1.792.721-1.792 1.771v2.311h3.584l-.465 3.63H16.56V24h6.115c.733 0 1.325-.592 1.325-1.324V1.324C24 .593 23.408 0 22.676 0" />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/Geneziodev" target="blank">
+                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <title>Twitter icon</title>
+                  <path
+                    d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z" />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/company/genez-io/" target="blank">
+                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <title>LinkedIn icon</title>
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/genezio.dev/" target="blank">
+                <svg role="img" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                  <title>Instagram icon</title>
+                  <path
+                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"></path>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://discord.com/invite/uc9H5YKjXv" target="blank">
+                <svg role="img" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                  <title>Discord icon</title>
+                  <path 
+                    d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612Zm5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612Z">
+                  </path>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+  
+  
+  
+  
+
+  
+
+  
+  <script type="text/javascript" src="/js/bundle.min.08dc218caff10a5b4c9aea8e3e9d15d68f0cd13f15fc9919363ce2f2e25af5f6.js"></script>
+  
+  
+  
+  <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/26189618.js"></script>
+  
+</body>
+</html>

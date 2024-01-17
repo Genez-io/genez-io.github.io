@@ -9,6 +9,9 @@
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-5ZPQL3Z');</script>
   
+
+   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11335989676"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-11335989676'); </script>
+   <script> gtag('event', 'conversion', {'send_to': 'AW-11335989676/Vn9zCMKshYEZEKzztZ0q'}); </script>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>genezio | The Evolution of APIs: A History of REST and RPC</title>
@@ -17,6 +20,7 @@
   <meta name="theme-color" content="#6f42c1" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#6f42c1" media="(prefers-color-scheme: dark)">
 
+  
   
   <link rel="shortcut icon" href="/favicon.png">
   <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120-precomposed.png" />
@@ -50,7 +54,7 @@
 
   
   
-  <link rel="stylesheet" href="/css/style.min.e2d430114708ed98af06f908b2fd85dbdeb366bd4c79342239b7d7a1070b086c.css">
+  <link rel="stylesheet" href="/css/style.min.f1ce87c748a07a08745d041c9860b6b8c6c175e6809b9e176ddc4ecb73ef38cc.css">
   
 
   
@@ -66,6 +70,15 @@
 
     gtag('config', 'G-VR905VXGKC');
   </script>
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-11377331429">
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-11377331429');
+</script>
 </head>
 
 <body class='page page-posts-single'>
@@ -210,12 +223,12 @@
         
         <div class="post-tags">
           
-          <a class="post-tag" href="/tags/comparison">Comparison</a>
+          <a class="post-tag" href="/tags/comparison" target="_blank">Comparison</a>
           
         </div>
         
         <h1>The Evolution of APIs: A History of REST and RPC</h1>
-        <a class="post-author-name" href="https://www.linkedin.com/in/bogdan-calin-ciobanu-a966b2268/">Bogdan Ciobanu</a>
+        <a class="post-author-name" href="https://www.linkedin.com/in/bogdan-calin-ciobanu-a966b2268/" target="_blank">Bogdan Ciobanu</a>
         <div class="post-date pt-1">
         
             
@@ -236,9 +249,40 @@
 <strong>the history of the paradigms</strong>, and a <strong>tutorial on how to implement both paradigms using genezio</strong>.</p>
 <p>Prerequisites for the tutorial:</p>
 <ul>
-<li>Install <a href="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm">npm</a></li>
-<li>Have an IDE or text editor installed, e.g. <a href="https://code.visualstudio.com/download">Visual Studio Code</a></li>
-<li>Create a free <a href="https://genez.io/">genezio</a> account</li>
+<li>
+<p>Install 
+
+
+
+<a href="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm" target="_blank">npm</a>
+
+
+
+</p>
+</li>
+<li>
+<p>Have an IDE or text editor installed, e.g. 
+
+
+
+<a href="https://code.visualstudio.com/download" target="_blank">Visual Studio Code</a>
+
+
+
+</p>
+</li>
+<li>
+<p>Create a free 
+
+
+
+<a href="https://genez.io/" target="_blank">genezio</a>
+
+
+
+
+account</p>
+</li>
 </ul>
 <h2 id="summary">Summary</h2>
 <p>REST and RPC are two distinct approaches to web services and distributed computing. REST is focused on resource manipulation and provides a uniform interface for accessing and modifying resources, while RPC is focused on method invocation and provides a way for applications to access remote services and resources.</p>
@@ -278,7 +322,16 @@
 <h2 id="the-resurgence-of-rpc">The Resurgence of RPC</h2>
 <p>Despite the rapid, widespread adoption of REST, RPC withstood the test of time. In the post-2000 era, RPC systems have adopted a more flexible approach to development. Instead of using RPC with a fix-it-all approach, they have become a solution targeted to solve concrete problems in a fast and elegant way. RPC has experienced a resurgence in popularity due to the emergence of modern RPC frameworks such as gRPC. These frameworks are designed to address the limitations of classical RPC and REST and provide more efficient, scalable, and reliable communication between distributed systems and client-server applications.</p>
 <p>JSON-RPC encodes the calls in the JSON format, which allows data to be transmitted efficiently and easily between clients and servers. Ethereum employs JSON-RPC as its primary communication interface to interact with the Ethereum network due to its specific characteristics that align well with the platform&rsquo;s requirements. Its stateless nature allows Ethereum to maintain consistency across multiple nodes, crucial for decentralized systems. This choice is also advantageous due to JSON-RPC&rsquo;s lightweight nature, human-readable format, and language-agnostic design, which facilitate efficient and seamless interaction with Ethereum nodes. Consequently, developers can effortlessly create decentralized applications (dApps), manage transactions, and query blockchain data, fostering a robust and accessible ecosystem for Ethereum-based projects.</p>
-<p>gRPC was developed by Google and is based on the open-source protocol buffers data serialization format. It uses HTTP/2 for transport and provides features such as bi-directional streaming, flow control, and error handling. This makes gRPC faster and more efficient than traditional RPC systems, as it reduces the overhead of network requests and responses. However, integration of gRPC may not be seamless, as some browsers do not expose a HTTP/2-compliant API. One way to overcome this is by using <a href="https://github.com/grpc/grpc-web">gRPC-web</a>.</p>
+<p>gRPC was developed by Google and is based on the open-source protocol buffers data serialization format. It uses HTTP/2 for transport and provides features such as bi-directional streaming, flow control, and error handling. This makes gRPC faster and more efficient than traditional RPC systems, as it reduces the overhead of network requests and responses. However, integration of gRPC may not be seamless, as some browsers do not expose a HTTP/2-compliant API. One way to overcome this is by using 
+
+
+
+<a href="https://github.com/grpc/grpc-web" target="_blank">gRPC-web</a>
+
+
+
+
+.</p>
 <p>A major benefit of gRPC is its support for service discovery and load balancing. This allows applications to dynamically discover and connect to available services, and distribute traffic across multiple instances of a service, improving reliability and scalability. In addition to gRPC, other modern RPC frameworks such as Apache Thrift, Finagle, and RSocket have also gained popularity in recent years, each with their own unique features and benefits.</p>
 <p>Another advantage of gRPC is its support for streaming, which allows for efficient processing of large data sets and real-time updates. gRPC supports both client-side and server-side streaming, as well as bi-directional streaming, which enables both the client and server to send multiple messages in a single connection. It also provides support for features such as authentication, encryption, and flow control, which are important for securing and optimizing communication over a network.</p>
 <h2 id="conclusion">Conclusion</h2>
@@ -335,7 +388,16 @@
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><ol start="4">
 <li>Use the command <code>genezio addClass hello.js</code> to add the class to the bundle. Execute <code>genezio local</code> to test it locally or <code>genezio deploy –backend</code> to deploy it on the genezio infrastructure.</li>
-<li>Excellent! You can now test this RPC interface using the URLs returned by the deploy command used and the SDK and/or with our test interface that you can find on the <a href="https://app.genez.io/dashboard">dashboard</a>.</li>
+<li>Excellent! You can now test this RPC interface using the URLs returned by the deploy command used and the SDK and/or with our test interface that you can find on the 
+
+
+
+<a href="https://app.genez.io/dashboard" target="_blank">dashboard</a>
+
+
+
+
+.</li>
 </ol>
 <h3 id="using-genezio-to-create-a-restful-web-service-for-the-playlist-functionality">Using genezio to create a RESTful web service for the playlist functionality</h3>
 <p>It is worth noting that not all web services need to follow the REST architecture. It is preferable to use it when the purpose of the application is to perform CRUD operations on some data. If you however need this architecture, genezio has got you covered! Let’s try to create the playlist functionality for our music app using a RESTful architecture that can go alongside our existing RPC core functionality.</p>
@@ -390,9 +452,36 @@
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><ol start="2">
 <li>Great! Now, we need to add this class to our genezio bundle, and deploy it. Run <code>genezio addClass index.js http</code> to add this class to the bundle. Run <code>genezio local</code> to deploy it locally, or <code>genezio deploy</code> to deploy it on the genezio infrastructure.</li>
-<li>Congrats! You can now test this RESTful interface using the URLs returned by the deploy command used and the SDK and/or with our test interface that you can find on the <a href="https://app.genez.io/dashboard">dashboard</a>.</li>
+<li>Congrats! You can now test this RESTful interface using the URLs returned by the deploy command used and the SDK and/or with our test interface that you can find on the 
+
+
+
+<a href="https://app.genez.io/dashboard" target="_blank">dashboard</a>
+
+
+
+
+.</li>
 </ol>
-<p>You can check out the code for this application <a href="https://github.com/MagoDelBlocco/genezio-music-app/tree/master">here</a>. For a more complex application that uses a REST interface, you can check out our <a href="https://github.com/Genez-io/genezio-examples/tree/master/javascript/webhook">Webhook example</a>.</p>
+<p>You can check out the code for this application 
+
+
+
+<a href="https://github.com/MagoDelBlocco/genezio-music-app/tree/master" target="_blank">here</a>
+
+
+
+
+. For a more complex application that uses a REST interface, you can check out our 
+
+
+
+<a href="https://github.com/Genez-io/genezio-examples/tree/master/javascript/webhook" target="_blank">Webhook example</a>
+
+
+
+
+.</p>
 </div>
       </div>
     </div>

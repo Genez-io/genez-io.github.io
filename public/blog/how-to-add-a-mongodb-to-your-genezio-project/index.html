@@ -9,6 +9,9 @@
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-5ZPQL3Z');</script>
   
+
+   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11335989676"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-11335989676'); </script>
+   <script> gtag('event', 'conversion', {'send_to': 'AW-11335989676/Vn9zCMKshYEZEKzztZ0q'}); </script>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>genezio | How to add a MongoDB to your genezio project</title>
@@ -17,6 +20,7 @@
   <meta name="theme-color" content="#6f42c1" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#6f42c1" media="(prefers-color-scheme: dark)">
 
+  
   
   <link rel="shortcut icon" href="/favicon.png">
   <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120-precomposed.png" />
@@ -50,7 +54,7 @@
 
   
   
-  <link rel="stylesheet" href="/css/style.min.e2d430114708ed98af06f908b2fd85dbdeb366bd4c79342239b7d7a1070b086c.css">
+  <link rel="stylesheet" href="/css/style.min.f1ce87c748a07a08745d041c9860b6b8c6c175e6809b9e176ddc4ecb73ef38cc.css">
   
 
   
@@ -66,6 +70,15 @@
 
     gtag('config', 'G-VR905VXGKC');
   </script>
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-11377331429">
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-11377331429');
+</script>
 </head>
 
 <body class='page page-posts-single'>
@@ -210,12 +223,12 @@
         
         <div class="post-tags">
           
-          <a class="post-tag" href="/tags/tutorials">Tutorials</a>
+          <a class="post-tag" href="/tags/tutorials" target="_blank">Tutorials</a>
           
         </div>
         
         <h1>How to add a MongoDB to your genezio project</h1>
-        <a class="post-author-name" href="https://www.linkedin.com/in/radu-andrei-dumitrescu/">Radu Dumitrescu</a>
+        <a class="post-author-name" href="https://www.linkedin.com/in/radu-andrei-dumitrescu/" target="_blank">Radu Dumitrescu</a>
         <div class="post-date pt-1">
         
             
@@ -231,14 +244,32 @@
   <div class="container pt-10 pt-md-8 pb-4 pb-md-10">
     <div class="row justify-content-center">
       <div class="col-12 col-lg-8">
-        <div class="content"><p>In this tutorial, I will show you the steps of integrating a Mongo database into your genezio <a href="https://github.com/Genez-io/genezio-examples/tree/master/typescript/getting-started">Getting Started project</a>.</p>
+        <div class="content"><p>In this tutorial, I will show you the steps of integrating a Mongo database into your genezio 
+
+
+
+<a href="https://github.com/Genez-io/genezio-examples/tree/master/typescript/getting-started" target="_blank">Getting Started project</a>
+
+
+
+
+.</p>
 <p>Following this tutorial, you will be able to:</p>
 <ul>
 <li>Create a free-tier MongoDB Atlas cluster</li>
 <li>Connect to the MongoDB cluster using a MongoDB client</li>
 <li>Integrate the Mongo database into your project using <code>mongoose</code></li>
 </ul>
-<p>Any time you get stuck or have questions, please contact me on <a href="https://discord.gg/XmpKD9ytxS">Discord</a> or write me an email at <a href="mailto:radu@genez.io">radu@genez.io</a>. I am more than happy to help you 😄</p>
+<p>Any time you get stuck or have questions, please contact me on 
+
+
+
+<a href="https://discord.gg/XmpKD9ytxS" target="_blank">Discord</a>
+
+
+
+
+or write me an email at <a href="mailto:radu@genez.io">radu@genez.io</a>. I am more than happy to help you 😄</p>
 <h2 id="contents"><strong>Contents</strong></h2>
 <ul>
 <li>
@@ -265,17 +296,42 @@
 </ul>
 <h2 id="pre-requisites"><strong>Pre-requisites</strong></h2>
 <ul>
-<li>Have <code>npm</code> installed on your machine</li>
-<li>Have <code>mongoose</code> installed on your machine</li>
-<li>Create a free genezio account <a href="https://genez.io">here</a></li>
-<li>Have <code>genezio</code> installed on your machine - you can install it with <code>npm install genezio -g</code></li>
+<li>
+<p>Have <code>npm</code> installed on your machine</p>
+</li>
+<li>
+<p>Have <code>mongoose</code> installed on your machine</p>
+</li>
+<li>
+<p>Create a free genezio account 
+
+
+
+<a href="https://genez.io" target="_blank">here</a>
+
+
+
+</p>
+</li>
+<li>
+<p>Have <code>genezio</code> installed on your machine - you can install it with <code>npm install genezio -g</code></p>
+</li>
 </ul>
 <h2 id="introduction"><strong>Introduction</strong></h2>
 <h3 id="why-mongodb-atlas"><strong>Why MongoDB Atlas?</strong></h3>
 <p>As a cloud database service, MongoDB Atlas offers seamless scalability, high availability, and robust security. You can focus on building innovative applications while leaving the complexities of database management behind thanks to its intuitive interface and seamless integration with major cloud providers.</p>
 <h2 id="hands-on-tutorial"><strong>Hands-on Tutorial</strong></h2>
 <h3 id="create-a-mongodb-atlas-account"><strong>Create a MongoDB Atlas account</strong></h3>
-<p>Go to <a href="https://www.mongodb.com/cloud/atlas/register">MongoDB Cloud Atlas</a> and create an account. Personally, I recommend creating an account using Google Sign up.</p>
+<p>Go to 
+
+
+
+<a href="https://www.mongodb.com/cloud/atlas/register" target="_blank">MongoDB Cloud Atlas</a>
+
+
+
+
+and create an account. Personally, I recommend creating an account using Google Sign up.</p>
 <h3 id="create-a-free-cluster"><strong>Create a free cluster</strong></h3>
 <p>After you create your account, you will get to this wizard where you can create your cluster:</p>
 <p><img src="/posts/add-mongo-to-genezio1.webp" alt="alt_text"></p>
@@ -297,7 +353,16 @@
 <p><img src="/posts/add-mongo-to-genezio4.webp" alt="alt_text"></p>
 <p>A pop-up with the MongoDB connection string will appear. Replace <code>&lt;password&gt;</code> with your password from the previous step and copy it.</p>
 <h3 id="integrate-your-newly-created-cluster-into-the-project"><strong>Integrate your newly created cluster into the project</strong></h3>
-<p>Now you can go to your <a href="https://github.com/Genez-io/genezio-examples/tree/master/typescript/getting-started">Getting Started project</a> and open an IDE of your choice. I recommend VS Code.</p>
+<p>Now you can go to your 
+
+
+
+<a href="https://github.com/Genez-io/genezio-examples/tree/master/typescript/getting-started" target="_blank">Getting Started project</a>
+
+
+
+
+and open an IDE of your choice. I recommend VS Code.</p>
 <p>In the ‘server’ folder, create a <code>.env</code> file and add a line with the <code>MONGO_DB_URI=&lt;your_connection_string&gt;</code> value. You can then use it all over your code using <code>process.env.MONGO_DB_URI</code>.</p>
 <h3 id="create-a-new-db-connection-into-a-class"><strong>Create a new DB connection into a class</strong></h3>
 <p>Now that we have the connection string, you can integrate MongoDB into your classes.</p>
@@ -322,7 +387,16 @@
 <p>If you want your code to look cleaner, you can write the connection method in another file and just import and call it in your class.</p>
 <p>After that, you can use all the functions provided by mongoose all over the functions from your class.</p>
 <h3 id="check-your-db-with-mongodb-compass"><strong>Check your DB with MongoDB Compass</strong></h3>
-<p>MongoDB Compass is one of the most powerful database clients for MongoDB. You can download it from <a href="https://www.mongodb.com/try/download/compass">here</a>.</p>
+<p>MongoDB Compass is one of the most powerful database clients for MongoDB. You can download it from 
+
+
+
+<a href="https://www.mongodb.com/try/download/compass" target="_blank">here</a>
+
+
+
+
+.</p>
 <p>I highly recommend using it for GUI queries to your database, and also for debugging your application.</p>
 <p>After you install it, you can simply open it, add your MongoDB Connection String, and then you will have full admin access to your database.</p>
 <p>Be careful when handling a database that is used in a production environment because you can delete things from there.</p>
@@ -334,7 +408,16 @@
 <h4 id="persistent-connection"><strong>Persistent Connection</strong></h4>
 <p>This is the most conventional method of establishing a connection to a database, but [IT] encounters certain issues in a serverless environment, particularly when the initial connection consumes a significant amount of time.</p>
 <h4 id="data-api"><strong>Data API</strong></h4>
-<p><a href="https://www.mongodb.com/docs/atlas/api/data-api/">Mongo DB Atlas Data API</a> offers a solution where you can directly access the database through an API, eliminating the requirement of establishing an initial connection and reducing serverless cold-start significantly.</p>
+<p>
+
+
+
+<a href="https://www.mongodb.com/docs/atlas/api/data-api/" target="_blank">Mongo DB Atlas Data API</a>
+
+
+
+
+offers a solution where you can directly access the database through an API, eliminating the requirement of establishing an initial connection and reducing serverless cold-start significantly.</p>
 <p>🥳 Congratulations on acquiring your own database that you can use to work on your projects!</p>
 </div>
       </div>

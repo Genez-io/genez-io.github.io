@@ -9,6 +9,9 @@
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-5ZPQL3Z');</script>
   
+
+   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11335989676"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-11335989676'); </script>
+   <script> gtag('event', 'conversion', {'send_to': 'AW-11335989676/Vn9zCMKshYEZEKzztZ0q'}); </script>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>genezio | Create your first app using ChatGPT</title>
@@ -17,6 +20,7 @@
   <meta name="theme-color" content="#6f42c1" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#6f42c1" media="(prefers-color-scheme: dark)">
 
+  
   
   <link rel="shortcut icon" href="/favicon.png">
   <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120-precomposed.png" />
@@ -50,7 +54,7 @@
 
   
   
-  <link rel="stylesheet" href="/css/style.min.e2d430114708ed98af06f908b2fd85dbdeb366bd4c79342239b7d7a1070b086c.css">
+  <link rel="stylesheet" href="/css/style.min.f1ce87c748a07a08745d041c9860b6b8c6c175e6809b9e176ddc4ecb73ef38cc.css">
   
 
   
@@ -66,6 +70,15 @@
 
     gtag('config', 'G-VR905VXGKC');
   </script>
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-11377331429">
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-11377331429');
+</script>
 </head>
 
 <body class='page page-posts-single'>
@@ -210,12 +223,12 @@
         
         <div class="post-tags">
           
-          <a class="post-tag" href="/tags/tutorials">Tutorials</a>
+          <a class="post-tag" href="/tags/tutorials" target="_blank">Tutorials</a>
           
         </div>
         
         <h1>Create your first app using ChatGPT</h1>
-        <a class="post-author-name" href="https://www.linkedin.com/in/radu-andrei-dumitrescu/">Radu Dumitrescu</a>
+        <a class="post-author-name" href="https://www.linkedin.com/in/radu-andrei-dumitrescu/" target="_blank">Radu Dumitrescu</a>
         <div class="post-date pt-1">
         
             
@@ -238,147 +251,191 @@
 <!-- raw HTML omitted -->
 <p>In this tutorial, I will show you how to create an app called the Rephrasing App. The app that you are going to build has a simple UI written in React, uses the ChatGPT API and is deployed on genezio.</p>
 <p>It will have two main components: the frontend which will consist of a simple chat-like interface, and the backend which exposes a function meant to rephrase your input text. Once implemented, the Rephrasing App can be used to rephrase text, write better articles or even upgrade your CV.</p>
-<p>After reading this article you will know how to:</p>
+<h2 id="prerequisites">Prerequisites:</h2>
 <ul>
-<li>use ChatGPT’s API</li>
-<li>work with genezio to create and deploy a ChatGPT app</li>
-<li>use React to create a fast and easy UI</li>
-</ul>
-<p>Prerequisites:</p>
-<ul>
-<li>Install <a href="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm">npm</a></li>
-<li>Have an IDE installed, I personally recommend <a href="https://code.visualstudio.com/download">Visual Studio Code</a></li>
-<li>Create a free account on <a href="https://openai.com/">OpenAI</a></li>
-<li>Create a free <a href="https://genez.io/">genezio</a> account</li>
+<li>
+<p>Install 
+
+
+
+<a href="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm" target="_blank">npm</a>
+
+
+
+</p>
+</li>
+<li>
+<p>Have an IDE installed, I personally recommend 
+
+
+
+<a href="https://code.visualstudio.com/download" target="_blank">Visual Studio Code</a>
+
+
+
+</p>
+</li>
+<li>
+<p>Create a free account on 
+
+
+
+<a href="https://openai.com/" target="_blank">OpenAI</a>
+
+
+
+</p>
+</li>
 </ul>
 <h2 id="introduction">Introduction</h2>
 <h3 id="chatgpt-and-genezio"><strong>ChatGPT and genezio</strong></h3>
 <p>Since you are reading this, I assume you already know what ChatGPT is and how it works at its core. But how do you actually use it to build a working and useful app? Is it enough to call the API directly, or do you need to write other functions as well? How and where do you host it? I will work alongside you towards finding out the answers to most of these questions until the end of this article.</p>
 <p>When deciding where to do the calls from, you have to keep in mind how secure you want this to be. So, as it is smart not to do them from the frontend, you are going to use genezio to host the backend and to call the OpenAPI from the genezio functions. For you to create a clearer idea about how this works, take a look at this illustration:</p>
 <p><img src="/posts/react-gen-chat.webp" alt="Street Art Image"></p>
-<p>As I started setting up my machine for building this app, I encountered a few things that I think are worth mentioning. This will hopefully help you go through a more seamless process.</p>
-<p>The first problem I had was when I tried using my older OpenAI account. I signed into my account, but I soon realised that I wasn’t able to use it and didn’t know the reason. After I did some searching, I found out that it had an expired credit card on file. I eventually had to change it to make it work even with the free version - you would have thought that using a free version wouldn’t require a working card. So, make sure your payment details are up to date if you previously used a credit card on OpenAI.</p>
-<p>As of January 2023 - the date of writing this article -, the paywall for OpenAI had a call limitation of 20 calls per minute or 150,000 tokens per minute. For those of you who don’t know what a token is, it is defined as a relevant word that needs to be analysed by the engine.</p>
-<p>Keep in mind that additional charges may be made if exceeding these limits. Make sure you read the relevant articles published on their <a href="https://help.openai.com/en/articles/5955598-is-api-usage-subject-to-any-rate-limits">website</a>.</p>
-<p>The free tier may be slower than the paid one, and can also offer lower quality of service. It is important to carefully consider the trade-offs between the free and paid options and choose the one that best fits your needs.</p>
-<p>Now, let’s get back to our Reprashing App and dive into the detailed step-by-step tutorial!  You can find the complete project on <a href="https://github.com/Genez-io/genezio-examples/tree/master/javascript/chatgpt-project">Github</a></p>
-<p>Let me know if you need help by contacting me on <a href="https://discord.gg/XmpKD9ytxS">Discord</a> or write me an email at <a href="mailto:contact@genez.io">contact@genez.io</a>.</p>
-<h2 id="getting-started-configuration">Getting Started: Configuration</h2>
+<p>Now, let’s dive in! You can find the complete project 
+
+
+
+<a href="https://github.com/Genez-io/genezio-examples/tree/master/javascript/chatgpt-project" target="_blank">here</a>
+
+
+
+.</p>
+<h2 id="configuration">Configuration</h2>
 <h3 id="get-the-api-key-from-openai"><strong>Get the API Key from OpenAI</strong></h3>
 <ol>
-<li>Go to the OpenAI website at<a href="https://beta.openai.com/signup/"> https://beta.openai.com/signup/</a></li>
-<li>Use one of the methods provided to create your account.</li>
+<li>Go to the 
+
+
+
+<a href="https://platform.openai.com/signup/" target="_blank">OpenAI website</a>
+
+
+
+ and create an account.</li>
 </ol>
 <p><img src="/posts/create-account.webp" alt="Street Art Image"></p>
-<ol start="3">
-<li>Go to<a href="https://beta.openai.com/account/api-keys"> https://beta.openai.com/account/api-keys</a></li>
-<li>Click on the &ldquo;Create new secret key&rdquo; button.</li>
+<ol start="2">
+<li>
+<p>Go to
+
+
+
+<a href="https://platform.openai.com/account/api-keys" target="_blank">platform.openai.com/account/api-keys</a>
+
+
+
+</p>
+</li>
+<li>
+<p>Click on the &ldquo;Create new secret key&rdquo; button.</p>
+</li>
 </ol>
 <p><img src="/posts/api-keys.webp" alt="Street Art Image"></p>
-<p>Note: Keep your API key secure and do not share it with anyone.</p>
-<h3 id="install-genezio-and-log-in"><strong>Install genezio and Log In</strong></h3>
+<p><strong>Note</strong>: Remember to keep your API key secure and do not share it with anyone.</p>
+<h3 id="set-up-genezio"><strong>Set Up genezio</strong></h3>
 <p>First, install genezio using npm:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">npm install genezio -g
-</span></span></code></pre></div><p>After the installation is completed, you need to log in using this command:</p>
+</span></span></code></pre></div><p>Then, use this command to log in:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">genezio login
-</span></span></code></pre></div><h3 id="setup-a-new-genezio-project"><strong>Setup a New genezio Project</strong></h3>
-<p>Create a new project folder:</p>
+</span></span></code></pre></div><p>Create a new project folder:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">mkdir chatgpt-project &amp;&amp; cd chatgpt-project
-</span></span></code></pre></div><p>In this folder you will add 2 more folders, <strong>client</strong> and <strong>server:</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">mkdir server &amp;&amp; mkdir client
+</span></span></code></pre></div><p>In this folder you will add 2 more folders: <strong>client_chatgpt</strong> and <strong>server_chatgpt</strong>. The second one will be added with <code>genezio init</code> and the first one will be added using this command:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">mkdir client_chatgpt
 </span></span></code></pre></div><h3 id="the-server-side-project"><strong>The Server-side Project</strong></h3>
-<p>Change into the newly created server folder:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">cd server
-</span></span></code></pre></div><p>Set up a new genezio project:</p>
+<p>Set up a new genezio project:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">genezio init
 </span></span></code></pre></div><p>After you complete the wizard, your terminal should look like this:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">What is the name of the project: chatgpt-project
-</span></span><span class="line"><span class="cl">In what programming language do you want your SDK? (js, ts or swift) [default value: js]: js
-</span></span><span class="line"><span class="cl">What runtime will you use? Options: &#34;node&#34; or &#34;browser&#34;. [default value: node]: browser
-</span></span><span class="line"><span class="cl">Where do you want to save your SDK? [default value: ./sdk/]: ./../client/src/sdk
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">What is the name of the project: server_chatgpt
+</span></span><span class="line"><span class="cl">What region do you want to deploy your project to? [default value: us-east-1]: 
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">Your genezio project was successfully initialized!
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">The genezio.yaml configuration file was generated. You can now add the classes that you want to deploy using the &#39;genezio addClass &lt;className&gt; &lt;classType&gt;&#39; command.
-</span></span></code></pre></div><p>Create a <code>package.json</code> using npm:</p>
+</span></span><span class="line"><span class="cl">The genezio.yaml configuration file was generated.
+</span></span><span class="line"><span class="cl">You can now add the classes that you want to deploy using the&#39;genezio addClass &lt;className&gt; &lt;classType&gt;&#39; command.
+</span></span></code></pre></div><p>Change into the newly created <code>server_chatgpt</code> folder:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">cd server_chatgpt
+</span></span></code></pre></div><p>Create a <code>package.json</code> file:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">npm init -y
-</span></span></code></pre></div><p>Now you’re ready to install <code>openai</code> using npm:</p>
+</span></span></code></pre></div><p>Now, you’re ready to install <code>openai</code>:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">npm install openai
-</span></span></code></pre></div><p>Note: This npm package provides a convenient way to access OpenAI API from any JavaScript application.</p>
+</span></span></code></pre></div><p><strong>Note:</strong> This npm package provides a convenient way to access OpenAI API from any JavaScript application.</p>
 <h3 id="implement-the-backend-class"><strong>Implement the Backend Class</strong></h3>
-<p>In this section, you will implement a class containing a function that you will deploy and then make the call from the frontend application.</p>
-<p>You will need to install <code>dotenv</code> to securely store your secret key in a .env file:</p>
+<p>You will implement a class containing a function that you will deploy and then call it from the frontend application.</p>
+<p>You will need to install <code>dotenv</code> and create a <code>.env</code> file to securely store your secret key:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">npm install dotenv
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">touch .env
+</span></span></code></pre></div><p>Open the <code>.env</code> file and add the following variable that will store your OpenAI secret key from your OpenAI account:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">OPENAI_SECRET_KEY=&lt;your_secret_key&gt;
 </span></span></code></pre></div><p>Now, create a new class using genezio:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">genezio addClass gptCaller.js
-</span></span></code></pre></div><p>You also need to create a <code>.env</code> file for your secret key:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">touch .env
-</span></span></code></pre></div><h3 id="move-to-your-ide"><strong>Move to Your IDE</strong></h3>
-<p>After this point, you should open an IDE to continue working on the project.</p>
-<p>Open the <code>.env</code> file and add the following variable that will store your OpenAI secret key from your OpenAI account:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">OPENAI_SECRET_KEY=&lt;your_secret_key&gt;
-</span></span></code></pre></div><p>Now open the <code>gptCaller.js</code> class and start by adding the dependencies:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">Configuration</span><span class="p">,</span> <span class="nx">OpenAIApi</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;openai&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="nx">dotenv</span> <span class="nx">from</span> <span class="s1">&#39;dotenv&#39;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nx">dotenv</span><span class="p">.</span><span class="nx">config</span><span class="p">();</span>
-</span></span></code></pre></div><p>In the constructor of the class, instantiate the <code>openai</code> object:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">constructor</span><span class="p">()</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">configuration</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Configuration</span><span class="p">({</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">apiKey</span><span class="o">:</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">OPENAI_SECRET_KEY</span>
-</span></span><span class="line"><span class="cl">  <span class="p">});</span>
-</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">openai</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">OpenAIApi</span><span class="p">(</span><span class="nx">configuration</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">  <span class="k">this</span><span class="p">.</span><span class="nx">openai</span> <span class="o">=</span> <span class="nx">openai</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><p>Now you have everything that you need to create the class and the async method that will receive the input text from the frontend app. It will call ChatGPT, and then will send the response back to the frontend.</p>
-<p>Take a look at the complete file code:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">Configuration</span><span class="p">,</span> <span class="nx">OpenAIApi</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;openai&#34;</span><span class="p">;</span>
+</span></span></code></pre></div><p>Open the newly created <code>gptCaller.js</code> class and start by adding the dependencies:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">import</span> <span class="nx">OpenAI</span> <span class="nx">from</span> <span class="s1">&#39;openai&#39;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="nx">dotenv</span> <span class="nx">from</span> <span class="s2">&#34;dotenv&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="nx">dotenv</span><span class="p">.</span><span class="nx">config</span><span class="p">();</span>
+</span></span></code></pre></div><p>In the constructor of the class, instantiate the <code>openai</code> object:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">class</span> <span class="nx">GptCaller</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">openai</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nx">constructor</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">this</span><span class="p">.</span><span class="nx">openai</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">OpenAI</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">apiKey</span><span class="o">:</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">OPENAI_SECRET_KEY</span>
+</span></span><span class="line"><span class="cl">    <span class="p">});</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Now you can create the class and the async method that will receive the input text from the frontend app. It will call ChatGPT, and then send the response back to the frontend.</p>
+<p>Take a look at the complete file code:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">import</span> <span class="nx">OpenAI</span> <span class="nx">from</span> <span class="s1">&#39;openai&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="nx">dotenv</span> <span class="nx">from</span> <span class="s2">&#34;dotenv&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">dotenv</span><span class="p">.</span><span class="nx">config</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">class</span> <span class="nx">GptCaller</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">openai</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="nx">constructor</span><span class="p">()</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">configuration</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Configuration</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">    <span class="k">this</span><span class="p">.</span><span class="nx">openai</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">OpenAI</span><span class="p">({</span>
 </span></span><span class="line"><span class="cl">      <span class="nx">apiKey</span><span class="o">:</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">OPENAI_SECRET_KEY</span>
 </span></span><span class="line"><span class="cl">    <span class="p">});</span>
-</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">openai</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">OpenAIApi</span><span class="p">(</span><span class="nx">configuration</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="k">this</span><span class="p">.</span><span class="nx">openai</span> <span class="o">=</span> <span class="nx">openai</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="kr">async</span> <span class="nx">askChatGPT</span><span class="p">(</span><span class="nx">requestText</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">completion</span> <span class="o">=</span> <span class="kr">await</span> <span class="k">this</span><span class="p">.</span><span class="nx">openai</span><span class="p">.</span><span class="nx">createCompletion</span><span class="p">({</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">model</span><span class="o">:</span> <span class="s2">&#34;text-davinci-003&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">prompt</span><span class="o">:</span> <span class="s2">&#34;rephrase this:&#34;</span> <span class="o">+</span> <span class="nx">requestText</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">max_tokens</span><span class="o">:</span> <span class="mi">2048</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// send a request to the ChatGPT API to get the requestText
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="kr">async</span> <span class="nx">askChatGPT</span><span class="p">(</span><span class="nx">requestText</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">completion</span> <span class="o">=</span> <span class="kr">await</span> <span class="k">this</span><span class="p">.</span><span class="nx">openai</span><span class="p">.</span><span class="nx">chat</span><span class="p">.</span><span class="nx">completions</span><span class="p">.</span><span class="nx">create</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">      <span class="c1">// the used model at the moment of writing this article
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="nx">model</span><span class="o">:</span> <span class="s2">&#34;gpt-3.5-turbo&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="c1">// tells ChatGPT to rephrase the requestText
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="nx">messages</span><span class="o">:</span> <span class="p">[{</span><span class="s2">&#34;role&#34;</span><span class="o">:</span> <span class="s2">&#34;user&#34;</span><span class="p">,</span> <span class="s2">&#34;content&#34;</span><span class="o">:</span> <span class="s2">&#34;rephrase this:&#34;</span> <span class="o">+</span> <span class="nx">requestText</span><span class="p">}],</span>
 </span></span><span class="line"><span class="cl">    <span class="p">});</span>
+</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">      <span class="sb">`DEBUG: request: </span><span class="si">${</span><span class="nx">requestText</span><span class="si">}</span><span class="sb">, response: </span><span class="si">${</span><span class="nx">completion</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">choices</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="nx">text</span><span class="si">}</span><span class="sb">`</span>
+</span></span><span class="line"><span class="cl">      <span class="sb">`DEBUG: request: </span><span class="si">${</span><span class="nx">requestText</span><span class="si">}</span><span class="sb">, response: </span><span class="si">${</span><span class="nx">completion</span><span class="p">.</span><span class="nx">choices</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">message</span><span class="si">}</span><span class="sb">`</span>
 </span></span><span class="line"><span class="cl">    <span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nx">completion</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">choices</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">text</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nx">completion</span><span class="p">.</span><span class="nx">choices</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">message</span><span class="p">.</span><span class="nx">content</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><p>In the <code>askChatGPT</code> method, <code>openai.createCompletion</code> sends a request to the ChatGPT API to get the <code>requestText</code>. This is received as a parameter of the function.</p>
-<p><code>text-davinci-003</code>, the model used in this tutorial, is the same one used by ChatGPT on OpenAI&rsquo;s web app at the moment of writing the article.</p>
-<p><code>max_tokens:2048</code> is used to ensure a complete answer to bigger requests.</p>
-<p>Also,  <code>prompt: &quot;rephrase this:&quot; + requestText</code> tells ChatGPT to rephrase the <code>requestText</code>.</p>
-<p>Finally, the method logs the request and the response, and then returns the response.</p>
-<p>For complete OpenAI API Documentation, you can go to this website: <a href="https://beta.openai.com/docs/api-reference/completions"> https://beta.openai.com/docs/api-reference/completions</a></p>
+</span></span></code></pre></div><p><strong>Note</strong>: Please make sure to check out the OpenAI API 
+
+
+
+<a href="https://platform.openai.com/docs/api-reference/completions" target="_blank">Official Documentation</a>
+
+
+
+ for more information.</p>
 <h3 id="the-client-side-react-project"><strong>The Client-side React Project</strong></h3>
-<p>Go to the client folder:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">cd ./../client
+<p>Go to the <code>client_chatgpt</code> folder:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">cd ./../client_chatgpt
 </span></span></code></pre></div><p>Create a new React app:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">npx create-react-app .
-</span></span></code></pre></div><p>Now, you can deploy your backend project from the <code>server</code> folder to the genezio infrastructure (this might take up to 3 minutes, so be patient):</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">cd ./../server &amp;&amp; genezio deploy
-</span></span></code></pre></div><p>If the deployment is successful, then you can go to the genezio web app to see more information and logs of your project:</p>
+</span></span></code></pre></div><p>Now, you can deploy your backend project from the <code>server_chatgpt</code> folder to the genezio infrastructure (this might take up to 3 minutes, so be patient):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">cd ./../server_chatgpt &amp;&amp; genezio deploy --env .env
+</span></span></code></pre></div><p>After the deployment is done, you can go to the genezio web app to see more information and logs of your project:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">https://app.genez.io/project/&lt;your_project_id&gt;
 </span></span></code></pre></div><p>Now that the backend is deployed, you can start the React app:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">cd ./../client &amp;&amp; npm start
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">cd ./../client_chatgpt &amp;&amp; npm start
 </span></span></code></pre></div><h3 id="implement-the-user-interface"><strong>Implement the User Interface</strong></h3>
 <p>In this part of the article you will create the UI for chatting with the backend. This in the <code>src/App.js</code> file.</p>
-<p>First, import the dependencies from <code>react</code>, <code>SDK,</code> and <code>CSS</code>:</p>
+<p>First, import the dependencies from <code>react</code>, <code>SDK</code>, and <code>CSS</code>:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">useState</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;react&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">GptCaller</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;./sdk/gptCaller.sdk.js&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="s2">&#34;./App.css&#34;</span><span class="p">;</span>
@@ -411,7 +468,8 @@
 </span></span><span class="line"><span class="cl">      <span class="nx">setIsRequesting</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">    <span class="p">});</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><p>For displaying the user’s input text and the response generated by ChatCPT, you need 2 elements. On the left side of the screen ChatGPT generated text will be displayed, and on the right there will be the user text. This will be done in a <code>map</code> of the messages:</p>
+</span></span></code></pre></div><p>For displaying the user’s input text and the response generated by ChatGPT, you need 2 elements. On the left side of the screen text generated by ChatGPT will be displayed, and on the right there will be the user text.</p>
+<p>This will be done in a <code>map</code> of the messages:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="p">{</span><span class="nx">messages</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">message</span><span class="p">,</span> <span class="nx">index</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="nx">message</span><span class="p">.</span><span class="nx">isUser</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="p">(</span>
@@ -443,7 +501,7 @@
 </span></span><span class="line"><span class="cl">    <span class="p">);</span>
 </span></span><span class="line"><span class="cl">  <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">})}</span>
-</span></span></code></pre></div><p>In the end, you need a form with an input text box where the user can enter the text:</p>
+</span></span></code></pre></div><p>To finish, you need a form with an input text box where the user can enter the text:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">form</span> <span class="na">className</span><span class="o">=</span><span class="s">&#34;msger-inputarea&#34;</span> <span class="na">onSubmit</span><span class="o">=</span><span class="p">{</span><span class="nx">e</span> <span class="p">=&gt;</span> <span class="nx">sendRequest</span><span class="p">(</span><span class="nx">e</span><span class="p">)}&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">input</span>
 </span></span><span class="line"><span class="cl">    <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span>
@@ -558,9 +616,36 @@
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="k">default</span> <span class="nx">App</span><span class="p">;</span>
-</span></span></code></pre></div><p>Note: We are providing you with a complete CSS for this interface for <code>src/App.css</code>.</p>
-<p>This is it! You can find the complete project on our <a href="https://github.com/Genez-io/genezio-examples/tree/master/javascript/chatgpt-project">Github</a></p>
-<p>I hope that you found this tutorial informative and helpful, and I encourage you to check out our other articles for more tips and tricks on mastering your craft.</p>
+</span></span></code></pre></div><p><strong>Note:</strong> We provide you with the complete CSS for this project in <code>src/App.css</code>.</p>
+<h4 id="this-is-it">This is it!</h4>
+<p>You can find the complete project on our 
+
+
+
+<a href="https://github.com/Genez-io/genezio-examples/tree/master/javascript/chatgpt-project" target="_blank">Github</a>
+
+
+
+</p>
+<p>I hope that you found this tutorial informative and helpful, and I encourage you to check out our 
+
+
+
+<a href="https://genez.io/blog/" target="_blank">other articles</a>
+
+
+
+ for more tips and tricks on mastering your craft.</p>
+<p>Let me know if you need help by contacting me on 
+
+
+
+<a href="https://discord.gg/XmpKD9ytxS" target="_blank">Discord</a>
+
+
+
+
+or write me an email at <a href="mailto:contact@genez.io">contact@genez.io</a>.</p>
 </div>
       </div>
     </div>

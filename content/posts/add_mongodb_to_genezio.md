@@ -45,28 +45,28 @@ Any time you get stuck or have questions, please contact me on {{< external-link
 
 - Insights
 
-## **Pre-requisites**
+## Prerequisites
 
-- Have `npm` installed on your machine
-- Have `mongoose` installed on your machine
-- Create a free genezio account {{< external-link link="https://genez.io" >}}here{{< /external-link >}}
+If you don’t already have them, you’ll need to install the following tools:
 
-- Have `genezio` installed on your machine - you can install it with `npm install genezio -g`
+- {{< external-link link="https://nodejs.org/en/download/current" >}}Node.js{{< /external-link >}}
+- {{< external-link link="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm" >}}Npm{{< /external-link >}}
+
 
 ## **Introduction**
 
-### **Why MongoDB Atlas?**
+### Why MongoDB Atlas?
 
 As a cloud database service, MongoDB Atlas offers seamless scalability, high availability, and robust security. You can focus on building innovative applications while leaving the complexities of database management behind thanks to its intuitive interface and seamless integration with major cloud providers.
 
-## **Hands-on Tutorial**
+## **Let's get started**
 
-### **Create a MongoDB Atlas account**
+### 1. Create a MongoDB Atlas account
 
 Go to {{< external-link link="https://www.mongodb.com/cloud/atlas/register" >}}MongoDB Cloud Atlas{{< /external-link >}}
  and create an account. Personally, I recommend creating an account using Google Sign up.
 
-### **Create a free cluster**
+### 2. Create a free cluster
 
 After you create your account, you will get to this wizard where you can create your cluster:
 
@@ -99,14 +99,25 @@ You should now see your dashboard. Click on ‘Connect’ in the cluster.
 
 A pop-up with the MongoDB connection string will appear. Replace `<password>` with your password from the previous step and copy it.
 
-### **Integrate your newly created cluster into the project**
+### 3. Integrate your newly created cluster into the project
+First, you’ll need to create a new project.
 
-Now you can go to your {{< external-link link="https://github.com/Genez-io/genezio-examples/tree/master/typescript/getting-started" >}}Getting Started project{{< /external-link >}}
- and open an IDE of your choice. I recommend VS Code.
+To get started with a template, install `genezio` using `npm` and run it in your terminal. Later on, genezio comes in handy to deploy and host your web applications in the cloud.
 
-In the ‘server’ folder, create a `.env` file and add a line with the `MONGO_DB_URI=<your_connection_string>` value. You can then use it all over your code using `process.env.MONGO_DB_URI`.
+```
+npm install -g genezio
+```
 
-### **Create a new DB connection into a class**
+After installing `genezio`, you can create a new Genezio Node.js project by running the following command:
+
+```
+genezio create backend ts-blank-api --name=genezio-mongodb
+cd ./genezio-mongodb
+```
+
+In the `server` folder, create a `.env` file and add a line with the `MONGO_DB_URI=<your_connection_string>` value. You can then use it all over your code using `process.env.MONGO_DB_URI`.
+
+### 4. Create a new DB connection into a class
 
 Now that we have the connection string, you can integrate MongoDB into your classes.
 
@@ -137,7 +148,7 @@ If you want your code to look cleaner, you can write the connection method in an
 
 After that, you can use all the functions provided by mongoose all over the functions from your class.
 
-### **Check your DB with MongoDB Compass**
+### 5. Check your DB with MongoDB Compass
 
 MongoDB Compass is one of the most powerful database clients for MongoDB. You can download it from {{< external-link link="https://www.mongodb.com/try/download/compass" >}}here{{< /external-link >}}
 .
@@ -148,21 +159,32 @@ After you install it, you can simply open it, add your MongoDB Connection String
 
 Be careful when handling a database that is used in a production environment because you can delete things from there.
 
+### 6. Deploy your app
+
+Next, the application is ready to be deployed to the cloud to be used in a production environment. To deploy your application, run the following command in the root directory of your project:
+
+```
+genezio deploy
+```
+
+This will deploy the whole project to the cloud. You can continue to manage, test, update and monitor your project from the genezio dashboard.
+
+
 ## **Insights**
 
-### **Database connection error**
+### Database connection error
 
 You might encounter an issue when connecting to your database. One of the main reasons is that your IP might not be allowed to access the cluster. To change this, go to your cluster configuration, and on the tab ‘Network Access’ add your IP or `0.0.0.0` to give full IP access to the database.
 
-### **Serverless database access**
+### Serverless database access
 
 With MongoDB Atlas, there are 2 main ways to query the database.
 
-#### **Persistent Connection**
+#### Persistent Connection
 
 This is the most conventional method of establishing a connection to a database, but [IT] encounters certain issues in a serverless environment, particularly when the initial connection consumes a significant amount of time.
 
-#### **Data API**
+#### Data API
 
 {{< external-link link="https://www.mongodb.com/docs/atlas/api/data-api/" >}}Mongo DB Atlas Data API{{< /external-link >}}
  offers a solution where you can directly access the database through an API, eliminating the requirement of establishing an initial connection and reducing serverless cold-start significantly.

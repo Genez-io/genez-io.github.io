@@ -6,7 +6,67 @@
     <description>Recent content in News on genezio</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 30 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="/tags/news/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 18 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="/tags/news/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Collaboration, Queues and New Project Wizard - genezio v0.7</title>
+      <link>/blog/collaboration-queues-and-new-project-wizard-genezio-v0.7/</link>
+      <pubDate>Mon, 18 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/collaboration-queues-and-new-project-wizard-genezio-v0.7/</guid>
+      <description>Collaboration With the new collaboration feature, it is now easier than ever to work on a genezio project as a team. As an owner of the project, you have full control and you can invite your colleagues or revoke permissions anytime. Once people are invited and they accept the invitation, they can see the project details, use the test interface to test the project, or deploy new versions of the code.</description>
+    </item>
+    
+    <item>
+      <title>Implement a shopping cart using TypeScript, Redis and React</title>
+      <link>/blog/implement-a-shopping-cart-using-typescript-redis-and-react/</link>
+      <pubDate>Mon, 04 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/implement-a-shopping-cart-using-typescript-redis-and-react/</guid>
+      <description>In this tutorial, I&amp;rsquo;ll show you how to use Redis, NodeJs, and React to easily implement a shopping cart for your online store.
+There are a lot of things to consider when implementing a shopping cart functionality for an online store. The cart feature should be scalable, fast, and robust to offer your users a great experience.
+The best part of this tutorial is that you can easily extend it or integrate it with an existing application.</description>
+    </item>
+    
+    <item>
+      <title>Now Available: Neon Postgres</title>
+      <link>/blog/now-available-neon-postgres/</link>
+      <pubDate>Wed, 22 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/now-available-neon-postgres/</guid>
+      <description>Neon provides serverless Postgres databases that offer a generous free tier as well as other features such as autoscaling, bottomless storage, and branching. As such, Neon is an excellent choice as a database provider for serverless applications.
+We are happy to announce that genezio now has full support for integrating with Neon Postgres. The integration allows you to easily create a Postgres database which you can manage directly from your genezio dashboard.</description>
+    </item>
+    
+    <item>
+      <title>Now Available: Upstash Redis</title>
+      <link>/blog/now-available-upstash-redis/</link>
+      <pubDate>Wed, 22 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/now-available-upstash-redis/</guid>
+      <description>Upstash Redis simplifies data storage and access, making it a natural fit for serverless web applications and cloud-native architectures. Its key-value store functionality allows for rapid data access, making it ideal for caching frequently accessed data and improving overall application performance. Redis also supports complex data structures such as lists, sets, and hashes, providing versatility in data modeling.
+Today, we are excited to announce the integration with Upstash Redis, a serverless Redis provider, into the genezio platform.</description>
+    </item>
+    
+    <item>
+      <title>Integrate Redis and Postgres plus much more - genezio v0.6</title>
+      <link>/blog/integrate-redis-and-postgres-plus-much-more-genezio-v0.6/</link>
+      <pubDate>Thu, 09 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/integrate-redis-and-postgres-plus-much-more-genezio-v0.6/</guid>
+      <description>Genezio New Release Since our last release, we&amp;rsquo;ve introduced some new features that make it easier to integrate a database, simplify yaml configuration files, and many more. Let&amp;rsquo;s explore the latest updates:
+Redis databases Introducing the Upstash integration! You can now choose to install Upstash and integrate it directly into your projects. Use their serverless Redis databases and messaging platforms to upgrade your genezio project. Connect your Upstash account from the genezio dashboard and use the Redis instance from your code.</description>
+    </item>
+    
+    <item>
+      <title>Genezio Empowered Web3 Innovation at the xDay.2023 Hackathon</title>
+      <link>/blog/genezio-empowered-web3-innovation-at-the-xday.2023-hackathon/</link>
+      <pubDate>Fri, 03 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/genezio-empowered-web3-innovation-at-the-xday.2023-hackathon/</guid>
+      <description>This article will present DeFiBuilder and GiveCup, two emerging Web3 startups that started their journey at the xDay.2023 Hackathon, one of Europe’s largest Web3 developers competitions.
+Teams from both DeFiBuilder and GiveCup won big prizes at the hackathon, and we are very excited to tell you that genezio helped them save a lot of time during the hackathon. The winning teams said genezio enabled them to focus on developing their features, rather than spend time on configuring servers and settings.</description>
+    </item>
+    
     <item>
       <title>Genezio New Release</title>
       <link>/blog/genezio-new-release/</link>
