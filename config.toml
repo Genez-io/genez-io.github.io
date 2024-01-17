@@ -46,7 +46,7 @@ disableHugoGeneratorInject = true
 # Footer Pages 
 [[menu.footer_pages]]
     name = "Genezio Documentation"
-    url = "https://docs.genez.io/genezio-documentation/"
+    url = "https://docs.genezio.com/genezio-documentation/"
     weight = 1
 
 [[menu.footer_pages]]

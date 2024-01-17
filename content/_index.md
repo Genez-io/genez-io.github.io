@@ -7,7 +7,7 @@ callToAction: 'Learn more'
 leadButtonOneText: 'Start for Free'
 leadButtonOneLink: 'https://app.genez.io/auth/signup'
 leadButtonTwoText: 'Check our Demo/Docs'
-leadButtonTwoLink: 'https://docs.genez.io/'
+leadButtonTwoLink: 'https://docs.genezio.com/'
 productTextP1: "Because you, just like us, are passionate about developing new apps, new features. You want to bring them to your users as fast as possible. You want to focus on your code, develop, debug, release and iterate fast."
 productTextP2: "Because you like writing elegant code. You don’t want to lose time 
 configuring backend servers, writing cumbersome GET URLs, 

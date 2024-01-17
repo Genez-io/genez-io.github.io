@@ -3,7 +3,7 @@ var header = document.getElementById('header');
 
 window.addEventListener("load", function() {
   if (this.window.location.pathname == "/docs/" || this.window.location.pathname == "/doc/") {
-    this.window.location.href = "https://docs.genez.io/";
+    this.window.location.href = "https://docs.genezio.com/";
     return;
   }
   if (this.window.location.pathname != "/") {

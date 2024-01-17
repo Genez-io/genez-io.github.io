@@ -154,7 +154,7 @@ public async everyDay8AMTask() {
 2. **Forget to test and validate:** Never add a cron job without testing it thoroughly first. Errors in cron jobs can disrupt system operations. Another point of failure can be the server timezone and unix timestamp.
 3. **Ignore error handling:** Don't neglect error handling in your cron jobs. Always include proper error-checking mechanisms and consider sending notifications when errors occur.
 4. **Hardcode sensitive data:** Avoid hardcoding sensitive information like passwords directly in your scripts. Instead, use
-   {{< external-link link="https://docs.genez.io/genezio-documentation/project-structure/backend-envinronment-variables" >}}environment variables.{{< /external-link >}}
+   {{< external-link link="https://docs.genezio.com/genezio-documentation/project-structure/backend-envinronment-variables" >}}environment variables.{{< /external-link >}}
 5. **Use JavaScript:** Avoid using JavaScript because it can lead to runtime errors. Use TypeScript instead to fix as many type errors as possible.
 
 ## Conclusion

@@ -190,7 +190,7 @@ Go to the {{< external-link link="https://app.genez.io" >}}genezio dashboard{{< 
 
 ![Alt text](/images/blog/shopping_cart_example/add_integration.png)
 
-If you get stuck at this step, you can follow the {{< external-link link="https://docs.genez.io/genezio-documentation/integrations/upstash-redis" >}}Upstash Redis integration tutorial{{< /external-link >}}.
+If you get stuck at this step, you can follow the {{< external-link link="https://docs.genezio.com/genezio-documentation/integrations/upstash-redis" >}}Upstash Redis integration tutorial{{< /external-link >}}.
 
 After adding the Upstash Redis integration, copy the environment variables from the `.env` section. Use the copy button to disclose the contents of the environment variables and copy them to your clipboard.
 Go back to your `server` directory, create a new file called `.env`, and paste the contents there.
