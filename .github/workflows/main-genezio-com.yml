@@ -60,7 +60,7 @@ jobs:
         run: |
           hugo \
             --minify \
-            --baseURL "${{ steps.pages.outputs.base_url }}/"
+            --baseURL "https://genezio.com/"
       - name: Deploy deploy
         working-directory: ./
         run: genezio deploy --frontend
